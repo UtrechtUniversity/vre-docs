@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 {% include menu.html %}
 
 # VRE Documentation for UU researchers
