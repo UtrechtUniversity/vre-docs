@@ -2,8 +2,6 @@
 layout: default
 ---
 
-{% include menu.html %}
-
 # VRE Documentation for UU researchers
 
 - [What is research cloud?](_pages/research-cloud-intro.md)
