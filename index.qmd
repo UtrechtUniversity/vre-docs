@@ -1,0 +1,12 @@
+---
+title: "VRE Documentation for UU researchers"
+---
+
+# Welcome
+
+This page provides user documentation for Surf Research Cloud for researchers at Utrecht University.
+
+- [What is research cloud?](docs/research-cloud-intro.qmd)
+- [Getting started](docs/getting-started.qmd)
+- [User manuals](docs/manuals.qmd)
+- [Terms of use](docs/usage.qmd)

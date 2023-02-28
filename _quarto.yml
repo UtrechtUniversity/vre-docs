@@ -1,0 +1,23 @@
+project:
+  type: website
+  output-dir: ./_html
+
+website:
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: docs/research-cloud-intro.qmd
+        text: Introduction
+      - href: docs/getting-started.qmd
+        text: Getting Started
+      - href: docs/manuals.qmd
+        text: Manuals
+      - href: docs/usage.qmd
+        text: Terms of use
+
+format:
+  html:
+    theme: cosmo
+    css: _styles/styles.css
+    toc: true
