@@ -2,33 +2,33 @@
 title: "Accounts and Funding"
 ---
 
-There are several situations that may apply for you:
+There are several situations that may apply to you:  
+
 1. My project team is currently not using Research cloud and I want to start on Research cloud
+[Start here](#steps-for-a-new-research-cloud-project)  
 
 2. Someone in my project team is already using Research cloud and I need access
+[Start here](#add-collaborators-to-existing-project)  
 
 3. I think Research Cloud is interesting for my current project but I am not sure
-
+[Start here](#steps-for-a-new-research-cloud-project)  
 
 
 ```{mermaid}
-flowchart LR
+flowchart TD
   A[Intake meeting] --> B{Create accounts}
   B --> C{Request credits}
   C --> F[UU credits via Intake meeting]
   C --> G[E-INFRA request]
   C --> H[Project budget]
   B --> D[Create collaboration in SRAM]
-  D --> E[Log in on Research Cloud and request wallet]
+  D ----> E[Log in on Research Cloud and request wallet]
   F --> E[Log in on Research Cloud and request wallet]
   G --> E[Log in on Research Cloud and request wallet]
   H --> E[Log in on Research Cloud and request wallet]
+  E --> J[Create your first workspace!]
 
 ```
-
-
-ADD Flowchart image here
-
 
 ## Steps for a new Research Cloud project:
 
@@ -54,7 +54,8 @@ A Collaboration (also known as Collaborative Organisation, or CO) is an ad-hoc g
 :::
 
 ### 3. Request funding
-There are several ways to request funding for credits:
+There are several ways to request funding for credits:  
+
 **UU Budget**
 This is typically granted during an intake meeting (see step 1 above).
 
