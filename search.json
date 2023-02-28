@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "docs/getting-started.html",
+    "href": "docs/getting-started.html",
+    "title": "Getting Started",
+    "section": "",
+    "text": "This is how to get started"
+  },
+  {
     "objectID": "docs/research-cloud-intro.html",
     "href": "docs/research-cloud-intro.html",
     "title": "What is Research Cloud",
@@ -28,24 +35,17 @@
     "text": "Getting started\nContact UU Research IT for an intake meeting to get started. After a 30 minute intake you will have everything ready to start your first workspace.\nPractical instructions to get started on SRC can be found here."
   },
   {
-    "objectID": "docs/getting-started.html",
-    "href": "docs/getting-started.html",
-    "title": "Getting Started",
-    "section": "",
-    "text": "This is how to get started"
-  },
-  {
     "objectID": "docs/manuals.html",
     "href": "docs/manuals.html",
     "title": "User Manuals",
     "section": "",
-    "text": "Mounting storage\nData Transer using Yoda\nData Transfer using rclone\nCreating python environments"
+    "text": "On this page we share manuals for a variety of use cases and tasks.\n\nMounting storage\nData Transer using Yoda\nData Transfer using rclone\nCreating python environments"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "VRE Documentation for UU researchers",
     "section": "",
-    "text": "This page provides user documentation for Surf Research Cloud for researchers at Utrecht University.\n\nWhat is research cloud?\nGetting started\nUser manuals\nTerms of use"
+    "text": "Welcome\nThis page provides user documentation for Surf Research Cloud for researchers at Utrecht University.\n\nWhat is research cloud?\nGetting started\nUser manuals\nTerms of use"
   }
 ]
