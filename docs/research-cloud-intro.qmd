@@ -32,19 +32,19 @@ or if you seek to avoid to invest in expensive computer hardware, software or re
 Once you are done with using your workspace, just dispose of it in the SRC web portal.
 
 **Example workspaces**
-- Rstudio
-- Jupyter
-- Matlab
+- Rstudio  
+- Jupyter  
+- Matlab  
 - Python with Machine learning libraries   
 - Customized workspaces e.g. ASReview   
-- Windows Server (install your own software)
-- Ubuntu (install your own software)
+- Windows Server (install your own software)  
+- Ubuntu (install your own software)  
 
 **Resources available for a single workspace**
-- up to 80 CPU cores
-- up to 480 GB RAM
-- up to 4 GPU drives
-- up to 2 TB storage
+- up to 80 CPU cores  
+- up to 480 GB RAM  
+- up to 4 GPU drives  
+- up to 2 TB storage  
 
 ## Designed with consortia and other Collaborative use in mind
 Surf Research Cloud uses the concept of a 'collaboration' to facilitate working together in project teams.
