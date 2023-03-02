@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>What is Research Cloud</title>
+<title>Accounts and Funding</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -58,6 +58,9 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../_styles/styles.css">
@@ -79,11 +82,11 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../docs/research-cloud-intro.html" aria-current="page">
+    <a class="nav-link" href="../docs/research-cloud-intro.html">
  <span class="menu-text">Introduction</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../docs/accounts.html">
+    <a class="nav-link active" href="../docs/accounts.html" aria-current="page">
  <span class="menu-text">Accounts</span></a>
   </li>  
   <li class="nav-item">
@@ -113,10 +116,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#designed-with-consortia-and-other-collaborative-use-in-mind" id="toc-designed-with-consortia-and-other-collaborative-use-in-mind" class="nav-link" data-scroll-target="#designed-with-consortia-and-other-collaborative-use-in-mind">Designed with consortia and other Collaborative use in mind</a></li>
-  <li><a href="#funding" id="toc-funding" class="nav-link" data-scroll-target="#funding">Funding</a></li>
-  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting started</a></li>
+  <li><a href="#steps-for-a-new-research-cloud-project" id="toc-steps-for-a-new-research-cloud-project" class="nav-link active" data-scroll-target="#steps-for-a-new-research-cloud-project">Steps for a new Research Cloud project:</a>
+  <ul class="collapse">
+  <li><a href="#plan-an-intake-with-the-research-engineering-team" id="toc-plan-an-intake-with-the-research-engineering-team" class="nav-link" data-scroll-target="#plan-an-intake-with-the-research-engineering-team">1. Plan an intake with the Research Engineering team</a></li>
+  <li><a href="#request-a-collaboration-in-sram" id="toc-request-a-collaboration-in-sram" class="nav-link" data-scroll-target="#request-a-collaboration-in-sram">2. Request a collaboration in SRAM</a></li>
+  <li><a href="#request-funding" id="toc-request-funding" class="nav-link" data-scroll-target="#request-funding">3. Request funding</a></li>
+  </ul></li>
+  <li><a href="#add-collaborators-to-existing-project" id="toc-add-collaborators-to-existing-project" class="nav-link" data-scroll-target="#add-collaborators-to-existing-project">Add collaborators to existing project</a>
+  <ul class="collapse">
+  <li><a href="#invite-via-sram" id="toc-invite-via-sram" class="nav-link" data-scroll-target="#invite-via-sram">1. Invite via SRAM</a></li>
+  <li><a href="#share-wallet" id="toc-share-wallet" class="nav-link" data-scroll-target="#share-wallet">2. Share wallet</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -125,7 +135,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">What is Research Cloud</h1>
+<h1 class="title">Accounts and Funding</h1>
 </div>
 
 
@@ -140,43 +150,98 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>Surf ResearchCloud (SRC) is a service that allows you to use the vast computational power offered by datacenters with almost the same ease-of-use as using your own laptop. The complex infrastructure behind the scenes is presented to you as a <em>workspace</em>. Think of a workspace as a laptop-in-the-cloud that you access using your web browser or another application (for instance “Remote Desktop” or “ssh”). Your web browser displays the screen content of this workspace and allows you to interact with it using your keyboard and mouse.</p>
-<p>Workspaces are preconfigured with one or more applications, ranging from RStudio, Jupyter Notebooks, Matlab, to plain Windows or Linux virtual machines where the user installs their own software. Workspaces are also scalable: computational power, GPU drivers and extra storage can be ordered with a single mouse click. You can select a workspace type that suites your needs from a catalog in the <a href="https://portal.live.surfresearchcloud.nl">SRC web portal</a>. Workspaces are preconfigured for the user by support staff and can be extended on request to suit a variety of research domains and analysis methods. Should analysis applications for your domain not yet be covered, the support staff is happy to assist and to make additions to the catalog.</p>
-<p>Ordering a workspace is easy. In the SRC portal, just click on a workspace type to order it. The datacenter service will set aside some compute power for you. The datacenter subsequently creates a workspace and prepares it for you with applications preinstalled. This whole process takes approximately 10 to 30 minutes, depending on the type of workspace.</p>
-<p>A workspace is offered on-demand and on a pay-as-you-go basis. It saves you much hassle: no need to buy and maintain computer hardware and your favorite applications come conveniently preinstalled for you. This resource leasing concept is a cost effective solution if you plan to use it part-time, or if you seek to avoid to invest in expensive computer hardware, software or related IT-skills. Once you are done with using your workspace, just dispose of it in the SRC web portal.</p>
-<p><strong>Example workspaces</strong><br>
-- Rstudio<br>
-- Jupyter<br>
-- Matlab<br>
-- Python with Machine learning libraries<br>
-- Customized workspaces e.g.&nbsp;ASReview<br>
-- Windows Server (install your own software)<br>
-- Ubuntu (install your own software)</p>
-<p><strong>Resources available for a single workspace</strong><br>
-- up to 80 CPU cores<br>
-- up to 480 GB RAM<br>
-- up to 4 GPU drives<br>
-- up to 2 TB storage</p>
+<p>There are several situations that may apply for you: 1. My project team is currently not using Research cloud and I want to start on Research cloud</p>
+<ol start="2" type="1">
+<li><p>Someone in my project team is already using Research cloud and I need access</p></li>
+<li><p>I think Research Cloud is interesting for my current project but I am not sure</p></li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<p>
+</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-1">flowchart LR
+  A[Intake meeting] --&gt; B{Create accounts}
+  B --&gt; C{Request credits}
+  C --&gt; F[UU credits via Intake meeting]
+  C --&gt; G[E-INFRA request]
+  C --&gt; H[Project budget]
+  B --&gt; D[Create collaboration in SRAM]
+  D --&gt; E[Log in on Research Cloud and request wallet]
+  F --&gt; E[Log in on Research Cloud and request wallet]
+  G --&gt; E[Log in on Research Cloud and request wallet]
+  H --&gt; E[Log in on Research Cloud and request wallet]
+
+</pre>
+<div id="mermaid-tooltip-1" class="mermaidTooltip">
+
+</div>
+<p></p>
+</div>
+</div>
+</div>
+<p>ADD Flowchart image here</p>
+<section id="steps-for-a-new-research-cloud-project" class="level2">
+<h2 class="anchored" data-anchor-id="steps-for-a-new-research-cloud-project">Steps for a new Research Cloud project:</h2>
+<section id="plan-an-intake-with-the-research-engineering-team" class="level3">
+<h3 class="anchored" data-anchor-id="plan-an-intake-with-the-research-engineering-team">1. Plan an intake with the Research Engineering team</h3>
+<p>During a 30 minute online meeting we will discuss the technical requirements of your project. The Research engineer who is doing the intake has experience with the systems and can quickly assess your needs when looking together at your software. The engineer will advice you about how to proceed. When Research cloud meets the technical requirements of your project, we will arrange administration that is necessary to get started during the intake. <a href="https://outlook.office365.com/owa/calendar/HPCSupport1@solisservices.onmicrosoft.com/bookings/">Schedule an intake meeting</a>.</p>
 </section>
-<section id="designed-with-consortia-and-other-collaborative-use-in-mind" class="level2">
-<h2 class="anchored" data-anchor-id="designed-with-consortia-and-other-collaborative-use-in-mind">Designed with consortia and other Collaborative use in mind</h2>
-<p>Surf Research Cloud uses the concept of a ‘collaboration’ to facilitate working together in project teams. A collaboration may be viewed as a <em>virtual</em> organization, with members that can originate from different research institutes, or from the private sector. A collaboration can accommodate a virtual organization the size of a European research project consortium. In contrast, it might also consist of a single member, e.g.&nbsp;a researcher in need of compute power or a private workspace.</p>
-<p>Managing memberships of the collaboration is done via a self-service portal (called <a href="https://sram.surf.nl">SRAM</a>, short for SURF Research Access Management. E.g. a researcher can give (temporary) access to PhDs or students.</p>
-<p>It is important to understand that SRC assumes all members of the collaboration to be contractually or otherwise bound to work together.<br>
-Hence the costs related to a workspace ordered by a single member of the collaboration are effectively charged to the collaboration. In addition, the workspace is automatically accessible to all members of the collaboration.</p>
+<section id="request-a-collaboration-in-sram" class="level3">
+<h3 class="anchored" data-anchor-id="request-a-collaboration-in-sram">2. Request a collaboration in SRAM</h3>
+<p>This is typically done during an intake meeting (step 1). It is also possible to request a new collaboration in <a href="https://sram.surf.nl">SRAM</a></p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+What is SRAM?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>SRAM (SURF Research Access Management) is a service to manage access to research resources, intended for Dutch led research collaborations. <a href="https://wiki.surfnet.nl/pages/viewpage.action?pageId=31105834">More information</a>.</p>
+</div>
+</div>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+What is a collaboration?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>A Collaboration (also known as Collaborative Organisation, or CO) is an ad-hoc group of people who are allowed to work together by sharing resources. As a scientist you can easily make a CO. That way, you can invite other researchers to join your efforts in Research Cloud, and you can then self-organise yourselves to distribute tasks, including administering the CO. <a href="https://servicedesk.surf.nl/wiki/pages/viewpage.action?pageId=17825822">More information</a>.</p>
+</div>
+</div>
+</div>
 </section>
-<section id="funding" class="level2">
-<h2 class="anchored" data-anchor-id="funding">Funding</h2>
-<p>There are several ways to request computing time for SRC. The easiest and fastest way (and recommended first step) is to <a href="https://www.uu.nl/en/research/research-data-management/tools-services/software-and-computing/virtual-research-environments">contact UU Research IT</a>. A short intake meeting will get you started. Additionally, more computing time can be requested via Surf or NWO.</p>
+<section id="request-funding" class="level3">
+<h3 class="anchored" data-anchor-id="request-funding">3. Request funding</h3>
+<p>There are several ways to request funding for credits: <strong>UU Budget</strong> This is typically granted during an intake meeting (see step 1 above).</p>
+<p><strong>E-INFRA request</strong> Via an E-INFRA request 50.000 CPU hours or 10.000 GPU can be requested for your project for 1 calendar year. An E-INFRA request can be done one time per calendar year. An application can be done via the <a href="https://servicedesk.surfsara.nl/">SURF servicedesk</a> and the procedure is relatively simple and fast. <a href="https://www.surf.nl/en/research-it/apply-for-access-to-compute-services">More information</a>.</p>
+<p>Example application [ADD sub page with example application]</p>
+<p><strong>Project budget</strong> It is possible to pay for credits via your own project budget. Discuss the possiblities during an intake meeting (see step 1 above).</p>
 </section>
-<section id="getting-started" class="level2">
-<h2 class="anchored" data-anchor-id="getting-started">Getting started</h2>
-<p>Contact <a href="https://www.uu.nl/en/research/research-data-management/tools-services/software-and-computing/virtual-research-environments">UU Research IT</a> for an intake meeting to get started. After a 30 minute intake you will have everything ready to start your first workspace.</p>
-<p>Practical instructions to get started on SRC can be found <a href="../docs/getting-started.html">here</a>.</p>
+</section>
+<section id="add-collaborators-to-existing-project" class="level2">
+<h2 class="anchored" data-anchor-id="add-collaborators-to-existing-project">Add collaborators to existing project</h2>
+<section id="invite-via-sram" class="level3">
+<h3 class="anchored" data-anchor-id="invite-via-sram">1. Invite via SRAM</h3>
+<p>ADD section and link</p>
+</section>
+<section id="share-wallet" class="level3">
+<h3 class="anchored" data-anchor-id="share-wallet">2. Share wallet</h3>
+<p>ADD section and link to surf</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
