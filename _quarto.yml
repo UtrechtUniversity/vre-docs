@@ -9,6 +9,8 @@ website:
         text: Home
       - href: docs/research-cloud-intro.qmd
         text: Introduction
+      - href: docs/accounts.qmd
+        text: Accounts
       - href: docs/getting-started.qmd
         text: Getting Started
       - href: docs/manuals.qmd

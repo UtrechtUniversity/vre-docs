@@ -1,0 +1,76 @@
+---
+title: "Accounts and Funding"
+---
+
+There are several situations that may apply for you:
+1. My project team is currently not using Research cloud and I want to start on Research cloud
+
+2. Someone in my project team is already using Research cloud and I need access
+
+3. I think Research Cloud is interesting for my current project but I am not sure
+
+
+
+```{mermaid}
+flowchart LR
+  A[Intake meeting] --> B{Create accounts}
+  B --> C{Request credits}
+  C --> F[UU credits via Intake meeting]
+  C --> G[E-INFRA request]
+  C --> H[Project budget]
+  B --> D[Create collaboration in SRAM]
+  D --> E[Log in on Research Cloud and request wallet]
+  F --> E[Log in on Research Cloud and request wallet]
+  G --> E[Log in on Research Cloud and request wallet]
+  H --> E[Log in on Research Cloud and request wallet]
+
+```
+
+
+ADD Flowchart image here
+
+
+## Steps for a new Research Cloud project:
+
+### 1. Plan an intake with the Research Engineering team
+During a 30 minute online meeting we will discuss the technical requirements of your project. The Research engineer who is doing the intake has experience with the systems and can quickly assess your needs when looking together at your software. The engineer will advice you about how to proceed. When Research cloud meets the technical requirements of your project, we will arrange administration that is necessary to get started during the intake.
+[Schedule an intake meeting](https://outlook.office365.com/owa/calendar/HPCSupport1@solisservices.onmicrosoft.com/bookings/).
+
+### 2. Request a collaboration in SRAM
+
+This is typically done during an intake meeting (step 1). It is also possible to request a new collaboration in [SRAM](https://sram.surf.nl)
+
+::: {.callout-note collapse="true"}
+## What is SRAM?
+
+SRAM (SURF Research Access Management) is a service to manage access to research resources, intended for Dutch led research collaborations. [More information](https://wiki.surfnet.nl/pages/viewpage.action?pageId=31105834).
+:::
+
+::: {.callout-note collapse="true"}
+## What is a collaboration?
+
+A Collaboration (also known as Collaborative Organisation, or CO) is an ad-hoc group of people who are allowed to work together by sharing resources. As a scientist you can easily make a CO. That way, you can invite other researchers to join your efforts in Research Cloud, and you can then self-organise yourselves to distribute tasks, including administering the CO. [More information](https://servicedesk.surf.nl/wiki/pages/viewpage.action?pageId=17825822).
+
+:::
+
+### 3. Request funding
+There are several ways to request funding for credits:
+**UU Budget**
+This is typically granted during an intake meeting (see step 1 above).
+
+**E-INFRA request**
+Via an E-INFRA request 50.000 CPU hours or 10.000 GPU can be requested for your project for 1 calendar year. An E-INFRA request can be done one time per calendar year. An application can be done via the [SURF servicedesk](https://servicedesk.surfsara.nl/) and the procedure is relatively simple and fast. [More information](https://www.surf.nl/en/research-it/apply-for-access-to-compute-services).
+
+Example application [ADD sub page with example application]
+
+**Project budget**
+It is possible to pay for credits via your own project budget. Discuss the possiblities during an intake meeting (see step 1 above).
+
+## Add collaborators to existing project
+
+### 1. Invite via SRAM
+ADD section and link 
+
+### 2. Share wallet
+ADD section and link to surf
+
