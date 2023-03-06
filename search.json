@@ -49,6 +49,13 @@
     "text": "Pausing, Resuming, Deleting a workspace\nYou always need a wallet to create a workspace, by default a workspace can only be paused, resumed and deleted by the one that has created it. You can use SRAM to give persons permission to PAUSE, RESUME and DELETE a workspace that is created by someone else, see: https://servicedesk.surf.nl/wiki/display/WIKI/Sharing+control%3A+workspace+admin"
   },
   {
+    "objectID": "docs/getting-started.html#getting-access-to-your-workspace",
+    "href": "docs/getting-started.html#getting-access-to-your-workspace",
+    "title": "Getting Started",
+    "section": "Getting access to your workspace",
+    "text": "Getting access to your workspace\nssh rdp Browser access button"
+  },
+  {
     "objectID": "docs/research-cloud-intro.html",
     "href": "docs/research-cloud-intro.html",
     "title": "What is Research Cloud",
