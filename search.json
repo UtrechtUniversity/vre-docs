@@ -28,6 +28,27 @@
     "text": "This is how to get started"
   },
   {
+    "objectID": "docs/getting-started.html#create-storage",
+    "href": "docs/getting-started.html#create-storage",
+    "title": "Getting Started",
+    "section": "Create storage",
+    "text": "Create storage"
+  },
+  {
+    "objectID": "docs/getting-started.html#create-a-workspace",
+    "href": "docs/getting-started.html#create-a-workspace",
+    "title": "Getting Started",
+    "section": "Create a workspace",
+    "text": "Create a workspace"
+  },
+  {
+    "objectID": "docs/getting-started.html#pausing-resuming-deleting-a-workspace",
+    "href": "docs/getting-started.html#pausing-resuming-deleting-a-workspace",
+    "title": "Getting Started",
+    "section": "Pausing, Resuming, Deleting a workspace",
+    "text": "Pausing, Resuming, Deleting a workspace\nYou always need a wallet to create a workspace, by default a workspace can only be paused, resumed and deleted by the one that has created it. You can use SRAM to give persons permission to PAUSE, RESUME and DELETE a workspace that is created by someone else, see: https://servicedesk.surf.nl/wiki/display/WIKI/Sharing+control%3A+workspace+admin"
+  },
+  {
     "objectID": "docs/research-cloud-intro.html",
     "href": "docs/research-cloud-intro.html",
     "title": "What is Research Cloud",
