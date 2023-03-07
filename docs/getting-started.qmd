@@ -17,3 +17,14 @@ You always need a wallet to create a workspace, by default a workspace can only 
 ssh
 rdp
 Browser access button
+
+
+## Data
+### Mounting online storage
+
+
+### Transferring data
+Download
+irods
+rclone
+scp
