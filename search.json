@@ -25,14 +25,21 @@
     "href": "docs/getting-started.html",
     "title": "Getting Started",
     "section": "",
-    "text": "This is how to get started"
+    "text": "This page describes all general steps that a user needs to perform to be able to start working with research cloud."
+  },
+  {
+    "objectID": "docs/getting-started.html#portal",
+    "href": "docs/getting-started.html#portal",
+    "title": "Getting Started",
+    "section": "Portal",
+    "text": "Portal"
   },
   {
     "objectID": "docs/getting-started.html#create-storage",
     "href": "docs/getting-started.html#create-storage",
     "title": "Getting Started",
     "section": "Create storage",
-    "text": "Create storage"
+    "text": "Create storage\nIn most cases you need to create a storage"
   },
   {
     "objectID": "docs/getting-started.html#create-a-workspace",
@@ -56,11 +63,11 @@
     "text": "Getting access to your workspace\nssh rdp Browser access button"
   },
   {
-    "objectID": "docs/getting-started.html#data",
-    "href": "docs/getting-started.html#data",
+    "objectID": "docs/getting-started.html#getting-data-inside-your-workspace",
+    "href": "docs/getting-started.html#getting-data-inside-your-workspace",
     "title": "Getting Started",
-    "section": "Data",
-    "text": "Data\n\nMounting online storage\n\n\nTransferring data\nDownload irods rclone scp"
+    "section": "Getting data inside your workspace",
+    "text": "Getting data inside your workspace\n\nMounting online storage\n\n\nTransferring data\nDownload irods rclone scp"
   },
   {
     "objectID": "docs/research-cloud-intro.html",
