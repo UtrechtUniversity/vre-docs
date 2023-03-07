@@ -2,9 +2,22 @@
 title: "Getting Started"
 ---
 
-This is how to get started
+This page describes all general steps that a user needs to perform to be able to start working with research cloud.
+
+1. [Creating storage[(#create-storage)
+2. [Creating a workspace](#create-a-workspace)
+3. [Pausing, Resuming, Deleting a workspace](#pausing-resuming-deleting-a-workspace)
+4. [Logging in to your workspace](#getting-access-to-your-workspace)
+5. [Getting data inside your workspace](#getting-data-inside-your-workspace)
+
+
+## Portal
+
 
 ## Create storage
+In most cases you need to create a storage
+
+
 
 ## Create a workspace
 
@@ -19,7 +32,7 @@ rdp
 Browser access button
 
 
-## Data
+## Getting data inside your workspace
 ### Mounting online storage
 
 
