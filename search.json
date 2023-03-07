@@ -56,6 +56,13 @@
     "text": "Getting access to your workspace\nssh rdp Browser access button"
   },
   {
+    "objectID": "docs/getting-started.html#data",
+    "href": "docs/getting-started.html#data",
+    "title": "Getting Started",
+    "section": "Data",
+    "text": "Data\n\nMounting online storage\n\n\nTransferring data\nDownload irods rclone scp"
+  },
+  {
     "objectID": "docs/research-cloud-intro.html",
     "href": "docs/research-cloud-intro.html",
     "title": "What is Research Cloud",
