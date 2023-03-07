@@ -8,6 +8,7 @@ This page provides user documentation for Surf Research Cloud for researchers at
 
 - [What is research cloud?](docs/research-cloud-intro.qmd)
 - [Accounts and funding](docs/accounts.qmd)
-- [Getting started](docs/getting-started.qmd)
+- [Getting started with Research Cloud](docs/getting-started.qmd)
+- [Using a workspace](docs/workspace-catalogue.qmd)
 - [User manuals](docs/manuals.qmd)
 - [Terms of use](docs/usage.qmd)
