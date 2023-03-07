@@ -13,6 +13,8 @@ website:
         text: Accounts
       - href: docs/getting-started.qmd
         text: Getting Started
+      - href: docs/workspace-catalogue.qmd
+        text: Workspaces
       - href: docs/manuals.qmd
         text: Manuals
       - href: docs/usage.qmd
