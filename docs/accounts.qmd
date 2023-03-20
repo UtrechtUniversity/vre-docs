@@ -1,27 +1,33 @@
 ---
-title: "Accounts and Funding"
+title: "Accounts, Funding and Collaboration"
 ---
+
+
+## How to get on board
 
 There are several situations that may apply to you:  
 
-1. My project team is currently not using Research cloud and I want to start on Research cloud
-[Start here](#steps-for-a-new-research-cloud-project)  
+1. My project team is currently not using Research cloud and I want to start on Research cloud  
+[Start here](#steps-for-setting-up-a-new-research-cloud-project)  
 
-2. Someone in my project team is already using Research cloud and I need access
+2. Someone in my project team is already using Research cloud and I need access  
 [Start here](#add-collaborators-to-existing-project)  
 
-3. I think Research Cloud is interesting for my current project but I am not sure
-[Start here](#steps-for-a-new-research-cloud-project)  
+3. I think Research Cloud is interesting for my current project but I am not sure  
+[Start here](#steps-for-setting-up-a-new-research-cloud-project)  
 
+## Intake procedure
+
+This is a flowchart describing the intake procedure for new projects, find descriptions of the steps below the flowchart.
 
 ```{mermaid}
 flowchart TD
-  A[Intake meeting] --> B{Create accounts}
-  B --> C{Request credits}
+  A[1. Intake meeting] --> B{Onboarding}
+  B -- budget --> C{3. Request credits}
   C --> F[UU credits via Intake meeting]
   C --> G[E-INFRA request]
   C --> H[Project budget]
-  B --> D[Create collaboration in SRAM]
+  B -- account --> D[2. Create collaboration in SRAM]
   D ----> E[Log in on Research Cloud and request wallet]
   F --> E[Log in on Research Cloud and request wallet]
   G --> E[Log in on Research Cloud and request wallet]
@@ -29,8 +35,6 @@ flowchart TD
   E --> J[Create your first workspace!]
 
 ```
-
-## Steps for a new Research Cloud project:
 
 ### 1. Plan an intake with the Research Engineering team
 During a 30 minute online meeting we will discuss the technical requirements of your project. The Research engineer who is doing the intake has experience with the systems and can quickly assess your needs when looking together at your software. The engineer will advice you about how to proceed. When Research cloud meets the technical requirements of your project, we will arrange administration that is necessary to get started during the intake.
@@ -62,16 +66,46 @@ This is typically granted during an intake meeting (see step 1 above).
 **E-INFRA request**
 Via an E-INFRA request 50.000 CPU hours or 10.000 GPU can be requested for your project for 1 calendar year. An E-INFRA request can be done one time per calendar year. An application can be done via the [SURF servicedesk](https://servicedesk.surfsara.nl/) and the procedure is relatively simple and fast. [More information](https://www.surf.nl/en/research-it/apply-for-access-to-compute-services).
 
-Example application [ADD sub page with example application]
+[Example application](einfra.qmd)
 
 **Project budget**
 It is possible to pay for credits via your own project budget. Discuss the possiblities during an intake meeting (see step 1 above).
 
 ## Add collaborators to existing project
 
-### 1. Invite via SRAM
-ADD section and link 
+When you want to onboard new project member in Research cloud you should think about the rights you want to grant them:
 
-### 2. Share wallet
-ADD section and link to surf
+::: {.callout-note collapse="true"}
+## Should the new project member only have access to running workspaces? 
+
+Perform step 1 below
+:::
+
+::: {.callout-note collapse="true"}
+## Should the new project member be able to pause, resume and delete workspaces that I create? 
+
+Perform step 1 and 2 below
+:::
+
+::: {.callout-note collapse="true"}
+## Should the new project member be able to create new workspaces using the project budget? 
+
+Perform step 1, 2(optional), and 3
+:::
+
+
+### 1. Invite a new collaborator via SRAM
+SRAM is used for access management for SURF Research Cloud. It is possible to [invite collaborators to your collaboration (project)](https://wiki.surfnet.nl/display/SRAM/Invite+admins+and+members+to+a+collaboration)
+
+::: {.callout-note collapse="true"}
+## Who can I invite?
+
+It is possible to invite anyone who has an email address to join your project. Students and employees from most Universities (and Universities of Applied Sciences) will be able to login to SRAM using their institution credentials. Collaborators from abroad or e.g. private sector can create an [eduID](https://eduid.nl/) first and then use that to login to SRAM and accept the invitation.
+:::
+
+### 2. Workspace admins
+In SRAM there are [groups](https://wiki.surfnet.nl/display/SRAM/Manage+groups+of+collaboration+members) that can be used to grant members of your collaboration to the right to [pause, resume and delete workspaces](https://servicedesk.surf.nl/wiki/display/WIKI/Sharing+control%3A+workspace+admin)
+
+### 3. Share your wallet
+In SRAM there are [groups](https://wiki.surfnet.nl/display/SRAM/Manage+groups+of+collaboration+members) that can be used to grant members of your collaboration to the right to [create new workspaces using the wallet of your project](https://servicedesk.surf.nl/wiki/display/WIKI/Access+to+CO-wallet)
 
