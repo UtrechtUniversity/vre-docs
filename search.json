@@ -2,23 +2,37 @@
   {
     "objectID": "docs/accounts.html",
     "href": "docs/accounts.html",
-    "title": "Accounts and Funding",
+    "title": "Accounts, Funding and Collaboration",
     "section": "",
-    "text": "There are several situations that may apply to you:"
+    "text": "There are several situations that may apply to you:\n\nMy project team is currently not using Research cloud and I want to start on Research cloud\nStart here\nSomeone in my project team is already using Research cloud and I need access\nStart here\nI think Research Cloud is interesting for my current project but I am not sure\nStart here"
   },
   {
-    "objectID": "docs/accounts.html#steps-for-a-new-research-cloud-project",
-    "href": "docs/accounts.html#steps-for-a-new-research-cloud-project",
-    "title": "Accounts and Funding",
-    "section": "Steps for a new Research Cloud project:",
-    "text": "Steps for a new Research Cloud project:\n\n1. Plan an intake with the Research Engineering team\nDuring a 30 minute online meeting we will discuss the technical requirements of your project. The Research engineer who is doing the intake has experience with the systems and can quickly assess your needs when looking together at your software. The engineer will advice you about how to proceed. When Research cloud meets the technical requirements of your project, we will arrange administration that is necessary to get started during the intake. Schedule an intake meeting.\n\n\n2. Request a collaboration in SRAM\nThis is typically done during an intake meeting (step 1). It is also possible to request a new collaboration in SRAM\n\n\n\n\n\n\nWhat is SRAM?\n\n\n\n\n\nSRAM (SURF Research Access Management) is a service to manage access to research resources, intended for Dutch led research collaborations. More information.\n\n\n\n\n\n\n\n\n\nWhat is a collaboration?\n\n\n\n\n\nA Collaboration (also known as Collaborative Organisation, or CO) is an ad-hoc group of people who are allowed to work together by sharing resources. As a scientist you can easily make a CO. That way, you can invite other researchers to join your efforts in Research Cloud, and you can then self-organise yourselves to distribute tasks, including administering the CO. More information.\n\n\n\n\n\n3. Request funding\nThere are several ways to request funding for credits:\nUU Budget This is typically granted during an intake meeting (see step 1 above).\nE-INFRA request Via an E-INFRA request 50.000 CPU hours or 10.000 GPU can be requested for your project for 1 calendar year. An E-INFRA request can be done one time per calendar year. An application can be done via the SURF servicedesk and the procedure is relatively simple and fast. More information.\nExample application [ADD sub page with example application]\nProject budget It is possible to pay for credits via your own project budget. Discuss the possiblities during an intake meeting (see step 1 above)."
+    "objectID": "docs/accounts.html#intake-procedure",
+    "href": "docs/accounts.html#intake-procedure",
+    "title": "Accounts, Funding and Collaboration",
+    "section": "Intake procedure",
+    "text": "Intake procedure\nThis is a flowchart describing the intake procedure for new projects, find descriptions of the steps below the flowchart.\n\n\n\n\nflowchart TD\n  A[1. Intake meeting] --> B{Onboarding}\n  B -- budget --> C{3. Request credits}\n  C --> F[UU credits via Intake meeting]\n  C --> G[E-INFRA request]\n  C --> H[Project budget]\n  B -- account --> D[2. Create collaboration in SRAM]\n  D ----> E[Log in on Research Cloud and request wallet]\n  F --> E[Log in on Research Cloud and request wallet]\n  G --> E[Log in on Research Cloud and request wallet]\n  H --> E[Log in on Research Cloud and request wallet]\n  E --> J[Create your first workspace!]\n\n\n\n\n\n\n\n\n\n\n1. Plan an intake with the Research Engineering team\nDuring a 30 minute online meeting we will discuss the technical requirements of your project. The Research engineer who is doing the intake has experience with the systems and can quickly assess your needs when looking together at your software. The engineer will advice you about how to proceed. When Research cloud meets the technical requirements of your project, we will arrange administration that is necessary to get started during the intake. Schedule an intake meeting.\n\n\n2. Request a collaboration in SRAM\nThis is typically done during an intake meeting (step 1). It is also possible to request a new collaboration in SRAM\n\n\n\n\n\n\nWhat is SRAM?\n\n\n\n\n\nSRAM (SURF Research Access Management) is a service to manage access to research resources, intended for Dutch led research collaborations. More information.\n\n\n\n\n\n\n\n\n\nWhat is a collaboration?\n\n\n\n\n\nA Collaboration (also known as Collaborative Organisation, or CO) is an ad-hoc group of people who are allowed to work together by sharing resources. As a scientist you can easily make a CO. That way, you can invite other researchers to join your efforts in Research Cloud, and you can then self-organise yourselves to distribute tasks, including administering the CO. More information.\n\n\n\n\n\n3. Request funding\nThere are several ways to request funding for credits:\nUU Budget This is typically granted during an intake meeting (see step 1 above).\nE-INFRA request Via an E-INFRA request 50.000 CPU hours or 10.000 GPU can be requested for your project for 1 calendar year. An E-INFRA request can be done one time per calendar year. An application can be done via the SURF servicedesk and the procedure is relatively simple and fast. More information.\nExample application\nProject budget It is possible to pay for credits via your own project budget. Discuss the possiblities during an intake meeting (see step 1 above)."
   },
   {
     "objectID": "docs/accounts.html#add-collaborators-to-existing-project",
     "href": "docs/accounts.html#add-collaborators-to-existing-project",
-    "title": "Accounts and Funding",
+    "title": "Accounts, Funding and Collaboration",
     "section": "Add collaborators to existing project",
-    "text": "Add collaborators to existing project\n\n1. Invite via SRAM\nADD section and link\n\n\n2. Share wallet\nADD section and link to surf"
+    "text": "Add collaborators to existing project\nWhen you want to onboard new project member in Research cloud you should think about the rights you want to grant them:\n\n\n\n\n\n\nShould the new project member only have access to running workspaces?\n\n\n\n\n\nPerform step 1 below\n\n\n\n\n\n\n\n\n\nShould the new project member be able to pause, resume and delete workspaces that I create?\n\n\n\n\n\nPerform step 1 and 2 below\n\n\n\n\n\n\n\n\n\nShould the new project member be able to create new workspaces using the project budget?\n\n\n\n\n\nPerform step 1, 2(optional), and 3\n\n\n\n\n1. Invite a new collaborator via SRAM\nSRAM is used for access management for SURF Research Cloud. It is possible to invite collaborators to your collaboration (project)\n\n\n\n\n\n\nWho can I invite?\n\n\n\n\n\nIt is possible to invite anyone who has an email address to join your project. Students and employees from most Universities (and Universities of Applied Sciences) will be able to login to SRAM using their institution credentials. Collaborators from abroad or e.g. private sector can create an eduID first and then use that to login to SRAM and accept the invitation.\n\n\n\n\n\n2. Workspace admins\nIn SRAM there are groups that can be used to grant members of your collaboration to the right to pause, resume and delete workspaces\n\n\n3. Share your wallet\nIn SRAM there are groups that can be used to grant members of your collaboration to the right to create new workspaces using the wallet of your project"
+  },
+  {
+    "objectID": "docs/workspace-catalogue.html",
+    "href": "docs/workspace-catalogue.html",
+    "title": "Workspace Catalogue",
+    "section": "",
+    "text": "This page provides links to user documentation for all workspaces developed by UU\n\nAnaconda Navigator\nASReview\nMiniconda\netc"
+  },
+  {
+    "objectID": "docs/einfra.html",
+    "href": "docs/einfra.html",
+    "title": "eINFRA application example",
+    "section": "",
+    "text": "The eINFRA call is a non-competitive grant that can be used to request 50.000 credits and/or 10.000 GPU hours per calendar year per project.\nMore info about requirements and the application portal can be found here\nAn example eINFRA application for Snellius can be found here. It illustrates the length and the level of detail of the specification of the project requirements."
   },
   {
     "objectID": "docs/getting-started.html",
@@ -96,13 +110,6 @@
     "title": "What is Research Cloud",
     "section": "Getting started",
     "text": "Getting started\nContact UU Research IT for an intake meeting to get started. After a 30 minute intake you will have everything ready to start your first workspace.\nPractical instructions to get started on SRC can be found here."
-  },
-  {
-    "objectID": "docs/workspace-catalogue.html",
-    "href": "docs/workspace-catalogue.html",
-    "title": "Workspace Catalogue",
-    "section": "",
-    "text": "This page provides links to user documentation for all workspaces developed by UU\n\nAnaconda Navigator\nASReview\nMiniconda\netc"
   },
   {
     "objectID": "docs/manuals.html",
