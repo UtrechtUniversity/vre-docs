@@ -12,10 +12,6 @@ Contents:
 4. [Logging in to your workspace](#getting-access-to-your-workspace)
 5. [Getting data inside your workspace](#getting-data-inside-your-workspace)
 
-
-## Portal
-
-
 ## Create storage volume
 
 ### Why a storage volume?
@@ -37,6 +33,7 @@ A workspace can also be called a 'Virtual Machine' or a 'Server'. It is a tempor
 
 ### How to create a workspace?
 In the Research Cloud portal:
+
 -   Click 'Create new workspace'
 -   Select application (Ubuntu, R-studio etc.)
 -   Choose the [Collaborative Organization](https://servicedesk.surf.nl/wiki/pages/viewpage.action?pageId=17825822) of the project for which you want to create the workspace
@@ -66,7 +63,7 @@ Browser access button
 
 
 ### Transferring data
-Download
-irods
-rclone
-scp
+-   Download
+-   irods
+-   rclone
+-   scp
