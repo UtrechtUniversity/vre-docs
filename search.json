@@ -60,7 +60,7 @@
     "href": "docs/getting-started.html#pausing-resuming-deleting-a-workspace",
     "title": "Getting Started",
     "section": "Pausing, Resuming, Deleting a workspace",
-    "text": "Pausing, Resuming, Deleting a workspace\nYou always need a wallet to create a workspace, by default a workspace can only be paused, resumed and deleted by the one that has created it. You can use SRAM to give persons permission to PAUSE, RESUME and DELETE a workspace that is created by someone else, see: https://servicedesk.surf.nl/wiki/display/WIKI/Sharing+control%3A+workspace+admin"
+    "text": "Pausing, Resuming, Deleting a workspace\nYou always need a wallet to create a workspace, by default a workspace can only be paused, resumed and deleted by the one that has created it. You can use SRAM to give persons permission to PAUSE, RESUME and DELETE a workspace that is created by someone else. It is also possible to share a wallet with a member of your CO in SRAM. See Add collaborators to existing project."
   },
   {
     "objectID": "docs/getting-started.html#getting-access-to-your-workspace",
