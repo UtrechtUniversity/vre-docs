@@ -23,30 +23,30 @@ In most cases you need to create a storage volume before you create a workspace.
 
 ### How to create a storage volume?
 In the Research Cloud portal:
-- Click 'Create new storage'
-- The Wizard will guide you through the steps, some tips:
-- Choose Storage HPC
-- Choose the [Collaborative Organization](https://servicedesk.surf.nl/wiki/pages/viewpage.action?pageId=17825822) of the project for which you want to create the storage volume
-- Choose the wallet with which you 'pay' for the Storage Unit
-- Choose the size. It is not possible to resize it later on, so don't choose too small, but also don't choose too large because it will cost more credits.
-- Give your storage volume a descriptive name so you can recognize it later on (e.g. use the name of the project or experiment)
+* Click 'Create new storage'
+* The Wizard will guide you through the steps, some tips:
+* Choose Storage HPC
+* Choose the [Collaborative Organization](https://servicedesk.surf.nl/wiki/pages/viewpage.action?pageId=17825822) of the project for which you want to create the storage volume
+* Choose the wallet with which you 'pay' for the Storage Unit
+* Choose the size. It is not possible to resize it later on, so don't choose too small, but also don't choose too large because it will cost more credits.
+* Give your storage volume a descriptive name so you can recognize it later on (e.g. use the name of the project or experiment)
 
 ## Create a workspace
 A workspace can also be called a 'Virtual Machine' or a 'Server'. It is a temporary 'remote' machine that you can login to and that has you can use to perform analyses or model runs. You 'pay' for the machine with the credits from your wallet. The more compute power you select the more credits it costs and the sooner your wallet will be empty.
 
 ### How to create a workspace?
 In the Research Cloud portal:
-- Click 'Create new storage'
-- Select application (Ubuntu, R-studio etc.)
-- Choose the [Collaborative Organization](https://servicedesk.surf.nl/wiki/pages/viewpage.action?pageId=17825822) of the project for which you want to create the workspace
-- Skip step 3 'Datasets'
-- Choose the wallet with which you 'pay' for the Storage Unit
--	Select Cloud provider (Surf HPC Cloud)
--	Select the size of your workspace (# of Cores and RAM, or when relevant GPU)
--	Select persistent storage volume (see above how to create one)
--	Set expiration date (default setting is 1 week). Important: on this date the machine and all data on it will be deleted without warning. Only data on the Storage volume will remain. The expiration date can be changed later on.
--	Give the workspace a descriptive title that you can recognize later on.
--	Click Submit
+* Click 'Create new workspace'
+* Select application (Ubuntu, R-studio etc.)
+* Choose the [Collaborative Organization](https://servicedesk.surf.nl/wiki/pages/viewpage.action?pageId=17825822) of the project for which you want to create the workspace
+* Skip step 3 'Datasets'
+* Choose the wallet with which you 'pay' for the Storage Unit
+*	Select Cloud provider (Surf HPC Cloud)
+*	Select the size of your workspace (# of Cores and RAM, or when relevant GPU)
+*	Select persistent storage volume (see above how to create one)
+*	Set expiration date (default setting is 1 week). Important: on this date the machine and all data on it will be deleted without warning. Only data on the Storage volume will remain. The expiration date can be changed later on.
+*	Give the workspace a descriptive title that you can recognize later on.
+*	Click Submit
 
 
 ## Pausing, Resuming, Deleting a workspace
