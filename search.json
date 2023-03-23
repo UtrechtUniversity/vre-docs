@@ -42,13 +42,6 @@
     "text": "This page describes all general steps that a user needs to perform to be able to start working with SURF Research cloud:\nContents:"
   },
   {
-    "objectID": "docs/getting-started.html#portal",
-    "href": "docs/getting-started.html#portal",
-    "title": "Getting Started",
-    "section": "Portal",
-    "text": "Portal"
-  },
-  {
     "objectID": "docs/getting-started.html#create-storage-volume",
     "href": "docs/getting-started.html#create-storage-volume",
     "title": "Getting Started",
@@ -60,7 +53,7 @@
     "href": "docs/getting-started.html#create-a-workspace",
     "title": "Getting Started",
     "section": "Create a workspace",
-    "text": "Create a workspace\nA workspace can also be called a ‘Virtual Machine’ or a ‘Server’. It is a temporary ‘remote’ machine that you can login to and that has you can use to perform analyses or model runs. You ‘pay’ for the machine with the credits from your wallet. The more compute power you select the more credits it costs and the sooner your wallet will be empty.\n\nHow to create a workspace?\nIn the Research Cloud portal: - Click ‘Create new workspace’ - Select application (Ubuntu, R-studio etc.) - Choose the Collaborative Organization of the project for which you want to create the workspace - Skip step 3 ‘Datasets’ - Choose the wallet with which you ‘pay’ for the Storage Unit - Select Cloud provider (Surf HPC Cloud) - Select the size of your workspace (# of Cores and RAM, or when relevant GPU) - Select persistent storage volume (see above how to create one) - Set expiration date (default setting is 1 week). Important: on this date the machine and all data on it will be deleted without warning. Only data on the Storage volume will remain. The expiration date can be changed later on. - Give the workspace a descriptive title that you can recognize later on. - Click Submit"
+    "text": "Create a workspace\nA workspace can also be called a ‘Virtual Machine’ or a ‘Server’. It is a temporary ‘remote’ machine that you can login to and that has you can use to perform analyses or model runs. You ‘pay’ for the machine with the credits from your wallet. The more compute power you select the more credits it costs and the sooner your wallet will be empty.\n\nHow to create a workspace?\nIn the Research Cloud portal:\n\nClick ‘Create new workspace’\nSelect application (Ubuntu, R-studio etc.)\nChoose the Collaborative Organization of the project for which you want to create the workspace\nSkip step 3 ‘Datasets’\nChoose the wallet with which you ‘pay’ for the Storage Unit\nSelect Cloud provider (Surf HPC Cloud)\nSelect the size of your workspace (# of Cores and RAM, or when relevant GPU)\nSelect persistent storage volume (see above how to create one)\nSet expiration date (default setting is 1 week). Important: on this date the machine and all data on it will be deleted without warning. Only data on the Storage volume will remain. The expiration date can be changed later on.\nGive the workspace a descriptive title that you can recognize later on.\nClick Submit"
   },
   {
     "objectID": "docs/getting-started.html#pausing-resuming-deleting-a-workspace",
@@ -81,7 +74,7 @@
     "href": "docs/getting-started.html#getting-data-inside-your-workspace",
     "title": "Getting Started",
     "section": "Getting data inside your workspace",
-    "text": "Getting data inside your workspace\n\nMounting online storage\n\n\nTransferring data\nDownload irods rclone scp"
+    "text": "Getting data inside your workspace\n\nMounting online storage\n\n\nTransferring data\n\nDownload\nirods\nrclone\nscp"
   },
   {
     "objectID": "docs/research-cloud-intro.html",
