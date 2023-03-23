@@ -20,8 +20,17 @@ Contents:
 In most cases you need to create a storage
 
 
+## Create and setup a workspace
+- Select application (Ubuntu, R-studio etc.)
+-	If you are member of multiple Collaborations (CO) select correct CO
+-	If you are owner of multiple wallets select correct one
+-	Select Cloud provider (Surf AWS or Surf HPC Cloud)
+-	Select type VM (CPU, RAM, Storage)
+-	Select persistent storage (created in step 3)
+-	Set expiration date (default setting is 1 week)
+-	Title (and description) workspace
+-	Button submit
 
-## Create a workspace
 
 ## Pausing, Resuming, Deleting a workspace
 You always need a wallet to create a workspace, by default a workspace can only be paused, resumed and deleted by the one that has created it. You can use SRAM to give persons permission to PAUSE, RESUME and DELETE a workspace that is created by someone else, see: https://servicedesk.surf.nl/wiki/display/WIKI/Sharing+control%3A+workspace+admin
