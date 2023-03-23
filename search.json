@@ -56,11 +56,11 @@
     "text": "Create storage\nIn most cases you need to create a storage"
   },
   {
-    "objectID": "docs/getting-started.html#create-a-workspace",
-    "href": "docs/getting-started.html#create-a-workspace",
+    "objectID": "docs/getting-started.html#create-and-setup-a-workspace",
+    "href": "docs/getting-started.html#create-and-setup-a-workspace",
     "title": "Getting Started",
-    "section": "Create a workspace",
-    "text": "Create a workspace"
+    "section": "Create and setup a workspace",
+    "text": "Create and setup a workspace\n\nSelect application (Ubuntu, R-studio etc.)\nIf you are member of multiple Collaborations (CO) select correct CO\nIf you are owner of multiple wallets select correct one\nSelect Cloud provider (Surf AWS or Surf HPC Cloud)\nSelect type VM (CPU, RAM, Storage)\nSelect persistent storage (created in step 3)\nSet expiration date (default setting is 1 week)\nTitle (and description) workspace\nButton submit"
   },
   {
     "objectID": "docs/getting-started.html#pausing-resuming-deleting-a-workspace",
