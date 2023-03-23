@@ -49,18 +49,18 @@
     "text": "Portal"
   },
   {
-    "objectID": "docs/getting-started.html#create-storage",
-    "href": "docs/getting-started.html#create-storage",
+    "objectID": "docs/getting-started.html#create-storage-volume",
+    "href": "docs/getting-started.html#create-storage-volume",
     "title": "Getting Started",
-    "section": "Create storage",
-    "text": "Create storage\nIn most cases you need to create a storage"
+    "section": "Create storage volume",
+    "text": "Create storage volume\n\nWhy a storage volume?\nIn most cases you need to create a storage volume before you create a workspace. A workspace has limited storage and is temporary; all data stored on the workspace itself are deleted when a workspace is deleted. You can see a storage volume as a USB stick that you can attach to a workspace. A storage volume is persistent, so when you remove a workspace, all data on the storage volume will remain there. Storage volumes have good performance and are suitable for I/O-intensive computing tasks.\n\n\nHow to create a storage volume?\nIn the Research Cloud portal: - Click ‘Create new storage’ - The Wizard will guide you through the steps, some tips: - Choose Storage HPC - Choose the Collaborative Organization of the project for which you want to create the storage volume - Choose the wallet with which you ‘pay’ for the Storage Unit - Choose the size. It is not possible to resize it later on, so don’t choose too small, but also don’t choose too large because it will cost more credits. - Give your storage volume a descriptive name so you can recognize it later on (e.g. use the name of the project or experiment)"
   },
   {
-    "objectID": "docs/getting-started.html#create-and-setup-a-workspace",
-    "href": "docs/getting-started.html#create-and-setup-a-workspace",
+    "objectID": "docs/getting-started.html#create-a-workspace",
+    "href": "docs/getting-started.html#create-a-workspace",
     "title": "Getting Started",
-    "section": "Create and setup a workspace",
-    "text": "Create and setup a workspace\n\nSelect application (Ubuntu, R-studio etc.)\nIf you are member of multiple Collaborations (CO) select correct CO\nIf you are owner of multiple wallets select correct one\nSelect Cloud provider (Surf AWS or Surf HPC Cloud)\nSelect type VM (CPU, RAM, Storage)\nSelect persistent storage (created in step 3)\nSet expiration date (default setting is 1 week)\nTitle (and description) workspace\nButton submit"
+    "section": "Create a workspace",
+    "text": "Create a workspace\nA workspace can also be called a ‘Virtual Machine’ or a ‘Server’. It is a temporary ‘remote’ machine that you can login to and that has you can use to perform analyses or model runs. You ‘pay’ for the machine with the credits from your wallet. The more compute power you select the more credits it costs and the sooner your wallet will be empty.\n\nHow to create a workspace?\nIn the Research Cloud portal: - Click ‘Create new storage’ - Select application (Ubuntu, R-studio etc.) - Choose the Collaborative Organization of the project for which you want to create the workspace - Skip step 3 ‘Datasets’ - Choose the wallet with which you ‘pay’ for the Storage Unit - Select Cloud provider (Surf HPC Cloud) - Select the size of your workspace (# of Cores and RAM, or when relevant GPU) - Select persistent storage volume (see above how to create one) - Set expiration date (default setting is 1 week). Important: on this date the machine and all data on it will be deleted without warning. Only data on the Storage volume will remain. The expiration date can be changed later on. - Give the workspace a descriptive title that you can recognize later on. - Click Submit"
   },
   {
     "objectID": "docs/getting-started.html#pausing-resuming-deleting-a-workspace",
