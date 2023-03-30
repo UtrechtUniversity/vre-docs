@@ -1,5 +1,33 @@
 [
   {
+    "objectID": "docs/workspaces/asreview_cli.html",
+    "href": "docs/workspaces/asreview_cli.html",
+    "title": "ASReview CLI",
+    "section": "",
+    "text": "steps"
+  },
+  {
+    "objectID": "docs/workspaces/asreview_cli.html#access",
+    "href": "docs/workspaces/asreview_cli.html#access",
+    "title": "ASReview CLI",
+    "section": "Access",
+    "text": "Access\nssh"
+  },
+  {
+    "objectID": "docs/workspaces/asreview_cli.html#data-transfer-options",
+    "href": "docs/workspaces/asreview_cli.html#data-transfer-options",
+    "title": "ASReview CLI",
+    "section": "Data transfer options",
+    "text": "Data transfer options\nscp rclone irods research drive"
+  },
+  {
+    "objectID": "docs/workspaces/asreview_cli.html#usage",
+    "href": "docs/workspaces/asreview_cli.html#usage",
+    "title": "ASReview CLI",
+    "section": "Usage",
+    "text": "Usage\nLinux command line asreview extensions asr instead of asreview"
+  },
+  {
     "objectID": "docs/accounts.html",
     "href": "docs/accounts.html",
     "title": "Accounts, Funding and Collaboration",
