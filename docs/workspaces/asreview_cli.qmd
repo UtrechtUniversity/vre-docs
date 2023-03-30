@@ -1,0 +1,21 @@
+--- 
+title: "ASReview CLI"
+---
+
+## Creation
+steps
+
+## Access
+ssh
+
+## Data transfer options
+scp
+rclone
+irods
+research drive
+
+## Usage
+Linux command line
+asreview extensions
+asr instead of asreview
+
