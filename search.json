@@ -102,7 +102,7 @@
     "href": "docs/workspace-catalogue.html",
     "title": "Workspace Catalogue",
     "section": "",
-    "text": "This page provides links to user documentation for all workspaces developed by UU\n\nAnaconda Navigator\nASReview\nMiniconda\netc"
+    "text": "This page provides links to user documentation for workspaces developed by Utrecht University\n\nAnaconda Navigator\nASReview command line\nASReview Lab\nMiniconda"
   },
   {
     "objectID": "docs/einfra.html",
@@ -249,7 +249,7 @@
     "href": "docs/manuals.html",
     "title": "User Manuals",
     "section": "",
-    "text": "On this page we share manuals for a variety of use cases and tasks.\n\nMounting storage\nData Transer using Yoda\nData Transfer using rclone\nCreating python environments"
+    "text": "On this page we share manuals for a variety of use cases and tasks.\n\nData Transfer from your PC using SCP and RSYNC\nData Transer to and from Yoda using iCommands\nData Transfer between Research cloud and Surfdrive"
   },
   {
     "objectID": "index.html",
