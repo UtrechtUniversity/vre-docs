@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ASReview CLI</title>
+<title>Installing and using iCommands on Surf Research Cloud</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -121,21 +121,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#description" id="toc-description" class="nav-link active" data-scroll-target="#description">Description</a></li>
-  <li><a href="#creation" id="toc-creation" class="nav-link" data-scroll-target="#creation">Creation</a>
-  <ul class="collapse">
-  <li><a href="#create-a-storage-volume" id="toc-create-a-storage-volume" class="nav-link" data-scroll-target="#create-a-storage-volume">Create a storage volume</a></li>
-  <li><a href="#create-a-workspace" id="toc-create-a-workspace" class="nav-link" data-scroll-target="#create-a-workspace">Create a workspace</a></li>
-  </ul></li>
-  <li><a href="#access-options" id="toc-access-options" class="nav-link" data-scroll-target="#access-options">Access options</a></li>
-  <li><a href="#data-transfer-options" id="toc-data-transfer-options" class="nav-link" data-scroll-target="#data-transfer-options">Data transfer options</a>
-  <ul class="collapse">
-  <li><a href="#data-is-stored-on-your-pc" id="toc-data-is-stored-on-your-pc" class="nav-link" data-scroll-target="#data-is-stored-on-your-pc">Data is stored on your PC</a></li>
-  <li><a href="#data-is-stored-on-surfdrive-or-researchdrive-onedrive-dropbox-etc." id="toc-data-is-stored-on-surfdrive-or-researchdrive-onedrive-dropbox-etc." class="nav-link" data-scroll-target="#data-is-stored-on-surfdrive-or-researchdrive-onedrive-dropbox-etc.">Data is stored on Surfdrive (or Researchdrive, Onedrive, Dropbox, etc.)</a></li>
-  <li><a href="#data-is-stored-on-yoda" id="toc-data-is-stored-on-yoda" class="nav-link" data-scroll-target="#data-is-stored-on-yoda">Data is stored on Yoda</a></li>
-  </ul></li>
-  <li><a href="#usage" id="toc-usage" class="nav-link" data-scroll-target="#usage">Usage</a></li>
-  <li><a href="#tips" id="toc-tips" class="nav-link" data-scroll-target="#tips">Tips</a></li>
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link active" data-scroll-target="#prerequisites">Prerequisites</a></li>
+  <li><a href="#step-1-make-sure-you-are-in-a-terminal" id="toc-step-1-make-sure-you-are-in-a-terminal" class="nav-link" data-scroll-target="#step-1-make-sure-you-are-in-a-terminal">Step 1: Make sure you are in a terminal</a></li>
+  <li><a href="#step-2-install-irods-icommands" id="toc-step-2-install-irods-icommands" class="nav-link" data-scroll-target="#step-2-install-irods-icommands">Step 2: Install iRODS iCommands</a></li>
+  <li><a href="#step-3-create-a-config-file" id="toc-step-3-create-a-config-file" class="nav-link" data-scroll-target="#step-3-create-a-config-file">Step 3: Create a config file</a></li>
+  <li><a href="#step-4-initialize-connection-to-irods" id="toc-step-4-initialize-connection-to-irods" class="nav-link" data-scroll-target="#step-4-initialize-connection-to-irods">Step 4: Initialize connection to iRODS</a></li>
+  <li><a href="#step-5-transferring-data" id="toc-step-5-transferring-data" class="nav-link" data-scroll-target="#step-5-transferring-data">Step 5: Transferring data</a></li>
+  <li><a href="#parallel-transfer" id="toc-parallel-transfer" class="nav-link" data-scroll-target="#parallel-transfer">Parallel transfer</a></li>
   </ul>
 </nav>
     </div>
@@ -144,7 +136,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">ASReview CLI</h1>
+<h1 class="title">Installing and using iCommands on Surf Research Cloud</h1>
 </div>
 
 
@@ -159,60 +151,93 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="description" class="level2">
-<h2 class="anchored" data-anchor-id="description">Description</h2>
-<p>This workspace can be used to work with ASReview (e.g.&nbsp;for simulations) via the command line interface (CLI).</p>
-<p>Currently the workspace is only available <a href="../../docs/contact.html">upon request</a>.</p>
+<p>The instructions below describe the process of data transfer between Surf Research Cloud and Yoda using iCommands. This manual is developed for workspaces based on a Linux operating system (including the Jupyter Notebook and RStudio workspaces). Transfer is also possible via the Webdav protocol using <a href="https://rclone.org">Rclone</a>. For large files iCommands is faster due to parallel transfer options.</p>
+<section id="prerequisites" class="level3">
+<h3 class="anchored" data-anchor-id="prerequisites">Prerequisites</h3>
+<p>You will need some basic linux skills to be able to use the iCommands successfully. If you don’t have these skills, take some time to practice using sections 1, 2, 3 and 7 of this short <a href="https://swcarpentry.github.io/shell-novice">online course</a> before proceeding. You can practice in the terminal (see step 1).</p>
 </section>
-<section id="creation" class="level2">
-<h2 class="anchored" data-anchor-id="creation">Creation</h2>
-<section id="create-a-storage-volume" class="level3">
-<h3 class="anchored" data-anchor-id="create-a-storage-volume">Create a storage volume</h3>
-<p>First create a storage volume before creating the workspace.</p>
-<p>See the <a href="../../docs/getting-started.html#create-storage-volume">Getting started</a> page for more info about how and why to create a storage volume.</p>
+<section id="step-1-make-sure-you-are-in-a-terminal" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-make-sure-you-are-in-a-terminal">Step 1: Make sure you are in a terminal</h3>
+<ul>
+<li>In Jupyterhub (Jupyter Workspace in Research cloud): To open a new terminal, click the + button in the file browser and select the terminal in the new Launcher tab (<a href="https://jupyterlab.readthedocs.io/en/stable/user/terminal.html">find a short video here</a>).</li>
+<li>In Rstudio (Rstudio workspace in Research cloud): In the bottom left panel, click the ‘terminal’ tab.</li>
+</ul>
 </section>
-<section id="create-a-workspace" class="level3">
-<h3 class="anchored" data-anchor-id="create-a-workspace">Create a workspace</h3>
-<p>In the <a href="https://surfresearchcloud.nl">Research cloud portal</a> click the ‘Create a new workspace’ button and follow the steps in the wizzard.</p>
-<p>See the <a href="../../docs/getting-started.html#create-a-workspace">Getting started</a> page for more guidance.</p>
-<p><strong>Choosing the number of CPU cores</strong>: A workspace with more CPU cores and RAM memory will cost more credits. If you want to use a large workspace for a long period of time (many days or weeks), first try to test on small machines (e.g.&nbsp;a 2 core and a 4 core machine) whether a bigger machine actually does help you to get your results faster.</p>
+<section id="step-2-install-irods-icommands" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-install-irods-icommands">Step 2: Install iRODS iCommands</h3>
+<p>Some workspaces have iRODS iCommands preconfigured. This should be visible in step 1 when creating a workspace.</p>
+<p>Copy and paste (or type) the following commands in the terminal, or view the most up to date installation instructions for iRODS iCommands on the <a href="https://www.uu.nl/en/research/yoda/guide-to-yoda/i-am-using-yoda/using-icommands-for-large-datasets">yoda website</a> in the section “Installing iCommands on Ubuntu”.</p>
+<pre><code>sudo apt-get update
+sudo apt-get install -y --only-upgrade ca-certificates
+wget -qO - https://packages.irods.org/irods-signing-key.asc | sudo apt-key add -
+echo "deb [arch=amd64] https://packages.irods.org/apt/ xenial main" | sudo tee /etc/apt/sources.list.d/renci-irods.list
+sudo apt-get update
+sudo apt -y install aptitude irods-runtime=4.2.7 irods-icommands=4.2.7
+sudo aptitude hold irods-runtime irods-icommands
+echo "120"  | sudo tee /proc/sys/net/ipv4/tcp_keepalive_time
+echo "30" | sudo tee /proc/sys/net/ipv4/tcp_keepalive_intvl
+echo "net.ipv4.tcp_keepalive_time=120" | sudo tee -a /etc/sysctl.d/99-sysctl.conf
+echo "net.ipv4.tcp_keepalive_intvl=30" | sudo tee -a /etc/sysctl.d/99-sysctl.conf</code></pre>
 </section>
+<section id="step-3-create-a-config-file" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-create-a-config-file">Step 3: Create a config file</h3>
+<p>You may need help from your datamanager or contact Yoda support to obtain the information needed for the config file.</p>
+<p>Go to the home directory and create a hidden directory called ‘.irods’</p>
+<pre><code>cd ~
+mkdir .irods
+cd .irods</code></pre>
+<p>In this directory, create a file named <code>irods_environment.json</code>.</p>
+<pre><code>touch irods_environment.json</code></pre>
+<p>Edit the file using a text editor such as nano or vim</p>
+<pre><code>nano irods_environment.json</code></pre>
+<p>Go to the <a href="https://www.uu.nl/en/research/yoda/guide-to-yoda/i-am-using-yoda/using-icommands-for-large-datasets">yoda website</a>, scroll to <strong>Step 2. Configuring iCommands</strong> and copy and paste the text belonging to your institution in the file (similar to the file below) and change the email address next to <code>irods_user_name</code>to your yoda user name (typically your uu email address).</p>
+<pre><code>{   
+"irods_host": "science.data.uu.nl",   
+"irods_port": 1247,    "irods_home": "/nluu6p/home",   
+"irods_user_name": "exampleuser@uu.nl",   
+"irods_zone_name": "nluu6p",   
+"irods_authentication_scheme": "pam",   
+"irods_encryption_algorithm": "AES-256-CBC",   
+"irods_encryption_key_size": 32,   
+"irods_encryption_num_hash_rounds": 16,   
+"irods_encryption_salt_size": 8,   
+"irods_client_server_negotiation": "request_server_negotiation"
+}</code></pre>
 </section>
-<section id="access-options" class="level2">
-<h2 class="anchored" data-anchor-id="access-options">Access options</h2>
-<p>This workspace can be accessed using SSH (secure shell protocol). The research cloud documentation provides instructions on <a href="https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace#Logintoyourworkspace-AccessaworkspacewithSSH">how to set up SSH for research cloud</a>.</p>
-<p>To connect to the workspace from a Windows computer you need specific software to use a ‘shell’ (also known as ‘terminal’), examples include Git Bash, PuTTY and MobaXterm. If you need to install something new, we would recommend <a href="https://mobaxterm.mobatek.net/">MobaXterm</a></p>
-<p>On MacOS and Linux machines you can use the standard ‘Terminal’.</p>
+<section id="step-4-initialize-connection-to-irods" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-initialize-connection-to-irods">Step 4: Initialize connection to iRODS</h3>
+<p>Initialize the connection to the Yoda system as follows:</p>
+<pre><code>iinit</code></pre>
+<p>Type your Yoda password when requested.</p>
+<p>Type <code>ils</code> to see whether the connection has been established. The output of the <code>ils</code> command will list the current Yoda folder and the folders that are located within the current folder.</p>
+<p><code>iinit</code> and <code>ils</code> are commands which can only be used when icommands is active. Some of these commands are very similar to standard unix commands. When icommands is active you can still operate the HPC system using normal unix commands. A complete list of all ‘icommands’ can be found <a href="https://docs.irods.org/4.2.9/icommands/user/">here</a>.</p>
 </section>
-<section id="data-transfer-options" class="level2">
-<h2 class="anchored" data-anchor-id="data-transfer-options">Data transfer options</h2>
-<p>When the workspace is up and running the first thing you probably need to do is transfer your dataset to the storage volume that is attached to your workspace. The storage volume can be found on the following directory path: <code>~/data/volume_2/</code>. Create a folder there where you want to store your data. There are several methods to transfer data to the workspace, the recommended method depends on where the data is currently stored:</p>
-<section id="data-is-stored-on-your-pc" class="level3">
-<h3 class="anchored" data-anchor-id="data-is-stored-on-your-pc">Data is stored on your PC</h3>
-<p>When the dataset is stored on the computer you are working on now, you can use the <code>scp</code> command to tranfer files or folders, or the <code>rsync</code> command to ‘synchronize’ folders. If you have <code>rsync</code> installed, we would recommend this over <code>scp</code>, but <code>scp</code> is also fine.</p>
-<p><a href="../../docs/manuals/ssh-data-transfer-methods.html">Instructions</a></p>
+<section id="step-5-transferring-data" class="level3">
+<h3 class="anchored" data-anchor-id="step-5-transferring-data">Step 5: Transferring data</h3>
+<p>Standard transfer of a single file can be done using <code>iget</code> and <code>iput</code></p>
+<p>The <code>irsync</code> command can be used to synchronize entire directories between Yoda and Cartesius. The command is used as follows.</p>
+<pre><code>irsync &lt;source&gt; &lt;destination&gt;</code></pre>
+<p>In contrary to the <code>iput</code> and <code>iget</code> commands, in <code>irsync</code> it is necessary to put ‘i:’ before the Yoda path. The Yoda path (directly after ‘i:’) to the folder that should be synchronized should be relative to the <strong>current</strong> Yoda folder (check with <code>ils</code>).</p>
+<p>E.g.</p>
+<pre><code>irsync -rKV i:myfolder /my_researchcloud_folder</code></pre>
+<p><code>-rKV</code> means the following flags (options) are used:</p>
+<ul>
+<li><code>-r</code> recursive - store the whole folder including subdirectories</li>
+<li><code>-K</code> Calculate and verify the checksum on the data</li>
+<li><code>-V</code> Very verbose</li>
+</ul>
+<p>Typically you will want to store data on the (persistent) storage volume that is attached to your workspace. Transfer it directly there as follows:</p>
+<pre><code>irsync -rKV i:myfolder ~/data/volume_2/my_destination_folder</code></pre>
+<p>To synchronize in the opposite direction</p>
+<pre><code>irsync -rKV /my_researchcloud_folder/ i:myfolder</code></pre>
+<blockquote class="blockquote">
+<p>note the ‘/’ at the end of /my_researchcloud_folder/ that is not used in the command above.</p>
+</blockquote>
 </section>
-<section id="data-is-stored-on-surfdrive-or-researchdrive-onedrive-dropbox-etc." class="level3">
-<h3 class="anchored" data-anchor-id="data-is-stored-on-surfdrive-or-researchdrive-onedrive-dropbox-etc.">Data is stored on Surfdrive (or Researchdrive, Onedrive, Dropbox, etc.)</h3>
-<p>When data is stored</p>
-<p><a href="../../docs/manuals/rclone-researchcloud.html">Instructions</a></p>
-</section>
-<section id="data-is-stored-on-yoda" class="level3">
-<h3 class="anchored" data-anchor-id="data-is-stored-on-yoda">Data is stored on Yoda</h3>
-<p>When your data is stored on Yoda, data transfer can be done using iRODS icommands.</p>
-<p><a href="../../docs/manuals/icommands.html">Instructions</a></p>
-</section>
-</section>
-<section id="usage" class="level2">
-<h2 class="anchored" data-anchor-id="usage">Usage</h2>
-<p>ASReview and all of its extensions are preinstalled in this workspace. ASReview can be used using the ‘alias’ <code>asr</code> (the normal command <code>asreview</code> will not do anything, always use <code>asr</code> instead).</p>
-<p>Type <code>asr --help</code> to test the installation.</p>
-<p>Type <code>asr simulate --help</code> to find the</p>
-<p>Type <code>asr simulate &lt;ARGUMENTS&gt;</code> to run a simulation study.</p>
-</section>
-<section id="tips" class="level2">
-<h2 class="anchored" data-anchor-id="tips">Tips</h2>
-<p>To practice with navigation, finding files and folders, and running programs via a Linux command line interface check this <a href="https://swcarpentry.github.io/shell-novice/">Software Carpentries course</a></p>
+<section id="parallel-transfer" class="level3">
+<h3 class="anchored" data-anchor-id="parallel-transfer">Parallel transfer</h3>
+<p>With icommands it is possible to transfer individual files in parallel using multiple threads, which results in higher transfer speeds. The flag <code>-N</code> can be used to control the number of parallel threads (only recommended in very specific situations). When not specified the server decides a default number of threads. For large files this number can be e.g.&nbsp;16 threads.</p>
+<pre><code>irsync -rKV -N 0 i:myfolder /my_researchcloud_folder</code></pre>
 
 
 </section>

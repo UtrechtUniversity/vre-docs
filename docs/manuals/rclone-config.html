@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ASReview CLI</title>
+<title>Configuring Rclone for surfdrive</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -121,21 +121,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#description" id="toc-description" class="nav-link active" data-scroll-target="#description">Description</a></li>
-  <li><a href="#creation" id="toc-creation" class="nav-link" data-scroll-target="#creation">Creation</a>
-  <ul class="collapse">
-  <li><a href="#create-a-storage-volume" id="toc-create-a-storage-volume" class="nav-link" data-scroll-target="#create-a-storage-volume">Create a storage volume</a></li>
-  <li><a href="#create-a-workspace" id="toc-create-a-workspace" class="nav-link" data-scroll-target="#create-a-workspace">Create a workspace</a></li>
-  </ul></li>
-  <li><a href="#access-options" id="toc-access-options" class="nav-link" data-scroll-target="#access-options">Access options</a></li>
-  <li><a href="#data-transfer-options" id="toc-data-transfer-options" class="nav-link" data-scroll-target="#data-transfer-options">Data transfer options</a>
-  <ul class="collapse">
-  <li><a href="#data-is-stored-on-your-pc" id="toc-data-is-stored-on-your-pc" class="nav-link" data-scroll-target="#data-is-stored-on-your-pc">Data is stored on your PC</a></li>
-  <li><a href="#data-is-stored-on-surfdrive-or-researchdrive-onedrive-dropbox-etc." id="toc-data-is-stored-on-surfdrive-or-researchdrive-onedrive-dropbox-etc." class="nav-link" data-scroll-target="#data-is-stored-on-surfdrive-or-researchdrive-onedrive-dropbox-etc.">Data is stored on Surfdrive (or Researchdrive, Onedrive, Dropbox, etc.)</a></li>
-  <li><a href="#data-is-stored-on-yoda" id="toc-data-is-stored-on-yoda" class="nav-link" data-scroll-target="#data-is-stored-on-yoda">Data is stored on Yoda</a></li>
-  </ul></li>
-  <li><a href="#usage" id="toc-usage" class="nav-link" data-scroll-target="#usage">Usage</a></li>
-  <li><a href="#tips" id="toc-tips" class="nav-link" data-scroll-target="#tips">Tips</a></li>
+  <li><a href="#next-using-rclone-for-data-transfer" id="toc-next-using-rclone-for-data-transfer" class="nav-link active" data-scroll-target="#next-using-rclone-for-data-transfer">Next: Using rclone for data transfer</a></li>
   </ul>
 </nav>
     </div>
@@ -144,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">ASReview CLI</h1>
+<h1 class="title">Configuring Rclone for surfdrive</h1>
 </div>
 
 
@@ -159,60 +145,34 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="description" class="level2">
-<h2 class="anchored" data-anchor-id="description">Description</h2>
-<p>This workspace can be used to work with ASReview (e.g.&nbsp;for simulations) via the command line interface (CLI).</p>
-<p>Currently the workspace is only available <a href="../../docs/contact.html">upon request</a>.</p>
-</section>
-<section id="creation" class="level2">
-<h2 class="anchored" data-anchor-id="creation">Creation</h2>
-<section id="create-a-storage-volume" class="level3">
-<h3 class="anchored" data-anchor-id="create-a-storage-volume">Create a storage volume</h3>
-<p>First create a storage volume before creating the workspace.</p>
-<p>See the <a href="../../docs/getting-started.html#create-storage-volume">Getting started</a> page for more info about how and why to create a storage volume.</p>
-</section>
-<section id="create-a-workspace" class="level3">
-<h3 class="anchored" data-anchor-id="create-a-workspace">Create a workspace</h3>
-<p>In the <a href="https://surfresearchcloud.nl">Research cloud portal</a> click the ‘Create a new workspace’ button and follow the steps in the wizzard.</p>
-<p>See the <a href="../../docs/getting-started.html#create-a-workspace">Getting started</a> page for more guidance.</p>
-<p><strong>Choosing the number of CPU cores</strong>: A workspace with more CPU cores and RAM memory will cost more credits. If you want to use a large workspace for a long period of time (many days or weeks), first try to test on small machines (e.g.&nbsp;a 2 core and a 4 core machine) whether a bigger machine actually does help you to get your results faster.</p>
-</section>
-</section>
-<section id="access-options" class="level2">
-<h2 class="anchored" data-anchor-id="access-options">Access options</h2>
-<p>This workspace can be accessed using SSH (secure shell protocol). The research cloud documentation provides instructions on <a href="https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace#Logintoyourworkspace-AccessaworkspacewithSSH">how to set up SSH for research cloud</a>.</p>
-<p>To connect to the workspace from a Windows computer you need specific software to use a ‘shell’ (also known as ‘terminal’), examples include Git Bash, PuTTY and MobaXterm. If you need to install something new, we would recommend <a href="https://mobaxterm.mobatek.net/">MobaXterm</a></p>
-<p>On MacOS and Linux machines you can use the standard ‘Terminal’.</p>
-</section>
-<section id="data-transfer-options" class="level2">
-<h2 class="anchored" data-anchor-id="data-transfer-options">Data transfer options</h2>
-<p>When the workspace is up and running the first thing you probably need to do is transfer your dataset to the storage volume that is attached to your workspace. The storage volume can be found on the following directory path: <code>~/data/volume_2/</code>. Create a folder there where you want to store your data. There are several methods to transfer data to the workspace, the recommended method depends on where the data is currently stored:</p>
-<section id="data-is-stored-on-your-pc" class="level3">
-<h3 class="anchored" data-anchor-id="data-is-stored-on-your-pc">Data is stored on your PC</h3>
-<p>When the dataset is stored on the computer you are working on now, you can use the <code>scp</code> command to tranfer files or folders, or the <code>rsync</code> command to ‘synchronize’ folders. If you have <code>rsync</code> installed, we would recommend this over <code>scp</code>, but <code>scp</code> is also fine.</p>
-<p><a href="../../docs/manuals/ssh-data-transfer-methods.html">Instructions</a></p>
-</section>
-<section id="data-is-stored-on-surfdrive-or-researchdrive-onedrive-dropbox-etc." class="level3">
-<h3 class="anchored" data-anchor-id="data-is-stored-on-surfdrive-or-researchdrive-onedrive-dropbox-etc.">Data is stored on Surfdrive (or Researchdrive, Onedrive, Dropbox, etc.)</h3>
-<p>When data is stored</p>
-<p><a href="../../docs/manuals/rclone-researchcloud.html">Instructions</a></p>
-</section>
-<section id="data-is-stored-on-yoda" class="level3">
-<h3 class="anchored" data-anchor-id="data-is-stored-on-yoda">Data is stored on Yoda</h3>
-<p>When your data is stored on Yoda, data transfer can be done using iRODS icommands.</p>
-<p><a href="../../docs/manuals/icommands.html">Instructions</a></p>
-</section>
-</section>
-<section id="usage" class="level2">
-<h2 class="anchored" data-anchor-id="usage">Usage</h2>
-<p>ASReview and all of its extensions are preinstalled in this workspace. ASReview can be used using the ‘alias’ <code>asr</code> (the normal command <code>asreview</code> will not do anything, always use <code>asr</code> instead).</p>
-<p>Type <code>asr --help</code> to test the installation.</p>
-<p>Type <code>asr simulate --help</code> to find the</p>
-<p>Type <code>asr simulate &lt;ARGUMENTS&gt;</code> to run a simulation study.</p>
-</section>
-<section id="tips" class="level2">
-<h2 class="anchored" data-anchor-id="tips">Tips</h2>
-<p>To practice with navigation, finding files and folders, and running programs via a Linux command line interface check this <a href="https://swcarpentry.github.io/shell-novice/">Software Carpentries course</a></p>
+<p>Rclone has an interactive menu to generate a config file for you. You need to complete this menu once for each storage platform that you want to connect to. You can use Rclone for many different types of storage platforms: check the <a href="https://rclone.org">homepage</a> for a list. SURFdrive and Research drive are based on ownCloud software. Platforms built on standard protocols such as WebDAV (including Yoda, Data Archive or the U: network drive of UU student and employees) are also supported but require slightly different configuration steps.</p>
+<p>To check whether Rclone is available on your system:</p>
+<pre><code>rclone version</code></pre>
+<p>You should see a version number displayed in the terminal.</p>
+<p>To start the interactive menu:</p>
+<pre><code>rclone config</code></pre>
+<p>Now walk through the questions. For SURFdrive you need the following information (Rclone version 1.55.1)</p>
+<ol type="1">
+<li>Type <code>n</code> for New remote</li>
+<li>For ‘name’ choose e.g.&nbsp;<code>surfdrive</code> (or SD)</li>
+<li>Choose option <code>40</code>for WebDAV </li>
+<li>Fill in the URL. You can look this up via the web portal of SURFdrive. In the top right corner click your account name. Go to settings. In the left panel, click security. At the very bottom of the page there will be a section WebDAV passwords. There is also an URL, something like: <a href="https://surfdrive.surf.nl/files/remote.php/nonshib-webdav">https://surfdrive.surf.nl/files/remote.php/nonshib-webdav</a><br>
+Use this URL.</li>
+<li>Before you continue with the Rclone menu, first perform the following step via the <a href="https://surfdrive.surf.nl">web portal</a> of SURFdrive. Fill in an app name (e.g.&nbsp;lisa) on the security settings page (same page as previous step) and click “create new app password”. The page will show a username and a password. You will need these in the following steps of the Rclone menu.</li>
+<li>Select the type of WebDAV storage system. Type: <code>2</code> for ownCloud.</li>
+<li>Type in your user name from SURFdrive (this is the username found in the web portal (step 5))</li>
+<li>Select: y) Yes type in my own password</li>
+<li>Type in your password from the web portal and type it in again for confirmation.</li>
+<li>Skip the Bearer token option by pressing enter.</li>
+<li>Choose <code>n</code> to skip the advanced config</li>
+<li>Confirm your settings by typing <code>y</code>.</li>
+<li>Choose <code>q</code> to quit the menu.</li>
+</ol>
+<p>Test whether everything is setup correctly by typing the following command in the terminal, if necessary change <code>surfdrive:</code> to any other name chosen in step 2.:</p>
+<pre><code>rclone lsd surfdrive:</code></pre>
+<p>If everything is setup correctly, you should see a list of files and folders that are present on your SURFdrive.</p>
+<section id="next-using-rclone-for-data-transfer" class="level3">
+<h3 class="anchored" data-anchor-id="next-using-rclone-for-data-transfer">Next: <a href="../../docs/manuals/rclone-transferringdata.html">Using rclone for data transfer</a></h3>
 
 
 </section>

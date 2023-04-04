@@ -4,28 +4,77 @@
     "href": "docs/workspaces/asreview_cli.html",
     "title": "ASReview CLI",
     "section": "",
-    "text": "steps"
+    "text": "This workspace can be used to work with ASReview (e.g. for simulations) via the command line interface (CLI).\nCurrently the workspace is only available upon request."
   },
   {
-    "objectID": "docs/workspaces/asreview_cli.html#access",
-    "href": "docs/workspaces/asreview_cli.html#access",
+    "objectID": "docs/workspaces/asreview_cli.html#creation",
+    "href": "docs/workspaces/asreview_cli.html#creation",
     "title": "ASReview CLI",
-    "section": "Access",
-    "text": "Access\nssh"
+    "section": "Creation",
+    "text": "Creation\n\nCreate a storage volume\nFirst create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the Getting started page for more guidance.\nChoosing the number of CPU cores: A workspace with more CPU cores and RAM memory will cost more credits. If you want to use a large workspace for a long period of time (many days or weeks), first try to test on small machines (e.g. a 2 core and a 4 core machine) whether a bigger machine actually does help you to get your results faster."
+  },
+  {
+    "objectID": "docs/workspaces/asreview_cli.html#access-options",
+    "href": "docs/workspaces/asreview_cli.html#access-options",
+    "title": "ASReview CLI",
+    "section": "Access options",
+    "text": "Access options\nThis workspace can be accessed using SSH (secure shell protocol). The research cloud documentation provides instructions on how to set up SSH for research cloud.\nTo connect to the workspace from a Windows computer you need specific software to use a ‘shell’ (also known as ‘terminal’), examples include Git Bash, PuTTY and MobaXterm. If you need to install something new, we would recommend MobaXterm\nOn MacOS and Linux machines you can use the standard ‘Terminal’."
   },
   {
     "objectID": "docs/workspaces/asreview_cli.html#data-transfer-options",
     "href": "docs/workspaces/asreview_cli.html#data-transfer-options",
     "title": "ASReview CLI",
     "section": "Data transfer options",
-    "text": "Data transfer options\nscp rclone irods research drive"
+    "text": "Data transfer options\nWhen the workspace is up and running the first thing you probably need to do is transfer your dataset to the storage volume that is attached to your workspace. The storage volume can be found on the following directory path: ~/data/volume_2/. Create a folder there where you want to store your data. There are several methods to transfer data to the workspace, the recommended method depends on where the data is currently stored:\n\nData is stored on your PC\nWhen the dataset is stored on the computer you are working on now, you can use the scp command to tranfer files or folders, or the rsync command to ‘synchronize’ folders. If you have rsync installed, we would recommend this over scp, but scp is also fine.\nInstructions\n\n\nData is stored on Surfdrive (or Researchdrive, Onedrive, Dropbox, etc.)\nWhen data is stored\nInstructions\n\n\nData is stored on Yoda\nWhen your data is stored on Yoda, data transfer can be done using iRODS icommands.\nInstructions"
   },
   {
     "objectID": "docs/workspaces/asreview_cli.html#usage",
     "href": "docs/workspaces/asreview_cli.html#usage",
     "title": "ASReview CLI",
     "section": "Usage",
-    "text": "Usage\nLinux command line asreview extensions asr instead of asreview"
+    "text": "Usage\nASReview and all of its extensions are preinstalled in this workspace. ASReview can be used using the ‘alias’ asr (the normal command asreview will not do anything, always use asr instead).\nType asr --help to test the installation.\nType asr simulate --help to find the\nType asr simulate <ARGUMENTS> to run a simulation study."
+  },
+  {
+    "objectID": "docs/workspaces/asreview_cli.html#tips",
+    "href": "docs/workspaces/asreview_cli.html#tips",
+    "title": "ASReview CLI",
+    "section": "Tips",
+    "text": "Tips\nTo practice with navigation, finding files and folders, and running programs via a Linux command line interface check this Software Carpentries course"
+  },
+  {
+    "objectID": "docs/workspaces/template.html#creation",
+    "href": "docs/workspaces/template.html#creation",
+    "title": "workspace name",
+    "section": "Creation",
+    "text": "Creation"
+  },
+  {
+    "objectID": "docs/workspaces/template.html#access",
+    "href": "docs/workspaces/template.html#access",
+    "title": "workspace name",
+    "section": "Access",
+    "text": "Access"
+  },
+  {
+    "objectID": "docs/workspaces/template.html#data-transfer-options",
+    "href": "docs/workspaces/template.html#data-transfer-options",
+    "title": "workspace name",
+    "section": "Data transfer options",
+    "text": "Data transfer options"
+  },
+  {
+    "objectID": "docs/workspaces/template.html#usage",
+    "href": "docs/workspaces/template.html#usage",
+    "title": "workspace name",
+    "section": "Usage",
+    "text": "Usage"
+  },
+  {
+    "objectID": "docs/workspaces/template.html#tips",
+    "href": "docs/workspaces/template.html#tips",
+    "title": "workspace name",
+    "section": "Tips",
+    "text": "Tips"
   },
   {
     "objectID": "docs/accounts.html",
@@ -61,6 +110,13 @@
     "title": "eINFRA application example",
     "section": "",
     "text": "The eINFRA call is a non-competitive grant that can be used to request 50.000 credits and/or 10.000 GPU hours per calendar year per project.\nMore info about requirements and the application portal can be found here\nAn example eINFRA application for Snellius can be found here. It illustrates the length and the level of detail of the specification of the project requirements."
+  },
+  {
+    "objectID": "docs/contact.html",
+    "href": "docs/contact.html",
+    "title": "",
+    "section": "",
+    "text": "Find our contact details on the RDM support website"
   },
   {
     "objectID": "docs/getting-started.html",
@@ -105,6 +161,62 @@
     "text": "Getting data inside your workspace\n\nMounting online storage\n\n\nTransferring data\n\nDownload\nirods\nrclone\nscp"
   },
   {
+    "objectID": "docs/manuals/ssh-data-transfer-methods.html",
+    "href": "docs/manuals/ssh-data-transfer-methods.html",
+    "title": "Transferring data from your PC to your workspace using SCP and RSYNC",
+    "section": "",
+    "text": "The instructions on this page assume you have already setup SSH for Research cloud. If this is not the case, check the Research Cloud documentation site."
+  },
+  {
+    "objectID": "docs/manuals/ssh-data-transfer-methods.html#scp",
+    "href": "docs/manuals/ssh-data-transfer-methods.html#scp",
+    "title": "Transferring data from your PC to your workspace using SCP and RSYNC",
+    "section": "scp",
+    "text": "scp\nWhen you work on a Windows machine and you use MobaXterm for SSH connection, you can use the file browser in MobaXterm to intuitively transfer data.\nIn all other cases: Open a terminal (or shell session) that you use for login in to your workspace via the ssh command.\nscp sourcefile <username>@<ip-address>:destinationdir\nYou can find both the username and the ip-address in the research cloud portal. Find your username under the ‘Profile’ tab.\nFind the IP address of your workspace in the main Dashboard by clicking the drop down arrow of the running Workspace.\nscp testfile.txt <username>@<ip-address>:data/volume_2/input_data\nIf you first need to create a destination folder where you want to transfer the data to:\nssh <username>@<ip-address>\nmkdir ~/data/volume_2/input_data\nlogout\nscp testfile.txt <username>@<ip-address>:data/volume_2/input_data\nTo transfer a directory add the -r option:\nscp -r sourcedir <username>@<ip-address>:data/volume_2/input_data"
+  },
+  {
+    "objectID": "docs/manuals/ssh-data-transfer-methods.html#rsync",
+    "href": "docs/manuals/ssh-data-transfer-methods.html#rsync",
+    "title": "Transferring data from your PC to your workspace using SCP and RSYNC",
+    "section": "rsync",
+    "text": "rsync\nRsync is a tool for synchronizing two folders. This method can also be used to transfer the contents of a folder to a remote folder. You typically run this tool on your own PC in the terminal (so e.g.before login in using the ssh command, or in a separate terminal (or shell session)).\nType rsync --help on to see if it is installed on your system. To install:\n\nInstall\nOn Debian based linux (e.g. Ubuntu):\nsudo apt-get install rsync\nOn mac:\nbrew install rsync\n\n\nUsage\nrsync -azP ./my_local_folder <username>@<ip-address>:~/data/volume_2/input_data\nWhere -azP are options. Type rsync --help to see a list of the options."
+  },
+  {
+    "objectID": "docs/manuals/install-rclone.html",
+    "href": "docs/manuals/install-rclone.html",
+    "title": "",
+    "section": "",
+    "text": "The steps below are used to install Rclone on Research Cloud.\n\nStep 1: Make sure you are in a terminal\n\nIn Jupyterhub (Jupyter Workspace in Research cloud): To open a new terminal, click the + button in the file browser and select the terminal in the new Launcher tab (find a short video here).\nIn Rstudio (Rstudio workspace in Research cloud): In the bottom left panel, click the ‘terminal’ tab.\n\n\n\nStep 2: Download and install rclone\nType the following command in the terminal:\ncurl https://rclone.org/install.sh | sudo bash\n\n\nStep 3: Check if installation was successful\nType the following command. A version number will be displayed when installation was successful.\nrclone version\n\n\nNext: Configure Rclone"
+  },
+  {
+    "objectID": "docs/manuals/rclone-transferringdata.html",
+    "href": "docs/manuals/rclone-transferringdata.html",
+    "title": "Using Rclone",
+    "section": "",
+    "text": "For all Rclone commands see: https://rclone.org/commands/ Below are the most useful commands: - lsd (listing directories) - ls (listing files) - copy (copying individual files) - sync (copying entire folders)\n\nrclone lsd\nThe lsd commands is used to list all directories in the current directory. e.g. to list all directories in your surfdrive type:\nrclone lsd surfdrive:\ne.g. to list all directories in a specific subfolder of a folder on surfdrive type:\nrclone lsd surfdrive:myfolder/mysubfolder\n\n\nrclone ls\nThe ls commands is used to list all files in the current directory. e.g. to list all files in a specific folder in your surfdrive type:\nrclone ls surfdrive:myfolder\n\n\nrclone copy\nTo copy a file from SURFdrive to a certain folder:\nrclone copy surfdrive:file.txt ./my_destination_folder\nIn most cases, you would want to transfer the data to the (persistent) storage volume on Research cloud. If you don’t have a destination folder yet, create it as follows:\nmkdir ~/data/volume_2/destination_folder_with_any_name\nrclone copy surfdrive:file.txt ~/data/volume_2/destination_folder_with_any_name\n\n\nrclone sync\nTo synchronize an entire folder from surfdrive use rclone sync:\n\nWarning! Synchronization with Rclone makes the destination folder equal to the source folder and deletes files and folders in the destination folder that are not present in the source folder. Therefore it is wise to use the –dry-run flag to see what will be copied and deleted before actually running the command. rclone sync <source> <destination> --dry-run\n\nrclone sync surfdrive:my_source_folder ~/data/volume_2/destination_folder_with_any_name --dry-run\nrclone sync surfdrive:my_source_folder ~/data/volume_2/destination_folder_with_any_name -cPv\n-cPv means the following flags (options) are used:\n-c skip files that are already present (compared using checksums)\n-P report progress of transfer\n-v verbose; increase the amount of information in the logs\n\n\nTransfer in opposite direction\nCopying in the opposite direction is easy, use the same commands as described above and start with the research cloud folder and end with the surfdrive folder:\nrclone copy ~/data/volume_2/destination_folder_with_any_name/file.txt surfdrive:my_destination_folder \nrclone sync ~/data/volume_2/destination_folder_with_any_name surfdrive:my_destination_folder  -cPv\nFurther reading: - For all Rclone commands see: https://rclone.org/commands/"
+  },
+  {
+    "objectID": "docs/manuals/rclone-researchcloud.html",
+    "href": "docs/manuals/rclone-researchcloud.html",
+    "title": "Rclone for data transfer between cloud storage and Surf Research Cloud",
+    "section": "",
+    "text": "Rclone is a convenient tool for fast data transfer between computers (PC, HPC, cloud) and cloud based storage platforms such as Surfdrive, Researchdrive, onedrive, dropbox.\nIt is a command line tool, so the user would need some experience with using the command line in order to user Rclone.\nThe following steps show how you can use rclone on Research cloud for data transfer to e.g. a Jupyterhub or Rstudio workspace application.\n\nStep 1: Install rclone\n\n\nStep 2: Configure rclone\n\n\nStep 3: Data transfer using rclone"
+  },
+  {
+    "objectID": "docs/manuals/icommands.html",
+    "href": "docs/manuals/icommands.html",
+    "title": "Installing and using iCommands on Surf Research Cloud",
+    "section": "",
+    "text": "The instructions below describe the process of data transfer between Surf Research Cloud and Yoda using iCommands. This manual is developed for workspaces based on a Linux operating system (including the Jupyter Notebook and RStudio workspaces). Transfer is also possible via the Webdav protocol using Rclone. For large files iCommands is faster due to parallel transfer options.\n\nPrerequisites\nYou will need some basic linux skills to be able to use the iCommands successfully. If you don’t have these skills, take some time to practice using sections 1, 2, 3 and 7 of this short online course before proceeding. You can practice in the terminal (see step 1).\n\n\nStep 1: Make sure you are in a terminal\n\nIn Jupyterhub (Jupyter Workspace in Research cloud): To open a new terminal, click the + button in the file browser and select the terminal in the new Launcher tab (find a short video here).\nIn Rstudio (Rstudio workspace in Research cloud): In the bottom left panel, click the ‘terminal’ tab.\n\n\n\nStep 2: Install iRODS iCommands\nSome workspaces have iRODS iCommands preconfigured. This should be visible in step 1 when creating a workspace.\nCopy and paste (or type) the following commands in the terminal, or view the most up to date installation instructions for iRODS iCommands on the yoda website in the section “Installing iCommands on Ubuntu”.\nsudo apt-get update\nsudo apt-get install -y --only-upgrade ca-certificates\nwget -qO - https://packages.irods.org/irods-signing-key.asc | sudo apt-key add -\necho \"deb [arch=amd64] https://packages.irods.org/apt/ xenial main\" | sudo tee /etc/apt/sources.list.d/renci-irods.list\nsudo apt-get update\nsudo apt -y install aptitude irods-runtime=4.2.7 irods-icommands=4.2.7\nsudo aptitude hold irods-runtime irods-icommands\necho \"120\"  | sudo tee /proc/sys/net/ipv4/tcp_keepalive_time\necho \"30\" | sudo tee /proc/sys/net/ipv4/tcp_keepalive_intvl\necho \"net.ipv4.tcp_keepalive_time=120\" | sudo tee -a /etc/sysctl.d/99-sysctl.conf\necho \"net.ipv4.tcp_keepalive_intvl=30\" | sudo tee -a /etc/sysctl.d/99-sysctl.conf\n\n\nStep 3: Create a config file\nYou may need help from your datamanager or contact Yoda support to obtain the information needed for the config file.\nGo to the home directory and create a hidden directory called ‘.irods’\ncd ~\nmkdir .irods\ncd .irods\nIn this directory, create a file named irods_environment.json.\ntouch irods_environment.json\nEdit the file using a text editor such as nano or vim\nnano irods_environment.json\nGo to the yoda website, scroll to Step 2. Configuring iCommands and copy and paste the text belonging to your institution in the file (similar to the file below) and change the email address next to irods_user_nameto your yoda user name (typically your uu email address).\n{   \n\"irods_host\": \"science.data.uu.nl\",   \n\"irods_port\": 1247,    \"irods_home\": \"/nluu6p/home\",   \n\"irods_user_name\": \"exampleuser@uu.nl\",   \n\"irods_zone_name\": \"nluu6p\",   \n\"irods_authentication_scheme\": \"pam\",   \n\"irods_encryption_algorithm\": \"AES-256-CBC\",   \n\"irods_encryption_key_size\": 32,   \n\"irods_encryption_num_hash_rounds\": 16,   \n\"irods_encryption_salt_size\": 8,   \n\"irods_client_server_negotiation\": \"request_server_negotiation\"\n}\n\n\nStep 4: Initialize connection to iRODS\nInitialize the connection to the Yoda system as follows:\niinit\nType your Yoda password when requested.\nType ils to see whether the connection has been established. The output of the ils command will list the current Yoda folder and the folders that are located within the current folder.\niinit and ils are commands which can only be used when icommands is active. Some of these commands are very similar to standard unix commands. When icommands is active you can still operate the HPC system using normal unix commands. A complete list of all ‘icommands’ can be found here.\n\n\nStep 5: Transferring data\nStandard transfer of a single file can be done using iget and iput\nThe irsync command can be used to synchronize entire directories between Yoda and Cartesius. The command is used as follows.\nirsync <source> <destination>\nIn contrary to the iput and iget commands, in irsync it is necessary to put ‘i:’ before the Yoda path. The Yoda path (directly after ‘i:’) to the folder that should be synchronized should be relative to the current Yoda folder (check with ils).\nE.g.\nirsync -rKV i:myfolder /my_researchcloud_folder\n-rKV means the following flags (options) are used:\n\n-r recursive - store the whole folder including subdirectories\n-K Calculate and verify the checksum on the data\n-V Very verbose\n\nTypically you will want to store data on the (persistent) storage volume that is attached to your workspace. Transfer it directly there as follows:\nirsync -rKV i:myfolder ~/data/volume_2/my_destination_folder\nTo synchronize in the opposite direction\nirsync -rKV /my_researchcloud_folder/ i:myfolder\n\nnote the ‘/’ at the end of /my_researchcloud_folder/ that is not used in the command above.\n\n\n\nParallel transfer\nWith icommands it is possible to transfer individual files in parallel using multiple threads, which results in higher transfer speeds. The flag -N can be used to control the number of parallel threads (only recommended in very specific situations). When not specified the server decides a default number of threads. For large files this number can be e.g. 16 threads.\nirsync -rKV -N 0 i:myfolder /my_researchcloud_folder"
+  },
+  {
+    "objectID": "docs/manuals/rclone-config.html",
+    "href": "docs/manuals/rclone-config.html",
+    "title": "Configuring Rclone for surfdrive",
+    "section": "",
+    "text": "Rclone has an interactive menu to generate a config file for you. You need to complete this menu once for each storage platform that you want to connect to. You can use Rclone for many different types of storage platforms: check the homepage for a list. SURFdrive and Research drive are based on ownCloud software. Platforms built on standard protocols such as WebDAV (including Yoda, Data Archive or the U: network drive of UU student and employees) are also supported but require slightly different configuration steps.\nTo check whether Rclone is available on your system:\nrclone version\nYou should see a version number displayed in the terminal.\nTo start the interactive menu:\nrclone config\nNow walk through the questions. For SURFdrive you need the following information (Rclone version 1.55.1)\n\nType n for New remote\nFor ‘name’ choose e.g. surfdrive (or SD)\nChoose option 40for WebDAV \nFill in the URL. You can look this up via the web portal of SURFdrive. In the top right corner click your account name. Go to settings. In the left panel, click security. At the very bottom of the page there will be a section WebDAV passwords. There is also an URL, something like: https://surfdrive.surf.nl/files/remote.php/nonshib-webdav\nUse this URL.\nBefore you continue with the Rclone menu, first perform the following step via the web portal of SURFdrive. Fill in an app name (e.g. lisa) on the security settings page (same page as previous step) and click “create new app password”. The page will show a username and a password. You will need these in the following steps of the Rclone menu.\nSelect the type of WebDAV storage system. Type: 2 for ownCloud.\nType in your user name from SURFdrive (this is the username found in the web portal (step 5))\nSelect: y) Yes type in my own password\nType in your password from the web portal and type it in again for confirmation.\nSkip the Bearer token option by pressing enter.\nChoose n to skip the advanced config\nConfirm your settings by typing y.\nChoose q to quit the menu.\n\nTest whether everything is setup correctly by typing the following command in the terminal, if necessary change surfdrive: to any other name chosen in step 2.:\nrclone lsd surfdrive:\nIf everything is setup correctly, you should see a list of files and folders that are present on your SURFdrive.\n\nNext: Using rclone for data transfer"
+  },
+  {
     "objectID": "docs/research-cloud-intro.html",
     "href": "docs/research-cloud-intro.html",
     "title": "What is Research Cloud",
@@ -144,6 +256,6 @@
     "href": "index.html",
     "title": "VRE Documentation for UU researchers",
     "section": "",
-    "text": "Welcome\nThis page provides user documentation for Surf Research Cloud for researchers at Utrecht University. Get started using the links below!\n\nWhat is research cloud?\nAccounts and funding\nGetting started with Research Cloud\nUsing a workspace\nUser manuals\nTerms of use"
+    "text": "Welcome\nThis page provides user documentation for Surf Research Cloud for researchers at Utrecht University. Get started using the links below!\n\nWhat is research cloud?\nAccounts, funding and collaboration\nGetting started with Research Cloud\nUsing a workspace\nUser manuals\nTerms of use\nContact"
   }
 ]
