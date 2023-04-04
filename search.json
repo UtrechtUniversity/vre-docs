@@ -11,7 +11,7 @@
     "href": "docs/workspaces/asreview_cli.html#creation",
     "title": "ASReview CLI",
     "section": "Creation",
-    "text": "Creation\n\nCreate a storage volume\nFirst create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the Getting started page for more guidance.\nChoosing the number of CPU cores: A workspace with more CPU cores and RAM memory will cost more credits. If you want to use a large workspace for a long period of time (many days or weeks), first try to test on small machines (e.g. a 2 core and a 4 core machine) whether a bigger machine actually does help you to get your results faster."
+    "text": "Creation\n\nCreate a storage volume\nFirst create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the Getting started page for more guidance.\nChoosing the number of CPU cores: A workspace with more CPU cores and RAM memory will cost more credits. If you want to use a large workspace for a long period of time (many days or weeks), first try to test on small machines (e.g. a 2 core and a 4 core machine) whether a bigger machine actually does help you to get your results faster.\nboot_volume_size: In the last step you will be required to add a value for boot_volume_size, type 40 and continue."
   },
   {
     "objectID": "docs/workspaces/asreview_cli.html#access-options",
