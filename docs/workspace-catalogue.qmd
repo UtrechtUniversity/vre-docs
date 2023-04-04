@@ -2,9 +2,9 @@
 title: "Workspace Catalogue"
 ---
 
-This page provides links to user documentation for all workspaces developed by UU
+This page provides links to user documentation for workspaces developed by Utrecht University
 
 - Anaconda Navigator
-- ASReview
+- [ASReview command line](workspaces/asreview_cli.qmd)
+- ASReview Lab
 - Miniconda
-- etc

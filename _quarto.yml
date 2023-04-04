@@ -19,9 +19,16 @@ website:
         text: Manuals
       - href: docs/usage.qmd
         text: Terms of use
+      - href: docs/contact.qmd
+        text: Contact
+  repo-url: https://github.com/UtrechtUniversity/vre-docs
+  repo-actions: [edit]
 
 format:
   html:
     theme: cosmo
     css: _styles/styles.css
     toc: true
+    code-copy: true
+    monobackgroundcolor: "#f8f9fa"
+    code-block-background: true
