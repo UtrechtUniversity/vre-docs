@@ -203,7 +203,7 @@ device='cuda'
 model_a, metadata = whisperx.load_align_model(language_code=result["language"], device=device)
 
 # align whisper output
-result_aligned = whisperx.align(result["segments"], model_a, metadata, audio_file, device)
+result_aligned = whisperx.align(result["segments"], model_a, metadata, 'audio.mp3', device)
 
 print(result_aligned["segments"]) # after alignment
 print(result_aligned["word_segments"]) # after alignment</code></pre>
