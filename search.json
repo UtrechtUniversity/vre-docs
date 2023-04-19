@@ -74,7 +74,7 @@
     "href": "docs/getting-started.html#create-storage-volume",
     "title": "Getting Started",
     "section": "Create storage volume",
-    "text": "Create storage volume\n\nWhy a storage volume?\nIn most cases you need to create a storage volume before you create a workspace. A workspace has limited storage and is temporary; all data stored on the workspace itself are deleted when a workspace is deleted. You can see a storage volume as a USB stick that you can attach to a workspace. A storage volume is persistent, so when you remove a workspace, all data on the storage volume will remain there. Storage volumes have good performance and are suitable for I/O-intensive computing tasks.\n\n\nHow to create a storage volume?\nIn the Research Cloud portal:\n\nClick ‘Create new storage’\nThe Wizard will guide you through the steps, some tips:\nChoose Storage HPC\nChoose the Collaborative Organization of the project for which you want to create the storage volume\nChoose the wallet with which you ‘pay’ for the Storage Unit\nChoose the size. It is not possible to resize it later on, so don’t choose too small, but also don’t choose too large because it will cost more credits.\nGive your storage volume a descriptive name so you can recognize it later on (e.g. use the name of the project or experiment)"
+    "text": "Create storage volume\n\nWhy a storage volume?\nIn most cases you need to create a storage volume before you create a workspace. A workspace has limited storage and is temporary; all data stored on the workspace itself are deleted when a workspace is deleted. You can see a storage volume as a USB stick that you can attach to a workspace. A storage volume is persistent, so when you remove a workspace, all data on the storage volume will remain there. Storage volumes have good performance and are suitable for I/O-intensive computing tasks.\n\n\nHow to create a storage volume?\nIn the Research Cloud portal:\n\nClick ‘Create new storage’\nThe Wizard will guide you through the steps, some tips:\nChoose Storage HPC\nChoose the Collaborative Organization of the project for which you want to create the storage volume\nChoose the wallet with which you ‘pay’ for the Storage Unit\nChoose the size. It is not possible to resize it later on, so don’t choose too small, but also don’t choose too large because it will cost more credits.\nGive your storage volume a descriptive name so you can recognize it later on (e.g. use the name of the project or experiment)\n\n\n\nWhere can I find the storage volume?\nWhen you created a workspace and chose to attach a storage volume, the storage volume can be found via the following directory path: /data/volume_2 Typically you want to create a project folder in volume_2 (e.g. /data/volume_2/my_project)."
   },
   {
     "objectID": "docs/getting-started.html#create-a-workspace",
@@ -110,6 +110,48 @@
     "title": "",
     "section": "",
     "text": "Find our contact details on the RDM support website"
+  },
+  {
+    "objectID": "docs/workspaces/whisper.html",
+    "href": "docs/workspaces/whisper.html",
+    "title": "Whisper OpenAI CUDA 11",
+    "section": "",
+    "text": "This workspace can be used to work with the Whisper model from OpenAI (e.g. for transcribing audio files). On this workspace a Python environment is created using the environment manager ‘conda’. The ‘conda’ environment contains Whisper and other required packages. The environment is configured to be able to use a GPU when available.\nThe workspace is a JupyterHub workspace, and therefore is mainly aimed for Python users that use Jupyter notebooks for developing code. However the workspace also provides a terminal (command line application) to run Whisper using the command line.\nCurrently the workspace is only available upon request."
+  },
+  {
+    "objectID": "docs/workspaces/whisper.html#creation",
+    "href": "docs/workspaces/whisper.html#creation",
+    "title": "Whisper OpenAI CUDA 11",
+    "section": "Creation",
+    "text": "Creation\n\nCreate a storage volume\nFirst create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the Getting started page for more guidance."
+  },
+  {
+    "objectID": "docs/workspaces/whisper.html#access",
+    "href": "docs/workspaces/whisper.html#access",
+    "title": "Whisper OpenAI CUDA 11",
+    "section": "Access",
+    "text": "Access\nThis workspace can be accessed via the yellow ‘Access’ button. You need a TOTP to login to your workspace, see Workspace access with TOTP."
+  },
+  {
+    "objectID": "docs/workspaces/whisper.html#data-transfer-options",
+    "href": "docs/workspaces/whisper.html#data-transfer-options",
+    "title": "Whisper OpenAI CUDA 11",
+    "section": "Data transfer options",
+    "text": "Data transfer options\nFirst create a working directory on the Storage Volume\nThe JupyterHub dashboard has an Upload button to directly upload data from your computer."
+  },
+  {
+    "objectID": "docs/workspaces/whisper.html#usage",
+    "href": "docs/workspaces/whisper.html#usage",
+    "title": "Whisper OpenAI CUDA 11",
+    "section": "Usage",
+    "text": "Usage\nNavigate to your working directory and start a Jupyter notebook using the Whisper kernel.\nYou can use the following code examples in a Jupyter notebook to transcribe an audio file:\nimport whisper\nmodel = whisper.load_model(\"medium\")\n\nresult = model.transcribe(\"audio.mp3\")\nprint(result[\"text\"])\nwith open(\"audio_sample.txt\", \"w+\") as f:\n    f.write(result[\"text\"])\nThe workspace also comes with an installation of WhisperX which can be used for more precise timestamps and word level timestamps.\nUse e.g. the following code example:\nimport whisperx\n\n# load alignment model and metadata\nmodel_a, metadata = whisperx.load_align_model(language_code=result[\"language\"], device=device)\n\n# align whisper output\nresult_aligned = whisperx.align(result[\"segments\"], model_a, metadata, audio_file, device)\n\nprint(result_aligned[\"segments\"]) # after alignment\nprint(result_aligned[\"word_segments\"]) # after alignment\nAlternatively to Jupyter Notebooks it is possible to run Whisper and WhisperX via the command line.\nFirst type the following commands to activate the conda environment:\n/etc/miniconda/bin/conda init conda activate whisper-user\nThen use whisper e.g. as follows:\nwhisper audio.mp3 --model medium\nAnd for WhisperX:\nwhisperx examples/sample01.wav --model medium --align_model WAV2VEC2_ASR_LARGE_LV60K_960H"
+  },
+  {
+    "objectID": "docs/workspaces/whisper.html#tips",
+    "href": "docs/workspaces/whisper.html#tips",
+    "title": "Whisper OpenAI CUDA 11",
+    "section": "Tips",
+    "text": "Tips"
   },
   {
     "objectID": "docs/workspaces/asreview_cli.html",
@@ -214,7 +256,7 @@
     "href": "docs/workspace-catalogue.html",
     "title": "Workspace Catalogue",
     "section": "",
-    "text": "This page provides links to user documentation for workspaces developed by Utrecht University\n\nAnaconda Navigator\nASReview command line\nASReview Lab\nMiniconda"
+    "text": "This page provides links to user documentation for workspaces developed by Utrecht University\n\nAnaconda Navigator\nASReview command line\nASReview Lab\nMiniconda\nWhisper OpenAI"
   },
   {
     "objectID": "docs/manuals.html",

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Workspace Catalogue</title>
+<title>Whisper OpenAI CUDA 11</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -60,7 +60,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../_styles/styles.css">
+<link rel="stylesheet" href="../../_styles/styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -75,35 +75,35 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html">
+    <a class="nav-link" href="../../index.html">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../docs/research-cloud-intro.html">
+    <a class="nav-link" href="../../docs/research-cloud-intro.html">
  <span class="menu-text">Introduction</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../docs/accounts.html">
+    <a class="nav-link" href="../../docs/accounts.html">
  <span class="menu-text">Accounts</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../docs/getting-started.html">
+    <a class="nav-link" href="../../docs/getting-started.html">
  <span class="menu-text">Getting Started</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../docs/workspace-catalogue.html" aria-current="page">
+    <a class="nav-link" href="../../docs/workspace-catalogue.html">
  <span class="menu-text">Workspaces</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../docs/manuals.html">
+    <a class="nav-link" href="../../docs/manuals.html">
  <span class="menu-text">Manuals</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../docs/responsible-use.html">
+    <a class="nav-link" href="../../docs/responsible-use.html">
  <span class="menu-text">Responsible use</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../docs/contact.html">
+    <a class="nav-link" href="../../docs/contact.html">
  <span class="menu-text">Contact</span></a>
   </li>  
 </ul>
@@ -117,14 +117,29 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#description" id="toc-description" class="nav-link active" data-scroll-target="#description">Description</a></li>
+  <li><a href="#creation" id="toc-creation" class="nav-link" data-scroll-target="#creation">Creation</a>
+  <ul class="collapse">
+  <li><a href="#create-a-storage-volume" id="toc-create-a-storage-volume" class="nav-link" data-scroll-target="#create-a-storage-volume">Create a storage volume</a></li>
+  <li><a href="#create-a-workspace" id="toc-create-a-workspace" class="nav-link" data-scroll-target="#create-a-workspace">Create a workspace</a></li>
+  </ul></li>
+  <li><a href="#access" id="toc-access" class="nav-link" data-scroll-target="#access">Access</a></li>
+  <li><a href="#data-transfer-options" id="toc-data-transfer-options" class="nav-link" data-scroll-target="#data-transfer-options">Data transfer options</a></li>
+  <li><a href="#usage" id="toc-usage" class="nav-link" data-scroll-target="#usage">Usage</a></li>
+  <li><a href="#tips" id="toc-tips" class="nav-link" data-scroll-target="#tips">Tips</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/UtrechtUniversity/vre-docs/edit/main/docs/workspaces/whisper.qmd" class="toc-action">Edit this page</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Workspace Catalogue</h1>
+<h1 class="title">Whisper OpenAI CUDA 11</h1>
 </div>
 
 
@@ -139,16 +154,70 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>This page provides links to user documentation for workspaces developed by Utrecht University</p>
-<ul>
-<li>Anaconda Navigator</li>
-<li><a href="../docs/workspaces/asreview_cli.html">ASReview command line</a></li>
-<li>ASReview Lab</li>
-<li>Miniconda</li>
-<li><a href="../docs/workspaces/whisper.html">Whisper OpenAI</a></li>
-</ul>
+<section id="description" class="level2">
+<h2 class="anchored" data-anchor-id="description">Description</h2>
+<p>This workspace can be used to work with the Whisper model from OpenAI (e.g.&nbsp;for transcribing audio files). On this workspace a Python environment is created using the environment manager ‘conda’. The ‘conda’ environment contains Whisper and other required packages. The environment is configured to be able to use a GPU when available.</p>
+<p>The workspace is a JupyterHub workspace, and therefore is mainly aimed for Python users that use Jupyter notebooks for developing code. However the workspace also provides a terminal (command line application) to run Whisper using the command line.</p>
+<p>Currently the workspace is only available <a href="../../docs/contact.html">upon request</a>.</p>
+</section>
+<section id="creation" class="level2">
+<h2 class="anchored" data-anchor-id="creation">Creation</h2>
+<section id="create-a-storage-volume" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-storage-volume">Create a storage volume</h3>
+<p>First create a storage volume before creating the workspace.</p>
+<p>See the <a href="../../docs/getting-started.html#create-storage-volume">Getting started</a> page for more info about how and why to create a storage volume.</p>
+</section>
+<section id="create-a-workspace" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-workspace">Create a workspace</h3>
+<p>In the <a href="https://surfresearchcloud.nl">Research cloud portal</a> click the ‘Create a new workspace’ button and follow the steps in the wizzard.</p>
+<p>See the <a href="../../docs/getting-started.html#create-a-workspace">Getting started</a> page for more guidance.</p>
+</section>
+</section>
+<section id="access" class="level2">
+<h2 class="anchored" data-anchor-id="access">Access</h2>
+<p>This workspace can be accessed via the yellow ‘Access’ button. You need a TOTP to login to your workspace, see <a href="https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace#Logintoyourworkspace-WorkspaceAccesswithTOTP">Workspace access with TOTP</a>.</p>
+</section>
+<section id="data-transfer-options" class="level2">
+<h2 class="anchored" data-anchor-id="data-transfer-options">Data transfer options</h2>
+<p>First create a working directory on the <a href="../../docs/getting-started.html#where-can-i-find-the-storage-volume">Storage Volume</a></p>
+<p>The JupyterHub dashboard has an Upload button to directly upload data from your computer.</p>
+</section>
+<section id="usage" class="level2">
+<h2 class="anchored" data-anchor-id="usage">Usage</h2>
+<p>Navigate to your working directory and start a Jupyter notebook using the Whisper kernel.</p>
+<p>You can use the following code examples in a Jupyter notebook to transcribe an audio file:</p>
+<pre><code>import whisper</code></pre>
+<pre><code>model = whisper.load_model("medium")
+
+result = model.transcribe("audio.mp3")
+print(result["text"])</code></pre>
+<pre><code>with open("audio_sample.txt", "w+") as f:
+    f.write(result["text"])</code></pre>
+<p>The workspace also comes with an installation of <a href="https://github.com/m-bain/whisperX">WhisperX</a> which can be used for more precise timestamps and word level timestamps.</p>
+<p>Use e.g.&nbsp;the following code example:</p>
+<pre><code>import whisperx
+
+# load alignment model and metadata
+model_a, metadata = whisperx.load_align_model(language_code=result["language"], device=device)
+
+# align whisper output
+result_aligned = whisperx.align(result["segments"], model_a, metadata, audio_file, device)
+
+print(result_aligned["segments"]) # after alignment
+print(result_aligned["word_segments"]) # after alignment</code></pre>
+<p>Alternatively to Jupyter Notebooks it is possible to run Whisper and WhisperX via the command line.</p>
+<p>First type the following commands to activate the conda environment:</p>
+<p><code>/etc/miniconda/bin/conda init</code> <code>conda activate whisper-user</code></p>
+<p>Then use whisper e.g.&nbsp;as follows:</p>
+<p><code>whisper audio.mp3 --model medium</code></p>
+<p>And for <a href="https://github.com/m-bain/whisperX">WhisperX</a>:</p>
+<p><code>whisperx examples/sample01.wav --model medium --align_model WAV2VEC2_ASR_LARGE_LV60K_960H</code></p>
+</section>
+<section id="tips" class="level2">
+<h2 class="anchored" data-anchor-id="tips">Tips</h2>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
