@@ -197,6 +197,8 @@ print(result["text"])</code></pre>
 <p>Use e.g.&nbsp;the following code example:</p>
 <pre><code>import whisperx
 
+device='cuda'
+
 # load alignment model and metadata
 model_a, metadata = whisperx.load_align_model(language_code=result["language"], device=device)
 
