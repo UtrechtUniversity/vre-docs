@@ -70,6 +70,7 @@ print(result_aligned["word_segments"]) # after alignment
 
 Alternatively to Jupyter Notebooks it is possible to run Whisper and WhisperX via the command line.
 
+To find the command line, click the blue + sign at the top left corner and click 'Terminal'
 
 First type the following commands to activate the conda environment:
 
