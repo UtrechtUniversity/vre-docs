@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "VRE Documentation for UU researchers",
     "section": "",
-    "text": "Welcome\nThis page provides user documentation for Surf Research Cloud for researchers at Utrecht University. Get started using the links below!\n\nWhat is research cloud?\nAccounts, funding and collaboration\nGetting started with Research Cloud\nUsing a workspace\nUser manuals\nTerms of use\nContact"
+    "text": "Welcome\nThis page provides user documentation for Surf Research Cloud for researchers at Utrecht University. Get started using the links below!\n\nWhat is research cloud?\nAccounts, funding and collaboration\nGetting started with Research Cloud\nUsing a workspace\nUser manuals\nResponsible use\nContact"
   },
   {
     "objectID": "docs/manuals/rclone-config.html",
@@ -67,7 +67,7 @@
     "href": "docs/getting-started.html",
     "title": "Getting Started",
     "section": "",
-    "text": "This page describes all general steps that a user needs to perform to be able to start working with SURF Research cloud:\nContents:"
+    "text": "[UNDER DEVELOPMENT] This page describes all general steps that a user needs to perform to be able to start working with SURF Research cloud:\nContents:"
   },
   {
     "objectID": "docs/getting-started.html#create-storage-volume",
@@ -95,14 +95,14 @@
     "href": "docs/getting-started.html#getting-access-to-your-workspace",
     "title": "Getting Started",
     "section": "Getting access to your workspace",
-    "text": "Getting access to your workspace\nssh rdp Browser access button"
+    "text": "Getting access to your workspace\nThere are several ways to login to your workspace.\n\nSSH (secure shell protocol).\nFor some workspaces this is the only option to login to your workspace. These are typically command line only workspaces (e.g. Ubuntu 20.04 command line).\nSince this method also works for most other workspace types, it could also be a useful option in some other cases, e.g. when you want to copy a file from your laptop to the workspace.\nThe research cloud documentation provides instructions on how to set up SSH for research cloud.\nTo connect to the workspace from a Windows computer you need specific software to use a ‘shell’ (also known as ‘terminal’), examples include Git Bash, PuTTY and MobaXterm. If you need to install something new, we would recommend MobaXterm.\nOn MacOS and Linux machines you can use the standard ‘Terminal’.\n\n\nRDP and Browser access\nThese method can be used for workspaces that have a Graphical user interface.\n\nBrowser access\nJupyter and RStudio workspaces can be accessed via your web browser by clicking the yellow access button. Other workspaces that show a valid URL when you click the workspace in the research cloud dashboard, can also be accessed by clicking the yellow access button.\n\n\nRDP (Remote Desktop Protocol)"
   },
   {
     "objectID": "docs/getting-started.html#getting-data-inside-your-workspace",
     "href": "docs/getting-started.html#getting-data-inside-your-workspace",
     "title": "Getting Started",
     "section": "Getting data inside your workspace",
-    "text": "Getting data inside your workspace\n\nMounting online storage\n\n\nTransferring data\n\nDownload\nirods\nrclone\nscp"
+    "text": "Getting data inside your workspace\n\nMounting online storage\n\n\nTransferring data\n\nUpload from your laptop (Jupyter Notebook and Rstudio Workspaces)\nscp/ssh (most workspaces)\nDownload (Ubuntu Desktop workspaces)\nirods ()\nrclone"
   },
   {
     "objectID": "docs/contact.html",
@@ -257,5 +257,26 @@
     "title": "eINFRA application example",
     "section": "",
     "text": "The eINFRA call is a non-competitive grant that can be used to request 50.000 credits and/or 10.000 GPU hours per calendar year per project.\nMore info about requirements and the application portal can be found here\nAn example eINFRA application for Snellius can be found here. It illustrates the length and the level of detail of the specification of the project requirements."
+  },
+  {
+    "objectID": "docs/responsible-use.html",
+    "href": "docs/responsible-use.html",
+    "title": "Responsible Use",
+    "section": "",
+    "text": "While the Surf Research cloud infrastructure is considered secure (ISO certified), there are some\n\n\n\n\n\nMost workspaces have internet access.\n\n\n\nWorkspaces are meant to be temporary. The longer the workspace exists, the more vulnerable it becomes because the workspace needs regular updates to stay secure.\nFollow best practices to make it easy to delete a workspace and create a new one without hassle.\n\nupdates"
+  },
+  {
+    "objectID": "docs/responsible-use.html#accounting-tips",
+    "href": "docs/responsible-use.html#accounting-tips",
+    "title": "Responsible Use",
+    "section": "Accounting tips",
+    "text": "Accounting tips\n\nwallets credits consumption"
+  },
+  {
+    "objectID": "docs/responsible-use.html#relevant-policies",
+    "href": "docs/responsible-use.html#relevant-policies",
+    "title": "Responsible Use",
+    "section": "Relevant policies",
+    "text": "Relevant policies\n\nrelevant terms of use UU terms of use\nprivacy policies"
   }
 ]

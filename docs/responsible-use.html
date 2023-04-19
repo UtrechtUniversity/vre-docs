@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Transferring data from your PC to your workspace using SCP and RSYNC</title>
+<title>Responsible Use</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -60,7 +60,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../../_styles/styles.css">
+<link rel="stylesheet" href="../_styles/styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -75,35 +75,35 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html">
+    <a class="nav-link" href="../index.html">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../docs/research-cloud-intro.html">
+    <a class="nav-link" href="../docs/research-cloud-intro.html">
  <span class="menu-text">Introduction</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../docs/accounts.html">
+    <a class="nav-link" href="../docs/accounts.html">
  <span class="menu-text">Accounts</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../docs/getting-started.html">
+    <a class="nav-link" href="../docs/getting-started.html">
  <span class="menu-text">Getting Started</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../docs/workspace-catalogue.html">
+    <a class="nav-link" href="../docs/workspace-catalogue.html">
  <span class="menu-text">Workspaces</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../docs/manuals.html">
+    <a class="nav-link" href="../docs/manuals.html">
  <span class="menu-text">Manuals</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../docs/responsible-use.html">
+    <a class="nav-link active" href="../docs/responsible-use.html" aria-current="page">
  <span class="menu-text">Responsible use</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../docs/contact.html">
+    <a class="nav-link" href="../docs/contact.html">
  <span class="menu-text">Contact</span></a>
   </li>  
 </ul>
@@ -121,21 +121,23 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#scp" id="toc-scp" class="nav-link active" data-scroll-target="#scp">scp</a></li>
-  <li><a href="#rsync" id="toc-rsync" class="nav-link" data-scroll-target="#rsync">rsync</a>
+  <li><a href="#security-good-practices" id="toc-security-good-practices" class="nav-link active" data-scroll-target="#security-good-practices">Security good practices</a>
   <ul class="collapse">
-  <li><a href="#install" id="toc-install" class="nav-link" data-scroll-target="#install">Install</a></li>
-  <li><a href="#usage" id="toc-usage" class="nav-link" data-scroll-target="#usage">Usage</a></li>
+  <li><a href="#sudo-rights" id="toc-sudo-rights" class="nav-link" data-scroll-target="#sudo-rights">sudo rights</a></li>
+  <li><a href="#internet-access" id="toc-internet-access" class="nav-link" data-scroll-target="#internet-access">Internet access</a></li>
+  <li><a href="#temporary-workspaces" id="toc-temporary-workspaces" class="nav-link" data-scroll-target="#temporary-workspaces">Temporary workspaces</a></li>
   </ul></li>
+  <li><a href="#accounting-tips" id="toc-accounting-tips" class="nav-link" data-scroll-target="#accounting-tips">Accounting tips</a></li>
+  <li><a href="#relevant-policies" id="toc-relevant-policies" class="nav-link" data-scroll-target="#relevant-policies">Relevant policies</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/UtrechtUniversity/vre-docs/edit/main/docs/manuals/ssh-data-transfer-methods.qmd" class="toc-action">Edit this page</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/UtrechtUniversity/vre-docs/edit/main/docs/responsible-use.qmd" class="toc-action">Edit this page</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Transferring data from your PC to your workspace using SCP and RSYNC</h1>
+<h1 class="title">Responsible Use</h1>
 </div>
 
 
@@ -150,41 +152,39 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>The instructions on this page assume you have already setup SSH for Research cloud. If this is not the case, check the <a href="https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace#Logintoyourworkspace-AccessaworkspacewithSSH">Research Cloud documentation site</a>.</p>
-<section id="scp" class="level2">
-<h2 class="anchored" data-anchor-id="scp">scp</h2>
-<p>When you work on a Windows machine and you use MobaXterm for SSH connection, you can use the file browser in MobaXterm to intuitively transfer data.</p>
-<p>In all other cases: Open a terminal (or shell session) that you use for login in to your workspace via the <code>ssh</code> command.</p>
-<pre><code>scp sourcefile &lt;username&gt;@&lt;ip-address&gt;:destinationdir</code></pre>
-<p>You can find both the username and the ip-address in the <a href="https://surfresearchcloud.nl">research cloud portal</a>. Find your username under the ‘Profile’ tab.<br>
-Find the IP address of your workspace in the main Dashboard by clicking the drop down arrow of the running Workspace.</p>
-<pre><code>scp testfile.txt &lt;username&gt;@&lt;ip-address&gt;:data/volume_2/input_data</code></pre>
-<p>If you first need to create a destination folder where you want to transfer the data to:</p>
-<pre><code>ssh &lt;username&gt;@&lt;ip-address&gt;
-mkdir ~/data/volume_2/input_data
-logout
-scp testfile.txt &lt;username&gt;@&lt;ip-address&gt;:data/volume_2/input_data</code></pre>
-<p>To transfer a directory add the <code>-r</code> option:</p>
-<pre><code>scp -r sourcedir &lt;username&gt;@&lt;ip-address&gt;:data/volume_2/input_data</code></pre>
+<section id="security-good-practices" class="level2">
+<h2 class="anchored" data-anchor-id="security-good-practices">Security good practices</h2>
+<p>While the Surf Research cloud infrastructure is considered secure (ISO certified), there are some</p>
+<section id="sudo-rights" class="level3">
+<h3 class="anchored" data-anchor-id="sudo-rights">sudo rights</h3>
 </section>
-<section id="rsync" class="level2">
-<h2 class="anchored" data-anchor-id="rsync">rsync</h2>
-<p>Rsync is a tool for synchronizing two folders. This method can also be used to transfer the contents of a folder to a remote folder. You typically run this tool on your own PC in the <a href="../../docs/manuals/terminal.html">terminal</a> (so e.g.before login in using the <code>ssh</code> command, or in a separate terminal (or shell session)).</p>
-<p>Type <code>rsync --help</code> on to see if it is installed on your system. To install:</p>
-<section id="install" class="level3">
-<h3 class="anchored" data-anchor-id="install">Install</h3>
-<p>On Debian based linux (e.g.&nbsp;Ubuntu):</p>
-<pre><code>sudo apt-get install rsync</code></pre>
-<p>On mac:</p>
-<pre><code>brew install rsync</code></pre>
+<section id="internet-access" class="level3">
+<h3 class="anchored" data-anchor-id="internet-access">Internet access</h3>
+<p>Most workspaces have internet access.</p>
 </section>
-<section id="usage" class="level3">
-<h3 class="anchored" data-anchor-id="usage">Usage</h3>
-<pre><code>rsync -azP ./my_local_folder &lt;username&gt;@&lt;ip-address&gt;:~/data/volume_2/input_data</code></pre>
-<p>Where <code>-azP</code> are options. Type <code>rsync --help</code> to see a list of the options.</p>
+<section id="temporary-workspaces" class="level3">
+<h3 class="anchored" data-anchor-id="temporary-workspaces">Temporary workspaces</h3>
+<p>Workspaces are meant to be temporary. The longer the workspace exists, the more vulnerable it becomes because the workspace needs regular updates to stay secure.</p>
+<p>Follow <a href="link to best practices">best practices</a> to make it easy to delete a workspace and create a new one without hassle.</p>
+<ul>
+<li>updates</li>
+</ul>
+</section>
+</section>
+<section id="accounting-tips" class="level2">
+<h2 class="anchored" data-anchor-id="accounting-tips">Accounting tips</h2>
+<ul>
+<li>wallets credits consumption</li>
+</ul>
+</section>
+<section id="relevant-policies" class="level2">
+<h2 class="anchored" data-anchor-id="relevant-policies">Relevant policies</h2>
+<ul>
+<li><p>relevant terms of use <a href="../docs/terms-of-use.html">UU terms of use</a></p></li>
+<li><p>privacy policies</p></li>
+</ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

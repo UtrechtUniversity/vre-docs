@@ -99,8 +99,8 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Manuals</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../docs/terms-of-use.html">
- <span class="menu-text">Terms of use</span></a>
+    <a class="nav-link" href="../docs/responsible-use.html">
+ <span class="menu-text">Responsible use</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../docs/contact.html">
@@ -131,7 +131,11 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#how-to-create-a-workspace" id="toc-how-to-create-a-workspace" class="nav-link" data-scroll-target="#how-to-create-a-workspace">How to create a workspace?</a></li>
   </ul></li>
   <li><a href="#pausing-resuming-deleting-a-workspace" id="toc-pausing-resuming-deleting-a-workspace" class="nav-link" data-scroll-target="#pausing-resuming-deleting-a-workspace">Pausing, Resuming, Deleting a workspace</a></li>
-  <li><a href="#getting-access-to-your-workspace" id="toc-getting-access-to-your-workspace" class="nav-link" data-scroll-target="#getting-access-to-your-workspace">Getting access to your workspace</a></li>
+  <li><a href="#getting-access-to-your-workspace" id="toc-getting-access-to-your-workspace" class="nav-link" data-scroll-target="#getting-access-to-your-workspace">Getting access to your workspace</a>
+  <ul class="collapse">
+  <li><a href="#ssh-secure-shell-protocol." id="toc-ssh-secure-shell-protocol." class="nav-link" data-scroll-target="#ssh-secure-shell-protocol.">SSH (secure shell protocol).</a></li>
+  <li><a href="#rdp-and-browser-access" id="toc-rdp-and-browser-access" class="nav-link" data-scroll-target="#rdp-and-browser-access">RDP and Browser access</a></li>
+  </ul></li>
   <li><a href="#getting-data-inside-your-workspace" id="toc-getting-data-inside-your-workspace" class="nav-link" data-scroll-target="#getting-data-inside-your-workspace">Getting data inside your workspace</a>
   <ul class="collapse">
   <li><a href="#mounting-online-storage" id="toc-mounting-online-storage" class="nav-link" data-scroll-target="#mounting-online-storage">Mounting online storage</a></li>
@@ -160,7 +164,7 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>This page describes all general steps that a user needs to perform to be able to start working with SURF Research cloud:</p>
+<p>[UNDER DEVELOPMENT] This page describes all general steps that a user needs to perform to be able to start working with SURF Research cloud:</p>
 <p>Contents:</p>
 <ol type="1">
 <li><a href="#create-storage">Creating storage</a></li>
@@ -216,7 +220,26 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="getting-access-to-your-workspace" class="level2">
 <h2 class="anchored" data-anchor-id="getting-access-to-your-workspace">Getting access to your workspace</h2>
-<p>ssh rdp Browser access button</p>
+<p>There are several ways to login to your workspace.</p>
+<section id="ssh-secure-shell-protocol." class="level3">
+<h3 class="anchored" data-anchor-id="ssh-secure-shell-protocol.">SSH (secure shell protocol).</h3>
+<p>For some workspaces this is the only option to login to your workspace. These are typically command line only workspaces (e.g.&nbsp;Ubuntu 20.04 command line).</p>
+<p>Since this method also works for most other workspace types, it could also be a useful option in some other cases, e.g.&nbsp;when you want to <a href="../docs/manuals/ssh-data-transfer-methods.html">copy a file from your laptop to the workspace</a>.</p>
+<p>The research cloud documentation provides instructions on <a href="https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace#Logintoyourworkspace-AccessaworkspacewithSSH">how to set up SSH for research cloud</a>.</p>
+<p>To connect to the workspace from a Windows computer you need specific software to use a ‘shell’ (also known as ‘terminal’), examples include Git Bash, PuTTY and MobaXterm. If you need to install something new, we would recommend <a href="https://mobaxterm.mobatek.net/">MobaXterm</a>.</p>
+<p>On MacOS and Linux machines you can use the standard ‘Terminal’.</p>
+</section>
+<section id="rdp-and-browser-access" class="level3">
+<h3 class="anchored" data-anchor-id="rdp-and-browser-access">RDP and Browser access</h3>
+<p>These method can be used for workspaces that have a Graphical user interface.</p>
+<section id="browser-access" class="level4">
+<h4 class="anchored" data-anchor-id="browser-access">Browser access</h4>
+<p>Jupyter and RStudio workspaces can be accessed via your web browser by clicking the yellow access button. Other workspaces that show a valid URL when you click the workspace in the research cloud dashboard, can also be accessed by clicking the yellow access button.</p>
+</section>
+<section id="rdp-remote-desktop-protocol" class="level4">
+<h4 class="anchored" data-anchor-id="rdp-remote-desktop-protocol">RDP (Remote Desktop Protocol)</h4>
+</section>
+</section>
 </section>
 <section id="getting-data-inside-your-workspace" class="level2">
 <h2 class="anchored" data-anchor-id="getting-data-inside-your-workspace">Getting data inside your workspace</h2>
@@ -226,10 +249,11 @@ ul.task-list li input[type="checkbox"] {
 <section id="transferring-data" class="level3">
 <h3 class="anchored" data-anchor-id="transferring-data">Transferring data</h3>
 <ul>
-<li>Download</li>
-<li>irods</li>
+<li>Upload from your laptop (Jupyter Notebook and Rstudio Workspaces)</li>
+<li>scp/ssh (most workspaces)</li>
+<li>Download (Ubuntu Desktop workspaces)</li>
+<li>irods ()</li>
 <li>rclone</li>
-<li>scp</li>
 </ul>
 
 
