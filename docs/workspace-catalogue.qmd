@@ -8,3 +8,4 @@ This page provides links to user documentation for workspaces developed by Utrec
 - [ASReview command line](workspaces/asreview_cli.qmd)
 - ASReview Lab
 - Miniconda
+- [Whisper OpenAI](workspaces/whisper.qmd)

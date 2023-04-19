@@ -1,0 +1,89 @@
+--- 
+title: "Whisper OpenAI CUDA 11"
+---
+
+## Description
+This workspace can be used to work with the Whisper model from OpenAI (e.g. for transcribing audio files). On this workspace a Python environment is created using the environment manager 'conda'. The 'conda' environment contains Whisper and other required packages. The environment is configured to be able to use a GPU when available.
+
+The workspace is a JupyterHub workspace, and therefore is mainly aimed for Python users that use Jupyter notebooks for developing code. However the workspace also provides a terminal (command line application) to run Whisper using the command line.
+
+Currently the workspace is only available [upon request](../contact.qmd).
+
+## Creation
+
+### Create a storage volume
+First create a storage volume before creating the workspace.
+
+See the [Getting started](../getting-started.qmd#create-storage-volume) page for more info about how and why to create a storage volume.
+
+### Create a workspace
+
+In the [Research cloud portal](https://surfresearchcloud.nl) click the 'Create a new workspace' button and follow the steps in the wizzard.
+
+See the [Getting started](../getting-started.qmd#create-a-workspace) page for more guidance.
+
+## Access
+This workspace can be accessed via the yellow 'Access' button. You need a TOTP to login to your workspace, see [Workspace access with TOTP](https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace#Logintoyourworkspace-WorkspaceAccesswithTOTP).
+
+## Data transfer options
+First create a working directory on the [Storage Volume](../getting-started.qmd#where-can-i-find-the-storage-volume)
+
+The JupyterHub dashboard has an Upload button to directly upload data from your computer. 
+
+## Usage
+Navigate to your working directory and start a Jupyter notebook using the Whisper kernel.
+
+You can use the following code examples in a Jupyter notebook to transcribe an audio file:
+
+```
+import whisper
+```
+
+```
+model = whisper.load_model("medium")
+
+result = model.transcribe("audio.mp3")
+print(result["text"])
+```
+```
+with open("audio_sample.txt", "w+") as f:
+    f.write(result["text"])
+```
+
+
+The workspace also comes with an installation of [WhisperX](https://github.com/m-bain/whisperX) which can be used for more precise timestamps and word level timestamps.
+
+Use e.g. the following code example:
+
+```
+import whisperx
+
+# load alignment model and metadata
+model_a, metadata = whisperx.load_align_model(language_code=result["language"], device=device)
+
+# align whisper output
+result_aligned = whisperx.align(result["segments"], model_a, metadata, audio_file, device)
+
+print(result_aligned["segments"]) # after alignment
+print(result_aligned["word_segments"]) # after alignment
+```
+
+Alternatively to Jupyter Notebooks it is possible to run Whisper and WhisperX via the command line.
+
+
+First type the following commands to activate the conda environment:
+
+`/etc/miniconda/bin/conda init`
+`conda activate whisper-user`
+
+Then use whisper e.g. as follows:
+
+`whisper audio.mp3 --model medium`
+
+And for [WhisperX](https://github.com/m-bain/whisperX):
+
+`whisperx examples/sample01.wav --model medium --align_model WAV2VEC2_ASR_LARGE_LV60K_960H`
+
+
+## Tips
+
