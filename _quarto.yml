@@ -17,8 +17,8 @@ website:
         text: Workspaces
       - href: docs/manuals.qmd
         text: Manuals
-      - href: docs/terms-of-use.qmd
-        text: Terms of use
+      - href: docs/responsible-use.qmd
+        text: Responsible use
       - href: docs/contact.qmd
         text: Contact
   repo-url: https://github.com/UtrechtUniversity/vre-docs

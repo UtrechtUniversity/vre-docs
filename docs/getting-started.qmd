@@ -2,6 +2,7 @@
 title: "Getting Started"
 ---
 
+[UNDER DEVELOPMENT]
 This page describes all general steps that a user needs to perform to be able to start working with SURF Research cloud:
 
 Contents:
@@ -53,9 +54,27 @@ You always need a wallet to create a workspace, by default a workspace can only 
 
 ## Getting access to your workspace
 
-ssh
-rdp
-Browser access button
+There are several ways to login to your workspace. 
+
+### SSH (secure shell protocol). 
+
+For some workspaces this is the only option to login to your workspace. These are typically command line only workspaces (e.g. Ubuntu 20.04 command line).
+
+Since this method also works for most other workspace types, it could also be a useful option in some other cases, e.g. when you want to [copy a file from your laptop to the workspace](manuals/ssh-data-transfer-methods.qmd).
+
+The research cloud documentation provides instructions on [how to set up SSH for research cloud](https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace#Logintoyourworkspace-AccessaworkspacewithSSH).
+
+To connect to the workspace from a Windows computer you need specific software to use a ‘shell’ (also known as ‘terminal’), examples include Git Bash, PuTTY and MobaXterm. If you need to install something new, we would recommend [MobaXterm](https://mobaxterm.mobatek.net/).
+
+On MacOS and Linux machines you can use the standard ‘Terminal’.
+
+### RDP and Browser access
+These method can be used for workspaces that have a Graphical user interface.
+
+#### Browser access
+Jupyter and RStudio workspaces can be accessed via your web browser by clicking the yellow access button. Other workspaces that show a valid URL when you click the workspace in the research cloud dashboard, can also be accessed by clicking the yellow access button.
+
+#### RDP (Remote Desktop Protocol)
 
 
 ## Getting data inside your workspace
@@ -63,7 +82,9 @@ Browser access button
 
 
 ### Transferring data
--   Download
--   irods
+-   Upload from your laptop (Jupyter Notebook and Rstudio Workspaces)
+-   scp/ssh (most workspaces)
+-   Download (Ubuntu Desktop workspaces)
+-   irods  ()
 -   rclone
--   scp
+

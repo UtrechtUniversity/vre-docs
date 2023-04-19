@@ -1,0 +1,32 @@
+---
+title: "Responsible Use"
+---
+
+## Security good practices
+While the Surf Research cloud infrastructure is considered secure (ISO certified), there are some 
+
+
+
+### sudo rights
+
+### Internet access
+Most workspaces have internet access.
+
+### Temporary workspaces
+Workspaces are meant to be temporary. The longer the workspace exists, the more vulnerable it becomes because the workspace needs regular updates to stay secure.
+
+Follow [best practices](link to best practices) to make it easy to delete a workspace and create a new one without hassle.
+
+- updates
+
+## Accounting tips
+- wallets credits consumption
+
+
+
+
+## Relevant policies
+- relevant terms of use
+[UU terms of use](terms-of-use.qmd)
+
+- privacy policies
