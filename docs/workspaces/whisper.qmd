@@ -58,6 +58,8 @@ Use e.g. the following code example:
 ```
 import whisperx
 
+device='cuda'
+
 # load alignment model and metadata
 model_a, metadata = whisperx.load_align_model(language_code=result["language"], device=device)
 
