@@ -60,24 +60,10 @@ You always need a wallet to create a workspace, by default a workspace can only 
 
 There are several ways to login to your workspace. 
 
-### SSH (secure shell protocol). 
-
-#### When?
-For some workspaces this is the only option to login to your workspace. These are typically command line only workspaces (e.g. Ubuntu 20.04 command line).
-
-Since connection via SSH also works for most other workspace types, it could also be a useful option in some other scenarios, e.g. when you want to [copy a file from your laptop to the workspace](manuals/ssh-data-transfer-methods.qmd).
-
-#### How?
-The research cloud documentation provides instructions on [how to set up SSH for research cloud](https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace#Logintoyourworkspace-AccessaworkspacewithSSH).
-
-To connect to the workspace from a Windows computer you need specific software to use a ‘shell’ (also known as ‘terminal’), examples include Git Bash, PuTTY and MobaXterm. If you need to install something new, we would recommend [MobaXterm](https://mobaxterm.mobatek.net/).
-
-On MacOS and Linux machines you can use the standard ‘Terminal’.
-
 ### Browser access
 
 #### When?
-This method can be used for most workspaces that have a Graphical user interface (Rstudio, Jupyter Notebook, Ubuntu Desktop, Matlab). It can not be used for Windows server. 
+This is the easiest method and it can be used for most workspaces that have a Graphical user interface (Rstudio, Jupyter Notebook, Ubuntu Desktop, Matlab). It can not be used for Windows server. 
 You can check if this method works for your workspace you can click the URL when you click on the workspace in the research cloud portal. If the URL has an `https://` address it can be accessed via the browser.
 
 #### How?
@@ -97,7 +83,19 @@ You need an Remote Desktop client to be able to connect via RDP. On a Windows an
 
 The username that you need to type when you want to access the workspace can be found under the 'Profile' tab in the Research Cloud portal. The password to fill in is the Time based password (aka TOTP password) from the authenticator app on your mobile phone.
 
+### SSH (secure shell protocol). 
 
+#### When?
+For some workspaces this is the only option to login to your workspace. These are typically command line only workspaces (e.g. Ubuntu 20.04 command line).
+
+Since connection via SSH also works for most other workspace types, it could also be a useful option in some other scenarios, e.g. when you want to [copy a file from your laptop to the workspace](manuals/ssh-data-transfer-methods.qmd).
+
+#### How?
+The research cloud documentation provides instructions on [how to set up SSH for research cloud](https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace#Logintoyourworkspace-AccessaworkspacewithSSH).
+
+To connect to the workspace from a Windows computer you need specific software to use a ‘shell’ (also known as ‘terminal’), examples include Git Bash, PuTTY and MobaXterm. If you need to install something new, we would recommend [MobaXterm](https://mobaxterm.mobatek.net/).
+
+On MacOS and Linux machines you can use the standard ‘Terminal’.
 
 ## Getting data inside your workspace
 
