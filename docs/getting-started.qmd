@@ -62,26 +62,45 @@ There are several ways to login to your workspace.
 
 ### SSH (secure shell protocol). 
 
+#### When?
 For some workspaces this is the only option to login to your workspace. These are typically command line only workspaces (e.g. Ubuntu 20.04 command line).
 
-Since this method also works for most other workspace types, it could also be a useful option in some other cases, e.g. when you want to [copy a file from your laptop to the workspace](manuals/ssh-data-transfer-methods.qmd).
+Since connection via SSH also works for most other workspace types, it could also be a useful option in some other scenarios, e.g. when you want to [copy a file from your laptop to the workspace](manuals/ssh-data-transfer-methods.qmd).
 
+#### How?
 The research cloud documentation provides instructions on [how to set up SSH for research cloud](https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace#Logintoyourworkspace-AccessaworkspacewithSSH).
 
 To connect to the workspace from a Windows computer you need specific software to use a ‘shell’ (also known as ‘terminal’), examples include Git Bash, PuTTY and MobaXterm. If you need to install something new, we would recommend [MobaXterm](https://mobaxterm.mobatek.net/).
 
 On MacOS and Linux machines you can use the standard ‘Terminal’.
 
-### RDP and Browser access
-These method can be used for workspaces that have a Graphical user interface.
+### Browser access
 
-#### Browser access
-Jupyter and RStudio workspaces can be accessed via your web browser by clicking the yellow access button. Other workspaces that show a valid URL when you click the workspace in the research cloud dashboard, can also be accessed by clicking the yellow access button.
+#### When?
+This method can be used for most workspaces that have a Graphical user interface (Rstudio, Jupyter Notebook, Ubuntu Desktop, Matlab). It can not be used for Windows server. 
+You can check if this method works for your workspace you can click the URL when you click on the workspace in the research cloud portal. If the URL has an `https://` address it can be accessed via the browser.
 
-#### RDP (Remote Desktop Protocol)
+#### How?
+To be able to login via the Browser you need to [setup a Time Based Password for your Research Cloud account](https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace#Logintoyourworkspace-WorkspaceAccesswithTOTP).
+
+The workspaces can be accessed via your web browser by clicking the yellow access button. The username that you need to type when you want to access the workspace can be found under the 'Profile' tab in the Research Cloud portal. The password to fill in is the Time based password (aka TOTP password) from the authenticator app on your mobile phone.
+
+### RDP (Remote Desktop Protocol)
+
+#### When?
+This method can be used for most Windows Server workspaces, and any other workspaces that have an URL starting with `RDP://` when you click on the workspace in the research cloud portal.
+
+#### How?
+To be able to login via RDP you need to [setup a Time Based Password for your Research Cloud account](https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace#Logintoyourworkspace-WorkspaceAccesswithTOTP).
+
+You need an Remote Desktop client to be able to connect via RDP. On a Windows and MacOS PC you can use an application called 'Remote Desktop', on Linux we recommend 'Remmina'.
+
+The username that you need to type when you want to access the workspace can be found under the 'Profile' tab in the Research Cloud portal. The password to fill in is the Time based password (aka TOTP password) from the authenticator app on your mobile phone.
+
 
 
 ## Getting data inside your workspace
+
 ### Mounting online storage
 
 
