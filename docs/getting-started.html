@@ -135,7 +135,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#getting-access-to-your-workspace" id="toc-getting-access-to-your-workspace" class="nav-link" data-scroll-target="#getting-access-to-your-workspace">Getting access to your workspace</a>
   <ul class="collapse">
   <li><a href="#ssh-secure-shell-protocol." id="toc-ssh-secure-shell-protocol." class="nav-link" data-scroll-target="#ssh-secure-shell-protocol.">SSH (secure shell protocol).</a></li>
-  <li><a href="#rdp-and-browser-access" id="toc-rdp-and-browser-access" class="nav-link" data-scroll-target="#rdp-and-browser-access">RDP and Browser access</a></li>
+  <li><a href="#browser-access" id="toc-browser-access" class="nav-link" data-scroll-target="#browser-access">Browser access</a></li>
+  <li><a href="#rdp-remote-desktop-protocol" id="toc-rdp-remote-desktop-protocol" class="nav-link" data-scroll-target="#rdp-remote-desktop-protocol">RDP (Remote Desktop Protocol)</a></li>
   </ul></li>
   <li><a href="#getting-data-inside-your-workspace" id="toc-getting-data-inside-your-workspace" class="nav-link" data-scroll-target="#getting-data-inside-your-workspace">Getting data inside your workspace</a>
   <ul class="collapse">
@@ -228,21 +229,41 @@ ul.task-list li input[type="checkbox"] {
 <p>There are several ways to login to your workspace.</p>
 <section id="ssh-secure-shell-protocol." class="level3">
 <h3 class="anchored" data-anchor-id="ssh-secure-shell-protocol.">SSH (secure shell protocol).</h3>
+<section id="when" class="level4">
+<h4 class="anchored" data-anchor-id="when">When?</h4>
 <p>For some workspaces this is the only option to login to your workspace. These are typically command line only workspaces (e.g.&nbsp;Ubuntu 20.04 command line).</p>
-<p>Since this method also works for most other workspace types, it could also be a useful option in some other cases, e.g.&nbsp;when you want to <a href="../docs/manuals/ssh-data-transfer-methods.html">copy a file from your laptop to the workspace</a>.</p>
+<p>Since connection via SSH also works for most other workspace types, it could also be a useful option in some other scenarios, e.g.&nbsp;when you want to <a href="../docs/manuals/ssh-data-transfer-methods.html">copy a file from your laptop to the workspace</a>.</p>
+</section>
+<section id="how" class="level4">
+<h4 class="anchored" data-anchor-id="how">How?</h4>
 <p>The research cloud documentation provides instructions on <a href="https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace#Logintoyourworkspace-AccessaworkspacewithSSH">how to set up SSH for research cloud</a>.</p>
 <p>To connect to the workspace from a Windows computer you need specific software to use a ‘shell’ (also known as ‘terminal’), examples include Git Bash, PuTTY and MobaXterm. If you need to install something new, we would recommend <a href="https://mobaxterm.mobatek.net/">MobaXterm</a>.</p>
 <p>On MacOS and Linux machines you can use the standard ‘Terminal’.</p>
 </section>
-<section id="rdp-and-browser-access" class="level3">
-<h3 class="anchored" data-anchor-id="rdp-and-browser-access">RDP and Browser access</h3>
-<p>These method can be used for workspaces that have a Graphical user interface.</p>
-<section id="browser-access" class="level4">
-<h4 class="anchored" data-anchor-id="browser-access">Browser access</h4>
-<p>Jupyter and RStudio workspaces can be accessed via your web browser by clicking the yellow access button. Other workspaces that show a valid URL when you click the workspace in the research cloud dashboard, can also be accessed by clicking the yellow access button.</p>
 </section>
-<section id="rdp-remote-desktop-protocol" class="level4">
-<h4 class="anchored" data-anchor-id="rdp-remote-desktop-protocol">RDP (Remote Desktop Protocol)</h4>
+<section id="browser-access" class="level3">
+<h3 class="anchored" data-anchor-id="browser-access">Browser access</h3>
+<section id="when-1" class="level4">
+<h4 class="anchored" data-anchor-id="when-1">When?</h4>
+<p>This method can be used for most workspaces that have a Graphical user interface (Rstudio, Jupyter Notebook, Ubuntu Desktop, Matlab). It can not be used for Windows server. You can check if this method works for your workspace you can click the URL when you click on the workspace in the research cloud portal. If the URL has an <code>https://</code> address it can be accessed via the browser.</p>
+</section>
+<section id="how-1" class="level4">
+<h4 class="anchored" data-anchor-id="how-1">How?</h4>
+<p>To be able to login via the Browser you need to <a href="https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace#Logintoyourworkspace-WorkspaceAccesswithTOTP">setup a Time Based Password for your Research Cloud account</a>.</p>
+<p>The workspaces can be accessed via your web browser by clicking the yellow access button. The username that you need to type when you want to access the workspace can be found under the ‘Profile’ tab in the Research Cloud portal. The password to fill in is the Time based password (aka TOTP password) from the authenticator app on your mobile phone.</p>
+</section>
+</section>
+<section id="rdp-remote-desktop-protocol" class="level3">
+<h3 class="anchored" data-anchor-id="rdp-remote-desktop-protocol">RDP (Remote Desktop Protocol)</h3>
+<section id="when-2" class="level4">
+<h4 class="anchored" data-anchor-id="when-2">When?</h4>
+<p>This method can be used for most Windows Server workspaces, and any other workspaces that have an URL starting with <code>RDP://</code> when you click on the workspace in the research cloud portal.</p>
+</section>
+<section id="how-2" class="level4">
+<h4 class="anchored" data-anchor-id="how-2">How?</h4>
+<p>To be able to login via RDP you need to <a href="https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace#Logintoyourworkspace-WorkspaceAccesswithTOTP">setup a Time Based Password for your Research Cloud account</a>.</p>
+<p>You need an Remote Desktop client to be able to connect via RDP. On a Windows and MacOS PC you can use an application called ‘Remote Desktop’, on Linux we recommend ‘Remmina’.</p>
+<p>The username that you need to type when you want to access the workspace can be found under the ‘Profile’ tab in the Research Cloud portal. The password to fill in is the Time based password (aka TOTP password) from the authenticator app on your mobile phone.</p>
 </section>
 </section>
 </section>
