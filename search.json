@@ -1,68 +1,5 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "VRE Documentation for UU researchers",
-    "section": "",
-    "text": "Welcome\nThis page provides user documentation for Surf Research Cloud for researchers at Utrecht University. Get started using the links below!\n\nWhat is research cloud?\nAccounts, funding and collaboration\nGetting started with Research Cloud\nUsing a workspace\nUser manuals\nResponsible use\nContact"
-  },
-  {
-    "objectID": "docs/manuals/rclone-config.html",
-    "href": "docs/manuals/rclone-config.html",
-    "title": "Configuring Rclone for surfdrive",
-    "section": "",
-    "text": "Rclone has an interactive menu to generate a config file for you. You need to complete this menu once for each storage platform that you want to connect to. You can use Rclone for many different types of storage platforms: check the homepage for a list. SURFdrive and Research drive are based on ownCloud software. Platforms built on standard protocols such as WebDAV (including Yoda, Data Archive or the U: network drive of UU student and employees) are also supported but require slightly different configuration steps.\nTo check whether Rclone is available on your system:\nrclone version\nYou should see a version number displayed in the terminal.\nTo start the interactive menu:\nrclone config\nNow walk through the questions. For SURFdrive you need the following information (Rclone version 1.55.1)\n\nType n for New remote\nFor ‘name’ choose e.g. surfdrive (or SD)\nChoose option 40for WebDAV \nFill in the URL. You can look this up via the web portal of SURFdrive. In the top right corner click your account name. Go to settings. In the left panel, click security. At the very bottom of the page there will be a section WebDAV passwords. There is also an URL, something like: https://surfdrive.surf.nl/files/remote.php/nonshib-webdav\nUse this URL.\nBefore you continue with the Rclone menu, first perform the following step via the web portal of SURFdrive. Fill in an app name (e.g. lisa) on the security settings page (same page as previous step) and click “create new app password”. The page will show a username and a password. You will need these in the following steps of the Rclone menu.\nSelect the type of WebDAV storage system. Type: 2 for ownCloud.\nType in your user name from SURFdrive (this is the username found in the web portal (step 5))\nSelect: y) Yes type in my own password\nType in your password from the web portal and type it in again for confirmation.\nSkip the Bearer token option by pressing enter.\nChoose n to skip the advanced config\nConfirm your settings by typing y.\nChoose q to quit the menu.\n\nTest whether everything is setup correctly by typing the following command in the terminal, if necessary change surfdrive: to any other name chosen in step 2.:\nrclone lsd surfdrive:\nIf everything is setup correctly, you should see a list of files and folders that are present on your SURFdrive.\n\nNext: Using rclone for data transfer"
-  },
-  {
-    "objectID": "docs/manuals/install-rclone.html",
-    "href": "docs/manuals/install-rclone.html",
-    "title": "",
-    "section": "",
-    "text": "The steps below are used to install Rclone on Research Cloud.\n\nStep 1: Make sure you are in a terminal\n\nIn Jupyterhub (Jupyter Workspace in Research cloud): To open a new terminal, click the + button in the file browser and select the terminal in the new Launcher tab (find a short video here).\nIn Rstudio (Rstudio workspace in Research cloud): In the bottom left panel, click the ‘terminal’ tab.\n\n\n\nStep 2: Download and install rclone\nType the following command in the terminal:\ncurl https://rclone.org/install.sh | sudo bash\n\n\nStep 3: Check if installation was successful\nType the following command. A version number will be displayed when installation was successful.\nrclone version\n\n\nNext: Configure Rclone"
-  },
-  {
-    "objectID": "docs/manuals/ssh-data-transfer-methods.html",
-    "href": "docs/manuals/ssh-data-transfer-methods.html",
-    "title": "Transferring data from your PC to your workspace using SCP and RSYNC",
-    "section": "",
-    "text": "The instructions on this page assume you have already setup SSH for Research cloud. If this is not the case, check the Research Cloud documentation site."
-  },
-  {
-    "objectID": "docs/manuals/ssh-data-transfer-methods.html#scp",
-    "href": "docs/manuals/ssh-data-transfer-methods.html#scp",
-    "title": "Transferring data from your PC to your workspace using SCP and RSYNC",
-    "section": "scp",
-    "text": "scp\nWhen you work on a Windows machine and you use MobaXterm for SSH connection, you can use the file browser in MobaXterm to intuitively transfer data.\nIn all other cases: Open a terminal (or shell session) that you use for login in to your workspace via the ssh command.\nscp sourcefile <username>@<ip-address>:destinationdir\nYou can find both the username and the ip-address in the research cloud portal. Find your username under the ‘Profile’ tab.\nFind the IP address of your workspace in the main Dashboard by clicking the drop down arrow of the running Workspace.\nscp testfile.txt <username>@<ip-address>:data/volume_2/input_data\nIf you first need to create a destination folder where you want to transfer the data to:\nssh <username>@<ip-address>\nmkdir ~/data/volume_2/input_data\nlogout\nscp testfile.txt <username>@<ip-address>:data/volume_2/input_data\nTo transfer a directory add the -r option:\nscp -r sourcedir <username>@<ip-address>:data/volume_2/input_data"
-  },
-  {
-    "objectID": "docs/manuals/ssh-data-transfer-methods.html#rsync",
-    "href": "docs/manuals/ssh-data-transfer-methods.html#rsync",
-    "title": "Transferring data from your PC to your workspace using SCP and RSYNC",
-    "section": "rsync",
-    "text": "rsync\nRsync is a tool for synchronizing two folders. This method can also be used to transfer the contents of a folder to a remote folder. You typically run this tool on your own PC in the terminal (so e.g.before login in using the ssh command, or in a separate terminal (or shell session)).\nType rsync --help on to see if it is installed on your system. To install:\n\nInstall\nOn Debian based linux (e.g. Ubuntu):\nsudo apt-get install rsync\nOn mac:\nbrew install rsync\n\n\nUsage\nrsync -azP ./my_local_folder <username>@<ip-address>:~/data/volume_2/input_data\nWhere -azP are options. Type rsync --help to see a list of the options."
-  },
-  {
-    "objectID": "docs/manuals/rclone-transferringdata.html",
-    "href": "docs/manuals/rclone-transferringdata.html",
-    "title": "Using Rclone",
-    "section": "",
-    "text": "For all Rclone commands see: https://rclone.org/commands/ Below are the most useful commands: - lsd (listing directories) - ls (listing files) - copy (copying individual files) - sync (copying entire folders)\n\nrclone lsd\nThe lsd commands is used to list all directories in the current directory. e.g. to list all directories in your surfdrive type:\nrclone lsd surfdrive:\ne.g. to list all directories in a specific subfolder of a folder on surfdrive type:\nrclone lsd surfdrive:myfolder/mysubfolder\n\n\nrclone ls\nThe ls commands is used to list all files in the current directory. e.g. to list all files in a specific folder in your surfdrive type:\nrclone ls surfdrive:myfolder\n\n\nrclone copy\nTo copy a file from SURFdrive to a certain folder:\nrclone copy surfdrive:file.txt ./my_destination_folder\nIn most cases, you would want to transfer the data to the (persistent) storage volume on Research cloud. If you don’t have a destination folder yet, create it as follows:\nmkdir ~/data/volume_2/destination_folder_with_any_name\nrclone copy surfdrive:file.txt ~/data/volume_2/destination_folder_with_any_name\n\n\nrclone sync\nTo synchronize an entire folder from surfdrive use rclone sync:\n\nWarning! Synchronization with Rclone makes the destination folder equal to the source folder and deletes files and folders in the destination folder that are not present in the source folder. Therefore it is wise to use the –dry-run flag to see what will be copied and deleted before actually running the command. rclone sync <source> <destination> --dry-run\n\nrclone sync surfdrive:my_source_folder ~/data/volume_2/destination_folder_with_any_name --dry-run\nrclone sync surfdrive:my_source_folder ~/data/volume_2/destination_folder_with_any_name -cPv\n-cPv means the following flags (options) are used:\n-c skip files that are already present (compared using checksums)\n-P report progress of transfer\n-v verbose; increase the amount of information in the logs\n\n\nTransfer in opposite direction\nCopying in the opposite direction is easy, use the same commands as described above and start with the research cloud folder and end with the surfdrive folder:\nrclone copy ~/data/volume_2/destination_folder_with_any_name/file.txt surfdrive:my_destination_folder \nrclone sync ~/data/volume_2/destination_folder_with_any_name surfdrive:my_destination_folder  -cPv\nFurther reading: - For all Rclone commands see: https://rclone.org/commands/"
-  },
-  {
-    "objectID": "docs/manuals/icommands.html",
-    "href": "docs/manuals/icommands.html",
-    "title": "Installing and using iCommands on Surf Research Cloud",
-    "section": "",
-    "text": "The instructions below describe the process of data transfer between Surf Research Cloud and Yoda using iCommands. This manual is developed for workspaces based on a Linux operating system (including the Jupyter Notebook and RStudio workspaces). Transfer is also possible via the Webdav protocol using Rclone. For large files iCommands is faster due to parallel transfer options.\n\nPrerequisites\nYou will need some basic linux skills to be able to use the iCommands successfully. If you don’t have these skills, take some time to practice using sections 1, 2, 3 and 7 of this short online course before proceeding. You can practice in the terminal (see step 1).\n\n\nStep 1: Make sure you are in a terminal\n\nIn Jupyterhub (Jupyter Workspace in Research cloud): To open a new terminal, click the + button in the file browser and select the terminal in the new Launcher tab (find a short video here).\nIn Rstudio (Rstudio workspace in Research cloud): In the bottom left panel, click the ‘terminal’ tab.\n\n\n\nStep 2: Install iRODS iCommands\nSome workspaces have iRODS iCommands preconfigured. This should be visible in step 1 when creating a workspace.\nCopy and paste (or type) the following commands in the terminal, or view the most up to date installation instructions for iRODS iCommands on the yoda website in the section “Installing iCommands on Ubuntu”.\nsudo apt-get update\nsudo apt-get install -y --only-upgrade ca-certificates\nwget -qO - https://packages.irods.org/irods-signing-key.asc | sudo apt-key add -\necho \"deb [arch=amd64] https://packages.irods.org/apt/ xenial main\" | sudo tee /etc/apt/sources.list.d/renci-irods.list\nsudo apt-get update\nsudo apt -y install aptitude irods-runtime=4.2.7 irods-icommands=4.2.7\nsudo aptitude hold irods-runtime irods-icommands\necho \"120\"  | sudo tee /proc/sys/net/ipv4/tcp_keepalive_time\necho \"30\" | sudo tee /proc/sys/net/ipv4/tcp_keepalive_intvl\necho \"net.ipv4.tcp_keepalive_time=120\" | sudo tee -a /etc/sysctl.d/99-sysctl.conf\necho \"net.ipv4.tcp_keepalive_intvl=30\" | sudo tee -a /etc/sysctl.d/99-sysctl.conf\n\n\nStep 3: Create a config file\nYou may need help from your datamanager or contact Yoda support to obtain the information needed for the config file.\nGo to the home directory and create a hidden directory called ‘.irods’\ncd ~\nmkdir .irods\ncd .irods\nIn this directory, create a file named irods_environment.json.\ntouch irods_environment.json\nEdit the file using a text editor such as nano or vim\nnano irods_environment.json\nGo to the yoda website, scroll to Step 2. Configuring iCommands and copy and paste the text belonging to your institution in the file (similar to the file below) and change the email address next to irods_user_nameto your yoda user name (typically your uu email address).\n{   \n\"irods_host\": \"science.data.uu.nl\",   \n\"irods_port\": 1247,    \"irods_home\": \"/nluu6p/home\",   \n\"irods_user_name\": \"exampleuser@uu.nl\",   \n\"irods_zone_name\": \"nluu6p\",   \n\"irods_authentication_scheme\": \"pam\",   \n\"irods_encryption_algorithm\": \"AES-256-CBC\",   \n\"irods_encryption_key_size\": 32,   \n\"irods_encryption_num_hash_rounds\": 16,   \n\"irods_encryption_salt_size\": 8,   \n\"irods_client_server_negotiation\": \"request_server_negotiation\"\n}\n\n\nStep 4: Initialize connection to iRODS\nInitialize the connection to the Yoda system as follows:\niinit\nType your Yoda password when requested.\nType ils to see whether the connection has been established. The output of the ils command will list the current Yoda folder and the folders that are located within the current folder.\niinit and ils are commands which can only be used when icommands is active. Some of these commands are very similar to standard unix commands. When icommands is active you can still operate the HPC system using normal unix commands. A complete list of all ‘icommands’ can be found here.\n\n\nStep 5: Transferring data\nStandard transfer of a single file can be done using iget and iput\nThe irsync command can be used to synchronize entire directories between Yoda and Cartesius. The command is used as follows.\nirsync <source> <destination>\nIn contrary to the iput and iget commands, in irsync it is necessary to put ‘i:’ before the Yoda path. The Yoda path (directly after ‘i:’) to the folder that should be synchronized should be relative to the current Yoda folder (check with ils).\nE.g.\nirsync -rKV i:myfolder /my_researchcloud_folder\n-rKV means the following flags (options) are used:\n\n-r recursive - store the whole folder including subdirectories\n-K Calculate and verify the checksum on the data\n-V Very verbose\n\nTypically you will want to store data on the (persistent) storage volume that is attached to your workspace. Transfer it directly there as follows:\nirsync -rKV i:myfolder ~/data/volume_2/my_destination_folder\nTo synchronize in the opposite direction\nirsync -rKV /my_researchcloud_folder/ i:myfolder\n\nnote the ‘/’ at the end of /my_researchcloud_folder/ that is not used in the command above.\n\n\n\nParallel transfer\nWith icommands it is possible to transfer individual files in parallel using multiple threads, which results in higher transfer speeds. The flag -N can be used to control the number of parallel threads (only recommended in very specific situations). When not specified the server decides a default number of threads. For large files this number can be e.g. 16 threads.\nirsync -rKV -N 0 i:myfolder /my_researchcloud_folder"
-  },
-  {
-    "objectID": "docs/manuals/rclone-researchcloud.html",
-    "href": "docs/manuals/rclone-researchcloud.html",
-    "title": "Rclone for data transfer between cloud storage and Surf Research Cloud",
-    "section": "",
-    "text": "Rclone is a convenient tool for fast data transfer between computers (PC, HPC, cloud) and cloud based storage platforms such as Surfdrive, Researchdrive, onedrive, dropbox.\nIt is a command line tool, so the user would need some experience with using the command line in order to user Rclone.\nThe following steps show how you can use rclone on Research cloud for data transfer to e.g. a Jupyterhub or Rstudio workspace application.\n\nStep 1: Install rclone\n\n\nStep 2: Configure rclone\n\n\nStep 3: Data transfer using rclone"
-  },
-  {
     "objectID": "docs/getting-started.html",
     "href": "docs/getting-started.html",
     "title": "Getting Started",
@@ -105,15 +42,85 @@
     "text": "Getting data inside your workspace\n\nMounting online storage\n\n\nTransferring data\n\nUpload from your laptop (Jupyter Notebook and Rstudio Workspaces)\nscp/ssh (most workspaces)\nDownload (Ubuntu Desktop workspaces)\nirods ()\nrclone"
   },
   {
-    "objectID": "docs/contact.html",
-    "href": "docs/contact.html",
-    "title": "",
+    "objectID": "docs/research-cloud-intro.html",
+    "href": "docs/research-cloud-intro.html",
+    "title": "What is Research Cloud",
     "section": "",
-    "text": "Find our contact details on the RDM support website"
+    "text": "Surf ResearchCloud (SRC) is a service that allows you to use the vast computational power offered by datacenters with almost the same ease-of-use as using your own laptop. The complex infrastructure behind the scenes is presented to you as a workspace. Think of a workspace as a laptop-in-the-cloud that you access using your web browser or another application (for instance “Remote Desktop” or “ssh”). Your web browser displays the screen content of this workspace and allows you to interact with it using your keyboard and mouse.\nWorkspaces are preconfigured with one or more applications, ranging from RStudio, Jupyter Notebooks, Matlab, to plain Windows or Linux virtual machines where the user installs their own software. Workspaces are also scalable: computational power, GPU drivers and extra storage can be ordered with a single mouse click. You can select a workspace type that suites your needs from a catalog in the SRC web portal. Workspaces are preconfigured for the user by support staff and can be extended on request to suit a variety of research domains and analysis methods. Should analysis applications for your domain not yet be covered, the support staff is happy to assist and to make additions to the catalog.\nOrdering a workspace is easy. In the SRC portal, just click on a workspace type to order it. The datacenter service will set aside some compute power for you. The datacenter subsequently creates a workspace and prepares it for you with applications preinstalled. This whole process takes approximately 10 to 30 minutes, depending on the type of workspace.\nA workspace is offered on-demand and on a pay-as-you-go basis. It saves you much hassle: no need to buy and maintain computer hardware and your favorite applications come conveniently preinstalled for you. This resource leasing concept is a cost effective solution if you plan to use it part-time, or if you seek to avoid to invest in expensive computer hardware, software or related IT-skills. Once you are done with using your workspace, just dispose of it in the SRC web portal.\nExample workspaces\n- Rstudio\n- Jupyter\n- Matlab\n- Python with Machine learning libraries\n- Customized workspaces e.g. ASReview\n- Windows Server (install your own software)\n- Ubuntu (install your own software)\nResources available for a single workspace\n- up to 80 CPU cores\n- up to 480 GB RAM\n- up to 4 GPU drives\n- up to 2 TB storage"
+  },
+  {
+    "objectID": "docs/research-cloud-intro.html#introduction",
+    "href": "docs/research-cloud-intro.html#introduction",
+    "title": "What is Research Cloud",
+    "section": "",
+    "text": "Surf ResearchCloud (SRC) is a service that allows you to use the vast computational power offered by datacenters with almost the same ease-of-use as using your own laptop. The complex infrastructure behind the scenes is presented to you as a workspace. Think of a workspace as a laptop-in-the-cloud that you access using your web browser or another application (for instance “Remote Desktop” or “ssh”). Your web browser displays the screen content of this workspace and allows you to interact with it using your keyboard and mouse.\nWorkspaces are preconfigured with one or more applications, ranging from RStudio, Jupyter Notebooks, Matlab, to plain Windows or Linux virtual machines where the user installs their own software. Workspaces are also scalable: computational power, GPU drivers and extra storage can be ordered with a single mouse click. You can select a workspace type that suites your needs from a catalog in the SRC web portal. Workspaces are preconfigured for the user by support staff and can be extended on request to suit a variety of research domains and analysis methods. Should analysis applications for your domain not yet be covered, the support staff is happy to assist and to make additions to the catalog.\nOrdering a workspace is easy. In the SRC portal, just click on a workspace type to order it. The datacenter service will set aside some compute power for you. The datacenter subsequently creates a workspace and prepares it for you with applications preinstalled. This whole process takes approximately 10 to 30 minutes, depending on the type of workspace.\nA workspace is offered on-demand and on a pay-as-you-go basis. It saves you much hassle: no need to buy and maintain computer hardware and your favorite applications come conveniently preinstalled for you. This resource leasing concept is a cost effective solution if you plan to use it part-time, or if you seek to avoid to invest in expensive computer hardware, software or related IT-skills. Once you are done with using your workspace, just dispose of it in the SRC web portal.\nExample workspaces\n- Rstudio\n- Jupyter\n- Matlab\n- Python with Machine learning libraries\n- Customized workspaces e.g. ASReview\n- Windows Server (install your own software)\n- Ubuntu (install your own software)\nResources available for a single workspace\n- up to 80 CPU cores\n- up to 480 GB RAM\n- up to 4 GPU drives\n- up to 2 TB storage"
+  },
+  {
+    "objectID": "docs/research-cloud-intro.html#designed-with-consortia-and-other-collaborative-use-in-mind",
+    "href": "docs/research-cloud-intro.html#designed-with-consortia-and-other-collaborative-use-in-mind",
+    "title": "What is Research Cloud",
+    "section": "Designed with consortia and other Collaborative use in mind",
+    "text": "Designed with consortia and other Collaborative use in mind\nSurf Research Cloud uses the concept of a ‘collaboration’ to facilitate working together in project teams. A collaboration may be viewed as a virtual organization, with members that can originate from different research institutes, or from the private sector. A collaboration can accommodate a virtual organization the size of a European research project consortium. In contrast, it might also consist of a single member, e.g. a researcher in need of compute power or a private workspace.\nManaging memberships of the collaboration is done via a self-service portal (called SRAM, short for SURF Research Access Management. E.g. a researcher can give (temporary) access to PhDs or students.\nIt is important to understand that SRC assumes all members of the collaboration to be contractually or otherwise bound to work together.\nHence the costs related to a workspace ordered by a single member of the collaboration are effectively charged to the collaboration. In addition, the workspace is automatically accessible to all members of the collaboration."
+  },
+  {
+    "objectID": "docs/research-cloud-intro.html#funding",
+    "href": "docs/research-cloud-intro.html#funding",
+    "title": "What is Research Cloud",
+    "section": "Funding",
+    "text": "Funding\nThere are several ways to request computing time for SRC. The easiest and fastest way (and recommended first step) is to contact UU Research IT. A short intake meeting will get you started. Additionally, more computing time can be requested via Surf or NWO."
+  },
+  {
+    "objectID": "docs/research-cloud-intro.html#getting-started",
+    "href": "docs/research-cloud-intro.html#getting-started",
+    "title": "What is Research Cloud",
+    "section": "Getting started",
+    "text": "Getting started\nContact UU Research IT for an intake meeting to get started. After a 30 minute intake you will have everything ready to start your first workspace.\nPractical instructions to get started on SRC can be found here."
+  },
+  {
+    "objectID": "docs/workspace-catalogue.html",
+    "href": "docs/workspace-catalogue.html",
+    "title": "Workspace Catalogue",
+    "section": "",
+    "text": "This page provides links to user documentation for workspaces developed by Utrecht University\n\nAnaconda Navigator\nASReview command line\nASReview Lab\nMiniconda\nWhisper OpenAI"
+  },
+  {
+    "objectID": "docs/accounts.html",
+    "href": "docs/accounts.html",
+    "title": "Accounts, Funding and Collaboration",
+    "section": "",
+    "text": "There are several situations that may apply to you:\n\nMy project team is currently not using Research cloud and I want to start on Research cloud\nStart here\nSomeone in my project team is already using Research cloud and I need access\nStart here\nI think Research Cloud is interesting for my current project but I am not sure\nStart here"
+  },
+  {
+    "objectID": "docs/accounts.html#how-to-get-on-board",
+    "href": "docs/accounts.html#how-to-get-on-board",
+    "title": "Accounts, Funding and Collaboration",
+    "section": "",
+    "text": "There are several situations that may apply to you:\n\nMy project team is currently not using Research cloud and I want to start on Research cloud\nStart here\nSomeone in my project team is already using Research cloud and I need access\nStart here\nI think Research Cloud is interesting for my current project but I am not sure\nStart here"
+  },
+  {
+    "objectID": "docs/accounts.html#intake-procedure",
+    "href": "docs/accounts.html#intake-procedure",
+    "title": "Accounts, Funding and Collaboration",
+    "section": "Intake procedure",
+    "text": "Intake procedure\nThis is a flowchart describing the intake procedure for new projects, find descriptions of the steps below the flowchart.\n\n\n\n\nflowchart TD\n  A[1. Intake meeting] --&gt; B{Onboarding}\n  B -- budget --&gt; C{3. Request credits}\n  C --&gt; F[UU credits via Intake meeting]\n  C --&gt; G[E-INFRA request]\n  C --&gt; H[Project budget]\n  B -- account --&gt; D[2. Create collaboration in SRAM]\n  D ----&gt; E[Log in on Research Cloud and request wallet]\n  F --&gt; E[Log in on Research Cloud and request wallet]\n  G --&gt; E[Log in on Research Cloud and request wallet]\n  H --&gt; E[Log in on Research Cloud and request wallet]\n  E --&gt; J[Create your first workspace!]\n\n\n\n\n\n\n\n1. Plan an intake with the Research Engineering team\nDuring a 30 minute online meeting we will discuss the technical requirements of your project. The Research engineer who is doing the intake has experience with the systems and can quickly assess your needs when looking together at your software. The engineer will advice you about how to proceed. When Research cloud meets the technical requirements of your project, we will arrange administration that is necessary to get started during the intake. Schedule an intake meeting.\n\n\n2. Request a collaboration in SRAM\nThis is typically done during an intake meeting (step 1). It is also possible to request a new collaboration in SRAM\n\n\n\n\n\n\nWhat is SRAM?\n\n\n\n\n\nSRAM (SURF Research Access Management) is a service to manage access to research resources, intended for Dutch led research collaborations. More information.\n\n\n\n\n\n\n\n\n\nWhat is a collaboration?\n\n\n\n\n\nA Collaboration (also known as Collaborative Organisation, or CO) is an ad-hoc group of people who are allowed to work together by sharing resources. As a scientist you can easily make a CO. That way, you can invite other researchers to join your efforts in Research Cloud, and you can then self-organise yourselves to distribute tasks, including administering the CO. More information.\n\n\n\n\n\n3. Request funding\nThere are several ways to request funding for credits:\nUU Budget This is typically granted during an intake meeting (see step 1 above).\nE-INFRA request Via an E-INFRA request 50.000 CPU hours or 10.000 GPU can be requested for your project for 1 calendar year. An E-INFRA request can be done one time per calendar year. An application can be done via the SURF servicedesk and the procedure is relatively simple and fast. More information.\nExample application\nProject budget It is possible to pay for credits via your own project budget. Discuss the possiblities during an intake meeting (see step 1 above)."
+  },
+  {
+    "objectID": "docs/accounts.html#add-collaborators-to-existing-project",
+    "href": "docs/accounts.html#add-collaborators-to-existing-project",
+    "title": "Accounts, Funding and Collaboration",
+    "section": "Add collaborators to existing project",
+    "text": "Add collaborators to existing project\nWhen you want to onboard new project member in Research cloud you should think about the rights you want to grant them:\n\n\n\n\n\n\nShould the new project member only have access to running workspaces?\n\n\n\n\n\nPerform step 1 below\n\n\n\n\n\n\n\n\n\nShould the new project member be able to pause, resume and delete workspaces that I create?\n\n\n\n\n\nPerform step 1 and 2 below\n\n\n\n\n\n\n\n\n\nShould the new project member be able to create new workspaces using the project budget?\n\n\n\n\n\nPerform step 1, 2(optional), and 3\n\n\n\n\n1. Invite a new collaborator via SRAM\nSRAM is used for access management for SURF Research Cloud. It is possible to invite collaborators to your collaboration (project)\n\n\n\n\n\n\nWho can I invite?\n\n\n\n\n\nIt is possible to invite anyone who has an email address to join your project. Students and employees from most Universities (and Universities of Applied Sciences) will be able to login to SRAM using their institution credentials. Collaborators from abroad or e.g. private sector can create an eduID first and then use that to login to SRAM and accept the invitation.\n\n\n\n\n\n2. Workspace admins\nIn SRAM there are groups that can be used to grant members of your collaboration to the right to pause, resume and delete workspaces\n\n\n3. Share your wallet\nIn SRAM there are groups that can be used to grant members of your collaboration to the right to create new workspaces using the wallet of your project"
   },
   {
     "objectID": "docs/workspaces/whisper.html",
     "href": "docs/workspaces/whisper.html",
+    "title": "Whisper OpenAI CUDA 11",
+    "section": "",
+    "text": "This workspace can be used to work with the Whisper model from OpenAI (e.g. for transcribing audio files). On this workspace a Python environment is created using the environment manager ‘conda’. The ‘conda’ environment contains Whisper and other required packages. The environment is configured to be able to use a GPU when available.\nThe workspace is a JupyterHub workspace, and therefore is mainly aimed for Python users that use Jupyter notebooks for developing code. However the workspace also provides a terminal (command line application) to run Whisper using the command line.\nCurrently the workspace is only available upon request."
+  },
+  {
+    "objectID": "docs/workspaces/whisper.html#description",
+    "href": "docs/workspaces/whisper.html#description",
     "title": "Whisper OpenAI CUDA 11",
     "section": "",
     "text": "This workspace can be used to work with the Whisper model from OpenAI (e.g. for transcribing audio files). On this workspace a Python environment is created using the environment manager ‘conda’. The ‘conda’ environment contains Whisper and other required packages. The environment is configured to be able to use a GPU when available.\nThe workspace is a JupyterHub workspace, and therefore is mainly aimed for Python users that use Jupyter notebooks for developing code. However the workspace also provides a terminal (command line application) to run Whisper using the command line.\nCurrently the workspace is only available upon request."
@@ -161,6 +168,13 @@
     "text": "This workspace can be used to work with ASReview (e.g. for simulations) via the command line interface (CLI).\nCurrently the workspace is only available upon request."
   },
   {
+    "objectID": "docs/workspaces/asreview_cli.html#description",
+    "href": "docs/workspaces/asreview_cli.html#description",
+    "title": "ASReview CLI",
+    "section": "",
+    "text": "This workspace can be used to work with ASReview (e.g. for simulations) via the command line interface (CLI).\nCurrently the workspace is only available upon request."
+  },
+  {
     "objectID": "docs/workspaces/asreview_cli.html#creation",
     "href": "docs/workspaces/asreview_cli.html#creation",
     "title": "ASReview CLI",
@@ -186,7 +200,7 @@
     "href": "docs/workspaces/asreview_cli.html#usage",
     "title": "ASReview CLI",
     "section": "Usage",
-    "text": "Usage\nASReview and all of its extensions are preinstalled in this workspace. ASReview can be used using the ‘alias’ asr (the normal command asreview will not do anything, always use asr instead).\nType asr --help to test the installation.\nType asr simulate --help to find the\nType asr simulate <ARGUMENTS> to run a simulation study."
+    "text": "Usage\nASReview and all of its extensions are preinstalled in this workspace. ASReview can be used using the ‘alias’ asr (the normal command asreview will not do anything, always use asr instead).\nType asr --help to test the installation.\nType asr simulate --help to find the\nType asr simulate &lt;ARGUMENTS&gt; to run a simulation study."
   },
   {
     "objectID": "docs/workspaces/asreview_cli.html#tips",
@@ -231,78 +245,22 @@
     "text": "Tips"
   },
   {
-    "objectID": "docs/accounts.html",
-    "href": "docs/accounts.html",
-    "title": "Accounts, Funding and Collaboration",
+    "objectID": "docs/contact.html",
+    "href": "docs/contact.html",
+    "title": "",
     "section": "",
-    "text": "There are several situations that may apply to you:\n\nMy project team is currently not using Research cloud and I want to start on Research cloud\nStart here\nSomeone in my project team is already using Research cloud and I need access\nStart here\nI think Research Cloud is interesting for my current project but I am not sure\nStart here"
-  },
-  {
-    "objectID": "docs/accounts.html#intake-procedure",
-    "href": "docs/accounts.html#intake-procedure",
-    "title": "Accounts, Funding and Collaboration",
-    "section": "Intake procedure",
-    "text": "Intake procedure\nThis is a flowchart describing the intake procedure for new projects, find descriptions of the steps below the flowchart.\n\n\n\n\nflowchart TD\n  A[1. Intake meeting] --> B{Onboarding}\n  B -- budget --> C{3. Request credits}\n  C --> F[UU credits via Intake meeting]\n  C --> G[E-INFRA request]\n  C --> H[Project budget]\n  B -- account --> D[2. Create collaboration in SRAM]\n  D ----> E[Log in on Research Cloud and request wallet]\n  F --> E[Log in on Research Cloud and request wallet]\n  G --> E[Log in on Research Cloud and request wallet]\n  H --> E[Log in on Research Cloud and request wallet]\n  E --> J[Create your first workspace!]\n\n\n\n\n\n\n\n\n\n\n1. Plan an intake with the Research Engineering team\nDuring a 30 minute online meeting we will discuss the technical requirements of your project. The Research engineer who is doing the intake has experience with the systems and can quickly assess your needs when looking together at your software. The engineer will advice you about how to proceed. When Research cloud meets the technical requirements of your project, we will arrange administration that is necessary to get started during the intake. Schedule an intake meeting.\n\n\n2. Request a collaboration in SRAM\nThis is typically done during an intake meeting (step 1). It is also possible to request a new collaboration in SRAM\n\n\n\n\n\n\nWhat is SRAM?\n\n\n\n\n\nSRAM (SURF Research Access Management) is a service to manage access to research resources, intended for Dutch led research collaborations. More information.\n\n\n\n\n\n\n\n\n\nWhat is a collaboration?\n\n\n\n\n\nA Collaboration (also known as Collaborative Organisation, or CO) is an ad-hoc group of people who are allowed to work together by sharing resources. As a scientist you can easily make a CO. That way, you can invite other researchers to join your efforts in Research Cloud, and you can then self-organise yourselves to distribute tasks, including administering the CO. More information.\n\n\n\n\n\n3. Request funding\nThere are several ways to request funding for credits:\nUU Budget This is typically granted during an intake meeting (see step 1 above).\nE-INFRA request Via an E-INFRA request 50.000 CPU hours or 10.000 GPU can be requested for your project for 1 calendar year. An E-INFRA request can be done one time per calendar year. An application can be done via the SURF servicedesk and the procedure is relatively simple and fast. More information.\nExample application\nProject budget It is possible to pay for credits via your own project budget. Discuss the possiblities during an intake meeting (see step 1 above)."
-  },
-  {
-    "objectID": "docs/accounts.html#add-collaborators-to-existing-project",
-    "href": "docs/accounts.html#add-collaborators-to-existing-project",
-    "title": "Accounts, Funding and Collaboration",
-    "section": "Add collaborators to existing project",
-    "text": "Add collaborators to existing project\nWhen you want to onboard new project member in Research cloud you should think about the rights you want to grant them:\n\n\n\n\n\n\nShould the new project member only have access to running workspaces?\n\n\n\n\n\nPerform step 1 below\n\n\n\n\n\n\n\n\n\nShould the new project member be able to pause, resume and delete workspaces that I create?\n\n\n\n\n\nPerform step 1 and 2 below\n\n\n\n\n\n\n\n\n\nShould the new project member be able to create new workspaces using the project budget?\n\n\n\n\n\nPerform step 1, 2(optional), and 3\n\n\n\n\n1. Invite a new collaborator via SRAM\nSRAM is used for access management for SURF Research Cloud. It is possible to invite collaborators to your collaboration (project)\n\n\n\n\n\n\nWho can I invite?\n\n\n\n\n\nIt is possible to invite anyone who has an email address to join your project. Students and employees from most Universities (and Universities of Applied Sciences) will be able to login to SRAM using their institution credentials. Collaborators from abroad or e.g. private sector can create an eduID first and then use that to login to SRAM and accept the invitation.\n\n\n\n\n\n2. Workspace admins\nIn SRAM there are groups that can be used to grant members of your collaboration to the right to pause, resume and delete workspaces\n\n\n3. Share your wallet\nIn SRAM there are groups that can be used to grant members of your collaboration to the right to create new workspaces using the wallet of your project"
-  },
-  {
-    "objectID": "docs/workspace-catalogue.html",
-    "href": "docs/workspace-catalogue.html",
-    "title": "Workspace Catalogue",
-    "section": "",
-    "text": "This page provides links to user documentation for workspaces developed by Utrecht University\n\nAnaconda Navigator\nASReview command line\nASReview Lab\nMiniconda\nWhisper OpenAI"
-  },
-  {
-    "objectID": "docs/manuals.html",
-    "href": "docs/manuals.html",
-    "title": "User Manuals",
-    "section": "",
-    "text": "On this page we share manuals for a variety of use cases and tasks.\n\nData Transfer from your PC using SCP and RSYNC\nData Transer to and from Yoda using iCommands\nData Transfer between Research cloud and Surfdrive"
-  },
-  {
-    "objectID": "docs/research-cloud-intro.html",
-    "href": "docs/research-cloud-intro.html",
-    "title": "What is Research Cloud",
-    "section": "",
-    "text": "Surf ResearchCloud (SRC) is a service that allows you to use the vast computational power offered by datacenters with almost the same ease-of-use as using your own laptop. The complex infrastructure behind the scenes is presented to you as a workspace. Think of a workspace as a laptop-in-the-cloud that you access using your web browser or another application (for instance “Remote Desktop” or “ssh”). Your web browser displays the screen content of this workspace and allows you to interact with it using your keyboard and mouse.\nWorkspaces are preconfigured with one or more applications, ranging from RStudio, Jupyter Notebooks, Matlab, to plain Windows or Linux virtual machines where the user installs their own software. Workspaces are also scalable: computational power, GPU drivers and extra storage can be ordered with a single mouse click. You can select a workspace type that suites your needs from a catalog in the SRC web portal. Workspaces are preconfigured for the user by support staff and can be extended on request to suit a variety of research domains and analysis methods. Should analysis applications for your domain not yet be covered, the support staff is happy to assist and to make additions to the catalog.\nOrdering a workspace is easy. In the SRC portal, just click on a workspace type to order it. The datacenter service will set aside some compute power for you. The datacenter subsequently creates a workspace and prepares it for you with applications preinstalled. This whole process takes approximately 10 to 30 minutes, depending on the type of workspace.\nA workspace is offered on-demand and on a pay-as-you-go basis. It saves you much hassle: no need to buy and maintain computer hardware and your favorite applications come conveniently preinstalled for you. This resource leasing concept is a cost effective solution if you plan to use it part-time, or if you seek to avoid to invest in expensive computer hardware, software or related IT-skills. Once you are done with using your workspace, just dispose of it in the SRC web portal.\nExample workspaces\n- Rstudio\n- Jupyter\n- Matlab\n- Python with Machine learning libraries\n- Customized workspaces e.g. ASReview\n- Windows Server (install your own software)\n- Ubuntu (install your own software)\nResources available for a single workspace\n- up to 80 CPU cores\n- up to 480 GB RAM\n- up to 4 GPU drives\n- up to 2 TB storage"
-  },
-  {
-    "objectID": "docs/research-cloud-intro.html#designed-with-consortia-and-other-collaborative-use-in-mind",
-    "href": "docs/research-cloud-intro.html#designed-with-consortia-and-other-collaborative-use-in-mind",
-    "title": "What is Research Cloud",
-    "section": "Designed with consortia and other Collaborative use in mind",
-    "text": "Designed with consortia and other Collaborative use in mind\nSurf Research Cloud uses the concept of a ‘collaboration’ to facilitate working together in project teams. A collaboration may be viewed as a virtual organization, with members that can originate from different research institutes, or from the private sector. A collaboration can accommodate a virtual organization the size of a European research project consortium. In contrast, it might also consist of a single member, e.g. a researcher in need of compute power or a private workspace.\nManaging memberships of the collaboration is done via a self-service portal (called SRAM, short for SURF Research Access Management. E.g. a researcher can give (temporary) access to PhDs or students.\nIt is important to understand that SRC assumes all members of the collaboration to be contractually or otherwise bound to work together.\nHence the costs related to a workspace ordered by a single member of the collaboration are effectively charged to the collaboration. In addition, the workspace is automatically accessible to all members of the collaboration."
-  },
-  {
-    "objectID": "docs/research-cloud-intro.html#funding",
-    "href": "docs/research-cloud-intro.html#funding",
-    "title": "What is Research Cloud",
-    "section": "Funding",
-    "text": "Funding\nThere are several ways to request computing time for SRC. The easiest and fastest way (and recommended first step) is to contact UU Research IT. A short intake meeting will get you started. Additionally, more computing time can be requested via Surf or NWO."
-  },
-  {
-    "objectID": "docs/research-cloud-intro.html#getting-started",
-    "href": "docs/research-cloud-intro.html#getting-started",
-    "title": "What is Research Cloud",
-    "section": "Getting started",
-    "text": "Getting started\nContact UU Research IT for an intake meeting to get started. After a 30 minute intake you will have everything ready to start your first workspace.\nPractical instructions to get started on SRC can be found here."
-  },
-  {
-    "objectID": "docs/einfra.html",
-    "href": "docs/einfra.html",
-    "title": "eINFRA application example",
-    "section": "",
-    "text": "The eINFRA call is a non-competitive grant that can be used to request 50.000 credits and/or 10.000 GPU hours per calendar year per project.\nMore info about requirements and the application portal can be found here\nAn example eINFRA application for Snellius can be found here. It illustrates the length and the level of detail of the specification of the project requirements."
+    "text": "Find our contact details on the RDM support website"
   },
   {
     "objectID": "docs/responsible-use.html",
     "href": "docs/responsible-use.html",
+    "title": "Responsible Use",
+    "section": "",
+    "text": "While the Surf Research cloud infrastructure is considered secure (ISO certified), there are some\n\n\n\n\n\nMost workspaces have internet access.\n\n\n\nWorkspaces are meant to be temporary. The longer the workspace exists, the more vulnerable it becomes because the workspace needs regular updates to stay secure.\nFollow best practices to make it easy to delete a workspace and create a new one without hassle.\n\nupdates"
+  },
+  {
+    "objectID": "docs/responsible-use.html#security-good-practices",
+    "href": "docs/responsible-use.html#security-good-practices",
     "title": "Responsible Use",
     "section": "",
     "text": "While the Surf Research cloud infrastructure is considered secure (ISO certified), there are some\n\n\n\n\n\nMost workspaces have internet access.\n\n\n\nWorkspaces are meant to be temporary. The longer the workspace exists, the more vulnerable it becomes because the workspace needs regular updates to stay secure.\nFollow best practices to make it easy to delete a workspace and create a new one without hassle.\n\nupdates"
@@ -320,5 +278,194 @@
     "title": "Responsible Use",
     "section": "Relevant policies",
     "text": "Relevant policies\n\nrelevant terms of use UU terms of use\nprivacy policies"
+  },
+  {
+    "objectID": "docs/terms-of-use.html",
+    "href": "docs/terms-of-use.html",
+    "title": "Terms of Use",
+    "section": "",
+    "text": "Find below the Terms of Use for Research Cloud Workspaces owned and maintained by the Utrecht University VRE team.\nPractical tips for UU employees for responsible and secure use of Surf Research cloud."
+  },
+  {
+    "objectID": "docs/terms-of-use.html#your-uu-workspaces-account",
+    "href": "docs/terms-of-use.html#your-uu-workspaces-account",
+    "title": "Terms of Use",
+    "section": "1. Your UU Workspaces Account",
+    "text": "1. Your UU Workspaces Account\nIf you have a UU Workspaces account then you are responsible for maintaining the security of your account and you are fully responsible for all activities that occur under the account. You must immediately notify UU Workspaces business administration via UU Workspaces@uu.nl of any unauthorized uses of your account or any other breaches of security. Utrecht University will not be liable for any acts or omissions by you, including any damages of any kind incurred as a result of such acts or omissions."
+  },
+  {
+    "objectID": "docs/terms-of-use.html#responsibility-of-contributors",
+    "href": "docs/terms-of-use.html#responsibility-of-contributors",
+    "title": "Terms of Use",
+    "section": "2. Responsibility of Contributors",
+    "text": "2. Responsibility of Contributors\nIf you submit material (“Data”) to UU Workspaces, you are entirely responsible for the content of, and any harm resulting from, that Content. By submitting, you represent and warrant that: * the use of the Data will not infringe the proprietary rights, including but not limited to the copyright, patent, trademark or trade secret rights, of any third party;\nif your employer has rights to intellectual property you create, you have either (i) received permission from your employer to post or make available the Content, including but not limited to any software, or (ii) secured from your employer a waiver as to all rights in or to the Content;\nyou have fully complied with any third-party licenses relating to the Data, and have done all things necessary to successfully pass through to end users any required terms;\nthe Data does not contain or install any viruses, worms, malware, Trojan horses or other harmful or destructive content;\nthe Data is not spam, and does not contain unethical or unwanted commercial content designed to drive traffic to third party sites or boost the search engine rankings of third party sites, or to further unlawful acts (such as phishing) or mislead recipients as to the source of the material (such as spoofing);"
+  },
+  {
+    "objectID": "docs/terms-of-use.html#user-data-license",
+    "href": "docs/terms-of-use.html#user-data-license",
+    "title": "Terms of Use",
+    "section": "3. User Data License",
+    "text": "3. User Data License\nUtrecht University has the right (though not the obligation) to, in Utrecht University’s sole discretion (i) refuse or remove any content that, in Utrecht University’s reasonable opinion, violates any Utrecht University policy or is in any way harmful or objectionable, in Utrecht University’s sole discretion. Utrecht University will have no obligation to provide a refund of any amounts previously paid."
+  },
+  {
+    "objectID": "docs/terms-of-use.html#responsibility-of-uu-workspaces-visitors",
+    "href": "docs/terms-of-use.html#responsibility-of-uu-workspaces-visitors",
+    "title": "Terms of Use",
+    "section": "4. Responsibility of UU Workspaces Visitors",
+    "text": "4. Responsibility of UU Workspaces Visitors\nYou are responsible for taking precautions as necessary to protect yourself and your computer systems from viruses, worms, Trojan horses, and other harmful or destructive content. The UU Workspaces and related services may contain technical inaccuracies, typographical mistakes, and other errors. Utrecht University disclaims any responsibility for any harm resulting from the use by visitors of the UU Workspaces and related services, or from any downloading by those visitors of content there posted."
+  },
+  {
+    "objectID": "docs/terms-of-use.html#content-posted-on-other-websites",
+    "href": "docs/terms-of-use.html#content-posted-on-other-websites",
+    "title": "Terms of Use",
+    "section": "5. Content Posted on Other Websites",
+    "text": "5. Content Posted on Other Websites\nWe have not reviewed, and cannot review, all of the material, including computer software, made available through any UU Workspaces websites and webpages to which UU Workspaces Website and related services links, and that link to UU Workspaces. Utrecht University does not have any control over those non-UU Workspaces websites and webpages, and is not responsible for their contents or their use. By linking to a non-UU Workspaces website or webpage, Utrecht University does not represent or imply that it endorses such website or webpage. You are responsible for taking precautions as necessary to protect yourself and your computer systems from viruses, worms, Trojan horses, and other harmful or destructive content. Utrecht University disclaims any responsibility for any harm resulting from your use of non-UU Workspaces websites and webpages."
+  },
+  {
+    "objectID": "docs/terms-of-use.html#copyright-infringement-and-dmca-policy",
+    "href": "docs/terms-of-use.html#copyright-infringement-and-dmca-policy",
+    "title": "Terms of Use",
+    "section": "6. Copyright Infringement and DMCA Policy",
+    "text": "6. Copyright Infringement and DMCA Policy\nAs Utrecht University asks others to respect its intellectual property rights, it respects the intellectual property rights of others. If you believe that material located on or linked to by UU Workspaces violates your copyright, you are encouraged to notify Utrecht University. Utrecht University will respond to all such notices, including as required or appropriate by removing the infringing material or disabling all links to the infringing material. Utrecht University will terminate a visitor’s access to and use of the Website if, under appropriate circumstances, the visitor is determined to be a repeat infringer of the copyrights or other intellectual property rights of Utrecht University or others. In the case of such termination, Utrecht University will have no obligation to provide a refund of any amounts previously paid to Utrecht University."
+  },
+  {
+    "objectID": "docs/terms-of-use.html#intellectual-property",
+    "href": "docs/terms-of-use.html#intellectual-property",
+    "title": "Terms of Use",
+    "section": "7. Intellectual Property",
+    "text": "7. Intellectual Property\nThis Agreement does not transfer from Utrecht University to you any Utrecht University or third party intellectual property, and all right, title and interest in and to such property will remain (as between the parties) solely with Utrecht University. Utrecht University, the UU Workspaces website and related services, the Utrecht University logo, and all other trademarks, service marks, graphics and logos used in connection with UU Workspaces are trademarks or registered trademarks of Utrecht University or Utrecht University’s licensors. Other trademarks, service marks, graphics and logos used in connection with UU Workspaces may be the trademarks of other third parties. Your use of UU Workspaces grants you no right or license to reproduce or otherwise use any Utrecht University or third-party trademarks."
+  },
+  {
+    "objectID": "docs/terms-of-use.html#attribution",
+    "href": "docs/terms-of-use.html#attribution",
+    "title": "Terms of Use",
+    "section": "8. Attribution",
+    "text": "8. Attribution\nUtrecht University reserves the right to display attribution links such as ‘Powered by UU Workspaces,’ theme author, and font attribution in your content footer or toolbar. Footer credits and other such expressions may not be removed regardless of upgrades purchased."
+  },
+  {
+    "objectID": "docs/terms-of-use.html#changes",
+    "href": "docs/terms-of-use.html#changes",
+    "title": "Terms of Use",
+    "section": "9. Changes",
+    "text": "9. Changes\nUtrecht University reserves the right, at its sole discretion, to modify or replace any part of this Agreement. It is your responsibility to check this Agreement periodically for changes. Your continued use of or access to UU Workspaces following the posting of any changes to this Agreement constitutes acceptance of those changes. Utrecht University may also, in the future, offer new services and/or features through UU Workspaces website or related services (including, the release of new tools and resources). Such new features and/or services shall be subject to the terms and conditions of this Agreement."
+  },
+  {
+    "objectID": "docs/terms-of-use.html#termination",
+    "href": "docs/terms-of-use.html#termination",
+    "title": "Terms of Use",
+    "section": "10. Termination",
+    "text": "10. Termination\nUtrecht University may terminate your access to all or any part of UU Workspaces at any time, with or without cause, with or without notice, effective immediately. If you wish to terminate this Agreement or your UU Workspaces account (if you have one), you may simply discontinue using UU Workspaces and/or cancel your registration and delete the stored information. All provisions of this Agreement which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity and limitations of liability."
+  },
+  {
+    "objectID": "docs/terms-of-use.html#disclaimer-of-warranties",
+    "href": "docs/terms-of-use.html#disclaimer-of-warranties",
+    "title": "Terms of Use",
+    "section": "11. Disclaimer of Warranties",
+    "text": "11. Disclaimer of Warranties\nUU Workspaces are provided “as is”. Utrecht University and its suppliers and licensors hereby disclaim all warranties of any kind, express or implied, including, without limitation, the warranties of merchantability, fitness for a particular purpose and non-infringement. Neither Utrecht University nor its suppliers and licensors, makes any warranty that the UU Workspaces website and related services will be error free or that access thereto will be continuous or uninterrupted. You understand that you download from, or otherwise obtain content or services through, UU Workspaces at your own discretion and risk."
+  },
+  {
+    "objectID": "docs/terms-of-use.html#limitation-of-liability",
+    "href": "docs/terms-of-use.html#limitation-of-liability",
+    "title": "Terms of Use",
+    "section": "12. Limitation of Liability",
+    "text": "12. Limitation of Liability\nIn no event will Utrecht University, or its suppliers or licensors, be liable with respect to any subject matter of this agreement under any contract, negligence, strict liability or other legal or equitable theory for: (i) any special, incidental or consequential damages; (ii) the cost of procurement for substitute products or services; (iii) for interruption of use or loss or corruption of data; or (iv) for any amounts that exceed the fees paid by you to Utrecht University under this agreement during the twelve (12) month period prior to the cause of action; (v) The services offered via UU Workspaces are for research purposes only, and are not to be used to guide clinical decisions. We make no representation that these results are accurate. Utrecht University shall have no liability for any failure or delay due to matters beyond their reasonable control. The foregoing shall not apply to the extent prohibited by applicable law."
+  },
+  {
+    "objectID": "docs/terms-of-use.html#general-representation-and-warranty",
+    "href": "docs/terms-of-use.html#general-representation-and-warranty",
+    "title": "Terms of Use",
+    "section": "13. General Representation and Warranty",
+    "text": "13. General Representation and Warranty\nYou represent and warrant that (i) your use of UU Workspaces will be in strict accordance with Utrecht University Information Security policies and privacy policies, with this Agreement and with all applicable laws and regulations (including without limitation any local laws or regulations in your country, state, city, or other governmental area, regarding online conduct and acceptable content, and including all applicable laws regarding the transmission of technical data exported from the country in which UU Workspaces resides or the country in which you reside) and (ii) your use of UU Workspaces will not infringe or misappropriate the intellectual property rights of any third party."
+  },
+  {
+    "objectID": "docs/terms-of-use.html#indemnification",
+    "href": "docs/terms-of-use.html#indemnification",
+    "title": "Terms of Use",
+    "section": "14. Indemnification",
+    "text": "14. Indemnification\nYou agree to indemnify and hold harmless Utrecht University, its contractors, and its licensors, and their respective directors, officers, employees and agents from and against any and all claims and expenses, including attorneys’ fees, arising out of your use of UU Workspaces, including but not limited to your violation of this Agreement."
+  },
+  {
+    "objectID": "docs/terms-of-use.html#miscellaneous",
+    "href": "docs/terms-of-use.html#miscellaneous",
+    "title": "Terms of Use",
+    "section": "15. Miscellaneous",
+    "text": "15. Miscellaneous\nThis Agreement constitutes the entire agreement between Utrecht University and you concerning the subject matter hereof, and they may only be modified by a written amendment signed by an authorized executive of Utrecht University, or by the posting by Utrecht University of a revised version. Except to the extent applicable law, if any, provided otherwise, this Agreement, any access to or use of the Website will be governed by the laws of the Netherlands.\nThis document was adapted from nestor.science.uu.nl and is licensed as CC-BY-SA 4.0.\nLast update: May 2, 2023"
+  },
+  {
+    "objectID": "docs/manuals/rclone-config.html",
+    "href": "docs/manuals/rclone-config.html",
+    "title": "Configuring Rclone for surfdrive",
+    "section": "",
+    "text": "Rclone has an interactive menu to generate a config file for you. You need to complete this menu once for each storage platform that you want to connect to. You can use Rclone for many different types of storage platforms: check the homepage for a list. SURFdrive and Research drive are based on ownCloud software. Platforms built on standard protocols such as WebDAV (including Yoda, Data Archive or the U: network drive of UU student and employees) are also supported but require slightly different configuration steps.\nTo check whether Rclone is available on your system:\nrclone version\nYou should see a version number displayed in the terminal.\nTo start the interactive menu:\nrclone config\nNow walk through the questions. For SURFdrive you need the following information (Rclone version 1.55.1)\n\nType n for New remote\nFor ‘name’ choose e.g. surfdrive (or SD)\nChoose option 40for WebDAV \nFill in the URL. You can look this up via the web portal of SURFdrive. In the top right corner click your account name. Go to settings. In the left panel, click security. At the very bottom of the page there will be a section WebDAV passwords. There is also an URL, something like: https://surfdrive.surf.nl/files/remote.php/nonshib-webdav\nUse this URL.\nBefore you continue with the Rclone menu, first perform the following step via the web portal of SURFdrive. Fill in an app name (e.g. lisa) on the security settings page (same page as previous step) and click “create new app password”. The page will show a username and a password. You will need these in the following steps of the Rclone menu.\nSelect the type of WebDAV storage system. Type: 2 for ownCloud.\nType in your user name from SURFdrive (this is the username found in the web portal (step 5))\nSelect: y) Yes type in my own password\nType in your password from the web portal and type it in again for confirmation.\nSkip the Bearer token option by pressing enter.\nChoose n to skip the advanced config\nConfirm your settings by typing y.\nChoose q to quit the menu.\n\nTest whether everything is setup correctly by typing the following command in the terminal, if necessary change surfdrive: to any other name chosen in step 2.:\nrclone lsd surfdrive:\nIf everything is setup correctly, you should see a list of files and folders that are present on your SURFdrive.\n\nNext: Using rclone for data transfer"
+  },
+  {
+    "objectID": "docs/manuals/icommands.html",
+    "href": "docs/manuals/icommands.html",
+    "title": "Installing and using iCommands on Surf Research Cloud",
+    "section": "",
+    "text": "The instructions below describe the process of data transfer between Surf Research Cloud and Yoda using iCommands. This manual is developed for workspaces based on a Linux operating system (including the Jupyter Notebook and RStudio workspaces). Transfer is also possible via the Webdav protocol using Rclone. For large files iCommands is faster due to parallel transfer options.\n\nPrerequisites\nYou will need some basic linux skills to be able to use the iCommands successfully. If you don’t have these skills, take some time to practice using sections 1, 2, 3 and 7 of this short online course before proceeding. You can practice in the terminal (see step 1).\n\n\nStep 1: Make sure you are in a terminal\n\nIn Jupyterhub (Jupyter Workspace in Research cloud): To open a new terminal, click the + button in the file browser and select the terminal in the new Launcher tab (find a short video here).\nIn Rstudio (Rstudio workspace in Research cloud): In the bottom left panel, click the ‘terminal’ tab.\n\n\n\nStep 2: Install iRODS iCommands\nSome workspaces have iRODS iCommands preconfigured. This should be visible in step 1 when creating a workspace.\nCopy and paste (or type) the following commands in the terminal, or view the most up to date installation instructions for iRODS iCommands on the yoda website in the section “Installing iCommands on Ubuntu”.\nsudo apt-get update\nsudo apt-get install -y --only-upgrade ca-certificates\nwget -qO - https://packages.irods.org/irods-signing-key.asc | sudo apt-key add -\necho \"deb [arch=amd64] https://packages.irods.org/apt/ xenial main\" | sudo tee /etc/apt/sources.list.d/renci-irods.list\nsudo apt-get update\nsudo apt -y install aptitude irods-runtime=4.2.7 irods-icommands=4.2.7\nsudo aptitude hold irods-runtime irods-icommands\necho \"120\"  | sudo tee /proc/sys/net/ipv4/tcp_keepalive_time\necho \"30\" | sudo tee /proc/sys/net/ipv4/tcp_keepalive_intvl\necho \"net.ipv4.tcp_keepalive_time=120\" | sudo tee -a /etc/sysctl.d/99-sysctl.conf\necho \"net.ipv4.tcp_keepalive_intvl=30\" | sudo tee -a /etc/sysctl.d/99-sysctl.conf\n\n\nStep 3: Create a config file\nYou may need help from your datamanager or contact Yoda support to obtain the information needed for the config file.\nGo to the home directory and create a hidden directory called ‘.irods’\ncd ~\nmkdir .irods\ncd .irods\nIn this directory, create a file named irods_environment.json.\ntouch irods_environment.json\nEdit the file using a text editor such as nano or vim\nnano irods_environment.json\nGo to the yoda website, scroll to Step 2. Configuring iCommands and copy and paste the text belonging to your institution in the file (similar to the file below) and change the email address next to irods_user_nameto your yoda user name (typically your uu email address).\n{   \n\"irods_host\": \"science.data.uu.nl\",   \n\"irods_port\": 1247,    \"irods_home\": \"/nluu6p/home\",   \n\"irods_user_name\": \"exampleuser@uu.nl\",   \n\"irods_zone_name\": \"nluu6p\",   \n\"irods_authentication_scheme\": \"pam\",   \n\"irods_encryption_algorithm\": \"AES-256-CBC\",   \n\"irods_encryption_key_size\": 32,   \n\"irods_encryption_num_hash_rounds\": 16,   \n\"irods_encryption_salt_size\": 8,   \n\"irods_client_server_negotiation\": \"request_server_negotiation\"\n}\n\n\nStep 4: Initialize connection to iRODS\nInitialize the connection to the Yoda system as follows:\niinit\nType your Yoda password when requested.\nType ils to see whether the connection has been established. The output of the ils command will list the current Yoda folder and the folders that are located within the current folder.\niinit and ils are commands which can only be used when icommands is active. Some of these commands are very similar to standard unix commands. When icommands is active you can still operate the HPC system using normal unix commands. A complete list of all ‘icommands’ can be found here.\n\n\nStep 5: Transferring data\nStandard transfer of a single file can be done using iget and iput\nThe irsync command can be used to synchronize entire directories between Yoda and Cartesius. The command is used as follows.\nirsync &lt;source&gt; &lt;destination&gt;\nIn contrary to the iput and iget commands, in irsync it is necessary to put ‘i:’ before the Yoda path. The Yoda path (directly after ‘i:’) to the folder that should be synchronized should be relative to the current Yoda folder (check with ils).\nE.g.\nirsync -rKV i:myfolder /my_researchcloud_folder\n-rKV means the following flags (options) are used:\n\n-r recursive - store the whole folder including subdirectories\n-K Calculate and verify the checksum on the data\n-V Very verbose\n\nTypically you will want to store data on the (persistent) storage volume that is attached to your workspace. Transfer it directly there as follows:\nirsync -rKV i:myfolder ~/data/volume_2/my_destination_folder\nTo synchronize in the opposite direction\nirsync -rKV /my_researchcloud_folder/ i:myfolder\n\nnote the ‘/’ at the end of /my_researchcloud_folder/ that is not used in the command above.\n\n\n\nParallel transfer\nWith icommands it is possible to transfer individual files in parallel using multiple threads, which results in higher transfer speeds. The flag -N can be used to control the number of parallel threads (only recommended in very specific situations). When not specified the server decides a default number of threads. For large files this number can be e.g. 16 threads.\nirsync -rKV -N 0 i:myfolder /my_researchcloud_folder"
+  },
+  {
+    "objectID": "docs/manuals/install-rclone.html",
+    "href": "docs/manuals/install-rclone.html",
+    "title": "",
+    "section": "",
+    "text": "The steps below are used to install Rclone on Research Cloud.\n\nStep 1: Make sure you are in a terminal\n\nIn Jupyterhub (Jupyter Workspace in Research cloud): To open a new terminal, click the + button in the file browser and select the terminal in the new Launcher tab (find a short video here).\nIn Rstudio (Rstudio workspace in Research cloud): In the bottom left panel, click the ‘terminal’ tab.\n\n\n\nStep 2: Download and install rclone\nType the following command in the terminal:\ncurl https://rclone.org/install.sh | sudo bash\n\n\nStep 3: Check if installation was successful\nType the following command. A version number will be displayed when installation was successful.\nrclone version\n\n\nNext: Configure Rclone"
+  },
+  {
+    "objectID": "docs/manuals/ssh-data-transfer-methods.html",
+    "href": "docs/manuals/ssh-data-transfer-methods.html",
+    "title": "Transferring data from your PC to your workspace using SCP and RSYNC",
+    "section": "",
+    "text": "The instructions on this page assume you have already setup SSH for Research cloud. If this is not the case, check the Research Cloud documentation site."
+  },
+  {
+    "objectID": "docs/manuals/ssh-data-transfer-methods.html#scp",
+    "href": "docs/manuals/ssh-data-transfer-methods.html#scp",
+    "title": "Transferring data from your PC to your workspace using SCP and RSYNC",
+    "section": "scp",
+    "text": "scp\nWhen you work on a Windows machine and you use MobaXterm for SSH connection, you can use the file browser in MobaXterm to intuitively transfer data.\nIn all other cases: Open a terminal (or shell session) that you use for login in to your workspace via the ssh command.\nscp sourcefile &lt;username&gt;@&lt;ip-address&gt;:destinationdir\nYou can find both the username and the ip-address in the research cloud portal. Find your username under the ‘Profile’ tab.\nFind the IP address of your workspace in the main Dashboard by clicking the drop down arrow of the running Workspace.\nscp testfile.txt &lt;username&gt;@&lt;ip-address&gt;:data/volume_2/input_data\nIf you first need to create a destination folder where you want to transfer the data to:\nssh &lt;username&gt;@&lt;ip-address&gt;\nmkdir ~/data/volume_2/input_data\nlogout\nscp testfile.txt &lt;username&gt;@&lt;ip-address&gt;:data/volume_2/input_data\nTo transfer a directory add the -r option:\nscp -r sourcedir &lt;username&gt;@&lt;ip-address&gt;:data/volume_2/input_data"
+  },
+  {
+    "objectID": "docs/manuals/ssh-data-transfer-methods.html#rsync",
+    "href": "docs/manuals/ssh-data-transfer-methods.html#rsync",
+    "title": "Transferring data from your PC to your workspace using SCP and RSYNC",
+    "section": "rsync",
+    "text": "rsync\nRsync is a tool for synchronizing two folders. This method can also be used to transfer the contents of a folder to a remote folder. You typically run this tool on your own PC in the terminal (so e.g.before login in using the ssh command, or in a separate terminal (or shell session)).\nType rsync --help on to see if it is installed on your system. To install:\n\nInstall\nOn Debian based linux (e.g. Ubuntu):\nsudo apt-get install rsync\nOn mac:\nbrew install rsync\n\n\nUsage\nrsync -azP ./my_local_folder &lt;username&gt;@&lt;ip-address&gt;:~/data/volume_2/input_data\nWhere -azP are options. Type rsync --help to see a list of the options."
+  },
+  {
+    "objectID": "docs/manuals/rclone-transferringdata.html",
+    "href": "docs/manuals/rclone-transferringdata.html",
+    "title": "Using Rclone",
+    "section": "",
+    "text": "For all Rclone commands see: https://rclone.org/commands/ Below are the most useful commands: - lsd (listing directories) - ls (listing files) - copy (copying individual files) - sync (copying entire folders)\n\nrclone lsd\nThe lsd commands is used to list all directories in the current directory. e.g. to list all directories in your surfdrive type:\nrclone lsd surfdrive:\ne.g. to list all directories in a specific subfolder of a folder on surfdrive type:\nrclone lsd surfdrive:myfolder/mysubfolder\n\n\nrclone ls\nThe ls commands is used to list all files in the current directory. e.g. to list all files in a specific folder in your surfdrive type:\nrclone ls surfdrive:myfolder\n\n\nrclone copy\nTo copy a file from SURFdrive to a certain folder:\nrclone copy surfdrive:file.txt ./my_destination_folder\nIn most cases, you would want to transfer the data to the (persistent) storage volume on Research cloud. If you don’t have a destination folder yet, create it as follows:\nmkdir ~/data/volume_2/destination_folder_with_any_name\nrclone copy surfdrive:file.txt ~/data/volume_2/destination_folder_with_any_name\n\n\nrclone sync\nTo synchronize an entire folder from surfdrive use rclone sync:\n\nWarning! Synchronization with Rclone makes the destination folder equal to the source folder and deletes files and folders in the destination folder that are not present in the source folder. Therefore it is wise to use the –dry-run flag to see what will be copied and deleted before actually running the command. rclone sync &lt;source&gt; &lt;destination&gt; --dry-run\n\nrclone sync surfdrive:my_source_folder ~/data/volume_2/destination_folder_with_any_name --dry-run\nrclone sync surfdrive:my_source_folder ~/data/volume_2/destination_folder_with_any_name -cPv\n-cPv means the following flags (options) are used:\n-c skip files that are already present (compared using checksums)\n-P report progress of transfer\n-v verbose; increase the amount of information in the logs\n\n\nTransfer in opposite direction\nCopying in the opposite direction is easy, use the same commands as described above and start with the research cloud folder and end with the surfdrive folder:\nrclone copy ~/data/volume_2/destination_folder_with_any_name/file.txt surfdrive:my_destination_folder \nrclone sync ~/data/volume_2/destination_folder_with_any_name surfdrive:my_destination_folder  -cPv\nFurther reading: - For all Rclone commands see: https://rclone.org/commands/"
+  },
+  {
+    "objectID": "docs/manuals/rclone-researchcloud.html",
+    "href": "docs/manuals/rclone-researchcloud.html",
+    "title": "Rclone for data transfer between cloud storage and Surf Research Cloud",
+    "section": "",
+    "text": "Rclone is a convenient tool for fast data transfer between computers (PC, HPC, cloud) and cloud based storage platforms such as Surfdrive, Researchdrive, onedrive, dropbox.\nIt is a command line tool, so the user would need some experience with using the command line in order to user Rclone.\nThe following steps show how you can use rclone on Research cloud for data transfer to e.g. a Jupyterhub or Rstudio workspace application.\n\nStep 1: Install rclone\n\n\nStep 2: Configure rclone\n\n\nStep 3: Data transfer using rclone"
+  },
+  {
+    "objectID": "docs/manuals.html",
+    "href": "docs/manuals.html",
+    "title": "User Manuals",
+    "section": "",
+    "text": "On this page we share manuals for a variety of use cases and tasks.\n\nData Transfer from your PC using SCP and RSYNC\nData Transer to and from Yoda using iCommands\nData Transfer between Research cloud and Surfdrive"
+  },
+  {
+    "objectID": "docs/einfra.html",
+    "href": "docs/einfra.html",
+    "title": "eINFRA application example",
+    "section": "",
+    "text": "The eINFRA call is a non-competitive grant that can be used to request 50.000 credits and/or 10.000 GPU hours per calendar year per project.\nMore info about requirements and the application portal can be found here\nAn example eINFRA application for Snellius can be found here. It illustrates the length and the level of detail of the specification of the project requirements."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "VRE Documentation for UU researchers",
+    "section": "",
+    "text": "Welcome\nThis page provides user documentation for Surf Research Cloud for researchers at Utrecht University. Get started using the links below!\n\nWhat is research cloud?\nAccounts, funding and collaboration\nGetting started with Research Cloud\nUsing a workspace\nUser manuals\nResponsible use\nContact"
   }
 ]
