@@ -22,8 +22,6 @@ See the [Getting started](../getting-started.qmd#create-a-workspace) page for mo
 
 **Choosing the number of CPU cores**: A workspace with more CPU cores and RAM memory will cost more credits. If you want to use a large workspace for a long period of time (many days or weeks), first try to test on small machines (e.g. a 2 core and a 4 core machine) whether a bigger machine actually does help you to get your results faster.
 
-**boot_volume_size**: In the last step you will be required to add a value for `boot_volume_size`, type `40` and continue.
-
 ## Access options
 This workspace can be accessed using SSH (secure shell protocol). The research cloud documentation provides instructions on [how to set up SSH for research cloud](https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace#Logintoyourworkspace-AccessaworkspacewithSSH).
 
@@ -54,13 +52,17 @@ When your data is stored on Yoda, data transfer can be done using iRODS icommand
 
 ## Usage
 
-ASReview and all of its extensions are preinstalled in this workspace. ASReview can be used using the 'alias' `asr` (the normal command `asreview` will not do anything, always use `asr` instead). 
+ASReview and all of its extensions are preinstalled in a 'conda' environment. To be able to use asreview, the user should run the following commands:
 
-Type `asr --help` to test the installation.
+`/etc/miniconda/bin/conda init`
 
-Type `asr simulate --help` to find the 
+Now `logout` and re-login to apply the changes.
 
-Type `asr simulate <ARGUMENTS>` to run a simulation study.
+`conda activate asreview`
+
+Now to test if ASReview is installed:
+
+`asreview -h`
 
 ## Tips
 
