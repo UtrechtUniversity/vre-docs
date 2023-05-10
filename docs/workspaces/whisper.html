@@ -190,11 +190,19 @@ ul.task-list li input[type="checkbox"] {
 <p>You can use the following code examples in a Jupyter notebook to transcribe an audio file:</p>
 <pre><code>import whisper</code></pre>
 <pre><code>model = whisper.load_model("medium")
+audio = "audio.mp3"
 
-result = model.transcribe("audio.mp3")
+result = model.transcribe(audio, verbose=True)
 print(result["text"])</code></pre>
-<pre><code>with open("audio_sample.txt", "w+") as f:
-    f.write(result["text"])</code></pre>
+<p>To create output files in all formats (.txt, .srt, .vtt, .tsv, .json):</p>
+<pre><code>output_directory = "./"
+options = {"max_line_width":None,
+           "max_line_count":None,
+           "highlight_words":None}
+
+writer = whisper.utils.get_writer("all", output_directory)
+writer(result, audio, options)</code></pre>
+<p>If you need one format only, use e.g.&nbsp;<code>"txt"</code> instead of <code>"all"</code>.</p>
 <p>The workspace also comes with an installation of <a href="https://github.com/m-bain/whisperX">WhisperX</a> which can be used for more precise timestamps and word level timestamps.</p>
 <p>Use e.g.&nbsp;the following code example:</p>
 <pre><code>import whisperx
