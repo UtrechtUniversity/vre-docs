@@ -41,15 +41,23 @@ import whisper
 
 ```
 model = whisper.load_model("medium")
+audio = "audio.mp3"
 
-result = model.transcribe("audio.mp3")
+result = model.transcribe(audio, verbose=True)
 print(result["text"])
 ```
-```
-with open("audio_sample.txt", "w+") as f:
-    f.write(result["text"])
-```
 
+To create output files in all formats (.txt, .srt, .vtt, .tsv, .json):
+```
+output_directory = "./"
+options = {"max_line_width":None,
+           "max_line_count":None,
+           "highlight_words":None}
+
+writer = whisper.utils.get_writer("all", output_directory)
+writer(result, audio, options)
+```
+If you need one format only, use e.g. `"txt"` instead of `"all"`.
 
 The workspace also comes with an installation of [WhisperX](https://github.com/m-bain/whisperX) which can be used for more precise timestamps and word level timestamps.
 
