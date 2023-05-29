@@ -39,7 +39,7 @@ When the dataset is stored on the computer you are working on now, you can use t
 [Instructions](../manuals/ssh-data-transfer-methods.qmd)
 
 ### Data is stored on Surfdrive (or Researchdrive, Onedrive, Dropbox, etc.)
-When data is stored on Surfdrive (or Researchdrive, Onedrive, Dropbox, etc.), data transfer can be done unsing Rclone commands.
+When data is stored on Surfdrive (or Researchdrive, Onedrive, Dropbox, etc.), data transfer can be done using Rclone.
 
 [Instructions](../manuals/rclone-researchcloud.qmd)
 
