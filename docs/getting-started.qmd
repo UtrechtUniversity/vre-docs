@@ -114,7 +114,7 @@ Depending on where your data is stored and the workspace that you are using, the
 
 -   Upload from your laptop (Jupyter Notebook and Rstudio Workspaces)
 -   [scp/ssh](../manuals/ssh-data-transfer-methods.qmd) (most workspaces)
--   Download (Ubuntu Desktop workspaces)
--   [irods icommands] (for data stored on Yoda, works on Ubuntu based workspaces (including Jupyter and Rstudio)
--   rclone
+-   Download using the internet browser (on Ubuntu Desktop and Windows workspaces, for data stored on e.g. surfdrive, onedrive, etc.)
+-   [irods icommands](../manuals/icommands.qmd) (for data stored on Yoda, works on Ubuntu based workspaces (including Jupyter and Rstudio)
+-   [rclone](../manuals/rclone-researchcloud.qmd) (for data stored on a cloud storage platform (e.g. surfdrive, onedrive, dropbox)
 
