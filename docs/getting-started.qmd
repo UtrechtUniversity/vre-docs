@@ -64,7 +64,7 @@ There are several ways to login to your workspace.
 
 #### When?
 This is the easiest method and it can be used for most workspaces that have a Graphical user interface (Rstudio, Jupyter Notebook, Ubuntu Desktop, Matlab). It can not be used for Windows server. 
-You can check if this method works for your workspace you can click the URL when you click on the workspace in the research cloud portal. If the URL has an `https://` address it can be accessed via the browser.
+You can check if this method works for your workspace: look up your created workspace under workspaces in the dashboard of the research cloud portal. Click on the workspace (anywhere but don't click the access button) and check the URL in the overview that opens. If the URL has an `https://` address it can be accessed via the browser.
 
 #### How?
 To be able to login via the Browser you need to [setup a Time Based Password for your Research Cloud account](https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace#Logintoyourworkspace-WorkspaceAccesswithTOTP).
@@ -100,12 +100,15 @@ On MacOS and Linux machines you can use the standard ‘Terminal’.
 ## Getting data inside your workspace
 
 ### Mounting online storage
-
+If you have a Research Drive account, you can mount it in your workspace. This method is most easy, and works good for working with small datasets (e.g. <1 GB).
 
 ### Transferring data
+In many cases it is more reliable to get a copy of your data on the Storage unit that is attached to your workspace.  
+Depending on where your data is stored and the workspace that you are using, the following options are available:
+
 -   Upload from your laptop (Jupyter Notebook and Rstudio Workspaces)
--   scp/ssh (most workspaces)
+-   [scp/ssh](../manuals/ssh-data-transfer-methods.qmd) (most workspaces)
 -   Download (Ubuntu Desktop workspaces)
--   irods  ()
+-   [irods icommands] (for data stored on Yoda, works on Ubuntu based workspaces (including Jupyter and Rstudio)
 -   rclone
 
