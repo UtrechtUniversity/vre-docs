@@ -11,7 +11,7 @@
     "href": "docs/einfra.html",
     "title": "eINFRA application example",
     "section": "",
-    "text": "The eINFRA call is a non-competitive grant that can be used to request 50.000 credits and/or 10.000 GPU hours per calendar year per project.\nMore info about requirements and the application portal can be found here\nAn example eINFRA application for Snellius can be found here. It illustrates the length and the level of detail of the specification of the project requirements."
+    "text": "The eINFRA call is a non-competitive grant that can be used to request 50.000 credits and/or 10.000 GPU hours per calendar year per project for Research cloud.\nMore info about requirements and the application portal can be found here\nAn example eINFRA application for Snellius can be found here. It illustrates the length and the level of detail of the specification of the project requirements.\nIf you have an existing collaboration and wallet for Research Cloud where the eINFRA credits should be added, mention the CO name and the name of the wallet in your application (check the ‘Wallet’ subpage on the research cloud portal for the name of the wallet)."
   },
   {
     "objectID": "docs/research-cloud-intro.html",
