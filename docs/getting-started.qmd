@@ -13,6 +13,12 @@ Contents:
 4. [Logging in to your workspace](#getting-access-to-your-workspace)
 5. [Getting data inside your workspace](#getting-data-inside-your-workspace)
 
+## Research Cloud portal
+
+When you have completed an [onboarding procedure](https://utrechtuniversity.github.io/vre-docs/docs/accounts.html), you can login using the following link: 
+
+[**Research Cloud portal**](https://portal.live.surfresearchcloud.nl/)
+
 ## Create storage volume
 
 ### Why a storage volume?
