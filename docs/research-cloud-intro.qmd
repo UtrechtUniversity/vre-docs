@@ -3,6 +3,7 @@ title: "What is Research Cloud"
 ---
 
 ## Introduction
+
 Surf ResearchCloud (SRC) is a service that allows you to use the vast computational power offered 
 by datacenters with almost the same ease-of-use as using your own laptop. 
 The complex infrastructure behind the scenes is presented to you as a *workspace*. Think
@@ -32,19 +33,21 @@ or if you seek to avoid to invest in expensive computer hardware, software or re
 Once you are done with using your workspace, just dispose of it in the SRC web portal.
 
 **Example workspaces**  
-- Rstudio  
-- Jupyter  
-- Matlab  
-- Python with Machine learning libraries   
-- Customized workspaces e.g. ASReview   
-- Windows Server (install your own software)  
-- Ubuntu (install your own software)  
+
+* Rstudio  
+* Jupyter  
+* Matlab  
+* Python with Machine learning libraries   
+* Customized workspaces e.g. ASReview   
+* Windows Server (install your own software)  
+* Ubuntu (install your own software)  
 
 **Resources available for a single workspace**  
-- up to 80 CPU cores  
-- up to 480 GB RAM  
-- up to 4 GPU drives  
-- up to 2 TB storage  
+
+* up to 80 CPU cores  
+* up to 480 GB RAM  
+* up to 4 GPU drives (NVIDIA A10)  
+* up to 2 TB storage  
 
 ## Designed with consortia and other Collaborative use in mind
 Surf Research Cloud uses the concept of a 'collaboration' to facilitate working together in project teams.
@@ -66,7 +69,7 @@ is to [contact UU Research IT](https://www.uu.nl/en/research/research-data-manag
 A short intake meeting will get you started. Additionally, more computing time can be requested via Surf or NWO.
 
 ## Getting started
-Contact [UU Research IT](https://www.uu.nl/en/research/research-data-management/tools-services/software-and-computing/virtual-research-environments) for an intake meeting to get started. After a 30 minute intake you will have everything ready to start your first workspace.
+Contact [UU Research IT](https://www.uu.nl/en/research/research-data-management/tools-services/software-and-computing/virtual-research-environments) for an intake meeting to get started. After a 30 minute intake you will have everything ready to start your first workspace. More info about the onboarding procedure can be found [here](onboarding.qmd)
 
-Practical instructions to get started on SRC can be found [here](getting-started.qmd).
+Practical instructions to get started on SRC can be found [here](first-steps.qmd).
 

@@ -9,10 +9,10 @@ website:
         text: Home
       - href: docs/research-cloud-intro.qmd
         text: Introduction
-      - href: docs/accounts.qmd
-        text: Accounts
-      - href: docs/getting-started.qmd
-        text: Getting Started
+      - href: docs/onboarding.qmd
+        text: Get started
+      - href: docs/first-steps.qmd
+        text: First steps
       - href: docs/workspace-catalogue.qmd
         text: Workspaces
       - href: docs/manuals.qmd

@@ -1,9 +1,10 @@
 ---
-title: "Accounts, Funding and Collaboration"
+title: "Getting started"
 ---
 
-
 ## How to get on board
+
+This page elaborates on the procedure described on Virtual Research Environments (VREs) on the [UU website](https://www.uu.nl/en/research/research-data-management/tools-services/software-and-computing/virtual-research-environments).
 
 There are several situations that may apply to you:  
 
@@ -28,16 +29,24 @@ flowchart TD
   C --> G[E-INFRA request]
   C --> H[Project budget]
   B -- account --> D[2. Create collaboration in SRAM]
-  D ----> E[Log in on Research Cloud and request wallet]
-  F --> E[Log in on Research Cloud and request wallet]
-  G --> E[Log in on Research Cloud and request wallet]
-  H --> E[Log in on Research Cloud and request wallet]
+  D ----> E[Log in on Research Cloud]
+  F --> E[Log in on Research Cloud]
+  G --> E[Log in on Research Cloud]
+  H --> E[Log in on Research Cloud]
   E --> J[Create your first workspace!]
 
 ```
 
 ### 1. Plan an intake with the Research Engineering team
-During a 30 minute online meeting we will discuss the technical requirements of your project. The Research engineer who is doing the intake has experience with the systems and can quickly assess your needs when looking together at your software. The engineer will advice you about how to proceed. When Research cloud meets the technical requirements of your project, we will arrange administration that is necessary to get started during the intake.
+During a 30 minute online meeting we will discuss the requirements for you research project and discuss the following topics:
+
+* The appropriate solution. RDM Support will help you determine which solution will meet the requirements of your research. 
+* The required configuration. RDM Support will discuss the software and configuration that your research needs and how we can help you make your own software or scripts available.
+* Other requirements. RDM Support can consult on related needs, such as research data management, to facilitate a complete and integral solution for your research.
+* Funding arrangements. The VRE costs are covered on a pay-per-use basis. If you do not have a budget available, RDM Support can help you apply for “SURFsara credits” to get you started for a limited time. We can also help you with applying for more credits via SURF and NWO.
+
+The Research engineer who is doing the intake has experience with the systems and can quickly assess your needs when looking together at your software. The engineer will advice you about how to proceed. When Research cloud meets the technical requirements of your project, we will arrange administration that is necessary to get started directly during the intake.
+
 [Schedule an intake meeting](https://outlook.office365.com/owa/calendar/HPCSupport1@solisservices.onmicrosoft.com/bookings/).
 
 ### 2. Request a collaboration in SRAM
@@ -64,7 +73,7 @@ There are several ways to request funding for credits:
 This is typically granted during an intake meeting (see step 1 above).
 
 **E-INFRA request**
-Via an E-INFRA request 50.000 CPU hours or 10.000 GPU can be requested for your project for 1 calendar year. An E-INFRA request can be done one time per calendar year. An application can be done via the [SURF servicedesk](https://servicedesk.surfsara.nl/) and the procedure is relatively simple and fast. [More information](https://www.surf.nl/en/research-it/apply-for-access-to-compute-services).
+Via an E-INFRA request 50.000 CPU hours and/or 10.000 GPU can be requested for your project for 1 calendar year. An E-INFRA request can be done one time per calendar year. An application can be done via the [SURF servicedesk](https://servicedesk.surfsara.nl/) and the procedure is relatively simple and fast. [More information](https://www.surf.nl/en/research-it/apply-for-access-to-compute-services).
 
 [Example application](einfra.qmd)
 
@@ -109,3 +118,5 @@ In SRAM there are [groups](https://wiki.surfnet.nl/display/SRAM/Manage+groups+of
 ### 3. Share your wallet
 In SRAM there are [groups](https://wiki.surfnet.nl/display/SRAM/Manage+groups+of+collaboration+members) that can be used to grant members of your collaboration to the right to [create new workspaces using the wallet of your project](https://servicedesk.surf.nl/wiki/display/WIKI/Access+to+CO-wallet)
 
+## Next
+When your collaboration and wallet is ready, see this page for [first steps](first-steps.qmd).

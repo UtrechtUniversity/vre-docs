@@ -1,8 +1,7 @@
 ---
-title: "Getting Started"
+title: "First steps"
 ---
 
-[UNDER DEVELOPMENT]
 This page describes all general steps that a user needs to perform to be able to start working with SURF Research cloud:
 
 Contents:
