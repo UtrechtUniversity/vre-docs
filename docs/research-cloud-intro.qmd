@@ -3,6 +3,7 @@ title: "What is Research Cloud"
 ---
 
 ## Introduction
+
 Surf ResearchCloud (SRC) is a service that allows you to use the vast computational power offered 
 by datacenters with almost the same ease-of-use as using your own laptop. 
 The complex infrastructure behind the scenes is presented to you as a *workspace*. Think
