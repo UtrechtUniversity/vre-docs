@@ -18,4 +18,5 @@ This page provides user documentation for Surf Research Cloud for researchers at
 - [Using a workspace](docs/workspace-catalogue.qmd)
 - [User manuals](docs/manuals.qmd)
 - [Terms of use](docs/terms-of-use.qmd)
+- [Glossary](docs/glossary.qmd)
 - [Contact](docs/contact.qmd)
