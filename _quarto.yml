@@ -19,6 +19,8 @@ website:
         text: Manuals
       - href: docs/terms-of-use.qmd
         text: Terms of use
+      - href: docs/glossary.qmd
+        text: Glossary
       - href: docs/contact.qmd
         text: Contact
   repo-url: https://github.com/UtrechtUniversity/vre-docs
