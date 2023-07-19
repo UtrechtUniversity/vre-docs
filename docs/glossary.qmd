@@ -1,0 +1,31 @@
+---
+title: "Glossary"
+---
+
+### Catalog Item
+A catalog item is a workspace configuration that you can select from the catalog when you create a new workspace. A workspace can be configured with a certain Operating system and other applications or software that will installed on the workspace.
+
+### Collaboration
+A Collaboration (also known as Collaborative Organisation, or CO) is an ad-hoc group of people who are allowed to work together by sharing resources. As a scientist you can easily make a CO. That way, you can invite other researchers to join your efforts in Research Cloud, and you can then self-organise yourselves to distribute tasks, including administering the CO. [More information](https://servicedesk.surf.nl/wiki/pages/viewpage.action?pageId=17825822).
+
+### eINFRA request
+A relatively simple request procedure for obtaining a maximum of 50.000 CPU hours and/or 10.000 GPU hours for your project.
+[More info](einfra.qmd)
+
+### SRAM
+SRAM (SURF Research Access Management) is a service to manage access to research resources, intended for Dutch led research collaborations. [More information](https://wiki.surfnet.nl/pages/viewpage.action?pageId=31105834).
+
+### Storage volumes
+An 'External' Storage volume can be created from the main dashboard in the [research cloud portal](portal.live.surfresearchcloud.nl/). This storage is **persistent** which means that any data that you put here will still be there when a workspace is deleted. You need to create a storage volume first and attach it when you create a new workspace. The storage volume can than typically be found in the workspace under the following directory path: `~/data/volume_2`.
+[More info](https://servicedesk.surf.nl/wiki/display/WIKI/External+storage+volumes)
+
+### Wallet
+A wallet holds the budget for your use of the Research Cloud. See the [getting started](onboarding.qmd) page for the options to obtain a wallet for Research cloud. When you create a workspace you need to select a wallet that can be charged for the use of the resources.
+
+### Workspace
+A workspace is a running Virtual Machine (or aka server) that you can use as a Virtual Research Environment. You can create a workspace in the Research Cloud portal. The workspace will be created somewhere in 'the cloud', and when it is up and running you can [login](first-steps.qmd#getting-access-to-your-workspace) to it, [transfer data](first-steps.qmd#transferring-data) to it and start working. The workspace typically will have some software installed on it (e.g. RStudio or Jupyter Notebook).
+
+
+
+
+
