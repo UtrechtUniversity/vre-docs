@@ -10,7 +10,7 @@ The Virtual Research Environment (VRE) service of Utrecht University is based on
 
 In addition to the UU terms of use, the following policies and codes of conduct at SURF are applicable:
 
-- [Acceptable Use Policy - SURF Research Access Management - SRAM](https://wiki.surfnet.nl/display/SRAM/Acceptable+Use+Policy)
+- [Acceptable Use Policy - SURF Research Access Management - SRAM](https://servicedesk.surf.nl/wiki/display/WIKI/Privacy+Policy)
 - [SURF Research Cloud Acceptable Use Policy](https://servicedesk.surf.nl/wiki/display/WIKI/SRC+Acceptable+Use+Policy)
 
 By accepting this invitation, users agree to adhere to the terms and conditions in the documents listed above.
