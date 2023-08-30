@@ -9,7 +9,8 @@ Surf Research cloud is a flexible system that gives the user a lot of autonomy. 
 On some workspaces the user gets admin privileges. This gives you the possibility to install additional software applications and libraries. Be aware that this can cause vulnerabilities and/or data leaks. To minimize this risk, make sure you are aware of the origin of the software that you would like to install and check other quality measures (known issues, number of users/downloads, citations, GitHub Stars, etc.). You are responsible for the software you install on the workspaces.
 
 ## Pausing or Deleting workspaces
-It is always recommended to [pause](https://servicedesk.surf.nl/wiki/display/WIKI/Pause+a+workspace) or delete a workspace when you are not working on it and when it is not busy with a task. This is to minimize the use of resources (credits, energy, capacity). Although pausing a workspace is often an attractive option, it is only recommended for a period of a couple of days maximum. By deleting workspaces and creating a new workspace, you make sure you always have a machine with the most recent (security) updates. This can be done efficiently by: 
+It is always recommended to [pause](https://servicedesk.surf.nl/wiki/display/WIKI/Pause+a+workspace) or delete a workspace when you are not working on it and when it is not busy with a task. This is to minimize the use of resources (credits, energy, capacity). Although pausing a workspace is often an attractive option, it is only recommended for a period of a couple of days maximum. By deleting workspaces and creating a new workspace, you make sure you always have a machine with the most recent (security) updates. This can be done efficiently by:
+
 -   documenting or automating installation steps
 -   regularly saving data and scripts to a Persistent storage volume, e.g. Yoda or, Research Drive
 -   managing code on GitHub
@@ -40,7 +41,6 @@ Surf Research Cloud is suitable for the data classification below. However, cust
 If you believe there has been (suspected) misuse or unauthorized use of login details and / or VRE, please report this to CERT or send an email to its.ris@uu.nl and "pause" your VRE using the SURF Research Cloud portal.
 
 ## Relevant policies
-- relevant terms of use
-[UU terms of use](terms-of-use.qmd)
+- [UU terms of use](terms-of-use.qmd)
 
 - privacy policies
