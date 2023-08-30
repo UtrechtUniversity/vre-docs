@@ -14,7 +14,7 @@ Contents:
 
 ## Research Cloud portal
 
-When you have completed an [onboarding procedure](https://utrechtuniversity.github.io/vre-docs/docs/accounts.html), you can login using the following link: 
+When you have completed an [onboarding procedure](onboarding.qmd), you can login using the following link: 
 
 [**Research Cloud portal**](https://portal.live.surfresearchcloud.nl/)
 
