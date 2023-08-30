@@ -56,7 +56,7 @@ This is typically done during an intake meeting (step 1). It is also possible to
 ::: {.callout-note collapse="true"}
 ## What is SRAM?
 
-SRAM (SURF Research Access Management) is a service to manage access to research resources, intended for Dutch led research collaborations. [More information](https://wiki.surfnet.nl/pages/viewpage.action?pageId=31105834).
+SRAM (SURF Research Access Management) is a service to manage access to research resources, intended for Dutch led research collaborations. [More information](https://servicedesk.surf.nl/wiki/display/WIKI/SURF+Research+Access+Management).
 :::
 
 ::: {.callout-note collapse="true"}
@@ -116,7 +116,7 @@ It is possible to invite anyone who has an email address to join your project. S
 In SRAM there are [groups](https://servicedesk.surf.nl/wiki/display/WIKI/Manage+groups+of+collaboration+members) that can be used to grant members of your collaboration to the right to [pause, resume and delete workspaces](https://servicedesk.surf.nl/wiki/display/WIKI/Sharing+control%3A+workspace+admin)
 
 ### 3. Share your wallet
-In SRAM there are [groups](https://wiki.surfnet.nl/display/SRAM/Manage+groups+of+collaboration+members) that can be used to grant members of your collaboration to the right to [create new workspaces using the wallet of your project](https://servicedesk.surf.nl/wiki/display/WIKI/Access+to+project+wallet)
+In SRAM there are [groups](https://servicedesk.surf.nl/wiki/display/WIKI/Manage+groups+of+collaboration+members) that can be used to grant members of your collaboration to the right to [create new workspaces using the wallet of your project](https://servicedesk.surf.nl/wiki/display/WIKI/Access+to+project+wallet)
 
 ## Next
 When your collaboration and wallet is ready, see this page for [first steps](first-steps.qmd).
