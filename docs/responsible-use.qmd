@@ -33,14 +33,14 @@ If you want to process data that is classified as sensitive or higher according 
 ### Data classification Service VRE 
 Surf Research Cloud is suitable for the data classification below. However, custom workspaces in proof of concept state or manual installations may compromise the suitability. 
 
-| Availability | Integrity | Confidentiality | 
-|--------------|-----------|-----------------|
-|  Sensitive   | Sensitive |    Sensitive    |
+|Availability|Integrity|Confidentiality| 
+|------------|---------|---------------|
+| Sensitive  |Sensitive|   Sensitive   |
 
 ## Security incidents
-If you believe there has been (suspected) misuse or unauthorized use of login details and / or VRE, please report this to CERT or send an email to its.ris@uu.nl and "pause" your VRE using the SURF Research Cloud portal.
+If you believe there has been (suspected) misuse or unauthorized use of login details and / or VRE, please report this to [CERT](https://www.uu.nl/en/organisation/information-and-technology-services-its/computer-emergency-response-team-cert-uu) or send an email to its.ris@uu.nl and "pause" your VRE using the SURF Research Cloud portal.
 
 ## Relevant policies
-- [UU terms of use](terms-of-use.qmd)
+- [Terms of use](terms-of-use.qmd)
 
-- privacy policies
+- Privacy policies
