@@ -67,7 +67,7 @@
     "href": "docs/responsible-use.html#sensitive-data",
     "title": "VRE practical tips for responsible use",
     "section": "Sensitive data",
-    "text": "Sensitive data\nIf you want to process data that is classified as sensitive or higher according to UU standards, consult a local data manager and VRE supportITS VRE research engineering. Potentially a DPA should be arranged with SURF and not all workspace types are suitable for this.\n\nData classification Service VRE\nSurf Research Cloud is suitable for the data classification below. However, custom workspaces in proof of concept state or manual installations may compromise the suitability. | Availability | Integrity | Confidentiality | |——–|——–|——–| | Sensitive | Sensitive | Sensitive |"
+    "text": "Sensitive data\nIf you want to process data that is classified as sensitive or higher according to UU standards, consult a local data manager and VRE supportITS VRE research engineering. Potentially a DPA should be arranged with SURF and not all workspace types are suitable for this.\n\nData classification Service VRE\nSurf Research Cloud is suitable for the data classification below. However, custom workspaces in proof of concept state or manual installations may compromise the suitability.\n\n\n\nAvailability\nIntegrity\nConfidentiality\n\n\n\n\nSensitive\nSensitive\nSensitive"
   },
   {
     "objectID": "docs/responsible-use.html#security-incidents",
