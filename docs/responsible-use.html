@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Responsible Use</title>
+<title>VRE practical tips for responsible use</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -128,13 +128,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#security-good-practices" id="toc-security-good-practices" class="nav-link active" data-scroll-target="#security-good-practices">Security good practices</a>
+  <li><a href="#use-of-the-vre" id="toc-use-of-the-vre" class="nav-link active" data-scroll-target="#use-of-the-vre">Use of the VRE</a></li>
+  <li><a href="#installation-of-software" id="toc-installation-of-software" class="nav-link" data-scroll-target="#installation-of-software">Installation of software</a></li>
+  <li><a href="#pausing-or-deleting-workspaces" id="toc-pausing-or-deleting-workspaces" class="nav-link" data-scroll-target="#pausing-or-deleting-workspaces">Pausing or Deleting workspaces</a></li>
+  <li><a href="#wallets-and-credits" id="toc-wallets-and-credits" class="nav-link" data-scroll-target="#wallets-and-credits">Wallets and credits</a></li>
+  <li><a href="#vre-lifetime-and-security-updates" id="toc-vre-lifetime-and-security-updates" class="nav-link" data-scroll-target="#vre-lifetime-and-security-updates">VRE lifetime and security updates</a></li>
+  <li><a href="#data-storage-and-backup" id="toc-data-storage-and-backup" class="nav-link" data-scroll-target="#data-storage-and-backup">Data storage and – backup</a></li>
+  <li><a href="#sensitive-data" id="toc-sensitive-data" class="nav-link" data-scroll-target="#sensitive-data">Sensitive data</a>
   <ul class="collapse">
-  <li><a href="#sudo-rights" id="toc-sudo-rights" class="nav-link" data-scroll-target="#sudo-rights">sudo rights</a></li>
-  <li><a href="#internet-access" id="toc-internet-access" class="nav-link" data-scroll-target="#internet-access">Internet access</a></li>
-  <li><a href="#temporary-workspaces" id="toc-temporary-workspaces" class="nav-link" data-scroll-target="#temporary-workspaces">Temporary workspaces</a></li>
+  <li><a href="#data-classification-service-vre" id="toc-data-classification-service-vre" class="nav-link" data-scroll-target="#data-classification-service-vre">Data classification Service VRE</a></li>
   </ul></li>
-  <li><a href="#accounting-tips" id="toc-accounting-tips" class="nav-link" data-scroll-target="#accounting-tips">Accounting tips</a></li>
+  <li><a href="#security-incidents" id="toc-security-incidents" class="nav-link" data-scroll-target="#security-incidents">Security incidents</a></li>
   <li><a href="#relevant-policies" id="toc-relevant-policies" class="nav-link" data-scroll-target="#relevant-policies">Relevant policies</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/UtrechtUniversity/vre-docs/edit/main/docs/responsible-use.qmd" class="toc-action">Edit this page</a></p></div></div></nav>
@@ -144,7 +148,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Responsible Use</h1>
+<h1 class="title">VRE practical tips for responsible use</h1>
 </div>
 
 
@@ -159,30 +163,42 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="security-good-practices" class="level2">
-<h2 class="anchored" data-anchor-id="security-good-practices">Security good practices</h2>
-<p>While the Surf Research cloud infrastructure is considered secure (ISO certified), there are some</p>
-<section id="sudo-rights" class="level3">
-<h3 class="anchored" data-anchor-id="sudo-rights">sudo rights</h3>
+<section id="use-of-the-vre" class="level2">
+<h2 class="anchored" data-anchor-id="use-of-the-vre">Use of the VRE</h2>
+<p>Surf Research cloud is a flexible system that gives the user a lot of autonomy. This means that a lot of responsibility lies with the user, which means the user has to be aware of possible consequences of his actions. The most probable risks are causing security vulnerabilities or data leaks, losing data, and losing credits (money) by inefficient use. This page handles these topics and provides practical tips to minimize these risks and improve the user experience.</p>
 </section>
-<section id="internet-access" class="level3">
-<h3 class="anchored" data-anchor-id="internet-access">Internet access</h3>
-<p>Most workspaces have internet access.</p>
+<section id="installation-of-software" class="level2">
+<h2 class="anchored" data-anchor-id="installation-of-software">Installation of software</h2>
+<p>On some workspaces the user gets admin privileges. This gives you the possibility to install additional software applications and libraries. Be aware that this can cause vulnerabilities and/or data leaks. To minimize this risk, make sure you are aware of the origin of the software that you would like to install and check other quality measures (known issues, number of users/downloads, citations, GitHub Stars, etc.). You are responsible for the software you install on the workspaces.</p>
 </section>
-<section id="temporary-workspaces" class="level3">
-<h3 class="anchored" data-anchor-id="temporary-workspaces">Temporary workspaces</h3>
-<p>Workspaces are meant to be temporary. The longer the workspace exists, the more vulnerable it becomes because the workspace needs regular updates to stay secure.</p>
+<section id="pausing-or-deleting-workspaces" class="level2">
+<h2 class="anchored" data-anchor-id="pausing-or-deleting-workspaces">Pausing or Deleting workspaces</h2>
+<p>It is always recommended to <a href="https://servicedesk.surf.nl/wiki/display/WIKI/Pause+a+workspace">pause</a> or delete a workspace when you are not working on it and when it is not busy with a task. This is to minimize the use of resources (credits, energy, capacity). Although pausing a workspace is often an attractive option, it is only recommended for a period of a couple of days maximum. By deleting workspaces and creating a new workspace, you make sure you always have a machine with the most recent (security) updates. This can be done efficiently by: - documenting or automating installation steps - regularly saving data and scripts to a Persistent storage volume, e.g.&nbsp;Yoda or, Research Drive - managing code on GitHub The VRE support team is happy to help you with this.</p>
+</section>
+<section id="wallets-and-credits" class="level2">
+<h2 class="anchored" data-anchor-id="wallets-and-credits">Wallets and credits</h2>
+<p>Remember that you pay for workspaces and storage volumes with the wallet you receive from the UU or through an EINFRA grant. Clean up unused workspaces and storage volumes to limit credit use. Pause workspaces only if you plan to continue working with it on a short term (workspaces also consume credits for storage). Consider moving data to e.g.&nbsp;Yoda and cleaning up storage volumensvolumes when not using research cloud for a couple of weeks. The UU provides a small starting budget of 10K credits for pilots or small projects, when this budget has been depleted we may provide a one time raise of your wallet of 10K credits if you can complete the project with this raise. Alternatively it is possible to submit an <a href="../docs/einfra.html">EINFRA application</a></p>
 <p>Follow <a href="link to best practices">best practices</a> to make it easy to delete a workspace and create a new one without hassle.</p>
-<ul>
-<li>updates</li>
-</ul>
+</section>
+<section id="vre-lifetime-and-security-updates" class="level2">
+<h2 class="anchored" data-anchor-id="vre-lifetime-and-security-updates">VRE lifetime and security updates</h2>
+<p>The recommended maximum lifetime of a VRE (or workspace) is 2 months. A lifetime longer than 2 months is only considered secure when the operating system is regulary updated by one of the users. The users are responsible for keeping the installed software up to date (patching) with regard to security updates. By limiting the lifetime of a VRE you can minimize the risk of vulnerabilities by outdated software. The UU uses scanning tools to scan active VRE’s for security vulnerabilities. If the scan gives cause, the UU will contact you with the request to update software on VRE, and/or to take additional measures.</p>
+</section>
+<section id="data-storage-and-backup" class="level2">
+<h2 class="anchored" data-anchor-id="data-storage-and-backup">Data storage and – backup</h2>
+<p>A VRE is not backed up. The user is responsible for backing up the (processed) data and/or configuration of the VRE. Make sure to regularly synchronize data and scripts with approved platform like Yoda, Research Drive and GitHub.</p>
+</section>
+<section id="sensitive-data" class="level2">
+<h2 class="anchored" data-anchor-id="sensitive-data">Sensitive data</h2>
+<p>If you want to process data that is classified as sensitive or higher according to UU standards, consult a local data manager and VRE supportITS VRE research engineering. Potentially a DPA should be arranged with SURF and not all workspace types are suitable for this.</p>
+<section id="data-classification-service-vre" class="level3">
+<h3 class="anchored" data-anchor-id="data-classification-service-vre">Data classification Service VRE</h3>
+<p>Surf Research Cloud is suitable for the data classification below. However, custom workspaces in proof of concept state or manual installations may compromise the suitability. | Availability | Integrity | Confidentiality | |——–|——–|——–| | Sensitive | Sensitive | Sensitive |</p>
 </section>
 </section>
-<section id="accounting-tips" class="level2">
-<h2 class="anchored" data-anchor-id="accounting-tips">Accounting tips</h2>
-<ul>
-<li>wallets credits consumption</li>
-</ul>
+<section id="security-incidents" class="level2">
+<h2 class="anchored" data-anchor-id="security-incidents">Security incidents</h2>
+<p>If you believe there has been (suspected) misuse or unauthorized use of login details and / or VRE, please report this to CERT or send an email to its.ris@uu.nl and “pause” your VRE using the SURF Research Cloud portal.</p>
 </section>
 <section id="relevant-policies" class="level2">
 <h2 class="anchored" data-anchor-id="relevant-policies">Relevant policies</h2>
