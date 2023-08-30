@@ -39,7 +39,7 @@
     "href": "docs/responsible-use.html#pausing-or-deleting-workspaces",
     "title": "VRE practical tips for responsible use",
     "section": "Pausing or Deleting workspaces",
-    "text": "Pausing or Deleting workspaces\nIt is always recommended to pause or delete a workspace when you are not working on it and when it is not busy with a task. This is to minimize the use of resources (credits, energy, capacity). Although pausing a workspace is often an attractive option, it is only recommended for a period of a couple of days maximum. By deleting workspaces and creating a new workspace, you make sure you always have a machine with the most recent (security) updates. This can be done efficiently by: - documenting or automating installation steps - regularly saving data and scripts to a Persistent storage volume, e.g. Yoda or, Research Drive - managing code on GitHub The VRE support team is happy to help you with this."
+    "text": "Pausing or Deleting workspaces\nIt is always recommended to pause or delete a workspace when you are not working on it and when it is not busy with a task. This is to minimize the use of resources (credits, energy, capacity). Although pausing a workspace is often an attractive option, it is only recommended for a period of a couple of days maximum. By deleting workspaces and creating a new workspace, you make sure you always have a machine with the most recent (security) updates. This can be done efficiently by:\n\ndocumenting or automating installation steps\nregularly saving data and scripts to a Persistent storage volume, e.g. Yoda or, Research Drive\nmanaging code on GitHub The VRE support team is happy to help you with this."
   },
   {
     "objectID": "docs/responsible-use.html#wallets-and-credits",
@@ -81,7 +81,7 @@
     "href": "docs/responsible-use.html#relevant-policies",
     "title": "VRE practical tips for responsible use",
     "section": "Relevant policies",
-    "text": "Relevant policies\n\nrelevant terms of use UU terms of use\nprivacy policies"
+    "text": "Relevant policies\n\nUU terms of use\nprivacy policies"
   },
   {
     "objectID": "docs/first-steps.html",
