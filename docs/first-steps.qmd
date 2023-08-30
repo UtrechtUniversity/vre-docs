@@ -58,7 +58,7 @@ In the Research Cloud portal:
 
 
 ## Pausing, Resuming, Deleting a workspace
-You always need a wallet to create a workspace, by default a workspace can only be paused, resumed and deleted by the one that has created it. You can use SRAM to give persons permission to PAUSE, RESUME and DELETE a workspace that is created by someone else. It is also possible to share a wallet with a member of your CO in SRAM. See [Add collaborators to existing project](accounts.qmd#add-collaborators-to-existing-project).
+You always need a wallet to create a workspace, by default a workspace can only be paused, resumed and deleted by the one that has created it. You can use SRAM to give persons permission to PAUSE, RESUME and DELETE a workspace that is created by someone else. It is also possible to share a wallet with a member of your CO in SRAM. See [Add collaborators to existing project](https://servicedesk.surf.nl/wiki/display/WIKI/Invite+admins+and+members+to+a+collaboration).
 
 
 ## Getting access to your workspace
@@ -112,8 +112,8 @@ In many cases it is more reliable to get a copy of your data on the Storage unit
 Depending on where your data is stored and the workspace that you are using, the following options are available:
 
 -   Upload from your laptop (Jupyter Notebook and Rstudio Workspaces)
--   [scp/ssh](../manuals/ssh-data-transfer-methods.qmd) (most workspaces)
+-   [scp/ssh](manuals/ssh-data-transfer-methods.qmd) (most workspaces)
 -   Download using the internet browser (on Ubuntu Desktop and Windows workspaces, for data stored on e.g. surfdrive, onedrive, etc.)
--   [irods icommands](../manuals/icommands.qmd) (for data stored on Yoda, works on Ubuntu based workspaces (including Jupyter and Rstudio)
--   [rclone](../manuals/rclone-researchcloud.qmd) (for data stored on a cloud storage platform (e.g. surfdrive, onedrive, dropbox)
+-   [irods icommands](manuals/icommands.qmd) (for data stored on Yoda, works on Ubuntu based workspaces (including Jupyter and Rstudio)
+-   [rclone](manuals/rclone-researchcloud.qmd) (for data stored on a cloud storage platform (e.g. surfdrive, onedrive, dropbox)
 
