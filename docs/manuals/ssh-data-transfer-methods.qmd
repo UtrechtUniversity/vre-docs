@@ -13,7 +13,7 @@ In all other cases: Open a terminal (or shell session) that you use for login in
 scp sourcefile <username>@<ip-address>:destinationdir
 ```
 
-You can find both the username and the ip-address in the [research cloud portal](https://surfresearchcloud.nl).
+You can find both the username and the ip-address in the [research cloud portal](https://portal.live.surfresearchcloud.nl/).
 Find your username under the 'Profile' tab.  
 Find the IP address of your workspace in the main Dashboard by clicking the drop down arrow of the running Workspace.
 
