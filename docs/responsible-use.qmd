@@ -19,8 +19,6 @@ The VRE support team is happy to help you with this.
 ## Wallets and credits
 Remember that you pay for workspaces and storage volumes with the wallet you receive from the UU or through an EINFRA grant. Clean up unused workspaces and storage volumes to limit credit use. Pause workspaces only if you plan to continue working with it on a short term (workspaces also consume credits for storage). Consider moving data to e.g. Yoda and cleaning up storage volumensvolumes when not using research cloud for a couple of weeks. The UU provides a small starting budget of 10K credits for pilots or small projects, when this budget has been depleted we may provide a one time raise of your wallet of 10K credits if you can complete the project with this raise. Alternatively it is possible to submit an [EINFRA application](einfra.qmd)
 
-Follow [best practices](link to best practices) to make it easy to delete a workspace and create a new one without hassle.
-
 ## VRE lifetime and security updates
 The recommended maximum lifetime of a VRE (or workspace) is 2 months. A lifetime longer than 2 months is only considered secure when the operating system is regulary updated by one of the users. The users are responsible for keeping the installed software up to date (patching) with regard to security updates. By limiting the lifetime of a VRE you can minimize the risk of vulnerabilities by outdated software. The UU uses scanning tools to scan active VRE's for security vulnerabilities. If the scan gives cause, the UU will contact you with the request to update software on VRE, and/or to take additional measures.
 
