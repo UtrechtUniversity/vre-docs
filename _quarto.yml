@@ -21,6 +21,8 @@ website:
         text: Tips
       - href: docs/terms-of-use.qmd
         text: Terms of use
+      - href: docs/privacy.qmd
+        text: Privacy
       - href: docs/glossary.qmd
         text: Glossary
       - href: docs/contact.qmd
