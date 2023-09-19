@@ -242,7 +242,7 @@
     "href": "index.html",
     "title": "VRE Documentation for UU researchers",
     "section": "",
-    "text": "Welcome\nA Virtual Research Environment (VRE) is a temporary compute environment that enables researchers to work interactively and remotely on research. A VRE contains tools and data that scientists need for their research.\nUtrecht University provides VREs based on SURF Research Cloud, which is a good alternative for commercial cloud providers like Amazon Web Services and Microsoft Azure.\n\n\nOverview documentation\nThis page provides user documentation for Surf Research Cloud for researchers at Utrecht University. Get started using the links below!\n\nWhat is Research Cloud?\nHow to get started?\nFirst steps\nUsing a workspace\nUser manuals\nPractical tips for responsible use\nTerms of use\nGlossary\nContact"
+    "text": "Welcome\nA Virtual Research Environment (VRE) is a temporary compute environment that enables researchers to work interactively and remotely on research. A VRE contains tools and data that scientists need for their research.\nUtrecht University provides VREs based on SURF Research Cloud, which is a good alternative for commercial cloud providers like Amazon Web Services and Microsoft Azure.\n\n\nOverview documentation\nThis page provides user documentation for Surf Research Cloud for researchers at Utrecht University. Get started using the links below!\n\nWhat is Research Cloud?\nHow to get started?\nFirst steps\nUsing a workspace\nUser manuals\nPractical tips for responsible use\nTerms of use\nPrivacy\nGlossary\nContact"
   },
   {
     "objectID": "docs/workspace-catalogue.html",
