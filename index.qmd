@@ -19,5 +19,6 @@ This page provides user documentation for Surf Research Cloud for researchers at
 - [User manuals](docs/manuals.qmd)
 - [Practical tips for responsible use](docs/responsible-use.qmd)
 - [Terms of use](docs/terms-of-use.qmd)
+- [Privacy](docs/privacy.qmd)
 - [Glossary](docs/glossary.qmd)
 - [Contact](docs/contact.qmd)
