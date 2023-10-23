@@ -14,6 +14,7 @@ It is always recommended to [pause](https://servicedesk.surf.nl/wiki/display/WIK
 -   documenting or automating installation steps
 -   regularly saving data and scripts to a Persistent storage volume, e.g. Yoda or, Research Drive
 -   managing code on GitHub
+
 The VRE support team is happy to help you with this. 
 
 ## Wallets and credits
