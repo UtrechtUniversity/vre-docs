@@ -6,7 +6,7 @@ This page provides links to user documentation for workspaces developed by Utrec
 
 - Anaconda Navigator
 - [ASReview command line](workspaces/asreview_cli.qmd)
-- ASReview Lab
+- [ASReview Lab](workspaces/asreview_lab.qmd)
 - Jupyter Notebooks
 - Miniconda
 - Python Workbench
