@@ -1,95 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://github.com/UtrechtUniversity/vre-docs/index.html</loc>
-    <lastmod>2023-10-23T12:47:58.386Z</lastmod>
+    <loc>https://github.com/UtrechtUniversity/vre-docs/CONTRIBUTING.html</loc>
+    <lastmod>2023-12-06T10:55:06.226Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/UtrechtUniversity/vre-docs/docs/contact.html</loc>
-    <lastmod>2023-10-23T12:47:57.658Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/UtrechtUniversity/vre-docs/docs/first-steps.html</loc>
-    <lastmod>2023-10-23T12:47:56.922Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/UtrechtUniversity/vre-docs/docs/terms-of-use.html</loc>
-    <lastmod>2023-10-23T12:47:55.794Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/UtrechtUniversity/vre-docs/docs/manuals/install-rclone.html</loc>
-    <lastmod>2023-10-23T12:47:55.050Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/UtrechtUniversity/vre-docs/docs/manuals/icommands.html</loc>
-    <lastmod>2023-10-23T12:47:54.326Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/UtrechtUniversity/vre-docs/docs/manuals/rclone-researchcloud.html</loc>
-    <lastmod>2023-10-23T12:47:53.530Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/UtrechtUniversity/vre-docs/docs/workspaces/asreview_cli.html</loc>
-    <lastmod>2023-10-23T12:47:52.894Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/UtrechtUniversity/vre-docs/docs/workspaces/template.html</loc>
-    <lastmod>2023-10-23T12:47:52.150Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/UtrechtUniversity/vre-docs/docs/glossary.html</loc>
-    <lastmod>2023-10-23T12:47:51.518Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/UtrechtUniversity/vre-docs/docs/workspace-catalogue.html</loc>
-    <lastmod>2023-10-23T12:47:50.694Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/UtrechtUniversity/vre-docs/docs/privacy.html</loc>
-    <lastmod>2023-10-23T12:47:49.682Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/UtrechtUniversity/vre-docs/docs/einfra.html</loc>
-    <lastmod>2023-10-23T12:47:50.362Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/UtrechtUniversity/vre-docs/docs/responsible-use.html</loc>
-    <lastmod>2023-10-23T12:47:51.138Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/UtrechtUniversity/vre-docs/docs/manuals.html</loc>
-    <lastmod>2023-10-23T12:47:51.842Z</lastmod>
+    <lastmod>2023-12-06T10:55:05.730Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/UtrechtUniversity/vre-docs/docs/workspaces/whisper.html</loc>
-    <lastmod>2023-10-23T12:47:52.506Z</lastmod>
+    <lastmod>2023-12-06T10:55:05.094Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/UtrechtUniversity/vre-docs/docs/workspaces/asreview_cli.html</loc>
+    <lastmod>2023-12-06T10:55:04.602Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/UtrechtUniversity/vre-docs/docs/manuals/terminal.html</loc>
-    <lastmod>2023-10-23T12:47:53.190Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/UtrechtUniversity/vre-docs/docs/manuals/rclone-transferringdata.html</loc>
-    <lastmod>2023-10-23T12:47:53.874Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/UtrechtUniversity/vre-docs/docs/manuals/ssh-data-transfer-methods.html</loc>
-    <lastmod>2023-10-23T12:47:54.682Z</lastmod>
+    <lastmod>2023-12-06T10:55:04.026Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/UtrechtUniversity/vre-docs/docs/manuals/rclone-config.html</loc>
-    <lastmod>2023-10-23T12:47:55.458Z</lastmod>
+    <lastmod>2023-12-06T10:55:03.518Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/UtrechtUniversity/vre-docs/docs/onboarding.html</loc>
-    <lastmod>2023-10-23T12:47:56.350Z</lastmod>
+    <loc>https://github.com/UtrechtUniversity/vre-docs/docs/manuals/rclone-researchcloud.html</loc>
+    <lastmod>2023-12-06T10:55:02.890Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/UtrechtUniversity/vre-docs/docs/manuals/rclone-transferringdata.html</loc>
+    <lastmod>2023-12-06T10:55:02.382Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/UtrechtUniversity/vre-docs/docs/manuals.html</loc>
+    <lastmod>2023-12-06T10:55:01.850Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/UtrechtUniversity/vre-docs/docs/responsible-use.html</loc>
+    <lastmod>2023-12-06T10:55:01.370Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/UtrechtUniversity/vre-docs/docs/research-cloud-intro.html</loc>
-    <lastmod>2023-10-23T12:47:57.358Z</lastmod>
+    <lastmod>2023-12-06T10:55:00.786Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/UtrechtUniversity/vre-docs/CONTRIBUTING.html</loc>
-    <lastmod>2023-10-23T12:47:58.034Z</lastmod>
+    <loc>https://github.com/UtrechtUniversity/vre-docs/index.html</loc>
+    <lastmod>2023-12-06T10:54:59.722Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/UtrechtUniversity/vre-docs/docs/first-steps.html</loc>
+    <lastmod>2023-12-06T10:55:00.458Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/UtrechtUniversity/vre-docs/docs/workspace-catalogue.html</loc>
+    <lastmod>2023-12-06T10:55:01.038Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/UtrechtUniversity/vre-docs/docs/einfra.html</loc>
+    <lastmod>2023-12-06T10:55:01.610Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/UtrechtUniversity/vre-docs/docs/privacy.html</loc>
+    <lastmod>2023-12-06T10:55:02.110Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/UtrechtUniversity/vre-docs/docs/manuals/install-rclone.html</loc>
+    <lastmod>2023-12-06T10:55:02.634Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/UtrechtUniversity/vre-docs/docs/manuals/icommands.html</loc>
+    <lastmod>2023-12-06T10:55:03.226Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/UtrechtUniversity/vre-docs/docs/manuals/ssh-data-transfer-methods.html</loc>
+    <lastmod>2023-12-06T10:55:03.806Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/UtrechtUniversity/vre-docs/docs/glossary.html</loc>
+    <lastmod>2023-12-06T10:55:04.310Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/UtrechtUniversity/vre-docs/docs/workspaces/template.html</loc>
+    <lastmod>2023-12-06T10:55:04.830Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/UtrechtUniversity/vre-docs/docs/onboarding.html</loc>
+    <lastmod>2023-12-06T10:55:05.494Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/UtrechtUniversity/vre-docs/docs/terms-of-use.html</loc>
+    <lastmod>2023-12-06T10:55:05.970Z</lastmod>
   </url>
 </urlset>
