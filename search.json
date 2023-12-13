@@ -438,7 +438,7 @@
     "href": "docs/workspaces/matlab.html#usage",
     "title": "MATLAB",
     "section": "Usage",
-    "text": "Usage\n\nPrerequisites:\nYou will need a Mathworks account and add you UU licence to this account to be able to use MATLAB. Find instructions on how to do this here\n\n\nActivate MATLAB\nWhen logged in to the workspace: 1. Click ‘Applications’ in the top left corner 2. Click ‘Development’ 3. Click ‘Matlab Activate’, a wizard will open. 4. Click ‘Next’ to activate Matlab using the internet 5. Login to your Mathworks account. For the password, it will ask you to get a 6 digit password from: https://nl.mathworks.com/mwa/otp 6. Continue the wizard and choose the default options until you are finished.\n\n\nOpen MATLAB\n\nClick ‘Applications’ in the top left corner\nClick ‘Development’\nClick ‘Matlab’"
+    "text": "Usage\n\nPrerequisites:\nYou will need a Mathworks account and add you UU licence to this account to be able to use MATLAB. Find instructions on how to do this here\n\n\nActivate MATLAB\nWhen logged in to the workspace:\n\nClick ‘Applications’ in the top left corner\nClick ‘Development’\nClick ‘Matlab Activate’, a wizard will open.\nClick ‘Next’ to activate Matlab using the internet\nLogin to your Mathworks account. For the password, it will ask you to get a 6 digit password from: https://nl.mathworks.com/mwa/otp\nContinue the wizard and choose the default options until you are finished.\n\n\n\nOpen MATLAB\n\nClick ‘Applications’ in the top left corner\nClick ‘Development’\nClick ‘Matlab’"
   },
   {
     "objectID": "docs/workspaces/matlab.html#tips",
