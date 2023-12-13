@@ -8,6 +8,7 @@ This page provides links to user documentation for workspaces developed by Utrec
 - [ASReview command line](workspaces/asreview_cli.qmd)
 - ASReview Lab
 - Jupyter Notebooks
+- [Matlab](workspaces/matlab.qmd)
 - Miniconda
 - Python Workbench
 - [Whisper OpenAI](workspaces/whisper.qmd)
