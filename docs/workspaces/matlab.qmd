@@ -1,0 +1,41 @@
+--- 
+title: "MATLAB"
+---
+
+## Description
+
+This workspace is an Ubuntu Desktop workspace with MATLAB installed. Ubuntu Desktop is a linux operating system but has a Graphical User interface so operating it is similar to using a Windows operating system. 
+
+## Creation
+In the [Research cloud portal](https://surfresearchcloud.nl) click the 'Create a new workspace' button and follow the steps in the wizzard.
+
+See the [Getting started](../getting-started.qmd#create-a-workspace) page for more guidance.
+
+## Access
+This workspace can be accessed via the yellow 'Access' button. You need a TOTP to login to your workspace, see [Workspace access with TOTP](https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace#Logintoyourworkspace-WorkspaceAccesswithTOTP).
+
+## Data transfer options
+First create a working directory on the [Storage Volume](../getting-started.qmd#where-can-i-find-the-storage-volume)
+
+When data is stored on Surfdrive (or Researchdrive, Onedrive, Dropbox, etc.), use the internet browser Firefox **within** the workspace to download files from Surfdrive (or alternative storage platform). Click on 'Applications' in the top left corner of the screen and click on 'Internet' to find Firefox.
+Then go to e.g. surfdrive.surf.nl (or dropbox.com, etc.) to open the web portal.
+
+## Usage
+### Prerequisites:
+You will need a Mathworks account and add you UU licence to this account to be able to use MATLAB. Find instructions on how to do this [here](https://intranet.uu.nl/en/knowledgebase/matlab)
+
+### Activate MATLAB
+When logged in to the workspace:
+1. Click 'Applications' in the top left corner 
+2. Click 'Development'
+3. Click 'Matlab Activate', a wizard will open.
+4. Click 'Next' to activate Matlab using the internet
+5. Login to your Mathworks account. For the password, it will ask you to get a 6 digit password from: [https://nl.mathworks.com/mwa/otp](https://nl.mathworks.com/mwa/otp)
+6. Continue the wizard and choose the default options until you are finished.
+
+### Open MATLAB
+1. Click 'Applications' in the top left corner
+2. Click 'Development'
+3. Click 'Matlab'
+
+## Tips
