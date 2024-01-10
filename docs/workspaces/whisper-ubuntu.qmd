@@ -1,0 +1,59 @@
+--- 
+title: "workspace name"
+---
+
+## Description
+This workspace can be used to work with the Whisper model from OpenAI (e.g. for transcribing audio files). On this workspace a Python environment is created using the environment manager 'conda'. The 'conda' environment contains Whisper and other required packages. The environment is configured to be able to use a GPU when available.
+
+The workspace is an Ubuntu workspace, and is operated using the command line. Therefore is mainly aimed for Python users that use Jupyter notebooks for developing code. However the workspace also provides a terminal (command line application) to run Whisper using the command line.
+
+Currently the workspace is only available [upon request](../contact.qmd).
+
+## Creation
+
+### Create a storage volume
+First create a storage volume before creating the workspace.
+
+See the [Getting started](../getting-started.qmd#create-storage-volume) page for more info about how and why to create a storage volume.
+
+### Create a workspace
+
+In the [Research cloud portal](https://surfresearchcloud.nl) click the 'Create a new workspace' button and follow the steps in the wizzard.
+
+See the [Getting started](../getting-started.qmd#create-a-workspace) page for more guidance.
+
+## Access
+This workspace can be accessed via the yellow 'Access' button. You need a TOTP to login to your workspace, see [Workspace access with TOTP](https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace#Logintoyourworkspace-WorkspaceAccesswithTOTP).
+
+## Data transfer options
+The JupyterHub dashboard has an Upload button to directly upload data from your computer. Make sure to store data on the [Storage Volume]()
+
+## Usage
+Create a working directory on the [Storage Volume](../getting-started.qmd#where-can-i-find-the-storage-volume)
+Create a Jupyter notebook using the Whisper kernel 
+Image kernel
+
+Image notebook
+
+`import whisper`
+
+
+```
+model = whisper.load_model("medium")
+
+result = model.transcribe("audio.mp3")
+print(result["text"])
+```
+
+Alternatively, open a terminal
+First type the following commands to activate the conda environment:
+
+`/etc/miniconda/bin/conda init`
+`conda create --yes --name whisper-user --clone whisper`
+`conda activate whisper-user`
+`python -m ipykernel install --user --name whisper2 --display-name "My Whisper Kernel"`
+
+Then use whisper as follows
+
+## Tips
+
