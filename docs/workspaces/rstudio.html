@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Whisper OpenAI CUDA 11</title>
+<title>RStudio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -147,14 +147,14 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#usage" id="toc-usage" class="nav-link" data-scroll-target="#usage">Usage</a></li>
   <li><a href="#tips" id="toc-tips" class="nav-link" data-scroll-target="#tips">Tips</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/UtrechtUniversity/vre-docs/edit/main/docs/workspaces/whisper.qmd" class="toc-action">Edit this page</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/UtrechtUniversity/vre-docs/edit/main/docs/workspaces/rstudio.qmd" class="toc-action">Edit this page</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Whisper OpenAI CUDA 11</h1>
+<h1 class="title">RStudio</h1>
 </div>
 
 
@@ -171,9 +171,9 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="description" class="level2">
 <h2 class="anchored" data-anchor-id="description">Description</h2>
-<p>This workspace can be used to work with the Whisper model from OpenAI (e.g.&nbsp;for transcribing audio files). On this workspace a Python environment is created using the environment manager ‘conda’. The ‘conda’ environment contains <a href="https://github.com/openai/whisper">Whisper</a>, <a href="https://github.com/m-bain/whisperX">WhisperX</a> and other required packages. The environment is configured to be able to use a GPU when available.</p>
-<p>The workspace is a JupyterHub workspace, and comes with a template notebook to transcribe, translate and diarize audio files. The workspace is mainly aimed for users that have at least some very basic Python experience using Jupyter notebooks. However the workspace also provides a terminal (command line application) to run Whisper using the command line.</p>
-<p>Currently the workspace is only available <a href="../../docs/contact.html">upon request</a>.</p>
+<p>This workspace can be used to work with R and RStudio. The workspace also comes with a (linux) terminal (aka command line) to install additional tools when relevant.</p>
+<p>Upon request we can help you to automate the installation of R packages or automate other installations (e.g.&nbsp;tools for data transfer). Automating these steps will make it easier to work following our <a href="../../docs/responsible-use.html">best practices</a>.</p>
+<p><a href="../../docs/contact.html">Contact us if you need help with installations</a>.</p>
 </section>
 <section id="creation" class="level2">
 <h2 class="anchored" data-anchor-id="creation">Creation</h2>
@@ -194,12 +194,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="data-transfer-options" class="level2">
 <h2 class="anchored" data-anchor-id="data-transfer-options">Data transfer options</h2>
-<p>First create a working directory on the <a href="../getting-started.qmd#where-can-i-find-the-storage-volume">Storage Volume</a></p>
-<p>The JupyterHub dashboard has an Upload button to directly upload data from your computer.</p>
+<p>First create a working directory on the <a href="../getting-started.qmd#where-can-i-find-the-storage-volume">Storage Volume</a> using the file browser in the Jupyter dashboard.</p>
+<p>The RStudio interface has an Upload button to directly upload data from your PC to the workspace.</p>
+<p>Alternatively it is possible to use the terminal to transfer data from other, such as Yoda, or Surfdrive:</p>
+<ul>
+<li><a href="../../docs/manuals/icommands.html">Data transfer and Yoda</a></li>
+<li><a href="../../docs/manuals/rclone-researchcloud.html">Data transfer and Surfdrive</a></li>
+</ul>
 </section>
 <section id="usage" class="level2">
 <h2 class="anchored" data-anchor-id="usage">Usage</h2>
-<p>Navigate to your home directory and start the template Jupyter notebook <code>whisper_template_notebook.ipynb</code> using the Whisper kernel. If you double click to start the notebook, make sure in the top right you see <code>whisper (ipykernel)</code> instead of <code>Python 3 (ipykernel)</code>. If you see <code>Python 3 (ipykernel)</code>, just click on it to change it to the Whisper kernel.</p>
 </section>
 <section id="tips" class="level2">
 <h2 class="anchored" data-anchor-id="tips">Tips</h2>

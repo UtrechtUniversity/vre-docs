@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Whisper OpenAI CUDA 11</title>
+<title>workspace name</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -147,14 +147,14 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#usage" id="toc-usage" class="nav-link" data-scroll-target="#usage">Usage</a></li>
   <li><a href="#tips" id="toc-tips" class="nav-link" data-scroll-target="#tips">Tips</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/UtrechtUniversity/vre-docs/edit/main/docs/workspaces/whisper.qmd" class="toc-action">Edit this page</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/UtrechtUniversity/vre-docs/edit/main/docs/workspaces/whisper-ubuntu.qmd" class="toc-action">Edit this page</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Whisper OpenAI CUDA 11</h1>
+<h1 class="title">workspace name</h1>
 </div>
 
 
@@ -171,8 +171,8 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="description" class="level2">
 <h2 class="anchored" data-anchor-id="description">Description</h2>
-<p>This workspace can be used to work with the Whisper model from OpenAI (e.g.&nbsp;for transcribing audio files). On this workspace a Python environment is created using the environment manager ‘conda’. The ‘conda’ environment contains <a href="https://github.com/openai/whisper">Whisper</a>, <a href="https://github.com/m-bain/whisperX">WhisperX</a> and other required packages. The environment is configured to be able to use a GPU when available.</p>
-<p>The workspace is a JupyterHub workspace, and comes with a template notebook to transcribe, translate and diarize audio files. The workspace is mainly aimed for users that have at least some very basic Python experience using Jupyter notebooks. However the workspace also provides a terminal (command line application) to run Whisper using the command line.</p>
+<p>This workspace can be used to work with the Whisper model from OpenAI (e.g.&nbsp;for transcribing audio files). On this workspace a Python environment is created using the environment manager ‘conda’. The ‘conda’ environment contains Whisper and other required packages. The environment is configured to be able to use a GPU when available.</p>
+<p>The workspace is an Ubuntu workspace, and is operated using the command line. Therefore is mainly aimed for Python users that use Jupyter notebooks for developing code. However the workspace also provides a terminal (command line application) to run Whisper using the command line.</p>
 <p>Currently the workspace is only available <a href="../../docs/contact.html">upon request</a>.</p>
 </section>
 <section id="creation" class="level2">
@@ -180,12 +180,12 @@ ul.task-list li input[type="checkbox"] {
 <section id="create-a-storage-volume" class="level3">
 <h3 class="anchored" data-anchor-id="create-a-storage-volume">Create a storage volume</h3>
 <p>First create a storage volume before creating the workspace.</p>
-<p>See the <a href="../../docs/first-steps.html#create-storage-volume">Getting started</a> page for more info about how and why to create a storage volume.</p>
+<p>See the <a href="../getting-started.qmd#create-storage-volume">Getting started</a> page for more info about how and why to create a storage volume.</p>
 </section>
 <section id="create-a-workspace" class="level3">
 <h3 class="anchored" data-anchor-id="create-a-workspace">Create a workspace</h3>
 <p>In the <a href="https://surfresearchcloud.nl">Research cloud portal</a> click the ‘Create a new workspace’ button and follow the steps in the wizzard.</p>
-<p>See the <a href="../../docs/first-steps.html#create-a-workspace">Getting started</a> page for more guidance.</p>
+<p>See the <a href="../getting-started.qmd#create-a-workspace">Getting started</a> page for more guidance.</p>
 </section>
 </section>
 <section id="access" class="level2">
@@ -194,12 +194,20 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="data-transfer-options" class="level2">
 <h2 class="anchored" data-anchor-id="data-transfer-options">Data transfer options</h2>
-<p>First create a working directory on the <a href="../getting-started.qmd#where-can-i-find-the-storage-volume">Storage Volume</a></p>
-<p>The JupyterHub dashboard has an Upload button to directly upload data from your computer.</p>
+<p>The JupyterHub dashboard has an Upload button to directly upload data from your computer. Make sure to store data on the <a href="">Storage Volume</a></p>
 </section>
 <section id="usage" class="level2">
 <h2 class="anchored" data-anchor-id="usage">Usage</h2>
-<p>Navigate to your home directory and start the template Jupyter notebook <code>whisper_template_notebook.ipynb</code> using the Whisper kernel. If you double click to start the notebook, make sure in the top right you see <code>whisper (ipykernel)</code> instead of <code>Python 3 (ipykernel)</code>. If you see <code>Python 3 (ipykernel)</code>, just click on it to change it to the Whisper kernel.</p>
+<p>Create a working directory on the <a href="../getting-started.qmd#where-can-i-find-the-storage-volume">Storage Volume</a> Create a Jupyter notebook using the Whisper kernel Image kernel</p>
+<p>Image notebook</p>
+<p><code>import whisper</code></p>
+<pre><code>model = whisper.load_model("medium")
+
+result = model.transcribe("audio.mp3")
+print(result["text"])</code></pre>
+<p>Alternatively, open a terminal First type the following commands to activate the conda environment:</p>
+<p><code>/etc/miniconda/bin/conda init</code> <code>conda create --yes --name whisper-user --clone whisper</code> <code>conda activate whisper-user</code> <code>python -m ipykernel install --user --name whisper2 --display-name "My Whisper Kernel"</code></p>
+<p>Then use whisper as follows</p>
 </section>
 <section id="tips" class="level2">
 <h2 class="anchored" data-anchor-id="tips">Tips</h2>
