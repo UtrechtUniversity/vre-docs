@@ -396,7 +396,7 @@
     "href": "docs/workspaces/jupyter.html#data-transfer-options",
     "title": "Jupyter Notebooks",
     "section": "Data transfer options",
-    "text": "Data transfer options\nFirst create a working directory on the Storage Volume using the file browser in the Jupyter dashboard.\nThe Jupyter dashboard has an Upload button to directly upload data from your PC to the workspace.\nAlternatively it is possible to use the terminal to transfer data from other, such as Yoda, or Surfdrive:\n\nData transfer and Yoda\nData transfer and Surfdrive"
+    "text": "Data transfer options\nFirst create a working directory on the Storage Volume using the file browser in the Jupyter dashboard.\nThe Jupyter dashboard has an Upload button to directly upload data from your PC to the workspace.\nTo download a file to your PC, right click the file in the file browser in the Jupyter dashboard, and several options will show including ‘Download’.\nAlternatively it is possible to use the terminal to transfer data from other, such as Yoda, or Surfdrive:\n\nData transfer and Yoda\nData transfer and Surfdrive"
   },
   {
     "objectID": "docs/workspaces/jupyter.html#usage",
