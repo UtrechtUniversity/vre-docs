@@ -30,6 +30,8 @@ First create a working directory on the [Storage Volume](../getting-started.qmd#
 
 The Jupyter dashboard has an Upload button to directly upload data from your PC to the workspace. 
 
+To download a file to your PC, right click the file in the file browser in the Jupyter dashboard, and several options will show including 'Download'.
+
 Alternatively it is possible to use the terminal to transfer data from other, such as Yoda, or Surfdrive:
 
 - [Data transfer and Yoda](../manuals/icommands.qmd)
