@@ -1,1 +1,1 @@
-Sitemap: https://github.com/UtrechtUniversity/vre-docs/sitemap.xml
+Sitemap: https://UtrechtUniversity.github.io/vre-docs/sitemap.xml
