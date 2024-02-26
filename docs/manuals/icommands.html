@@ -192,16 +192,11 @@ ul.task-list li input[type="checkbox"] {
 <p>Some workspaces have iRODS iCommands preconfigured. This should be visible in step 1 when creating a workspace.</p>
 <p>Copy and paste (or type) the following commands in the terminal, or view the most up to date installation instructions for iRODS iCommands on the <a href="https://www.uu.nl/en/research/yoda/guide-to-yoda/i-am-using-yoda/using-icommands-for-large-datasets">yoda website</a> in the section “Installing iCommands on Ubuntu”.</p>
 <pre><code>sudo apt-get update
-sudo apt-get install -y --only-upgrade ca-certificates
-wget -qO - https://packages.irods.org/irods-signing-key.asc | sudo apt-key add -
-echo "deb [arch=amd64] https://packages.irods.org/apt/ xenial main" | sudo tee /etc/apt/sources.list.d/renci-irods.list
+sudo apt-get install -y lsb-release
+wget -qO - https://packages.irods.org/irods-signing-key.asc | sudo apt-key add - 
+sudo echo "deb [arch=amd64] https://packages.irods.org/apt/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/renci-irods.list
 sudo apt-get update
-sudo apt -y install aptitude irods-runtime=4.2.7 irods-icommands=4.2.7
-sudo aptitude hold irods-runtime irods-icommands
-echo "120"  | sudo tee /proc/sys/net/ipv4/tcp_keepalive_time
-echo "30" | sudo tee /proc/sys/net/ipv4/tcp_keepalive_intvl
-echo "net.ipv4.tcp_keepalive_time=120" | sudo tee -a /etc/sysctl.d/99-sysctl.conf
-echo "net.ipv4.tcp_keepalive_intvl=30" | sudo tee -a /etc/sysctl.d/99-sysctl.conf</code></pre>
+sudo apt-get install -y irods-icommands</code></pre>
 </section>
 <section id="step-3-create-a-config-file" class="level3">
 <h3 class="anchored" data-anchor-id="step-3-create-a-config-file">Step 3: Create a config file</h3>
