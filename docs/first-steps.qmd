@@ -32,11 +32,11 @@ In the Research Cloud portal:
 -   Choose the [Collaborative Organization](https://servicedesk.surf.nl/wiki/pages/viewpage.action?pageId=17825822) of the project for which you want to create the storage volume
 -   Choose the wallet with which you 'pay' for the Storage Unit
 -   Choose the size. It is not possible to resize it later on, so don't choose too small, but also don't choose too large because it will cost more credits.
--   Give your storage volume a descriptive name so you can recognize it later on (e.g. use the name of the project or experiment)
+-   Give your storage volume a descriptive name so you can recognize it later on (recommended: use one or two words separated with and underscore)
 
 ### Where can I find the storage volume?
-When you created a workspace and chose to attach a storage volume, the storage volume can be found via the following directory path: `/data/volume_2`
-Typically you want to create a project folder in `volume_2` (e.g. `/data/volume_2/my_project`).
+When you created a workspace and chose to attach a storage volume to the workspace (see below), the storage volume can be found under the directory path: `/data`
+Typically you want to create a project folder on the storage volume (e.g. `/data/my_storage/my_project`).
 
 ## Create a workspace
 A workspace can also be called a 'Virtual Machine' or a 'Server'. It is a temporary 'remote' machine that you can login to and that has you can use to perform analyses or model runs. You 'pay' for the machine with the credits from your wallet. The more compute power you select the more credits it costs and the sooner your wallet will be empty.
