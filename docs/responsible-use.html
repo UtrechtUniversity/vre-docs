@@ -210,22 +210,31 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="cost-calculator" class="level2">
 <h2 class="anchored" data-anchor-id="cost-calculator">Cost calculator</h2>
+<p>Use the calculator below to estimate the costs for running a workspace. Remember that a workspace will consume credits whenever it is in “State: Running”. It will only stop consuming credits when your Pause or Delete a workspace in the <a href="https://portal.live.surfresearchcloud.nl/">Research Cloud portal</a>. Use the expiry date to schedule deletion of your workspace as an extra safeguard.</p>
 <pre class="shinylive-python" data-engine="python"><code>#| standalone: true
-#| viewerHeight: 420
+#| viewerHeight: 600
 
 from shiny import App, render, ui
 import numpy as np
 import matplotlib.pyplot as plt
+import faicons
 
 app_ui = ui.page_fluid(
     ui.layout_sidebar(
         ui.panel_sidebar(
-            ui.input_slider("cores", "Number of CPU cores", 1, 30, 1, step=1),
             ui.input_radio_buttons(
-                    "time_unit", "Time Unit", ["hours", "days"]
-                )
+            "device", "Processing Unit", ["CPU", "GPU"], selected="CPU"
+            ),
+            ui.output_ui("device_controls"),
+
         ),
         ui.panel_main(
+            ui.value_box(
+                title="Estimated total costs",
+                showcase=faicons.icon_svg("circle-dollar-to-slot",width="50px"),
+                value=ui.output_ui("estimate"),
+                theme="bg-gradient-blue-purple",
+            ),
             ui.output_plot("plot"),
         ),
     ),
@@ -234,13 +243,39 @@ app_ui = ui.page_fluid(
 
 def server(input, output, session):
     @output
-    @render.plot(alt="Sine function")
-    def plot():
-        t = np.arange(0.0, 50.0, 1.0)
-        if input.time_unit() == "days":
-            cost = t * input.cores() * 24
+    @render.ui
+    def device_controls():
+        if input.device() == "CPU":
+            return ui.TagList(
+                ui.input_slider("cores", "Number of CPU cores", 1, 30, 4, step=1),
+                ui.input_numeric("time", "Estimated time", 12, min=1, max=50),
+                ui.input_radio_buttons(
+                    "time_unit", "Time Unit", ["hours", "days"]
+                    ),
+                )
         else:
-            cost = t * input.cores()
+            return ui.TagList(
+                ui.input_slider("gpus", "Number of GPU drives", 1, 4, 1, step=1),
+                ui.input_numeric("time", "Estimated time", 12, min=1, max=50),
+                ui.input_radio_buttons(
+                    "time_unit", "Time Unit", ["hours", "days"]
+                    ),
+                )
+    @render.plot(alt="Cost estimator")
+    def plot():
+        if input.device() == "CPU":
+            t = np.arange(0.0, 50.0, 1.0)
+
+            if input.time_unit() == "days":
+                cost = t * input.cores() * 24
+            else:
+                cost = t * input.cores()
+        else:
+            t = np.arange(0.0, 20.0, 1.0)
+            if input.time_unit() == "days":
+                cost = t * input.gpus() * 24 * 18
+            else:
+                cost = t * input.gpus() * 18
 
         fig, ax = plt.subplots()
         if input.time_unit() == "days":
@@ -249,10 +284,28 @@ def server(input, output, session):
             ax.set_ylim([0, 1000])
         ax.plot(t, cost, label="Credits")
         ax.grid()
+        ax.vlines(input.time(), 0, cost[input.time()], colors='r', linestyles='dashed', label='Estimated time')
+        if input.device() == "CPU":
+            ax.axhline(y=cost[input.time()], xmin=0, xmax=input.time() / 50, color='r', linestyle='dashed')
+        else:
+            ax.axhline(y=cost[input.time()], xmin=0, xmax=input.time() / 20, color='r', linestyle='dashed')
 
-        ax.set(xlabel='Time in' + input.time_unit(), ylabel='Credits',
-               title='Cost of running a VRE')
+        ax.set(xlabel='Time in # of ' + input.time_unit(), ylabel='Credits',
+               title='Cost of running a workspace')
 
+    @render.text  
+    def estimate():
+        if input.device() == "CPU":
+            if input.time_unit() == "days":
+                cost = input.time() * input.cores() * 24
+            else:
+                cost = input.time() * input.cores()
+        else:
+            if input.time_unit() == "days":
+                cost = input.time() * input.gpus() * 24 * 18
+            else:
+                cost = input.time() * input.gpus() * 18
+        return f"{cost} credits"  
 
 app = App(app_ui, server)
 </code></pre>
