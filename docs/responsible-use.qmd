@@ -1,5 +1,7 @@
 ---
 title: "VRE practical tips for responsible use"
+filters:
+  - shinylive
 ---
 
 ## Use of the VRE
@@ -19,6 +21,58 @@ The VRE support team is happy to help you with this.
 
 ## Wallets and credits
 Remember that you pay for workspaces and storage volumes with the wallet you receive from the UU or through an EINFRA grant. Clean up unused workspaces and storage volumes to limit credit use. Pause workspaces only if you plan to continue working with it on a short term (workspaces also consume credits for storage). Consider moving data to e.g. Yoda and cleaning up storage volumensvolumes when not using research cloud for a couple of weeks. The UU provides a small starting budget of 10K credits for pilots or small projects, when this budget has been depleted we may provide a one time raise of your wallet of 10K credits if you can complete the project with this raise. Alternatively it is possible to submit an [EINFRA application](einfra.qmd)
+
+## Cost calculator
+```{shinylive-python}
+#| standalone: true
+#| viewerHeight: 420
+
+from shiny import App, render, ui
+import numpy as np
+import matplotlib.pyplot as plt
+
+app_ui = ui.page_fluid(
+    ui.layout_sidebar(
+        ui.panel_sidebar(
+            ui.input_slider("cores", "Number of CPU cores", 1, 30, 1, step=1),
+            ui.input_radio_buttons(
+                    "time_unit", "Time Unit", ["hours", "days"]
+                )
+        ),
+        ui.panel_main(
+            ui.output_plot("plot"),
+        ),
+    ),
+)
+
+
+def server(input, output, session):
+    @output
+    @render.plot(alt="Sine function")
+    def plot():
+        t = np.arange(0.0, 50.0, 1.0)
+        if input.time_unit() == "days":
+            cost = t * input.cores() * 24
+        else:
+            cost = t * input.cores()
+
+        fig, ax = plt.subplots()
+        if input.time_unit() == "days":
+            ax.set_ylim([0, 1000 * 10])
+        else:
+            ax.set_ylim([0, 1000])
+        ax.plot(t, cost, label="Credits")
+        ax.grid()
+
+        ax.set(xlabel='Time in' + input.time_unit(), ylabel='Credits',
+               title='Cost of running a VRE')
+
+
+app = App(app_ui, server)
+
+```
+
+
 
 ## VRE lifetime and security updates
 The recommended maximum lifetime of a VRE (or workspace) is 2 months. A lifetime longer than 2 months is only considered secure when the operating system is regulary updated by one of the users. The users are responsible for keeping the installed software up to date (patching) with regard to security updates. By limiting the lifetime of a VRE you can minimize the risk of vulnerabilities by outdated software. The UU uses scanning tools to scan active VRE's for security vulnerabilities. If the scan gives cause, the UU will contact you with the request to update software on VRE, and/or to take additional measures.
