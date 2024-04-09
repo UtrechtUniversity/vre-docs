@@ -255,7 +255,7 @@ def server(input, output, session):
                 )
         else:
             return ui.TagList(
-                ui.input_slider("gpus", "Number of GPU drives", 1, 4, 1, step=1),
+                ui.input_slider("gpus", "Number of GPU devices", 1, 4, 1, step=1),
                 ui.input_numeric("time", "Estimated time", 12, min=1, max=50),
                 ui.input_radio_buttons(
                     "time_unit", "Time Unit", ["hours", "days"]
@@ -264,14 +264,16 @@ def server(input, output, session):
     @render.plot(alt="Cost estimator")
     def plot():
         if input.device() == "CPU":
-            t = np.arange(0.0, 50.0, 1.0)
+            x_max = 50.0
+            t = np.arange(0.0, x_max, 1.0)
 
             if input.time_unit() == "days":
                 cost = t * input.cores() * 24
             else:
                 cost = t * input.cores()
         else:
-            t = np.arange(0.0, 20.0, 1.0)
+            x_max = 20.0
+            t = np.arange(0.0, x_max, 1.0)
             if input.time_unit() == "days":
                 cost = t * input.gpus() * 24 * 18
             else:
@@ -282,13 +284,15 @@ def server(input, output, session):
             ax.set_ylim([0, 1000 * 10])
         else:
             ax.set_ylim([0, 1000])
+        ax.set_xlim([0, int(x_max)])
         ax.plot(t, cost, label="Credits")
         ax.grid()
         ax.vlines(input.time(), 0, cost[input.time()], colors='r', linestyles='dashed', label='Estimated time')
         if input.device() == "CPU":
-            ax.axhline(y=cost[input.time()], xmin=0, xmax=input.time() / 50, color='r', linestyle='dashed')
+            ax.hlines(y=cost[input.time()], xmin=0, xmax=input.time(), color='r', linestyle='dashed')
         else:
-            ax.axhline(y=cost[input.time()], xmin=0, xmax=input.time() / 20, color='r', linestyle='dashed')
+            ax.set_xticks(np.arange(0, int(x_max)+1, step=5))
+            ax.hlines(y=cost[input.time()], xmin=0, xmax=input.time(), color='r', linestyle='dashed')
 
         ax.set(xlabel='Time in # of ' + input.time_unit(), ylabel='Credits',
                title='Cost of running a workspace')
