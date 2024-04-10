@@ -1,5 +1,7 @@
 ---
 title: "VRE practical tips for responsible use"
+filters:
+  - shinylive
 ---
 
 ## Use of the VRE
@@ -14,10 +16,122 @@ It is always recommended to [pause](https://servicedesk.surf.nl/wiki/display/WIK
 -   documenting or automating installation steps
 -   regularly saving data and scripts to a Persistent storage volume, e.g. Yoda or, Research Drive
 -   managing code on GitHub
+
 The VRE support team is happy to help you with this. 
 
 ## Wallets and credits
 Remember that you pay for workspaces and storage volumes with the wallet you receive from the UU or through an EINFRA grant. Clean up unused workspaces and storage volumes to limit credit use. Pause workspaces only if you plan to continue working with it on a short term (workspaces also consume credits for storage). Consider moving data to e.g. Yoda and cleaning up storage volumensvolumes when not using research cloud for a couple of weeks. The UU provides a small starting budget of 10K credits for pilots or small projects, when this budget has been depleted we may provide a one time raise of your wallet of 10K credits if you can complete the project with this raise. Alternatively it is possible to submit an [EINFRA application](einfra.qmd)
+
+## Cost calculator
+
+Use the calculator below to estimate the costs for running a workspace. Remember that a workspace will consume credits whenever it is in "State: Running". It will only stop consuming credits when your Pause or Delete a workspace in the [Research Cloud portal](https://portal.live.surfresearchcloud.nl/). Use the expiry date to schedule deletion of your workspace as an extra safeguard.
+
+```{shinylive-python}
+#| standalone: true
+#| viewerHeight: 600
+
+from shiny import App, render, ui
+import numpy as np
+import matplotlib.pyplot as plt
+import faicons
+
+app_ui = ui.page_fluid(
+    ui.layout_sidebar(
+        ui.panel_sidebar(
+            ui.input_radio_buttons(
+            "device", "Processing Unit", ["CPU", "GPU"], selected="CPU"
+            ),
+            ui.output_ui("device_controls"),
+
+        ),
+        ui.panel_main(
+            ui.value_box(
+                title="Estimated total costs",
+                showcase=faicons.icon_svg("circle-dollar-to-slot",width="50px"),
+                value=ui.output_ui("estimate"),
+                theme="bg-gradient-blue-purple",
+            ),
+            ui.output_plot("plot"),
+        ),
+    ),
+)
+
+
+def server(input, output, session):
+    @output
+    @render.ui
+    def device_controls():
+        if input.device() == "CPU":
+            return ui.TagList(
+                ui.input_slider("cores", "Number of CPU cores", 1, 30, 4, step=1),
+                ui.input_numeric("time", "Estimated time", 12, min=1, max=50),
+                ui.input_radio_buttons(
+                    "time_unit", "Time Unit", ["hours", "days"]
+                    ),
+                )
+        else:
+            return ui.TagList(
+                ui.input_slider("gpus", "Number of GPU devices", 1, 4, 1, step=1),
+                ui.input_numeric("time", "Estimated time", 12, min=1, max=50),
+                ui.input_radio_buttons(
+                    "time_unit", "Time Unit", ["hours", "days"]
+                    ),
+                )
+    @render.plot(alt="Cost estimator")
+    def plot():
+        if input.device() == "CPU":
+            x_max = 50.0
+            t = np.arange(0.0, x_max, 1.0)
+
+            if input.time_unit() == "days":
+                cost = t * input.cores() * 24
+            else:
+                cost = t * input.cores()
+        else:
+            x_max = 20.0
+            t = np.arange(0.0, x_max, 1.0)
+            if input.time_unit() == "days":
+                cost = t * input.gpus() * 24 * 18
+            else:
+                cost = t * input.gpus() * 18
+
+        fig, ax = plt.subplots()
+        if input.time_unit() == "days":
+            ax.set_ylim([0, 1000 * 10])
+        else:
+            ax.set_ylim([0, 1000])
+        ax.set_xlim([0, int(x_max)])
+        ax.plot(t, cost, label="Credits")
+        ax.grid()
+        ax.vlines(input.time(), 0, cost[input.time()], colors='r', linestyles='dashed', label='Estimated time')
+        if input.device() == "CPU":
+            ax.hlines(y=cost[input.time()], xmin=0, xmax=input.time(), color='r', linestyle='dashed')
+        else:
+            ax.set_xticks(np.arange(0, int(x_max)+1, step=5))
+            ax.hlines(y=cost[input.time()], xmin=0, xmax=input.time(), color='r', linestyle='dashed')
+
+        ax.set(xlabel='Time in # of ' + input.time_unit(), ylabel='Credits',
+               title='Cost of running a workspace')
+
+    @render.text  
+    def estimate():
+        if input.device() == "CPU":
+            if input.time_unit() == "days":
+                cost = input.time() * input.cores() * 24
+            else:
+                cost = input.time() * input.cores()
+        else:
+            if input.time_unit() == "days":
+                cost = input.time() * input.gpus() * 24 * 18
+            else:
+                cost = input.time() * input.gpus() * 18
+        return f"{cost} credits"  
+
+app = App(app_ui, server)
+
+```
+
+
 
 ## VRE lifetime and security updates
 The recommended maximum lifetime of a VRE (or workspace) is 2 months. A lifetime longer than 2 months is only considered secure when the operating system is regulary updated by one of the users. The users are responsible for keeping the installed software up to date (patching) with regard to security updates. By limiting the lifetime of a VRE you can minimize the risk of vulnerabilities by outdated software. The UU uses scanning tools to scan active VRE's for security vulnerabilities. If the scan gives cause, the UU will contact you with the request to update software on VRE, and/or to take additional measures.

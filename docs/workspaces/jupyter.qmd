@@ -1,0 +1,67 @@
+--- 
+title: "Jupyter Notebooks"
+---
+
+## Description
+This workspace can be used to work with Jupyter Notebooks and Python. The workspace also comes with a (linux) terminal (aka command line) to install Python packages or other additional tools when relevant.
+
+Upon request we can help you to install additional Python packages and preconfigure a Python environment or automate other installations (e.g. tools for data transfer). Automating these steps will make it easier to work following our [best practices](../responsible-use.qmd).
+
+[Contact us if you need help with installations](../contact.qmd).
+
+## Creation
+
+### Create a storage volume
+First create a storage volume before creating the workspace.
+
+See the [Getting started](../first-steps.qmd#create-storage-volume) page for more info about how and why to create a storage volume.
+
+### Create a workspace
+
+In the [Research cloud portal](https://surfresearchcloud.nl) click the 'Create a new workspace' button and follow the steps in the wizzard.
+
+See the [Getting started](../first-steps.qmd#create-a-workspace) page for more guidance.
+
+## Access
+This workspace can be accessed via the yellow 'Access' button. You need a TOTP to login to your workspace, see [Workspace access with TOTP](https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace#Logintoyourworkspace-WorkspaceAccesswithTOTP).
+
+## Data transfer options
+First create a working directory on the [Storage Volume](../getting-started.qmd#where-can-i-find-the-storage-volume) using the file browser in the Jupyter dashboard.
+
+The Jupyter dashboard has an Upload button to directly upload data from your PC to the workspace. 
+
+To download a file to your PC, right click the file in the file browser in the Jupyter dashboard, and several options will show including 'Download'.
+
+Alternatively it is possible to use the terminal to transfer data from other, such as Yoda, or Surfdrive:
+
+- [Data transfer and Yoda](../manuals/icommands.qmd)
+- [Data transfer and Surfdrive](../manuals/rclone-researchcloud.qmd)
+
+## Usage
+
+### Start a Notebook
+
+If you have uploaded an existing notebook, you can start it by clicking on the notebook file in the Jupyter dashboard.
+
+To create a new notebook, click on the 'New' button in the Jupyter dashboard and select 'Python 3' under 'Notebook'.
+
+### Installing Python packages
+
+#### From within a Notebook
+To install Python packages from within a Notebook, you can use the `!pip` command. For example, to install the Python package `pandas`:
+
+```python
+!pip install pandas
+```
+
+#### Using the terminal
+To install Python packages, you can use the terminal. To start a terminal session, click on the 'New' button in the Jupyter dashboard and select 'Terminal' under 'Other'. 
+
+For example, to install the Python package `pandas`:
+
+```bash
+pip install pandas
+```
+
+## Tips
+
