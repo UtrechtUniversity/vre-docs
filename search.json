@@ -266,60 +266,53 @@
     "text": "Tips"
   },
   {
-    "objectID": "docs/workspaces/asreview_cli.html",
-    "href": "docs/workspaces/asreview_cli.html",
-    "title": "ASReview CLI",
+    "objectID": "docs/workspaces/asreview_lab.html",
+    "href": "docs/workspaces/asreview_lab.html",
+    "title": "ASReview Lab",
     "section": "",
-    "text": "This workspace can be used to work with ASReview (e.g. for simulations) via the command line interface (CLI).\nCurrently the workspace is only available upon request."
+    "text": "This workspace can be used to work with ASReview Lab.\nCurrently the workspace is for all Research Cloud users."
   },
   {
-    "objectID": "docs/workspaces/asreview_cli.html#description",
-    "href": "docs/workspaces/asreview_cli.html#description",
-    "title": "ASReview CLI",
+    "objectID": "docs/workspaces/asreview_lab.html#description",
+    "href": "docs/workspaces/asreview_lab.html#description",
+    "title": "ASReview Lab",
     "section": "",
-    "text": "This workspace can be used to work with ASReview (e.g. for simulations) via the command line interface (CLI).\nCurrently the workspace is only available upon request."
+    "text": "This workspace can be used to work with ASReview Lab.\nCurrently the workspace is for all Research Cloud users."
   },
   {
-    "objectID": "docs/workspaces/asreview_cli.html#creation",
-    "href": "docs/workspaces/asreview_cli.html#creation",
-    "title": "ASReview CLI",
+    "objectID": "docs/workspaces/asreview_lab.html#creation",
+    "href": "docs/workspaces/asreview_lab.html#creation",
+    "title": "ASReview Lab",
     "section": "Creation",
     "text": "Creation\n\nCreate a storage volume\nFirst create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the Getting started page for more guidance.\nChoosing the number of CPU cores: A workspace with more CPU cores and RAM memory will cost more credits. If you want to use a large workspace for a long period of time (many days or weeks), first try to test on small machines (e.g. a 2 core and a 4 core machine) whether a bigger machine actually does help you to get your results faster."
   },
   {
-    "objectID": "docs/workspaces/asreview_cli.html#access-options",
-    "href": "docs/workspaces/asreview_cli.html#access-options",
-    "title": "ASReview CLI",
-    "section": "Access options",
-    "text": "Access options\nThis workspace can be accessed using SSH (secure shell protocol). The research cloud documentation provides instructions on how to set up SSH for research cloud.\nTo connect to the workspace from a Windows computer you need specific software to use a ‘shell’ (also known as ‘terminal’), examples include Git Bash, PuTTY and MobaXterm. If you need to install something new, we would recommend MobaXterm\nOn MacOS and Linux machines you can use the standard ‘Terminal’."
+    "objectID": "docs/workspaces/asreview_lab.html#access",
+    "href": "docs/workspaces/asreview_lab.html#access",
+    "title": "ASReview Lab",
+    "section": "Access",
+    "text": "Access\nThis workspace can be accessed via the yellow ‘Access’ button. You need a TOTP to login to your workspace, see Workspace access with TOTP."
   },
   {
-    "objectID": "docs/workspaces/asreview_cli.html#data-transfer-options",
-    "href": "docs/workspaces/asreview_cli.html#data-transfer-options",
-    "title": "ASReview CLI",
+    "objectID": "docs/workspaces/asreview_lab.html#data-transfer-options",
+    "href": "docs/workspaces/asreview_lab.html#data-transfer-options",
+    "title": "ASReview Lab",
     "section": "Data transfer options",
-    "text": "Data transfer options\nWhen the workspace is up and running the first thing you probably need to do is transfer your dataset to the storage volume that is attached to your workspace. The storage volume can be found on the following directory path: ~/data/volume_2/. Create a folder there where you want to store your data. There are several methods to transfer data to the workspace, the recommended method depends on where the data is currently stored:\n\nData is stored on your PC\nWhen the dataset is stored on the computer you are working on now, you can use the scp command to tranfer files or folders, or the rsync command to ‘synchronize’ folders. If you have rsync installed, we would recommend this over scp, but scp is also fine.\nInstructions\n\n\nData is stored on Surfdrive (or Researchdrive, Onedrive, Dropbox, etc.)\nWhen data is stored on Surfdrive (or Researchdrive, Onedrive, Dropbox, etc.), data transfer can be done using Rclone.\nInstructions\n\n\nData is stored on Yoda\nWhen your data is stored on Yoda, data transfer can be done using iRODS icommands.\nInstructions"
+    "text": "Data transfer options\n\nInternet Browser\nThe most intuitive way to get your dataset to the workspace is by using a cloud storage platform (e.g. Surfdrive, Yoda, etc.). Within the workspace you can click ‘applications’ (topleft corner) and then open an internet browser. Use the internet browser and go to the web portal of the storage platform you use to download the data to the workspace.\n\n\nCommand line\nAlternatively it is possible to transfer data using command scp. For this you need to work with a command line application (or aka terminal) on your PC and you need get the IP address of the Workspace from the Research Cloud portal. Find complete instructions here"
   },
   {
-    "objectID": "docs/workspaces/asreview_cli.html#usage",
-    "href": "docs/workspaces/asreview_cli.html#usage",
-    "title": "ASReview CLI",
+    "objectID": "docs/workspaces/asreview_lab.html#usage",
+    "href": "docs/workspaces/asreview_lab.html#usage",
+    "title": "ASReview Lab",
     "section": "Usage",
-    "text": "Usage\nASReview and all of its extensions are preinstalled in a ‘conda’ environment. To be able to use asreview, the user should run the following commands:\n/etc/miniconda/bin/conda init\nNow logout and re-login to apply the changes.\nconda activate asreview\nNow to test if ASReview is installed:\nasreview -h"
+    "text": "Usage\nWhen you log in to this workspace, the ASReview lab web app will open automatically."
   },
   {
-    "objectID": "docs/workspaces/asreview_cli.html#tips",
-    "href": "docs/workspaces/asreview_cli.html#tips",
-    "title": "ASReview CLI",
+    "objectID": "docs/workspaces/asreview_lab.html#tips",
+    "href": "docs/workspaces/asreview_lab.html#tips",
+    "title": "ASReview Lab",
     "section": "Tips",
-    "text": "Tips\nTo practice with navigation, finding files and folders, and running programs via a Linux command line interface check this Software Carpentries course"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "VRE Documentation for UU researchers",
-    "section": "",
-    "text": "Welcome\nA Virtual Research Environment (VRE) is a temporary compute environment that enables researchers to work interactively and remotely on research. A VRE contains tools and data that scientists need for their research.\nUtrecht University provides VREs based on SURF Research Cloud, which is a good alternative for commercial cloud providers like Amazon Web Services and Microsoft Azure.\n\n\nOverview documentation\nThis page provides user documentation for Surf Research Cloud for researchers at Utrecht University. Get started using the links below!\n\nWhat is Research Cloud?\nHow to get started?\nFirst steps\nUsing a workspace\nUser manuals\nPractical tips for responsible use\nTerms of use\nPrivacy\nGlossary\nContact"
+    "text": "Tips\nBefore you log out and/or delete a workspace, don’t forget to store the results either on the storage unit (located under /data/volume_2), or upload it to an online storage platform using an internet browser within the workspace."
   },
   {
     "objectID": "docs/workspaces/jupyter.html",
@@ -369,6 +362,62 @@
     "title": "Jupyter Notebooks",
     "section": "Tips",
     "text": "Tips"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "VRE Documentation for UU researchers",
+    "section": "",
+    "text": "Welcome\nA Virtual Research Environment (VRE) is a temporary compute environment that enables researchers to work interactively and remotely on research. A VRE contains tools and data that scientists need for their research.\nUtrecht University provides VREs based on SURF Research Cloud, which is a good alternative for commercial cloud providers like Amazon Web Services and Microsoft Azure.\n\n\nOverview documentation\nThis page provides user documentation for Surf Research Cloud for researchers at Utrecht University. Get started using the links below!\n\nWhat is Research Cloud?\nHow to get started?\nFirst steps\nUsing a workspace\nUser manuals\nPractical tips for responsible use\nTerms of use\nPrivacy\nGlossary\nContact"
+  },
+  {
+    "objectID": "docs/workspaces/asreview_cli.html",
+    "href": "docs/workspaces/asreview_cli.html",
+    "title": "ASReview CLI",
+    "section": "",
+    "text": "This workspace can be used to work with ASReview (e.g. for simulations) via the command line interface (CLI).\nCurrently the workspace is only available upon request."
+  },
+  {
+    "objectID": "docs/workspaces/asreview_cli.html#description",
+    "href": "docs/workspaces/asreview_cli.html#description",
+    "title": "ASReview CLI",
+    "section": "",
+    "text": "This workspace can be used to work with ASReview (e.g. for simulations) via the command line interface (CLI).\nCurrently the workspace is only available upon request."
+  },
+  {
+    "objectID": "docs/workspaces/asreview_cli.html#creation",
+    "href": "docs/workspaces/asreview_cli.html#creation",
+    "title": "ASReview CLI",
+    "section": "Creation",
+    "text": "Creation\n\nCreate a storage volume\nFirst create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the Getting started page for more guidance.\nChoosing the number of CPU cores: A workspace with more CPU cores and RAM memory will cost more credits. If you want to use a large workspace for a long period of time (many days or weeks), first try to test on small machines (e.g. a 2 core and a 4 core machine) whether a bigger machine actually does help you to get your results faster."
+  },
+  {
+    "objectID": "docs/workspaces/asreview_cli.html#access-options",
+    "href": "docs/workspaces/asreview_cli.html#access-options",
+    "title": "ASReview CLI",
+    "section": "Access options",
+    "text": "Access options\nThis workspace can be accessed using SSH (secure shell protocol). The research cloud documentation provides instructions on how to set up SSH for research cloud.\nTo connect to the workspace from a Windows computer you need specific software to use a ‘shell’ (also known as ‘terminal’), examples include Git Bash, PuTTY and MobaXterm. If you need to install something new, we would recommend MobaXterm\nOn MacOS and Linux machines you can use the standard ‘Terminal’."
+  },
+  {
+    "objectID": "docs/workspaces/asreview_cli.html#data-transfer-options",
+    "href": "docs/workspaces/asreview_cli.html#data-transfer-options",
+    "title": "ASReview CLI",
+    "section": "Data transfer options",
+    "text": "Data transfer options\nWhen the workspace is up and running the first thing you probably need to do is transfer your dataset to the storage volume that is attached to your workspace. The storage volume can be found on the following directory path: ~/data/volume_2/. Create a folder there where you want to store your data. There are several methods to transfer data to the workspace, the recommended method depends on where the data is currently stored:\n\nData is stored on your PC\nWhen the dataset is stored on the computer you are working on now, you can use the scp command to tranfer files or folders, or the rsync command to ‘synchronize’ folders. If you have rsync installed, we would recommend this over scp, but scp is also fine.\nInstructions\n\n\nData is stored on Surfdrive (or Researchdrive, Onedrive, Dropbox, etc.)\nWhen data is stored on Surfdrive (or Researchdrive, Onedrive, Dropbox, etc.), data transfer can be done using Rclone.\nInstructions\n\n\nData is stored on Yoda\nWhen your data is stored on Yoda, data transfer can be done using iRODS icommands.\nInstructions"
+  },
+  {
+    "objectID": "docs/workspaces/asreview_cli.html#usage",
+    "href": "docs/workspaces/asreview_cli.html#usage",
+    "title": "ASReview CLI",
+    "section": "Usage",
+    "text": "Usage\nASReview and all of its extensions are preinstalled in a ‘conda’ environment. To be able to use asreview, the user should run the following commands:\n/etc/miniconda/bin/conda init\nNow logout and re-login to apply the changes.\nconda activate asreview\nNow to test if ASReview is installed:\nasreview -h"
+  },
+  {
+    "objectID": "docs/workspaces/asreview_cli.html#tips",
+    "href": "docs/workspaces/asreview_cli.html#tips",
+    "title": "ASReview CLI",
+    "section": "Tips",
+    "text": "Tips\nTo practice with navigation, finding files and folders, and running programs via a Linux command line interface check this Software Carpentries course"
   },
   {
     "objectID": "docs/workspaces/template.html#creation",
@@ -571,7 +620,7 @@
     "href": "docs/workspace-catalogue.html",
     "title": "Workspace Catalogue",
     "section": "",
-    "text": "This page provides links to user documentation for workspaces developed by Utrecht University\n\nAnaconda Navigator\nASReview command line\nASReview Lab\nJupyter Notebooks\nMatlab\nMiniconda\nPython Workbench\nRStudio\nWhisper OpenAI"
+    "text": "This page provides links to user documentation for workspaces developed by Utrecht University\n\nAnaconda Navigator\nASReview command line\nASReview Lab\nASReview Lab\nJupyter Notebooks\nMatlab\nMiniconda\nPython Workbench\nRStudio\nWhisper OpenAI"
   },
   {
     "objectID": "docs/manuals/rclone-transferringdata.html",
