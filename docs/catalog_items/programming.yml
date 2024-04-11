@@ -1,0 +1,127 @@
+- name: Python Workbench
+  link: './workspaces/python-workbench.qmd'
+  software:
+  - Python
+  - poetry
+  - miniconda
+  login:
+  - Desktop
+  - CLI
+  os:
+  - Ubuntu 20.04
+  - Ubuntu 22.04
+  data:
+  - ResearchDrive
+  - irods-icommands
+  - Yoda Webdav
+  - iBridges (python)
+  packages:
+  - Custom Packages
+  gpu: false
+  admin: true
+  support: UU
+- name: Python Workbench CUDA
+  link: './workspaces/python-workbench.qmd'
+  software:
+  - CUDA
+  - Python
+  - poetry
+  - miniconda
+  login:
+  - Desktop
+  - CLI
+  os:
+  - Ubuntu 20.04
+  - Ubuntu 22.04
+  data:
+  - ResearchDrive
+  - irods-icommands
+  - Yoda Webdav
+  packages:
+  - Custom Packages
+  gpu: true
+  admin: true
+  support: UU
+- name: Matlab
+  link: './workspaces/matlab.qmd'
+  software:
+  - Matlab
+  login:
+  - Desktop
+  - CLI
+  os:
+  - Ubuntu 22.04
+  data:
+  - ResearchDrive
+  - irods-icommands
+  - Yoda Webdav
+  packages: []
+  gpu: false
+  admin: true
+  support: UU
+- name: Stata
+  software:
+  - Stata
+  login:
+  - Desktop
+  - CLI
+  os:
+  - Ubuntu 22.04
+  data:
+  - ResearchDrive
+  - irods-icommands
+  - Yoda Webdav
+  packages: []
+  gpu: false
+  admin: true
+  support: UU
+- name: Jupyter Notebooks
+  link: './workspaces/jupyter.qmd'
+  software:
+  - Jupyter Lab
+  login:
+  - Web Application (SSO)
+  os:
+  - Ubuntu 22.04
+  data:
+  - ResearchDrive
+  - irods-icommands
+  - iBridges (python)
+  packages:
+  - Custom Packages
+  gpu: false
+  admin: true
+  support: SURF
+- name: Jupyter Notebooks CUDA
+  link: './workspaces/jupyter.qmd'
+  software:
+  - CUDA
+  - Jupyter Lab
+  login:
+  - Web Application (SSO)
+  os:
+  - Ubuntu 22.04
+  data:
+  - ResearchDrive
+  - irods-icommands
+  - iBridges (python)
+  packages:
+  - Custom Packages
+  gpu: true
+  admin: true
+  support: SURF
+- name: RStudio
+  link: './workspaces/rstudio.qmd'
+  software:
+  - RStudio
+  login:
+  - Web Application (totp)
+  os:
+  - Ubuntu 22.04
+  data:
+  - ResearchDrive
+  - irods-icommands
+  packages: []
+  gpu: false
+  admin: true
+  support: SURF

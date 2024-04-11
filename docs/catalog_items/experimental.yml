@@ -1,0 +1,13 @@
+- name: ASReview Server
+  software:
+  - ASReview
+  login:
+  - Web Application (SSO)
+  os:
+  - Ubuntu 22.04
+  data:
+  - ResearchDrive
+  packages: []
+  gpu: true
+  admin: false
+  support: UU

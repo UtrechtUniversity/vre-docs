@@ -1,16 +1,71 @@
 ---
 title: "Workspace Catalogue"
+execute:
+  echo: false
 ---
 
-This page provides links to user documentation for workspaces developed by Utrecht University
+This page provides an overview of workspace types (so-called "Catalog Items" on Research Cloud) supported by Utrecht University. This overview includes primarily Catalog Items developed by UU, but also some commonly used Catalog Items developed by third parties (SURF).
 
-- Anaconda Navigator
-- [ASReview command line](workspaces/asreview_cli.qmd)
-- [ASReview Lab](workspaces/asreview_lab.qmd)
-- ASReview Lab
-- [Jupyter Notebooks](workspaces/jupyter.qmd)
-- [Matlab](workspaces/matlab.qmd)
-- Miniconda
-- Python Workbench
-- [RStudio](workspaces/rstudio.qmd)
-- [Whisper OpenAI](workspaces/whisper.qmd)
+```{python}
+import yaml
+from tabulate import tabulate
+from IPython.display import Markdown
+
+table_headers = ["Name", "Software preinstalled", "Access method", "OS", "Data management", "GPU available", "Owner"]
+table_columns = ['name', 'software', 'login', 'os', 'data', 'gpu', 'support']
+
+def format_cell(column, value):
+    if type(value) is bool:
+        return "Yes" if value else "No"
+    elif type(value) is list:
+        return ",<br/>".join(value)
+    elif type(value) is str:
+        return value
+
+def format_workspace(workspace):
+    row = [format_cell(k, workspace[k]) for k in table_columns]
+    if 'link' in workspace.keys():
+        row[0] = "[{}]({})".format(row[0], workspace['link'])
+    return row
+
+def tabulize(workspaces):
+    return Markdown(tabulate(
+        [ format_workspace(w) for w in workspaces], 
+        headers=table_headers
+    ))
+
+workspace_types = {
+    'plain': None,
+    'programming': None,
+    'utility': None,
+    'experimental': None
+}
+
+for wt in workspace_types.keys():
+    with open("catalog_items/{}.yml".format(wt)) as stream:
+        workspace_types[wt] = yaml.safe_load(stream)
+```
+
+# Programming & Analysis Environments
+
+```{python}
+tabulize(workspace_types['programming'])
+```
+
+# Plain Workspaces
+
+```{python}
+tabulize(workspace_types['plain'])
+```
+
+# Utilities & Analysis
+
+```{python}
+tabulize(workspace_types['utility'])
+```
+
+# Experimental
+
+```{python}
+tabulize(workspace_types['experimental'])
+```
