@@ -1,0 +1,3 @@
+shinylive
+py-markdown-table
+tabulate
