@@ -1,0 +1,28 @@
+--- 
+title: "Grobid"
+software:
+- '[Grobid](https://grobid.readthedocs.io/)'
+login:
+- webapp-sso
+os_flavor: linux
+os:
+- Ubuntu 22.04
+data: []
+packages: []
+gpu: true
+admin: false
+support: UU
+---
+
+## Description
+
+## Creation
+
+## Access
+
+## Data transfer options
+
+## Usage
+
+## Tips
+

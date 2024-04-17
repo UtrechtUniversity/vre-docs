@@ -1,0 +1,26 @@
+--- 
+title: Python Workbench
+software:
+- Python
+- poetry
+- miniconda
+login:
+- desktop
+- cli
+os_flavor: linux
+os:
+- Ubuntu 20.04
+- Ubuntu 22.04
+data:
+- ResearchDrive
+- irods-icommands
+- Yoda Webdav
+- iBridges (python)
+packages:
+- Custom Packages
+gpu: false
+admin: true
+support: UU
+---
+
+{{< include partials/_python_workbench.qmd >}}

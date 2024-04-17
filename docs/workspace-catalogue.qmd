@@ -4,68 +4,129 @@ execute:
   echo: false
 ---
 
-This page provides an overview of workspace types (so-called "Catalog Items" on Research Cloud) supported by Utrecht University. This overview includes primarily Catalog Items developed by UU, but also some commonly used Catalog Items developed by third parties (SURF).
+```{python}
+# Tuple of subdirectories that contain the documentation for different categories of workspaces.
+# The frontmatter from the files in these directories will be parsed and displayed in the tables below.
+categories = (
+    'programming',
+    'plain',
+    'utility',
+    'experimental',
+)
+```
+
+This page provides an overview of workspace types (called "Catalog Items" on Research Cloud) supported by Utrecht University. This overview includes primarily Catalog Items developed by UU, but also some commonly used Catalog Items developed by SURF.
+
+Please note **this is not constitute a full list of available workspace types on ResearchCloud**: there are many more developed by other institutions.
+
+If there is a specific environment application, or software package you think you might need, please [contact us for help](mailto:research.engineering@uu.nl). If what you require is not yet available on ResearchCloud, we can also help you to create custom Catalog Items.
+
+### Legend
+
+* {{< iconify carbon terminal label='Access the workspace via the command line' title='Access the workspace via the command line' >}} Access the workspace via the command line
+* {{< iconify carbon gui label='Access the workspace using a desktop environment' title='Access the workspace using a desktop environment' >}} Access the workspace as a remote desktop.
+* {{< iconify carbon network-public label='Access the workspace using a desktop environment' title='Access the workspace using a desktop environment' >}} Access application via the browser.
 
 ```{python}
 import yaml
 from tabulate import tabulate
 from IPython.display import Markdown
+import re
 
-table_headers = ["Name", "Software preinstalled", "Access method", "OS", "Data management", "GPU available", "Owner"]
-table_columns = ['name', 'software', 'login', 'os', 'data', 'gpu', 'support']
+table_headers = ["Name", "Software preinstalled", "Access methods", "OS", "GPU", "Misc", "Owner"]
+table_columns = ['title', 'software', 'login', 'os_flavor', 'gpu',  'misc', 'support']
+table_alignment = ('left', 'left', 'center', 'center', 'center', 'left', 'center')
 
-def format_cell(column, value):
+from IPython.core.display import HTML
+table_css = 'table {align:centre;display:block} '
+HTML('<style>{}</style>'.format(table_css))
+
+icon_terminal = '<iconify-icon inline="" icon="carbon:terminal" width="1.5em" height="1.5em" aria-label="Access the workspace via the command line" title="Access the workspace via the command line"></iconify-icon>'
+icon_gui = '<iconify-icon inline="" icon="carbon:gui" width="1.5em" height="1.5em" aria-label="Access the workspace as a remote desktop" title="Access the workspace as a remote desktop"></iconify-icon>'
+icon_browser = '<iconify-icon icon="carbon:network-public" width="1.5em" height="1.5em" aria-label="Access application via the browser" title="Access application via the browser"></iconify-icon>'
+
+icon_check = '<iconify-icon icon="carbon:checkmark" width="1.5em" height="1.5em" aria-label="Yes" title="Yes"></iconify-icon>'
+icon_linux = '<iconify-icon icon="uil:linux" width="2em" height="2em" aria-label="Linux" title="Linux"></iconify-icon>'
+icon_yoda  = '<img src="yoda.png" width="25px" height="25px"></img>'
+
+def iconify(key):
+    if key == 'cli':
+        return icon_terminal
+    elif key == 'desktop':
+        return icon_gui
+    elif key.startswith('webapp'):
+        return icon_browser
+    elif key == 'linux':
+        return icon_linux
+    elif key == 'ResearchDrive':
+        return icon_yoda
+    else:
+        return None
+
+def format_list(list):
+    return "<br/>".join(
+        map(format_cell, list)
+    )
+
+def format_cell(value):
     if type(value) is bool:
-        return "Yes" if value else "No"
+        return icon_check if value else ""
     elif type(value) is list:
-        return ",<br/>".join(value)
+        return format_list(value)
     elif type(value) is str:
-        return value
+        return iconify(value) or value
 
 def format_workspace(workspace):
-    row = [format_cell(k, workspace[k]) for k in table_columns]
-    if 'link' in workspace.keys():
-        row[0] = "[{}]({})".format(row[0], workspace['link'])
+    row = [format_cell(value=workspace.get(k, '')) for k in table_columns]
+    row[0] = "[{}]({})".format(row[0], workspace.get('link', ''))
     return row
 
-def tabulize(workspaces):
-    return Markdown(tabulate(
+def tabulize(workspaces, headers=table_headers, alignment=table_alignment):
+    return tabulate(
         [ format_workspace(w) for w in workspaces], 
-        headers=table_headers
-    ))
+        headers=headers,
+        colalign=alignment
+    )
 
-workspace_types = {
-    'plain': None,
-    'programming': None,
-    'utility': None,
-    'experimental': None
-}
+categories_with_workspaces = {}
 
-for wt in workspace_types.keys():
-    with open("catalog_items/{}.yml".format(wt)) as stream:
-        workspace_types[wt] = yaml.safe_load(stream)
+from pathlib import Path
+import frontmatter
+
+for category_path in categories:
+    categories_with_workspaces[category_path] = []
+    pathlist = Path('workspaces/{}'.format(category_path)).glob('*.qmd')
+    for path in pathlist:
+        with open(path) as f:
+            fm, _content = frontmatter.parse(f.read())
+            fm['link'] = str(path)
+            categories_with_workspaces[category_path].append(fm)
+
+
+def display_category(name, headers=table_headers):
+    workspaces = sorted(categories_with_workspaces[name], key=lambda d: d.get('title', ''))
+    result = tabulize(workspaces, headers=headers)
+    return Markdown(result)
 ```
+
 
 # Programming & Analysis Environments
-
 ```{python}
-tabulize(workspace_types['programming'])
+display_category('programming')
 ```
+
 
 # Plain Workspaces
-
 ```{python}
-tabulize(workspace_types['plain'])
+display_category('plain')
 ```
 
-# Utilities & Analysis
-
+# Utilities & Data Processing
 ```{python}
-tabulize(workspace_types['utility'])
+display_category('utility')
 ```
 
 # Experimental
-
 ```{python}
-tabulize(workspace_types['experimental'])
+display_category('experimental')
 ```

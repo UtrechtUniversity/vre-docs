@@ -1,0 +1,22 @@
+--- 
+title: "Jupyter Notebooks CUDA"
+software:
+- Jupyter Lab
+login:
+- webapp-sso
+os_flavor: linux
+os:
+- Ubuntu 22.04
+researchdrive: true
+data:
+- ResearchDrive
+- irods-icommands
+- iBridges (python)
+packages:
+- Custom Packages
+gpu: false
+admin: true
+support: SURF
+---
+
+{{< include partials/_jupyter.qmd >}}

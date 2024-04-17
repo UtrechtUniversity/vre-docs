@@ -1,5 +1,18 @@
 --- 
 title: "Whisper OpenAI CUDA 11"
+software:
+- '[WhisperX](https://github.com/m-bain/whisperX)'
+login:
+- desktop
+- cli
+os_flavor: linux
+os:
+- Ubuntu 20.04 ???
+data: ['???']
+packages: ['???']
+gpu: true
+admin: false
+support: UU
 ---
 
 ## Description
@@ -7,26 +20,26 @@ This workspace can be used to work with the Whisper model from OpenAI (e.g. for 
 
 The workspace is a JupyterHub workspace, and comes with a template notebook to transcribe, translate and diarize audio files. The workspace is mainly aimed for users that have at least some very basic Python experience using Jupyter notebooks. However the workspace also provides a terminal (command line application) to run Whisper using the command line.
 
-Currently the workspace is only available [upon request](../contact.qmd).
+Currently the workspace is only available [upon request](../../contact.qmd).
 
 ## Creation
 
 ### Create a storage volume
 First create a storage volume before creating the workspace.
 
-See the [Getting started](../first-steps.qmd#create-storage-volume) page for more info about how and why to create a storage volume.
+See the [Getting started](../../first-steps.qmd#create-storage-volume) page for more info about how and why to create a storage volume.
 
 ### Create a workspace
 
 In the [Research cloud portal](https://surfresearchcloud.nl) click the 'Create a new workspace' button and follow the steps in the wizzard.
 
-See the [Getting started](../first-steps.qmd#create-a-workspace) page for more guidance.
+See the [Getting started](../../first-steps.qmd#create-a-workspace) page for more guidance.
 
 ## Access
 This workspace can be accessed via the yellow 'Access' button. You need a TOTP to login to your workspace, see [Workspace access with TOTP](https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace#Logintoyourworkspace-WorkspaceAccesswithTOTP).
 
 ## Data transfer options
-First create a working directory on the [Storage Volume](../getting-started.qmd#where-can-i-find-the-storage-volume)
+First create a working directory on the [Storage Volume](../../first-steps.qmd#where-can-i-find-the-storage-volume)
 
 The JupyterHub dashboard has an Upload button to directly upload data from your computer. 
 

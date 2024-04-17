@@ -1,5 +1,23 @@
 --- 
-title: "MATLAB"
+title: "Matlab"
+software:
+- Matlab
+login:
+- desktop
+- cli
+os_flavor: linux
+os:
+- Ubuntu 22.04
+data:
+- ResearchDrive
+- irods-icommands
+- Yoda Webdav
+misc:
+- License needed
+packages: []
+gpu: false
+admin: true
+support: UU
 ---
 
 ## Description
@@ -9,13 +27,13 @@ This workspace is an Ubuntu Desktop workspace with MATLAB installed. Ubuntu Desk
 ## Creation
 In the [Research cloud portal](https://surfresearchcloud.nl) click the 'Create a new workspace' button and follow the steps in the wizzard.
 
-See the [Getting started](../first-steps.qmd#create-a-workspace) page for more guidance.
+See the [Getting started](../../first-steps.qmd#create-a-workspace) page for more guidance.
 
 ## Access
 This workspace can be accessed via the yellow 'Access' button. You need a TOTP to login to your workspace, see [Workspace access with TOTP](https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace#Logintoyourworkspace-WorkspaceAccesswithTOTP).
 
 ## Data transfer options
-First create a working directory on the [Storage Volume](../first-steps.qmd#where-can-i-find-the-storage-volume)
+First create a working directory on the [Storage Volume](../../first-steps.qmd#where-can-i-find-the-storage-volume)
 
 When data is stored on Surfdrive (or Researchdrive, Onedrive, Dropbox, etc.), use the internet browser Firefox **within** the workspace to download files from Surfdrive (or alternative storage platform). Click on 'Applications' in the top left corner of the screen and click on 'Internet' to find Firefox.
 Then go to e.g. surfdrive.surf.nl (or dropbox.com, etc.) to open the web portal.
