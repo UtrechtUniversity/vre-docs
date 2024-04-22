@@ -1,24 +1,37 @@
 --- 
 title: "ASReview CLI"
+software:
+- '[ASReview](https://asreview.nl/)'
+login:
+- cli
+os_flavor: linux
+os:
+- Ubuntu 22.04
+data:
+- ResearchDrive
+packages: []
+gpu: true
+admin: true
+support: UU
 ---
 
 ## Description
 This workspace can be used to work with ASReview (e.g. for simulations) via the command line interface (CLI).
 
-Currently the workspace is only available [upon request](../contact.qmd).
+Currently the workspace is only available [upon request](../../contact.qmd).
 
 ## Creation
 
 ### Create a storage volume
 First create a storage volume before creating the workspace.
 
-See the [Getting started](../first-steps.qmd#create-storage-volume) page for more info about how and why to create a storage volume.
+See the [Getting started](../../first-steps.qmd#create-storage-volume) page for more info about how and why to create a storage volume.
 
 ### Create a workspace
 
 In the [Research cloud portal](https://portal.live.surfresearchcloud.nl) click the 'Create a new workspace' button and follow the steps in the wizzard.
 
-See the [Getting started](../first-steps.qmd#create-a-workspace) page for more guidance.
+See the [Getting started](../../first-steps.qmd#create-a-workspace) page for more guidance.
 
 **Choosing the number of CPU cores**: A workspace with more CPU cores and RAM memory will cost more credits. If you want to use a large workspace for a long period of time (many days or weeks), first try to test on small machines (e.g. a 2 core and a 4 core machine) whether a bigger machine actually does help you to get your results faster.
 
@@ -36,18 +49,18 @@ When the workspace is up and running the first thing you probably need to do is 
 ### Data is stored on your PC
 When the dataset is stored on the computer you are working on now, you can use the `scp` command to tranfer files or folders, or the `rsync` command to 'synchronize' folders. If you have `rsync` installed, we would recommend this over `scp`, but `scp` is also fine.
 
-[Instructions](../manuals/ssh-data-transfer-methods.qmd)
+[Instructions](../../manuals/ssh-data-transfer-methods.qmd)
 
 ### Data is stored on Surfdrive (or Researchdrive, Onedrive, Dropbox, etc.)
 When data is stored on Surfdrive (or Researchdrive, Onedrive, Dropbox, etc.), data transfer can be done using Rclone.
 
-[Instructions](../manuals/rclone-researchcloud.qmd)
+[Instructions](../../manuals/rclone-researchcloud.qmd)
 
 ### Data is stored on Yoda
 
 When your data is stored on Yoda, data transfer can be done using iRODS icommands.
 
-[Instructions](../manuals/icommands.qmd)
+[Instructions](../../manuals/icommands.qmd)
 
 
 ## Usage

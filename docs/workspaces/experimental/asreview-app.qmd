@@ -1,27 +1,19 @@
 --- 
-title: "workspace name"
-execute:
-  echo: false
+title: ASReview Webapp
 software:
-- Package 1
-- Package 2
+- '[ASReview](https://asreview.nl/)'
 login:
-- webapp-totp
+- webapp-sso
 os_flavor: linux
 os:
 - Ubuntu 22.04
 data:
 - ResearchDrive
-- irods-icommands
 packages: []
-gpu: false
-admin: true
+gpu: true
+admin: false
 support: UU
-misc:
-- License needed?
 ---
-
-
 
 ## Description
 

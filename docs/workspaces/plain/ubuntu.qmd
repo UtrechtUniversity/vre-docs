@@ -1,0 +1,23 @@
+--- 
+title: "Ubuntu"
+software: []
+login:
+- desktop
+- cli
+os_flavor: linux
+os:
+- Ubuntu 20.04
+- Ubuntu 22.04
+data:
+- ResearchDrive
+- irods-icommands
+- Yoda Webdav
+packages:
+- Custom Packages
+gpu: false
+admin: true
+support: SURF
+---
+
+{{< include partials/_ubuntu.qmd >}}
+

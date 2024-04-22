@@ -1,0 +1,25 @@
+--- 
+title: "Ubuntu CUDA"
+software:
+- CUDA
+login:
+- desktop
+- cli
+os_flavor: linux
+os:
+- Ubuntu 20.04
+- Ubuntu 22.04
+data:
+- ResearchDrive
+- irods-icommands
+- Yoda Webdav
+- iBridges (python)
+packages:
+- Custom Packages
+gpu: true
+admin: true
+support: SURF
+---
+
+{{< include partials/_ubuntu.qmd >}}
+

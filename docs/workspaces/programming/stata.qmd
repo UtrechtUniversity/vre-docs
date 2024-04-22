@@ -1,27 +1,24 @@
 --- 
-title: "workspace name"
-execute:
-  echo: false
+title: "Stata"
 software:
-- Package 1
-- Package 2
+- Stata
 login:
-- webapp-totp
+- desktop
+- cli
 os_flavor: linux
 os:
 - Ubuntu 22.04
 data:
 - ResearchDrive
 - irods-icommands
+- Yoda Webdav
 packages: []
 gpu: false
 admin: true
-support: UU
 misc:
-- License needed?
+- License needed
+support: UU
 ---
-
-
 
 ## Description
 

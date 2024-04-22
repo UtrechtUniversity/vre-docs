@@ -1,5 +1,20 @@
 --- 
 title: "ASReview Lab"
+software:
+- '[ASReview](https://asreview.nl/)'
+login:
+- desktop
+- cli
+os_flavor: linux
+os:
+- Ubuntu 22.04
+data:
+- ResearchDrive
+- Yoda Webdav
+packages: []
+gpu: true
+admin: true
+support: UU
 ---
 
 ## Description
@@ -12,13 +27,13 @@ Currently the workspace is for all Research Cloud users.
 ### Create a storage volume
 First create a storage volume before creating the workspace.
 
-See the [Getting started](getting-started.qmd#create-storage-volume) page for more info about how and why to create a storage volume.
+See the [Getting started](../../first-steps.qmd#create-storage-volume) page for more info about how and why to create a storage volume.
 
 ### Create a workspace
 
 In the [Research cloud portal](https://portal.live.surfresearchcloud.nl) click the 'Create a new workspace' button and follow the steps in the wizzard.
 
-See the [Getting started](getting-started.qmd#create-a-workspace) page for more guidance.
+See the [Getting started](../../first-steps.qmd#create-a-workspace) page for more guidance.
 
 **Choosing the number of CPU cores**: A workspace with more CPU cores and RAM memory will cost more credits. If you want to use a large workspace for a long period of time (many days or weeks), first try to test on small machines (e.g. a 2 core and a 4 core machine) whether a bigger machine actually does help you to get your results faster.
 
@@ -30,7 +45,7 @@ This workspace can be accessed via the yellow 'Access' button. You need a TOTP t
 The most intuitive way to get your dataset to the workspace is by using a cloud storage platform (e.g. Surfdrive, Yoda, etc.). Within the workspace you can click 'applications' (topleft corner) and then open an internet browser. Use the internet browser and go to the web portal of the storage platform you use to download the data to the workspace.
 
 ### Command line
-Alternatively it is possible to transfer data using command `scp`. For this you need to work with a command line application (or aka terminal) on your PC and you need get the IP address of the Workspace from the Research Cloud portal. Find complete instructions [here](../manuals/ssh-data-transfer-methods.qmd)
+Alternatively it is possible to transfer data using command `scp`. For this you need to work with a command line application (or aka terminal) on your PC and you need get the IP address of the Workspace from the Research Cloud portal. Find complete instructions [here](../../manuals/ssh-data-transfer-methods.qmd)
 
 ## Usage
 When you log in to this workspace, the ASReview lab web app will open automatically. 

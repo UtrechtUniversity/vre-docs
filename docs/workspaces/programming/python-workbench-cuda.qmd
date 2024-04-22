@@ -1,0 +1,26 @@
+--- 
+title: Python Workbench CUDA
+software:
+- CUDA
+- Python
+- poetry
+- miniconda
+login:
+- desktop
+- cli
+os_flavor: linux
+os:
+- Ubuntu 20.04
+- Ubuntu 22.04
+data:
+- ResearchDrive
+- irods-icommands
+- Yoda Webdav
+packages:
+- Custom Packages
+gpu: true
+admin: true
+support: UU
+---
+
+{{< include partials/_python_workbench.qmd >}}
