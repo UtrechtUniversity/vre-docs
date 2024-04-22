@@ -39,6 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/iconify-2.0.0/iconify-icon.min.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -139,7 +140,17 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#legend" id="toc-legend" class="nav-link active" data-scroll-target="#legend">Legend</a></li>
+  <li><a href="#programming-analysis-environments" id="toc-programming-analysis-environments" class="nav-link" data-scroll-target="#programming-analysis-environments">Programming &amp; Analysis Environments</a></li>
+  <li><a href="#plain-workspaces" id="toc-plain-workspaces" class="nav-link" data-scroll-target="#plain-workspaces">Plain Workspaces</a></li>
+  <li><a href="#utilities-data-processing" id="toc-utilities-data-processing" class="nav-link" data-scroll-target="#utilities-data-processing">Utilities &amp; Data Processing</a></li>
+  <li><a href="#experimental" id="toc-experimental" class="nav-link" data-scroll-target="#experimental">Experimental</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/UtrechtUniversity/vre-docs/edit/main/docs/workspace-catalogue.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -163,21 +174,233 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This page provides links to user documentation for workspaces developed by Utrecht University</p>
+<p>This page provides an overview of workspace types (called “Catalog Items” on Research Cloud) supported by Utrecht University. This overview includes primarily Catalog Items developed by UU, but also some commonly used Catalog Items developed by SURF.</p>
+<p>Please note <strong>this is not constitute a full list of available workspace types on ResearchCloud</strong>: there are many more developed by other institutions.</p>
+<p>If there is a specific environment application, or software package you think you might need, please <a href="mailto:research.engineering@uu.nl">contact us for help</a>. If what you require is not yet available on ResearchCloud, we can also help you to create custom Catalog Items.</p>
+<section id="legend" class="level3">
+<h3 class="anchored" data-anchor-id="legend">Legend</h3>
 <ul>
-<li>Anaconda Navigator</li>
-<li><a href="../docs/workspaces/asreview_cli.html">ASReview command line</a></li>
-<li><a href="../docs/workspaces/asreview_lab.html">ASReview Lab</a></li>
-<li>ASReview Lab</li>
-<li><a href="../docs/workspaces/jupyter.html">Jupyter Notebooks</a></li>
-<li><a href="../docs/workspaces/matlab.html">Matlab</a></li>
-<li>Miniconda</li>
-<li>Python Workbench</li>
-<li><a href="../docs/workspaces/rstudio.html">RStudio</a></li>
-<li><a href="../docs/workspaces/whisper.html">Whisper OpenAI</a></li>
+<li><iconify-icon inline="" icon="carbon:terminal" aria-label="Access the workspace via the command line" title="Access the workspace via the command line"></iconify-icon> Access the workspace via the command line</li>
+<li><iconify-icon inline="" icon="carbon:gui" aria-label="Access the workspace using a desktop environment" title="Access the workspace using a desktop environment"></iconify-icon> Access the workspace as a remote desktop.</li>
+<li><iconify-icon inline="" icon="carbon:network-public" aria-label="Access the workspace using a desktop environment" title="Access the workspace using a desktop environment"></iconify-icon> Access application via the browser.</li>
 </ul>
+</section>
+<section id="programming-analysis-environments" class="level1">
+<h1>Programming &amp; Analysis Environments</h1>
+<div id="217f6466" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="3">
+<table class="table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Software preinstalled</th>
+<th style="text-align: center;">Access methods</th>
+<th style="text-align: center;">OS</th>
+<th style="text-align: center;">GPU</th>
+<th style="text-align: left;">Misc</th>
+<th style="text-align: center;">Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><a href="../docs/workspaces/programming/jupyter.html">Jupyter Notebooks</a></td>
+<td style="text-align: left;">CUDA<br>Jupyter Lab</td>
+<td style="text-align: center;"><iconify-icon icon="carbon:network-public" width="1.5em" height="1.5em" aria-label="Access application via the browser" title="Access application via the browser"></iconify-icon></td>
+<td style="text-align: center;"><iconify-icon icon="uil:linux" width="2em" height="2em" aria-label="Linux" title="Linux"></iconify-icon></td>
+<td style="text-align: center;"><iconify-icon icon="carbon:checkmark" width="1.5em" height="1.5em" aria-label="Yes" title="Yes"></iconify-icon></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">SURF</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="../docs/workspaces/programming/jupyter-cuda.html">Jupyter Notebooks CUDA</a></td>
+<td style="text-align: left;">Jupyter Lab</td>
+<td style="text-align: center;"><iconify-icon icon="carbon:network-public" width="1.5em" height="1.5em" aria-label="Access application via the browser" title="Access application via the browser"></iconify-icon></td>
+<td style="text-align: center;"><iconify-icon icon="uil:linux" width="2em" height="2em" aria-label="Linux" title="Linux"></iconify-icon></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">SURF</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="../docs/workspaces/programming/matlab.html">Matlab</a></td>
+<td style="text-align: left;">Matlab</td>
+<td style="text-align: center;"><iconify-icon inline="" icon="carbon:gui" width="1.5em" height="1.5em" aria-label="Access the workspace as a remote desktop" title="Access the workspace as a remote desktop"></iconify-icon><br><iconify-icon inline="" icon="carbon:terminal" width="1.5em" height="1.5em" aria-label="Access the workspace via the command line" title="Access the workspace via the command line"></iconify-icon></td>
+<td style="text-align: center;"><iconify-icon icon="uil:linux" width="2em" height="2em" aria-label="Linux" title="Linux"></iconify-icon></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">License needed</td>
+<td style="text-align: center;">UU</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="../docs/workspaces/programming/python-workbench.html">Python Workbench</a></td>
+<td style="text-align: left;">Python<br>poetry<br>miniconda</td>
+<td style="text-align: center;"><iconify-icon inline="" icon="carbon:gui" width="1.5em" height="1.5em" aria-label="Access the workspace as a remote desktop" title="Access the workspace as a remote desktop"></iconify-icon><br><iconify-icon inline="" icon="carbon:terminal" width="1.5em" height="1.5em" aria-label="Access the workspace via the command line" title="Access the workspace via the command line"></iconify-icon></td>
+<td style="text-align: center;"><iconify-icon icon="uil:linux" width="2em" height="2em" aria-label="Linux" title="Linux"></iconify-icon></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">UU</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="../docs/workspaces/programming/python-workbench-cuda.html">Python Workbench CUDA</a></td>
+<td style="text-align: left;">CUDA<br>Python<br>poetry<br>miniconda</td>
+<td style="text-align: center;"><iconify-icon inline="" icon="carbon:gui" width="1.5em" height="1.5em" aria-label="Access the workspace as a remote desktop" title="Access the workspace as a remote desktop"></iconify-icon><br><iconify-icon inline="" icon="carbon:terminal" width="1.5em" height="1.5em" aria-label="Access the workspace via the command line" title="Access the workspace via the command line"></iconify-icon></td>
+<td style="text-align: center;"><iconify-icon icon="uil:linux" width="2em" height="2em" aria-label="Linux" title="Linux"></iconify-icon></td>
+<td style="text-align: center;"><iconify-icon icon="carbon:checkmark" width="1.5em" height="1.5em" aria-label="Yes" title="Yes"></iconify-icon></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">UU</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="../docs/workspaces/programming/rstudio.html">RStudio</a></td>
+<td style="text-align: left;">RStudio</td>
+<td style="text-align: center;"><iconify-icon icon="carbon:network-public" width="1.5em" height="1.5em" aria-label="Access application via the browser" title="Access application via the browser"></iconify-icon></td>
+<td style="text-align: center;"><iconify-icon icon="uil:linux" width="2em" height="2em" aria-label="Linux" title="Linux"></iconify-icon></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">SURF</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="../docs/workspaces/programming/stata.html">Stata</a></td>
+<td style="text-align: left;">Stata</td>
+<td style="text-align: center;"><iconify-icon inline="" icon="carbon:gui" width="1.5em" height="1.5em" aria-label="Access the workspace as a remote desktop" title="Access the workspace as a remote desktop"></iconify-icon><br><iconify-icon inline="" icon="carbon:terminal" width="1.5em" height="1.5em" aria-label="Access the workspace via the command line" title="Access the workspace via the command line"></iconify-icon></td>
+<td style="text-align: center;"><iconify-icon icon="uil:linux" width="2em" height="2em" aria-label="Linux" title="Linux"></iconify-icon></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">License needed</td>
+<td style="text-align: center;">UU</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="plain-workspaces" class="level1">
+<h1>Plain Workspaces</h1>
+<div id="683a8116" class="cell" data-execution_count="4">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="4">
+<table class="table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Software preinstalled</th>
+<th style="text-align: center;">Access methods</th>
+<th style="text-align: center;">OS</th>
+<th style="text-align: center;">GPU</th>
+<th style="text-align: left;">Misc</th>
+<th style="text-align: center;">Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><a href="../docs/workspaces/plain/ubuntu.html">Ubuntu</a></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"><iconify-icon inline="" icon="carbon:gui" width="1.5em" height="1.5em" aria-label="Access the workspace as a remote desktop" title="Access the workspace as a remote desktop"></iconify-icon><br><iconify-icon inline="" icon="carbon:terminal" width="1.5em" height="1.5em" aria-label="Access the workspace via the command line" title="Access the workspace via the command line"></iconify-icon></td>
+<td style="text-align: center;"><iconify-icon icon="uil:linux" width="2em" height="2em" aria-label="Linux" title="Linux"></iconify-icon></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">SURF</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="../docs/workspaces/plain/ubuntu-cuda.html">Ubuntu CUDA</a></td>
+<td style="text-align: left;">CUDA</td>
+<td style="text-align: center;"><iconify-icon inline="" icon="carbon:gui" width="1.5em" height="1.5em" aria-label="Access the workspace as a remote desktop" title="Access the workspace as a remote desktop"></iconify-icon><br><iconify-icon inline="" icon="carbon:terminal" width="1.5em" height="1.5em" aria-label="Access the workspace via the command line" title="Access the workspace via the command line"></iconify-icon></td>
+<td style="text-align: center;"><iconify-icon icon="uil:linux" width="2em" height="2em" aria-label="Linux" title="Linux"></iconify-icon></td>
+<td style="text-align: center;"><iconify-icon icon="carbon:checkmark" width="1.5em" height="1.5em" aria-label="Yes" title="Yes"></iconify-icon></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">SURF</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="utilities-data-processing" class="level1">
+<h1>Utilities &amp; Data Processing</h1>
+<div id="5de186c8" class="cell" data-execution_count="5">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="5">
+<table class="table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Software preinstalled</th>
+<th style="text-align: center;">Access methods</th>
+<th style="text-align: center;">OS</th>
+<th style="text-align: center;">GPU</th>
+<th style="text-align: left;">Misc</th>
+<th style="text-align: center;">Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><a href="../docs/workspaces/utility/asreview_cli.html">ASReview CLI</a></td>
+<td style="text-align: left;"><a href="https://asreview.nl/">ASReview</a></td>
+<td style="text-align: center;"><iconify-icon inline="" icon="carbon:terminal" width="1.5em" height="1.5em" aria-label="Access the workspace via the command line" title="Access the workspace via the command line"></iconify-icon></td>
+<td style="text-align: center;"><iconify-icon icon="uil:linux" width="2em" height="2em" aria-label="Linux" title="Linux"></iconify-icon></td>
+<td style="text-align: center;"><iconify-icon icon="carbon:checkmark" width="1.5em" height="1.5em" aria-label="Yes" title="Yes"></iconify-icon></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">UU</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="../docs/workspaces/utility/asreview_lab.html">ASReview Lab</a></td>
+<td style="text-align: left;"><a href="https://asreview.nl/">ASReview</a></td>
+<td style="text-align: center;"><iconify-icon inline="" icon="carbon:gui" width="1.5em" height="1.5em" aria-label="Access the workspace as a remote desktop" title="Access the workspace as a remote desktop"></iconify-icon><br><iconify-icon inline="" icon="carbon:terminal" width="1.5em" height="1.5em" aria-label="Access the workspace via the command line" title="Access the workspace via the command line"></iconify-icon></td>
+<td style="text-align: center;"><iconify-icon icon="uil:linux" width="2em" height="2em" aria-label="Linux" title="Linux"></iconify-icon></td>
+<td style="text-align: center;"><iconify-icon icon="carbon:checkmark" width="1.5em" height="1.5em" aria-label="Yes" title="Yes"></iconify-icon></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">UU</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="../docs/workspaces/utility/grobid.html">Grobid</a></td>
+<td style="text-align: left;"><a href="https://grobid.readthedocs.io/">Grobid</a></td>
+<td style="text-align: center;"><iconify-icon icon="carbon:network-public" width="1.5em" height="1.5em" aria-label="Access application via the browser" title="Access application via the browser"></iconify-icon></td>
+<td style="text-align: center;"><iconify-icon icon="uil:linux" width="2em" height="2em" aria-label="Linux" title="Linux"></iconify-icon></td>
+<td style="text-align: center;"><iconify-icon icon="carbon:checkmark" width="1.5em" height="1.5em" aria-label="Yes" title="Yes"></iconify-icon></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">UU</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="../docs/workspaces/utility/whisper.html">Whisper OpenAI CUDA 11</a></td>
+<td style="text-align: left;"><a href="https://github.com/m-bain/whisperX">WhisperX</a></td>
+<td style="text-align: center;"><iconify-icon inline="" icon="carbon:gui" width="1.5em" height="1.5em" aria-label="Access the workspace as a remote desktop" title="Access the workspace as a remote desktop"></iconify-icon><br><iconify-icon inline="" icon="carbon:terminal" width="1.5em" height="1.5em" aria-label="Access the workspace via the command line" title="Access the workspace via the command line"></iconify-icon></td>
+<td style="text-align: center;"><iconify-icon icon="uil:linux" width="2em" height="2em" aria-label="Linux" title="Linux"></iconify-icon></td>
+<td style="text-align: center;"><iconify-icon icon="carbon:checkmark" width="1.5em" height="1.5em" aria-label="Yes" title="Yes"></iconify-icon></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">UU</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="experimental" class="level1">
+<h1>Experimental</h1>
+<div id="e637d5c9" class="cell" data-execution_count="6">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="6">
+<table class="table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Software preinstalled</th>
+<th style="text-align: center;">Access methods</th>
+<th style="text-align: center;">OS</th>
+<th style="text-align: center;">GPU</th>
+<th style="text-align: left;">Misc</th>
+<th style="text-align: center;">Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><a href="../docs/workspaces/experimental/asreview-app.html">ASReview Webapp</a></td>
+<td style="text-align: left;"><a href="https://asreview.nl/">ASReview</a></td>
+<td style="text-align: center;"><iconify-icon icon="carbon:network-public" width="1.5em" height="1.5em" aria-label="Access application via the browser" title="Access application via the browser"></iconify-icon></td>
+<td style="text-align: center;"><iconify-icon icon="uil:linux" width="2em" height="2em" aria-label="Linux" title="Linux"></iconify-icon></td>
+<td style="text-align: center;"><iconify-icon icon="carbon:checkmark" width="1.5em" height="1.5em" aria-label="Yes" title="Yes"></iconify-icon></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">UU</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -594,4 +817,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/UtrechtUniversity/vre-docs/edit/main/docs/workspace-catalogue.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/UtrechtUniversity/vre-docs/edit/main/docs/workspace-catalogue.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>
