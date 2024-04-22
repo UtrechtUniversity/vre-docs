@@ -17,7 +17,7 @@ categories = (
 
 This page provides an overview of workspace types (called "Catalog Items" on Research Cloud) supported by Utrecht University. This overview includes primarily Catalog Items developed by UU, but also some commonly used Catalog Items developed by SURF.
 
-Please note **this is not constitute a full list of available workspace types on ResearchCloud**: there are many more developed by other institutions.
+Please note **this is not a full list of available workspace types on ResearchCloud**: there are many more developed by other institutions.
 
 If there is a specific environment application, or software package you think you might need, please [contact us for help](mailto:research.engineering@uu.nl). If what you require is not yet available on ResearchCloud, we can also help you to create custom Catalog Items.
 
