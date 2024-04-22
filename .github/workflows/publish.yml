@@ -19,7 +19,7 @@ jobs:
 
       - name: Add quarto extension
         run: |
-          quarto add --no-prompt mcanouil/quarto-iconify@a6213d100233a59121338d18a9e0837614ef07b2
+          quarto add --no-prompt mcanouil/quarto-iconify@v2.0.0
 
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v4

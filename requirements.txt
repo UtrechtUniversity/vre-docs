@@ -2,5 +2,3 @@ shinylive
 py-markdown-table
 tabulate
 python-frontmatter
-nbformat
-nbclient
