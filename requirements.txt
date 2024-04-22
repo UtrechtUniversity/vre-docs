@@ -2,3 +2,4 @@ shinylive
 py-markdown-table
 tabulate
 python-frontmatter
+jupyter
