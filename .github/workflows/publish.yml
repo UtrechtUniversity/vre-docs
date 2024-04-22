@@ -16,8 +16,10 @@ jobs:
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Add quarto extension
         run: |
-          quarto add mcanouil/quarto-iconify 
+          quarto add mcanouil/quarto-iconify
 
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v4
