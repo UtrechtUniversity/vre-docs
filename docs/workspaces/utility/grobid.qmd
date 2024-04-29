@@ -16,13 +16,70 @@ support: UU
 
 ## Description
 
+[GROBID](https://github.com/kermitt2/grobid) means GeneRation Of BIbliographic Data. GROBID is a machine learning library for extracting, parsing and re-structuring raw documents such as PDF into structured XML/TEI encoded documents with a particular focus on technical and scientific publications. Grobid can help you perform bibliographic analyses on scientific papers.
+
+Grobid can be used via a webapplication in which you can upload and parse documents in the browser, and also provides an API for scripting purposes.
+
+Launching this Catalog Item will provide you with a workspace on which the Grobid webapplication and API are running.
+
+### Variations
+
+There are some variations of this Catalog Item that come with different Grobid extensions in place:
+
+1. **Grobid Standalone**: provides only the main Grobid application without extensions
+2. **Grobid Datastet**: provides the [datastet](https://github.com/kermitt2/datastet) extension for detecting datasets mentions
+3. **Grobid Softcite**: provides the [softcite(https://github.com/softcite/software-mentions)] extension for detecting software mentions
+4. **Grobid All-in-One**: provides all of the above.
+
+For 1-3, the application is simply hosted at `https://yourworkspaceurl.nl/`. For 4., the various applications are accessible at the following locations:
+
+* Grobid (main app): `https://yourworkspaceurl.nl/grobid/`
+* Datastet: `https://yourworkspaceurl.nl/datastet/`
+* Softcite: `https://yourworkspaceurl.nl/softcite/`
+
 ## Creation
+
+{{< include ../partials/_creation.qmd >}}
+
+### Interactive parameters
+
+If you want to override the default password used to [access the API](#api), you can do so in the final page before you press *Submit* to create your workspace. Just fill in your desired password in the provided Interactive Parameter field: 
 
 ## Access
 
-## Data transfer options
+### Webapplication
+
+Members of the workspace's Collaborative Organisation can simply point their browser to the workspace's URL and login using their organisation's Single Sign-On mechanism (e.g. Solis login with two factor authentication for UU employees and students). You can use the yellow 'Access' button in the Workspace overview in the portal to be linked to the right URL.
+
+### API
+
+The API for each application is accessible at sublocations of your workspace's URL:
+
+* For Grobid, use the `/api` sublocation, for instance `https://yourworkspaceurl.nl/api/`.
+* For Datastet and Softcite use the `/service` sublocation, e.g. `https://yourworkspaceurl.nl/datastet/service/`.
+
+Since Single-Sign On is difficult to implement when scripting, authentication for the API uses a simple username/password scheme. The default username and password are `grobid`. You can set the password as [an interactive parameter](#Interactive-parameters).
+
+From a command line, you can test the Grobid API e.g. in the following way:
+
+```
+curl -ugrobid:grobid -L https://grobiddatastet.itsdatalandscap.src.surf-hosted.nl/api/version
+```
+
+Also see the [API documentation](https://grobid.readthedocs.io/en/latest/Grobid-service/#grobid-service-api).
+
+### SSH
+
+You can also [access the workspace via the command line](../../first-steps.qmd#ssh) (SSH). If you do so, the Grobid service(s) will be availabe on `http://localhost:<port>/api`. The port number is different for Grobid, Datastet, and Softcite. You can read off the relevant port numbers by running the following command:
+
+```
+$ sudo docker container list
+CONTAINER ID   IMAGE                   COMMAND                  CREATED              STATUS          PORTS                                       NAMES
+d64db08a37ea   grobid/datastet:0.8.0   "sh -c 'java --add-o…"   About a minute ago   Up 57 seconds   0.0.0.0:8060->8060/tcp, :::8060->8060/tcp   b636ea56-cceb-42e9-bef9-b8850047be04_datastet_1
+```
+
+In this example you can see that Datastet is running on `localhost:8060`.
 
 ## Usage
 
-## Tips
-
+See the Grobid [documentation](https://grobid.readthedocs.io/), or the docs for the extensions you are using, for help with using the application.
