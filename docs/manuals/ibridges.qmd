@@ -1,0 +1,23 @@
+---
+title: Using iBridges on SURF Research Cloud
+---
+
+The instructions below describe the process of data transfer between SURF Research Cloud and Yoda using iBridges. iBridges is a command-line tool for transfering data to and from Yoda (and other iRODS servers), focused on user-friendliness. It is developed and supported by the Utrecht University Research Engineering team. Like the [iCommands suite](icommands.qmd), it is suitable for transferring large amounts of data, but it is easier to use.
+
+Note: a graphical desktop version of iBridges is currently under development, but not yet supported on ResearchCloud.
+
+### Prerequisites
+
+You will need some basic Linux (commandline) skills to be able to use iBridges.
+
+iBridges is already installed on many SURF ResearchCloud workspace developed by Utrecht University. You can check if it is present by simply typing the following command on your terminal: `ibridges`. If iBridges is installed, this should show you the program's help menu.
+
+If you need to install iBridges, you can execute: `pip install ibridges-cli`.
+
+### Creating an iRODS environment file
+
+{{< include partials/_irods_env.qmd >}}
+
+### Using iBridges
+
+For instructions on how to use the `ibridges` command please see the [iBridges documentation](https://github.com/UtrechtUniversity/iBridges?tab=readme-ov-file#commandline-interface).

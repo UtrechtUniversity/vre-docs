@@ -1,0 +1,38 @@
+In order to know with what server iBridges should connect, a so-called iRODS environment file must be present in your home directory.
+
+You may need help from your datamanager or contact Yoda support to obtain the information needed for the config file.
+
+Go to your home directory and create a hidden directory called '.irods':
+
+```
+cd ~
+mkdir .irods
+cd .irods
+```
+
+In this directory, create a file named `irods_environment.json`.
+
+```
+touch irods_environment.json
+```
+Edit the file using a text editor such as nano or vim:
+```
+nano irods_environment.json
+```
+
+Go to the [yoda website](https://www.uu.nl/en/research/yoda/guide-to-yoda/i-am-using-yoda/using-icommands-for-large-datasets), scroll to **Step 2. Configuring iCommands** and copy and paste the text belonging to your institution in the file (similar to the file below) and change the email address next to `irods_user_name`to your yoda user name (typically your uu email address).
+
+```
+{   
+"irods_host": "science.data.uu.nl",   
+"irods_port": 1247,    "irods_home": "/nluu6p/home",   
+"irods_user_name": "exampleuser@uu.nl",   
+"irods_zone_name": "nluu6p",   
+"irods_authentication_scheme": "pam",   
+"irods_encryption_algorithm": "AES-256-CBC",   
+"irods_encryption_key_size": 32,   
+"irods_encryption_num_hash_rounds": 16,   
+"irods_encryption_salt_size": 8,   
+"irods_client_server_negotiation": "request_server_negotiation"
+}
+```
