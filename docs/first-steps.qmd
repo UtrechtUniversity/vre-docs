@@ -41,21 +41,7 @@ Typically you want to create a project folder on the storage volume (e.g. `/data
 ## Create a workspace
 A workspace can also be called a 'Virtual Machine' or a 'Server'. It is a temporary 'remote' machine that you can login to and that has you can use to perform analyses or model runs. You 'pay' for the machine with the credits from your wallet. The more compute power you select the more credits it costs and the sooner your wallet will be empty.
 
-### How to create a workspace?
-In the Research Cloud portal:
-
--   Click 'Create new workspace'
--   Select application (Ubuntu, R-studio etc.)
--   Choose the [Collaborative Organization](https://servicedesk.surf.nl/wiki/pages/viewpage.action?pageId=17825822) of the project for which you want to create the workspace
--   Skip step 3 'Datasets'
--   Choose the wallet with which you 'pay' for the Storage Unit
--   Select Cloud provider (Surf HPC Cloud)
--   Select the size of your workspace (# of Cores and RAM, or when relevant GPU)
--   Select persistent storage volume (see above how to create one)
--   Set expiration date (default setting is 1 week). Important: on this date the machine and all data on it will be deleted without warning. Only data on the Storage volume will remain. The expiration date can be changed later on.
--   Give the workspace a descriptive title that you can recognize later on.
--   Click Submit
-
+See [here](manuals/creating.qmd) for detailed information on how to create a workspace.
 
 ## Pausing, Resuming, Deleting a workspace
 You always need a wallet to create a workspace, by default a workspace can only be paused, resumed and deleted by the one that has created it. You can use SRAM to give persons permission to PAUSE, RESUME and DELETE a workspace that is created by someone else. It is also possible to share a wallet with a member of your CO in SRAM. See [Add collaborators to existing project](https://servicedesk.surf.nl/wiki/display/WIKI/Invite+admins+and+members+to+a+collaboration).
@@ -88,7 +74,7 @@ You need an Remote Desktop client to be able to connect via RDP. On a Windows an
 
 The username that you need to type when you want to access the workspace can be found under the 'Profile' tab in the Research Cloud portal. The password to fill in is the Time based password (aka TOTP password) from the authenticator app on your mobile phone.
 
-### SSH (secure shell protocol). 
+### SSH
 
 #### When?
 For some workspaces this is the only option to login to your workspace. These are typically command line only workspaces (e.g. Ubuntu 20.04 command line).
