@@ -24,10 +24,7 @@ support: UU
 
 This workspace is an Ubuntu Desktop workspace with MATLAB installed. Ubuntu Desktop is a linux operating system but has a Graphical User interface so operating it is similar to using a Windows operating system. 
 
-## Creation
-In the [Research cloud portal](https://surfresearchcloud.nl) click the 'Create a new workspace' button and follow the steps in the wizzard.
-
-See the [Getting started](../../first-steps.qmd#create-a-workspace) page for more guidance.
+{{< include ../partials/_creation.qmd >}}
 
 ## Access
 This workspace can be accessed via the yellow 'Access' button. You need a TOTP to login to your workspace, see [Workspace access with TOTP](https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace#Logintoyourworkspace-WorkspaceAccesswithTOTP).

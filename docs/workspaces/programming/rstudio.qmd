@@ -25,16 +25,9 @@ Upon request we can help you to automate the installation of R packages or autom
 
 ## Creation
 
-### Create a storage volume
-First create a storage volume before creating the workspace.
+{{< include ../partials/_storage.qmd >}}
 
-See the [Getting started](../../first-steps.qmd#create-storage-volume) page for more info about how and why to create a storage volume.
-
-### Create a workspace
-
-In the [Research cloud portal](https://surfresearchcloud.nl) click the 'Create a new workspace' button and follow the steps in the wizzard.
-
-See the [Getting started](../../first-steps.qmd#create-a-workspace) page for more guidance.
+{{< include ../partials/_creation.qmd >}}
 
 ## Access
 This workspace can be accessed via the yellow 'Access' button. You need a TOTP to login to your workspace, see [Workspace access with TOTP](https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace#Logintoyourworkspace-WorkspaceAccesswithTOTP).
