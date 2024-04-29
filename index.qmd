@@ -6,7 +6,9 @@ title: "VRE Documentation for UU researchers"
 
 A Virtual Research Environment (VRE) is a temporary compute environment that enables researchers to work interactively and remotely on research. A VRE contains tools and data that scientists need for their research. 
 
-Utrecht University provides VREs based on SURF Research Cloud, which is a good alternative for commercial cloud providers like Amazon Web Services and Microsoft Azure. 
+Utrecht University provides VREs based on SURF Research Cloud, which is a good alternative for commercial cloud providers like Amazon Web Services and Microsoft Azure.
+
+**See [here](docs/workspace-catalogue.qmd) for a list of available workspace types and their documentation.**
 
 # Overview documentation
 
