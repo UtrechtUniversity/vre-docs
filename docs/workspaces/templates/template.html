@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Jupyter Notebooks</title>
+<title>workspace name</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -180,26 +146,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#description" id="toc-description" class="nav-link active" data-scroll-target="#description">Description</a></li>
   <li><a href="#creation" id="toc-creation" class="nav-link" data-scroll-target="#creation">Creation</a>
   <ul class="collapse">
-  <li><a href="#create-a-storage-volume" id="toc-create-a-storage-volume" class="nav-link" data-scroll-target="#create-a-storage-volume">Create a storage volume</a></li>
   <li><a href="#create-a-workspace" id="toc-create-a-workspace" class="nav-link" data-scroll-target="#create-a-workspace">Create a workspace</a></li>
   </ul></li>
   <li><a href="#access" id="toc-access" class="nav-link" data-scroll-target="#access">Access</a></li>
   <li><a href="#data-transfer-options" id="toc-data-transfer-options" class="nav-link" data-scroll-target="#data-transfer-options">Data transfer options</a></li>
-  <li><a href="#usage" id="toc-usage" class="nav-link" data-scroll-target="#usage">Usage</a>
-  <ul class="collapse">
-  <li><a href="#start-a-notebook" id="toc-start-a-notebook" class="nav-link" data-scroll-target="#start-a-notebook">Start a Notebook</a></li>
-  <li><a href="#installing-python-packages" id="toc-installing-python-packages" class="nav-link" data-scroll-target="#installing-python-packages">Installing Python packages</a></li>
-  </ul></li>
+  <li><a href="#usage" id="toc-usage" class="nav-link" data-scroll-target="#usage">Usage</a></li>
   <li><a href="#tips" id="toc-tips" class="nav-link" data-scroll-target="#tips">Tips</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/UtrechtUniversity/vre-docs/edit/main/docs/workspaces/programming/jupyter.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/UtrechtUniversity/vre-docs/edit/main/docs/workspaces/templates/template.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Jupyter Notebooks</h1>
+<h1 class="title">workspace name</h1>
 </div>
 
 
@@ -218,17 +179,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="description" class="level2">
 <h2 class="anchored" data-anchor-id="description">Description</h2>
-<p>This workspace can be used to work with Jupyter Notebooks and Python. The workspace also comes with a (linux) terminal (aka command line) to install Python packages or other additional tools when relevant.</p>
-<p>Upon request we can help you to install additional Python packages and preconfigure a Python environment or automate other installations (e.g.&nbsp;tools for data transfer). Automating these steps will make it easier to work following our <a href="../../../docs/responsible-use.html">best practices</a>.</p>
-<p><a href="../../../docs/contact.html">Contact us if you need help with installations</a>.</p>
 </section>
 <section id="creation" class="level2">
 <h2 class="anchored" data-anchor-id="creation">Creation</h2>
-<section id="create-a-storage-volume" class="level3">
-<h3 class="anchored" data-anchor-id="create-a-storage-volume">Create a storage volume</h3>
-<p>If desired, first create a storage volume before creating the workspace.</p>
-<p>See the <a href="../../../docs/first-steps.html#create-storage-volume">Getting started</a> page for more info about how and why to create a storage volume.</p>
-</section>
 <section id="create-a-workspace" class="level3">
 <h3 class="anchored" data-anchor-id="create-a-workspace">Create a workspace</h3>
 <p>In the <a href="https://surfresearchcloud.nl">Research cloud portal</a> click the ‘Create a new workspace’ button and follow the steps in the wizzard.</p>
@@ -237,40 +190,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="access" class="level2">
 <h2 class="anchored" data-anchor-id="access">Access</h2>
-<p>This workspace can be accessed via the yellow ‘Access’ button. You need a TOTP to login to your workspace, see <a href="https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace#Logintoyourworkspace-WorkspaceAccesswithTOTP">Workspace access with TOTP</a>.</p>
 </section>
 <section id="data-transfer-options" class="level2">
 <h2 class="anchored" data-anchor-id="data-transfer-options">Data transfer options</h2>
-<p>First create a working directory on the <a href="../../../docs/first-steps.html#where-can-i-find-the-storage-volume">Storage Volume</a> using the file browser in the Jupyter dashboard.</p>
-<p>The Jupyter dashboard has an Upload button to directly upload data from your PC to the workspace.</p>
-<p>To download a file to your PC, right click the file in the file browser in the Jupyter dashboard, and several options will show including ‘Download’.</p>
-<p>Alternatively it is possible to use the terminal to transfer data from other, such as Yoda, or Surfdrive:</p>
-<ul>
-<li><a href="../../../docs/manuals/icommands.html">Data transfer and Yoda</a></li>
-<li><a href="../../../docs/manuals/rclone-researchcloud.html">Data transfer and Surfdrive</a></li>
-</ul>
 </section>
 <section id="usage" class="level2">
 <h2 class="anchored" data-anchor-id="usage">Usage</h2>
-<section id="start-a-notebook" class="level3">
-<h3 class="anchored" data-anchor-id="start-a-notebook">Start a Notebook</h3>
-<p>If you have uploaded an existing notebook, you can start it by clicking on the notebook file in the Jupyter dashboard.</p>
-<p>To create a new notebook, click on the ‘New’ button in the Jupyter dashboard and select ‘Python 3’ under ‘Notebook’.</p>
-</section>
-<section id="installing-python-packages" class="level3">
-<h3 class="anchored" data-anchor-id="installing-python-packages">Installing Python packages</h3>
-<section id="from-within-a-notebook" class="level4">
-<h4 class="anchored" data-anchor-id="from-within-a-notebook">From within a Notebook</h4>
-<p>To install Python packages from within a Notebook, you can use the <code>!pip</code> command. For example, to install the Python package <code>pandas</code>:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install pandas</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="using-the-terminal" class="level4">
-<h4 class="anchored" data-anchor-id="using-the-terminal">Using the terminal</h4>
-<p>To install Python packages, you can use the terminal. To start a terminal session, click on the ‘New’ button in the Jupyter dashboard and select ‘Terminal’ under ‘Other’.</p>
-<p>For example, to install the Python package <code>pandas</code>:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install pandas</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-</section>
 </section>
 <section id="tips" class="level2">
 <h2 class="anchored" data-anchor-id="tips">Tips</h2>
@@ -693,4 +618,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/UtrechtUniversity/vre-docs/edit/main/docs/workspaces/programming/jupyter.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/UtrechtUniversity/vre-docs/edit/main/docs/workspaces/templates/template.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>
