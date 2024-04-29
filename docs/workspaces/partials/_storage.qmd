@@ -1,0 +1,4 @@
+### Create a storage volume
+If desired, first create a storage volume before creating the workspace.
+
+See the [Getting started](../../first-steps.qmd#create-storage-volume) page for more info about how and why to create a storage volume.
