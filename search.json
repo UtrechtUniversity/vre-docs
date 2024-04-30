@@ -32,7 +32,7 @@
     "href": "docs/workspaces/utility/asreview_lab.html#creation",
     "title": "ASReview Lab",
     "section": "Creation",
-    "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the Getting started page for more guidance.\nChoosing the number of CPU cores: A workspace with more CPU cores and RAM memory will cost more credits. If you want to use a large workspace for a long period of time (many days or weeks), first try to test on small machines (e.g. a 2 core and a 4 core machine) whether a bigger machine actually does help you to get your results faster."
+    "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance.\nChoosing the number of CPU cores: A workspace with more CPU cores and RAM memory will cost more credits. If you want to use a large workspace for a long period of time (many days or weeks), first try to test on small machines (e.g. a 2 core and a 4 core machine) whether a bigger machine actually does help you to get your results faster."
   },
   {
     "objectID": "docs/workspaces/utility/asreview_lab.html#access",
@@ -81,7 +81,7 @@
     "href": "docs/workspaces/utility/whisper.html#creation",
     "title": "Whisper OpenAI CUDA 11",
     "section": "Creation",
-    "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the Getting started page for more guidance."
+    "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
   },
   {
     "objectID": "docs/workspaces/utility/whisper.html#access",
@@ -116,7 +116,7 @@
     "href": "docs/workspaces/plain/ubuntu-cuda.html#creation",
     "title": "Ubuntu CUDA",
     "section": "Creation",
-    "text": "Creation\n\nCreate a workspace\nIn the Research cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the Getting started page for more guidance."
+    "text": "Creation\n\nCreate a workspace\nIn the Research cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
   },
   {
     "objectID": "docs/workspaces/plain/ubuntu-cuda.html#access",
@@ -151,7 +151,7 @@
     "href": "docs/workspaces/templates/template.html#creation",
     "title": "workspace name",
     "section": "Creation",
-    "text": "Creation\n\nCreate a workspace\nIn the Research cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the Getting started page for more guidance."
+    "text": "Creation\n\nCreate a workspace\nIn the Research cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
   },
   {
     "objectID": "docs/workspaces/templates/template.html#access",
@@ -186,7 +186,7 @@
     "href": "docs/workspaces/programming/stata.html#creation",
     "title": "Stata",
     "section": "Creation",
-    "text": "Creation\n\nCreate a workspace\nIn the Research cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the Getting started page for more guidance."
+    "text": "Creation\n\nCreate a workspace\nIn the Research cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
   },
   {
     "objectID": "docs/workspaces/programming/stata.html#access",
@@ -235,7 +235,7 @@
     "href": "docs/workspaces/programming/jupyter.html#creation",
     "title": "Jupyter Notebooks",
     "section": "Creation",
-    "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the Getting started page for more guidance."
+    "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
   },
   {
     "objectID": "docs/workspaces/programming/jupyter.html#access",
@@ -270,14 +270,14 @@
     "href": "docs/workspaces/programming/matlab.html",
     "title": "Matlab",
     "section": "",
-    "text": "This workspace is an Ubuntu Desktop workspace with MATLAB installed. Ubuntu Desktop is a linux operating system but has a Graphical User interface so operating it is similar to using a Windows operating system.\n\n\nIn the Research cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the Getting started page for more guidance."
+    "text": "This workspace is an Ubuntu Desktop workspace with MATLAB installed. Ubuntu Desktop is a linux operating system but has a Graphical User interface so operating it is similar to using a Windows operating system.\n\n\nIn the Research cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
   },
   {
     "objectID": "docs/workspaces/programming/matlab.html#description",
     "href": "docs/workspaces/programming/matlab.html#description",
     "title": "Matlab",
     "section": "",
-    "text": "This workspace is an Ubuntu Desktop workspace with MATLAB installed. Ubuntu Desktop is a linux operating system but has a Graphical User interface so operating it is similar to using a Windows operating system.\n\n\nIn the Research cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the Getting started page for more guidance."
+    "text": "This workspace is an Ubuntu Desktop workspace with MATLAB installed. Ubuntu Desktop is a linux operating system but has a Graphical User interface so operating it is similar to using a Windows operating system.\n\n\nIn the Research cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
   },
   {
     "objectID": "docs/workspaces/programming/matlab.html#access",
@@ -620,7 +620,7 @@
     "href": "docs/workspaces/programming/python-workbench-cuda.html#creation",
     "title": "Python Workbench CUDA",
     "section": "Creation",
-    "text": "Creation\n\nCreate a workspace\nIn the Research cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the Getting started page for more guidance."
+    "text": "Creation\n\nCreate a workspace\nIn the Research cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
   },
   {
     "objectID": "docs/workspaces/programming/python-workbench-cuda.html#access",
@@ -669,7 +669,7 @@
     "href": "docs/workspaces/programming/jupyter-cuda.html#creation",
     "title": "Jupyter Notebooks CUDA",
     "section": "Creation",
-    "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the Getting started page for more guidance."
+    "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
   },
   {
     "objectID": "docs/workspaces/programming/jupyter-cuda.html#access",
@@ -704,7 +704,7 @@
     "href": "docs/workspaces/programming/python-workbench.html#creation",
     "title": "Python Workbench",
     "section": "Creation",
-    "text": "Creation\n\nCreate a workspace\nIn the Research cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the Getting started page for more guidance."
+    "text": "Creation\n\nCreate a workspace\nIn the Research cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
   },
   {
     "objectID": "docs/workspaces/programming/python-workbench.html#access",
@@ -753,7 +753,7 @@
     "href": "docs/workspaces/programming/rstudio.html#creation",
     "title": "RStudio",
     "section": "Creation",
-    "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the Getting started page for more guidance."
+    "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
   },
   {
     "objectID": "docs/workspaces/programming/rstudio.html#access",
@@ -788,7 +788,7 @@
     "href": "docs/workspaces/plain/ubuntu.html#creation",
     "title": "Ubuntu",
     "section": "Creation",
-    "text": "Creation\n\nCreate a workspace\nIn the Research cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the Getting started page for more guidance."
+    "text": "Creation\n\nCreate a workspace\nIn the Research cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
   },
   {
     "objectID": "docs/workspaces/plain/ubuntu.html#access",
@@ -823,7 +823,7 @@
     "href": "docs/workspaces/experimental/asreview-app.html#creation",
     "title": "ASReview Webapp",
     "section": "Creation",
-    "text": "Creation\n\nCreate a workspace\nIn the Research cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the Getting started page for more guidance."
+    "text": "Creation\n\nCreate a workspace\nIn the Research cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
   },
   {
     "objectID": "docs/workspaces/experimental/asreview-app.html#access",
@@ -872,7 +872,7 @@
     "href": "docs/workspaces/utility/asreview_cli.html#creation",
     "title": "ASReview CLI",
     "section": "Creation",
-    "text": "Creation\n\nCreate a storage volume\nFirst create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\n\n\nCreate a workspace\nIn the Research cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the Getting started page for more guidance.\nChoosing the number of CPU cores: A workspace with more CPU cores and RAM memory will cost more credits. If you want to use a large workspace for a long period of time (many days or weeks), first try to test on small machines (e.g. a 2 core and a 4 core machine) whether a bigger machine actually does help you to get your results faster."
+    "text": "Creation\n\nCreate a storage volume\nFirst create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\n\n\nCreate a workspace\nIn the Research cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance.\nChoosing the number of CPU cores: A workspace with more CPU cores and RAM memory will cost more credits. If you want to use a large workspace for a long period of time (many days or weeks), first try to test on small machines (e.g. a 2 core and a 4 core machine) whether a bigger machine actually does help you to get your results faster."
   },
   {
     "objectID": "docs/workspaces/utility/asreview_cli.html#access-options",
@@ -921,7 +921,7 @@
     "href": "docs/workspaces/utility/grobid.html#creation",
     "title": "Grobid",
     "section": "Creation",
-    "text": "Creation\n\nCreate a workspace\nIn the Research cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the Getting started page for more guidance.\n\n\nInteractive parameters\nIf you want to override the default password used to access the API, you can do so in the final page before you press Submit to create your workspace. Just fill in your desired password in the provided Interactive Parameter field:"
+    "text": "Creation\n\nCreate a workspace\nIn the Research cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance.\n\n\nInteractive parameters\nIf you want to override the default password used to access the API, you can do so in the final page before you press Submit to create your workspace. Just fill in your desired password in the provided Interactive Parameter field:"
   },
   {
     "objectID": "docs/workspaces/utility/grobid.html#access",
