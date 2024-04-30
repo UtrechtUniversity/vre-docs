@@ -131,16 +131,19 @@ app = App(app_ui, server)
 
 ```
 
-
-
 ## VRE lifetime and security updates
-The recommended maximum lifetime of a VRE (or workspace) is 2 months. A lifetime longer than 2 months is only considered secure when the operating system is regulary updated by one of the users. The users are responsible for keeping the installed software up to date (patching) with regard to security updates. By limiting the lifetime of a VRE you can minimize the risk of vulnerabilities by outdated software. The UU uses scanning tools to scan active VRE's for security vulnerabilities. If the scan gives cause, the UU will contact you with the request to update software on VRE, and/or to take additional measures.
+
+The recommended maximum lifetime of a VRE (or workspace) is no more than 4 weeks. **A longer lifetime is only considered secure when the operating system is regulary updated by one of the users.** Users are responsible for keeping the installed software up to date (patching) with regard to security updates. By limiting the lifetime of a VRE you can minimize the risk of vulnerabilities by outdated software, because **everytime you create a new workspace, this will come with recent security updates already installed**.
+
+Although some Catalog Items come with automatic security updates enabled by default, in most cases you will have to take action yourself. See [here](manuals/ubuntu-security-updates.qmd) for how to activate automatic updates on Ubuntu workspaces. Of course you can [contact us](contact.qmd) for help.
+
+For longer-living workspaces, UU also requires use of scanning tools to scan active VRE's for security vulnerabilities. If the scan gives cause, the UU will contact you with the request to update software on VRE, and/or to take additional measures. If you intend to run longer-running workspaces, please [contact us](contact.qmd) and we can help to install the necessary scanning software.
 
 ## Data storage and – backup
 A VRE is not backed up. The user is responsible for backing up the (processed) data and/or configuration of the VRE. Make sure to regularly synchronize data and scripts with approved platform like Yoda, Research Drive and GitHub.
 
 ## Sensitive data
-If you want to process data that is classified as sensitive or higher according to UU standards, consult a local data manager and VRE supportITS VRE research engineering. Potentially a DPA should be arranged with SURF and not all workspace types are suitable for this.
+If you want to process data that is classified as sensitive or higher according to UU standards, consult a local data manager and ITS [research engineering](contact.qmd). For highly sensitive data, SURF offers a high security environment within ResearchCloud called [SANE](https://www.surf.nl/en/themes/research-infrastructure/sane-secure-environment-for-analysing-sensitive-data) that needs to be activated on request. We can advise you on whether this is necessary and suitable for your project.
 
 ### Data classification Service VRE 
 Surf Research Cloud is suitable for the data classification below. However, custom workspaces in proof of concept state or manual installations may compromise the suitability. 
