@@ -200,14 +200,15 @@ sudo apt-get install -y irods-icommands</code></pre>
 </section>
 <section id="step-3-create-a-config-file" class="level3">
 <h3 class="anchored" data-anchor-id="step-3-create-a-config-file">Step 3: Create a config file</h3>
+<p>In order to know with what server iBridges should connect, a so-called iRODS environment file must be present in your home directory.</p>
 <p>You may need help from your datamanager or contact Yoda support to obtain the information needed for the config file.</p>
-<p>Go to the home directory and create a hidden directory called ‘.irods’</p>
+<p>Go to your home directory and create a hidden directory called ‘.irods’:</p>
 <pre><code>cd ~
 mkdir .irods
 cd .irods</code></pre>
 <p>In this directory, create a file named <code>irods_environment.json</code>.</p>
 <pre><code>touch irods_environment.json</code></pre>
-<p>Edit the file using a text editor such as nano or vim</p>
+<p>Edit the file using a text editor such as nano or vim:</p>
 <pre><code>nano irods_environment.json</code></pre>
 <p>Go to the <a href="https://www.uu.nl/en/research/yoda/guide-to-yoda/i-am-using-yoda/using-icommands-for-large-datasets">yoda website</a>, scroll to <strong>Step 2. Configuring iCommands</strong> and copy and paste the text belonging to your institution in the file (similar to the file below) and change the email address next to <code>irods_user_name</code>to your yoda user name (typically your uu email address).</p>
 <pre><code>{   
