@@ -1,0 +1,3 @@
+### Workspace security
+
+Please take a moment to read the [security recommendations for VREs](../../responsible-use.qmd#vre-lifetime-and-security-updates).

@@ -1,0 +1,53 @@
+---
+title: How to activate security updates on Ubuntu
+---
+
+Please take a moment to read the [security recommendations for VREs](../responsible-use.qmd#vre-lifetime-and-security-updates). If you wish to keep using the same VRE for longer than 3 weeks, please consider turning on automatic security updates for the VRE's OS. This manual describes how to enable these for any VREs running Ubuntu Linux.
+
+[Contact us](../contact.qmd) if you run into any problems with the instructions below.
+
+### Understanding automatic security updates for Ubuntu
+
+The Ubuntu OS has a feature called "unattended upgrades" that will automatically install security updates for installed packages as they become available. These are not enabled on ResearchCloud by default because ResearchCloud workspaces are envisioned as machines running for only a limited time. However, you can easily activate the feature yourself, as long as you have admin rights on the workspace.
+
+For longer-living workspaces, it is also heavily recommended to install a vulnerability scanning tool that actively monitors your workspace for weaknesses. Please [contact us](../contact.qmd) for help with this.
+
+Please note:
+
+* These updates are only for system packages installed using Ubuntu's package management system, `apt`. **Any other software on the workspace (for instance, software installed directly from Github) will not be updated by this mechanism.** If this is security sensitive (for instance, if it is a web application), you will need to find other ways of keeping it secure and updated.
+* Only security patches will be installed, so the 'major' version of the packages you use will remain the same.
+
+Advanced notes:
+
+* For almost all updates, the new version will become active immediately. This means that in very rare cases, an update may interfere with a running process. There is thus a tradeoff between security and stability, but such interference is rare and enabling unattended upgrades is considered best practice for Ubuntu servers.
+* There is one exception to the rule that updated versions will become automatically active: if the Linux kernel itself is updated, this will require a pause/resume of the workspace to become active. This happens rarely, but you can monitor for this by installing the aforementioned scanning tool ([contact us](../contact.qmd)).
+
+### Prerequisites
+
+- A Catalog Item using Ubuntu Linux
+- Admin rights on the workspace
+
+### Workspaces with a desktop environment
+
+See [here](../first-steps.qmd#browser-access-to-a-desktop-environment) for how to login on the workspace.
+
+Steps:
+
+1. In the *Applications* menu (top left), go to *Settings* > *Software & Updates*.
+1. Go to the *Updates* tab.
+1. From the dropdown *When there are security updates*, select *Download and install automatically.*
+
+Alternatively, you can open a terminal and follow the instructions below for enabling security updates from the command line.
+
+### Workspaces with command line access
+
+See [here](../first-steps.qmd#ssh) for how to login on the workspace with SSH.
+
+In you terminal, execute the following commands:
+
+```bash
+sudo systemctl enable apt-daily.timer
+sudo systemctl enable apt-daily-upgrade.timer
+sudo systemctl start apt-daily.timer
+sudo systemctl start apt-daily-upgrade.timer
+```
