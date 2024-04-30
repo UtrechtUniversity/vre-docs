@@ -49,18 +49,61 @@ You always need a wallet to create a workspace, by default a workspace can only 
 
 ## Getting access to your workspace
 
-There are several ways to login to your workspace. 
+There are several ways to login to your workspace.
 
-### Browser access
+### Browser access to a desktop environment
 
 #### When?
-This is the easiest method and it can be used for most workspaces that have a Graphical user interface (Rstudio, Jupyter Notebook, Ubuntu Desktop, Matlab). It can not be used for Windows server. 
-You can check if this method works for your workspace: look up your created workspace under workspaces in the dashboard of the research cloud portal. Click on the workspace (anywhere but don't click the access button) and check the URL in the overview that opens. If the URL has an `https://` address it can be accessed via the browser.
+
+For workspaces that provide a graphical interface to a desktop environment. For instance: Ubuntu Desktop, Python Workbench, Matlab. See the [workspace catalog](workspace-catalogue.qmd) for an overview of Catalog Items that provide this kind of access.
+
+For these workspace types, this is what you will see when you click the yellow "Access" button:
+
+<img src="imgs/guacamole_login.png" width="30%" />
 
 #### How?
-To be able to login via the Browser you need to [setup a Time Based Password for your Research Cloud account](https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace#Logintoyourworkspace-WorkspaceAccesswithTOTP).
 
-The workspaces can be accessed via your web browser by clicking the yellow access button. The username that you need to type when you want to access the workspace can be found under the 'Profile' tab in the Research Cloud portal. The password to fill in is the Time based password (aka TOTP password) from the authenticator app on your mobile phone.
+For these workspaces, you will need to [setup a Time Based Password for your Research Cloud account](https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace#Logintoyourworkspace-WorkspaceAccesswithTOTP).
+
+Steps:
+
+1. Click the yellow "Access button" for your workspace.
+    * You will be taken to your workspace's address, e.g. (`https://workspacename.src.surf-hosted.nl`).
+1. You will see a prompt asking you to login to the Linux workpace.
+1. As a username, enter your Research Cloud username (**not** your Solis ID).
+    * You can lookup your username in the Research Cloud portal under the "Profile" tab.
+1. As a password, enter your time-based (TOTP) password for Research Cloud (**not** for your Solis ID).
+
+Once you are logged in, you will be presented with a desktop environment in your browser. The environment used on ResearchCloud is a lightweight desktop called Xfce. See [here](https://docs.xfce.org/) for help with it.
+
+### Browser access to a webapplication
+
+#### When?
+
+Many catalog items provide you with a webapplication that can be accessed from your browser. For instance: Jupyter Notebooks, RStudio. See the [workspace catalog](workspace-catalogue.qmd) for an overview of Catalog Items that provide this kind of access. 
+
+#### How?
+
+There are two different forms of browser-based access to webapplications on Research Cloud:
+
+###### Webapplications that support Single Sign-on.
+
+These will present you with the normal login flow (including two-factor authentication) for your institutional login. That means Solis ID for UU students and staff, but collaborators from other institutions will use their own.
+
+Since you are often already recently signed in to your institutional login to enter the Research Cloud, you will often not even need to authenticate again! Simply click the yellow "Access" button for your workspace.
+
+###### Webapplications that require a time-based password
+
+For these workspaces, you will need to [setup a Time Based Password for your Research Cloud account](https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace#Logintoyourworkspace-WorkspaceAccesswithTOTP).
+
+Steps:
+
+1. Click the yellow "Access button" for your workspace.
+    * You will be taken to your workspace's address.
+1. You will see a prompt asking you to login to the Linux workpace.
+1. As a username, enter your Research Cloud username (**not** your Solis ID).
+    * You can lookup your username in the Research Cloud portal under the "Profile" tab.
+1. As a password, enter your time-based (TOTP) password for Research Cloud (**not** for your Solis ID).
 
 ### RDP (Remote Desktop Protocol)
 
@@ -91,10 +134,11 @@ On MacOS and Linux machines you can use the standard ‘Terminal’.
 ## Getting data inside your workspace
 
 ### Mounting online storage
-If you have a Research Drive account, you can mount it in your workspace. This method is most easy, and works good for working with small datasets (e.g. <1 GB).
+
+If you have a Research Drive account, you can mount it in your workspace. This method is most easy, and works well for working with small datasets (e.g. <1 GB).
 
 ### Transferring data
-In many cases it is more reliable to get a copy of your data on the Storage unit that is attached to your workspace.  
+In many cases it is more reliable to get a copy of your data on the [Storage unit](#create-storage-volume) that is attached to your workspace.  
 Depending on where your data is stored and the workspace that you are using, the following options are available:
 
 -   Upload from your laptop (Jupyter Notebook and Rstudio Workspaces)
