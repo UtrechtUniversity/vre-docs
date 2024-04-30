@@ -12,7 +12,7 @@ You will need some basic Linux (commandline) skills to be able to use iBridges.
 
 iBridges is already installed on many SURF ResearchCloud workspace developed by Utrecht University. You can check if it is present by simply typing the following command on your terminal: `ibridges`. If iBridges is installed, this should show you the program's help menu.
 
-If you need to install iBridges, you can execute: `pip install ibridges-cli`.
+If you need to install iBridges, you can execute: `pip install ibridges`.
 
 ### Creating an iRODS environment file
 
