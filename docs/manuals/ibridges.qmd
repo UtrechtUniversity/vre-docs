@@ -18,6 +18,8 @@ If you need to install iBridges, you can execute: `pip install ibridges`.
 
 {{< include partials/_irods_env.qmd >}}
 
+For a more extensive tutorial, see [here](https://github.com/UtrechtUniversity/iBridges/blob/develop/tutorials/01-Setup-and-connect.ipynb).
+
 ### Using iBridges
 
 For instructions on how to use the `ibridges` command please see the [iBridges documentation](https://github.com/UtrechtUniversity/iBridges?tab=readme-ov-file#commandline-interface).
