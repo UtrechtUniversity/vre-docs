@@ -2,6 +2,10 @@
 title: "Funding"
 ---
 
+## UU budget
+
+During an [intake meeting](onboarding.qmd#plan-an-intake-with-the-research-engineering-team) you can apply for 10.000 credits for your project. Check our [cost calculator](responsible-use.qmd#cost-calculator) to see how much CPU or GPU hours that will provide you. These credits can be used to test if the system satisfies your requirements or to run some benchmarks, but in many cases 10.000 may also be enough to complete a (small) project.
+
 ## Small Compute application
 
 The Small Compute application is a non-competitive grant that can be used to request 50.000 credits and/or 5.000 GPU hours for Research cloud per calendar year per project.
