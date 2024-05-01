@@ -12,9 +12,9 @@ A Collaboration (also known as Collaborative Organisation, or CO) is an ad-hoc g
 Data Processing Agreement
 A legally binding document to be agreed upon between the data controller and the data processor in writing or in electronic form. It regulates the particularities of data processing – such as its scope and purpose – as well as the relationship between the controller and the processor.
 
-### eINFRA request
-A relatively simple request procedure for obtaining a maximum of 50.000 CPU hours and/or 10.000 GPU hours for your project.
-[More info](einfra.qmd)
+### Small Compute application
+A relatively simple request procedure for obtaining a maximum of 50.000 CPU hours and/or 5.000 GPU hours for your project.
+[More info](funding.qmd)
 
 ### SRAM
 SRAM (SURF Research Access Management) is a service to manage access to research resources, intended for Dutch led research collaborations. [More information](https://wiki.surfnet.nl/pages/viewpage.action?pageId=31105834).
