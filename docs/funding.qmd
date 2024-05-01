@@ -1,0 +1,23 @@
+---
+title: "Funding"
+---
+
+## Small Compute application
+
+The Small Compute application is a non-competitive grant that can be used to request 50.000 credits and/or 5.000 GPU hours for Research cloud per calendar year per project.
+
+More info about requirements and the application portal can be found [on the SURF website](https://www.surf.nl/en/access-to-compute-services)
+
+An example Small compute application for Snellius can be found [here](https://servicedesk.surf.nl/wiki/pages/viewpage.action?pageId=30660193). It illustrates the length and the level of detail of the specification of the project requirements.
+
+Most users first use the UU budget (typically provided during the intake meeting) before they apply for the Small compute application. Experiences with this initial budget (e.g. initial model runs or benchmarks) can be used to fill in the Small compute application form.
+
+**If you have an existing collaboration and wallet for Research Cloud**, please make sure to **mention the CO name and the name of the wallet in your Small compute application** (check the 'Wallet' subpage on the research cloud portal for the name of the wallet). In this way you can keep using existing storage volumes and workspaces with the new budget.
+
+## Large Compute application
+
+The Large Compute application can be used to request more resources than provided via the Small compute application. The request is submitted via NWO. The application form is substantially larger compared to the small compute application and is peer reviewed. Therefore it takes longer to review the application (2-3 months) although it is possible to already get access during the reviewing process. More info can be found [on the SURF website](https://www.surf.nl/en/large-compute-applications-nwo)
+
+## Support
+
+We can advise you about the possibilities and/or help with filling out the technical sections of your application. Feel free book a meeting with us via our [contact page](https://www.uu.nl/en/research/research-data-management/tools/software-and-computing/virtual-research-environments).
