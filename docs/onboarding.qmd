@@ -72,10 +72,11 @@ There are several ways to request funding for credits:
 **UU Budget**
 This is typically granted during an intake meeting (see step 1 above).
 
-**E-INFRA request**
-Via an E-INFRA request 50.000 CPU hours and/or 10.000 GPU can be requested for your project for 1 calendar year. An E-INFRA request can be done one time per calendar year. An application can be done via the [SURF servicedesk](https://servicedesk.surfsara.nl/) and the procedure is relatively simple and fast. [More information](https://www.surf.nl/en/access-to-compute-services).
+**Small Compute application**
+Via a Small Compute application (SURF) 50.000 CPU hours and/or 5.000 GPU hours can be requested for your project for 1 calendar year. A Small Compute application can be done one time per calendar year. The application procedure is relatively simple and fast. [More information](funding.qmd).
 
-[Example application](einfra.qmd)
+**Large Compute application**
+A Large Compute application can done if you require more resources than provided via the Small compute application. [More information](funding.qmd).
 
 **Project budget**
 It is possible to pay for credits via your own project budget. Discuss the possiblities during an intake meeting (see step 1 above).
