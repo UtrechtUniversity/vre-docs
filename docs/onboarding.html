@@ -147,11 +147,12 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#how-to-get-on-board" id="toc-how-to-get-on-board" class="nav-link active" data-scroll-target="#how-to-get-on-board">How to get on board</a></li>
-  <li><a href="#intake-procedure" id="toc-intake-procedure" class="nav-link" data-scroll-target="#intake-procedure">Intake procedure</a>
+  <li><a href="#onboarding-procedure" id="toc-onboarding-procedure" class="nav-link" data-scroll-target="#onboarding-procedure">Onboarding procedure</a>
   <ul class="collapse">
   <li><a href="#plan-an-intake-with-the-research-engineering-team" id="toc-plan-an-intake-with-the-research-engineering-team" class="nav-link" data-scroll-target="#plan-an-intake-with-the-research-engineering-team">1. Plan an intake with the Research Engineering team</a></li>
   <li><a href="#request-a-collaboration-in-sram" id="toc-request-a-collaboration-in-sram" class="nav-link" data-scroll-target="#request-a-collaboration-in-sram">2. Request a collaboration in SRAM</a></li>
   <li><a href="#request-funding" id="toc-request-funding" class="nav-link" data-scroll-target="#request-funding">3. Request funding</a></li>
+  <li><a href="#log-in-to-research-cloud" id="toc-log-in-to-research-cloud" class="nav-link" data-scroll-target="#log-in-to-research-cloud">4. Log in to Research cloud</a></li>
   </ul></li>
   <li><a href="#add-collaborators-to-existing-project" id="toc-add-collaborators-to-existing-project" class="nav-link" data-scroll-target="#add-collaborators-to-existing-project">Add collaborators to existing project</a>
   <ul class="collapse">
@@ -198,9 +199,9 @@ ul.task-list li input[type="checkbox"] {
 <a href="#steps-for-setting-up-a-new-research-cloud-project">Start here</a></p></li>
 </ol>
 </section>
-<section id="intake-procedure" class="level2">
-<h2 class="anchored" data-anchor-id="intake-procedure">Intake procedure</h2>
-<p>This is a flowchart describing the intake procedure for new projects, find descriptions of the steps below the flowchart.</p>
+<section id="onboarding-procedure" class="level2">
+<h2 class="anchored" data-anchor-id="onboarding-procedure">Onboarding procedure</h2>
+<p>This is a flowchart describing the Onboarding procedure for new projects, find descriptions of the steps below the flowchart.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -210,13 +211,13 @@ ul.task-list li input[type="checkbox"] {
   A[1. Intake meeting] --&gt; B{Onboarding}
   B -- budget --&gt; C{3. Request credits}
   C --&gt; F[UU credits via Intake meeting]
-  C --&gt; G[E-INFRA request]
+  C --&gt; G[Small Compute application]
   C --&gt; H[Project budget]
   B -- account --&gt; D[2. Create collaboration in SRAM]
-  D ----&gt; E[Log in on Research Cloud]
-  F --&gt; E[Log in on Research Cloud]
-  G --&gt; E[Log in on Research Cloud]
-  H --&gt; E[Log in on Research Cloud]
+  D ----&gt; E[4. Log in on Research Cloud]
+  F --&gt; E[4. Log in on Research Cloud]
+  G --&gt; E[4. Log in on Research Cloud]
+  H --&gt; E[4. Log in on Research Cloud]
   E --&gt; J[Create your first workspace!]
 
 </pre>
@@ -239,7 +240,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="request-a-collaboration-in-sram" class="level3">
 <h3 class="anchored" data-anchor-id="request-a-collaboration-in-sram">2. Request a collaboration in SRAM</h3>
-<p>This is typically done during an intake meeting (step 1). It is also possible to request a new collaboration in <a href="https://servicedesk.surf.nl/wiki/display/WIKI/SURF+Research+Access+Management">SRAM</a></p>
+<p>This will be done for you by the UU support team after intake meeting (step 1).</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -277,9 +278,15 @@ What is a collaboration?
 <h3 class="anchored" data-anchor-id="request-funding">3. Request funding</h3>
 <p>There are several ways to request funding for credits:</p>
 <p><strong>UU Budget</strong> This is typically granted during an intake meeting (see step 1 above).</p>
-<p><strong>E-INFRA request</strong> Via an E-INFRA request 50.000 CPU hours and/or 10.000 GPU can be requested for your project for 1 calendar year. An E-INFRA request can be done one time per calendar year. An application can be done via the <a href="https://servicedesk.surfsara.nl/">SURF servicedesk</a> and the procedure is relatively simple and fast. <a href="https://www.surf.nl/en/access-to-compute-services">More information</a>.</p>
-<p><a href="../docs/einfra.html">Example application</a></p>
+<p><strong>Small Compute application</strong> Via a Small Compute application (SURF) 50.000 CPU hours and/or 5.000 GPU hours can be requested for your project for 1 calendar year. A Small Compute application can be done one time per calendar year. The application procedure is relatively simple and fast. <a href="../docs/funding.html">More information</a>. Most users first use the UU budget before they submit a Small compute application.</p>
+<p><strong>Large Compute application</strong> A Large Compute application can done if you require more resources than provided via the Small compute application. <a href="../docs/funding.html">More information</a>.</p>
 <p><strong>Project budget</strong> It is possible to pay for credits via your own project budget. Discuss the possiblities during an intake meeting (see step 1 above).</p>
+</section>
+<section id="log-in-to-research-cloud" class="level3">
+<h3 class="anchored" data-anchor-id="log-in-to-research-cloud">4. Log in to Research cloud</h3>
+<p>After your collaboration and your budget (aka wallet) have been created you can start working with Research Cloud!</p>
+<p>The url of the Research cloud portal is: <code>surfresearchcloud.nl</code>, or click the link below to go to the portal.</p>
+<p><a href="https://portal.live.surfresearchcloud.nl/">Research Cloud portal</a></p>
 </section>
 </section>
 <section id="add-collaborators-to-existing-project" class="level2">
