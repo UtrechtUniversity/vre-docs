@@ -66,7 +66,7 @@ to all members of the collaboration.
 ## Funding
 There are several ways to request computing time for SRC. The easiest and fastest way (and recommended first step)
 is to [contact UU Research IT](https://www.uu.nl/en/research/research-data-management/tools-services/software-and-computing/virtual-research-environments). 
-A short intake meeting will get you started. Additionally, more computing time can be requested via Surf or NWO.
+A short intake meeting will get you started. Additionally, more computing time can be [requested via Surf or NWO](funding.qmd).
 
 ## Getting started
 Contact [UU Research IT](https://www.uu.nl/en/research/research-data-management/tools-services/software-and-computing/virtual-research-environments) for an intake meeting to get started. After a 30 minute intake you will have everything ready to start your first workspace. More info about the onboarding procedure can be found [here](onboarding.qmd)

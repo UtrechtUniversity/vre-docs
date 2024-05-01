@@ -17,22 +17,22 @@ There are several situations that may apply to you:
 3. I think Research Cloud is interesting for my current project but I am not sure  
 [Start here](#steps-for-setting-up-a-new-research-cloud-project)  
 
-## Intake procedure
+## Onboarding procedure
 
-This is a flowchart describing the intake procedure for new projects, find descriptions of the steps below the flowchart.
+This is a flowchart describing the Onboarding procedure for new projects, find descriptions of the steps below the flowchart.
 
 ```{mermaid}
 flowchart TD
   A[1. Intake meeting] --> B{Onboarding}
   B -- budget --> C{3. Request credits}
   C --> F[UU credits via Intake meeting]
-  C --> G[E-INFRA request]
+  C --> G[Small Compute application]
   C --> H[Project budget]
   B -- account --> D[2. Create collaboration in SRAM]
-  D ----> E[Log in on Research Cloud]
-  F --> E[Log in on Research Cloud]
-  G --> E[Log in on Research Cloud]
-  H --> E[Log in on Research Cloud]
+  D ----> E[4. Log in on Research Cloud]
+  F --> E[4. Log in on Research Cloud]
+  G --> E[4. Log in on Research Cloud]
+  H --> E[4. Log in on Research Cloud]
   E --> J[Create your first workspace!]
 
 ```
@@ -51,7 +51,7 @@ The Research engineer who is doing the intake has experience with the systems an
 
 ### 2. Request a collaboration in SRAM
 
-This is typically done during an intake meeting (step 1). It is also possible to request a new collaboration in [SRAM](https://servicedesk.surf.nl/wiki/display/WIKI/SURF+Research+Access+Management)
+This will be done for you by the UU support team after intake meeting (step 1). 
 
 ::: {.callout-note collapse="true"}
 ## What is SRAM?
@@ -72,13 +72,22 @@ There are several ways to request funding for credits:
 **UU Budget**
 This is typically granted during an intake meeting (see step 1 above).
 
-**E-INFRA request**
-Via an E-INFRA request 50.000 CPU hours and/or 10.000 GPU can be requested for your project for 1 calendar year. An E-INFRA request can be done one time per calendar year. An application can be done via the [SURF servicedesk](https://servicedesk.surfsara.nl/) and the procedure is relatively simple and fast. [More information](https://www.surf.nl/en/access-to-compute-services).
+**Small Compute application**
+Via a Small Compute application (SURF) 50.000 CPU hours and/or 5.000 GPU hours can be requested for your project for 1 calendar year. A Small Compute application can be done one time per calendar year. The application procedure is relatively simple and fast. [More information](funding.qmd). Most users first use the UU budget before they submit a Small compute application. 
 
-[Example application](einfra.qmd)
+**Large Compute application**
+A Large Compute application can done if you require more resources than provided via the Small compute application. [More information](funding.qmd).
 
 **Project budget**
 It is possible to pay for credits via your own project budget. Discuss the possiblities during an intake meeting (see step 1 above).
+
+### 4. Log in to Research cloud 
+
+After your collaboration and your budget (aka wallet) have been created you can start working with Research Cloud!
+
+The url of the Research cloud portal is: `surfresearchcloud.nl`, or click the link below to go to the portal.
+
+[Research Cloud portal](https://portal.live.surfresearchcloud.nl/)
 
 ## Add collaborators to existing project
 
