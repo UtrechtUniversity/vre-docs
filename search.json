@@ -130,7 +130,7 @@
     "href": "docs/workspaces/utility/whisper.html#usage",
     "title": "Whisper OpenAI CUDA 11",
     "section": "Usage",
-    "text": "Usage\nNavigate to your home directory and start the template Jupyter notebook whisper_template_notebook.ipynb using the Whisper kernel. If you double click to start the notebook, make sure in the top right you see whisper (ipykernel) instead of Python 3 (ipykernel). If you see Python 3 (ipykernel), just click on it to change it to the Whisper kernel."
+    "text": "Usage\nNavigate to your home directory and start the template Jupyter notebook whisper_template.ipynb using the Whisper kernel. If you double click to start the notebook, make sure in the top right you see whisper (ipykernel) instead of Python 3 (ipykernel). If you see Python 3 (ipykernel), just click on it to change it to the Whisper kernel."
   },
   {
     "objectID": "docs/workspaces/utility/whisper.html#tips",
