@@ -37,7 +37,7 @@ First create a working directory on the [Storage Volume](../../first-steps.qmd#w
 The JupyterHub dashboard has an Upload button to directly upload data from your computer. 
 
 ## Usage
-Navigate to your home directory and start the template Jupyter notebook `whisper_template_notebook.ipynb` using the Whisper kernel. If you double click to start the notebook, make sure in the top right you see `whisper (ipykernel)` instead of `Python 3 (ipykernel)`. If you see `Python 3 (ipykernel)`, just click on it to change it to the Whisper kernel.
+Navigate to your home directory and start the template Jupyter notebook `whisper_template.ipynb` using the Whisper kernel. If you double click to start the notebook, make sure in the top right you see `whisper (ipykernel)` instead of `Python 3 (ipykernel)`. If you see `Python 3 (ipykernel)`, just click on it to change it to the Whisper kernel.
 
 ## Tips
 
