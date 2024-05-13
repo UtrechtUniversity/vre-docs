@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>workspace name</title>
+<title>How to activate security updates on Ubuntu</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,25 +20,59 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<script src="../../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,7 +102,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../../../_styles/styles.css">
+<link rel="stylesheet" href="../../_styles/styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -84,47 +118,47 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../docs/research-cloud-intro.html"> 
+    <a class="nav-link" href="../../docs/research-cloud-intro.html"> 
 <span class="menu-text">Introduction</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../docs/onboarding.html"> 
+    <a class="nav-link" href="../../docs/onboarding.html"> 
 <span class="menu-text">Get started</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../docs/first-steps.html"> 
+    <a class="nav-link" href="../../docs/first-steps.html"> 
 <span class="menu-text">First steps</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../docs/workspace-catalogue.html"> 
+    <a class="nav-link" href="../../docs/workspace-catalogue.html"> 
 <span class="menu-text">Workspaces</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../docs/manuals.html"> 
+    <a class="nav-link" href="../../docs/manuals.html"> 
 <span class="menu-text">Manuals</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../docs/responsible-use.html"> 
+    <a class="nav-link" href="../../docs/responsible-use.html"> 
 <span class="menu-text">Tips</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../docs/terms-of-use.html"> 
+    <a class="nav-link" href="../../docs/terms-of-use.html"> 
 <span class="menu-text">Terms of use</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../docs/privacy.html"> 
+    <a class="nav-link" href="../../docs/privacy.html"> 
 <span class="menu-text">Privacy</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../docs/glossary.html"> 
+    <a class="nav-link" href="../../docs/glossary.html"> 
 <span class="menu-text">Glossary</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../docs/contact.html"> 
+    <a class="nav-link" href="../../docs/contact.html"> 
 <span class="menu-text">Contact</span></a>
   </li>  
 </ul>
@@ -143,27 +177,19 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#description" id="toc-description" class="nav-link active" data-scroll-target="#description">Description</a></li>
-  <li><a href="#creation" id="toc-creation" class="nav-link" data-scroll-target="#creation">Creation</a>
-  <ul class="collapse">
-  <li><a href="#create-a-workspace" id="toc-create-a-workspace" class="nav-link" data-scroll-target="#create-a-workspace">Create a workspace</a></li>
-  </ul></li>
-  <li><a href="#access" id="toc-access" class="nav-link" data-scroll-target="#access">Access</a></li>
-  <li><a href="#data-transfer-options" id="toc-data-transfer-options" class="nav-link" data-scroll-target="#data-transfer-options">Data transfer options</a></li>
-  <li><a href="#usage" id="toc-usage" class="nav-link" data-scroll-target="#usage">Usage</a></li>
-  <li><a href="#tips" id="toc-tips" class="nav-link" data-scroll-target="#tips">Tips</a>
-  <ul class="collapse">
-  <li><a href="#workspace-security" id="toc-workspace-security" class="nav-link" data-scroll-target="#workspace-security">Workspace security</a></li>
-  </ul></li>
+  <li><a href="#understanding-automatic-security-updates-for-ubuntu" id="toc-understanding-automatic-security-updates-for-ubuntu" class="nav-link active" data-scroll-target="#understanding-automatic-security-updates-for-ubuntu">Understanding automatic security updates for Ubuntu</a></li>
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
+  <li><a href="#workspaces-with-a-desktop-environment" id="toc-workspaces-with-a-desktop-environment" class="nav-link" data-scroll-target="#workspaces-with-a-desktop-environment">Workspaces with a desktop environment</a></li>
+  <li><a href="#workspaces-with-command-line-access" id="toc-workspaces-with-command-line-access" class="nav-link" data-scroll-target="#workspaces-with-command-line-access">Workspaces with command line access</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/UtrechtUniversity/vre-docs/edit/main/docs/workspaces/templates/template.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/UtrechtUniversity/vre-docs/edit/main/docs/manuals/ubuntu-security-updates.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">workspace name</h1>
+<h1 class="title">How to activate security updates on Ubuntu</h1>
 </div>
 
 
@@ -180,34 +206,51 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="description" class="level2">
-<h2 class="anchored" data-anchor-id="description">Description</h2>
+<p>Please take a moment to read the <a href="../../docs/responsible-use.html#vre-lifetime-and-security-updates">security recommendations for VREs</a>. If you wish to keep using the same VRE for longer than 3 weeks, please consider turning on automatic security updates for the VRE’s OS. This manual describes how to enable these for any VREs running Ubuntu Linux.</p>
+<p><a href="../../docs/contact.html">Contact us</a> if you run into any problems with the instructions below.</p>
+<section id="understanding-automatic-security-updates-for-ubuntu" class="level3">
+<h3 class="anchored" data-anchor-id="understanding-automatic-security-updates-for-ubuntu">Understanding automatic security updates for Ubuntu</h3>
+<p>The Ubuntu OS has a feature called “unattended upgrades” that will automatically install security updates for installed packages as they become available. These are not enabled on ResearchCloud by default because ResearchCloud workspaces are envisioned as machines running for only a limited time. However, you can easily activate the feature yourself, as long as you have admin rights on the workspace.</p>
+<p>For longer-living workspaces, it is also heavily recommended to install a vulnerability scanning tool that actively monitors your workspace for weaknesses. Please <a href="../../docs/contact.html">contact us</a> for help with this.</p>
+<p>Please note:</p>
+<ul>
+<li>These updates are only for system packages installed using Ubuntu’s package management system, <code>apt</code>. <strong>Any other software on the workspace (for instance, software installed directly from Github) will not be updated by this mechanism.</strong> If this is security sensitive (for instance, if it is a web application), you will need to find other ways of keeping it secure and updated.</li>
+<li>Only security patches will be installed, so the ‘major’ version of the packages you use will remain the same.</li>
+</ul>
+<p>Advanced notes:</p>
+<ul>
+<li>For almost all updates, the new version will become active immediately. This means that in very rare cases, an update may interfere with a running process. There is thus a tradeoff between security and stability, but such interference is rare and enabling unattended upgrades is considered best practice for Ubuntu servers.</li>
+<li>There is one exception to the rule that updated versions will become automatically active: if the Linux kernel itself is updated, this will require a pause/resume of the workspace to become active. This happens rarely, but you can monitor for this by installing the aforementioned scanning tool (<a href="../../docs/contact.html">contact us</a>).</li>
+</ul>
 </section>
-<section id="creation" class="level2">
-<h2 class="anchored" data-anchor-id="creation">Creation</h2>
-<section id="create-a-workspace" class="level3">
-<h3 class="anchored" data-anchor-id="create-a-workspace">Create a workspace</h3>
-<p>In the <a href="https://surfresearchcloud.nl">Research cloud portal</a> click the ‘Create a new workspace’ button and follow the steps in the wizzard.</p>
-<p>See the <a href="../../../docs/manuals/creating.html">workspace creation manual</a> page for more guidance.</p>
+<section id="prerequisites" class="level3">
+<h3 class="anchored" data-anchor-id="prerequisites">Prerequisites</h3>
+<ul>
+<li>A Catalog Item using Ubuntu Linux</li>
+<li>Admin rights on the workspace</li>
+</ul>
 </section>
+<section id="workspaces-with-a-desktop-environment" class="level3">
+<h3 class="anchored" data-anchor-id="workspaces-with-a-desktop-environment">Workspaces with a desktop environment</h3>
+<p>See <a href="../../docs/first-steps.html#browser-access-to-a-desktop-environment">here</a> for how to login on the workspace.</p>
+<p>Steps:</p>
+<ol type="1">
+<li>In the <em>Applications</em> menu (top left), go to <em>Settings</em> &gt; <em>Software &amp; Updates</em>.</li>
+<li>Go to the <em>Updates</em> tab.</li>
+<li>From the dropdown <em>When there are security updates</em>, select <em>Download and install automatically.</em></li>
+</ol>
+<p>Alternatively, you can open a terminal and follow the instructions below for enabling security updates from the command line.</p>
 </section>
-<section id="access" class="level2">
-<h2 class="anchored" data-anchor-id="access">Access</h2>
-</section>
-<section id="data-transfer-options" class="level2">
-<h2 class="anchored" data-anchor-id="data-transfer-options">Data transfer options</h2>
-</section>
-<section id="usage" class="level2">
-<h2 class="anchored" data-anchor-id="usage">Usage</h2>
-</section>
-<section id="tips" class="level2">
-<h2 class="anchored" data-anchor-id="tips">Tips</h2>
-<section id="workspace-security" class="level3">
-<h3 class="anchored" data-anchor-id="workspace-security">Workspace security</h3>
-<p>Please take a moment to read the <a href="../../../docs/responsible-use.html#vre-lifetime-and-security-updates">security recommendations for VREs</a>.</p>
+<section id="workspaces-with-command-line-access" class="level3">
+<h3 class="anchored" data-anchor-id="workspaces-with-command-line-access">Workspaces with command line access</h3>
+<p>See <a href="../../docs/first-steps.html#ssh">here</a> for how to login on the workspace with SSH.</p>
+<p>In you terminal, execute the following commands:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl enable apt-daily.timer</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl enable apt-daily-upgrade.timer</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl start apt-daily.timer</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl start apt-daily-upgrade.timer</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -625,4 +668,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/UtrechtUniversity/vre-docs/edit/main/docs/workspaces/templates/template.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/UtrechtUniversity/vre-docs/edit/main/docs/manuals/ubuntu-security-updates.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>
