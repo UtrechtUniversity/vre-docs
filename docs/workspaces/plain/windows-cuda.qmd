@@ -1,0 +1,20 @@
+--- 
+title: "Windows with CUDA"
+software: []
+login:
+- desktop
+os_flavor: windows
+os:
+- Windows Server 2019
+data:
+- ResearchDrive
+- Yoda Webdav
+packages:
+- Custom Packages
+gpu: true
+admin: true
+support: SURF
+---
+
+{{< include partials/_windows.qmd >}}
+
