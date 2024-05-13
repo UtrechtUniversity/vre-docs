@@ -20,11 +20,13 @@ It is always recommended to [pause](https://servicedesk.surf.nl/wiki/display/WIK
 The VRE support team is happy to help you with this. 
 
 ## Wallets and credits
-Remember that you pay for workspaces and storage volumes with the wallet you receive from the UU or through an EINFRA grant. Clean up unused workspaces and storage volumes to limit credit use. Pause workspaces only if you plan to continue working with it on a short term (workspaces also consume credits for storage). Consider moving data to e.g. Yoda and cleaning up storage volumensvolumes when not using research cloud for a couple of weeks. The UU provides a small starting budget of 10K credits for pilots or small projects, when this budget has been depleted we may provide a one time raise of your wallet of 10K credits if you can complete the project with this raise. Alternatively it is possible to submit a [Small Compute application](einfra.qmd) via SURF.
+Remember that you pay for workspaces and storage volumes with the wallet you receive from the UU or through a [grant](funding.qmd). Clean up unused workspaces and storage volumes to limit credit use. Pause workspaces only if you plan to continue working with it on a short term (workspaces also consume credits for storage). Consider moving data to e.g. Yoda and cleaning up storage volumensvolumes when not using research cloud for a couple of weeks. The UU provides a small starting budget of 10K credits for pilots or small projects, when this budget has been depleted we may provide a one time raise of your wallet of 10K credits if you can complete the project with this raise. Alternatively it is possible to submit a [Small Compute application](funding.qmd) via SURF.
 
 ## Cost calculator
 
 Use the calculator below to estimate the costs for running a workspace. Remember that a workspace will consume credits whenever it is in "State: Running". It will only stop consuming credits when your Pause or Delete a workspace in the [Research Cloud portal](https://portal.live.surfresearchcloud.nl/). Use the expiry date to schedule deletion of your workspace as an extra safeguard.
+
+Note: this describes costs for the standard use case, in which workspaces run on SURF's HPC Cloud environment. Although ResearchCloud also allows you to [run workspaces in different environment](manuals/creating.qmd#select-cloud-provider) (such as Microsoft's Azure cloud environment), the costs for this will be significantly higher.
 
 ```{shinylive-python}
 #| standalone: true
