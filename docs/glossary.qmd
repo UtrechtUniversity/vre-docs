@@ -20,7 +20,7 @@ A relatively simple request procedure for obtaining a maximum of 50.000 CPU hour
 SRAM (SURF Research Access Management) is a service to manage access to research resources, intended for Dutch led research collaborations. [More information](https://wiki.surfnet.nl/pages/viewpage.action?pageId=31105834).
 
 ### Storage volumes
-An 'External' Storage volume can be created from the main dashboard in the [research cloud portal](portal.live.surfresearchcloud.nl/). This storage is **persistent** which means that any data that you put here will still be there when a workspace is deleted. You need to create a storage volume first and attach it when you create a new workspace. The storage volume can than typically be found in the workspace under the following directory path: `~/data/volume_2`.
+An 'External' Storage volume can be created from the main dashboard in the [research cloud portal](https://portal.live.surfresearchcloud.nl/). This storage is **persistent** which means that any data that you put here will still be there when a workspace is deleted. You need to create a storage volume first and attach it when you create a new workspace. The storage volume can than typically be found in the workspace under the following directory path: `~/data/volume_2`.
 [More info](https://servicedesk.surf.nl/wiki/display/WIKI/External+storage+volumes)
 
 ### VRE 
