@@ -46,7 +46,9 @@ icon_gui = '<iconify-icon inline="" icon="carbon:gui" width="1.5em" height="1.5e
 icon_browser = '<iconify-icon icon="carbon:network-public" width="1.5em" height="1.5em" aria-label="Access application via the browser" title="Access application via the browser"></iconify-icon>'
 
 icon_check = '<iconify-icon icon="carbon:checkmark" width="1.5em" height="1.5em" aria-label="Yes" title="Yes"></iconify-icon>'
+icon_windows = '<iconify-icon icon="uil:windows" width="1.5em" height="1.5em" aria-label="Windows" title="Windows"></iconify-icon>'
 icon_linux = '<iconify-icon icon="uil:linux" width="2em" height="2em" aria-label="Linux" title="Linux"></iconify-icon>'
+
 icon_yoda  = '<img src="yoda.png" width="25px" height="25px"></img>'
 
 def iconify(key):
@@ -56,6 +58,8 @@ def iconify(key):
         return icon_gui
     elif key.startswith('webapp'):
         return icon_browser
+    elif key == 'windows':
+        return icon_windows
     elif key == 'linux':
         return icon_linux
     elif key == 'ResearchDrive':

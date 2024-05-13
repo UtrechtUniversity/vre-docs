@@ -1,0 +1,20 @@
+--- 
+title: "Windows"
+software: []
+login:
+- desktop
+os_flavor: windows
+os:
+- Windows Server 2019
+data:
+- ResearchDrive
+- Yoda Webdav
+packages:
+- Custom Packages
+gpu: false
+admin: true
+support: SURF
+---
+
+{{< include partials/_windows.qmd >}}
+
