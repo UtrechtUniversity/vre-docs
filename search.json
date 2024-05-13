@@ -140,37 +140,72 @@
     "text": "Tips"
   },
   {
-    "objectID": "docs/workspaces/plain/ubuntu-cuda.html#creation",
-    "href": "docs/workspaces/plain/ubuntu-cuda.html#creation",
-    "title": "Ubuntu CUDA",
+    "objectID": "docs/workspaces/plain/windows-cuda.html#creation",
+    "href": "docs/workspaces/plain/windows-cuda.html#creation",
+    "title": "Windows with CUDA",
     "section": "Creation",
     "text": "Creation\n\nCreate a workspace\nIn the Research cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
   },
   {
-    "objectID": "docs/workspaces/plain/ubuntu-cuda.html#access",
-    "href": "docs/workspaces/plain/ubuntu-cuda.html#access",
-    "title": "Ubuntu CUDA",
+    "objectID": "docs/workspaces/plain/windows-cuda.html#access",
+    "href": "docs/workspaces/plain/windows-cuda.html#access",
+    "title": "Windows with CUDA",
     "section": "Access",
     "text": "Access"
   },
   {
-    "objectID": "docs/workspaces/plain/ubuntu-cuda.html#data-transfer-options",
-    "href": "docs/workspaces/plain/ubuntu-cuda.html#data-transfer-options",
-    "title": "Ubuntu CUDA",
+    "objectID": "docs/workspaces/plain/windows-cuda.html#data-transfer-options",
+    "href": "docs/workspaces/plain/windows-cuda.html#data-transfer-options",
+    "title": "Windows with CUDA",
     "section": "Data transfer options",
     "text": "Data transfer options"
   },
   {
-    "objectID": "docs/workspaces/plain/ubuntu-cuda.html#usage",
-    "href": "docs/workspaces/plain/ubuntu-cuda.html#usage",
-    "title": "Ubuntu CUDA",
+    "objectID": "docs/workspaces/plain/windows-cuda.html#usage",
+    "href": "docs/workspaces/plain/windows-cuda.html#usage",
+    "title": "Windows with CUDA",
     "section": "Usage",
     "text": "Usage"
   },
   {
-    "objectID": "docs/workspaces/plain/ubuntu-cuda.html#tips",
-    "href": "docs/workspaces/plain/ubuntu-cuda.html#tips",
-    "title": "Ubuntu CUDA",
+    "objectID": "docs/workspaces/plain/windows-cuda.html#tips",
+    "href": "docs/workspaces/plain/windows-cuda.html#tips",
+    "title": "Windows with CUDA",
+    "section": "Tips",
+    "text": "Tips"
+  },
+  {
+    "objectID": "docs/workspaces/plain/windows.html#creation",
+    "href": "docs/workspaces/plain/windows.html#creation",
+    "title": "Windows",
+    "section": "Creation",
+    "text": "Creation\n\nCreate a workspace\nIn the Research cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
+  },
+  {
+    "objectID": "docs/workspaces/plain/windows.html#access",
+    "href": "docs/workspaces/plain/windows.html#access",
+    "title": "Windows",
+    "section": "Access",
+    "text": "Access"
+  },
+  {
+    "objectID": "docs/workspaces/plain/windows.html#data-transfer-options",
+    "href": "docs/workspaces/plain/windows.html#data-transfer-options",
+    "title": "Windows",
+    "section": "Data transfer options",
+    "text": "Data transfer options"
+  },
+  {
+    "objectID": "docs/workspaces/plain/windows.html#usage",
+    "href": "docs/workspaces/plain/windows.html#usage",
+    "title": "Windows",
+    "section": "Usage",
+    "text": "Usage"
+  },
+  {
+    "objectID": "docs/workspaces/plain/windows.html#tips",
+    "href": "docs/workspaces/plain/windows.html#tips",
+    "title": "Windows",
     "section": "Tips",
     "text": "Tips"
   },
@@ -501,21 +536,21 @@
     "href": "docs/research-cloud-intro.html",
     "title": "What is Research Cloud",
     "section": "",
-    "text": "Surf ResearchCloud (SRC) is a service that allows you to use the vast computational power offered by datacenters with almost the same ease-of-use as using your own laptop. The complex infrastructure behind the scenes is presented to you as a workspace. Think of a workspace as a laptop-in-the-cloud that you access using your web browser or another application (for instance “Remote Desktop” or “ssh”). Your web browser displays the screen content of this workspace and allows you to interact with it using your keyboard and mouse.\nWorkspaces are preconfigured with one or more applications, ranging from RStudio, Jupyter Notebooks, Matlab, to plain Windows or Linux virtual machines where the user installs their own software. Workspaces are also scalable: computational power, GPU drivers and extra storage can be ordered with a single mouse click. You can select a workspace type that suites your needs from a catalog in the SRC web portal. Workspaces are preconfigured for the user by support staff and can be extended on request to suit a variety of research domains and analysis methods. Should analysis applications for your domain not yet be covered, the support staff is happy to assist and to make additions to the catalog.\nOrdering a workspace is easy. In the SRC portal, just click on a workspace type to order it. The datacenter service will set aside some compute power for you. The datacenter subsequently creates a workspace and prepares it for you with applications preinstalled. This whole process takes approximately 10 to 30 minutes, depending on the type of workspace.\nA workspace is offered on-demand and on a pay-as-you-go basis. It saves you much hassle: no need to buy and maintain computer hardware and your favorite applications come conveniently preinstalled for you. This resource leasing concept is a cost effective solution if you plan to use it part-time, or if you seek to avoid to invest in expensive computer hardware, software or related IT-skills. Once you are done with using your workspace, just dispose of it in the SRC web portal.\nExample workspaces\n\nRstudio\n\nJupyter\n\nMatlab\n\nPython with Machine learning libraries\n\nCustomized workspaces e.g. ASReview\n\nWindows Server (install your own software)\n\nUbuntu (install your own software)\n\nResources available for a single workspace\n\nup to 80 CPU cores\n\nup to 480 GB RAM\n\nup to 4 GPU drives (NVIDIA A10)\n\nup to 2 TB storage"
+    "text": "SURF ResearchCloud (SRC) is a service that allows you to use the vast computational power offered by datacenters with almost the same ease-of-use as using your own laptop. The complex infrastructure behind the scenes is presented to you as a workspace. Think of a workspace as a laptop-in-the-cloud that you access using your web browser or another application (for instance, the Remote Desktop application or a command line shell). Your web browser displays the screen content of this workspace and allows you to interact with it using your keyboard and mouse.\nWorkspaces are preconfigured with one or more applications, ranging from RStudio, Jupyter Notebooks, Matlab, to plain Windows or Linux virtual machines where the user installs their own software. Workspaces are also scalable: computational power, GPU drivers and extra storage can be ordered with a single mouse click. You can select a workspace type that suites your needs from a catalog in the SRC web portal. Workspaces are preconfigured for the user by support staff and can be extended on request to suit a variety of research domains and analysis methods. Should analysis applications for your domain not yet be covered, the support staff is happy to assist and to make additions to the catalog. Simply contact us if you have questions about or requests for the catalog.\nCreating a workspace is easily achieved in the ResearchCloud web portal with a few clicks. The datacenter service will set aside some compute power for you. The datacenter subsequently creates a workspace and prepares it for you with applications preinstalled. This whole process takes approximately 10 to 30 minutes, depending on the type of workspace.\nA workspace is offered on-demand and on a pay-as-you-go basis. It saves you much hassle: no need to buy and maintain computer hardware and your favorite applications come conveniently preinstalled for you. This resource leasing concept is a cost effective solution if you plan to use it part-time, or if you seek to avoid to invest in expensive computer hardware, software or related IT-skills. Once you are done with using your workspace, just delete it in the SRC web portal.\nExample workspaces\nSee here) for a selection of available workspace types.\nResources available for a single workspace\nWhen creating workspaces to run on the SURF datacenter, the following computational resources are available:\n\nup to 80 CPU cores\n\nup to 480 GB RAM\n\nup to 4 GPU drives (NVIDIA A10)\n\nup to 2 TB storage\n\nHowever, is also possible to use the ResearchCloud portal to create workspaces running on commercial datacenters (e.g. Microsoft Azure), in which case more resources may be available. This may be suitable for some use cases, although it comes with significantly higher costs and may not be desirable from a data privacy perspective.\nContact us if you are unsure about the computational needs for your project and whether ResearchCloud is a good fit."
   },
   {
     "objectID": "docs/research-cloud-intro.html#introduction",
     "href": "docs/research-cloud-intro.html#introduction",
     "title": "What is Research Cloud",
     "section": "",
-    "text": "Surf ResearchCloud (SRC) is a service that allows you to use the vast computational power offered by datacenters with almost the same ease-of-use as using your own laptop. The complex infrastructure behind the scenes is presented to you as a workspace. Think of a workspace as a laptop-in-the-cloud that you access using your web browser or another application (for instance “Remote Desktop” or “ssh”). Your web browser displays the screen content of this workspace and allows you to interact with it using your keyboard and mouse.\nWorkspaces are preconfigured with one or more applications, ranging from RStudio, Jupyter Notebooks, Matlab, to plain Windows or Linux virtual machines where the user installs their own software. Workspaces are also scalable: computational power, GPU drivers and extra storage can be ordered with a single mouse click. You can select a workspace type that suites your needs from a catalog in the SRC web portal. Workspaces are preconfigured for the user by support staff and can be extended on request to suit a variety of research domains and analysis methods. Should analysis applications for your domain not yet be covered, the support staff is happy to assist and to make additions to the catalog.\nOrdering a workspace is easy. In the SRC portal, just click on a workspace type to order it. The datacenter service will set aside some compute power for you. The datacenter subsequently creates a workspace and prepares it for you with applications preinstalled. This whole process takes approximately 10 to 30 minutes, depending on the type of workspace.\nA workspace is offered on-demand and on a pay-as-you-go basis. It saves you much hassle: no need to buy and maintain computer hardware and your favorite applications come conveniently preinstalled for you. This resource leasing concept is a cost effective solution if you plan to use it part-time, or if you seek to avoid to invest in expensive computer hardware, software or related IT-skills. Once you are done with using your workspace, just dispose of it in the SRC web portal.\nExample workspaces\n\nRstudio\n\nJupyter\n\nMatlab\n\nPython with Machine learning libraries\n\nCustomized workspaces e.g. ASReview\n\nWindows Server (install your own software)\n\nUbuntu (install your own software)\n\nResources available for a single workspace\n\nup to 80 CPU cores\n\nup to 480 GB RAM\n\nup to 4 GPU drives (NVIDIA A10)\n\nup to 2 TB storage"
+    "text": "SURF ResearchCloud (SRC) is a service that allows you to use the vast computational power offered by datacenters with almost the same ease-of-use as using your own laptop. The complex infrastructure behind the scenes is presented to you as a workspace. Think of a workspace as a laptop-in-the-cloud that you access using your web browser or another application (for instance, the Remote Desktop application or a command line shell). Your web browser displays the screen content of this workspace and allows you to interact with it using your keyboard and mouse.\nWorkspaces are preconfigured with one or more applications, ranging from RStudio, Jupyter Notebooks, Matlab, to plain Windows or Linux virtual machines where the user installs their own software. Workspaces are also scalable: computational power, GPU drivers and extra storage can be ordered with a single mouse click. You can select a workspace type that suites your needs from a catalog in the SRC web portal. Workspaces are preconfigured for the user by support staff and can be extended on request to suit a variety of research domains and analysis methods. Should analysis applications for your domain not yet be covered, the support staff is happy to assist and to make additions to the catalog. Simply contact us if you have questions about or requests for the catalog.\nCreating a workspace is easily achieved in the ResearchCloud web portal with a few clicks. The datacenter service will set aside some compute power for you. The datacenter subsequently creates a workspace and prepares it for you with applications preinstalled. This whole process takes approximately 10 to 30 minutes, depending on the type of workspace.\nA workspace is offered on-demand and on a pay-as-you-go basis. It saves you much hassle: no need to buy and maintain computer hardware and your favorite applications come conveniently preinstalled for you. This resource leasing concept is a cost effective solution if you plan to use it part-time, or if you seek to avoid to invest in expensive computer hardware, software or related IT-skills. Once you are done with using your workspace, just delete it in the SRC web portal.\nExample workspaces\nSee here) for a selection of available workspace types.\nResources available for a single workspace\nWhen creating workspaces to run on the SURF datacenter, the following computational resources are available:\n\nup to 80 CPU cores\n\nup to 480 GB RAM\n\nup to 4 GPU drives (NVIDIA A10)\n\nup to 2 TB storage\n\nHowever, is also possible to use the ResearchCloud portal to create workspaces running on commercial datacenters (e.g. Microsoft Azure), in which case more resources may be available. This may be suitable for some use cases, although it comes with significantly higher costs and may not be desirable from a data privacy perspective.\nContact us if you are unsure about the computational needs for your project and whether ResearchCloud is a good fit."
   },
   {
     "objectID": "docs/research-cloud-intro.html#designed-with-consortia-and-other-collaborative-use-in-mind",
     "href": "docs/research-cloud-intro.html#designed-with-consortia-and-other-collaborative-use-in-mind",
     "title": "What is Research Cloud",
     "section": "Designed with consortia and other Collaborative use in mind",
-    "text": "Designed with consortia and other Collaborative use in mind\nSurf Research Cloud uses the concept of a ‘collaboration’ to facilitate working together in project teams. A collaboration may be viewed as a virtual organization, with members that can originate from different research institutes, or from the private sector. A collaboration can accommodate a virtual organization the size of a European research project consortium. In contrast, it might also consist of a single member, e.g. a researcher in need of compute power or a private workspace.\nManaging memberships of the collaboration is done via a self-service portal (called SRAM, short for SURF Research Access Management. E.g. a researcher can give (temporary) access to PhDs or students.\nIt is important to understand that SRC assumes all members of the collaboration to be contractually or otherwise bound to work together.\nHence the costs related to a workspace ordered by a single member of the collaboration are effectively charged to the collaboration. In addition, the workspace is automatically accessible to all members of the collaboration."
+    "text": "Designed with consortia and other Collaborative use in mind\nSURF Research Cloud uses the concept of a ‘collaboration’ to facilitate working together in project teams. A collaboration may be viewed as a virtual organization, with members that can originate from different research institutes, or from the private sector. A collaboration can accommodate a virtual organization the size of a European research project consortium. In contrast, it might also consist of a single member, e.g. a researcher in need of compute power or a private workspace.\nManaging memberships of the collaboration is done via a self-service portal (called SRAM, short for SURF Research Access Management. For example, a researcher can give (temporary) access to PhDs or students.\nIt is important to understand that SRC assumes all members of the collaboration to be contractually or otherwise bound to work together.\nHence the costs related to a workspace ordered by a single member of the collaboration are effectively charged to the collaboration. In addition, the workspace is automatically accessible to all members of the collaboration."
   },
   {
     "objectID": "docs/research-cloud-intro.html#funding",
@@ -529,7 +564,7 @@
     "href": "docs/research-cloud-intro.html#getting-started",
     "title": "What is Research Cloud",
     "section": "Getting started",
-    "text": "Getting started\nContact UU Research IT for an intake meeting to get started. After a 30 minute intake you will have everything ready to start your first workspace. More info about the onboarding procedure can be found here\nPractical instructions to get started on SRC can be found here."
+    "text": "Getting started\nPlan an intake meeting to get started. After a 30 minute intake you will have everything ready to start your first workspace. More info about the onboarding procedure can be found here\nPractical instructions to get started on SRC can be found here."
   },
   {
     "objectID": "docs/glossary.html",
@@ -599,7 +634,7 @@
     "href": "docs/workspace-catalogue.html",
     "title": "Workspace Catalogue",
     "section": "",
-    "text": "This page provides an overview of workspace types (called “Catalog Items” on Research Cloud) supported by Utrecht University. This overview includes primarily Catalog Items developed by UU, but also some commonly used Catalog Items developed by SURF.\nPlease note this is not a full list of available workspace types on ResearchCloud: there are many more developed by other institutions.\nIf there is a specific environment application, or software package you think you might need, please contact us for help. If what you require is not yet available on ResearchCloud, we can also help you to create custom Catalog Items.\n\nLegend\n\n Access the workspace via the command line\n Access the workspace as a remote desktop.\n Access application via the browser.\n\n\n\nProgramming & Analysis Environments\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nJupyter Notebooks\nCUDAJupyter Lab\n\n\n\n\nSURF\n\n\nJupyter Notebooks CUDA\nJupyter Lab\n\n\n\n\nSURF\n\n\nMatlab\nMatlab\n\n\n\nLicense needed\nUU\n\n\nPython Workbench\nPythonpoetryminiconda\n\n\n\n\nUU\n\n\nPython Workbench CUDA\nCUDAPythonpoetryminiconda\n\n\n\n\nUU\n\n\nRStudio\nRStudio\n\n\n\n\nSURF\n\n\nStata\nStata\n\n\n\nLicense needed\nUU\n\n\n\n\n\n\n\nPlain Workspaces\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nUbuntu\n\n\n\n\n\nSURF\n\n\nUbuntu CUDA\nCUDA\n\n\n\n\nSURF\n\n\n\n\n\n\n\nUtilities & Data Processing\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nASReview CLI\nASReview\n\n\n\n\nUU\n\n\nASReview Lab\nASReview\n\n\n\n\nUU\n\n\nGrobid\nGrobid\n\n\n\n\nUU\n\n\nWhisper OpenAI CUDA 11\nWhisperX\n\n\n\n\nUU\n\n\n\n\n\n\n\nExperimental\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nASReview Webapp\nASReview\n\n\n\n\nUU"
+    "text": "This page provides an overview of workspace types (called “Catalog Items” on Research Cloud) supported by Utrecht University. This overview includes primarily Catalog Items developed by UU, but also some commonly used Catalog Items developed by SURF.\nPlease note this is not a full list of available workspace types on ResearchCloud: there are many more developed by other institutions.\nIf there is a specific environment application, or software package you think you might need, please contact us for help. If what you require is not yet available on ResearchCloud, we can also help you to create custom Catalog Items.\n\nLegend\n\n Access the workspace via the command line\n Access the workspace as a remote desktop.\n Access application via the browser.\n\n\n\nProgramming & Analysis Environments\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nJupyter Notebooks\nCUDAJupyter Lab\n\n\n\n\nSURF\n\n\nJupyter Notebooks CUDA\nJupyter Lab\n\n\n\n\nSURF\n\n\nMatlab\nMatlab\n\n\n\nLicense needed\nUU\n\n\nPython Workbench\nPythonpoetryminiconda\n\n\n\n\nUU\n\n\nPython Workbench CUDA\nCUDAPythonpoetryminiconda\n\n\n\n\nUU\n\n\nRStudio\nRStudio\n\n\n\n\nSURF\n\n\nStata\nStata\n\n\n\nLicense needed\nUU\n\n\n\n\n\n\n\nPlain Workspaces\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nUbuntu\n\n\n\n\n\nSURF\n\n\nUbuntu CUDA\nCUDA\n\n\n\n\nSURF\n\n\nWindows\n\n\n\n\n\nSURF\n\n\nWindows with CUDA\n\n\n\n\n\nSURF\n\n\n\n\n\n\n\nUtilities & Data Processing\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nASReview CLI\nASReview\n\n\n\n\nUU\n\n\nASReview Lab\nASReview\n\n\n\n\nUU\n\n\nGrobid\nGrobid\n\n\n\n\nUU\n\n\nWhisper OpenAI CUDA 11\nWhisperX\n\n\n\n\nUU\n\n\n\n\n\n\n\nExperimental\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nASReview Webapp\nASReview\n\n\n\n\nUU"
   },
   {
     "objectID": "docs/manuals/sram-secrets.html",
@@ -857,6 +892,41 @@
     "objectID": "docs/workspaces/plain/ubuntu.html#tips",
     "href": "docs/workspaces/plain/ubuntu.html#tips",
     "title": "Ubuntu",
+    "section": "Tips",
+    "text": "Tips"
+  },
+  {
+    "objectID": "docs/workspaces/plain/ubuntu-cuda.html#creation",
+    "href": "docs/workspaces/plain/ubuntu-cuda.html#creation",
+    "title": "Ubuntu CUDA",
+    "section": "Creation",
+    "text": "Creation\n\nCreate a workspace\nIn the Research cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
+  },
+  {
+    "objectID": "docs/workspaces/plain/ubuntu-cuda.html#access",
+    "href": "docs/workspaces/plain/ubuntu-cuda.html#access",
+    "title": "Ubuntu CUDA",
+    "section": "Access",
+    "text": "Access"
+  },
+  {
+    "objectID": "docs/workspaces/plain/ubuntu-cuda.html#data-transfer-options",
+    "href": "docs/workspaces/plain/ubuntu-cuda.html#data-transfer-options",
+    "title": "Ubuntu CUDA",
+    "section": "Data transfer options",
+    "text": "Data transfer options"
+  },
+  {
+    "objectID": "docs/workspaces/plain/ubuntu-cuda.html#usage",
+    "href": "docs/workspaces/plain/ubuntu-cuda.html#usage",
+    "title": "Ubuntu CUDA",
+    "section": "Usage",
+    "text": "Usage"
+  },
+  {
+    "objectID": "docs/workspaces/plain/ubuntu-cuda.html#tips",
+    "href": "docs/workspaces/plain/ubuntu-cuda.html#tips",
+    "title": "Ubuntu CUDA",
     "section": "Tips",
     "text": "Tips"
   },
