@@ -1,3 +1,5 @@
+<!-- markdown-link-check-disable -->
+
 ## Description
 This workspace can be used to work with Jupyter Notebooks and Python. The workspace also comes with a (linux) terminal (aka command line) to install Python packages or other additional tools when relevant.
 

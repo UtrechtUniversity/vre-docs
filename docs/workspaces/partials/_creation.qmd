@@ -1,5 +1,5 @@
 ### Create a workspace
 
-In the [Research cloud portal](https://surfresearchcloud.nl) click the 'Create a new workspace' button and follow the steps in the wizzard.
+In the [Research Cloud portal](https://portal.live.surfresearchcloud.nl/) click the 'Create a new workspace' button and follow the steps in the wizzard.
 
 See the [workspace creation manual](../../manuals/creating.qmd) page for more guidance.
