@@ -28,11 +28,11 @@ SURF ResearchCloud allows you to run your workspace on various infrastructures (
 
 However, certain Virtual Machine types (for instance, with more/larger GPUs) may only be available on commercial infrastructures. If you are interested in using these configurations, please [contact us](../contact.qmd) -- we have special budgets available for this.
 
-You can inspect the available configurations for each Cloud Operator by expanding the 'Available sizes' context (`^`):
+You can inspect the available configurations for each Cloud Operator by expanding the 'Available sizes' context (`^`). After selecting a Cloud Operator and Flavour, you can get more info on costs ('credits/day') by expanding the `^` context menu under 'Choose Size':
 
-<img alt="Available Cloud Sizes Example" width="50%" src="../imgs/cloud_sizes.png" />
+<img alt="Available Cloud Sizes Example" width="50%" src="../imgs/cloud_select.gif" />
 
-After selecting a Cloud Operator and Flavour, you can get more info on costs by expanding the `^` context menu. See [here](../responsible-use.qmd#cost-calculator) for a cost calculator (only for the SURF HPC cloud!).
+ See [here](../responsible-use.qmd#cost-calculator) for a cost calculator. Note: the calculator only applies for the SURF HPC cloud!
 
 ### Interactive Parameters
 
