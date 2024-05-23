@@ -25,7 +25,7 @@
     "href": "docs/manuals.html",
     "title": "User Manuals",
     "section": "",
-    "text": "On this page we share manuals for a variety of use cases and tasks.\n\nData Transfer\n\nData Transer to and from Yoda using iBridges\nData Transer to and from Yoda using iCommands\nData Transfer from your PC using SCP and rsync\nData Transfer between Research Cloud and Surfdrive\n\n\n\nSecurity\n\nEnabling automatic security updates on Ubuntu Linux"
+    "text": "On this page we share manuals for a variety of use cases and tasks.\n\nData Transfer\n\nData Transer to and from Yoda using iBridges\nData Transer to and from Yoda using iCommands\nData Transfer from your computer using scp and rsync\nData Transfer between Research Cloud and SURFdrive\n\n\n\nSecurity\n\nEnabling automatic security updates on Ubuntu Linux"
   },
   {
     "objectID": "docs/responsible-use.html",
@@ -1012,7 +1012,7 @@
     "href": "docs/first-steps.html#getting-data-inside-your-workspace",
     "title": "First steps",
     "section": "Getting data inside your workspace",
-    "text": "Getting data inside your workspace\n\nMounting online storage\nIf you have a Research Drive account, you can mount it in your workspace. This method is most easy, and works well for working with small datasets (e.g. &lt;1 GB).\n\n\nTransferring data\nIn many cases it is more reliable to get a copy of your data on the Storage unit that is attached to your workspace.\nDepending on where your data is stored and the workspace that you are using, the following options are available:\n\nUpload from your laptop (Jupyter Notebook and Rstudio Workspaces)\nscp/ssh (most workspaces)\nDownload using the internet browser (on Ubuntu Desktop and Windows workspaces, for data stored on e.g. surfdrive, onedrive, etc.)\nirods icommands (for data stored on Yoda, works on Ubuntu based workspaces (including Jupyter and Rstudio)\nrclone (for data stored on a cloud storage platform (e.g. surfdrive, onedrive, dropbox)"
+    "text": "Getting data inside your workspace\n\nMounting online storage\nIf you have a Research Drive account, you can mount it in your workspace. This method is most easy, and works well for working with small datasets (e.g. &lt;1 GB).\n\n\nTransferring data\nIn many cases it is more reliable to get a copy of your data on the Storage unit that is attached to your workspace.\nSee the data transfer manuals for the most common ways of transferring data to your workspace.\nAdditionally, on some workspaces, the following methods may also be available:\n\nUpload from your laptop (Jupyter Notebook and Rstudio Workspaces).\nDownload using the internet browser (on Ubuntu Desktop and Windows workspaces, for data stored on e.g. SURFdrive, OnedDive, etc.)."
   },
   {
     "objectID": "docs/onboarding.html",
