@@ -6,7 +6,7 @@ This page describes all general steps that a user needs to perform to be able to
 
 Contents:
 
-1. [Creating storage](#create-storage)
+1. [Creating storage](#create-storage-volume)
 2. [Creating a workspace](#create-a-workspace)
 3. [Pausing, Resuming, Deleting a workspace](#pausing-resuming-deleting-a-workspace)
 4. [Logging in to your workspace](#getting-access-to-your-workspace)
