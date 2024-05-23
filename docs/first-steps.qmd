@@ -138,12 +138,11 @@ On MacOS and Linux machines you can use the standard ‘Terminal’.
 If you have a Research Drive account, you can mount it in your workspace. This method is most easy, and works well for working with small datasets (e.g. <1 GB).
 
 ### Transferring data
-In many cases it is more reliable to get a copy of your data on the [Storage unit](#create-storage-volume) that is attached to your workspace.  
-Depending on where your data is stored and the workspace that you are using, the following options are available:
+In many cases it is more reliable to get a copy of your data on the [Storage unit](#create-storage-volume) that is attached to your workspace.
 
--   Upload from your laptop (Jupyter Notebook and Rstudio Workspaces)
--   [scp/ssh](manuals/ssh-data-transfer-methods.qmd) (most workspaces)
--   Download using the internet browser (on Ubuntu Desktop and Windows workspaces, for data stored on e.g. surfdrive, onedrive, etc.)
--   [irods icommands](manuals/icommands.qmd) (for data stored on Yoda, works on Ubuntu based workspaces (including Jupyter and Rstudio)
--   [rclone](manuals/rclone-researchcloud.qmd) (for data stored on a cloud storage platform (e.g. surfdrive, onedrive, dropbox)
+**See the [data transfer manuals](manuals.qmd#data-transfer) for the most common ways of transferring data to your workspace.**
 
+Additionally, on some workspaces, the following methods may also be available:
+
+-   Upload from your laptop (Jupyter Notebook and Rstudio Workspaces).
+-   Download using the internet browser (on Ubuntu Desktop and Windows workspaces, for data stored on e.g. SURFdrive, OnedDive, etc.).
