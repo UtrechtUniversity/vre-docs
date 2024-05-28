@@ -256,7 +256,7 @@
     "href": "docs/workspaces/utility/asreview_lab.html#tips",
     "title": "ASReview Lab",
     "section": "Tips",
-    "text": "Tips\nBefore you log out and/or delete a workspace, don’t forget to store the results either on the storage unit (located under /data/volume_2), or upload it to an online storage platform using an internet browser within the workspace."
+    "text": "Tips\nBefore you log out and/or delete a workspace, don’t forget to store the results either on the storage unit (located under /data/&lt;name of your storage unit&gt;), or upload it to an online storage platform using an internet browser within the workspace."
   },
   {
     "objectID": "docs/workspaces/experimental/asreview-app.html#creation",
