@@ -18,7 +18,7 @@ support: UU
 ---
 
 ## Description
-This workspace can be used to work with ASReview Lab.
+This workspace can be used to work with ASReview Lab. On this workspace ASReview Lab is installed with all dependencies. Extensions (such as `asreview-makita`) are not installed on this workspace. 
 
 Currently the workspace is for all Research Cloud users.
 
