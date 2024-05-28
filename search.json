@@ -214,14 +214,14 @@
     "href": "docs/workspaces/utility/asreview_lab.html",
     "title": "ASReview Lab",
     "section": "",
-    "text": "This workspace can be used to work with ASReview Lab.\nCurrently the workspace is for all Research Cloud users."
+    "text": "This workspace can be used to work with ASReview Lab. On this workspace ASReview Lab is installed with all dependencies. Extensions (such as asreview-makita) are not installed on this workspace.\nCurrently the workspace is for all Research Cloud users."
   },
   {
     "objectID": "docs/workspaces/utility/asreview_lab.html#description",
     "href": "docs/workspaces/utility/asreview_lab.html#description",
     "title": "ASReview Lab",
     "section": "",
-    "text": "This workspace can be used to work with ASReview Lab.\nCurrently the workspace is for all Research Cloud users."
+    "text": "This workspace can be used to work with ASReview Lab. On this workspace ASReview Lab is installed with all dependencies. Extensions (such as asreview-makita) are not installed on this workspace.\nCurrently the workspace is for all Research Cloud users."
   },
   {
     "objectID": "docs/workspaces/utility/asreview_lab.html#creation",
