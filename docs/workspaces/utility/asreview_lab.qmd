@@ -12,7 +12,7 @@ data:
 - ResearchDrive
 - Yoda Webdav
 packages: []
-gpu: true
+gpu: false
 admin: true
 support: UU
 ---
@@ -44,4 +44,4 @@ Alternatively it is possible to transfer data using command `scp`. For this you 
 When you log in to this workspace, the ASReview lab web app will open automatically. 
 
 ## Tips
-Before you log out and/or delete a workspace, don't forget to store the results either on the storage unit (located under `/data/volume_2`), or upload it to an online storage platform using an internet browser _within_ the workspace.
+Before you log out and/or delete a workspace, don't forget to store the results either on the storage unit (located under `/data/<name of your storage unit>`), or upload it to an online storage platform using an internet browser _within_ the workspace.
