@@ -13,10 +13,12 @@ In addition to the UU terms of use, the following Acceptable Use policies at SUR
 - [SURF Research Cloud Acceptable Use Policy](https://servicedesk.surf.nl/wiki/display/WIKI/SRC+Acceptable+Use+Policy)
 - [SURF SRAM Acceptable Use Policy](https://servicedesk.surf.nl/wiki/display/WIKI/Acceptable+Use+Policy)
 
-Also the [VRE Privacy Policy](privacy.qmd) is applicable.
+The [VRE Privacy Policy](privacy.qmd) is also applicable.
 
 By accepting this invitation, users agree to adhere to the terms and conditions in the documents listed above.
 
 For more information about the responsible use of the VRE service, see [practical tips for responsible use](responsible-use.qmd).
 
-Last update: September 19, 2023
+{{< include ./_end_date.qmd >}}
+
+Last update: May 29, 2024.
