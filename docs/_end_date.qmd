@@ -1,0 +1,1 @@
+During the [intake meeting](onboarding.qmd) an end date for your VRE's project account (called a [Collaboration](glossary.qmd#collaboration) or "CO") will be agreed, after which you will loose access to it. You will be notified 10 days prior to the agreed end date, and you can always request that the lifetime of the CO be extended by [contacting us](contact.qmd).

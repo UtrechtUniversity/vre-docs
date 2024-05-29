@@ -49,6 +49,8 @@ The Research engineer who is doing the intake has experience with the systems an
 
 [Schedule an intake meeting](https://outlook.office365.com/owa/calendar/HPCSupport1@solisservices.onmicrosoft.com/bookings/).
 
+{{< include ./_end_date.qmd >}}
+
 ### 2. Request a collaboration in SRAM
 
 This will be done for you by the UU support team after intake meeting (step 1). 
