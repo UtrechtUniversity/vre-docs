@@ -2,6 +2,7 @@
 title: "Jupyter Notebooks CUDA"
 software:
 - Jupyter Lab
+- CUDA
 login:
 - webapp-sso
 os_flavor: linux
@@ -19,4 +20,4 @@ admin: true
 support: SURF
 ---
 
-This workspace type is identical to the [Juputer Notebook](./python-workbench.qmd) Catalog Item, but additionally comes with the nvidia CUDA GPU drivers preinstalled.
+This workspace type is identical to the [Juputer Notebook](./jupyter.qmd) Catalog Item, but additionally comes with the nvidia CUDA GPU drivers preinstalled.

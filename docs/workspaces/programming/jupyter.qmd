@@ -1,7 +1,6 @@
 --- 
 title: "Jupyter Notebooks"
 software:
-- CUDA
 - Jupyter Lab
 login:
 - webapp-sso
@@ -21,15 +20,36 @@ support: SURF
 
 ## Description
 
+This catalog item starts a JupyterLab environment in which you can work with Jupyter notebooks.
+
+Jupyter is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations and narrative text. Uses include: data cleaning and transformation, numerical simulation, statistical modeling, data visualization, machine learning, and much more.
+
+All users in your Collaborative Organisation can login to the workspace and will then be presented with their own notebook environment.
+
+If needed, we can help you to automatically install certain packages when the workspace is created, so that these are available from inside the Jupyter environment immediately. Please [contact us](../../contact.qmd) for this. However, you can of course also install your own dependencies from with the Notebook.
+
 ## Creation
+
+{{< include ../partials/_storage.qmd >}}
 
 {{< include ../partials/_creation.qmd >}}
 
 ## Access
 
-## Data transfer options
+You can login to the workspace in your browser, via [your ResearchCloud time-based password](../../first-steps.qmd#webapplications-that-require-a-time-based-password).
 
 ## Usage
+
+When logged in you are immediately presented with a JupyterLab environment in which you can work with different notebooks.
+
+{{< include ../partials/_data_transfer.qmd >}}
+
+You will have to run the relevant commands for the data transfer method of your choice from within [the JupyterLab terminal](https://jupyterlab.readthedocs.io/en/latest/user/terminal.html#terminals).
+
+
+### Installing additional software
+
+The user has [admin rights](../../responsible-use.qmd#installation-of-software) to install additional software on the system from the Jupyter terminal (use `sudo <command>`).
 
 ## Tips
 
