@@ -19,4 +19,18 @@ admin: true
 support: SURF
 ---
 
-{{< include partials/_jupyter.qmd >}}
+## Description
+
+## Creation
+
+{{< include ../partials/_creation.qmd >}}
+
+## Access
+
+## Data transfer options
+
+## Usage
+
+## Tips
+
+{{< include ../partials/_security.qmd >}}
