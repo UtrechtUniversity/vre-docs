@@ -14,7 +14,7 @@ data:
 - iBridges (python)
 packages:
 - Custom Packages
-gpu: false
+gpu: true
 admin: true
 support: SURF
 ---
