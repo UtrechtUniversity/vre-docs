@@ -1,4 +1,4 @@
-// Shinylive 0.4.0
+// Shinylive 0.4.1
 // Copyright 2024 Posit, PBC
 import {
   FCJSONtoFC,
@@ -21,7 +21,7 @@ import {
   sleep,
   stringToUint8Array,
   uint8ArrayToString
-} from "./chunk-HPRNUKWD.js";
+} from "./chunk-HW2MHHPP.js";
 
 // node_modules/scheduler/cjs/scheduler.development.js
 var require_scheduler_development = __commonJS({
