@@ -19,4 +19,4 @@ admin: true
 support: SURF
 ---
 
-{{< include partials/_jupyter.qmd >}}
+This workspace type is identical to the [Juputer Notebook](./python-workbench.qmd) Catalog Item, but additionally comes with the nvidia CUDA GPU drivers preinstalled.
