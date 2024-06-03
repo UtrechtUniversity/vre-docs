@@ -23,4 +23,11 @@ admin: true
 support: UU
 ---
 
-{{< include partials/_python_workbench.qmd >}}
+This workspace type is identical to the [Python Workbench](./python-workbench.qmd) Catalog Item, but additionally comes with the nvidia CUDA GPU drivers preinstalled.
+
+As with the Python Workbench Catalog Items, there are two flavours:
+
+- Python Workbench CUDA CLI ([login via command line](../../first-steps.qmd#ssh))
+- Python Workbench CUDA Desktop ([login via desktop](../../first-steps.qmd#browser-access-to-a-desktop-environment))
+
+Simply choose the one that is most convenient to you, and see the documentation for [Python Workbench](./python-workbench.qmd).

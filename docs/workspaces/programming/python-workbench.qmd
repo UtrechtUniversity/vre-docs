@@ -23,4 +23,31 @@ admin: true
 support: UU
 ---
 
-{{< include partials/_python_workbench.qmd >}}
+## Description
+
+This workspace types comes with various Python development tools already installed:
+
+- `pyenv` for managing different python versions
+- `miniconda` for managing dependency environments
+- `poetry` for running projects with specified dependencies
+
+There are various flavours of this Catalog Item:
+
+- Python Workbench CLI ([login via command line](../../first-steps.qmd#ssh))
+- Python Workbench Desktop ([login via desktop](../../first-steps.qmd#browser-access-to-a-desktop-environment))
+
+Simply choose the one that is most convenient to you.
+
+## Creation
+
+{{< include ../partials/_creation.qmd >}}
+
+## Usage
+
+
+
+## Data transfer options
+
+## Tips
+
+{{< include ../partials/_security.qmd >}}
