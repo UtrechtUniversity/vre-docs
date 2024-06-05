@@ -294,137 +294,95 @@
     "text": "Tips"
   },
   {
-    "objectID": "docs/workspaces/programming/jupyter.html",
-    "href": "docs/workspaces/programming/jupyter.html",
-    "title": "Jupyter Notebooks",
+    "objectID": "docs/workspaces/programming/miniconda.html",
+    "href": "docs/workspaces/programming/miniconda.html",
+    "title": "Miniconda (shared)",
     "section": "",
-    "text": "This workspace can be used to work with Jupyter Notebooks and Python. The workspace also comes with a (linux) terminal (aka command line) to install Python packages or other additional tools when relevant.\nUpon request we can help you to install additional Python packages and preconfigure a Python environment or automate other installations (e.g. tools for data transfer). Automating these steps will make it easier to work following our best practices.\nContact us if you need help with installations."
+    "text": "This workspace types comes with the miniconda package manger preinstalled. All users on the system will share the same conda environment. Warning: although this can be convenient for some usecases, this can lead to unwanted conflicts/interference. In most cases, it is recommended to use separate conda environments for each user. You can use the Python Workbench Catalog Item for this.\nThere are various flavours of this Catalog Item:\n\nMiniconda CLI (shared) (login via command line)\nMiniconda Desktop (shared)(login via desktop)\n\nSimply choose the one that is most convenient to you.\nIf needed, we can help you to automatically install certain packages when the workspace is created. Please contact us for this."
   },
   {
-    "objectID": "docs/workspaces/programming/jupyter.html#description",
-    "href": "docs/workspaces/programming/jupyter.html#description",
-    "title": "Jupyter Notebooks",
+    "objectID": "docs/workspaces/programming/miniconda.html#description",
+    "href": "docs/workspaces/programming/miniconda.html#description",
+    "title": "Miniconda (shared)",
     "section": "",
-    "text": "This workspace can be used to work with Jupyter Notebooks and Python. The workspace also comes with a (linux) terminal (aka command line) to install Python packages or other additional tools when relevant.\nUpon request we can help you to install additional Python packages and preconfigure a Python environment or automate other installations (e.g. tools for data transfer). Automating these steps will make it easier to work following our best practices.\nContact us if you need help with installations."
+    "text": "This workspace types comes with the miniconda package manger preinstalled. All users on the system will share the same conda environment. Warning: although this can be convenient for some usecases, this can lead to unwanted conflicts/interference. In most cases, it is recommended to use separate conda environments for each user. You can use the Python Workbench Catalog Item for this.\nThere are various flavours of this Catalog Item:\n\nMiniconda CLI (shared) (login via command line)\nMiniconda Desktop (shared)(login via desktop)\n\nSimply choose the one that is most convenient to you.\nIf needed, we can help you to automatically install certain packages when the workspace is created. Please contact us for this."
   },
   {
-    "objectID": "docs/workspaces/programming/jupyter.html#creation",
-    "href": "docs/workspaces/programming/jupyter.html#creation",
-    "title": "Jupyter Notebooks",
+    "objectID": "docs/workspaces/programming/miniconda.html#creation",
+    "href": "docs/workspaces/programming/miniconda.html#creation",
+    "title": "Miniconda (shared)",
     "section": "Creation",
     "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
   },
   {
-    "objectID": "docs/workspaces/programming/jupyter.html#access",
-    "href": "docs/workspaces/programming/jupyter.html#access",
-    "title": "Jupyter Notebooks",
-    "section": "Access",
-    "text": "Access\nThis workspace can be accessed via the yellow ‘Access’ button. You need a TOTP to login to your workspace, see Workspace access with TOTP."
-  },
-  {
-    "objectID": "docs/workspaces/programming/jupyter.html#data-transfer-options",
-    "href": "docs/workspaces/programming/jupyter.html#data-transfer-options",
-    "title": "Jupyter Notebooks",
-    "section": "Data transfer options",
-    "text": "Data transfer options\nFirst create a working directory on the Storage Volume using the file browser in the Jupyter dashboard.\nThe Jupyter dashboard has an Upload button to directly upload data from your PC to the workspace.\nTo download a file to your PC, right click the file in the file browser in the Jupyter dashboard, and several options will show including ‘Download’.\nAlternatively it is possible to use the terminal to transfer data from other, such as Yoda, or Surfdrive:\n\nData transfer and Yoda\nData transfer and Surfdrive"
-  },
-  {
-    "objectID": "docs/workspaces/programming/jupyter.html#usage",
-    "href": "docs/workspaces/programming/jupyter.html#usage",
-    "title": "Jupyter Notebooks",
+    "objectID": "docs/workspaces/programming/miniconda.html#usage",
+    "href": "docs/workspaces/programming/miniconda.html#usage",
+    "title": "Miniconda (shared)",
     "section": "Usage",
-    "text": "Usage\n\nStart a Notebook\nIf you have uploaded an existing notebook, you can start it by clicking on the notebook file in the Jupyter dashboard.\nTo create a new notebook, click on the ‘New’ button in the Jupyter dashboard and select ‘Python 3’ under ‘Notebook’.\n\n\nInstalling Python packages\n\nFrom within a Notebook\nTo install Python packages from within a Notebook, you can use the !pip command. For example, to install the Python package pandas:\n!pip install pandas\n\n\nUsing the terminal\nTo install Python packages, you can use the terminal. To start a terminal session, click on the ‘New’ button in the Jupyter dashboard and select ‘Terminal’ under ‘Other’.\nFor example, to install the Python package pandas:\npip install pandas"
+    "text": "Usage\nWhen you login, miniconda will be ready for use. See the miniconda docs.\nminiconda will be installed to /opt/miniconda.\n\nData transfer options\nSee our data transfer manuals.\nThe recommended iBridges client is preinstalled.\n\n\nInstalling additional software\nThe user has admin rights to install additional software on the system (on a terminal, use sudo &lt;yourcommand&gt;)."
   },
   {
-    "objectID": "docs/workspaces/programming/jupyter.html#tips",
-    "href": "docs/workspaces/programming/jupyter.html#tips",
-    "title": "Jupyter Notebooks",
+    "objectID": "docs/workspaces/programming/miniconda.html#tips",
+    "href": "docs/workspaces/programming/miniconda.html#tips",
+    "title": "Miniconda (shared)",
     "section": "Tips",
-    "text": "Tips"
+    "text": "Tips\n\nWorkspace security\nPlease take a moment to read the security recommendations for VREs."
   },
   {
-    "objectID": "docs/workspaces/programming/python-workbench-cuda.html#creation",
-    "href": "docs/workspaces/programming/python-workbench-cuda.html#creation",
-    "title": "Python Workbench CUDA",
-    "section": "Creation",
-    "text": "Creation\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
-  },
-  {
-    "objectID": "docs/workspaces/programming/python-workbench-cuda.html#access",
-    "href": "docs/workspaces/programming/python-workbench-cuda.html#access",
-    "title": "Python Workbench CUDA",
-    "section": "Access",
-    "text": "Access"
-  },
-  {
-    "objectID": "docs/workspaces/programming/python-workbench-cuda.html#data-transfer-options",
-    "href": "docs/workspaces/programming/python-workbench-cuda.html#data-transfer-options",
-    "title": "Python Workbench CUDA",
-    "section": "Data transfer options",
-    "text": "Data transfer options"
-  },
-  {
-    "objectID": "docs/workspaces/programming/python-workbench-cuda.html#usage",
-    "href": "docs/workspaces/programming/python-workbench-cuda.html#usage",
-    "title": "Python Workbench CUDA",
-    "section": "Usage",
-    "text": "Usage"
-  },
-  {
-    "objectID": "docs/workspaces/programming/python-workbench-cuda.html#tips",
-    "href": "docs/workspaces/programming/python-workbench-cuda.html#tips",
-    "title": "Python Workbench CUDA",
-    "section": "Tips",
-    "text": "Tips"
-  },
-  {
-    "objectID": "docs/workspaces/programming/rstudio.html",
-    "href": "docs/workspaces/programming/rstudio.html",
-    "title": "RStudio",
+    "objectID": "docs/workspaces/programming/python-workbench.html",
+    "href": "docs/workspaces/programming/python-workbench.html",
+    "title": "Python Workbench",
     "section": "",
-    "text": "This workspace can be used to work with R and RStudio. The workspace also comes with a (linux) terminal (aka command line) to install additional tools when relevant.\nUpon request we can help you to automate the installation of R packages or automate other installations (e.g. tools for data transfer). Automating these steps will make it easier to work following our best practices.\nContact us if you need help with installations."
+    "text": "This workspace types comes with various Python development tools already installed:\n\npyenv for managing different python versions\nminiconda for managing dependency environments\npoetry for an alternative way of running projects with specified dependencies\n\nThere are various flavours of this Catalog Item:\n\nPython Workbench CLI (login via command line)\nPython Workbench Desktop (login via desktop)\n\nSimply choose the one that is most convenient to you.\n\n\nNote that the above tools are installed separately for each user in your CO that has access to the machine. This means each user can have their own clean pyenv and miniconda environments.\nIf you prefer all users on the machine to have a single shared miniconda environment, please see the Miniconda Catalog Item."
   },
   {
-    "objectID": "docs/workspaces/programming/rstudio.html#description",
-    "href": "docs/workspaces/programming/rstudio.html#description",
-    "title": "RStudio",
+    "objectID": "docs/workspaces/programming/python-workbench.html#description",
+    "href": "docs/workspaces/programming/python-workbench.html#description",
+    "title": "Python Workbench",
     "section": "",
-    "text": "This workspace can be used to work with R and RStudio. The workspace also comes with a (linux) terminal (aka command line) to install additional tools when relevant.\nUpon request we can help you to automate the installation of R packages or automate other installations (e.g. tools for data transfer). Automating these steps will make it easier to work following our best practices.\nContact us if you need help with installations."
+    "text": "This workspace types comes with various Python development tools already installed:\n\npyenv for managing different python versions\nminiconda for managing dependency environments\npoetry for an alternative way of running projects with specified dependencies\n\nThere are various flavours of this Catalog Item:\n\nPython Workbench CLI (login via command line)\nPython Workbench Desktop (login via desktop)\n\nSimply choose the one that is most convenient to you.\n\n\nNote that the above tools are installed separately for each user in your CO that has access to the machine. This means each user can have their own clean pyenv and miniconda environments.\nIf you prefer all users on the machine to have a single shared miniconda environment, please see the Miniconda Catalog Item."
   },
   {
-    "objectID": "docs/workspaces/programming/rstudio.html#creation",
-    "href": "docs/workspaces/programming/rstudio.html#creation",
-    "title": "RStudio",
+    "objectID": "docs/workspaces/programming/python-workbench.html#creation",
+    "href": "docs/workspaces/programming/python-workbench.html#creation",
+    "title": "Python Workbench",
     "section": "Creation",
     "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
   },
   {
-    "objectID": "docs/workspaces/programming/rstudio.html#access",
-    "href": "docs/workspaces/programming/rstudio.html#access",
-    "title": "RStudio",
+    "objectID": "docs/workspaces/programming/python-workbench.html#access",
+    "href": "docs/workspaces/programming/python-workbench.html#access",
+    "title": "Python Workbench",
     "section": "Access",
-    "text": "Access\nThis workspace can be accessed via the yellow ‘Access’ button. You need a TOTP to login to your workspace, see Workspace access with TOTP."
+    "text": "Access\n\nPython Workbench CLI\nFor the Python Workbench CLI (command line) version of this Catalog Item, you can login using SSH.\n\n\nPython Workbench Desktop\nFor the Python Workbench CLI (command line) version of this Catalog Item, you can login using your browser. It is also possible to login via SSH, as described for Python Workbench CLI above."
   },
   {
-    "objectID": "docs/workspaces/programming/rstudio.html#data-transfer-options",
-    "href": "docs/workspaces/programming/rstudio.html#data-transfer-options",
-    "title": "RStudio",
-    "section": "Data transfer options",
-    "text": "Data transfer options\nFirst create a working directory on the Storage Volume using the file browser in the Jupyter dashboard.\nThe RStudio interface has an Upload button to directly upload data from your PC to the workspace.\nAlternatively it is possible to use the terminal to transfer data from other, such as Yoda, or Surfdrive:\n\nData transfer and Yoda\nData transfer and Surfdrive"
-  },
-  {
-    "objectID": "docs/workspaces/programming/rstudio.html#usage",
-    "href": "docs/workspaces/programming/rstudio.html#usage",
-    "title": "RStudio",
+    "objectID": "docs/workspaces/programming/python-workbench.html#usage",
+    "href": "docs/workspaces/programming/python-workbench.html#usage",
+    "title": "Python Workbench",
     "section": "Usage",
-    "text": "Usage"
+    "text": "Usage\nThe first time (but only the first time) you login to a workspace of this type, the Python tools (pyenv, miniconda and poetry) are installed for your user. This means that at first login you may experience a small delay (~1 minute maximum). During this time, if you are logging in on the command line, you will see that the applications are being installed for you:\n--- Running install scripts at first login: executing /home/username/runonce.d/01_pyenv-install.sh\n--- Running install scripts at first login: executing /home/username/runonce.d/10-poetry.sh\n--- Running install scripts at first login: executing /home/username/runonce.d/runonce_conda.sh\nWhen you are logged in you can start developing or running code. On the command line, you will have pyenv, miniconda, and poetry available. By default, pyenv will be configured to use the most recent version of Python shipped with the operating system. You can use pyenv to install and select a different (newer) Python version: e.g. pyenv install 3.12. See the pyenv docs.\nTo start using miniconda environments, activate conda with the command conda init. See the miniconda docs.\nAlso see the poetry docs.\n\nData transfer options\nSee our data transfer manuals.\nThe recommended iBridges client is preinstalled.\n\n\nInstalling additional software\nThe user has admin rights to install additional software on the system from the terminal."
   },
   {
-    "objectID": "docs/workspaces/programming/rstudio.html#tips",
-    "href": "docs/workspaces/programming/rstudio.html#tips",
-    "title": "RStudio",
+    "objectID": "docs/workspaces/programming/python-workbench.html#tips",
+    "href": "docs/workspaces/programming/python-workbench.html#tips",
+    "title": "Python Workbench",
     "section": "Tips",
-    "text": "Tips"
+    "text": "Tips\n\nWorkspace security\nPlease take a moment to read the security recommendations for VREs."
+  },
+  {
+    "objectID": "docs/workspaces/programming/jupyter-cuda.html",
+    "href": "docs/workspaces/programming/jupyter-cuda.html",
+    "title": "Jupyter Notebooks CUDA",
+    "section": "",
+    "text": "This workspace type is identical to the Juputer Notebook Catalog Item, but additionally comes with the nvidia CUDA GPU drivers preinstalled."
+  },
+  {
+    "objectID": "docs/workspaces/programming/miniconda-cuda.html",
+    "href": "docs/workspaces/programming/miniconda-cuda.html",
+    "title": "Miniconda (shared) CUDA",
+    "section": "",
+    "text": "This workspace type is identical to the Miniconda (shared) Catalog Item, but additionally comes with the nvidia CUDA GPU drivers preinstalled."
   },
   {
     "objectID": "docs/glossary.html",
@@ -644,88 +602,102 @@
     "text": "Tips"
   },
   {
-    "objectID": "docs/workspaces/programming/jupyter-cuda.html",
-    "href": "docs/workspaces/programming/jupyter-cuda.html",
-    "title": "Jupyter Notebooks CUDA",
+    "objectID": "docs/workspaces/programming/rstudio.html",
+    "href": "docs/workspaces/programming/rstudio.html",
+    "title": "RStudio",
     "section": "",
-    "text": "This workspace can be used to work with Jupyter Notebooks and Python. The workspace also comes with a (linux) terminal (aka command line) to install Python packages or other additional tools when relevant.\nUpon request we can help you to install additional Python packages and preconfigure a Python environment or automate other installations (e.g. tools for data transfer). Automating these steps will make it easier to work following our best practices.\nContact us if you need help with installations."
+    "text": "This workspace can be used to work with R and RStudio. The workspace also comes with a (linux) terminal (aka command line) to install additional tools when relevant.\nUpon request we can help you to automate the installation of R packages or automate other installations (e.g. tools for data transfer). Automating these steps will make it easier to work following our best practices.\nContact us if you need help with installations."
   },
   {
-    "objectID": "docs/workspaces/programming/jupyter-cuda.html#description",
-    "href": "docs/workspaces/programming/jupyter-cuda.html#description",
-    "title": "Jupyter Notebooks CUDA",
+    "objectID": "docs/workspaces/programming/rstudio.html#description",
+    "href": "docs/workspaces/programming/rstudio.html#description",
+    "title": "RStudio",
     "section": "",
-    "text": "This workspace can be used to work with Jupyter Notebooks and Python. The workspace also comes with a (linux) terminal (aka command line) to install Python packages or other additional tools when relevant.\nUpon request we can help you to install additional Python packages and preconfigure a Python environment or automate other installations (e.g. tools for data transfer). Automating these steps will make it easier to work following our best practices.\nContact us if you need help with installations."
+    "text": "This workspace can be used to work with R and RStudio. The workspace also comes with a (linux) terminal (aka command line) to install additional tools when relevant.\nUpon request we can help you to automate the installation of R packages or automate other installations (e.g. tools for data transfer). Automating these steps will make it easier to work following our best practices.\nContact us if you need help with installations."
   },
   {
-    "objectID": "docs/workspaces/programming/jupyter-cuda.html#creation",
-    "href": "docs/workspaces/programming/jupyter-cuda.html#creation",
-    "title": "Jupyter Notebooks CUDA",
+    "objectID": "docs/workspaces/programming/rstudio.html#creation",
+    "href": "docs/workspaces/programming/rstudio.html#creation",
+    "title": "RStudio",
     "section": "Creation",
     "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
   },
   {
-    "objectID": "docs/workspaces/programming/jupyter-cuda.html#access",
-    "href": "docs/workspaces/programming/jupyter-cuda.html#access",
-    "title": "Jupyter Notebooks CUDA",
+    "objectID": "docs/workspaces/programming/rstudio.html#access",
+    "href": "docs/workspaces/programming/rstudio.html#access",
+    "title": "RStudio",
     "section": "Access",
     "text": "Access\nThis workspace can be accessed via the yellow ‘Access’ button. You need a TOTP to login to your workspace, see Workspace access with TOTP."
   },
   {
-    "objectID": "docs/workspaces/programming/jupyter-cuda.html#data-transfer-options",
-    "href": "docs/workspaces/programming/jupyter-cuda.html#data-transfer-options",
-    "title": "Jupyter Notebooks CUDA",
+    "objectID": "docs/workspaces/programming/rstudio.html#data-transfer-options",
+    "href": "docs/workspaces/programming/rstudio.html#data-transfer-options",
+    "title": "RStudio",
     "section": "Data transfer options",
-    "text": "Data transfer options\nFirst create a working directory on the Storage Volume using the file browser in the Jupyter dashboard.\nThe Jupyter dashboard has an Upload button to directly upload data from your PC to the workspace.\nTo download a file to your PC, right click the file in the file browser in the Jupyter dashboard, and several options will show including ‘Download’.\nAlternatively it is possible to use the terminal to transfer data from other, such as Yoda, or Surfdrive:\n\nData transfer and Yoda\nData transfer and Surfdrive"
+    "text": "Data transfer options\nFirst create a working directory on the Storage Volume using the file browser in the Jupyter dashboard.\nThe RStudio interface has an Upload button to directly upload data from your PC to the workspace.\nAlternatively it is possible to use the terminal to transfer data from other, such as Yoda, or Surfdrive:\n\nData transfer and Yoda\nData transfer and Surfdrive"
   },
   {
-    "objectID": "docs/workspaces/programming/jupyter-cuda.html#usage",
-    "href": "docs/workspaces/programming/jupyter-cuda.html#usage",
-    "title": "Jupyter Notebooks CUDA",
-    "section": "Usage",
-    "text": "Usage\n\nStart a Notebook\nIf you have uploaded an existing notebook, you can start it by clicking on the notebook file in the Jupyter dashboard.\nTo create a new notebook, click on the ‘New’ button in the Jupyter dashboard and select ‘Python 3’ under ‘Notebook’.\n\n\nInstalling Python packages\n\nFrom within a Notebook\nTo install Python packages from within a Notebook, you can use the !pip command. For example, to install the Python package pandas:\n!pip install pandas\n\n\nUsing the terminal\nTo install Python packages, you can use the terminal. To start a terminal session, click on the ‘New’ button in the Jupyter dashboard and select ‘Terminal’ under ‘Other’.\nFor example, to install the Python package pandas:\npip install pandas"
-  },
-  {
-    "objectID": "docs/workspaces/programming/jupyter-cuda.html#tips",
-    "href": "docs/workspaces/programming/jupyter-cuda.html#tips",
-    "title": "Jupyter Notebooks CUDA",
-    "section": "Tips",
-    "text": "Tips"
-  },
-  {
-    "objectID": "docs/workspaces/programming/python-workbench.html#creation",
-    "href": "docs/workspaces/programming/python-workbench.html#creation",
-    "title": "Python Workbench",
-    "section": "Creation",
-    "text": "Creation\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
-  },
-  {
-    "objectID": "docs/workspaces/programming/python-workbench.html#access",
-    "href": "docs/workspaces/programming/python-workbench.html#access",
-    "title": "Python Workbench",
-    "section": "Access",
-    "text": "Access"
-  },
-  {
-    "objectID": "docs/workspaces/programming/python-workbench.html#data-transfer-options",
-    "href": "docs/workspaces/programming/python-workbench.html#data-transfer-options",
-    "title": "Python Workbench",
-    "section": "Data transfer options",
-    "text": "Data transfer options"
-  },
-  {
-    "objectID": "docs/workspaces/programming/python-workbench.html#usage",
-    "href": "docs/workspaces/programming/python-workbench.html#usage",
-    "title": "Python Workbench",
+    "objectID": "docs/workspaces/programming/rstudio.html#usage",
+    "href": "docs/workspaces/programming/rstudio.html#usage",
+    "title": "RStudio",
     "section": "Usage",
     "text": "Usage"
   },
   {
-    "objectID": "docs/workspaces/programming/python-workbench.html#tips",
-    "href": "docs/workspaces/programming/python-workbench.html#tips",
-    "title": "Python Workbench",
+    "objectID": "docs/workspaces/programming/rstudio.html#tips",
+    "href": "docs/workspaces/programming/rstudio.html#tips",
+    "title": "RStudio",
     "section": "Tips",
     "text": "Tips"
+  },
+  {
+    "objectID": "docs/workspaces/programming/python-workbench-cuda.html",
+    "href": "docs/workspaces/programming/python-workbench-cuda.html",
+    "title": "Python Workbench CUDA",
+    "section": "",
+    "text": "This workspace type is identical to the Python Workbench Catalog Item, but additionally comes with the nvidia CUDA GPU drivers preinstalled.\nAs with the Python Workbench Catalog Items, there are two flavours:\n\nPython Workbench CUDA CLI (login via command line)\nPython Workbench CUDA Desktop (login via desktop)\n\nSimply choose the one that is most convenient to you, and see the documentation for Python Workbench."
+  },
+  {
+    "objectID": "docs/workspaces/programming/jupyter.html",
+    "href": "docs/workspaces/programming/jupyter.html",
+    "title": "Jupyter Notebooks",
+    "section": "",
+    "text": "This catalog item starts a JupyterLab environment in which you can work with Jupyter notebooks.\nJupyter is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations and narrative text. Uses include: data cleaning and transformation, numerical simulation, statistical modeling, data visualization, machine learning, and much more.\nAll users in your Collaborative Organisation can login to the workspace and will then be presented with their own notebook environment.\nIf needed, we can help you to automatically install certain packages when the workspace is created, so that these are available from inside the Jupyter environment immediately. Please contact us for this. However, you can of course also install your own dependencies from with the Notebook."
+  },
+  {
+    "objectID": "docs/workspaces/programming/jupyter.html#description",
+    "href": "docs/workspaces/programming/jupyter.html#description",
+    "title": "Jupyter Notebooks",
+    "section": "",
+    "text": "This catalog item starts a JupyterLab environment in which you can work with Jupyter notebooks.\nJupyter is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations and narrative text. Uses include: data cleaning and transformation, numerical simulation, statistical modeling, data visualization, machine learning, and much more.\nAll users in your Collaborative Organisation can login to the workspace and will then be presented with their own notebook environment.\nIf needed, we can help you to automatically install certain packages when the workspace is created, so that these are available from inside the Jupyter environment immediately. Please contact us for this. However, you can of course also install your own dependencies from with the Notebook."
+  },
+  {
+    "objectID": "docs/workspaces/programming/jupyter.html#creation",
+    "href": "docs/workspaces/programming/jupyter.html#creation",
+    "title": "Jupyter Notebooks",
+    "section": "Creation",
+    "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
+  },
+  {
+    "objectID": "docs/workspaces/programming/jupyter.html#access",
+    "href": "docs/workspaces/programming/jupyter.html#access",
+    "title": "Jupyter Notebooks",
+    "section": "Access",
+    "text": "Access\nYou can login to the workspace in your browser, via your ResearchCloud time-based password."
+  },
+  {
+    "objectID": "docs/workspaces/programming/jupyter.html#usage",
+    "href": "docs/workspaces/programming/jupyter.html#usage",
+    "title": "Jupyter Notebooks",
+    "section": "Usage",
+    "text": "Usage\nWhen logged in you are immediately presented with a JupyterLab environment in which you can work with different notebooks.\n\nData transfer options\nSee our data transfer manuals.\nYou will have to run the relevant commands for the data transfer method of your choice from within the JupyterLab terminal.\n\n\nInstalling additional software\nThe user has admin rights to install additional software on the system from the Jupyter terminal (use sudo &lt;command&gt;)."
+  },
+  {
+    "objectID": "docs/workspaces/programming/jupyter.html#tips",
+    "href": "docs/workspaces/programming/jupyter.html#tips",
+    "title": "Jupyter Notebooks",
+    "section": "Tips",
+    "text": "Tips\n\nWorkspace security\nPlease take a moment to read the security recommendations for VREs."
   },
   {
     "objectID": "docs/workspaces/programming/stata.html#creation",
@@ -935,28 +907,21 @@
     "href": "docs/workspaces/templates/template.html#creation",
     "title": "workspace name",
     "section": "Creation",
-    "text": "Creation\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
+    "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
   },
   {
     "objectID": "docs/workspaces/templates/template.html#access",
     "href": "docs/workspaces/templates/template.html#access",
     "title": "workspace name",
     "section": "Access",
-    "text": "Access"
-  },
-  {
-    "objectID": "docs/workspaces/templates/template.html#data-transfer-options",
-    "href": "docs/workspaces/templates/template.html#data-transfer-options",
-    "title": "workspace name",
-    "section": "Data transfer options",
-    "text": "Data transfer options"
+    "text": "Access\nLink to access methods in the first steps page here."
   },
   {
     "objectID": "docs/workspaces/templates/template.html#usage",
     "href": "docs/workspaces/templates/template.html#usage",
     "title": "workspace name",
     "section": "Usage",
-    "text": "Usage"
+    "text": "Usage\n\nData transfer options\nSee our data transfer manuals.\n\n\nInstalling additional software\nThe user has admin rights to install additional software on the system (on a terminal, use sudo &lt;yourcommand&gt;)."
   },
   {
     "objectID": "docs/workspaces/templates/template.html#tips",
@@ -1061,6 +1026,6 @@
     "href": "docs/workspace-catalogue.html",
     "title": "Workspace Catalogue",
     "section": "",
-    "text": "This page provides an overview of workspace types (called “Catalog Items” on Research Cloud) supported by Utrecht University. This overview includes primarily Catalog Items developed by UU, but also some commonly used Catalog Items developed by SURF.\nPlease note this is not a full list of available workspace types on ResearchCloud: there are many more developed by other institutions.\nIf there is a specific environment application, or software package you think you might need, please contact us for help. If what you require is not yet available on ResearchCloud, we can also help you to create custom Catalog Items.\n\nLegend\n\n Access the workspace via the command line\n Access the workspace as a remote desktop.\n Access application via the browser.\n\n\n\nProgramming & Analysis Environments\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nJupyter Notebooks\nCUDAJupyter Lab\n\n\n\n\nSURF\n\n\nJupyter Notebooks CUDA\nJupyter Lab\n\n\n\n\nSURF\n\n\nMatlab\nMatlab\n\n\n\nLicense needed\nUU\n\n\nPython Workbench\nPythonpoetryminiconda\n\n\n\n\nUU\n\n\nPython Workbench CUDA\nCUDAPythonpoetryminiconda\n\n\n\n\nUU\n\n\nRStudio\nRStudio\n\n\n\n\nSURF\n\n\nStata\nStata\n\n\n\nLicense needed\nUU\n\n\n\n\n\n\n\nPlain Workspaces\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nUbuntu\n\n\n\n\n\nSURF\n\n\nUbuntu CUDA\nCUDA\n\n\n\n\nSURF\n\n\nWindows\n\n\n\n\n\nSURF\n\n\nWindows with CUDA\n\n\n\n\n\nSURF\n\n\n\n\n\n\n\nUtilities & Data Processing\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nASReview CLI\nASReview\n\n\n\n\nUU\n\n\nASReview Lab\nASReview\n\n\n\n\nUU\n\n\nGrobid\nGrobid\n\n\n\n\nUU\n\n\nWhisper OpenAI CUDA 11\nWhisperX\n\n\n\n\nUU\n\n\n\n\n\n\n\nExperimental\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nASReview Webapp\nASReview\n\n\n\n\nUU"
+    "text": "This page provides an overview of workspace types (called “Catalog Items” on Research Cloud) supported by Utrecht University. This overview includes primarily Catalog Items developed by UU, but also some commonly used Catalog Items developed by SURF.\nPlease note this is not a full list of available workspace types on ResearchCloud: there are many more developed by other institutions.\nIf there is a specific environment application, or software package you think you might need, please contact us for help. If what you require is not yet available on ResearchCloud, we can also help you to create custom Catalog Items.\n\nLegend\n\n Access the workspace via the command line\n Access the workspace as a remote desktop.\n Access application via the browser.\n\n\n\nProgramming & Analysis Environments\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nJupyter Notebooks\nJupyter Lab\n\n\n\n\nSURF\n\n\nJupyter Notebooks CUDA\nJupyter LabCUDA\n\n\n\n\nSURF\n\n\nMatlab\nMatlab\n\n\n\nLicense needed\nUU\n\n\nMiniconda (shared)\nminiconda\n\n\n\n\nUU\n\n\nMiniconda (shared) CUDA\nJupyter LabCUDA\n\n\n\n\nUU\n\n\nPython Workbench\nPythonpoetryminiconda\n\n\n\n\nUU\n\n\nPython Workbench CUDA\nCUDAPythonpoetryminiconda\n\n\n\n\nUU\n\n\nRStudio\nRStudio\n\n\n\n\nSURF\n\n\nStata\nStata\n\n\n\nLicense needed\nUU\n\n\n\n\n\n\n\nPlain Workspaces\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nUbuntu\n\n\n\n\n\nSURF\n\n\nUbuntu CUDA\nCUDA\n\n\n\n\nSURF\n\n\nWindows\n\n\n\n\n\nSURF\n\n\nWindows with CUDA\n\n\n\n\n\nSURF\n\n\n\n\n\n\n\nUtilities & Data Processing\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nASReview CLI\nASReview\n\n\n\n\nUU\n\n\nASReview Lab\nASReview\n\n\n\n\nUU\n\n\nGrobid\nGrobid\n\n\n\n\nUU\n\n\nWhisper OpenAI CUDA 11\nWhisperX\n\n\n\n\nUU\n\n\n\n\n\n\n\nExperimental\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nASReview Webapp\nASReview\n\n\n\n\nUU"
   }
 ]
