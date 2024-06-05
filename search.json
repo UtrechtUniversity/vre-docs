@@ -25,7 +25,7 @@
     "href": "docs/manuals.html",
     "title": "User Manuals",
     "section": "",
-    "text": "On this page we share manuals for a variety of use cases and tasks.\n\nData Transfer\n\nData Transer to and from Yoda using iBridges\nData Transer to and from Yoda using iCommands\nData Transfer from your computer using scp and rsync\nData Transfer between Research Cloud and SURFdrive\n\n\n\nSecurity\n\nEnabling automatic security updates on Ubuntu Linux"
+    "text": "On this page we share manuals for a variety of use cases and tasks.\n\nData Transfer\n\nData Transfer to and from Yoda using iBridges\nData Transfer to and from Yoda using iCommands\nData Transfer from your computer using scp and rsync\nData Transfer between Research Cloud and SURFdrive\n\n\n\nSecurity\n\nEnabling automatic security updates on Ubuntu Linux"
   },
   {
     "objectID": "docs/responsible-use.html",
