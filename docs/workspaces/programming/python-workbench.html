@@ -241,7 +241,10 @@ ul.task-list li input[type="checkbox"] {
 <pre><code>--- Running install scripts at first login: executing /home/username/runonce.d/01_pyenv-install.sh
 --- Running install scripts at first login: executing /home/username/runonce.d/10-poetry.sh
 --- Running install scripts at first login: executing /home/username/runonce.d/runonce_conda.sh</code></pre>
-<p>When you are logged in you can start developing or running code. On the command line, you will have <code>pyenv</code>, <code>miniconda</code>, and <code>poetry</code> available. By default, <code>pyenv</code> will be configured to use the most recent version of Python shipped with the operating system. You can use <code>pyenv</code> to install and select a different (newer) Python version: e.g.&nbsp;<code>pyenv install 3.12</code>. See the <a href="https://github.com/pyenv/pyenv#usage">pyenv docs</a>.</p>
+<p>When you are logged in you can start developing or running code. On the command line, you will have <code>pyenv</code>, <code>miniconda</code>, and <code>poetry</code> available.</p>
+<p>By default, <code>pyenv</code> will be configured to use the most recent version of Python shipped with the operating system:</p>
+<p>`<code>$ pyenv versions   system * system-latest (set by /home/testuser/.pyenv/version)</code></p>
+<p>You can use <code>pyenv</code> to install and select a different (newer) Python version: e.g.&nbsp;<code>pyenv install 3.12</code>, <code>pyenv global 3.12</code>. See the <a href="https://github.com/pyenv/pyenv#usage">pyenv docs</a>.</p>
 <p>To start using <code>miniconda</code> environments, activate <code>conda</code> with the command <code>conda init</code>. See the <a href="https://docs.anaconda.com/free/miniconda/">miniconda docs</a>.</p>
 <p>Also see the <a href="https://python-poetry.org/docs/">poetry docs</a>.</p>
 <section id="data-transfer-options" class="level3">
