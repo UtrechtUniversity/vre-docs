@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.555">
+<meta name="generator" content="quarto-1.4.557">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -157,7 +157,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#data-storage-and-backup" id="toc-data-storage-and-backup" class="nav-link" data-scroll-target="#data-storage-and-backup">Data storage and – backup</a></li>
   <li><a href="#sensitive-data" id="toc-sensitive-data" class="nav-link" data-scroll-target="#sensitive-data">Sensitive data</a>
   <ul class="collapse">
-  <li><a href="#data-classification-service-vre" id="toc-data-classification-service-vre" class="nav-link" data-scroll-target="#data-classification-service-vre">Data classification Service VRE</a></li>
+  <li><a href="#sane" id="toc-sane" class="nav-link" data-scroll-target="#sane">SANE</a></li>
   </ul></li>
   <li><a href="#security-incidents" id="toc-security-incidents" class="nav-link" data-scroll-target="#security-incidents">Security incidents</a></li>
   <li><a href="#relevant-policies" id="toc-relevant-policies" class="nav-link" data-scroll-target="#relevant-policies">Relevant policies</a></li>
@@ -327,26 +327,14 @@ app = App(app_ui, server)
 </section>
 <section id="sensitive-data" class="level2">
 <h2 class="anchored" data-anchor-id="sensitive-data">Sensitive data</h2>
-<p>If you want to process data that is classified as sensitive or higher according to UU standards, consult a local data manager and ITS <a href="../docs/contact.html">research engineering</a>. For highly sensitive data, SURF offers a high security environment within ResearchCloud called <a href="https://www.surf.nl/en/themes/research-infrastructure/sane-secure-environment-for-analysing-sensitive-data">SANE</a> that needs to be activated on request. We can advise you on whether this is necessary and suitable for your project.</p>
-<section id="data-classification-service-vre" class="level3">
-<h3 class="anchored" data-anchor-id="data-classification-service-vre">Data classification Service VRE</h3>
-<p>Surf Research Cloud is suitable for the data classification below. However, custom workspaces in proof of concept state or manual installations may compromise the suitability.</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Availability</th>
-<th>Integrity</th>
-<th>Confidentiality</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Sensitive</td>
-<td>Sensitive</td>
-<td>Sensitive</td>
-</tr>
-</tbody>
-</table>
+<p>VRE’s have been classified as suitable for data classified as “sensitive” within the UU data classification framework.</p>
+<p>However, <strong>caution is always advised if you are planning to process sensitive data</strong>—especially <a href="https://www.uu.nl/en/research/research-data-management/guides/handling-personal-data">personal data</a>—on a VRE. While the <a href="../docs/workspace-catalogue.html">workspace types</a> supported by UU and SURF come with secure default configurations, changing these configurations can adversely impact security. Moreover, there are always some levels of risks involved with processing data in the cloud.</p>
+<p>Depending on the precise nature of your data and its sensitivity, additional security precautions may therefore be advised.</p>
+<p>During your <a href="../docs/onboarding.html">intake meeting</a>, we will discuss whether potentially sensitive data will be processed and can advise whether additional measures are required. If necessary, we will recommend further consulations with a data manager.</p>
+<section id="sane" class="level3">
+<h3 class="anchored" data-anchor-id="sane">SANE</h3>
+<p>For cases where data is so sensitive that only a data manager or an external data owner should be able to up- and download it, SURF offers a special high security environment within ResearchCloud called <a href="https://www.surf.nl/en/themes/research-infrastructure/sane-secure-environment-for-analysing-sensitive-data">SANE</a> that needs to be activated on request. We can advise you on whether this is necessary and suitable for your project.</p>
+<p>There is also a variant of SANE in which the researcher is required to interact with the data ‘blindly’.</p>
 </section>
 </section>
 <section id="security-incidents" class="level2">
