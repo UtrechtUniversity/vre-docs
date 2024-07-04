@@ -54,11 +54,11 @@ If you prefer all users on the machine to have a single shared `miniconda` envir
 
 ### Python Workbench CLI
 
-For the Python Workbench CLI (command line) version of this Catalog Item, you can [login using SSH](../../first-steps.qmd#ssh).
+For the Python Workbench CLI (command line) flavour of this Catalog Item, you can [login using SSH](../../first-steps.qmd#ssh).
 
 ### Python Workbench Desktop
 
-For the Python Workbench CLI (command line) version of this Catalog Item, you can [login using your browser](../../first-steps.qmd#browser-access-to-a-desktop-environment). It is also possible to login via SSH, as described for Python Workbench CLI above.
+For the Python Workbench Desktop flavour of this Catalog Item, you can [login using your browser](../../first-steps.qmd#browser-access-to-a-desktop-environment). It is also possible to login via SSH, as described above.
 
 ## Usage
 
@@ -88,7 +88,7 @@ Also see the [poetry docs](https://python-poetry.org/docs/).
 
 {{< include ../partials/_data_transfer.qmd >}}
 
-The recommended [iBridges client](../../manuals/ibridges.qmd) is preinstalled.
+The recommended [iBridges client for Yoda and iRODS](../../manuals/ibridges.qmd) is preinstalled.
 
 ### Installing additional software
 

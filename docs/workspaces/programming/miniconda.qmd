@@ -48,7 +48,7 @@ When you login, `miniconda` will be ready for use. See the [miniconda docs](http
 
 {{< include ../partials/_data_transfer.qmd >}}
 
-The recommended [iBridges client](../../manuals/ibridges.qmd) is preinstalled.
+The recommended [iBridges client for Yoda and iRODS](../../manuals/ibridges.qmd) is preinstalled.
 
 ### Installing additional software
 

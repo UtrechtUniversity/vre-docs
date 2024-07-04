@@ -28,7 +28,9 @@ support: UU
 
 ## Access
 
-## Data transfer options
+{{< include ../partials/_data_transfer.qmd >}}
+
+The recommended [iBridges client for Yoda and iRODS](../../manuals/ibridges.qmd) is preinstalled.
 
 ## Usage
 

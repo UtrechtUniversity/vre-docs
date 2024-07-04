@@ -17,11 +17,16 @@ support: SURF
 ---
 
 ## Description
-This workspace can be used to work with R and RStudio. The workspace also comes with a (linux) terminal (aka command line) to install additional tools when relevant.
+This workspace can be used to work with R and [RStudio](https://www.rstudio.com/). RStudio can be accessed conveniently from the browser.
+
+The workspace also comes with a (linux) terminal (aka command line) to install additional tools when relevant.
+
+There are various flavours of this catalog item:
+
+- R-Studio *(comes with R v.3)*
+- R-Studio - R4 *(comes with R v.4)*
 
 Upon request we can help you to automate the installation of R packages or automate other installations (e.g. tools for data transfer). Automating these steps will make it easier to work following our [best practices](../../responsible-use.qmd).
-
-[Contact us if you need help with installations](../../contact.qmd).
 
 ## Creation
 
@@ -32,15 +37,7 @@ Upon request we can help you to automate the installation of R packages or autom
 ## Access
 This workspace can be accessed via the yellow 'Access' button. You need a TOTP to login to your workspace, see [Workspace access with TOTP](https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace#Logintoyourworkspace-WorkspaceAccesswithTOTP).
 
-## Data transfer options
-First create a working directory on the [Storage Volume](../../first-steps.qmd#where-can-i-find-the-storage-volume) using the file browser in the Jupyter dashboard.
-
-The RStudio interface has an Upload button to directly upload data from your PC to the workspace. 
-
-Alternatively it is possible to use the terminal to transfer data from other, such as Yoda, or Surfdrive:
-
-- [Data transfer and Yoda](../../manuals/icommands.qmd)
-- [Data transfer and Surfdrive](../../manuals/rclone-researchcloud.qmd)
+{{< include ../partials/_data_transfer.qmd >}}
 
 ## Usage
 

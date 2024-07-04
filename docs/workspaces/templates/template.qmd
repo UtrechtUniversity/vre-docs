@@ -36,6 +36,9 @@ Link to access methods in the first steps page here.
 
 {{< include ../partials/_data_transfer.qmd >}}
 
+The recommended [iBridges client for Yoda and iRODS](../../manuals/ibridges.qmd) is preinstalled.
+
+
 ### Installing additional software
 
 The user has [admin rights](../../responsible-use.qmd#installation-of-software) to install additional software on the system (on a terminal, use `sudo <yourcommand>`).
