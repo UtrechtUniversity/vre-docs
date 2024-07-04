@@ -1,0 +1,79 @@
+--- 
+title: R Workbench
+software:
+- R
+- miniconda
+login:
+- desktop
+- cli
+os_flavor: linux
+os:
+- Ubuntu 20.04
+- Ubuntu 22.04
+data:
+- ResearchDrive
+- irods-icommands
+- Yoda Webdav
+- iBridges (python)
+gpu: false
+admin: true
+support: UU
+---
+
+## Description
+
+This workspace types comes with R (the latest version of the `4.x` range) preinstalled,
+as well as `conda`, which can be used to manage R environments.
+
+This workspace is suitable for users who want to run R scripts on the commandline.
+**For most users, the RStudio catalog item, which provides in-browser access to the 
+popular R development environment,might be more suitable.**
+
+There are various flavours of this Catalog Item:
+
+- R Workbench CLI ([login via command line](../../first-steps.qmd#ssh))
+- R Workbench Desktop ([login via desktop](../../first-steps.qmd#browser-access-to-a-desktop-environment))
+
+Simply choose the one that is most convenient to you.
+
+If needed, we can help you to automatically install certain packages when the workspace is created, 
+so that these are available inside the workspace immediately. Please [contact us](../../contact.qmd) for this.
+
+## Creation
+
+{{< include ../partials/_storage.qmd >}}
+
+{{< include ../partials/_creation.qmd >}}
+
+## Access
+
+### R Workbench CLI
+
+For the R Workbench CLI (command line) flavour of this Catalog Item, you can [login using SSH](../../first-steps.qmd#ssh).
+
+### Python Workbench Desktop
+
+For the R Workbench Desktop flavour of this Catalog Item, you can [login using your browser](../../first-steps.qmd#browser-access-to-a-desktop-environment). It is also possible to login via SSH, as described above.
+
+## Usage
+
+The first time (but only the first time) you login to a workspace of this type, miniconda will be setup for your user.
+You will see output like this:
+
+```
+--- Running install scripts at first login: executing /home/username/runonce.d/runonce_conda.sh
+```
+
+Once this is complete, you will have access to the `conda`, `R` and `littler` commands, among others.
+
+{{< include ../partials/_data_transfer.qmd >}}
+
+The recommended [iBridges client for Yoda and iRODS](../../manuals/ibridges.qmd) is preinstalled.
+
+### Installing additional software
+
+The user has [admin rights](../../responsible-use.qmd#installation-of-software) to install additional software on the system from the terminal.
+
+## Tips
+
+{{< include ../partials/_security.qmd >}}
