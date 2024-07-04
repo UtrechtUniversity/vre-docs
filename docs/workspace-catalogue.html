@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.557">
+<meta name="generator" content="quarto-1.5.53">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -79,7 +79,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -130,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -187,7 +187,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="programming-analysis-environments" class="level1">
 <h1>Programming &amp; Analysis Environments</h1>
-<div id="602647d1" class="cell" data-execution_count="3">
+<div id="d7fb352e" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display cell-output-markdown" data-execution_count="3">
 <table class="caption-top table table-sm table-striped small">
 <thead>
@@ -266,6 +266,15 @@ ul.task-list li input[type="checkbox"] {
 <td style="text-align: center;">UU</td>
 </tr>
 <tr class="even">
+<td style="text-align: left;"><a href="../docs/workspaces/programming/r-workbench.html">R Workbench</a></td>
+<td style="text-align: left;">R<br>miniconda</td>
+<td style="text-align: center;"><iconify-icon inline="" icon="carbon:gui" width="1.5em" height="1.5em" aria-label="Access the workspace as a remote desktop" title="Access the workspace as a remote desktop"></iconify-icon><br><iconify-icon inline="" icon="carbon:terminal" width="1.5em" height="1.5em" aria-label="Access the workspace via the command line" title="Access the workspace via the command line"></iconify-icon></td>
+<td style="text-align: center;"><iconify-icon icon="uil:linux" width="2em" height="2em" aria-label="Linux" title="Linux"></iconify-icon></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">UU</td>
+</tr>
+<tr class="odd">
 <td style="text-align: left;"><a href="../docs/workspaces/programming/rstudio.html">RStudio</a></td>
 <td style="text-align: left;">RStudio</td>
 <td style="text-align: center;"><iconify-icon icon="carbon:network-public" width="1.5em" height="1.5em" aria-label="Access application via the browser" title="Access application via the browser"></iconify-icon></td>
@@ -274,7 +283,7 @@ ul.task-list li input[type="checkbox"] {
 <td style="text-align: left;"></td>
 <td style="text-align: center;">SURF</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="../docs/workspaces/programming/stata.html">Stata</a></td>
 <td style="text-align: left;">Stata</td>
 <td style="text-align: center;"><iconify-icon inline="" icon="carbon:gui" width="1.5em" height="1.5em" aria-label="Access the workspace as a remote desktop" title="Access the workspace as a remote desktop"></iconify-icon><br><iconify-icon inline="" icon="carbon:terminal" width="1.5em" height="1.5em" aria-label="Access the workspace via the command line" title="Access the workspace via the command line"></iconify-icon></td>
@@ -290,7 +299,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="plain-workspaces" class="level1">
 <h1>Plain Workspaces</h1>
-<div id="d1eba384" class="cell" data-execution_count="4">
+<div id="be555392" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display cell-output-markdown" data-execution_count="4">
 <table class="caption-top table table-sm table-striped small">
 <thead>
@@ -348,7 +357,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="utilities-data-processing" class="level1">
 <h1>Utilities &amp; Data Processing</h1>
-<div id="62a89635" class="cell" data-execution_count="5">
+<div id="7b8dd780" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display cell-output-markdown" data-execution_count="5">
 <table class="caption-top table table-sm table-striped small">
 <thead>
@@ -406,7 +415,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="experimental" class="level1">
 <h1>Experimental</h1>
-<div id="d92ed525" class="cell" data-execution_count="6">
+<div id="91573727" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display cell-output-markdown" data-execution_count="6">
 <table class="caption-top table table-sm table-striped small">
 <thead>
@@ -474,18 +483,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -517,7 +515,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp("https:\/\/UtrechtUniversity\.github\.io\/vre-docs\/");
@@ -525,7 +545,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
