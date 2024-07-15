@@ -1,0 +1,68 @@
+# Running long jobs on your Research Cloud workspace
+
+## When is this relevant?
+
+Often it is advisable to run long jobs (e.g. long scripts or analyses that take hours or days to complete) as background processes. 
+In the following cases long running jobs will be interrupted when you close the window with which you access your workspace:
+
+- When you access your workspace via your web browser (Jupyter Notebooks, RStudio, Ubuntu Desktop, etc.)
+- When you access your workspace via SSH
+
+[More info on access methods](https://utrechtuniversity.github.io/vre-docs/docs/first-steps.html#getting-access-to-your-workspace)
+
+## How to run jobs as background processes
+
+### Prerequisites
+- You will need some basic linux command line skills to be able to run scripts as background processes. If you don't have these skills, take some time to practice using sections 1, 2, 3 and 7 of this short [online course](https://swcarpentry.github.io/shell-novice) before proceeding. You can practice in the terminal (see step 1).
+- Your script should be 'standalone'; which means that you should be able to run your entire script in one go without modifications. All figures and output data should be stored in files (e.g. `.png` images and/or `.csv` tables, this is not strictly necessary for jupyter notebooks).
+
+### Step 1: Make sure you are in a terminal
+- In Jupyterhub (Jupyter Workspace in Research cloud): 
+  To open a new terminal, click the + button in the file browser and select the terminal in the new Launcher tab
+  ([find a short video here](https://jupyterlab.readthedocs.io/en/stable/user/terminal.html)).
+- In Rstudio (Rstudio workspace in Research cloud):
+  In the bottom left panel, click the 'terminal' tab.
+- In an Ubuntu Desktop workspace, click 'Applications' in the top left corner and then 'Terminal'
+
+### Step 2: Navigate to the directory where your script is located
+```
+cd data
+cd <your storage volume name>
+...
+```
+
+### Step 3: Run your script as background process using `nohup`
+
+More info about the use of `nohup` can be found [here](https://www.howtogeek.com/804823/nohup-command-linux/#the-nohup-command).
+
+For R scripts:
+```
+nohup Rscript your-rscript.R &
+```
+
+For Jupyter notebooks:
+```
+nohup jupyter nbconvert --execute --to notebook --inplace your-notebook.ipynb &
+```
+
+After submitting this command you will see the following:
+
+![](../imgs/background.png)
+
+You need to press Enter one more time to return to the command prompt.
+The number between brackets is the job id and the second number is the process id.
+
+### Terminating the process
+
+Use the process id to terminate the job:
+
+```
+kill 152233
+```
+If you don't know the process id you can look it up by using a monitoring tool like `top` ([more info](https://www.howtogeek.com/668986/how-to-use-the-linux-top-command-and-understand-its-output/)).
+
+
+
+
+
+
