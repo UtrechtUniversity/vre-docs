@@ -14,3 +14,7 @@ On this page we share manuals for a variety of use cases and tasks.
 ### Security
 
 - [Enabling automatic security updates on Ubuntu Linux](manuals/ubuntu-security-updates.qmd)
+
+### Other
+
+- [Running long jobs](manuals/long-jobs.qmd)
