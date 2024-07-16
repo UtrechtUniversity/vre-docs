@@ -3,18 +3,19 @@
 ## When is this relevant?
 
 Often it is advisable to run long jobs (e.g. long scripts or analyses that take hours or days to complete) as background processes. 
-In the following cases long running jobs will be interrupted when you close the window with which you access your workspace:
+By running long jobs as background process, you make sure the jobs will not be interrupted when you (by accident) close the window with which you access your workspace or when your internet connection is interrupted. This can happen in the following cases:
 
 - When you access your workspace via your web browser (Jupyter Notebooks, RStudio, Ubuntu Desktop, etc.)
 - When you access your workspace via SSH
 
+When you access your workspace via RDP (Remote Desktop), jobs will normally not be interupted by disconnecting.
 [More info on access methods](https://utrechtuniversity.github.io/vre-docs/docs/first-steps.html#getting-access-to-your-workspace)
 
 ## How to run jobs as background processes
 
 ### Prerequisites
 - You will need some basic linux command line skills to be able to run scripts as background processes. If you don't have these skills, take some time to practice using sections 1, 2, 3 and 7 of this short [online course](https://swcarpentry.github.io/shell-novice) before proceeding. You can practice in the terminal (see step 1).
-- Your script should be 'standalone'; which means that you should be able to run your entire script in one go without modifications. All figures and output data should be stored in files (e.g. `.png` images and/or `.csv` tables, this is not strictly necessary for jupyter notebooks).
+- Your script should be 'standalone'; which means that you should be able to run your entire script in one go without providing additional input. For scripts, all figures and output data should be stored in files (e.g. `.png` images and/or `.csv` tables), for Jupyter notebooks this might be not necessary if the figures should be embedded in the notebook.
 
 ### Step 1: Make sure you are in a terminal
 - In Jupyterhub (Jupyter Workspace in Research cloud): 
@@ -25,6 +26,8 @@ In the following cases long running jobs will be interrupted when you close the 
 - In an Ubuntu Desktop workspace, click 'Applications' in the top left corner and then 'Terminal'
 
 ### Step 2: Navigate to the directory where your script is located
+
+For example:
 ```
 cd data
 cd <your storage volume name>
@@ -34,6 +37,13 @@ cd <your storage volume name>
 ### Step 3: Run your script as background process using `nohup`
 
 More info about the use of `nohup` can be found [here](https://www.howtogeek.com/804823/nohup-command-linux/#the-nohup-command).
+For this usecase we combine `nohup` with an ampersand "&" to run a background process the will continue even is the terminal window is closed. The process will only stop:
+
+- If it has finished
+- If an error occurs
+- If the workspaces is paused or deleted
+
+If your script normally prints output to the terminal or console, this will now be written into a file `nohup.out` which will be created automatically when you run the script in the folder from where you run the script.
 
 For R scripts:
 ```
@@ -50,19 +60,30 @@ After submitting this command you will see the following:
 ![](../imgs/background.png)
 
 You need to press Enter one more time to return to the command prompt.
-The number between brackets is the job id and the second number is the process id.
+The number between square brackets is the job ID and the second number is the process ID.
 
 ### Terminating the process
 
-Use the process id to terminate the job:
+Use the process ID to terminate the job, e.g.:
 
 ```
 kill 152233
 ```
-If you don't know the process id you can look it up by using a monitoring tool like `top` ([more info](https://www.howtogeek.com/668986/how-to-use-the-linux-top-command-and-understand-its-output/)).
+If you don't know the process ID you can look it up by using a monitoring tool like `top` ([more info](https://www.howtogeek.com/668986/how-to-use-the-linux-top-command-and-understand-its-output/)).
 
+### How do I know my job has ended?
 
+There are several ways to find out if your job has ended:
 
+When things go as planned, you can check if the expected output data has been generated. You can also use the `jobs` command to check the status of your background job. If the job is running, the output will look like this:
+```
+[1]+  Running                 nohup Rscript test.R &
+```
+If the job has ended, there will be no output.
 
+### Monitoring progress
 
+By adding print statements to your script, you allow monitoring of the progress of your script (it might be that some of the functions that you use already print output to the console/terminal by default). All output that you create with print statements will be written to the `nohup.out` file (see step 3). Use for example a print statement in a for loop to print the iteration number. Follow these links for more info:
 
+[Print statements in R](https://www.r-bloggers.com/2021/09/r-print-output/)
+[Print statements in Python](https://learnpython.com/blog/python-print/)
