@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Jupyter Notebooks CUDA</title>
+<title>long-jobs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<script src="../../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,7 +68,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../../../_styles/styles.css">
+<link rel="stylesheet" href="../../_styles/styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -84,47 +84,47 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../docs/research-cloud-intro.html"> 
+    <a class="nav-link" href="../../docs/research-cloud-intro.html"> 
 <span class="menu-text">Introduction</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../docs/onboarding.html"> 
+    <a class="nav-link" href="../../docs/onboarding.html"> 
 <span class="menu-text">Get started</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../docs/first-steps.html"> 
+    <a class="nav-link" href="../../docs/first-steps.html"> 
 <span class="menu-text">First steps</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../docs/workspace-catalogue.html"> 
+    <a class="nav-link" href="../../docs/workspace-catalogue.html"> 
 <span class="menu-text">Workspaces</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../docs/manuals.html"> 
+    <a class="nav-link" href="../../docs/manuals.html"> 
 <span class="menu-text">Manuals</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../docs/responsible-use.html"> 
+    <a class="nav-link" href="../../docs/responsible-use.html"> 
 <span class="menu-text">Tips</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../docs/terms-of-use.html"> 
+    <a class="nav-link" href="../../docs/terms-of-use.html"> 
 <span class="menu-text">Terms of use</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../docs/privacy.html"> 
+    <a class="nav-link" href="../../docs/privacy.html"> 
 <span class="menu-text">Privacy</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../docs/glossary.html"> 
+    <a class="nav-link" href="../../docs/glossary.html"> 
 <span class="menu-text">Glossary</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../docs/contact.html"> 
+    <a class="nav-link" href="../../docs/contact.html"> 
 <span class="menu-text">Contact</span></a>
   </li>  
 </ul>
@@ -138,34 +138,108 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#running-long-jobs-on-your-research-cloud-workspace" id="toc-running-long-jobs-on-your-research-cloud-workspace" class="nav-link active" data-scroll-target="#running-long-jobs-on-your-research-cloud-workspace">Running long jobs on your Research Cloud workspace</a>
+  <ul class="collapse">
+  <li><a href="#when-is-this-relevant" id="toc-when-is-this-relevant" class="nav-link" data-scroll-target="#when-is-this-relevant">When is this relevant?</a></li>
+  <li><a href="#how-to-run-jobs-as-background-processes" id="toc-how-to-run-jobs-as-background-processes" class="nav-link" data-scroll-target="#how-to-run-jobs-as-background-processes">How to run jobs as background processes</a>
+  <ul class="collapse">
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
+  <li><a href="#step-1-make-sure-you-are-in-a-terminal" id="toc-step-1-make-sure-you-are-in-a-terminal" class="nav-link" data-scroll-target="#step-1-make-sure-you-are-in-a-terminal">Step 1: Make sure you are in a terminal</a></li>
+  <li><a href="#step-2-navigate-to-the-directory-where-your-script-is-located" id="toc-step-2-navigate-to-the-directory-where-your-script-is-located" class="nav-link" data-scroll-target="#step-2-navigate-to-the-directory-where-your-script-is-located">Step 2: Navigate to the directory where your script is located</a></li>
+  <li><a href="#step-3-run-your-script-as-background-process-using-nohup" id="toc-step-3-run-your-script-as-background-process-using-nohup" class="nav-link" data-scroll-target="#step-3-run-your-script-as-background-process-using-nohup">Step 3: Run your script as background process using <code>nohup</code></a></li>
+  <li><a href="#terminating-the-process" id="toc-terminating-the-process" class="nav-link" data-scroll-target="#terminating-the-process">Terminating the process</a></li>
+  <li><a href="#how-do-i-know-my-job-has-ended" id="toc-how-do-i-know-my-job-has-ended" class="nav-link" data-scroll-target="#how-do-i-know-my-job-has-ended">How do I know my job has ended?</a></li>
+  <li><a href="#monitoring-progress" id="toc-monitoring-progress" class="nav-link" data-scroll-target="#monitoring-progress">Monitoring progress</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/UtrechtUniversity/vre-docs/edit/main/docs/manuals/long-jobs.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Jupyter Notebooks CUDA</h1>
-</div>
 
 
 
-<div class="quarto-title-meta">
+<section id="running-long-jobs-on-your-research-cloud-workspace" class="level1">
+<h1>Running long jobs on your Research Cloud workspace</h1>
+<section id="when-is-this-relevant" class="level2">
+<h2 class="anchored" data-anchor-id="when-is-this-relevant">When is this relevant?</h2>
+<p>Often it is advisable to run long jobs (e.g.&nbsp;long scripts or analyses that take hours or days to complete) as background processes. By running long jobs as background process, you make sure the jobs will not be interrupted when you (by accident) close the window with which you access your workspace or when your internet connection is interrupted. This can happen in the following cases:</p>
+<ul>
+<li>When you access your workspace via your web browser (Jupyter Notebooks, RStudio, Ubuntu Desktop, etc.)</li>
+<li>When you access your workspace via SSH</li>
+</ul>
+<p>When you access your workspace via RDP (Remote Desktop), jobs will normally not be interupted by disconnecting. <a href="https://utrechtuniversity.github.io/vre-docs/docs/first-steps.html#getting-access-to-your-workspace">More info on access methods</a></p>
+</section>
+<section id="how-to-run-jobs-as-background-processes" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-run-jobs-as-background-processes">How to run jobs as background processes</h2>
+<section id="prerequisites" class="level3">
+<h3 class="anchored" data-anchor-id="prerequisites">Prerequisites</h3>
+<ul>
+<li>You will need some basic linux command line skills to be able to run scripts as background processes. If you don’t have these skills, take some time to practice using sections 1, 2, 3 and 7 of this short <a href="https://swcarpentry.github.io/shell-novice">online course</a> before proceeding. You can practice in the terminal (see step 1).</li>
+<li>Your script should be ‘standalone’; which means that you should be able to run your entire script in one go without providing additional input. For scripts, all figures and output data should be stored in files (e.g.&nbsp;<code>.png</code> images and/or <code>.csv</code> tables), for Jupyter notebooks this might be not necessary if the figures should be embedded in the notebook.</li>
+</ul>
+</section>
+<section id="step-1-make-sure-you-are-in-a-terminal" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-make-sure-you-are-in-a-terminal">Step 1: Make sure you are in a terminal</h3>
+<ul>
+<li>In Jupyterhub (Jupyter Workspace in Research cloud): To open a new terminal, click the + button in the file browser and select the terminal in the new Launcher tab (<a href="https://jupyterlab.readthedocs.io/en/stable/user/terminal.html">find a short video here</a>).</li>
+<li>In Rstudio (Rstudio workspace in Research cloud): In the bottom left panel, click the ‘terminal’ tab.</li>
+<li>In an Ubuntu Desktop workspace, click ‘Applications’ in the top left corner and then ‘Terminal’</li>
+</ul>
+</section>
+<section id="step-2-navigate-to-the-directory-where-your-script-is-located" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-navigate-to-the-directory-where-your-script-is-located">Step 2: Navigate to the directory where your script is located</h3>
+<p>For example:</p>
+<pre><code>cd data
+cd &lt;your storage volume name&gt;
+...</code></pre>
+</section>
+<section id="step-3-run-your-script-as-background-process-using-nohup" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-run-your-script-as-background-process-using-nohup">Step 3: Run your script as background process using <code>nohup</code></h3>
+<p>More info about the use of <code>nohup</code> can be found <a href="https://www.howtogeek.com/804823/nohup-command-linux/#the-nohup-command">here</a>. For this usecase we combine <code>nohup</code> with an ampersand “&amp;” to run a background process the will continue even is the terminal window is closed. The process will only stop:</p>
+<ul>
+<li>If it has finished</li>
+<li>If an error occurs</li>
+<li>If the workspaces is paused or deleted</li>
+</ul>
+<p>If your script normally prints output to the terminal or console, this will now be written into a file <code>nohup.out</code> which will be created automatically when you run the script in the folder from where you run the script.</p>
+<p>For R scripts:</p>
+<pre><code>nohup Rscript your-rscript.R &amp;</code></pre>
+<p>For Jupyter notebooks:</p>
+<pre><code>nohup jupyter nbconvert --execute --to notebook --inplace your-notebook.ipynb &amp;</code></pre>
+<p>After submitting this command you will see the following:</p>
+<p><img src="../imgs/background.png" class="img-fluid"></p>
+<p>You need to press Enter one more time to return to the command prompt. The number between square brackets is the job ID and the second number is the process ID.</p>
+</section>
+<section id="terminating-the-process" class="level3">
+<h3 class="anchored" data-anchor-id="terminating-the-process">Terminating the process</h3>
+<p>Use the process ID to terminate the job, e.g.:</p>
+<pre><code>kill 152233</code></pre>
+<p>If you don’t know the process ID you can look it up by using a monitoring tool like <code>top</code> (<a href="https://www.howtogeek.com/668986/how-to-use-the-linux-top-command-and-understand-its-output/">more info</a>).</p>
+</section>
+<section id="how-do-i-know-my-job-has-ended" class="level3">
+<h3 class="anchored" data-anchor-id="how-do-i-know-my-job-has-ended">How do I know my job has ended?</h3>
+<p>There are several ways to find out if your job has ended:</p>
+<p>When things go as planned, you can check if the expected output data has been generated. You can also use the <code>jobs</code> command to check the status of your background job. If the job is running, the output will look like this:</p>
+<pre><code>[1]+  Running                 nohup Rscript test.R &amp;</code></pre>
+<p>If the job has ended, there will be no output.</p>
+</section>
+<section id="monitoring-progress" class="level3">
+<h3 class="anchored" data-anchor-id="monitoring-progress">Monitoring progress</h3>
+<p>By adding print statements to your script, you allow monitoring of the progress of your script (it might be that some of the functions that you use already print output to the console/terminal by default). All output that you create with print statements will be written to the <code>nohup.out</code> file (see step 3). Use for example a print statement in a for loop to print the iteration number. Follow these links for more info:</p>
+<p><a href="https://www.r-bloggers.com/2021/09/r-print-output/">Print statements in R</a> <a href="https://learnpython.com/blog/python-print/">Print statements in Python</a></p>
 
-    
-  
-    
-  </div>
-  
 
-
-</header>
-
-
-<p>This workspace type is identical to the <a href="../../../docs/workspaces/programming/jupyter.html">Juputer Notebook</a> Catalog Item, but additionally comes with the nvidia CUDA GPU drivers preinstalled.</p>
-
-
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -593,4 +667,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/UtrechtUniversity/vre-docs/edit/main/docs/workspaces/programming/jupyter-cuda.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/UtrechtUniversity/vre-docs/edit/main/docs/manuals/long-jobs.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>
