@@ -78,7 +78,7 @@ By default, `pyenv` will be configured to use the most recent version of Python 
 $ pyenv versions
   system
 * system-latest (set by /home/testuser/.pyenv/version)
-``
+```
 
 You can use `pyenv` to install and select a different (newer) Python version: e.g. `pyenv install 3.12`, `pyenv global 3.12`. See the [pyenv docs](https://github.com/pyenv/pyenv#usage).
 
