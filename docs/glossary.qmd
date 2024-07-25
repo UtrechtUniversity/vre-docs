@@ -6,7 +6,7 @@ title: "Glossary"
 A catalog item is a workspace configuration that you can select from the catalog when you create a new workspace. A workspace can be configured with a certain Operating system and other applications or software that will installed on the workspace.
 
 ### Collaboration
-A Collaboration (also known as Collaborative Organisation, or CO) is an ad-hoc group of people who are allowed to work together by sharing resources. As a scientist you can easily make a CO. That way, you can invite other researchers to join your efforts in Research Cloud, and you can then self-organise yourselves to distribute tasks, including administering the CO. [More information](https://servicedesk.surf.nl/wiki/pages/viewpage.action?pageId=17825822).
+A Collaboration (also known as Collaborative Organisation, or CO) is an ad-hoc group of people who are allowed to work together by sharing resources. As a scientist you can easily make a CO. That way, you can invite other researchers to join your efforts in Research Cloud, and you can easily assign different roles to collaborators (such as the 'admin' role for administering the CO). [More information](https://servicedesk.surf.nl/wiki/pages/viewpage.action?pageId=17825822).
 
 ### DPA
 Data Processing Agreement
