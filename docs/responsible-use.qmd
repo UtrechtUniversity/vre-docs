@@ -39,22 +39,20 @@ import faicons
 
 app_ui = ui.page_fluid(
     ui.layout_sidebar(
-        ui.panel_sidebar(
+        ui.sidebar(
             ui.input_radio_buttons(
             "device", "Processing Unit", ["CPU", "GPU"], selected="CPU"
             ),
             ui.output_ui("device_controls"),
 
         ),
-        ui.panel_main(
-            ui.value_box(
-                title="Estimated total costs",
-                showcase=faicons.icon_svg("circle-dollar-to-slot",width="50px"),
-                value=ui.output_ui("estimate"),
-                theme="bg-gradient-blue-purple",
-            ),
-            ui.output_plot("plot"),
+        ui.value_box(
+            title="Estimated total costs",
+            showcase=faicons.icon_svg("circle-dollar-to-slot",width="50px"),
+            value=ui.output_ui("estimate"),
+            theme="bg-gradient-blue-purple",
         ),
+        ui.output_plot("plot"),
     ),
 )
 
