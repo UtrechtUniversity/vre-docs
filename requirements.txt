@@ -1,4 +1,4 @@
-shinylive
+shinylive~=0.5
 py-markdown-table
 tabulate
 python-frontmatter
