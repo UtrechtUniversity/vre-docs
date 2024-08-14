@@ -2,13 +2,13 @@
 title: How to activate security updates on Ubuntu
 ---
 
-Please take a moment to read the [security recommendations for VREs](../responsible-use.qmd#vre-lifetime-and-security-updates). If you wish to keep using the same VRE for longer than 3 weeks, please consider turning on automatic security updates for the VRE's OS. This manual describes how to enable these for any VREs running Ubuntu Linux.
+Please take a moment to read the [security recommendations for VREs](../responsible-use.qmd#vre-lifetime-and-security-updates). If you wish to keep using the same VRE for longer than 3 weeks, automatic security updates for the VRE's OS must be turned on. This manual describes how to enable these for any VREs running Ubuntu Linux. **At the moment security updates for Ubuntu are turned on by default on ResearchCloud, so no action should be necessary. This manual exists in case this default setting changes in the future.**
 
 [Contact us](../contact.qmd) if you run into any problems with the instructions below.
 
-### Understanding automatic security updates for Ubuntu
+## Understanding automatic security updates for Ubuntu
 
-The Ubuntu OS has a feature called "unattended upgrades" that will automatically install security updates for installed packages as they become available. These are not enabled on ResearchCloud by default because ResearchCloud workspaces are envisioned as machines running for only a limited time. However, you can easily activate the feature yourself, as long as you have admin rights on the workspace.
+The Ubuntu OS has a feature called "unattended upgrades" that will automatically install security updates for installed packages as they become available. These are currently enabled on ResearchCloud by default. However, you can easily activate the feature yourself, as long as you have admin rights on the workspace.
 
 For longer-living workspaces, it is also heavily recommended to install a vulnerability scanning tool that actively monitors your workspace for weaknesses. Please [contact us](../contact.qmd) for help with this.
 
@@ -21,6 +21,8 @@ Advanced notes:
 
 * For almost all updates, the new version will become active immediately. This means that in very rare cases, an update may interfere with a running process. There is thus a tradeoff between security and stability, but such interference is rare and enabling unattended upgrades is considered best practice for Ubuntu servers.
 * There is one exception to the rule that updated versions will become automatically active: if the Linux kernel itself is updated, this will require a pause/resume of the workspace to become active. This happens rarely, but you can monitor for this by installing the aforementioned scanning tool ([contact us](../contact.qmd)).
+
+## Manually enabling automatic security updates
 
 ### Prerequisites
 
