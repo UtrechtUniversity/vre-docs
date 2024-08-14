@@ -133,9 +133,13 @@ app = App(app_ui, server)
 
 ## VRE lifetime and security updates
 
-The recommended maximum lifetime of a VRE (or workspace) is no more than 4 weeks. **A longer lifetime is only considered secure when the operating system is regulary updated by one of the users.** Users are responsible for keeping the installed software up to date (patching) with regard to security updates. By limiting the lifetime of a VRE you can minimize the risk of vulnerabilities by outdated software, because **everytime you create a new workspace, this will come with recent security updates already installed**.
+The recommended maximum lifetime of a VRE (or workspace) is no more than 4 weeks.
 
-Although some Catalog Items come with automatic security updates enabled by default, in most cases you will have to take action yourself. See [here](manuals/ubuntu-security-updates.qmd) for how to activate automatic updates on Ubuntu workspaces. Of course you can [contact us](contact.qmd) for help.
+**A longer lifetime is only considered secure when the operating system and applications are regulary updated and the workspace is by one of the users, and the workspace is actively monitored.**
+
+Users are responsible for keeping the installed software up to date (patching) with regard to security updates. By limiting the lifetime of a VRE you can minimize the risk of vulnerabilities by outdated software, because **everytime you create a new workspace, this will come with recent security updates already installed**.
+
+Ubuntu Linux workspaces on ResearchCloud currently have automatic operating system updates enabled by default. However, custom software that you may install (especially if they are server applications, like webapps) will still need to be patched and monitored. See [here](manuals/ubuntu-security-updates.qmd#understanding-automatic-security-updates-for-ubuntu) for more information. Of course you can [contact us](contact.qmd) for help.
 
 For longer-living workspaces, UU also requires use of scanning tools to scan active VRE's for security vulnerabilities. If the scan gives cause, the UU will contact you with the request to update software on VRE, and/or to take additional measures. If you intend to run longer-running workspaces, please [contact us](contact.qmd) and we can help to install the necessary scanning software.
 
