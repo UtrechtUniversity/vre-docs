@@ -81,7 +81,7 @@
     "href": "docs/first-steps.html#getting-access-to-your-workspace",
     "title": "First steps",
     "section": "Getting access to your workspace",
-    "text": "Getting access to your workspace\nThere are several ways to login to your workspace.\n\nBrowser access to a desktop environment\n\nWhen?\nFor workspaces that provide a graphical interface to a desktop environment. For instance: Ubuntu Desktop, Python Workbench, Matlab. See the workspace catalog for an overview of Catalog Items that provide this kind of access.\nFor these workspace types, this is what you will see when you click the yellow “Access” button:\n\n\n\nHow?\nFor these workspaces, you will need to setup a Time Based Password for your Research Cloud account.\nSteps:\n\nClick the yellow “Access button” for your workspace.\n\nYou will be taken to your workspace’s address, e.g. (https://workspacename.src.surf-hosted.nl).\n\nYou will see a prompt asking you to login to the Linux workpace.\nAs a username, enter your Research Cloud username (not your Solis ID).\n\nYou can lookup your username in the Research Cloud portal under the “Profile” tab.\n\nAs a password, enter your time-based (TOTP) password for Research Cloud (not for your Solis ID).\n\nOnce you are logged in, you will be presented with a desktop environment in your browser. The environment used on ResearchCloud is a lightweight desktop called Xfce. See here for help with it.\n\n\n\nBrowser access to a webapplication\n\nWhen?\nMany catalog items provide you with a webapplication that can be accessed from your browser. For instance: Jupyter Notebooks, RStudio. See the workspace catalog for an overview of Catalog Items that provide this kind of access.\n\n\nHow?\nThere are two different forms of browser-based access to webapplications on Research Cloud:\n\nWebapplications that support Single Sign-on.\nThese will present you with the normal login flow (including two-factor authentication) for your institutional login. That means Solis ID for UU students and staff, but collaborators from other institutions will use their own.\nSince you are often already recently signed in to your institutional login to enter the Research Cloud, you will often not even need to authenticate again! Simply click the yellow “Access” button for your workspace.\n\n\nWebapplications that require a time-based password\nFor these workspaces, you will need to setup a Time Based Password for your Research Cloud account.\nSteps:\n\nClick the yellow “Access button” for your workspace.\n\nYou will be taken to your workspace’s address.\n\nYou will see a prompt asking you to login to the Linux workpace.\nAs a username, enter your Research Cloud username (not your Solis ID).\n\nYou can lookup your username in the Research Cloud portal under the “Profile” tab.\n\nAs a password, enter your time-based (TOTP) password for Research Cloud (not for your Solis ID).\n\n\n\n\n\nRDP (Remote Desktop Protocol)\n\nWhen?\nThis method can be used for most Windows Server workspaces, and any other workspaces that have an URL starting with RDP:// when you click on the workspace in the research cloud portal.\n\n\nHow?\nTo be able to login via RDP you need to setup a Time Based Password for your Research Cloud account.\nYou need an Remote Desktop client to be able to connect via RDP. On a Windows and MacOS PC you can use an application called ‘Remote Desktop’, on Linux we recommend ‘Remmina’.\nThe username that you need to type when you want to access the workspace can be found under the ‘Profile’ tab in the Research Cloud portal. The password to fill in is the Time based password (aka TOTP password) from the authenticator app on your mobile phone.\n\n\n\nSSH\n\nWhen?\nFor some workspaces this is the only option to login to your workspace. These are typically command line only workspaces (e.g. Ubuntu 20.04 command line).\nSince connection via SSH also works for most other workspace types, it could also be a useful option in some other scenarios, e.g. when you want to copy a file from your laptop to the workspace.\n\n\nHow?\nThe research cloud documentation provides instructions on how to set up SSH for research cloud.\nTo connect to the workspace from a Windows computer you need specific software to use a ‘shell’ (also known as ‘terminal’), examples include Git Bash, PuTTY and MobaXterm. If you need to install something new, we would recommend MobaXterm.\nOn MacOS and Linux machines you can use the standard ‘Terminal’."
+    "text": "Getting access to your workspace\nThere are several ways to login to your workspace.\n\nBrowser access to a desktop environment\n\nWhen?\nFor workspaces that provide a graphical interface to a desktop environment. For instance: Ubuntu Desktop, Python Workbench, Matlab. See the workspace catalog for an overview of Catalog Items that provide this kind of access.\nFor these workspace types, this is what you will see when you click the yellow “Access” button:\n\n\n\nHow?\nFor these workspaces, you will need to setup a Time Based Password for your Research Cloud account.\nSteps:\n\nClick the yellow “Access button” for your workspace.\n\nYou will be taken to your workspace’s address, e.g. (https://workspacename.src.surf-hosted.nl).\n\nYou will see a prompt asking you to login to the Linux workpace.\nAs a username, enter your Research Cloud username (not your Solis ID).\n\nYou can lookup your username in the Research Cloud portal under the “Profile” tab.\n\nAs a password, enter your time-based (TOTP) password for Research Cloud (not for your Solis ID).\n\nOnce you are logged in, you will be presented with a desktop environment in your browser. The environment used on ResearchCloud is a lightweight desktop called Xfce. See here for help with it.\n\n\n\nBrowser access to a webapplication\n\nWhen?\nMany catalog items provide you with a webapplication that can be accessed from your browser. For instance: Jupyter Notebooks, RStudio. See the workspace catalog for an overview of Catalog Items that provide this kind of access.\n\n\nHow?\nThere are two different forms of browser-based access to webapplications on Research Cloud:\n\nWebapplications that support Single Sign-on.\nThese will present you with the normal login flow (including two-factor authentication) for your institutional login. That means Solis ID for UU students and staff, but collaborators from other institutions will use their own.\nSince you are often already recently signed in to your institutional login to enter the Research Cloud, you will often not even need to authenticate again! Simply click the yellow “Access” button for your workspace.\n\n\nWebapplications that require a time-based password\nFor these workspaces, you will need to setup a Time Based Password for your Research Cloud account.\nSteps:\n\nClick the yellow “Access button” for your workspace.\n\nYou will be taken to your workspace’s address.\n\nYou will see a prompt asking you to login to the Linux workpace.\nAs a username, enter your Research Cloud username (not your Solis ID).\n\nYou can lookup your username in the Research Cloud portal under the “Profile” tab.\n\nAs a password, enter your time-based (TOTP) password for Research Cloud (not for your Solis ID).\n\n\n\n\n\nRemote Desktop Protocol\n\nWhen?\nThis method can be used for most Windows Server workspaces, and any other workspaces that have an URL starting with RDP:// when you click on the workspace in the research cloud portal.\n\n\nHow?\nTo be able to login via RDP you need to setup a Time Based Password for your Research Cloud account.\nYou need an Remote Desktop client to be able to connect via RDP. On a Windows and MacOS PC you can use an application called ‘Remote Desktop’, on Linux we recommend ‘Remmina’.\nThe username that you need to type when you want to access the workspace can be found under the ‘Profile’ tab in the Research Cloud portal. The password to fill in is the Time based password (aka TOTP password) from the authenticator app on your mobile phone.\n\n\n\nSSH\n\nWhen?\nFor some workspaces this is the only option to login to your workspace. These are typically command line only workspaces (e.g. Ubuntu 20.04 command line).\nSince connection via SSH also works for most other workspace types, it could also be a useful option in some other scenarios, e.g. when you want to copy a file from your laptop to the workspace.\n\n\nHow?\nThe research cloud documentation provides instructions on how to set up SSH for research cloud.\nTo connect to the workspace from a Windows computer you need specific software to use a ‘shell’ (also known as ‘terminal’), examples include Git Bash, PuTTY and MobaXterm. If you need to install something new, we would recommend MobaXterm.\nOn MacOS and Linux machines you can use the standard ‘Terminal’."
   },
   {
     "objectID": "docs/first-steps.html#getting-data-inside-your-workspace",
@@ -315,361 +315,39 @@
     "text": "Tips\n\nWorkspace security\nPlease take a moment to read the security recommendations for VREs."
   },
   {
-    "objectID": "docs/workspaces/programming/rstudio.html",
-    "href": "docs/workspaces/programming/rstudio.html",
-    "title": "RStudio",
+    "objectID": "docs/workspaces/programming/sas.html",
+    "href": "docs/workspaces/programming/sas.html",
+    "title": "SAS",
     "section": "",
-    "text": "This workspace can be used to work with R and RStudio. RStudio can be accessed conveniently from the browser.\nThe workspace also comes with a (linux) terminal (aka command line) to install additional tools when relevant.\nThere are various flavours of this catalog item:\n\nR-Studio (comes with R v.3)\nR-Studio - R4 (comes with R v.4)\n\nUpon request we can help you to automate the installation of R packages or automate other installations (e.g. tools for data transfer). Automating these steps will make it easier to work following our best practices."
+    "text": "This workspace is Windows workspace with SAS 9.4 installed.\n\n\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
   },
   {
-    "objectID": "docs/workspaces/programming/rstudio.html#description",
-    "href": "docs/workspaces/programming/rstudio.html#description",
-    "title": "RStudio",
+    "objectID": "docs/workspaces/programming/sas.html#description",
+    "href": "docs/workspaces/programming/sas.html#description",
+    "title": "SAS",
     "section": "",
-    "text": "This workspace can be used to work with R and RStudio. RStudio can be accessed conveniently from the browser.\nThe workspace also comes with a (linux) terminal (aka command line) to install additional tools when relevant.\nThere are various flavours of this catalog item:\n\nR-Studio (comes with R v.3)\nR-Studio - R4 (comes with R v.4)\n\nUpon request we can help you to automate the installation of R packages or automate other installations (e.g. tools for data transfer). Automating these steps will make it easier to work following our best practices."
+    "text": "This workspace is Windows workspace with SAS 9.4 installed.\n\n\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
   },
   {
-    "objectID": "docs/workspaces/programming/rstudio.html#creation",
-    "href": "docs/workspaces/programming/rstudio.html#creation",
-    "title": "RStudio",
-    "section": "Creation",
-    "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
-  },
-  {
-    "objectID": "docs/workspaces/programming/rstudio.html#access",
-    "href": "docs/workspaces/programming/rstudio.html#access",
-    "title": "RStudio",
+    "objectID": "docs/workspaces/programming/sas.html#access",
+    "href": "docs/workspaces/programming/sas.html#access",
+    "title": "SAS",
     "section": "Access",
-    "text": "Access\nThis workspace can be accessed via the yellow ‘Access’ button. You need a TOTP to login to your workspace, see Workspace access with TOTP.\n\nData transfer options\nSee our data transfer manuals."
+    "text": "Access\nThis workspace can be accessed via the Remote Desktop protocol. You need a TOTP to login to your workspace, see Workspace access with TOTP.\n\nData transfer options\nSee our data transfer manuals.\nThe recommended iBridges client for Yoda and iRODS is preinstalled."
   },
   {
-    "objectID": "docs/workspaces/programming/rstudio.html#usage",
-    "href": "docs/workspaces/programming/rstudio.html#usage",
-    "title": "RStudio",
+    "objectID": "docs/workspaces/programming/sas.html#usage",
+    "href": "docs/workspaces/programming/sas.html#usage",
+    "title": "SAS",
     "section": "Usage",
-    "text": "Usage"
+    "text": "Usage\n\nPreliminaries\nAll researchers from UU have access to SAS (you do not need to provide your own license).\nBy default, this workspace comes with a minimal installation of SAS (SAS BASE and STAT). If you need access to other products from the SAS suite, please contact us.\nPlease note that SAS installation takes a while (~20 minutes), so workspace creation can take about 40 minutes (as the operating system must also be configured).\n\n\nOpen SAS\nWhen logged in to the workspace:\n\nOpen the ‘Start’ menu\nYou will find SAS under the SAS9.4 subfolder in the ‘Start’ menu.\n\n\n\nOpen iBridges\niBridges, the application recommended for data management for Yoda and iRODS servers, is accessible via a shortcut on the desktop."
   },
   {
-    "objectID": "docs/workspaces/programming/rstudio.html#tips",
-    "href": "docs/workspaces/programming/rstudio.html#tips",
-    "title": "RStudio",
-    "section": "Tips",
-    "text": "Tips"
-  },
-  {
-    "objectID": "docs/workspaces/programming/python-workbench-cuda.html",
-    "href": "docs/workspaces/programming/python-workbench-cuda.html",
-    "title": "Python Workbench CUDA",
+    "objectID": "docs/workspaces/programming/jupyter-cuda.html",
+    "href": "docs/workspaces/programming/jupyter-cuda.html",
+    "title": "Jupyter Notebooks CUDA",
     "section": "",
-    "text": "This workspace type is identical to the Python Workbench Catalog Item, but additionally comes with the nvidia CUDA GPU drivers preinstalled.\nAs with the Python Workbench Catalog Items, there are two flavours:\n\nPython Workbench CUDA CLI (login via command line)\nPython Workbench CUDA Desktop (login via desktop)\n\nSimply choose the one that is most convenient to you, and see the documentation for Python Workbench."
-  },
-  {
-    "objectID": "docs/workspaces/programming/miniconda-cuda.html",
-    "href": "docs/workspaces/programming/miniconda-cuda.html",
-    "title": "Miniconda (shared) CUDA",
-    "section": "",
-    "text": "This workspace type is identical to the Miniconda (shared) Catalog Item, but additionally comes with the nvidia CUDA GPU drivers preinstalled."
-  },
-  {
-    "objectID": "docs/workspaces/plain/windows.html#creation",
-    "href": "docs/workspaces/plain/windows.html#creation",
-    "title": "Windows",
-    "section": "Creation",
-    "text": "Creation\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
-  },
-  {
-    "objectID": "docs/workspaces/plain/windows.html#access",
-    "href": "docs/workspaces/plain/windows.html#access",
-    "title": "Windows",
-    "section": "Access",
-    "text": "Access"
-  },
-  {
-    "objectID": "docs/workspaces/plain/windows.html#data-transfer-options",
-    "href": "docs/workspaces/plain/windows.html#data-transfer-options",
-    "title": "Windows",
-    "section": "Data transfer options",
-    "text": "Data transfer options"
-  },
-  {
-    "objectID": "docs/workspaces/plain/windows.html#usage",
-    "href": "docs/workspaces/plain/windows.html#usage",
-    "title": "Windows",
-    "section": "Usage",
-    "text": "Usage"
-  },
-  {
-    "objectID": "docs/workspaces/plain/windows.html#tips",
-    "href": "docs/workspaces/plain/windows.html#tips",
-    "title": "Windows",
-    "section": "Tips",
-    "text": "Tips"
-  },
-  {
-    "objectID": "docs/workspaces/plain/ubuntu-cuda.html#creation",
-    "href": "docs/workspaces/plain/ubuntu-cuda.html#creation",
-    "title": "Ubuntu CUDA",
-    "section": "Creation",
-    "text": "Creation\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
-  },
-  {
-    "objectID": "docs/workspaces/plain/ubuntu-cuda.html#access",
-    "href": "docs/workspaces/plain/ubuntu-cuda.html#access",
-    "title": "Ubuntu CUDA",
-    "section": "Access",
-    "text": "Access"
-  },
-  {
-    "objectID": "docs/workspaces/plain/ubuntu-cuda.html#data-transfer-options",
-    "href": "docs/workspaces/plain/ubuntu-cuda.html#data-transfer-options",
-    "title": "Ubuntu CUDA",
-    "section": "Data transfer options",
-    "text": "Data transfer options"
-  },
-  {
-    "objectID": "docs/workspaces/plain/ubuntu-cuda.html#usage",
-    "href": "docs/workspaces/plain/ubuntu-cuda.html#usage",
-    "title": "Ubuntu CUDA",
-    "section": "Usage",
-    "text": "Usage"
-  },
-  {
-    "objectID": "docs/workspaces/plain/ubuntu-cuda.html#tips",
-    "href": "docs/workspaces/plain/ubuntu-cuda.html#tips",
-    "title": "Ubuntu CUDA",
-    "section": "Tips",
-    "text": "Tips"
-  },
-  {
-    "objectID": "docs/workspaces/templates/template.html#creation",
-    "href": "docs/workspaces/templates/template.html#creation",
-    "title": "workspace name",
-    "section": "Creation",
-    "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
-  },
-  {
-    "objectID": "docs/workspaces/templates/template.html#access",
-    "href": "docs/workspaces/templates/template.html#access",
-    "title": "workspace name",
-    "section": "Access",
-    "text": "Access\nLink to access methods in the first steps page here."
-  },
-  {
-    "objectID": "docs/workspaces/templates/template.html#usage",
-    "href": "docs/workspaces/templates/template.html#usage",
-    "title": "workspace name",
-    "section": "Usage",
-    "text": "Usage\n\nData transfer options\nSee our data transfer manuals.\nThe recommended iBridges client for Yoda and iRODS is preinstalled.\n\n\nInstalling additional software\nThe user has admin rights to install additional software on the system (on a terminal, use sudo &lt;yourcommand&gt;)."
-  },
-  {
-    "objectID": "docs/workspaces/templates/template.html#tips",
-    "href": "docs/workspaces/templates/template.html#tips",
-    "title": "workspace name",
-    "section": "Tips",
-    "text": "Tips\n\nWorkspace security\nPlease take a moment to read the security recommendations for VREs."
-  },
-  {
-    "objectID": "docs/workspace-catalogue.html",
-    "href": "docs/workspace-catalogue.html",
-    "title": "Workspace Catalogue",
-    "section": "",
-    "text": "This page provides an overview of workspace types (called “Catalog Items” on Research Cloud) supported by Utrecht University. This overview includes primarily Catalog Items developed by UU, but also some commonly used Catalog Items developed by SURF.\nPlease note this is not a full list of available workspace types on ResearchCloud: there are many more developed by other institutions.\nIf there is a specific environment application, or software package you think you might need, please contact us for help. If what you require is not yet available on ResearchCloud, we can also help you to create custom Catalog Items.\n\nLegend\n\n Access the workspace via the command line\n Access the workspace as a remote desktop.\n Access application via the browser.\n\n\n\nProgramming & Analysis Environments\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nJupyter Notebooks\nJupyter Lab\n\n\n\n\nSURF\n\n\nJupyter Notebooks CUDA\nJupyter LabCUDA\n\n\n\n\nSURF\n\n\nMatlab\nMatlab\n\n\n\nLicense needed\nUU\n\n\nMiniconda (shared)\nminiconda\n\n\n\n\nUU\n\n\nMiniconda (shared) CUDA\nJupyter LabCUDA\n\n\n\n\nUU\n\n\nPython Workbench\nPythonpoetryminiconda\n\n\n\n\nUU\n\n\nPython Workbench CUDA\nCUDAPythonpoetryminiconda\n\n\n\n\nUU\n\n\nR Workbench\nRminiconda\n\n\n\n\nUU\n\n\nRStudio\nRStudio\n\n\n\n\nSURF\n\n\nStata\nStata\n\n\n\nLicense needed\nUU\n\n\n\n\n\n\n\nPlain Workspaces\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nUbuntu\n\n\n\n\n\nSURF\n\n\nUbuntu CUDA\nCUDA\n\n\n\n\nSURF\n\n\nWindows\n\n\n\n\n\nSURF\n\n\nWindows with CUDA\n\n\n\n\n\nSURF\n\n\n\n\n\n\n\nUtilities & Data Processing\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nASReview CLI\nASReview\n\n\n\n\nUU\n\n\nASReview Lab\nASReview\n\n\n\n\nUU\n\n\nGrobid\nGrobid\n\n\n\n\nUU\n\n\nWhisper OpenAI CUDA 11\nWhisperX\n\n\n\n\nUU\n\n\n\n\n\n\n\nExperimental\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nASReview Webapp\nASReview\n\n\n\n\nUU"
-  },
-  {
-    "objectID": "docs/onboarding.html",
-    "href": "docs/onboarding.html",
-    "title": "Getting started",
-    "section": "",
-    "text": "This page elaborates on the procedure described on Virtual Research Environments (VREs) on the UU website.\nThere are several situations that may apply to you:\n\nMy project team is currently not using Research cloud and I want to start on Research cloud\nStart here\nSomeone in my project team is already using Research cloud and I need access\nStart here\nI think Research Cloud is interesting for my current project but I am not sure\nStart here"
-  },
-  {
-    "objectID": "docs/onboarding.html#how-to-get-on-board",
-    "href": "docs/onboarding.html#how-to-get-on-board",
-    "title": "Getting started",
-    "section": "",
-    "text": "This page elaborates on the procedure described on Virtual Research Environments (VREs) on the UU website.\nThere are several situations that may apply to you:\n\nMy project team is currently not using Research cloud and I want to start on Research cloud\nStart here\nSomeone in my project team is already using Research cloud and I need access\nStart here\nI think Research Cloud is interesting for my current project but I am not sure\nStart here"
-  },
-  {
-    "objectID": "docs/onboarding.html#onboarding-procedure",
-    "href": "docs/onboarding.html#onboarding-procedure",
-    "title": "Getting started",
-    "section": "Onboarding procedure",
-    "text": "Onboarding procedure\nThis is a flowchart describing the Onboarding procedure for new projects, find descriptions of the steps below the flowchart.\n\n\n\n\n\nflowchart TD\n  A[1. Intake meeting] --&gt; B{Onboarding}\n  B -- budget --&gt; C{3. Request credits}\n  C --&gt; F[UU credits via Intake meeting]\n  C --&gt; G[Small Compute application]\n  C --&gt; H[Project budget]\n  B -- account --&gt; D[2. Create collaboration in SRAM]\n  D ----&gt; E[4. Log in on Research Cloud]\n  F --&gt; E[4. Log in on Research Cloud]\n  G --&gt; E[4. Log in on Research Cloud]\n  H --&gt; E[4. Log in on Research Cloud]\n  E --&gt; J[Create your first workspace!]\n\n\n\n\n\n\n\n\n1. Plan an intake with the Research Engineering team\nDuring a 30 minute online meeting we will discuss the requirements for you research project and discuss the following topics:\n\nThe appropriate solution. RDM Support will help you determine which solution will meet the requirements of your research.\nThe required configuration. RDM Support will discuss the software and configuration that your research needs and how we can help you make your own software or scripts available.\nOther requirements. RDM Support can consult on related needs, such as research data management, to facilitate a complete and integral solution for your research.\nFunding arrangements. The VRE costs are covered on a pay-per-use basis. If you do not have a budget available, RDM Support can help you apply for “SURFsara credits” to get you started for a limited time. We can also help you with applying for more credits via SURF and NWO.\n\nThe Research engineer who is doing the intake has experience with the systems and can quickly assess your needs when looking together at your software. The engineer will advice you about how to proceed. When Research cloud meets the technical requirements of your project, we will arrange administration that is necessary to get started directly during the intake.\nSchedule an intake meeting.\nDuring the intake meeting an end date for your VRE’s project account (called a Collaboration or “CO”) will be agreed, after which you will loose access to it. You will be notified 10 days prior to the agreed end date, and you can always request that the lifetime of the CO be extended by contacting us.\n\n\n2. Request a collaboration in SRAM\nThis will be done for you by the UU support team after intake meeting (step 1).\n\n\n\n\n\n\nWhat is SRAM?\n\n\n\n\n\nSRAM (SURF Research Access Management) is a service to manage access to research resources, intended for Dutch led research collaborations. More information.\n\n\n\n\n\n\n\n\n\nWhat is a collaboration?\n\n\n\n\n\nA Collaboration (also known as Collaborative Organisation, or CO) is an ad-hoc group of people who are allowed to work together by sharing resources. As a scientist you can easily make a CO. That way, you can invite other researchers to join your efforts in Research Cloud, and you can then self-organise yourselves to distribute tasks, including administering the CO. More information.\n\n\n\n\n\n3. Request funding\nThere are several ways to request funding for credits:\nUU Budget This is typically granted during an intake meeting (see step 1 above).\nSmall Compute application Via a Small Compute application (SURF) 50.000 CPU hours and/or 5.000 GPU hours can be requested for your project for 1 calendar year. A Small Compute application can be done one time per calendar year. The application procedure is relatively simple and fast. More information. Most users first use the UU budget before they submit a Small compute application.\nLarge Compute application A Large Compute application can done if you require more resources than provided via the Small compute application. More information.\nProject budget It is possible to pay for credits via your own project budget. Discuss the possiblities during an intake meeting (see step 1 above).\n\n\n4. Log in to Research cloud\nAfter your collaboration and your budget (aka wallet) have been created you can start working with Research Cloud!\nThe url of the Research cloud portal is: surfresearchcloud.nl, or click the link below to go to the portal.\nResearch Cloud portal"
-  },
-  {
-    "objectID": "docs/onboarding.html#add-collaborators-to-existing-project",
-    "href": "docs/onboarding.html#add-collaborators-to-existing-project",
-    "title": "Getting started",
-    "section": "Add collaborators to existing project",
-    "text": "Add collaborators to existing project\nWhen you want to onboard new project member in Research cloud you should think about the rights you want to grant them:\n\n\n\n\n\n\nShould the new project member only have access to running workspaces?\n\n\n\n\n\nPerform step 1 below\n\n\n\n\n\n\n\n\n\nShould the new project member be able to pause, resume and delete workspaces that I create?\n\n\n\n\n\nPerform step 1 and 2 below\n\n\n\n\n\n\n\n\n\nShould the new project member be able to create new workspaces using the project budget?\n\n\n\n\n\nPerform step 1, 2(optional), and 3\n\n\n\n\n1. Invite a new collaborator\nSRAM is used for access management for SURF Research Cloud. It is possible to invite collaborators to your collaboration (project)\n\n\n\n\n\n\nWho can I invite?\n\n\n\n\n\nIt is possible to invite anyone who has an email address to join your project. Students and employees from most Universities (and Universities of Applied Sciences) will be able to login to SRAM using their institution credentials. Collaborators from abroad or e.g. private sector can create an eduID first and then use that to login to SRAM and accept the invitation.\n\n\n\n\n\n2. Workspace admins\nIn SRAM there are groups that can be used to grant members of your collaboration to the right to pause, resume and delete workspaces\n\n\n3. Share your wallet\nIn SRAM there are groups that can be used to grant members of your collaboration to the right to create new workspaces using the wallet of your project"
-  },
-  {
-    "objectID": "docs/onboarding.html#next",
-    "href": "docs/onboarding.html#next",
-    "title": "Getting started",
-    "section": "Next",
-    "text": "Next\nWhen your collaboration and wallet is ready, see this page for first steps."
-  },
-  {
-    "objectID": "docs/research-cloud-intro.html",
-    "href": "docs/research-cloud-intro.html",
-    "title": "What is Research Cloud",
-    "section": "",
-    "text": "SURF ResearchCloud (SRC) is a service that allows you to use the vast computational power offered by datacenters with almost the same ease-of-use as using your own laptop. The complex infrastructure behind the scenes is presented to you as a workspace. Think of a workspace as a laptop-in-the-cloud that you access using your web browser or another application (for instance, the Remote Desktop application or a command line shell). Your web browser displays the screen content of this workspace and allows you to interact with it using your keyboard and mouse.\nWorkspaces are preconfigured with one or more applications, ranging from RStudio, Jupyter Notebooks, Matlab, to plain Windows or Linux virtual machines where the user installs their own software. Workspaces are also scalable: computational power, GPU drivers and extra storage can be ordered with a single mouse click. You can select a workspace type that suites your needs from a catalog in the SRC web portal. Workspaces are preconfigured for the user by support staff and can be extended on request to suit a variety of research domains and analysis methods. Should analysis applications for your domain not yet be covered, the support staff is happy to assist and to make additions to the catalog. Simply contact us if you have questions about or requests for the catalog.\nCreating a workspace is easily achieved in the ResearchCloud web portal with a few clicks. The datacenter service will set aside some compute power for you. The datacenter subsequently creates a workspace and prepares it for you with applications preinstalled. This whole process takes approximately 10 to 30 minutes, depending on the type of workspace.\nA workspace is offered on-demand and on a pay-as-you-go basis. It saves you much hassle: no need to buy and maintain computer hardware and your favorite applications come conveniently preinstalled for you. This resource leasing concept is a cost effective solution if you plan to use it part-time, or if you seek to avoid to invest in expensive computer hardware, software or related IT-skills. Once you are done with using your workspace, just delete it in the SRC web portal.\nExample workspaces\nSee here) for a selection of available workspace types.\nResources available for a single workspace\nWhen creating workspaces to run on the SURF datacenter, the following computational resources are available:\n\nup to 80 CPU cores\n\nup to 480 GB RAM\n\nup to 4 GPU drives (NVIDIA A10)\n\nup to 2 TB storage\n\nHowever, is also possible to use the ResearchCloud portal to create workspaces running on commercial datacenters (e.g. Microsoft Azure), in which case more resources may be available. This may be suitable for some use cases, although it comes with significantly higher costs and may not be desirable from a data privacy perspective.\nContact us if you are unsure about the computational needs for your project and whether ResearchCloud is a good fit."
-  },
-  {
-    "objectID": "docs/research-cloud-intro.html#introduction",
-    "href": "docs/research-cloud-intro.html#introduction",
-    "title": "What is Research Cloud",
-    "section": "",
-    "text": "SURF ResearchCloud (SRC) is a service that allows you to use the vast computational power offered by datacenters with almost the same ease-of-use as using your own laptop. The complex infrastructure behind the scenes is presented to you as a workspace. Think of a workspace as a laptop-in-the-cloud that you access using your web browser or another application (for instance, the Remote Desktop application or a command line shell). Your web browser displays the screen content of this workspace and allows you to interact with it using your keyboard and mouse.\nWorkspaces are preconfigured with one or more applications, ranging from RStudio, Jupyter Notebooks, Matlab, to plain Windows or Linux virtual machines where the user installs their own software. Workspaces are also scalable: computational power, GPU drivers and extra storage can be ordered with a single mouse click. You can select a workspace type that suites your needs from a catalog in the SRC web portal. Workspaces are preconfigured for the user by support staff and can be extended on request to suit a variety of research domains and analysis methods. Should analysis applications for your domain not yet be covered, the support staff is happy to assist and to make additions to the catalog. Simply contact us if you have questions about or requests for the catalog.\nCreating a workspace is easily achieved in the ResearchCloud web portal with a few clicks. The datacenter service will set aside some compute power for you. The datacenter subsequently creates a workspace and prepares it for you with applications preinstalled. This whole process takes approximately 10 to 30 minutes, depending on the type of workspace.\nA workspace is offered on-demand and on a pay-as-you-go basis. It saves you much hassle: no need to buy and maintain computer hardware and your favorite applications come conveniently preinstalled for you. This resource leasing concept is a cost effective solution if you plan to use it part-time, or if you seek to avoid to invest in expensive computer hardware, software or related IT-skills. Once you are done with using your workspace, just delete it in the SRC web portal.\nExample workspaces\nSee here) for a selection of available workspace types.\nResources available for a single workspace\nWhen creating workspaces to run on the SURF datacenter, the following computational resources are available:\n\nup to 80 CPU cores\n\nup to 480 GB RAM\n\nup to 4 GPU drives (NVIDIA A10)\n\nup to 2 TB storage\n\nHowever, is also possible to use the ResearchCloud portal to create workspaces running on commercial datacenters (e.g. Microsoft Azure), in which case more resources may be available. This may be suitable for some use cases, although it comes with significantly higher costs and may not be desirable from a data privacy perspective.\nContact us if you are unsure about the computational needs for your project and whether ResearchCloud is a good fit."
-  },
-  {
-    "objectID": "docs/research-cloud-intro.html#designed-with-consortia-and-other-collaborative-use-in-mind",
-    "href": "docs/research-cloud-intro.html#designed-with-consortia-and-other-collaborative-use-in-mind",
-    "title": "What is Research Cloud",
-    "section": "Designed with consortia and other Collaborative use in mind",
-    "text": "Designed with consortia and other Collaborative use in mind\nSURF Research Cloud uses the concept of a ‘collaboration’ to facilitate working together in project teams. A collaboration may be viewed as a virtual organization, with members that can originate from different research institutes, or from the private sector. A collaboration can accommodate a virtual organization the size of a European research project consortium. In contrast, it might also consist of a single member, e.g. a researcher in need of compute power or a private workspace.\nManaging memberships of the collaboration is done via a self-service portal (called SRAM, short for SURF Research Access Management. For example, a researcher can give (temporary) access to PhDs or students.\nIt is important to understand that SRC assumes all members of the collaboration to be contractually or otherwise bound to work together.\nHence the costs related to a workspace ordered by a single member of the collaboration are effectively charged to the collaboration. In addition, the workspace is automatically accessible to all members of the collaboration."
-  },
-  {
-    "objectID": "docs/research-cloud-intro.html#funding",
-    "href": "docs/research-cloud-intro.html#funding",
-    "title": "What is Research Cloud",
-    "section": "Funding",
-    "text": "Funding\nThere are several ways to request computing time for SRC. The easiest and fastest way (and recommended first step) is to contact UU Research IT. A short intake meeting will get you started. Additionally, more computing time can be requested via Surf or NWO."
-  },
-  {
-    "objectID": "docs/research-cloud-intro.html#getting-started",
-    "href": "docs/research-cloud-intro.html#getting-started",
-    "title": "What is Research Cloud",
-    "section": "Getting started",
-    "text": "Getting started\nPlan an intake meeting to get started. After a 30 minute intake you will have everything ready to start your first workspace. More info about the onboarding procedure can be found here\nPractical instructions to get started on SRC can be found here."
-  },
-  {
-    "objectID": "docs/manuals.html",
-    "href": "docs/manuals.html",
-    "title": "User Manuals",
-    "section": "",
-    "text": "On this page we share manuals for a variety of use cases and tasks.\n\nData Transfer\n\nData Transfer to and from Yoda using iBridges\nData Transfer to and from Yoda using iCommands\nData Transfer from your computer using scp and rsync\nData Transfer between Research Cloud and SURFdrive\n\n\n\nSecurity\n\nEnabling automatic security updates on Ubuntu Linux\n\n\n\nOther\n\nRunning long jobs"
-  },
-  {
-    "objectID": "docs/glossary.html",
-    "href": "docs/glossary.html",
-    "title": "Glossary",
-    "section": "",
-    "text": "Catalog Item\nA catalog item is a workspace configuration that you can select from the catalog when you create a new workspace. A workspace can be configured with a certain Operating system and other applications or software that will installed on the workspace.\n\n\nCollaboration\nA Collaboration (also known as Collaborative Organisation, or CO) is an ad-hoc group of people who are allowed to work together by sharing resources. As a scientist you can easily make a CO. That way, you can invite other researchers to join your efforts in Research Cloud, and you can easily assign different roles to collaborators (such as the ‘admin’ role for administering the CO). More information.\n\n\nDPA\nData Processing Agreement A legally binding document to be agreed upon between the data controller and the data processor in writing or in electronic form. It regulates the particularities of data processing – such as its scope and purpose – as well as the relationship between the controller and the processor.\n\n\nSmall Compute application\nA relatively simple request procedure for obtaining a maximum of 50.000 CPU hours and/or 5.000 GPU hours for your project. More info\n\n\nSRAM\nSRAM (SURF Research Access Management) is a service to manage access to research resources, intended for Dutch led research collaborations. More information.\n\n\nStorage volumes\nAn ‘External’ Storage volume can be created from the main dashboard in the research cloud portal. This storage is persistent which means that any data that you put here will still be there when a workspace is deleted. You need to create a storage volume first and attach it when you create a new workspace. The storage volume can than typically be found in the workspace under the following directory path: ~/data/volume_2. More info\n\n\nVRE\nVirtual Research Environment is the CO including the entire linked research services, linked other systems, applied software and used data.\n\n\nVRE support\nThe support at UU level for this service is done by Research Data Management Services. The team consists of service administrators for arranging access and accounts and research engineers who can advice on usage and can help develop proof of concepts.\n\n\nWallet\nA wallet holds the budget for your use of the Research Cloud. See the getting started page for the options to obtain a wallet for Research cloud. When you create a workspace you need to select a wallet that can be charged for the use of the resources.\n\n\nWorkspace\nA workspace is a running Virtual Machine (or aka server) that you can use as a Virtual Research Environment. You can create a workspace in the Research Cloud portal. The workspace will be created somewhere in ‘the cloud’, and when it is up and running you can login to it, transfer data to it and start working. The workspace typically will have some software installed on it (e.g. RStudio or Jupyter Notebook)."
-  },
-  {
-    "objectID": "docs/contact.html",
-    "href": "docs/contact.html",
-    "title": "",
-    "section": "",
-    "text": "Find our contact details on the RDM support website"
-  },
-  {
-    "objectID": "docs/workspaces/plain/ubuntu.html#creation",
-    "href": "docs/workspaces/plain/ubuntu.html#creation",
-    "title": "Ubuntu",
-    "section": "Creation",
-    "text": "Creation\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
-  },
-  {
-    "objectID": "docs/workspaces/plain/ubuntu.html#access",
-    "href": "docs/workspaces/plain/ubuntu.html#access",
-    "title": "Ubuntu",
-    "section": "Access",
-    "text": "Access"
-  },
-  {
-    "objectID": "docs/workspaces/plain/ubuntu.html#data-transfer-options",
-    "href": "docs/workspaces/plain/ubuntu.html#data-transfer-options",
-    "title": "Ubuntu",
-    "section": "Data transfer options",
-    "text": "Data transfer options"
-  },
-  {
-    "objectID": "docs/workspaces/plain/ubuntu.html#usage",
-    "href": "docs/workspaces/plain/ubuntu.html#usage",
-    "title": "Ubuntu",
-    "section": "Usage",
-    "text": "Usage"
-  },
-  {
-    "objectID": "docs/workspaces/plain/ubuntu.html#tips",
-    "href": "docs/workspaces/plain/ubuntu.html#tips",
-    "title": "Ubuntu",
-    "section": "Tips",
-    "text": "Tips"
-  },
-  {
-    "objectID": "docs/workspaces/plain/windows-cuda.html#creation",
-    "href": "docs/workspaces/plain/windows-cuda.html#creation",
-    "title": "Windows with CUDA",
-    "section": "Creation",
-    "text": "Creation\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
-  },
-  {
-    "objectID": "docs/workspaces/plain/windows-cuda.html#access",
-    "href": "docs/workspaces/plain/windows-cuda.html#access",
-    "title": "Windows with CUDA",
-    "section": "Access",
-    "text": "Access"
-  },
-  {
-    "objectID": "docs/workspaces/plain/windows-cuda.html#data-transfer-options",
-    "href": "docs/workspaces/plain/windows-cuda.html#data-transfer-options",
-    "title": "Windows with CUDA",
-    "section": "Data transfer options",
-    "text": "Data transfer options"
-  },
-  {
-    "objectID": "docs/workspaces/plain/windows-cuda.html#usage",
-    "href": "docs/workspaces/plain/windows-cuda.html#usage",
-    "title": "Windows with CUDA",
-    "section": "Usage",
-    "text": "Usage"
-  },
-  {
-    "objectID": "docs/workspaces/plain/windows-cuda.html#tips",
-    "href": "docs/workspaces/plain/windows-cuda.html#tips",
-    "title": "Windows with CUDA",
-    "section": "Tips",
-    "text": "Tips"
-  },
-  {
-    "objectID": "docs/workspaces/programming/matlab.html",
-    "href": "docs/workspaces/programming/matlab.html",
-    "title": "Matlab",
-    "section": "",
-    "text": "This workspace is an Ubuntu Desktop workspace with MATLAB installed. Ubuntu Desktop is a linux operating system but has a Graphical User interface so operating it is similar to using a Windows operating system.\n\n\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
-  },
-  {
-    "objectID": "docs/workspaces/programming/matlab.html#description",
-    "href": "docs/workspaces/programming/matlab.html#description",
-    "title": "Matlab",
-    "section": "",
-    "text": "This workspace is an Ubuntu Desktop workspace with MATLAB installed. Ubuntu Desktop is a linux operating system but has a Graphical User interface so operating it is similar to using a Windows operating system.\n\n\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
-  },
-  {
-    "objectID": "docs/workspaces/programming/matlab.html#access",
-    "href": "docs/workspaces/programming/matlab.html#access",
-    "title": "Matlab",
-    "section": "Access",
-    "text": "Access\nThis workspace can be accessed via the yellow ‘Access’ button. You need a TOTP to login to your workspace, see Workspace access with TOTP.\n\nData transfer options\nSee our data transfer manuals.\nThe recommended iBridges client for Yoda and iRODS is preinstalled."
-  },
-  {
-    "objectID": "docs/workspaces/programming/matlab.html#usage",
-    "href": "docs/workspaces/programming/matlab.html#usage",
-    "title": "Matlab",
-    "section": "Usage",
-    "text": "Usage\n\nPrerequisites:\nYou will need a Mathworks account and add you UU licence to this account to be able to use MATLAB. Find instructions on how to do this here\n\n\nActivate MATLAB\nWhen logged in to the workspace:\n\nClick ‘Applications’ in the top left corner\nClick ‘Development’\nClick ‘Matlab Activate’, a wizard will open.\nClick ‘Next’ to activate Matlab using the internet\nLogin to your Mathworks account. For the password, it will ask you to get a 6 digit password from: https://nl.mathworks.com/mwa/otp\nContinue the wizard and choose the default options until you are finished.\n\n\n\nOpen MATLAB\n\nClick ‘Applications’ in the top left corner\nClick ‘Development’\nClick ‘Matlab’"
-  },
-  {
-    "objectID": "docs/workspaces/programming/matlab.html#tips",
-    "href": "docs/workspaces/programming/matlab.html#tips",
-    "title": "Matlab",
-    "section": "Tips",
-    "text": "Tips"
+    "text": "This workspace type is identical to the Juputer Notebook Catalog Item, but additionally comes with the nvidia CUDA GPU drivers preinstalled."
   },
   {
     "objectID": "docs/workspaces/programming/python-workbench.html",
@@ -714,11 +392,361 @@
     "text": "Tips\n\nWorkspace security\nPlease take a moment to read the security recommendations for VREs."
   },
   {
-    "objectID": "docs/workspaces/programming/jupyter-cuda.html",
-    "href": "docs/workspaces/programming/jupyter-cuda.html",
-    "title": "Jupyter Notebooks CUDA",
+    "objectID": "docs/workspaces/programming/matlab.html",
+    "href": "docs/workspaces/programming/matlab.html",
+    "title": "Matlab",
     "section": "",
-    "text": "This workspace type is identical to the Juputer Notebook Catalog Item, but additionally comes with the nvidia CUDA GPU drivers preinstalled."
+    "text": "This workspace is an Ubuntu Desktop workspace with MATLAB installed. Ubuntu Desktop is a linux operating system but has a Graphical User interface so operating it is similar to using a Windows operating system.\n\n\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
+  },
+  {
+    "objectID": "docs/workspaces/programming/matlab.html#description",
+    "href": "docs/workspaces/programming/matlab.html#description",
+    "title": "Matlab",
+    "section": "",
+    "text": "This workspace is an Ubuntu Desktop workspace with MATLAB installed. Ubuntu Desktop is a linux operating system but has a Graphical User interface so operating it is similar to using a Windows operating system.\n\n\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
+  },
+  {
+    "objectID": "docs/workspaces/programming/matlab.html#access",
+    "href": "docs/workspaces/programming/matlab.html#access",
+    "title": "Matlab",
+    "section": "Access",
+    "text": "Access\nThis workspace can be accessed via the yellow ‘Access’ button. You need a TOTP to login to your workspace, see Workspace access with TOTP.\n\nData transfer options\nSee our data transfer manuals.\nThe recommended iBridges client for Yoda and iRODS is preinstalled."
+  },
+  {
+    "objectID": "docs/workspaces/programming/matlab.html#usage",
+    "href": "docs/workspaces/programming/matlab.html#usage",
+    "title": "Matlab",
+    "section": "Usage",
+    "text": "Usage\n\nPrerequisites:\nYou will need a Mathworks account and add you UU licence to this account to be able to use MATLAB. Find instructions on how to do this here\n\n\nActivate MATLAB\nWhen logged in to the workspace:\n\nClick ‘Applications’ in the top left corner\nClick ‘Development’\nClick ‘Matlab Activate’, a wizard will open.\nClick ‘Next’ to activate Matlab using the internet\nLogin to your Mathworks account. For the password, it will ask you to get a 6 digit password from: https://nl.mathworks.com/mwa/otp\nContinue the wizard and choose the default options until you are finished.\n\n\n\nOpen MATLAB\n\nClick ‘Applications’ in the top left corner\nClick ‘Development’\nClick ‘Matlab’"
+  },
+  {
+    "objectID": "docs/workspaces/programming/matlab.html#tips",
+    "href": "docs/workspaces/programming/matlab.html#tips",
+    "title": "Matlab",
+    "section": "Tips",
+    "text": "Tips"
+  },
+  {
+    "objectID": "docs/workspaces/plain/windows-cuda.html#creation",
+    "href": "docs/workspaces/plain/windows-cuda.html#creation",
+    "title": "Windows with CUDA",
+    "section": "Creation",
+    "text": "Creation\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
+  },
+  {
+    "objectID": "docs/workspaces/plain/windows-cuda.html#access",
+    "href": "docs/workspaces/plain/windows-cuda.html#access",
+    "title": "Windows with CUDA",
+    "section": "Access",
+    "text": "Access"
+  },
+  {
+    "objectID": "docs/workspaces/plain/windows-cuda.html#data-transfer-options",
+    "href": "docs/workspaces/plain/windows-cuda.html#data-transfer-options",
+    "title": "Windows with CUDA",
+    "section": "Data transfer options",
+    "text": "Data transfer options"
+  },
+  {
+    "objectID": "docs/workspaces/plain/windows-cuda.html#usage",
+    "href": "docs/workspaces/plain/windows-cuda.html#usage",
+    "title": "Windows with CUDA",
+    "section": "Usage",
+    "text": "Usage"
+  },
+  {
+    "objectID": "docs/workspaces/plain/windows-cuda.html#tips",
+    "href": "docs/workspaces/plain/windows-cuda.html#tips",
+    "title": "Windows with CUDA",
+    "section": "Tips",
+    "text": "Tips"
+  },
+  {
+    "objectID": "docs/workspaces/plain/ubuntu.html#creation",
+    "href": "docs/workspaces/plain/ubuntu.html#creation",
+    "title": "Ubuntu",
+    "section": "Creation",
+    "text": "Creation\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
+  },
+  {
+    "objectID": "docs/workspaces/plain/ubuntu.html#access",
+    "href": "docs/workspaces/plain/ubuntu.html#access",
+    "title": "Ubuntu",
+    "section": "Access",
+    "text": "Access"
+  },
+  {
+    "objectID": "docs/workspaces/plain/ubuntu.html#data-transfer-options",
+    "href": "docs/workspaces/plain/ubuntu.html#data-transfer-options",
+    "title": "Ubuntu",
+    "section": "Data transfer options",
+    "text": "Data transfer options"
+  },
+  {
+    "objectID": "docs/workspaces/plain/ubuntu.html#usage",
+    "href": "docs/workspaces/plain/ubuntu.html#usage",
+    "title": "Ubuntu",
+    "section": "Usage",
+    "text": "Usage"
+  },
+  {
+    "objectID": "docs/workspaces/plain/ubuntu.html#tips",
+    "href": "docs/workspaces/plain/ubuntu.html#tips",
+    "title": "Ubuntu",
+    "section": "Tips",
+    "text": "Tips"
+  },
+  {
+    "objectID": "docs/contact.html",
+    "href": "docs/contact.html",
+    "title": "",
+    "section": "",
+    "text": "Find our contact details on the RDM support website"
+  },
+  {
+    "objectID": "docs/glossary.html",
+    "href": "docs/glossary.html",
+    "title": "Glossary",
+    "section": "",
+    "text": "Catalog Item\nA catalog item is a workspace configuration that you can select from the catalog when you create a new workspace. A workspace can be configured with a certain Operating system and other applications or software that will installed on the workspace.\n\n\nCollaboration\nA Collaboration (also known as Collaborative Organisation, or CO) is an ad-hoc group of people who are allowed to work together by sharing resources. As a scientist you can easily make a CO. That way, you can invite other researchers to join your efforts in Research Cloud, and you can easily assign different roles to collaborators (such as the ‘admin’ role for administering the CO). More information.\n\n\nDPA\nData Processing Agreement A legally binding document to be agreed upon between the data controller and the data processor in writing or in electronic form. It regulates the particularities of data processing – such as its scope and purpose – as well as the relationship between the controller and the processor.\n\n\nSmall Compute application\nA relatively simple request procedure for obtaining a maximum of 50.000 CPU hours and/or 5.000 GPU hours for your project. More info\n\n\nSRAM\nSRAM (SURF Research Access Management) is a service to manage access to research resources, intended for Dutch led research collaborations. More information.\n\n\nStorage volumes\nAn ‘External’ Storage volume can be created from the main dashboard in the research cloud portal. This storage is persistent which means that any data that you put here will still be there when a workspace is deleted. You need to create a storage volume first and attach it when you create a new workspace. The storage volume can than typically be found in the workspace under the following directory path: ~/data/volume_2. More info\n\n\nVRE\nVirtual Research Environment is the CO including the entire linked research services, linked other systems, applied software and used data.\n\n\nVRE support\nThe support at UU level for this service is done by Research Data Management Services. The team consists of service administrators for arranging access and accounts and research engineers who can advice on usage and can help develop proof of concepts.\n\n\nWallet\nA wallet holds the budget for your use of the Research Cloud. See the getting started page for the options to obtain a wallet for Research cloud. When you create a workspace you need to select a wallet that can be charged for the use of the resources.\n\n\nWorkspace\nA workspace is a running Virtual Machine (or aka server) that you can use as a Virtual Research Environment. You can create a workspace in the Research Cloud portal. The workspace will be created somewhere in ‘the cloud’, and when it is up and running you can login to it, transfer data to it and start working. The workspace typically will have some software installed on it (e.g. RStudio or Jupyter Notebook)."
+  },
+  {
+    "objectID": "docs/manuals.html",
+    "href": "docs/manuals.html",
+    "title": "User Manuals",
+    "section": "",
+    "text": "On this page we share manuals for a variety of use cases and tasks.\n\nData Transfer\n\nData Transfer to and from Yoda using iBridges\nData Transfer to and from Yoda using iCommands\nData Transfer from your computer using scp and rsync\nData Transfer between Research Cloud and SURFdrive\n\n\n\nSecurity\n\nEnabling automatic security updates on Ubuntu Linux\n\n\n\nOther\n\nRunning long jobs"
+  },
+  {
+    "objectID": "docs/research-cloud-intro.html",
+    "href": "docs/research-cloud-intro.html",
+    "title": "What is Research Cloud",
+    "section": "",
+    "text": "SURF ResearchCloud (SRC) is a service that allows you to use the vast computational power offered by datacenters with almost the same ease-of-use as using your own laptop. The complex infrastructure behind the scenes is presented to you as a workspace. Think of a workspace as a laptop-in-the-cloud that you access using your web browser or another application (for instance, the Remote Desktop application or a command line shell). Your web browser displays the screen content of this workspace and allows you to interact with it using your keyboard and mouse.\nWorkspaces are preconfigured with one or more applications, ranging from RStudio, Jupyter Notebooks, Matlab, to plain Windows or Linux virtual machines where the user installs their own software. Workspaces are also scalable: computational power, GPU drivers and extra storage can be ordered with a single mouse click. You can select a workspace type that suites your needs from a catalog in the SRC web portal. Workspaces are preconfigured for the user by support staff and can be extended on request to suit a variety of research domains and analysis methods. Should analysis applications for your domain not yet be covered, the support staff is happy to assist and to make additions to the catalog. Simply contact us if you have questions about or requests for the catalog.\nCreating a workspace is easily achieved in the ResearchCloud web portal with a few clicks. The datacenter service will set aside some compute power for you. The datacenter subsequently creates a workspace and prepares it for you with applications preinstalled. This whole process takes approximately 10 to 30 minutes, depending on the type of workspace.\nA workspace is offered on-demand and on a pay-as-you-go basis. It saves you much hassle: no need to buy and maintain computer hardware and your favorite applications come conveniently preinstalled for you. This resource leasing concept is a cost effective solution if you plan to use it part-time, or if you seek to avoid to invest in expensive computer hardware, software or related IT-skills. Once you are done with using your workspace, just delete it in the SRC web portal.\nExample workspaces\nSee here) for a selection of available workspace types.\nResources available for a single workspace\nWhen creating workspaces to run on the SURF datacenter, the following computational resources are available:\n\nup to 80 CPU cores\n\nup to 480 GB RAM\n\nup to 4 GPU drives (NVIDIA A10)\n\nup to 2 TB storage\n\nHowever, is also possible to use the ResearchCloud portal to create workspaces running on commercial datacenters (e.g. Microsoft Azure), in which case more resources may be available. This may be suitable for some use cases, although it comes with significantly higher costs and may not be desirable from a data privacy perspective.\nContact us if you are unsure about the computational needs for your project and whether ResearchCloud is a good fit."
+  },
+  {
+    "objectID": "docs/research-cloud-intro.html#introduction",
+    "href": "docs/research-cloud-intro.html#introduction",
+    "title": "What is Research Cloud",
+    "section": "",
+    "text": "SURF ResearchCloud (SRC) is a service that allows you to use the vast computational power offered by datacenters with almost the same ease-of-use as using your own laptop. The complex infrastructure behind the scenes is presented to you as a workspace. Think of a workspace as a laptop-in-the-cloud that you access using your web browser or another application (for instance, the Remote Desktop application or a command line shell). Your web browser displays the screen content of this workspace and allows you to interact with it using your keyboard and mouse.\nWorkspaces are preconfigured with one or more applications, ranging from RStudio, Jupyter Notebooks, Matlab, to plain Windows or Linux virtual machines where the user installs their own software. Workspaces are also scalable: computational power, GPU drivers and extra storage can be ordered with a single mouse click. You can select a workspace type that suites your needs from a catalog in the SRC web portal. Workspaces are preconfigured for the user by support staff and can be extended on request to suit a variety of research domains and analysis methods. Should analysis applications for your domain not yet be covered, the support staff is happy to assist and to make additions to the catalog. Simply contact us if you have questions about or requests for the catalog.\nCreating a workspace is easily achieved in the ResearchCloud web portal with a few clicks. The datacenter service will set aside some compute power for you. The datacenter subsequently creates a workspace and prepares it for you with applications preinstalled. This whole process takes approximately 10 to 30 minutes, depending on the type of workspace.\nA workspace is offered on-demand and on a pay-as-you-go basis. It saves you much hassle: no need to buy and maintain computer hardware and your favorite applications come conveniently preinstalled for you. This resource leasing concept is a cost effective solution if you plan to use it part-time, or if you seek to avoid to invest in expensive computer hardware, software or related IT-skills. Once you are done with using your workspace, just delete it in the SRC web portal.\nExample workspaces\nSee here) for a selection of available workspace types.\nResources available for a single workspace\nWhen creating workspaces to run on the SURF datacenter, the following computational resources are available:\n\nup to 80 CPU cores\n\nup to 480 GB RAM\n\nup to 4 GPU drives (NVIDIA A10)\n\nup to 2 TB storage\n\nHowever, is also possible to use the ResearchCloud portal to create workspaces running on commercial datacenters (e.g. Microsoft Azure), in which case more resources may be available. This may be suitable for some use cases, although it comes with significantly higher costs and may not be desirable from a data privacy perspective.\nContact us if you are unsure about the computational needs for your project and whether ResearchCloud is a good fit."
+  },
+  {
+    "objectID": "docs/research-cloud-intro.html#designed-with-consortia-and-other-collaborative-use-in-mind",
+    "href": "docs/research-cloud-intro.html#designed-with-consortia-and-other-collaborative-use-in-mind",
+    "title": "What is Research Cloud",
+    "section": "Designed with consortia and other Collaborative use in mind",
+    "text": "Designed with consortia and other Collaborative use in mind\nSURF Research Cloud uses the concept of a ‘collaboration’ to facilitate working together in project teams. A collaboration may be viewed as a virtual organization, with members that can originate from different research institutes, or from the private sector. A collaboration can accommodate a virtual organization the size of a European research project consortium. In contrast, it might also consist of a single member, e.g. a researcher in need of compute power or a private workspace.\nManaging memberships of the collaboration is done via a self-service portal (called SRAM, short for SURF Research Access Management. For example, a researcher can give (temporary) access to PhDs or students.\nIt is important to understand that SRC assumes all members of the collaboration to be contractually or otherwise bound to work together.\nHence the costs related to a workspace ordered by a single member of the collaboration are effectively charged to the collaboration. In addition, the workspace is automatically accessible to all members of the collaboration."
+  },
+  {
+    "objectID": "docs/research-cloud-intro.html#funding",
+    "href": "docs/research-cloud-intro.html#funding",
+    "title": "What is Research Cloud",
+    "section": "Funding",
+    "text": "Funding\nThere are several ways to request computing time for SRC. The easiest and fastest way (and recommended first step) is to contact UU Research IT. A short intake meeting will get you started. Additionally, more computing time can be requested via Surf or NWO."
+  },
+  {
+    "objectID": "docs/research-cloud-intro.html#getting-started",
+    "href": "docs/research-cloud-intro.html#getting-started",
+    "title": "What is Research Cloud",
+    "section": "Getting started",
+    "text": "Getting started\nPlan an intake meeting to get started. After a 30 minute intake you will have everything ready to start your first workspace. More info about the onboarding procedure can be found here\nPractical instructions to get started on SRC can be found here."
+  },
+  {
+    "objectID": "docs/onboarding.html",
+    "href": "docs/onboarding.html",
+    "title": "Getting started",
+    "section": "",
+    "text": "This page elaborates on the procedure described on Virtual Research Environments (VREs) on the UU website.\nThere are several situations that may apply to you:\n\nMy project team is currently not using Research cloud and I want to start on Research cloud\nStart here\nSomeone in my project team is already using Research cloud and I need access\nStart here\nI think Research Cloud is interesting for my current project but I am not sure\nStart here"
+  },
+  {
+    "objectID": "docs/onboarding.html#how-to-get-on-board",
+    "href": "docs/onboarding.html#how-to-get-on-board",
+    "title": "Getting started",
+    "section": "",
+    "text": "This page elaborates on the procedure described on Virtual Research Environments (VREs) on the UU website.\nThere are several situations that may apply to you:\n\nMy project team is currently not using Research cloud and I want to start on Research cloud\nStart here\nSomeone in my project team is already using Research cloud and I need access\nStart here\nI think Research Cloud is interesting for my current project but I am not sure\nStart here"
+  },
+  {
+    "objectID": "docs/onboarding.html#onboarding-procedure",
+    "href": "docs/onboarding.html#onboarding-procedure",
+    "title": "Getting started",
+    "section": "Onboarding procedure",
+    "text": "Onboarding procedure\nThis is a flowchart describing the Onboarding procedure for new projects, find descriptions of the steps below the flowchart.\n\n\n\n\n\nflowchart TD\n  A[1. Intake meeting] --&gt; B{Onboarding}\n  B -- budget --&gt; C{3. Request credits}\n  C --&gt; F[UU credits via Intake meeting]\n  C --&gt; G[Small Compute application]\n  C --&gt; H[Project budget]\n  B -- account --&gt; D[2. Create collaboration in SRAM]\n  D ----&gt; E[4. Log in on Research Cloud]\n  F --&gt; E[4. Log in on Research Cloud]\n  G --&gt; E[4. Log in on Research Cloud]\n  H --&gt; E[4. Log in on Research Cloud]\n  E --&gt; J[Create your first workspace!]\n\n\n\n\n\n\n\n\n1. Plan an intake with the Research Engineering team\nDuring a 30 minute online meeting we will discuss the requirements for you research project and discuss the following topics:\n\nThe appropriate solution. RDM Support will help you determine which solution will meet the requirements of your research.\nThe required configuration. RDM Support will discuss the software and configuration that your research needs and how we can help you make your own software or scripts available.\nOther requirements. RDM Support can consult on related needs, such as research data management, to facilitate a complete and integral solution for your research.\nFunding arrangements. The VRE costs are covered on a pay-per-use basis. If you do not have a budget available, RDM Support can help you apply for “SURFsara credits” to get you started for a limited time. We can also help you with applying for more credits via SURF and NWO.\n\nThe Research engineer who is doing the intake has experience with the systems and can quickly assess your needs when looking together at your software. The engineer will advice you about how to proceed. When Research cloud meets the technical requirements of your project, we will arrange administration that is necessary to get started directly during the intake.\nSchedule an intake meeting.\nDuring the intake meeting an end date for your VRE’s project account (called a Collaboration or “CO”) will be agreed, after which you will loose access to it. You will be notified 10 days prior to the agreed end date, and you can always request that the lifetime of the CO be extended by contacting us.\n\n\n2. Request a collaboration in SRAM\nThis will be done for you by the UU support team after intake meeting (step 1).\n\n\n\n\n\n\nWhat is SRAM?\n\n\n\n\n\nSRAM (SURF Research Access Management) is a service to manage access to research resources, intended for Dutch led research collaborations. More information.\n\n\n\n\n\n\n\n\n\nWhat is a collaboration?\n\n\n\n\n\nA Collaboration (also known as Collaborative Organisation, or CO) is an ad-hoc group of people who are allowed to work together by sharing resources. As a scientist you can easily make a CO. That way, you can invite other researchers to join your efforts in Research Cloud, and you can then self-organise yourselves to distribute tasks, including administering the CO. More information.\n\n\n\n\n\n3. Request funding\nThere are several ways to request funding for credits:\nUU Budget This is typically granted during an intake meeting (see step 1 above).\nSmall Compute application Via a Small Compute application (SURF) 50.000 CPU hours and/or 5.000 GPU hours can be requested for your project for 1 calendar year. A Small Compute application can be done one time per calendar year. The application procedure is relatively simple and fast. More information. Most users first use the UU budget before they submit a Small compute application.\nLarge Compute application A Large Compute application can done if you require more resources than provided via the Small compute application. More information.\nProject budget It is possible to pay for credits via your own project budget. Discuss the possiblities during an intake meeting (see step 1 above).\n\n\n4. Log in to Research cloud\nAfter your collaboration and your budget (aka wallet) have been created you can start working with Research Cloud!\nThe url of the Research cloud portal is: surfresearchcloud.nl, or click the link below to go to the portal.\nResearch Cloud portal"
+  },
+  {
+    "objectID": "docs/onboarding.html#add-collaborators-to-existing-project",
+    "href": "docs/onboarding.html#add-collaborators-to-existing-project",
+    "title": "Getting started",
+    "section": "Add collaborators to existing project",
+    "text": "Add collaborators to existing project\nWhen you want to onboard new project member in Research cloud you should think about the rights you want to grant them:\n\n\n\n\n\n\nShould the new project member only have access to running workspaces?\n\n\n\n\n\nPerform step 1 below\n\n\n\n\n\n\n\n\n\nShould the new project member be able to pause, resume and delete workspaces that I create?\n\n\n\n\n\nPerform step 1 and 2 below\n\n\n\n\n\n\n\n\n\nShould the new project member be able to create new workspaces using the project budget?\n\n\n\n\n\nPerform step 1, 2(optional), and 3\n\n\n\n\n1. Invite a new collaborator\nSRAM is used for access management for SURF Research Cloud. It is possible to invite collaborators to your collaboration (project)\n\n\n\n\n\n\nWho can I invite?\n\n\n\n\n\nIt is possible to invite anyone who has an email address to join your project. Students and employees from most Universities (and Universities of Applied Sciences) will be able to login to SRAM using their institution credentials. Collaborators from abroad or e.g. private sector can create an eduID first and then use that to login to SRAM and accept the invitation.\n\n\n\n\n\n2. Workspace admins\nIn SRAM there are groups that can be used to grant members of your collaboration to the right to pause, resume and delete workspaces\n\n\n3. Share your wallet\nIn SRAM there are groups that can be used to grant members of your collaboration to the right to create new workspaces using the wallet of your project"
+  },
+  {
+    "objectID": "docs/onboarding.html#next",
+    "href": "docs/onboarding.html#next",
+    "title": "Getting started",
+    "section": "Next",
+    "text": "Next\nWhen your collaboration and wallet is ready, see this page for first steps."
+  },
+  {
+    "objectID": "docs/workspace-catalogue.html",
+    "href": "docs/workspace-catalogue.html",
+    "title": "Workspace Catalogue",
+    "section": "",
+    "text": "This page provides an overview of workspace types (called “Catalog Items” on Research Cloud) supported by Utrecht University. This overview includes primarily Catalog Items developed by UU, but also some commonly used Catalog Items developed by SURF.\nPlease note this is not a full list of available workspace types on ResearchCloud: there are many more developed by other institutions.\nIf there is a specific environment application, or software package you think you might need, please contact us for help. If what you require is not yet available on ResearchCloud, we can also help you to create custom Catalog Items.\n\nLegend\n\n Access the workspace via the command line\n Access the workspace as a remote desktop.\n Access application via the browser.\n\n\n\nProgramming & Analysis Environments\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nJupyter Notebooks\nJupyter Lab\n\n\n\n\nSURF\n\n\nJupyter Notebooks CUDA\nJupyter LabCUDA\n\n\n\n\nSURF\n\n\nMatlab\nMatlab\n\n\n\nLicense needed\nUU\n\n\nMiniconda (shared)\nminiconda\n\n\n\n\nUU\n\n\nMiniconda (shared) CUDA\nJupyter LabCUDA\n\n\n\n\nUU\n\n\nPython Workbench\nPythonpoetryminiconda\n\n\n\n\nUU\n\n\nPython Workbench CUDA\nCUDAPythonpoetryminiconda\n\n\n\n\nUU\n\n\nR Workbench\nRminiconda\n\n\n\n\nUU\n\n\nRStudio\nRStudio\n\n\n\n\nSURF\n\n\nSAS\nSAS\n\n\n\n\nUU\n\n\nStata\nStata\n\n\n\nLicense needed\nUU\n\n\n\n\n\n\n\nPlain Workspaces\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nUbuntu\n\n\n\n\n\nSURF\n\n\nUbuntu CUDA\nCUDA\n\n\n\n\nSURF\n\n\nWindows\n\n\n\n\n\nSURF\n\n\nWindows with CUDA\n\n\n\n\n\nSURF\n\n\n\n\n\n\n\nUtilities & Data Processing\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nASReview CLI\nASReview\n\n\n\n\nUU\n\n\nASReview Lab\nASReview\n\n\n\n\nUU\n\n\nGrobid\nGrobid\n\n\n\n\nUU\n\n\nWhisper OpenAI CUDA 11\nWhisperX\n\n\n\n\nUU\n\n\n\n\n\n\n\nExperimental\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nASReview Webapp\nASReview\n\n\n\n\nUU"
+  },
+  {
+    "objectID": "docs/workspaces/templates/template.html#creation",
+    "href": "docs/workspaces/templates/template.html#creation",
+    "title": "workspace name",
+    "section": "Creation",
+    "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
+  },
+  {
+    "objectID": "docs/workspaces/templates/template.html#access",
+    "href": "docs/workspaces/templates/template.html#access",
+    "title": "workspace name",
+    "section": "Access",
+    "text": "Access\nLink to access methods in the first steps page here."
+  },
+  {
+    "objectID": "docs/workspaces/templates/template.html#usage",
+    "href": "docs/workspaces/templates/template.html#usage",
+    "title": "workspace name",
+    "section": "Usage",
+    "text": "Usage\n\nData transfer options\nSee our data transfer manuals.\nThe recommended iBridges client for Yoda and iRODS is preinstalled.\n\n\nInstalling additional software\nThe user has admin rights to install additional software on the system (on a terminal, use sudo &lt;yourcommand&gt;)."
+  },
+  {
+    "objectID": "docs/workspaces/templates/template.html#tips",
+    "href": "docs/workspaces/templates/template.html#tips",
+    "title": "workspace name",
+    "section": "Tips",
+    "text": "Tips\n\nWorkspace security\nPlease take a moment to read the security recommendations for VREs."
+  },
+  {
+    "objectID": "docs/workspaces/plain/ubuntu-cuda.html#creation",
+    "href": "docs/workspaces/plain/ubuntu-cuda.html#creation",
+    "title": "Ubuntu CUDA",
+    "section": "Creation",
+    "text": "Creation\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
+  },
+  {
+    "objectID": "docs/workspaces/plain/ubuntu-cuda.html#access",
+    "href": "docs/workspaces/plain/ubuntu-cuda.html#access",
+    "title": "Ubuntu CUDA",
+    "section": "Access",
+    "text": "Access"
+  },
+  {
+    "objectID": "docs/workspaces/plain/ubuntu-cuda.html#data-transfer-options",
+    "href": "docs/workspaces/plain/ubuntu-cuda.html#data-transfer-options",
+    "title": "Ubuntu CUDA",
+    "section": "Data transfer options",
+    "text": "Data transfer options"
+  },
+  {
+    "objectID": "docs/workspaces/plain/ubuntu-cuda.html#usage",
+    "href": "docs/workspaces/plain/ubuntu-cuda.html#usage",
+    "title": "Ubuntu CUDA",
+    "section": "Usage",
+    "text": "Usage"
+  },
+  {
+    "objectID": "docs/workspaces/plain/ubuntu-cuda.html#tips",
+    "href": "docs/workspaces/plain/ubuntu-cuda.html#tips",
+    "title": "Ubuntu CUDA",
+    "section": "Tips",
+    "text": "Tips"
+  },
+  {
+    "objectID": "docs/workspaces/plain/windows.html#creation",
+    "href": "docs/workspaces/plain/windows.html#creation",
+    "title": "Windows",
+    "section": "Creation",
+    "text": "Creation\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
+  },
+  {
+    "objectID": "docs/workspaces/plain/windows.html#access",
+    "href": "docs/workspaces/plain/windows.html#access",
+    "title": "Windows",
+    "section": "Access",
+    "text": "Access"
+  },
+  {
+    "objectID": "docs/workspaces/plain/windows.html#data-transfer-options",
+    "href": "docs/workspaces/plain/windows.html#data-transfer-options",
+    "title": "Windows",
+    "section": "Data transfer options",
+    "text": "Data transfer options"
+  },
+  {
+    "objectID": "docs/workspaces/plain/windows.html#usage",
+    "href": "docs/workspaces/plain/windows.html#usage",
+    "title": "Windows",
+    "section": "Usage",
+    "text": "Usage"
+  },
+  {
+    "objectID": "docs/workspaces/plain/windows.html#tips",
+    "href": "docs/workspaces/plain/windows.html#tips",
+    "title": "Windows",
+    "section": "Tips",
+    "text": "Tips"
+  },
+  {
+    "objectID": "docs/workspaces/programming/miniconda-cuda.html",
+    "href": "docs/workspaces/programming/miniconda-cuda.html",
+    "title": "Miniconda (shared) CUDA",
+    "section": "",
+    "text": "This workspace type is identical to the Miniconda (shared) Catalog Item, but additionally comes with the nvidia CUDA GPU drivers preinstalled."
+  },
+  {
+    "objectID": "docs/workspaces/programming/python-workbench-cuda.html",
+    "href": "docs/workspaces/programming/python-workbench-cuda.html",
+    "title": "Python Workbench CUDA",
+    "section": "",
+    "text": "This workspace type is identical to the Python Workbench Catalog Item, but additionally comes with the nvidia CUDA GPU drivers preinstalled.\nAs with the Python Workbench Catalog Items, there are two flavours:\n\nPython Workbench CUDA CLI (login via command line)\nPython Workbench CUDA Desktop (login via desktop)\n\nSimply choose the one that is most convenient to you, and see the documentation for Python Workbench."
+  },
+  {
+    "objectID": "docs/workspaces/programming/rstudio.html",
+    "href": "docs/workspaces/programming/rstudio.html",
+    "title": "RStudio",
+    "section": "",
+    "text": "This workspace can be used to work with R and RStudio. RStudio can be accessed conveniently from the browser.\nThe workspace also comes with a (linux) terminal (aka command line) to install additional tools when relevant.\nThere are various flavours of this catalog item:\n\nR-Studio (comes with R v.3)\nR-Studio - R4 (comes with R v.4)\n\nUpon request we can help you to automate the installation of R packages or automate other installations (e.g. tools for data transfer). Automating these steps will make it easier to work following our best practices."
+  },
+  {
+    "objectID": "docs/workspaces/programming/rstudio.html#description",
+    "href": "docs/workspaces/programming/rstudio.html#description",
+    "title": "RStudio",
+    "section": "",
+    "text": "This workspace can be used to work with R and RStudio. RStudio can be accessed conveniently from the browser.\nThe workspace also comes with a (linux) terminal (aka command line) to install additional tools when relevant.\nThere are various flavours of this catalog item:\n\nR-Studio (comes with R v.3)\nR-Studio - R4 (comes with R v.4)\n\nUpon request we can help you to automate the installation of R packages or automate other installations (e.g. tools for data transfer). Automating these steps will make it easier to work following our best practices."
+  },
+  {
+    "objectID": "docs/workspaces/programming/rstudio.html#creation",
+    "href": "docs/workspaces/programming/rstudio.html#creation",
+    "title": "RStudio",
+    "section": "Creation",
+    "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
+  },
+  {
+    "objectID": "docs/workspaces/programming/rstudio.html#access",
+    "href": "docs/workspaces/programming/rstudio.html#access",
+    "title": "RStudio",
+    "section": "Access",
+    "text": "Access\nThis workspace can be accessed via the yellow ‘Access’ button. You need a TOTP to login to your workspace, see Workspace access with TOTP.\n\nData transfer options\nSee our data transfer manuals."
+  },
+  {
+    "objectID": "docs/workspaces/programming/rstudio.html#usage",
+    "href": "docs/workspaces/programming/rstudio.html#usage",
+    "title": "RStudio",
+    "section": "Usage",
+    "text": "Usage"
+  },
+  {
+    "objectID": "docs/workspaces/programming/rstudio.html#tips",
+    "href": "docs/workspaces/programming/rstudio.html#tips",
+    "title": "RStudio",
+    "section": "Tips",
+    "text": "Tips"
   },
   {
     "objectID": "docs/workspaces/programming/r-workbench.html",
