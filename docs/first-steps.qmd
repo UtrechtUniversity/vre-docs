@@ -105,7 +105,7 @@ Steps:
     * You can lookup your username in the Research Cloud portal under the "Profile" tab.
 1. As a password, enter your time-based (TOTP) password for Research Cloud (**not** for your Solis ID).
 
-### RDP (Remote Desktop Protocol)
+### Remote Desktop Protocol
 
 #### When?
 This method can be used for most Windows Server workspaces, and any other workspaces that have an URL starting with `RDP://` when you click on the workspace in the research cloud portal.
