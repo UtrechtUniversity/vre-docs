@@ -1,0 +1,49 @@
+--- 
+title: "SAS"
+software:
+- SAS
+login:
+- desktop
+os_flavor: windows
+os:
+- Windows Server 2019
+data:
+- ResearchDrive
+- iBridges
+packages: []
+gpu: false
+admin: true
+support: UU
+---
+
+## Description
+
+This workspace is Windows workspace with [SAS](https://sas.com) 9.4 installed.
+
+{{< include ../partials/_creation.qmd >}}
+
+## Access
+This workspace can be accessed via the [Remote Desktop protocol](../../first-steps.qmd#remote-desktop-protocol). You need a TOTP to login to your workspace, see [Workspace access with TOTP](https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace#Logintoyourworkspace-WorkspaceAccesswithTOTP).
+
+{{< include ../partials/_data_transfer.qmd >}}
+
+The recommended [iBridges client for Yoda and iRODS](../../manuals/ibridges.qmd) is preinstalled.
+
+## Usage
+### Preliminaries
+
+All researchers from UU have access to SAS (you do not need to provide your own license).
+
+By default, this workspace comes with a minimal installation of SAS (SAS BASE and STAT). If you need access to other products from the SAS suite, please [contact us](../../contact.qmd).
+
+Please note that SAS installation takes a while (~20 minutes), so workspace creation can take about 40 minutes (as the operating system must also be configured).
+
+### Open SAS
+When logged in to the workspace:
+
+1. Open the 'Start' menu
+2. You will find SAS under the SAS9.4 subfolder in the 'Start' menu.
+
+### Open iBridges
+
+iBridges, the application recommended for data management for Yoda and iRODS servers, is accessible via a shortcut on the desktop.
