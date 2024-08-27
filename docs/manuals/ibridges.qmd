@@ -2,24 +2,84 @@
 title: Using iBridges on SURF Research Cloud
 ---
 
-The instructions below describe the process of data transfer between SURF Research Cloud and Yoda using iBridges. iBridges is a command-line tool for transfering data to and from Yoda (and other iRODS servers), focused on user-friendliness. It is developed and supported by the Utrecht University Research Engineering team. Like the [iCommands suite](icommands.qmd), it is suitable for transferring large amounts of data, but it is easier to use.
+The instructions below describe the process of data transfer between SURF Research Cloud and Yoda using iBridges. iBridges consists of three parts:
+- a python package 
+- a command line interface (CLI)
+- a graphical user interface (GUI)
 
-Note: a graphical desktop version of iBridges is currently under development, but not yet supported on ResearchCloud.
+With all three parts you can safely transfer your data between Yoda and your workspace.
+
+It is developed and supported by the Utrecht University Research Engineering team. Like the [iCommands suite](icommands.qmd), it is suitable for transferring large amounts of data, but it is easier to use.
+
+The python package and the command line interface are available or can be made available on all workspaces while the graphical user interface will only work on desktop workspaces, i.e. workspaces where you will have a Windows or linux Desktop. 
 
 ### Prerequisites
 
-You will need some basic Linux (commandline) skills to be able to use iBridges.
+You will need access to a Yoda or other iRODS instance which hosts your data.
 
 iBridges is already installed on many SURF ResearchCloud workspaces developed by Utrecht University. You can check if it is present by simply typing the following command on your terminal: `ibridges`. If iBridges is installed, this should show you the program's help menu.
 
-If you need to install iBridges, you can execute: `pip install ibridges`.
+- If you need to install iBridges, you can execute: `pip install ibridges`.
+- On desktop workspaces you can execute: `pip install ibridgesgui`.
 
 ### Creating an iRODS environment file
 
+To connect to a Yoda or any other iRODS instance you will need a so-called `irods_environment.json` which needs to be stored in a specific location.
+
+
+#### Setup with CLI
+
+If you want to connect to a server hosted by Utrecht University please check whether this information is already present for ibridges.
+
+```
+ibridges setup --list
+```
+
+From that list simply choose the server you want to connect to with `ibridges setup uu-<server>` and follow the instructions.
+In case you get the message `No server information was found.` please install:
+
+```
+pip install git+https://github.com/UtrechtUniversity/ibridges-servers-uu.git
+```
+
+#### Setup with GUI
+Start the GUI from the menu and click the drop-down menu `Configure` --> `Add Configuration`. Click on the template you want to use, fill in your user name and save the file as `irods_environment.json` in the suggested `.irods` folder.
+
+
+If the templates are not shown, close the iBridges GUI and install
+
+```
+pip install git+https://github.com/UtrechtUniversity/ibridges-servers-uu.git
+```
+
+#### Connect to iRODS or Yoda not hosted by Utrecht University
+
 {{< include partials/_irods_env.qmd >}}
 
-For a more extensive tutorial, see [here](https://github.com/UtrechtUniversity/iBridges/blob/develop/tutorials/01-Setup-and-connect.ipynb).
+For a more extensive tutorial, see
+
+- [Setup](https://github.com/UtrechtUniversity/iBridges/blob/develop/tutorials/01-Setup-and-connect.ipynb)
+
+- [Setup by GUI](https://chstaiger.github.io/iBridges-Gui/docs/getting-started.html)
 
 ### Using iBridges
 
-For instructions on how to use the `ibridges` command please see the [iBridges documentation](https://github.com/UtrechtUniversity/iBridges?tab=readme-ov-file#commandline-interface).
+To use iBridges on Yoda hosted by Utrecht University you will need a [data access password](https://www.uu.nl/en/research/yoda/using-data-access-passwords).
+
+#### Command line interface
+
+Simply try `ibridges --help` or `ibridges <command> --help` to get examples and help for the usage.
+
+For instructions on how to use the `ibridges` command please see the [iBridges documentation](https://ibridges.readthedocs.io/en/stable/cli.html).
+
+#### Graphical user interface
+
+Once you have an `irods_environment.json`, click on `Connect` --> `Connect to iRODS`, choose your `irods_environment.json` and provide your data access password
+
+In the [iBridges GUI documentation](https://chstaiger.github.io/iBridges-Gui/docs/userdoc.html)
+
+#### Using the python package
+
+We offer [tutorials in form of Jupyter notebooks](https://github.com/UtrechtUniversity/iBridges/tree/main/tutorials) to show you the capabilities of the ibridges python package.
+
+For more information please see the [iBridges documentation](https://ibridges.readthedocs.io/en/stable/)
