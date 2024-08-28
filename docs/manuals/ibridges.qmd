@@ -8,7 +8,7 @@ The instructions below describe the how to setup iBridges to transfer data betwe
 - via the command line interface (CLI)
 - via the graphical user interface (GUI)
 
-With all three parts you can safely transfer your data between Yoda and your workspace.
+Using any of the three methods you can safely and easily transfer large amounts of data between Yoda and your Research cloud workspace.
 
 It is developed and supported by the Utrecht University Research Engineering team. Like the [iCommands suite](icommands.qmd), it is suitable for transferring large amounts of data, but it is easier to use.
 
