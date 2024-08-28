@@ -24,7 +24,8 @@ iBridges needs to be installed on your workspace. Many SURF ResearchCloud worksp
 - On non-desktop workspaces check if iBridges is installed by typing: `ibridges` in the terminal. If iBridges is installed, this should show you the program's help menu. On Jupyter or Rstudio workspaces, you need to open a terminal first: In Jupyter, click the + button in the file browser and select the terminal in the new Launcher tab ([find a short video here](https://jupyterlab.readthedocs.io/en/stable/user/terminal.html)).
 In Rstudio, In the bottom left panel, click the ‘terminal’ tab.
 
-- If you need to install iBridges, you can execute: `pip install ibridges`.
+#### Installation
+- If you need to install iBridges, you can execute: `pip install ibridges` on the terminal.
 - On desktop workspaces you can execute: `pip install ibridgesgui`.
 
 ### Creating an iRODS environment file
