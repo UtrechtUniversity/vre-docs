@@ -12,7 +12,7 @@ Using any of the three methods you can safely and easily transfer large amounts 
 
 It is developed and supported by the Utrecht University Research Engineering team. Like the [iCommands suite](icommands.qmd), it is suitable for transferring large amounts of data, but it is easier to use.
 
-The python package and the command line interface are available or can be made available on all workspaces while the graphical user interface will only work on desktop workspaces, i.e. workspaces where you will have a Windows or linux Desktop. 
+The python package and the command line interface are available or can be made available on all workspaces while the graphical user interface will only work on 'Desktop' workspaces, i.e. workspaces where you will have a Windows or Linux (e.g. Ubuntu) Desktop. 
 
 ### Prerequisites
 
