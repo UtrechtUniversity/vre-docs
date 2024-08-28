@@ -6,7 +6,7 @@ The instructions below describe the how to setup iBridges to transfer data betwe
 
 - as a python package 
 - via the command line interface (CLI)
-- a graphical user interface (GUI)
+- via the graphical user interface (GUI)
 
 With all three parts you can safely transfer your data between Yoda and your workspace.
 
