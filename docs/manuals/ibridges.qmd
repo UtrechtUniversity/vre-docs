@@ -18,7 +18,11 @@ The python package and the command line interface are available or can be made a
 
 Access to Yoda or another iRODS instance which hosts your data.
 
-iBridges is already installed on many SURF ResearchCloud workspaces developed by Utrecht University. You can check if it is present by simply typing the following command on your terminal: `ibridges`. If iBridges is installed, this should show you the program's help menu.
+iBridges needs to be installed on your workspace. Many SURF ResearchCloud workspaces developed by Utrecht University (such as Python and R workbenches) have iBridges preinstalled. 
+
+- If you are working on a Desktop workspace, you can check by logging in to your workspace, clicking 'applications' in the top left corner, and clicking 'Development'. 
+- On non-desktop workspaces check if iBridges is installed by typing: `ibridges` in the terminal. If iBridges is installed, this should show you the program's help menu. On Jupyter or Rstudio workspaces, you need to open a terminal first: In Jupyter, click the + button in the file browser and select the terminal in the new Launcher tab ([find a short video here](https://jupyterlab.readthedocs.io/en/stable/user/terminal.html)).
+In Rstudio, In the bottom left panel, click the ‘terminal’ tab.
 
 - If you need to install iBridges, you can execute: `pip install ibridges`.
 - On desktop workspaces you can execute: `pip install ibridgesgui`.
