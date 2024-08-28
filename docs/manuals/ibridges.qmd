@@ -16,7 +16,7 @@ The python package and the command line interface are available or can be made a
 
 ### Prerequisites
 
-You will need access to a Yoda or other iRODS instance which hosts your data.
+Access to Yoda or another iRODS instance which hosts your data.
 
 iBridges is already installed on many SURF ResearchCloud workspaces developed by Utrecht University. You can check if it is present by simply typing the following command on your terminal: `ibridges`. If iBridges is installed, this should show you the program's help menu.
 
