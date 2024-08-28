@@ -5,7 +5,7 @@ title: Using iBridges on SURF Research Cloud
 The instructions below describe the how to setup iBridges to transfer data between SURF Research Cloud and Yoda or any other iRODS instance. It is possible to use iBridges in three different ways:
 
 - as a python package 
-- a command line interface (CLI)
+- via the command line interface (CLI)
 - a graphical user interface (GUI)
 
 With all three parts you can safely transfer your data between Yoda and your workspace.
