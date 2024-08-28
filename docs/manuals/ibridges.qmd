@@ -26,7 +26,7 @@ In Rstudio, In the bottom left panel, click the ‘terminal’ tab.
 
 #### Installation
 - If you need to install iBridges, you can execute: `pip install ibridges` on the terminal.
-- On desktop workspaces you can execute: `pip install ibridgesgui`.
+- On desktop workspaces, open a terminal first by clicking applications in the top left corner and then click terminal. A terminal window will open. Here you can type and execute: `pip install ibridgesgui`.
 
 ### Creating an iRODS environment file
 
