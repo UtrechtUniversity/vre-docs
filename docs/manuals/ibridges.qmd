@@ -8,11 +8,15 @@ The instructions below describe the how to setup iBridges to transfer data betwe
 - via the command line interface (CLI)
 - via the graphical user interface (GUI)
 
+
+
 Using any of the three methods you can safely and easily transfer large amounts of data between Yoda and your Research cloud workspace.
 
 It is developed and supported by the Utrecht University Research Engineering team. Like the [iCommands suite](icommands.qmd), it is suitable for transferring large amounts of data, but it is easier to use.
 
 The python package and the command line interface are available or can be made available on all workspaces while the graphical user interface will only work on 'Desktop' workspaces, i.e. workspaces where you will have a Windows or Linux (e.g. Ubuntu) Desktop. 
+
+![ibridges](../imgs/ibridges.png)
 
 ### Prerequisites
 
@@ -24,16 +28,11 @@ iBridges needs to be installed on your workspace. Many SURF ResearchCloud worksp
 - On non-desktop workspaces check if iBridges is installed by typing: `ibridges` in the terminal. If iBridges is installed, this should show you the program's help menu. On Jupyter or Rstudio workspaces, you need to open a terminal first: In Jupyter, click the + button in the file browser and select the terminal in the new Launcher tab ([find a short video here](https://jupyterlab.readthedocs.io/en/stable/user/terminal.html)).
 In Rstudio, In the bottom left panel, click the ‘terminal’ tab.
 
-#### Installation
-- If you need to install iBridges, you can execute: `pip install ibridges` on the terminal.
-- On desktop workspaces, open a terminal first by clicking applications in the top left corner and then click terminal. A terminal window will open. Here you can type and execute: `pip install ibridgesgui`.
-
-### Creating an iRODS environment file
+### Configure iBridges
 
 To connect to a Yoda or any other iRODS instance you will need a so-called `irods_environment.json` which needs to be stored in a specific location.
 
-
-#### Setup with CLI
+#### Configuration through the CLI
 
 If you want to connect to a server hosted by Utrecht University please check whether this information is already present for ibridges.
 
@@ -48,17 +47,35 @@ In case you get the message `No server information was found.` please install:
 pip install git+https://github.com/UtrechtUniversity/ibridges-servers-uu.git
 ```
 
-#### Setup with GUI
-Start the GUI from the menu and click the drop-down menu `Configure` --> `Add Configuration`. Click on the template you want to use, fill in your user name and save the file as `irods_environment.json` in the suggested `.irods` folder.
+#### Configuration through the GUI
 
+1. Open the GUI
+	- Windows: Go to the Main Menu and search for or click on the tile `ibridges`
+	- Linux: Go to Applications --> Development --> iBridges
 
-If the templates are not shown, close the iBridges GUI and install
+2. From the main menu click Configure` --> `Add Configuration`. Click on the template you want to use, fill in your user name and save the file as `irods_environment.json` in the suggested `.irods` folder.
+
+If there are no templates in the drop-down menu of the configuration window, you will need to install the plugin. To this end you will need python and git and execute in power shell, git bash or Anaconda terminal:
 
 ```
 pip install git+https://github.com/UtrechtUniversity/ibridges-servers-uu.git
 ```
 
-#### Connect to iRODS or Yoda not hosted by Utrecht University
+#### What shall I do if iBridges is not on my workspace?
+
+If you are confident with python and git you can install the packages:
+
+- CLI/API: `pip install ibridges`
+- GUI: `pip install ibridgesgui`
+
+To start the GUI application you would then need to open a terminal and type in `ibridges-gui`.
+
+Please contact us if you need to install iBridges or if you have any trouble with the installation.
+
+
+#### How to connect to a Yoda or iRODS instance not provided by Yoda?
+
+In this case you will have to create your irods_environment.json by hand:
 
 {{< include partials/_irods_env.qmd >}}
 
