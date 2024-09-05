@@ -58,7 +58,7 @@ This will be done for you by the UU support team after intake meeting (step 1).
 ::: {.callout-note collapse="true"}
 ## What is SRAM?
 
-SRAM (SURF Research Access Management) is a service to manage access to research resources, intended for Dutch led research collaborations. [More information](https://servicedesk.surf.nl/wiki/display/WIKI/SURF+Research+Access+Management).
+SRAM (SURF Research Access Management) is a service to manage access to research resources, intended for Dutch led research collaborations. [More information](https://servicedesk.surf.nl/wiki/display/IAM/SURF+Research+Access+Management).
 :::
 
 ::: {.callout-note collapse="true"}
@@ -115,7 +115,7 @@ Perform step 1, 2(optional), and 3
 
 
 ### 1. Invite a new collaborator
-SRAM is used for access management for SURF Research Cloud. It is possible to [invite collaborators to your collaboration (project)](https://servicedesk.surf.nl/wiki/display/WIKI/Invite+admins+and+members+to+a+collaboration)
+SRAM is used for access management for SURF Research Cloud. It is possible to [invite collaborators to your collaboration (project)](https://servicedesk.surf.nl/wiki/display/IAM/Invite+admins+and+members+to+a+collaboration)
 
 ::: {.callout-note collapse="true"}
 ## Who can I invite?
@@ -124,10 +124,10 @@ It is possible to invite anyone who has an email address to join your project. S
 :::
 
 ### 2. Workspace admins
-In SRAM there are [groups](https://servicedesk.surf.nl/wiki/display/WIKI/Manage+groups+of+collaboration+members) that can be used to grant members of your collaboration to the right to [pause, resume and delete workspaces](https://servicedesk.surf.nl/wiki/display/WIKI/Sharing+control%3A+workspace+admin)
+In SRAM there are [groups](https://servicedesk.surf.nl/wiki/display/IAM/Manage+groups+of+collaboration+members) that can be used to grant members of your collaboration to the right to [pause, resume and delete workspaces](https://servicedesk.surf.nl/wiki/display/WIKI/Sharing+control%3A+workspace+admin)
 
 ### 3. Share your wallet
-In SRAM there are [groups](https://servicedesk.surf.nl/wiki/display/WIKI/Manage+groups+of+collaboration+members) that can be used to grant members of your collaboration to the right to [create new workspaces using the wallet of your project](https://servicedesk.surf.nl/wiki/display/WIKI/Access+to+project+wallet)
+In SRAM there are [groups](https://servicedesk.surf.nl/wiki/display/IAM/Manage+groups+of+collaboration+members) that can be used to grant members of your collaboration to the right to [create new workspaces using the wallet of your project](https://servicedesk.surf.nl/wiki/display/WIKI/Access+to+project+wallet)
 
 ## Next
 When your collaboration and wallet is ready, see this page for [first steps](first-steps.qmd).

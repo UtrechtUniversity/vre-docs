@@ -56,7 +56,7 @@ SURF Research Cloud uses the concept of a 'collaboration' to facilitate working 
 A collaboration may be viewed as a *virtual* organization, with members that can originate
 from different research institutes, or from the private sector. A collaboration can accommodate a virtual organization the size of a European research project consortium. In contrast, it might also consist of a single member, e.g. a researcher in need of compute power or a private workspace.
 
-Managing memberships of the collaboration is done via a self-service portal (called [SRAM](https://servicedesk.surf.nl/wiki/display/WIKI/SURF+Research+Access+Management), 
+Managing memberships of the collaboration is done via a self-service portal (called [SRAM](https://servicedesk.surf.nl/wiki/display/IAM/SURF+Research+Access+Management)), 
 short for SURF Research Access Management. For example, a researcher can give (temporary) access to PhDs or students.
 
 It is important to understand that SRC assumes all members of the collaboration to be 

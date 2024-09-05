@@ -44,7 +44,7 @@ A workspace can also be called a 'Virtual Machine' or a 'Server'. It is a tempor
 See [here](manuals/creating.qmd) for detailed information on how to create a workspace.
 
 ## Pausing, Resuming, Deleting a workspace
-You always need a wallet to create a workspace, by default a workspace can only be paused, resumed and deleted by the one that has created it. You can use SRAM to give persons permission to PAUSE, RESUME and DELETE a workspace that is created by someone else. It is also possible to share a wallet with a member of your CO in SRAM. See [Add collaborators to existing project](https://servicedesk.surf.nl/wiki/display/WIKI/Invite+admins+and+members+to+a+collaboration).
+You always need a wallet to create a workspace, by default a workspace can only be paused, resumed and deleted by the one that has created it. You can use SRAM to give persons permission to PAUSE, RESUME and DELETE a workspace that is created by someone else. It is also possible to share a wallet with a member of your CO in SRAM. See [Add collaborators to existing project](https://servicedesk.surf.nl/wiki/display/IAM/Invite+admins+and+members+to+a+collaboration).
 
 
 ## Getting access to your workspace
