@@ -10,7 +10,7 @@ The Utrecht University Privacy Statement is applicable:
 In addition to the UU Privacy Statement, the following privacy policies at SURF are applicable:
 
 - [SURF Research Cloud Privacy Policy](https://servicedesk.surf.nl/wiki/display/WIKI/SRC+Acceptable+Use+Policy#SRCAcceptableUsePolicy-4-Personaldataandprivacy)
-- [SURF SRAM Privacy Policy](https://servicedesk.surf.nl/wiki/display/WIKI/Privacy+Policy)
+- [SURF SRAM Privacy Policy](https://servicedesk.surf.nl/wiki/display/IAM/Privacy+Policy)
 
 By accepting this invitation, users agree to adhere to the terms and conditions in the documents listed above.
 
