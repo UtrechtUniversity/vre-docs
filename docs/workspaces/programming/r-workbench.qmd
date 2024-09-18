@@ -23,7 +23,7 @@ support: UU
 ## Description
 
 This workspace types comes with R (the latest version of the `4.x` range) preinstalled,
-as well as `conda`, which can be used to manage R environments.
+as well as `conda`, which can be used to manage R environments. The 'desktop' flavour of this workspace (see below) also comes with the RStudio GUI application.
 
 This workspace is suitable for users who want to run R scripts on the commandline.
 **For most users, the RStudio catalog item, which provides in-browser access to the 
@@ -51,7 +51,7 @@ so that these are available inside the workspace immediately. Please [contact us
 
 For the R Workbench CLI (command line) flavour of this Catalog Item, you can [login using SSH](../../first-steps.qmd#ssh).
 
-### Python Workbench Desktop
+### R Workbench Desktop
 
 For the R Workbench Desktop flavour of this Catalog Item, you can [login using your browser](../../first-steps.qmd#browser-access-to-a-desktop-environment). It is also possible to login via SSH, as described above.
 
@@ -71,6 +71,10 @@ To start using `conda`, run the command `conda init` from a terminal.
 {{< include ../partials/_data_transfer.qmd >}}
 
 The recommended [iBridges client for Yoda and iRODS](../../manuals/ibridges.qmd) is preinstalled.
+
+### RStudio
+
+On the Desktop flavour of this workspace type RStudio will also be installed. You can find it in the main menu, under 'Development'.
 
 ### Installing additional software
 
