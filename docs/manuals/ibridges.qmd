@@ -56,7 +56,7 @@ From that list simply choose the server you want to connect to with `ibridges se
 In case you get the message `No server information was found.` please install:
 
 ```
-pip install git+https://github.com/UtrechtUniversity/ibridges-servers-uu.git
+pip install bridges-servers-uu
 ```
 
 #### What shall I do if iBridges is not on my workspace?
