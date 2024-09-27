@@ -41,7 +41,7 @@ To connect to a Yoda or any other iRODS instance you will need a so-called `irod
 If there are no templates in the drop-down menu of the configuration window, you will need to install the plugin. To this end you will need python and git and execute in power shell, git bash or Anaconda terminal:
 
 ```
-pip install git+https://github.com/UtrechtUniversity/ibridges-servers-uu.git
+pip install ibridges-servers-uu
 ```
 
 #### Configuration through the CLI
