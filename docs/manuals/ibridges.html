@@ -208,14 +208,14 @@ ul.task-list li input[type="checkbox"] {
 <li>From the main menu click ‘Configure’ –&gt; <code>Add Configuration</code>. Click on the template you want to use, fill in your user name and save the file as <code>irods_environment.json</code> in the suggested <code>.irods</code> folder.</li>
 </ol>
 <p>If there are no templates in the drop-down menu of the configuration window, you will need to install the plugin. To this end you will need python and git and execute in power shell, git bash or Anaconda terminal:</p>
-<pre><code>pip install git+https://github.com/UtrechtUniversity/ibridges-servers-uu.git</code></pre>
+<pre><code>pip install ibridges-servers-uu</code></pre>
 </section>
 <section id="configuration-through-the-cli" class="level4">
 <h4 class="anchored" data-anchor-id="configuration-through-the-cli">Configuration through the CLI</h4>
 <p>If you want to connect to a server hosted by Utrecht University please check whether this information is already present for ibridges.</p>
 <pre><code>ibridges setup --list</code></pre>
 <p>From that list simply choose the server you want to connect to with <code>ibridges setup uu-&lt;server&gt;</code> and follow the instructions. In case you get the message <code>No server information was found.</code> please install:</p>
-<pre><code>pip install git+https://github.com/UtrechtUniversity/ibridges-servers-uu.git</code></pre>
+<pre><code>pip install bridges-servers-uu</code></pre>
 </section>
 <section id="what-shall-i-do-if-ibridges-is-not-on-my-workspace" class="level4">
 <h4 class="anchored" data-anchor-id="what-shall-i-do-if-ibridges-is-not-on-my-workspace">What shall I do if iBridges is not on my workspace?</h4>
