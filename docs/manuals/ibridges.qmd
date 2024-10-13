@@ -81,7 +81,7 @@ For a more extensive tutorial, see
 
 - [Setup by GUI](https://ibridges-for-irods.github.io/iBridges-Gui/docs/getting-started.html)
 
-- [Setup](https://github.com/UtrechtUniversity/iBridges/blob/develop/tutorials/01-Setup-and-connect.ipynb)
+- [Setup](https://github.com/iBridges-for-iRODS/iBridges/blob/main/tutorials/01-Setup-and-connect.ipynb)
 
 ### Using iBridges
 
@@ -101,6 +101,6 @@ For instructions on how to use the `ibridges` command please see the [iBridges d
 
 #### Using the python package
 
-We offer [tutorials in form of Jupyter notebooks](https://github.com/UtrechtUniversity/iBridges/tree/main/tutorials) to show you the capabilities of the ibridges python package.
+We offer [tutorials in form of Jupyter notebooks](https://github.com/iBridges-for-iRODS/iBridges/blob/main/tutorials) to show you the capabilities of the ibridges python package.
 
 For more information please see the [iBridges documentation](https://ibridges.readthedocs.io/en/stable/)
