@@ -227,8 +227,8 @@ ul.task-list li input[type="checkbox"] {
 <p>To start the GUI application you would then need to open a terminal and type in <code>ibridges-gui</code>. (Note: this will only work on Desktop workspaces).</p>
 <p>Please contact us if you need help with installing iBridges or if you want to have iBridges preinstalled on your workspace.</p>
 </section>
-<section id="how-to-connect-to-a-yoda-or-irods-instance-not-provided-by-yoda" class="level4">
-<h4 class="anchored" data-anchor-id="how-to-connect-to-a-yoda-or-irods-instance-not-provided-by-yoda">How to connect to a Yoda or iRODS instance not provided by Yoda?</h4>
+<section id="how-to-connect-to-a-yoda-or-irods-instance-not-provided-by-utrecht-university" class="level4">
+<h4 class="anchored" data-anchor-id="how-to-connect-to-a-yoda-or-irods-instance-not-provided-by-utrecht-university">How to connect to a Yoda or iRODS instance not provided by Utrecht University?</h4>
 <p>In this case you will have to create your irods_environment.json by hand:</p>
 <p>In order to know with what server iBridges should connect, a so-called iRODS environment file must be present in your home directory.</p>
 <p>You may need help from your datamanager or contact Yoda support to obtain the information needed for the config file.</p>
@@ -240,7 +240,7 @@ cd .irods</code></pre>
 <pre><code>touch irods_environment.json</code></pre>
 <p>Edit the file using a text editor such as nano or vim:</p>
 <pre><code>nano irods_environment.json</code></pre>
-<p>Go to the <a href="https://www.uu.nl/en/research/yoda/guide-to-yoda/i-am-using-yoda/using-icommands-for-large-datasets">yoda website</a>, scroll to <strong>Step 2. Configuring iCommands</strong> and copy and paste the text belonging to your institution in the file (similar to the file below) and change the email address next to <code>irods_user_name</code>to your yoda user name (typically your uu email address).</p>
+<p>For information about Yoda servers hosted by Utrecht university go to the <a href="https://www.uu.nl/en/research/yoda/guide-to-yoda/i-am-using-yoda/using-icommands-for-large-datasets">yoda website</a>, scroll to <strong>Step 2. Configuring iCommands</strong> and copy and paste the text belonging to your institution in the file (similar to the file below) and change the email address next to <code>irods_user_name</code>to your yoda user name (typically your uu email address).</p>
 <pre><code>{   
 "irods_host": "science.data.uu.nl",   
 "irods_port": 1247,    "irods_home": "/nluu6p/home",   
@@ -253,10 +253,11 @@ cd .irods</code></pre>
 "irods_encryption_salt_size": 8,   
 "irods_client_server_negotiation": "request_server_negotiation"
 }</code></pre>
+<p>The list of Yoda servers hosted in the Netherlands by SURF can be found <a href="https://servicedesk.surf.nl/wiki/display/WIKI/Yoda+Hosting">here</a>. For all other iRODS or Yoda servers please contact your service provider.</p>
 <p>For a more extensive tutorial, see</p>
 <ul>
-<li><p><a href="https://ibridges-for-irods.github.io/iBridges-Gui/docs/getting-started.html">Setup by GUI</a></p></li>
-<li><p><a href="https://github.com/UtrechtUniversity/iBridges/blob/develop/tutorials/01-Setup-and-connect.ipynb">Setup</a></p></li>
+<li><p><a href="https://ibridges-for-irods.github.io/iBridges-GUI/docs/getting-started.html">Setup by GUI</a></p></li>
+<li><p><a href="https://github.com/iBridges-for-iRODS/iBridges/blob/main/tutorials/01-Setup-and-connect.ipynb">Setup</a></p></li>
 </ul>
 </section>
 </section>
@@ -266,7 +267,7 @@ cd .irods</code></pre>
 <section id="graphical-user-interface" class="level4">
 <h4 class="anchored" data-anchor-id="graphical-user-interface">Graphical user interface</h4>
 <p>Once you have an <code>irods_environment.json</code>, click on <code>Connect</code> –&gt; <code>Connect to iRODS</code>, choose your <code>irods_environment.json</code> and provide your data access password.</p>
-<p>More elaborate instructions can be found in the <a href="https://ibridges-for-irods.github.io/iBridges-Gui/docs/userdoc.html">iBridges GUI documentation</a>.</p>
+<p>More elaborate instructions can be found in the <a href="https://ibridges-for-irods.github.io/iBridges-GUI/docs/userdoc.html">iBridges GUI documentation</a>.</p>
 </section>
 <section id="command-line-interface" class="level4">
 <h4 class="anchored" data-anchor-id="command-line-interface">Command line interface</h4>
@@ -275,7 +276,7 @@ cd .irods</code></pre>
 </section>
 <section id="using-the-python-package" class="level4">
 <h4 class="anchored" data-anchor-id="using-the-python-package">Using the python package</h4>
-<p>We offer <a href="https://github.com/UtrechtUniversity/iBridges/tree/main/tutorials">tutorials in form of Jupyter notebooks</a> to show you the capabilities of the ibridges python package.</p>
+<p>We offer <a href="https://github.com/iBridges-for-iRODS/iBridges/blob/main/tutorials">tutorials in form of Jupyter notebooks</a> to show you the capabilities of the ibridges python package.</p>
 <p>For more information please see the <a href="https://ibridges.readthedocs.io/en/stable/">iBridges documentation</a></p>
 
 

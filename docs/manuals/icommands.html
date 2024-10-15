@@ -210,7 +210,7 @@ cd .irods</code></pre>
 <pre><code>touch irods_environment.json</code></pre>
 <p>Edit the file using a text editor such as nano or vim:</p>
 <pre><code>nano irods_environment.json</code></pre>
-<p>Go to the <a href="https://www.uu.nl/en/research/yoda/guide-to-yoda/i-am-using-yoda/using-icommands-for-large-datasets">yoda website</a>, scroll to <strong>Step 2. Configuring iCommands</strong> and copy and paste the text belonging to your institution in the file (similar to the file below) and change the email address next to <code>irods_user_name</code>to your yoda user name (typically your uu email address).</p>
+<p>For information about Yoda servers hosted by Utrecht university go to the <a href="https://www.uu.nl/en/research/yoda/guide-to-yoda/i-am-using-yoda/using-icommands-for-large-datasets">yoda website</a>, scroll to <strong>Step 2. Configuring iCommands</strong> and copy and paste the text belonging to your institution in the file (similar to the file below) and change the email address next to <code>irods_user_name</code>to your yoda user name (typically your uu email address).</p>
 <pre><code>{   
 "irods_host": "science.data.uu.nl",   
 "irods_port": 1247,    "irods_home": "/nluu6p/home",   
@@ -223,6 +223,7 @@ cd .irods</code></pre>
 "irods_encryption_salt_size": 8,   
 "irods_client_server_negotiation": "request_server_negotiation"
 }</code></pre>
+<p>The list of Yoda servers hosted in the Netherlands by SURF can be found <a href="https://servicedesk.surf.nl/wiki/display/WIKI/Yoda+Hosting">here</a>. For all other iRODS or Yoda servers please contact your service provider.</p>
 </section>
 <section id="step-4-initialize-connection-to-irods" class="level3">
 <h3 class="anchored" data-anchor-id="step-4-initialize-connection-to-irods">Step 4: Initialize connection to iRODS</h3>
