@@ -20,7 +20,7 @@ Edit the file using a text editor such as nano or vim:
 nano irods_environment.json
 ```
 
-Go to the [yoda website](https://www.uu.nl/en/research/yoda/guide-to-yoda/i-am-using-yoda/using-icommands-for-large-datasets), scroll to **Step 2. Configuring iCommands** and copy and paste the text belonging to your institution in the file (similar to the file below) and change the email address next to `irods_user_name`to your yoda user name (typically your uu email address).
+For information about Yoda servers hosted by Utrecht university go to the [yoda website](https://www.uu.nl/en/research/yoda/guide-to-yoda/i-am-using-yoda/using-icommands-for-large-datasets), scroll to **Step 2. Configuring iCommands** and copy and paste the text belonging to your institution in the file (similar to the file below) and change the email address next to `irods_user_name`to your yoda user name (typically your uu email address).
 
 ```
 {   
@@ -36,3 +36,6 @@ Go to the [yoda website](https://www.uu.nl/en/research/yoda/guide-to-yoda/i-am-u
 "irods_client_server_negotiation": "request_server_negotiation"
 }
 ```
+
+The list of Yoda servers hosted in the Netherlands by SURF can be found [here](https://servicedesk.surf.nl/wiki/display/WIKI/Yoda+Hosting).
+For all other iRODS or Yoda servers please contact your service provider.

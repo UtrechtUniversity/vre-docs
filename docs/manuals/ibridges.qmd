@@ -71,7 +71,7 @@ To start the GUI application you would then need to open a terminal and type in 
 Please contact us if you need help with installing iBridges or if you want to have iBridges preinstalled on your workspace.
 
 
-#### How to connect to a Yoda or iRODS instance not provided by Yoda?
+#### How to connect to a Yoda or iRODS instance not provided by Utrecht University?
 
 In this case you will have to create your irods_environment.json by hand:
 
@@ -79,9 +79,9 @@ In this case you will have to create your irods_environment.json by hand:
 
 For a more extensive tutorial, see
 
-- [Setup by GUI](https://ibridges-for-irods.github.io/iBridges-Gui/docs/getting-started.html)
+- [Setup by GUI](https://ibridges-for-irods.github.io/iBridges-GUI/docs/getting-started.html)
 
-- [Setup](https://github.com/UtrechtUniversity/iBridges/blob/develop/tutorials/01-Setup-and-connect.ipynb)
+- [Setup](https://github.com/iBridges-for-iRODS/iBridges/blob/main/tutorials/01-Setup-and-connect.ipynb)
 
 ### Using iBridges
 
@@ -91,7 +91,7 @@ To use iBridges on Yoda hosted by Utrecht University you will need a [data acces
 
 Once you have an `irods_environment.json`, click on `Connect` --> `Connect to iRODS`, choose your `irods_environment.json` and provide your data access password.
 
-More elaborate instructions can be found in the [iBridges GUI documentation](https://ibridges-for-irods.github.io/iBridges-Gui/docs/userdoc.html).
+More elaborate instructions can be found in the [iBridges GUI documentation](https://ibridges-for-irods.github.io/iBridges-GUI/docs/userdoc.html).
 
 #### Command line interface
 
@@ -101,6 +101,6 @@ For instructions on how to use the `ibridges` command please see the [iBridges d
 
 #### Using the python package
 
-We offer [tutorials in form of Jupyter notebooks](https://github.com/UtrechtUniversity/iBridges/tree/main/tutorials) to show you the capabilities of the ibridges python package.
+We offer [tutorials in form of Jupyter notebooks](https://github.com/iBridges-for-iRODS/iBridges/blob/main/tutorials) to show you the capabilities of the ibridges python package.
 
 For more information please see the [iBridges documentation](https://ibridges.readthedocs.io/en/stable/)
