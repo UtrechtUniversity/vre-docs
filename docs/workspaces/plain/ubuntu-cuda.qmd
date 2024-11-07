@@ -3,7 +3,6 @@ title: "Ubuntu CUDA"
 software:
 - CUDA
 login:
-- desktop
 - cli
 os_flavor: linux
 os:
