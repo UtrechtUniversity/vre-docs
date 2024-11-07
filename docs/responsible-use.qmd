@@ -22,20 +22,20 @@ The VRE support team is happy to help you with this.
 ## Wallets and credits
 Remember that you pay for workspaces and storage volumes with the wallet you receive from the UU or through a [grant](funding.qmd). To spend them wisely:
 
-- **Delete or pause resources that you are not using.** Pause workspaces only if you plan to continue working with it on a short term (workspaces also consume credits for storage). Consider moving data to e.g. Yoda and deleting a storage volume when not using research cloud for more than a month. 
+- **Delete or pause resources that you are not using.** Pause workspaces only if you plan to continue working with it on a short term, in other cases delete them as workspaces also consume credits for storage. Consider moving data to e.g. Yoda and deleting a storage volume when not using research cloud for more than a month. 
 - **Only select large workspaces if you are sure that your tools or scripts make efficient use of the available compute power**. If you are not sure, consider contacting the [Research Engineering team](https://www.uu.nl/en/research/research-data-management/tools/software-and-computing/high-performance-and-cloud-computing) for advice.
 
 The UU provides a small starting budget of 10K credits for pilots or small projects, when this budget has been depleted we may provide a one time raise of your wallet of 10K credits if you can complete the project with this raise. Alternatively it is possible to submit a [Small Compute application](funding.qmd) via SURF.
 
 ## Cost calculator
 
-Use the calculator below to estimate the costs for running a workspace. Remember that a workspace will consume credits whenever it is in "State: Running". It will only stop consuming credits when your Pause or Delete a workspace in the [Research Cloud portal](https://portal.live.surfresearchcloud.nl/). Use the expiry date to schedule deletion of your workspace as an extra safeguard.
+Use the calculator below to estimate the costs for the workspaces and storage volumes that you create. The costs of a workspace are determined by the number of CPU cores or GPU devices **plus** a small amount for workspace storage. Remember that a workspace will consume credits whenever it is in "State: Running". It will only stop consuming credits when you Pause or Delete a workspace in the [Research Cloud portal](https://portal.live.surfresearchcloud.nl/). Use the expiry date to schedule deletion of your workspace as an extra safeguard. [Storage volumes](https://utrechtuniversity.github.io/vre-docs/docs/first-steps.html#why-a-storage-volume) consume credits until you delete them in the [Research Cloud portal](https://portal.live.surfresearchcloud.nl/).
 
 Note: this describes costs for the standard use case, in which workspaces run on SURF's HPC Cloud environment. Although ResearchCloud also allows you to [run workspaces in different environment](manuals/creating.qmd#select-cloud-provider) (such as Microsoft's Azure cloud environment), the costs for this will be significantly higher.
 
 ```{shinylive-python}
 #| standalone: true
-#| viewerHeight: 600
+#| viewerHeight: 1000
 
 from shiny import App, render, ui
 import numpy as np
@@ -57,7 +57,8 @@ app_ui = ui.page_fluid(
             value=ui.output_ui("estimate"),
             theme="bg-gradient-blue-purple",
         ),
-        ui.output_plot("plot"),
+        ui.output_plot("plot_compute"),
+        ui.output_plot("plot_storage"),
     ),
 )
 
@@ -69,36 +70,40 @@ def server(input, output, session):
         if input.device() == "CPU":
             return ui.TagList(
                 ui.input_slider("cores", "Number of CPU cores", 1, 30, 4, step=1),
-                ui.input_numeric("time", "Estimated time", 12, min=1, max=50),
+                ui.input_slider("time", "Estimated time", 1, 50, 12, step=1),
                 ui.input_radio_buttons(
                     "time_unit", "Time Unit", ["hours", "days"]
                     ),
+                ui.input_slider("storage", "Storage volume size in GB", 5, 1500, 250, step=5),
                 )
         else:
             return ui.TagList(
                 ui.input_slider("gpus", "Number of GPU devices", 1, 4, 1, step=1),
-                ui.input_numeric("time", "Estimated time", 12, min=1, max=50),
+                ui.input_slider("time", "Estimated time", 1, 50, 12, step=1),
                 ui.input_radio_buttons(
                     "time_unit", "Time Unit", ["hours", "days"]
                     ),
-                )
+                ui.input_slider("storage", "Storage volume size in GB", 5, 1500, 250, step=5),
+             )
+
     @render.plot(alt="Cost estimator")
-    def plot():
+    def plot_compute():
         if input.device() == "CPU":
             x_max = 50.0
             t = np.arange(0.0, x_max, 1.0)
+            ssd_hourly_cost = 1.525 * 100 / (30 * 24)  # assumed on average 100GB SSD
 
             if input.time_unit() == "days":
-                cost = t * input.cores() * 24
+                cost = t * 24 * (input.cores() + ssd_hourly_cost)
             else:
-                cost = t * input.cores()
+                cost = t * (input.cores() + ssd_hourly_cost)
         else:
             x_max = 20.0
             t = np.arange(0.0, x_max, 1.0)
             if input.time_unit() == "days":
-                cost = t * input.gpus() * 24 * 18
+                cost = t * 24 * (input.gpus() * 21 + ssd_hourly_cost)
             else:
-                cost = t * input.gpus() * 18
+                cost = t * (input.gpus() * 21 + ssd_hourly_cost)
 
         fig, ax = plt.subplots()
         if input.time_unit() == "days":
@@ -118,19 +123,36 @@ def server(input, output, session):
         ax.set(xlabel='Time in # of ' + input.time_unit(), ylabel='Credits',
                title='Cost of running a workspace')
 
+    @render.plot(alt="Cost estimator")
+    def plot_storage():
+        x_max = 50.0
+        t = np.arange(0.0, x_max, 1.0)
+        cost = t * input.storage() * 0.681 / 30
+        fig, ax = plt.subplots()
+        ax.set_ylim([0, 1000])
+        ax.set_xlim([0, int(x_max)])
+        ax.plot(t, cost, label="Credits")
+        ax.grid()
+        ax.vlines(input.time(), 0, cost[input.time()], colors='r', linestyles='dashed', label='Estimated time')
+        ax.hlines(y=cost[input.time()], xmin=0, xmax=input.time(), color='r', linestyle='dashed')
+        ax.set(xlabel='Time in # of days', ylabel='Credits',
+               title='Cost of persistent storage')
+
     @render.text  
     def estimate():
+        ssd_hourly_cost = 1.525 * 100 / (30 * 24)  # assumed on average 100GB SSD
+
         if input.device() == "CPU":
             if input.time_unit() == "days":
-                cost = input.time() * input.cores() * 24
+                cost = input.time() * 24 * (input.cores() + ssd_hourly_cost)
             else:
-                cost = input.time() * input.cores()
+                cost = input.time() * (input.cores() + ssd_hourly_cost)
         else:
             if input.time_unit() == "days":
-                cost = input.time() * input.gpus() * 24 * 18
+                cost = input.time() * 24 * (input.gpus() * 18 + ssd_hourly_cost)
             else:
-                cost = input.time() * input.gpus() * 18
-        return f"{cost} credits"  
+                cost = input.time() * (input.gpus() * 18 + ssd_hourly_cost)
+        return f"{round(cost, 1)} credits"  
 
 app = App(app_ui, server)
 
