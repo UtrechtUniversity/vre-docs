@@ -10,6 +10,12 @@ For an overview of Catalog Items maintained by UU, see the [workspace overview](
 
 ## Requesting access
 
+### Prerequisites
+
+In order to be able to request access to Catalog Items, you must be marked as having the 'Developer' role in your [Collaboration](../glossary.qmd#collaboration) in [SRAM](../glossary.qmd#sram). *This is the case by default if the CO was created for you.* However, if you were invited later, it may be necessary to add yourself (or ask your CO-admin to add you) to the `src_co_developer` group.
+
+### Steps
+
 1. In the ResearchCloud portal, choose 'Catalog > Catalog' from the menubar (or follow [this link](https://portal.live.surfresearchcloud.nl/catalog)).
 1. Browse through the Catalog or search for a catalog item you want to use. Catalog Items for which you require access are marked with a lock icon.
 1. Follow the link to the Catalog Item you are interested in.
