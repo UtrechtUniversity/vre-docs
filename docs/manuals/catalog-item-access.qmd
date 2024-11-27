@@ -1,0 +1,25 @@
+---
+title: How to get access to Catalog Items
+---
+
+There are many Catalog Items (workspace types) available on ResearchCloud that each come with different software installed and different access methods configured. Which Catalog Items you can use depends on which ones are made available to the [Collaborative Organisation](../glossary.qmd#collaboration) that you want to start the workspace in.
+
+Many institutions, and SURF, maintain their own Catalog Items. SURF's own Catalog Items are available in all Collaborative Organisations by default. Additionally, you can [request access](#requesting-access) to other Catalog Items marked as publically visible in the ResearchCloud catalog.
+
+For an overview of Catalog Items maintained by UU, see the [workspace overview](../workspace-catalogue.qmd). Note that some Catalog Items listed there are not marked as publically visible (for example, those that contained licensed software). To get access to these, please [contact us](mailto:research.engineering@uu.nl).
+
+## Requesting access
+
+### Prerequisites
+
+In order to be able to request access to Catalog Items, you must be marked as having the 'Developer' role in your [Collaboration](../glossary.qmd#collaboration) in [SRAM](../glossary.qmd#sram). *This is the case by default if the CO was created for you.* However, if you were invited later, it may be necessary to add yourself (or ask your CO-admin to add you) to the `src_co_developer` group.
+
+### Steps
+
+1. In the ResearchCloud portal, choose 'Catalog > Catalog' from the menubar (or follow [this link](https://portal.live.surfresearchcloud.nl/catalog)).
+1. Browse through the Catalog or search for a catalog item you want to use. Catalog Items for which you require access are marked with a lock icon.
+1. Follow the link to the Catalog Item you are interested in.
+1. There will be a 'Request Access' button at the top of the page. Clicking this will allow you to specify for which of your Collaborative Organisations you want to request access.
+1. After requesting access, the developer that maintains the Catalog Item will have to review your request and grant or deny it.
+
+<img alt="Requesting Access to a Catalog Item" src="../imgs/request_access.gif" />

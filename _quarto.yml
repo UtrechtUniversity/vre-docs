@@ -28,7 +28,8 @@ website:
       - href: docs/contact.qmd
         text: Contact
   repo-url: https://github.com/UtrechtUniversity/vre-docs
-  repo-actions: [edit]
+  issue-url: https://github.com/UtrechtUniversity/vre-docs/issues/new
+  repo-actions: [edit, issue, source]
 
 format:
   html:
