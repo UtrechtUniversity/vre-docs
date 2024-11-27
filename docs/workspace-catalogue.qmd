@@ -23,7 +23,7 @@ If there is a specific environment application, or software package you think yo
 
 ### Getting access
 
-To use UU items listed on this page, you can simply find them in the ResearchCloud portal and [request access](manuals/catalog-item-access.qmd). Most catalog items maintained by SURF will already be automatically visible for every Collaborative Organisation.
+To use UU items listed on this page, you can simply find them in the ResearchCloud portal under the 'Catalog' tab and [request access](manuals/catalog-item-access.qmd). Most catalog items maintained by SURF will already be automatically visible for every Collaborative Organisation.
 
 Note that some items listed below (for example, those that require a license) are not visible in the catalog in the portal. If you need access to them, please [contact us](mailto:research.engineering@uu.nl).
 
