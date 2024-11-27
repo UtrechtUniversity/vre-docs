@@ -81,7 +81,7 @@
     "href": "docs/workspace-catalogue.html",
     "title": "Workspace Catalogue",
     "section": "",
-    "text": "This page provides an overview of workspace types (called “Catalog Items” on Research Cloud) supported by Utrecht University. This overview includes primarily Catalog Items developed by UU, but also some commonly used Catalog Items developed by SURF.\nPlease note this is not a full list of available workspace types on ResearchCloud: there are many more developed by other institutions.\nIf there is a specific environment application, or software package you think you might need, please contact us for help. If what you require is not yet available on ResearchCloud, we can also help you to create custom Catalog Items.\n\nLegend\n\n Access the workspace via the command line\n Access the workspace as a remote desktop.\n Access application via the browser.\n\n\n\nProgramming & Analysis Environments\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nJupyter Notebooks\nJupyter Lab\n\n\n\n\nSURF\n\n\nJupyter Notebooks CUDA\nJupyter LabCUDA\n\n\n\n\nSURF\n\n\nMatlab\nMatlab\n\n\n\nLicense needed\nUU\n\n\nMiniconda (shared)\nminiconda\n\n\n\n\nUU\n\n\nMiniconda (shared) CUDA\nJupyter LabCUDA\n\n\n\n\nUU\n\n\nPython Workbench\nPythonpoetryminiconda\n\n\n\n\nUU\n\n\nPython Workbench CUDA\nCUDAPythonpoetryminiconda\n\n\n\n\nUU\n\n\nR Workbench\nRminiconda\n\n\n\n\nUU\n\n\nRStudio\nRStudio\n\n\n\n\nSURF\n\n\nSAS\nSAS\n\n\n\n\nUU\n\n\nStata\nStata\n\n\n\nLicense needed\nUU\n\n\n\n\n\n\n\nPlain Workspaces\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nUbuntu\n\n\n\n\n\nSURF\n\n\nUbuntu CUDA\nCUDA\n\n\n\n\nSURF\n\n\nWindows\n\n\n\n\n\nSURF\n\n\nWindows with CUDA\n\n\n\n\n\nSURF\n\n\n\n\n\n\n\nUtilities & Data Processing\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nASReview CLI\nASReview\n\n\n\n\nUU\n\n\nASReview Lab\nASReview\n\n\n\n\nUU\n\n\nGrobid\nGrobid\n\n\n\n\nUU\n\n\nWhisper OpenAI CUDA 11\nWhisperX\n\n\n\n\nUU\n\n\n\n\n\n\n\nExperimental\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nASReview Webapp\nASReview\n\n\n\n\nUU"
+    "text": "This page provides an overview of workspace types (called “Catalog Items” on Research Cloud) supported by Utrecht University. This overview includes primarily Catalog Items developed by UU, but also some commonly used Catalog Items developed by SURF.\nPlease note this is not a full list of available workspace types on ResearchCloud: there are many more developed by other institutions.\nIf there is a specific environment application, or software package you think you might need, please contact us for help. If what you require is not yet available on ResearchCloud, we can also help you to create custom Catalog Items.\n\nGetting access\nTo use UU items listed on this page, you can simply find them in the ResearchCloud portal under the ‘Catalog’ tab and request access. Most catalog items maintained by SURF will already be automatically visible for every Collaborative Organisation.\nNote that some items listed below (for example, those that require a license) are not visible in the catalog in the portal. If you need access to them, please contact us.\n\n\nLegend\n\n Access the workspace via the command line\n Access the workspace as a remote desktop.\n Access application via the browser.\n\n\n\nProgramming & Analysis Environments\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nJupyter Notebooks\nJupyter Lab\n\n\n\n\nSURF\n\n\nJupyter Notebooks CUDA\nJupyter LabCUDA\n\n\n\n\nSURF\n\n\nMatlab\nMatlab\n\n\n\nLicense needed\nUU\n\n\nMiniconda (shared)\nminiconda\n\n\n\n\nUU\n\n\nMiniconda (shared) CUDA\nJupyter LabCUDA\n\n\n\n\nUU\n\n\nPython Workbench\nPythonpoetryminiconda\n\n\n\n\nUU\n\n\nPython Workbench CUDA\nCUDAPythonpoetryminiconda\n\n\n\n\nUU\n\n\nR Workbench\nRminiconda\n\n\n\n\nUU\n\n\nRStudio\nRStudio\n\n\n\n\nSURF\n\n\nSAS\nSAS\n\n\n\n\nUU\n\n\nStata\nStata\n\n\n\nLicense needed\nUU\n\n\n\n\n\n\n\nPlain Workspaces\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nUbuntu\n\n\n\n\n\nSURF\n\n\nUbuntu CUDA\nCUDA\n\n\n\n\nSURF\n\n\nWindows\n\n\n\n\n\nSURF\n\n\nWindows with CUDA\n\n\n\n\n\nSURF\n\n\n\n\n\n\n\nUtilities & Data Processing\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nASReview CLI\nASReview\n\n\n\n\nUU\n\n\nASReview Lab\nASReview\n\n\n\n\nUU\n\n\nGrobid\nGrobid\n\n\n\n\nUU\n\n\nWhisper OpenAI CUDA 11\nWhisperX\n\n\n\n\nUU\n\n\n\n\n\n\n\nExperimental\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nASReview Webapp\nASReview\n\n\n\n\nUU"
   },
   {
     "objectID": "docs/manuals/install-rclone.html",
@@ -91,480 +91,403 @@
     "text": "The steps below are used to install Rclone on Research Cloud.\n\nStep 1: Make sure you are in a terminal\n\nIn Jupyterhub (Jupyter Workspace in Research cloud): To open a new terminal, click the + button in the file browser and select the terminal in the new Launcher tab (find a short video here).\nIn Rstudio (Rstudio workspace in Research cloud): In the bottom left panel, click the ‘terminal’ tab.\n\n\n\nStep 2: Download and install rclone\nType the following command in the terminal:\ncurl https://rclone.org/install.sh | sudo bash\n\n\nStep 3: Check if installation was successful\nType the following command. A version number will be displayed when installation was successful.\nrclone version\n\n\nNext: Configure Rclone"
   },
   {
-    "objectID": "docs/manuals/rclone-config.html",
-    "href": "docs/manuals/rclone-config.html",
-    "title": "Configuring Rclone for surfdrive",
+    "objectID": "docs/manuals/icommands.html",
+    "href": "docs/manuals/icommands.html",
+    "title": "Installing and using iCommands on Surf Research Cloud",
     "section": "",
-    "text": "Rclone has an interactive menu to generate a config file for you. You need to complete this menu once for each storage platform that you want to connect to. You can use Rclone for many different types of storage platforms: check the homepage for a list. SURFdrive and Research drive are based on ownCloud software. Platforms built on standard protocols such as WebDAV (including Yoda, Data Archive or the U: network drive of UU student and employees) are also supported but require slightly different configuration steps.\nTo check whether Rclone is available on your system:\nrclone version\nYou should see a version number displayed in the terminal.\nTo start the interactive menu:\nrclone config\nNow walk through the questions. For SURFdrive you need the following information (Rclone version 1.55.1)\n\nType n for New remote\nFor ‘name’ choose e.g. surfdrive (or SD)\nChoose option 40for WebDAV (!depending on your Rclone version this number may be different!);\nFill in the URL. You can look this up via the web portal of SURFdrive. In the top right corner click your account name. Go to settings. In the left panel, click security. At the very bottom of the page there will be a section WebDAV passwords. There is also an URL, something like: https://surfdrive.surf.nl/files/remote.php/nonshib-webdav Use this URL.\nBefore you continue with the Rclone menu, first perform the following step via the web portal of SURFdrive. Fill in an app name (e.g. lisa) on the security settings page (same page as previous step) and click “create new app password”. The page will show a username and a password. You will need these in the following steps of the Rclone menu.\nSelect the type of WebDAV storage system. Type: 2 for ownCloud.\nType in your user name from SURFdrive (this is the username found in the web portal (step 5))\nSelect: y) Yes type in my own password\nType in your password from the web portal and type it in again for confirmation.\nSkip the Bearer token option by pressing enter.\nChoose n to skip the advanced config\nConfirm your settings by typing y.\nChoose q to quit the menu.\n\nTest whether everything is setup correctly by typing the following command in the terminal, if necessary change surfdrive: to any other name chosen in step 2.:\nrclone lsd surfdrive:\nIf everything is setup correctly, you should see a list of files and folders that are present on your SURFdrive.\n\nNext: Using rclone for data transfer"
+    "text": "The instructions below describe the process of data transfer between Surf Research Cloud and Yoda using iCommands. This manual is developed for workspaces based on a Linux operating system (including the Jupyter Notebook and RStudio workspaces). Transfer is also possible via the Webdav protocol using Rclone. For large files iCommands is faster due to parallel transfer options.\n\nPrerequisites\nYou will need some basic linux skills to be able to use the iCommands successfully. If you don’t have these skills, take some time to practice using sections 1, 2, 3 and 7 of this short online course before proceeding. You can practice in the terminal (see step 1).\n\n\nStep 1: Make sure you are in a terminal\n\nIn Jupyterhub (Jupyter Workspace in Research cloud): To open a new terminal, click the + button in the file browser and select the terminal in the new Launcher tab (find a short video here).\nIn Rstudio (Rstudio workspace in Research cloud): In the bottom left panel, click the ‘terminal’ tab.\n\n\n\nStep 2: Install iRODS iCommands\nSome workspaces have iRODS iCommands preconfigured. This should be visible in step 1 when creating a workspace.\nCopy and paste (or type) the following commands in the terminal, or view the most up to date installation instructions for iRODS iCommands on the yoda website in the section “Installing iCommands on Ubuntu”.\nsudo apt-get update\nsudo apt-get install -y lsb-release\nwget -qO - https://packages.irods.org/irods-signing-key.asc | sudo apt-key add - \nsudo echo \"deb [arch=amd64] https://packages.irods.org/apt/ $(lsb_release -sc) main\" | sudo tee /etc/apt/sources.list.d/renci-irods.list\nsudo apt-get update\nsudo apt-get install -y irods-icommands\n\n\nStep 3: Create a config file\nIn order to know with what server iBridges should connect, a so-called iRODS environment file must be present in your home directory.\nYou may need help from your datamanager or contact Yoda support to obtain the information needed for the config file.\nGo to your home directory and create a hidden directory called ‘.irods’:\ncd ~\nmkdir .irods\ncd .irods\nIn this directory, create a file named irods_environment.json.\ntouch irods_environment.json\nEdit the file using a text editor such as nano or vim:\nnano irods_environment.json\nFor information about Yoda servers hosted by Utrecht university go to the yoda website, scroll to Step 2. Configuring iCommands and copy and paste the text belonging to your institution in the file (similar to the file below) and change the email address next to irods_user_nameto your yoda user name (typically your uu email address).\n{   \n\"irods_host\": \"science.data.uu.nl\",   \n\"irods_port\": 1247,    \"irods_home\": \"/nluu6p/home\",   \n\"irods_user_name\": \"exampleuser@uu.nl\",   \n\"irods_zone_name\": \"nluu6p\",   \n\"irods_authentication_scheme\": \"pam\",   \n\"irods_encryption_algorithm\": \"AES-256-CBC\",   \n\"irods_encryption_key_size\": 32,   \n\"irods_encryption_num_hash_rounds\": 16,   \n\"irods_encryption_salt_size\": 8,   \n\"irods_client_server_negotiation\": \"request_server_negotiation\"\n}\nThe list of Yoda servers hosted in the Netherlands by SURF can be found here. For all other iRODS or Yoda servers please contact your service provider.\n\n\nStep 4: Initialize connection to iRODS\nInitialize the connection to the Yoda system as follows:\niinit\nType your Yoda password when requested.\nType ils to see whether the connection has been established. The output of the ils command will list the current Yoda folder and the folders that are located within the current folder.\niinit and ils are commands which can only be used when icommands is active. Some of these commands are very similar to standard unix commands. When icommands is active you can still operate the HPC system using normal unix commands. A complete list of all ‘icommands’ can be found here.\n\n\nStep 5: Transferring data\nStandard transfer of a single file can be done using iget and iput\nThe irsync command can be used to synchronize entire directories between Yoda and Cartesius. The command is used as follows.\nirsync &lt;source&gt; &lt;destination&gt;\nIn contrary to the iput and iget commands, in irsync it is necessary to put ‘i:’ before the Yoda path. The Yoda path (directly after ‘i:’) to the folder that should be synchronized should be relative to the current Yoda folder (check with ils).\nE.g.\nirsync -rKV i:myfolder /my_researchcloud_folder\n-rKV means the following flags (options) are used:\n\n-r recursive - store the whole folder including subdirectories\n-K Calculate and verify the checksum on the data\n-V Very verbose\n\nTypically you will want to store data on the (persistent) storage volume that is attached to your workspace. Transfer it directly there as follows:\nirsync -rKV i:myfolder ~/data/volume_2/my_destination_folder\nTo synchronize in the opposite direction\nirsync -rKV /my_researchcloud_folder/ i:myfolder\n\nnote the ‘/’ at the end of /my_researchcloud_folder/ that is not used in the command above.\n\n\n\nParallel transfer\nWith icommands it is possible to transfer individual files in parallel using multiple threads, which results in higher transfer speeds. The flag -N can be used to control the number of parallel threads (only recommended in very specific situations). When not specified the server decides a default number of threads. For large files this number can be e.g. 16 threads.\nirsync -rKV -N 0 i:myfolder /my_researchcloud_folder"
   },
   {
-    "objectID": "docs/manuals/long-jobs.html",
-    "href": "docs/manuals/long-jobs.html",
-    "title": "Running long jobs on your Research Cloud workspace",
+    "objectID": "docs/manuals/rclone-transferringdata.html",
+    "href": "docs/manuals/rclone-transferringdata.html",
+    "title": "Using Rclone",
     "section": "",
-    "text": "Often it is advisable to run long jobs (e.g. long scripts or analyses that take hours or days to complete) as background processes. By running long jobs as background process, you make sure the jobs will not be interrupted when you (by accident) close the window with which you access your workspace or when your internet connection is interrupted. This can happen in the following cases:\n\nWhen you access your workspace via your web browser (Jupyter Notebooks, RStudio, Ubuntu Desktop, etc.)\nWhen you access your workspace via SSH\n\nWhen you access your workspace via RDP (Remote Desktop), jobs will normally not be interupted by disconnecting. More info on access methods\n\n\n\n\n\n\nYou will need some basic linux command line skills to be able to run scripts as background processes. If you don’t have these skills, take some time to practice using sections 1, 2, 3 and 7 of this short online course before proceeding. You can practice in the terminal (see step 1).\nYour script should be ‘standalone’; which means that you should be able to run your entire script in one go without providing additional input. For scripts, all figures and output data should be stored in files (e.g. .png images and/or .csv tables), for Jupyter notebooks this might be not necessary if the figures should be embedded in the notebook.\n\n\n\n\n\nIn Jupyterhub (Jupyter Workspace in Research cloud): To open a new terminal, click the + button in the file browser and select the terminal in the new Launcher tab (find a short video here).\nIn Rstudio (Rstudio workspace in Research cloud): In the bottom left panel, click the ‘terminal’ tab.\nIn an Ubuntu Desktop workspace, click ‘Applications’ in the top left corner and then ‘Terminal’\n\n\n\n\nFor example:\ncd data\ncd &lt;your storage volume name&gt;\n...\n\n\n\nMore info about the use of nohup can be found here. For this usecase we combine nohup with an ampersand “&” to run a background process the will continue even is the terminal window is closed. The process will only stop:\n\nIf it has finished\nIf an error occurs\nIf the workspaces is paused or deleted\n\nIf your script normally prints output to the terminal or console, this will now be written into a file nohup.out which will be created automatically when you run the script in the folder from where you run the script.\nFor R scripts:\nnohup Rscript your-rscript.R &\nFor Jupyter notebooks:\nnohup jupyter nbconvert --execute --to notebook --inplace your-notebook.ipynb &\nAfter submitting this command you will see the following:\n\nYou need to press Enter one more time to return to the command prompt. The number between square brackets is the job ID and the second number is the process ID.\n\n\n\nUse the process ID to terminate the job, e.g.:\nkill 152233\nIf you don’t know the process ID you can look it up by using a monitoring tool like top (more info).\n\n\n\nThere are several ways to find out if your job has ended:\nWhen things go as planned, you can check if the expected output data has been generated. You can also use the jobs command to check the status of your background job. If the job is running, the output will look like this:\n[1]+  Running                 nohup Rscript test.R &\nIf the job has ended, there will be no output.\n\n\n\nBy adding print statements to your script, you allow monitoring of the progress of your script (it might be that some of the functions that you use already print output to the console/terminal by default). All output that you create with print statements will be written to the nohup.out file (see step 3). Use for example a print statement in a for loop to print the iteration number. Follow these links for more info:\n\nPrint statements in R\nPrint statements in Python"
+    "text": "For all Rclone commands see: https://rclone.org/commands/ Below are the most useful commands: - lsd (listing directories) - ls (listing files) - copy (copying individual files) - sync (copying entire folders)\n\nrclone lsd\nThe lsd commands is used to list all directories in the current directory. e.g. to list all directories in your surfdrive type:\nrclone lsd surfdrive:\ne.g. to list all directories in a specific subfolder of a folder on surfdrive type:\nrclone lsd surfdrive:myfolder/mysubfolder\n\n\nrclone ls\nThe ls commands is used to list all files in the current directory. e.g. to list all files in a specific folder in your surfdrive type:\nrclone ls surfdrive:myfolder\n\n\nrclone copy\nTo copy a file from SURFdrive to a certain folder:\nrclone copy surfdrive:file.txt ./my_destination_folder\nIn most cases, you would want to transfer the data to the (persistent) storage volume on Research cloud. If you don’t have a destination folder yet, create it as follows:\nmkdir ~/data/volume_2/destination_folder_with_any_name\nrclone copy surfdrive:file.txt ~/data/volume_2/destination_folder_with_any_name\n\n\nrclone sync\nTo synchronize an entire folder from surfdrive use rclone sync:\n\nWarning! Synchronization with Rclone makes the destination folder equal to the source folder and deletes files and folders in the destination folder that are not present in the source folder. Therefore it is wise to use the –dry-run flag to see what will be copied and deleted before actually running the command. rclone sync &lt;source&gt; &lt;destination&gt; --dry-run\n\nrclone sync surfdrive:my_source_folder ~/data/volume_2/destination_folder_with_any_name --dry-run\nrclone sync surfdrive:my_source_folder ~/data/volume_2/destination_folder_with_any_name -cPv\n-cPv means the following flags (options) are used:\n-c skip files that are already present (compared using checksums)\n-P report progress of transfer\n-v verbose; increase the amount of information in the logs\n\n\nTransfer in opposite direction\nCopying in the opposite direction is easy, use the same commands as described above and start with the research cloud folder and end with the surfdrive folder:\nrclone copy ~/data/volume_2/destination_folder_with_any_name/file.txt surfdrive:my_destination_folder \nrclone sync ~/data/volume_2/destination_folder_with_any_name surfdrive:my_destination_folder  -cPv\nFurther reading: - For all Rclone commands see: https://rclone.org/commands/"
   },
   {
-    "objectID": "docs/manuals/long-jobs.html#when-is-this-relevant",
-    "href": "docs/manuals/long-jobs.html#when-is-this-relevant",
-    "title": "Running long jobs on your Research Cloud workspace",
+    "objectID": "docs/manuals/rclone-researchcloud.html",
+    "href": "docs/manuals/rclone-researchcloud.html",
+    "title": "Rclone for data transfer between cloud storage and Surf Research Cloud",
     "section": "",
-    "text": "Often it is advisable to run long jobs (e.g. long scripts or analyses that take hours or days to complete) as background processes. By running long jobs as background process, you make sure the jobs will not be interrupted when you (by accident) close the window with which you access your workspace or when your internet connection is interrupted. This can happen in the following cases:\n\nWhen you access your workspace via your web browser (Jupyter Notebooks, RStudio, Ubuntu Desktop, etc.)\nWhen you access your workspace via SSH\n\nWhen you access your workspace via RDP (Remote Desktop), jobs will normally not be interupted by disconnecting. More info on access methods"
+    "text": "Rclone is a convenient tool for fast data transfer between computers (PC, HPC, cloud) and cloud based storage platforms such as Surfdrive, Researchdrive, onedrive, dropbox.\nIt is a command line tool, so the user would need some experience with using the command line in order to user Rclone.\nThe following steps show how you can use rclone on Research cloud for data transfer to e.g. a Jupyterhub or Rstudio workspace application.\n\nStep 1: Install rclone\n\n\nStep 2: Configure rclone\n\n\nStep 3: Data transfer using rclone"
   },
   {
-    "objectID": "docs/manuals/long-jobs.html#how-to-run-jobs-as-background-processes",
-    "href": "docs/manuals/long-jobs.html#how-to-run-jobs-as-background-processes",
-    "title": "Running long jobs on your Research Cloud workspace",
+    "objectID": "docs/manuals/ssh-data-transfer-methods.html",
+    "href": "docs/manuals/ssh-data-transfer-methods.html",
+    "title": "Transferring data from your PC to your workspace using SCP and RSYNC",
     "section": "",
-    "text": "You will need some basic linux command line skills to be able to run scripts as background processes. If you don’t have these skills, take some time to practice using sections 1, 2, 3 and 7 of this short online course before proceeding. You can practice in the terminal (see step 1).\nYour script should be ‘standalone’; which means that you should be able to run your entire script in one go without providing additional input. For scripts, all figures and output data should be stored in files (e.g. .png images and/or .csv tables), for Jupyter notebooks this might be not necessary if the figures should be embedded in the notebook.\n\n\n\n\n\nIn Jupyterhub (Jupyter Workspace in Research cloud): To open a new terminal, click the + button in the file browser and select the terminal in the new Launcher tab (find a short video here).\nIn Rstudio (Rstudio workspace in Research cloud): In the bottom left panel, click the ‘terminal’ tab.\nIn an Ubuntu Desktop workspace, click ‘Applications’ in the top left corner and then ‘Terminal’\n\n\n\n\nFor example:\ncd data\ncd &lt;your storage volume name&gt;\n...\n\n\n\nMore info about the use of nohup can be found here. For this usecase we combine nohup with an ampersand “&” to run a background process the will continue even is the terminal window is closed. The process will only stop:\n\nIf it has finished\nIf an error occurs\nIf the workspaces is paused or deleted\n\nIf your script normally prints output to the terminal or console, this will now be written into a file nohup.out which will be created automatically when you run the script in the folder from where you run the script.\nFor R scripts:\nnohup Rscript your-rscript.R &\nFor Jupyter notebooks:\nnohup jupyter nbconvert --execute --to notebook --inplace your-notebook.ipynb &\nAfter submitting this command you will see the following:\n\nYou need to press Enter one more time to return to the command prompt. The number between square brackets is the job ID and the second number is the process ID.\n\n\n\nUse the process ID to terminate the job, e.g.:\nkill 152233\nIf you don’t know the process ID you can look it up by using a monitoring tool like top (more info).\n\n\n\nThere are several ways to find out if your job has ended:\nWhen things go as planned, you can check if the expected output data has been generated. You can also use the jobs command to check the status of your background job. If the job is running, the output will look like this:\n[1]+  Running                 nohup Rscript test.R &\nIf the job has ended, there will be no output.\n\n\n\nBy adding print statements to your script, you allow monitoring of the progress of your script (it might be that some of the functions that you use already print output to the console/terminal by default). All output that you create with print statements will be written to the nohup.out file (see step 3). Use for example a print statement in a for loop to print the iteration number. Follow these links for more info:\n\nPrint statements in R\nPrint statements in Python"
+    "text": "The instructions on this page assume you have already setup SSH for Research cloud. If this is not the case, check the Research Cloud documentation site."
   },
   {
-    "objectID": "docs/manuals/sram-secrets.html",
-    "href": "docs/manuals/sram-secrets.html",
-    "title": "",
+    "objectID": "docs/manuals/ssh-data-transfer-methods.html#scp",
+    "href": "docs/manuals/ssh-data-transfer-methods.html#scp",
+    "title": "Transferring data from your PC to your workspace using SCP and RSYNC",
+    "section": "scp",
+    "text": "scp\nWhen you work on a Windows machine and you use MobaXterm for SSH connection, you can use the file browser in MobaXterm to intuitively transfer data.\nIn all other cases: Open a terminal (or shell session) that you use for login in to your workspace via the ssh command.\nscp sourcefile &lt;username&gt;@&lt;ip-address&gt;:destinationdir\nYou can find both the username and the ip-address in the research cloud portal. Find your username under the ‘Profile’ tab.\nFind the IP address of your workspace in the main Dashboard by clicking the drop down arrow of the running Workspace.\nscp testfile.txt &lt;username&gt;@&lt;ip-address&gt;:data/volume_2/input_data\nIf you first need to create a destination folder where you want to transfer the data to:\nssh &lt;username&gt;@&lt;ip-address&gt;\nmkdir ~/data/volume_2/input_data\nlogout\nscp testfile.txt &lt;username&gt;@&lt;ip-address&gt;:data/volume_2/input_data\nTo transfer a directory add the -r option:\nscp -r sourcedir &lt;username&gt;@&lt;ip-address&gt;:data/volume_2/input_data"
+  },
+  {
+    "objectID": "docs/manuals/ssh-data-transfer-methods.html#rsync",
+    "href": "docs/manuals/ssh-data-transfer-methods.html#rsync",
+    "title": "Transferring data from your PC to your workspace using SCP and RSYNC",
+    "section": "rsync",
+    "text": "rsync\nRsync is a tool for synchronizing two folders. This method can also be used to transfer the contents of a folder to a remote folder. You typically run this tool on your own PC in the terminal (so e.g.before login in using the ssh command, or in a separate terminal (or shell session)).\nType rsync --help on to see if it is installed on your system. To install:\n\nInstall\nOn Debian based linux (e.g. Ubuntu):\nsudo apt-get install rsync\nOn mac:\nbrew install rsync\n\n\nUsage\nrsync -azP ./my_local_folder &lt;username&gt;@&lt;ip-address&gt;:~/data/volume_2/input_data\nWhere -azP are options. Type rsync --help to see a list of the options."
+  },
+  {
+    "objectID": "docs/privacy.html",
+    "href": "docs/privacy.html",
+    "title": "Privacy Policy",
     "section": "",
-    "text": "In the Research Cloud Dashboard go to the “Profile” tab. You will see a list of the Collaborative Organisations that you are a member of. Now:\n\nChoose a CO, expand the display, and select the “Secrets” tab.\nClick on the “+” icon to add a secret.\nIn the name field, type the name that will refer to the secret.\nIn the value field type or paste the secret value itself.\n\nThe value will show only now and never again.\nFrom now on, any component parameter with the source-type “Co-Secret” can refer to this secret value if the workspace is started for this CO."
+    "text": "The Utrecht University Privacy Statement is applicable:\n\nPrivacy Statement Utrecht University\n\nIn addition to the UU Privacy Statement, the following privacy policies at SURF are applicable:\n\nSURF Research Cloud Privacy Policy\nSURF SRAM Privacy Policy\n\nBy accepting this invitation, users agree to adhere to the terms and conditions in the documents listed above.\nLast update: September 19, 2023"
   },
   {
-    "objectID": "docs/manuals/ubuntu-security-updates.html",
-    "href": "docs/manuals/ubuntu-security-updates.html",
-    "title": "How to activate security updates on Ubuntu",
+    "objectID": "docs/workspaces/utility/whisper.html",
+    "href": "docs/workspaces/utility/whisper.html",
+    "title": "Whisper OpenAI CUDA 11",
     "section": "",
-    "text": "Please take a moment to read the security recommendations for VREs. If you wish to keep using the same VRE for longer than 3 weeks, automatic security updates for the VRE’s OS must be turned on. This manual describes how to enable these for any VREs running Ubuntu Linux. At the moment security updates for Ubuntu are turned on by default on ResearchCloud, so no action should be necessary. This manual exists in case this default setting changes in the future.\nContact us if you run into any problems with the instructions below."
+    "text": "This workspace can be used to work with the Whisper model from OpenAI (e.g. for transcribing audio files). On this workspace a Python environment is created using the environment manager ‘conda’. The ‘conda’ environment contains Whisper, WhisperX and other required packages. The environment is configured to be able to use a GPU when available.\nThe workspace is a JupyterHub workspace, and comes with a template notebook to transcribe, translate and diarize audio files. The workspace is mainly aimed for users that have at least some very basic Python experience using Jupyter notebooks. However the workspace also provides a terminal (command line application) to run Whisper using the command line.\nCurrently the workspace is only available upon request."
   },
   {
-    "objectID": "docs/manuals/ubuntu-security-updates.html#understanding-automatic-security-updates-for-ubuntu",
-    "href": "docs/manuals/ubuntu-security-updates.html#understanding-automatic-security-updates-for-ubuntu",
-    "title": "How to activate security updates on Ubuntu",
-    "section": "Understanding automatic security updates for Ubuntu",
-    "text": "Understanding automatic security updates for Ubuntu\nThe Ubuntu OS has a feature called “unattended upgrades” that will automatically install security updates for installed packages as they become available. These are currently enabled on ResearchCloud by default. However, you can easily activate the feature yourself, as long as you have admin rights on the workspace.\nFor longer-living workspaces, it is also heavily recommended to install a vulnerability scanning tool that actively monitors your workspace for weaknesses. Please contact us for help with this.\nPlease note:\n\nThese updates are only for system packages installed using Ubuntu’s package management system, apt. Any other software on the workspace (for instance, software installed directly from Github) will not be updated by this mechanism. If this is security sensitive (for instance, if it is a web application), you will need to find other ways of keeping it secure and updated.\nOnly security patches will be installed, so the ‘major’ version of the packages you use will remain the same.\n\nAdvanced notes:\n\nFor almost all updates, the new version will become active immediately. This means that in very rare cases, an update may interfere with a running process. There is thus a tradeoff between security and stability, but such interference is rare and enabling unattended upgrades is considered best practice for Ubuntu servers.\nThere is one exception to the rule that updated versions will become automatically active: if the Linux kernel itself is updated, this will require a pause/resume of the workspace to become active. This happens rarely, but you can monitor for this by installing the aforementioned scanning tool (contact us)."
+    "objectID": "docs/workspaces/utility/whisper.html#description",
+    "href": "docs/workspaces/utility/whisper.html#description",
+    "title": "Whisper OpenAI CUDA 11",
+    "section": "",
+    "text": "This workspace can be used to work with the Whisper model from OpenAI (e.g. for transcribing audio files). On this workspace a Python environment is created using the environment manager ‘conda’. The ‘conda’ environment contains Whisper, WhisperX and other required packages. The environment is configured to be able to use a GPU when available.\nThe workspace is a JupyterHub workspace, and comes with a template notebook to transcribe, translate and diarize audio files. The workspace is mainly aimed for users that have at least some very basic Python experience using Jupyter notebooks. However the workspace also provides a terminal (command line application) to run Whisper using the command line.\nCurrently the workspace is only available upon request."
   },
   {
-    "objectID": "docs/manuals/ubuntu-security-updates.html#manually-enabling-automatic-security-updates",
-    "href": "docs/manuals/ubuntu-security-updates.html#manually-enabling-automatic-security-updates",
-    "title": "How to activate security updates on Ubuntu",
-    "section": "Manually enabling automatic security updates",
-    "text": "Manually enabling automatic security updates\n\nPrerequisites\n\nA Catalog Item using Ubuntu Linux\nAdmin rights on the workspace\n\n\n\nWorkspaces with a desktop environment\nSee here for how to login on the workspace.\nSteps:\n\nIn the Applications menu (top left), go to Settings &gt; Software & Updates.\nGo to the Updates tab.\nFrom the dropdown When there are security updates, select Download and install automatically.\n\nAlternatively, you can open a terminal and follow the instructions below for enabling security updates from the command line.\n\n\nWorkspaces with command line access\nSee here for how to login on the workspace with SSH.\nIn you terminal, execute the following commands:\nsudo systemctl enable apt-daily.timer\nsudo systemctl enable apt-daily-upgrade.timer\nsudo systemctl start apt-daily.timer\nsudo systemctl start apt-daily-upgrade.timer"
-  },
-  {
-    "objectID": "docs/workspaces/templates/template.html#creation",
-    "href": "docs/workspaces/templates/template.html#creation",
-    "title": "workspace name",
+    "objectID": "docs/workspaces/utility/whisper.html#creation",
+    "href": "docs/workspaces/utility/whisper.html#creation",
+    "title": "Whisper OpenAI CUDA 11",
     "section": "Creation",
     "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
   },
   {
-    "objectID": "docs/workspaces/templates/template.html#access",
-    "href": "docs/workspaces/templates/template.html#access",
-    "title": "workspace name",
-    "section": "Access",
-    "text": "Access\nLink to access methods in the first steps page here."
-  },
-  {
-    "objectID": "docs/workspaces/templates/template.html#usage",
-    "href": "docs/workspaces/templates/template.html#usage",
-    "title": "workspace name",
-    "section": "Usage",
-    "text": "Usage\n\nData transfer options\nSee our data transfer manuals.\nThe recommended iBridges client for Yoda and iRODS is preinstalled.\n\n\nInstalling additional software\nThe user has admin rights to install additional software on the system (on a terminal, use sudo &lt;yourcommand&gt;)."
-  },
-  {
-    "objectID": "docs/workspaces/templates/template.html#tips",
-    "href": "docs/workspaces/templates/template.html#tips",
-    "title": "workspace name",
-    "section": "Tips",
-    "text": "Tips\n\nWorkspace security\nPlease take a moment to read the security recommendations for VREs."
-  },
-  {
-    "objectID": "docs/workspaces/utility/asreview_lab.html",
-    "href": "docs/workspaces/utility/asreview_lab.html",
-    "title": "ASReview Lab",
-    "section": "",
-    "text": "This workspace can be used to work with ASReview Lab. On this workspace ASReview Lab is installed with all dependencies. Extensions (such as asreview-makita) are not installed on this workspace.\nCurrently the workspace is for all Research Cloud users."
-  },
-  {
-    "objectID": "docs/workspaces/utility/asreview_lab.html#description",
-    "href": "docs/workspaces/utility/asreview_lab.html#description",
-    "title": "ASReview Lab",
-    "section": "",
-    "text": "This workspace can be used to work with ASReview Lab. On this workspace ASReview Lab is installed with all dependencies. Extensions (such as asreview-makita) are not installed on this workspace.\nCurrently the workspace is for all Research Cloud users."
-  },
-  {
-    "objectID": "docs/workspaces/utility/asreview_lab.html#creation",
-    "href": "docs/workspaces/utility/asreview_lab.html#creation",
-    "title": "ASReview Lab",
-    "section": "Creation",
-    "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance.\nChoosing the number of CPU cores: A workspace with more CPU cores and RAM memory will cost more credits. If you want to use a large workspace for a long period of time (many days or weeks), first try to test on small machines (e.g. a 2 core and a 4 core machine) whether a bigger machine actually does help you to get your results faster."
-  },
-  {
-    "objectID": "docs/workspaces/utility/asreview_lab.html#access",
-    "href": "docs/workspaces/utility/asreview_lab.html#access",
-    "title": "ASReview Lab",
+    "objectID": "docs/workspaces/utility/whisper.html#access",
+    "href": "docs/workspaces/utility/whisper.html#access",
+    "title": "Whisper OpenAI CUDA 11",
     "section": "Access",
     "text": "Access\nThis workspace can be accessed via the yellow ‘Access’ button. You need a TOTP to login to your workspace, see Workspace access with TOTP."
   },
   {
-    "objectID": "docs/workspaces/utility/asreview_lab.html#data-transfer-options",
-    "href": "docs/workspaces/utility/asreview_lab.html#data-transfer-options",
-    "title": "ASReview Lab",
+    "objectID": "docs/workspaces/utility/whisper.html#data-transfer-options",
+    "href": "docs/workspaces/utility/whisper.html#data-transfer-options",
+    "title": "Whisper OpenAI CUDA 11",
     "section": "Data transfer options",
-    "text": "Data transfer options\n\nInternet Browser\nThe most intuitive way to get your dataset to the workspace is by using a cloud storage platform (e.g. Surfdrive, Yoda, etc.). Within the workspace you can click ‘applications’ (topleft corner) and then open an internet browser. Use the internet browser and go to the web portal of the storage platform you use to download the data to the workspace.\n\n\nCommand line\nAlternatively it is possible to transfer data using command scp. For this you need to work with a command line application (or aka terminal) on your PC and you need get the IP address of the Workspace from the Research Cloud portal. Find complete instructions here"
+    "text": "Data transfer options\nFirst create a working directory on the Storage Volume\nThe JupyterHub dashboard has an Upload button to directly upload data from your computer."
   },
   {
-    "objectID": "docs/workspaces/utility/asreview_lab.html#usage",
-    "href": "docs/workspaces/utility/asreview_lab.html#usage",
-    "title": "ASReview Lab",
+    "objectID": "docs/workspaces/utility/whisper.html#usage",
+    "href": "docs/workspaces/utility/whisper.html#usage",
+    "title": "Whisper OpenAI CUDA 11",
     "section": "Usage",
-    "text": "Usage\nWhen you log in to this workspace, the ASReview lab web app will open automatically."
+    "text": "Usage\nNavigate to your home directory and start the template Jupyter notebook whisper_template.ipynb using the Whisper kernel. If you double click to start the notebook, make sure in the top right you see whisper (ipykernel) instead of Python 3 (ipykernel). If you see Python 3 (ipykernel), just click on it to change it to the Whisper kernel."
   },
   {
-    "objectID": "docs/workspaces/utility/asreview_lab.html#tips",
-    "href": "docs/workspaces/utility/asreview_lab.html#tips",
-    "title": "ASReview Lab",
+    "objectID": "docs/workspaces/utility/whisper.html#tips",
+    "href": "docs/workspaces/utility/whisper.html#tips",
+    "title": "Whisper OpenAI CUDA 11",
     "section": "Tips",
-    "text": "Tips\nBefore you log out and/or delete a workspace, don’t forget to store the results either on the storage unit (located under /data/&lt;name of your storage unit&gt;), or upload it to an online storage platform using an internet browser within the workspace."
+    "text": "Tips"
   },
   {
-    "objectID": "docs/workspaces/utility/asreview_cli.html",
-    "href": "docs/workspaces/utility/asreview_cli.html",
-    "title": "ASReview CLI",
+    "objectID": "docs/workspaces/utility/grobid.html",
+    "href": "docs/workspaces/utility/grobid.html",
+    "title": "Grobid",
     "section": "",
-    "text": "This workspace can be used to work with ASReview (e.g. for simulations) via the command line interface (CLI).\nCurrently the workspace is only available upon request."
+    "text": "GROBID means GeneRation Of BIbliographic Data. GROBID is a machine learning library for extracting, parsing and re-structuring raw documents such as PDF into structured XML/TEI encoded documents with a particular focus on technical and scientific publications. Grobid can help you perform bibliographic analyses on scientific papers.\nGrobid can be used via a webapplication in which you can upload and parse documents in the browser, and also provides an API for scripting purposes.\nLaunching this Catalog Item will provide you with a workspace on which the Grobid webapplication and API are running.\n\n\nThere are some variations of this Catalog Item that come with different Grobid extensions in place:\n\nGrobid Standalone: provides only the main Grobid application without extensions\nGrobid Datastet: provides the datastet extension for detecting datasets mentions\nGrobid Softcite: provides the softcite extension for detecting software mentions\nGrobid All-in-One: provides all of the above.\n\nFor 1-3, the application is simply hosted at https://yourworkspaceurl.nl/. For 4., the various applications are accessible at the following locations:\n\nGrobid (main app): https://yourworkspaceurl.nl/grobid/\nDatastet: https://yourworkspaceurl.nl/datastet/\nSoftcite: https://yourworkspaceurl.nl/softcite/"
   },
   {
-    "objectID": "docs/workspaces/utility/asreview_cli.html#description",
-    "href": "docs/workspaces/utility/asreview_cli.html#description",
-    "title": "ASReview CLI",
+    "objectID": "docs/workspaces/utility/grobid.html#description",
+    "href": "docs/workspaces/utility/grobid.html#description",
+    "title": "Grobid",
     "section": "",
-    "text": "This workspace can be used to work with ASReview (e.g. for simulations) via the command line interface (CLI).\nCurrently the workspace is only available upon request."
+    "text": "GROBID means GeneRation Of BIbliographic Data. GROBID is a machine learning library for extracting, parsing and re-structuring raw documents such as PDF into structured XML/TEI encoded documents with a particular focus on technical and scientific publications. Grobid can help you perform bibliographic analyses on scientific papers.\nGrobid can be used via a webapplication in which you can upload and parse documents in the browser, and also provides an API for scripting purposes.\nLaunching this Catalog Item will provide you with a workspace on which the Grobid webapplication and API are running.\n\n\nThere are some variations of this Catalog Item that come with different Grobid extensions in place:\n\nGrobid Standalone: provides only the main Grobid application without extensions\nGrobid Datastet: provides the datastet extension for detecting datasets mentions\nGrobid Softcite: provides the softcite extension for detecting software mentions\nGrobid All-in-One: provides all of the above.\n\nFor 1-3, the application is simply hosted at https://yourworkspaceurl.nl/. For 4., the various applications are accessible at the following locations:\n\nGrobid (main app): https://yourworkspaceurl.nl/grobid/\nDatastet: https://yourworkspaceurl.nl/datastet/\nSoftcite: https://yourworkspaceurl.nl/softcite/"
   },
   {
-    "objectID": "docs/workspaces/utility/asreview_cli.html#creation",
-    "href": "docs/workspaces/utility/asreview_cli.html#creation",
-    "title": "ASReview CLI",
+    "objectID": "docs/workspaces/utility/grobid.html#creation",
+    "href": "docs/workspaces/utility/grobid.html#creation",
+    "title": "Grobid",
     "section": "Creation",
-    "text": "Creation\n\nCreate a storage volume\nFirst create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\n\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance.\nChoosing the number of CPU cores: A workspace with more CPU cores and RAM memory will cost more credits. If you want to use a large workspace for a long period of time (many days or weeks), first try to test on small machines (e.g. a 2 core and a 4 core machine) whether a bigger machine actually does help you to get your results faster."
+    "text": "Creation\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance.\n\n\nInteractive parameters\nIf you want to override the default password used to access the API, you can do so in the final page before you press Submit to create your workspace. Just fill in your desired password in the provided Interactive Parameter field:"
   },
   {
-    "objectID": "docs/workspaces/utility/asreview_cli.html#access-options",
-    "href": "docs/workspaces/utility/asreview_cli.html#access-options",
-    "title": "ASReview CLI",
-    "section": "Access options",
-    "text": "Access options\nThis workspace can be accessed using SSH (secure shell protocol). The research cloud documentation provides instructions on how to set up SSH for research cloud.\nTo connect to the workspace from a Windows computer you need specific software to use a ‘shell’ (also known as ‘terminal’), examples include Git Bash, PuTTY and MobaXterm. If you need to install something new, we would recommend MobaXterm\nOn MacOS and Linux machines you can use the standard ‘Terminal’."
+    "objectID": "docs/workspaces/utility/grobid.html#access",
+    "href": "docs/workspaces/utility/grobid.html#access",
+    "title": "Grobid",
+    "section": "Access",
+    "text": "Access\n\nWebapplication\nMembers of the workspace’s Collaborative Organisation can simply point their browser to the workspace’s URL and login using their organisation’s Single Sign-On mechanism (e.g. Solis login with two factor authentication for UU employees and students). You can use the yellow ‘Access’ button in the Workspace overview in the portal to be linked to the right URL.\n\n\nAPI\nThe API for each application is accessible at sublocations of your workspace’s URL:\n\nFor Grobid, use the /api sublocation, for instance https://yourworkspaceurl.nl/api/.\nFor Datastet and Softcite use the /service sublocation, e.g. https://yourworkspaceurl.nl/datastet/service/.\n\nSince Single-Sign On is difficult to implement when scripting, authentication for the API uses a simple username/password scheme. The default username and password are grobid. You can set the password as an interactive parameter.\nFrom a command line, you can test the Grobid API e.g. in the following way:\ncurl -ugrobid:grobid -L https://grobiddatastet.itsdatalandscap.src.surf-hosted.nl/api/version\nAlso see the API documentation.\n\n\nSSH\nYou can also access the workspace via the command line (SSH). If you do so, the Grobid service(s) will be availabe on http://localhost:&lt;port&gt;/api. The port number is different for Grobid, Datastet, and Softcite. You can read off the relevant port numbers by running the following command:\n$ sudo docker container list\nCONTAINER ID   IMAGE                   COMMAND                  CREATED              STATUS          PORTS                                       NAMES\nd64db08a37ea   grobid/datastet:0.8.0   \"sh -c 'java --add-o…\"   About a minute ago   Up 57 seconds   0.0.0.0:8060-&gt;8060/tcp, :::8060-&gt;8060/tcp   b636ea56-cceb-42e9-bef9-b8850047be04_datastet_1\nIn this example you can see that Datastet is running on localhost:8060."
   },
   {
-    "objectID": "docs/workspaces/utility/asreview_cli.html#data-transfer-options",
-    "href": "docs/workspaces/utility/asreview_cli.html#data-transfer-options",
-    "title": "ASReview CLI",
-    "section": "Data transfer options",
-    "text": "Data transfer options\nWhen the workspace is up and running the first thing you probably need to do is transfer your dataset to the storage volume that is attached to your workspace. The storage volume can be found on the following directory path: ~/data/volume_2/. Create a folder there where you want to store your data. There are several methods to transfer data to the workspace, the recommended method depends on where the data is currently stored:\n\nData is stored on your PC\nWhen the dataset is stored on the computer you are working on now, you can use the scp command to tranfer files or folders, or the rsync command to ‘synchronize’ folders. If you have rsync installed, we would recommend this over scp, but scp is also fine.\nInstructions\n\n\nData is stored on Surfdrive (or Researchdrive, Onedrive, Dropbox, etc.)\nWhen data is stored on Surfdrive (or Researchdrive, Onedrive, Dropbox, etc.), data transfer can be done using Rclone.\nInstructions\n\n\nData is stored on Yoda\nWhen your data is stored on Yoda, data transfer can be done using iRODS icommands.\nInstructions"
-  },
-  {
-    "objectID": "docs/workspaces/utility/asreview_cli.html#usage",
-    "href": "docs/workspaces/utility/asreview_cli.html#usage",
-    "title": "ASReview CLI",
+    "objectID": "docs/workspaces/utility/grobid.html#usage",
+    "href": "docs/workspaces/utility/grobid.html#usage",
+    "title": "Grobid",
     "section": "Usage",
-    "text": "Usage\nASReview and all of its extensions are preinstalled in a ‘conda’ environment. To be able to use asreview, the user should run the following commands:\n/etc/miniconda/bin/conda init\nNow logout and re-login to apply the changes.\nconda activate asreview\nNow to test if ASReview is installed:\nasreview -h"
+    "text": "Usage\nSee the Grobid documentation, or the docs for the extensions you are using, for help with using the application."
   },
   {
-    "objectID": "docs/workspaces/utility/asreview_cli.html#tips",
-    "href": "docs/workspaces/utility/asreview_cli.html#tips",
-    "title": "ASReview CLI",
-    "section": "Tips",
-    "text": "Tips\nTo practice with navigation, finding files and folders, and running programs via a Linux command line interface check this Software Carpentries course"
-  },
-  {
-    "objectID": "docs/workspaces/plain/ubuntu.html#creation",
-    "href": "docs/workspaces/plain/ubuntu.html#creation",
-    "title": "Ubuntu",
+    "objectID": "docs/workspaces/experimental/asreview-app.html#creation",
+    "href": "docs/workspaces/experimental/asreview-app.html#creation",
+    "title": "ASReview Webapp",
     "section": "Creation",
     "text": "Creation\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
   },
   {
-    "objectID": "docs/workspaces/plain/ubuntu.html#access",
-    "href": "docs/workspaces/plain/ubuntu.html#access",
-    "title": "Ubuntu",
+    "objectID": "docs/workspaces/experimental/asreview-app.html#access",
+    "href": "docs/workspaces/experimental/asreview-app.html#access",
+    "title": "ASReview Webapp",
     "section": "Access",
     "text": "Access"
   },
   {
-    "objectID": "docs/workspaces/plain/ubuntu.html#data-transfer-options",
-    "href": "docs/workspaces/plain/ubuntu.html#data-transfer-options",
-    "title": "Ubuntu",
+    "objectID": "docs/workspaces/experimental/asreview-app.html#data-transfer-options",
+    "href": "docs/workspaces/experimental/asreview-app.html#data-transfer-options",
+    "title": "ASReview Webapp",
     "section": "Data transfer options",
     "text": "Data transfer options"
   },
   {
-    "objectID": "docs/workspaces/plain/ubuntu.html#usage",
-    "href": "docs/workspaces/plain/ubuntu.html#usage",
-    "title": "Ubuntu",
+    "objectID": "docs/workspaces/experimental/asreview-app.html#usage",
+    "href": "docs/workspaces/experimental/asreview-app.html#usage",
+    "title": "ASReview Webapp",
     "section": "Usage",
     "text": "Usage"
   },
   {
-    "objectID": "docs/workspaces/plain/ubuntu.html#tips",
-    "href": "docs/workspaces/plain/ubuntu.html#tips",
-    "title": "Ubuntu",
+    "objectID": "docs/workspaces/experimental/asreview-app.html#tips",
+    "href": "docs/workspaces/experimental/asreview-app.html#tips",
+    "title": "ASReview Webapp",
     "section": "Tips",
     "text": "Tips"
   },
   {
-    "objectID": "docs/workspaces/plain/windows.html#creation",
-    "href": "docs/workspaces/plain/windows.html#creation",
-    "title": "Windows",
+    "objectID": "docs/workspaces/plain/ubuntu-cuda.html#creation",
+    "href": "docs/workspaces/plain/ubuntu-cuda.html#creation",
+    "title": "Ubuntu CUDA",
     "section": "Creation",
     "text": "Creation\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
   },
   {
-    "objectID": "docs/workspaces/plain/windows.html#access",
-    "href": "docs/workspaces/plain/windows.html#access",
-    "title": "Windows",
+    "objectID": "docs/workspaces/plain/ubuntu-cuda.html#access",
+    "href": "docs/workspaces/plain/ubuntu-cuda.html#access",
+    "title": "Ubuntu CUDA",
     "section": "Access",
     "text": "Access"
   },
   {
-    "objectID": "docs/workspaces/plain/windows.html#data-transfer-options",
-    "href": "docs/workspaces/plain/windows.html#data-transfer-options",
-    "title": "Windows",
+    "objectID": "docs/workspaces/plain/ubuntu-cuda.html#data-transfer-options",
+    "href": "docs/workspaces/plain/ubuntu-cuda.html#data-transfer-options",
+    "title": "Ubuntu CUDA",
     "section": "Data transfer options",
     "text": "Data transfer options"
   },
   {
-    "objectID": "docs/workspaces/plain/windows.html#usage",
-    "href": "docs/workspaces/plain/windows.html#usage",
-    "title": "Windows",
+    "objectID": "docs/workspaces/plain/ubuntu-cuda.html#usage",
+    "href": "docs/workspaces/plain/ubuntu-cuda.html#usage",
+    "title": "Ubuntu CUDA",
     "section": "Usage",
     "text": "Usage"
   },
   {
-    "objectID": "docs/workspaces/plain/windows.html#tips",
-    "href": "docs/workspaces/plain/windows.html#tips",
-    "title": "Windows",
+    "objectID": "docs/workspaces/plain/ubuntu-cuda.html#tips",
+    "href": "docs/workspaces/plain/ubuntu-cuda.html#tips",
+    "title": "Ubuntu CUDA",
     "section": "Tips",
     "text": "Tips"
   },
   {
-    "objectID": "docs/workspaces/programming/matlab.html",
-    "href": "docs/workspaces/programming/matlab.html",
-    "title": "Matlab",
-    "section": "",
-    "text": "This workspace is an Ubuntu Desktop workspace with MATLAB installed. Ubuntu Desktop is a linux operating system but has a Graphical User interface so operating it is similar to using a Windows operating system.\n\n\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
+    "objectID": "docs/workspaces/plain/windows-cuda.html#creation",
+    "href": "docs/workspaces/plain/windows-cuda.html#creation",
+    "title": "Windows with CUDA",
+    "section": "Creation",
+    "text": "Creation\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
   },
   {
-    "objectID": "docs/workspaces/programming/matlab.html#description",
-    "href": "docs/workspaces/programming/matlab.html#description",
-    "title": "Matlab",
-    "section": "",
-    "text": "This workspace is an Ubuntu Desktop workspace with MATLAB installed. Ubuntu Desktop is a linux operating system but has a Graphical User interface so operating it is similar to using a Windows operating system.\n\n\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
-  },
-  {
-    "objectID": "docs/workspaces/programming/matlab.html#access",
-    "href": "docs/workspaces/programming/matlab.html#access",
-    "title": "Matlab",
+    "objectID": "docs/workspaces/plain/windows-cuda.html#access",
+    "href": "docs/workspaces/plain/windows-cuda.html#access",
+    "title": "Windows with CUDA",
     "section": "Access",
-    "text": "Access\nThis workspace can be accessed via the yellow ‘Access’ button. You need a TOTP to login to your workspace, see Workspace access with TOTP.\n\nData transfer options\nSee our data transfer manuals.\nThe recommended iBridges client for Yoda and iRODS is preinstalled."
+    "text": "Access"
   },
   {
-    "objectID": "docs/workspaces/programming/matlab.html#usage",
-    "href": "docs/workspaces/programming/matlab.html#usage",
-    "title": "Matlab",
+    "objectID": "docs/workspaces/plain/windows-cuda.html#data-transfer-options",
+    "href": "docs/workspaces/plain/windows-cuda.html#data-transfer-options",
+    "title": "Windows with CUDA",
+    "section": "Data transfer options",
+    "text": "Data transfer options"
+  },
+  {
+    "objectID": "docs/workspaces/plain/windows-cuda.html#usage",
+    "href": "docs/workspaces/plain/windows-cuda.html#usage",
+    "title": "Windows with CUDA",
     "section": "Usage",
-    "text": "Usage\n\nPrerequisites:\nYou will need a Mathworks account and add you UU licence to this account to be able to use MATLAB. Find instructions on how to do this here\n\n\nActivate MATLAB\nWhen logged in to the workspace:\n\nClick ‘Applications’ in the top left corner\nClick ‘Development’\nClick ‘Matlab Activate’, a wizard will open.\nClick ‘Next’ to activate Matlab using the internet\nLogin to your Mathworks account. For the password, it will ask you to get a 6 digit password from: https://nl.mathworks.com/mwa/otp\nContinue the wizard and choose the default options until you are finished.\n\n\n\nOpen MATLAB\n\nClick ‘Applications’ in the top left corner\nClick ‘Development’\nClick ‘Matlab’"
+    "text": "Usage"
   },
   {
-    "objectID": "docs/workspaces/programming/matlab.html#tips",
-    "href": "docs/workspaces/programming/matlab.html#tips",
-    "title": "Matlab",
+    "objectID": "docs/workspaces/plain/windows-cuda.html#tips",
+    "href": "docs/workspaces/plain/windows-cuda.html#tips",
+    "title": "Windows with CUDA",
     "section": "Tips",
     "text": "Tips"
   },
   {
-    "objectID": "docs/workspaces/programming/python-workbench-cuda.html",
-    "href": "docs/workspaces/programming/python-workbench-cuda.html",
-    "title": "Python Workbench CUDA",
+    "objectID": "docs/workspaces/programming/miniconda-cuda.html",
+    "href": "docs/workspaces/programming/miniconda-cuda.html",
+    "title": "Miniconda (shared) CUDA",
     "section": "",
-    "text": "This workspace type is identical to the Python Workbench Catalog Item, but additionally comes with the nvidia CUDA GPU drivers preinstalled.\nAs with the Python Workbench Catalog Items, there are two flavours:\n\nPython Workbench CUDA CLI (login via command line)\nPython Workbench CUDA Desktop (login via desktop)\n\nSimply choose the one that is most convenient to you, and see the documentation for Python Workbench."
+    "text": "This workspace type is identical to the Miniconda (shared) Catalog Item, but additionally comes with the nvidia CUDA GPU drivers preinstalled."
   },
   {
-    "objectID": "docs/workspaces/programming/sas.html",
-    "href": "docs/workspaces/programming/sas.html",
-    "title": "SAS",
+    "objectID": "docs/workspaces/programming/miniconda.html",
+    "href": "docs/workspaces/programming/miniconda.html",
+    "title": "Miniconda (shared)",
     "section": "",
-    "text": "This workspace is Windows workspace with SAS 9.4 installed.\n\n\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
+    "text": "This workspace types comes with the miniconda package manger preinstalled. All users on the system will share the same conda environment. Warning: although this can be convenient for some usecases, this can lead to unwanted conflicts/interference. In most cases, it is recommended to use separate conda environments for each user. You can use the Python Workbench Catalog Item for this.\nThere are various flavours of this Catalog Item:\n\nMiniconda CLI (shared) (login via command line)\nMiniconda Desktop (shared)(login via desktop)\n\nSimply choose the one that is most convenient to you.\nIf needed, we can help you to automatically install certain packages when the workspace is created. Please contact us for this."
   },
   {
-    "objectID": "docs/workspaces/programming/sas.html#description",
-    "href": "docs/workspaces/programming/sas.html#description",
-    "title": "SAS",
+    "objectID": "docs/workspaces/programming/miniconda.html#description",
+    "href": "docs/workspaces/programming/miniconda.html#description",
+    "title": "Miniconda (shared)",
     "section": "",
-    "text": "This workspace is Windows workspace with SAS 9.4 installed.\n\n\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
+    "text": "This workspace types comes with the miniconda package manger preinstalled. All users on the system will share the same conda environment. Warning: although this can be convenient for some usecases, this can lead to unwanted conflicts/interference. In most cases, it is recommended to use separate conda environments for each user. You can use the Python Workbench Catalog Item for this.\nThere are various flavours of this Catalog Item:\n\nMiniconda CLI (shared) (login via command line)\nMiniconda Desktop (shared)(login via desktop)\n\nSimply choose the one that is most convenient to you.\nIf needed, we can help you to automatically install certain packages when the workspace is created. Please contact us for this."
   },
   {
-    "objectID": "docs/workspaces/programming/sas.html#access",
-    "href": "docs/workspaces/programming/sas.html#access",
-    "title": "SAS",
-    "section": "Access",
-    "text": "Access\nThis workspace can be accessed via the Remote Desktop protocol. You need a TOTP to login to your workspace, see Workspace access with TOTP.\n\nData transfer options\nSee our data transfer manuals.\nThe recommended iBridges client for Yoda and iRODS is preinstalled."
-  },
-  {
-    "objectID": "docs/workspaces/programming/sas.html#usage",
-    "href": "docs/workspaces/programming/sas.html#usage",
-    "title": "SAS",
-    "section": "Usage",
-    "text": "Usage\n\nPreliminaries\nAll researchers from UU have access to SAS (you do not need to provide your own license).\nBy default, this workspace comes with a minimal installation of SAS (SAS BASE and STAT). If you need access to other products from the SAS suite, please contact us.\nPlease note that SAS installation takes a while (~20 minutes), so workspace creation can take about 40 minutes (as the operating system must also be configured).\n\n\nOpen SAS\nWhen logged in to the workspace:\n\nOpen the ‘Start’ menu\nYou will find SAS under the SAS9.4 subfolder in the ‘Start’ menu.\n\n\n\nOpen iBridges\niBridges, the application recommended for data management for Yoda and iRODS servers, is accessible via a shortcut on the desktop."
-  },
-  {
-    "objectID": "docs/workspaces/programming/r-workbench.html",
-    "href": "docs/workspaces/programming/r-workbench.html",
-    "title": "R Workbench",
-    "section": "",
-    "text": "This workspace types comes with R (the latest version of the 4.x range) preinstalled, as well as conda, which can be used to manage R environments. The ‘desktop’ flavour of this workspace (see below) also comes with the RStudio GUI application.\nThis workspace is suitable for users who want to run R scripts on the commandline. For most users, the RStudio catalog item, which provides in-browser access to the popular R development environment,might be more suitable.\nThere are various flavours of this Catalog Item:\n\nR Workbench CLI (login via command line)\nR Workbench Desktop (login via desktop)\n\nSimply choose the one that is most convenient to you.\nIf needed, we can help you to automatically install certain packages when the workspace is created, so that these are available inside the workspace immediately. Please contact us for this."
-  },
-  {
-    "objectID": "docs/workspaces/programming/r-workbench.html#description",
-    "href": "docs/workspaces/programming/r-workbench.html#description",
-    "title": "R Workbench",
-    "section": "",
-    "text": "This workspace types comes with R (the latest version of the 4.x range) preinstalled, as well as conda, which can be used to manage R environments. The ‘desktop’ flavour of this workspace (see below) also comes with the RStudio GUI application.\nThis workspace is suitable for users who want to run R scripts on the commandline. For most users, the RStudio catalog item, which provides in-browser access to the popular R development environment,might be more suitable.\nThere are various flavours of this Catalog Item:\n\nR Workbench CLI (login via command line)\nR Workbench Desktop (login via desktop)\n\nSimply choose the one that is most convenient to you.\nIf needed, we can help you to automatically install certain packages when the workspace is created, so that these are available inside the workspace immediately. Please contact us for this."
-  },
-  {
-    "objectID": "docs/workspaces/programming/r-workbench.html#creation",
-    "href": "docs/workspaces/programming/r-workbench.html#creation",
-    "title": "R Workbench",
+    "objectID": "docs/workspaces/programming/miniconda.html#creation",
+    "href": "docs/workspaces/programming/miniconda.html#creation",
+    "title": "Miniconda (shared)",
     "section": "Creation",
     "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
   },
   {
-    "objectID": "docs/workspaces/programming/r-workbench.html#access",
-    "href": "docs/workspaces/programming/r-workbench.html#access",
-    "title": "R Workbench",
-    "section": "Access",
-    "text": "Access\n\nR Workbench CLI\nFor the R Workbench CLI (command line) flavour of this Catalog Item, you can login using SSH.\n\n\nR Workbench Desktop\nFor the R Workbench Desktop flavour of this Catalog Item, you can login using your browser. It is also possible to login via SSH, as described above."
-  },
-  {
-    "objectID": "docs/workspaces/programming/r-workbench.html#usage",
-    "href": "docs/workspaces/programming/r-workbench.html#usage",
-    "title": "R Workbench",
+    "objectID": "docs/workspaces/programming/miniconda.html#usage",
+    "href": "docs/workspaces/programming/miniconda.html#usage",
+    "title": "Miniconda (shared)",
     "section": "Usage",
-    "text": "Usage\nThe first time (but only the first time) you login to a workspace of this type, miniconda will be setup for your user. You will see output like this:\n--- Running install scripts at first login: executing /home/username/runonce.d/runonce_conda.sh\nOnce this is complete, you will have access to the conda, R and littler commands, among others.\nTo start using conda, run the command conda init from a terminal.\n\nData transfer options\nSee our data transfer manuals.\nThe recommended iBridges client for Yoda and iRODS is preinstalled.\n\n\nRStudio\nOn the Desktop flavour of this workspace type RStudio will also be installed. You can find it in the main menu, under ‘Development’.\n\n\nInstalling additional software\nThe user has admin rights to install additional software on the system from the terminal."
+    "text": "Usage\nWhen you login, miniconda will be ready for use. See the miniconda docs.\nminiconda will be installed to /opt/miniconda.\n\nData transfer options\nSee our data transfer manuals.\nThe recommended iBridges client for Yoda and iRODS is preinstalled.\n\n\nInstalling additional software\nThe user has admin rights to install additional software on the system (on a terminal, use sudo &lt;yourcommand&gt;)."
   },
   {
-    "objectID": "docs/workspaces/programming/r-workbench.html#tips",
-    "href": "docs/workspaces/programming/r-workbench.html#tips",
-    "title": "R Workbench",
+    "objectID": "docs/workspaces/programming/miniconda.html#tips",
+    "href": "docs/workspaces/programming/miniconda.html#tips",
+    "title": "Miniconda (shared)",
     "section": "Tips",
     "text": "Tips\n\nWorkspace security\nPlease take a moment to read the security recommendations for VREs."
   },
   {
-    "objectID": "docs/workspaces/programming/jupyter-cuda.html",
-    "href": "docs/workspaces/programming/jupyter-cuda.html",
-    "title": "Jupyter Notebooks CUDA",
+    "objectID": "docs/workspaces/programming/python-workbench.html",
+    "href": "docs/workspaces/programming/python-workbench.html",
+    "title": "Python Workbench",
     "section": "",
-    "text": "This workspace type is identical to the Juputer Notebook Catalog Item, but additionally comes with the nvidia CUDA GPU drivers preinstalled."
+    "text": "This workspace types comes with various Python development tools already installed:\n\npyenv for managing different python versions\nminiconda for managing dependency environments\npoetry for an alternative way of running projects with specified dependencies\n\nThere are various flavours of this Catalog Item:\n\nPython Workbench CLI (login via command line)\nPython Workbench Desktop (login via desktop)\n\nSimply choose the one that is most convenient to you.\n\n\nNote that the above tools are installed separately for each user in your CO that has access to the machine. This means each user can have their own clean pyenv and miniconda environments.\nIf you prefer all users on the machine to have a single shared miniconda environment, please see the Miniconda Catalog Item."
   },
   {
-    "objectID": "docs/workspaces/programming/rstudio.html",
-    "href": "docs/workspaces/programming/rstudio.html",
-    "title": "RStudio",
+    "objectID": "docs/workspaces/programming/python-workbench.html#description",
+    "href": "docs/workspaces/programming/python-workbench.html#description",
+    "title": "Python Workbench",
     "section": "",
-    "text": "This workspace can be used to work with R and RStudio. RStudio can be accessed conveniently from the browser.\nThe workspace also comes with a (linux) terminal (aka command line) to install additional tools when relevant.\nThere are various flavours of this catalog item:\n\nR-Studio (comes with R v.3)\nR-Studio - R4 (comes with R v.4)\n\nUpon request we can help you to automate the installation of R packages or automate other installations (e.g. tools for data transfer). Automating these steps will make it easier to work following our best practices."
+    "text": "This workspace types comes with various Python development tools already installed:\n\npyenv for managing different python versions\nminiconda for managing dependency environments\npoetry for an alternative way of running projects with specified dependencies\n\nThere are various flavours of this Catalog Item:\n\nPython Workbench CLI (login via command line)\nPython Workbench Desktop (login via desktop)\n\nSimply choose the one that is most convenient to you.\n\n\nNote that the above tools are installed separately for each user in your CO that has access to the machine. This means each user can have their own clean pyenv and miniconda environments.\nIf you prefer all users on the machine to have a single shared miniconda environment, please see the Miniconda Catalog Item."
   },
   {
-    "objectID": "docs/workspaces/programming/rstudio.html#description",
-    "href": "docs/workspaces/programming/rstudio.html#description",
-    "title": "RStudio",
-    "section": "",
-    "text": "This workspace can be used to work with R and RStudio. RStudio can be accessed conveniently from the browser.\nThe workspace also comes with a (linux) terminal (aka command line) to install additional tools when relevant.\nThere are various flavours of this catalog item:\n\nR-Studio (comes with R v.3)\nR-Studio - R4 (comes with R v.4)\n\nUpon request we can help you to automate the installation of R packages or automate other installations (e.g. tools for data transfer). Automating these steps will make it easier to work following our best practices."
-  },
-  {
-    "objectID": "docs/workspaces/programming/rstudio.html#creation",
-    "href": "docs/workspaces/programming/rstudio.html#creation",
-    "title": "RStudio",
+    "objectID": "docs/workspaces/programming/python-workbench.html#creation",
+    "href": "docs/workspaces/programming/python-workbench.html#creation",
+    "title": "Python Workbench",
     "section": "Creation",
     "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
   },
   {
-    "objectID": "docs/workspaces/programming/rstudio.html#access",
-    "href": "docs/workspaces/programming/rstudio.html#access",
-    "title": "RStudio",
+    "objectID": "docs/workspaces/programming/python-workbench.html#access",
+    "href": "docs/workspaces/programming/python-workbench.html#access",
+    "title": "Python Workbench",
     "section": "Access",
-    "text": "Access\nThis workspace can be accessed via the yellow ‘Access’ button. You need a TOTP to login to your workspace, see Workspace access with TOTP.\n\nData transfer options\nSee our data transfer manuals."
+    "text": "Access\n\nPython Workbench CLI\nFor the Python Workbench CLI (command line) flavour of this Catalog Item, you can login using SSH.\n\n\nPython Workbench Desktop\nFor the Python Workbench Desktop flavour of this Catalog Item, you can login using your browser. It is also possible to login via SSH, as described above."
   },
   {
-    "objectID": "docs/workspaces/programming/rstudio.html#usage",
-    "href": "docs/workspaces/programming/rstudio.html#usage",
-    "title": "RStudio",
+    "objectID": "docs/workspaces/programming/python-workbench.html#usage",
+    "href": "docs/workspaces/programming/python-workbench.html#usage",
+    "title": "Python Workbench",
+    "section": "Usage",
+    "text": "Usage\nThe first time (but only the first time) you login to a workspace of this type, the Python tools (pyenv, miniconda and poetry) are installed for your user. This means that at first login you may experience a small delay (~1 minute maximum). During this time, if you are logging in on the command line, you will see that the applications are being installed for you:\n--- Running install scripts at first login: executing /home/username/runonce.d/01_pyenv-install.sh\n--- Running install scripts at first login: executing /home/username/runonce.d/10-poetry.sh\n--- Running install scripts at first login: executing /home/username/runonce.d/runonce_conda.sh\nWhen you are logged in you can start developing or running code. On the command line, you will have pyenv, miniconda, and poetry available.\nBy default, pyenv will be configured to use the most recent version of Python shipped with the operating system:\n$ pyenv versions\n  system\n* system-latest (set by /home/testuser/.pyenv/version)\nYou can use pyenv to install and select a different (newer) Python version: e.g. pyenv install 3.12, pyenv global 3.12. See the pyenv docs.\nTo start using miniconda environments, activate conda with the command conda init. See the miniconda docs.\nAlso see the poetry docs.\n\nData transfer options\nSee our data transfer manuals.\nThe recommended iBridges client for Yoda and iRODS is preinstalled.\n\n\nInstalling additional software\nThe user has admin rights to install additional software on the system from the terminal."
+  },
+  {
+    "objectID": "docs/workspaces/programming/python-workbench.html#tips",
+    "href": "docs/workspaces/programming/python-workbench.html#tips",
+    "title": "Python Workbench",
+    "section": "Tips",
+    "text": "Tips\n\nWorkspace security\nPlease take a moment to read the security recommendations for VREs."
+  },
+  {
+    "objectID": "docs/workspaces/programming/jupyter.html",
+    "href": "docs/workspaces/programming/jupyter.html",
+    "title": "Jupyter Notebooks",
+    "section": "",
+    "text": "This catalog item starts a JupyterLab environment in which you can work with Jupyter notebooks.\nJupyter is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations and narrative text. Uses include: data cleaning and transformation, numerical simulation, statistical modeling, data visualization, machine learning, and much more.\nAll users in your Collaborative Organisation can login to the workspace and will then be presented with their own notebook environment.\nIf needed, we can help you to automatically install certain packages when the workspace is created, so that these are available from inside the Jupyter environment immediately. Please contact us for this. However, you can of course also install your own dependencies from with the Notebook."
+  },
+  {
+    "objectID": "docs/workspaces/programming/jupyter.html#description",
+    "href": "docs/workspaces/programming/jupyter.html#description",
+    "title": "Jupyter Notebooks",
+    "section": "",
+    "text": "This catalog item starts a JupyterLab environment in which you can work with Jupyter notebooks.\nJupyter is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations and narrative text. Uses include: data cleaning and transformation, numerical simulation, statistical modeling, data visualization, machine learning, and much more.\nAll users in your Collaborative Organisation can login to the workspace and will then be presented with their own notebook environment.\nIf needed, we can help you to automatically install certain packages when the workspace is created, so that these are available from inside the Jupyter environment immediately. Please contact us for this. However, you can of course also install your own dependencies from with the Notebook."
+  },
+  {
+    "objectID": "docs/workspaces/programming/jupyter.html#creation",
+    "href": "docs/workspaces/programming/jupyter.html#creation",
+    "title": "Jupyter Notebooks",
+    "section": "Creation",
+    "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
+  },
+  {
+    "objectID": "docs/workspaces/programming/jupyter.html#access",
+    "href": "docs/workspaces/programming/jupyter.html#access",
+    "title": "Jupyter Notebooks",
+    "section": "Access",
+    "text": "Access\nYou can login to the workspace in your browser, via your ResearchCloud time-based password."
+  },
+  {
+    "objectID": "docs/workspaces/programming/jupyter.html#usage",
+    "href": "docs/workspaces/programming/jupyter.html#usage",
+    "title": "Jupyter Notebooks",
+    "section": "Usage",
+    "text": "Usage\nWhen logged in you are immediately presented with a JupyterLab environment in which you can work with different notebooks.\n\nData transfer options\nSee our data transfer manuals.\nYou will have to run the relevant commands for the data transfer method of your choice from within the JupyterLab terminal.\n\n\nInstalling additional software\nThe user has admin rights to install additional software on the system from the Jupyter terminal (use sudo &lt;command&gt;)."
+  },
+  {
+    "objectID": "docs/workspaces/programming/jupyter.html#tips",
+    "href": "docs/workspaces/programming/jupyter.html#tips",
+    "title": "Jupyter Notebooks",
+    "section": "Tips",
+    "text": "Tips\n\nWorkspace security\nPlease take a moment to read the security recommendations for VREs."
+  },
+  {
+    "objectID": "docs/workspaces/programming/stata.html#creation",
+    "href": "docs/workspaces/programming/stata.html#creation",
+    "title": "Stata",
+    "section": "Creation",
+    "text": "Creation\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
+  },
+  {
+    "objectID": "docs/workspaces/programming/stata.html#access",
+    "href": "docs/workspaces/programming/stata.html#access",
+    "title": "Stata",
+    "section": "Access",
+    "text": "Access\n\nData transfer options\nSee our data transfer manuals.\nThe recommended iBridges client for Yoda and iRODS is preinstalled."
+  },
+  {
+    "objectID": "docs/workspaces/programming/stata.html#usage",
+    "href": "docs/workspaces/programming/stata.html#usage",
+    "title": "Stata",
     "section": "Usage",
     "text": "Usage"
   },
   {
-    "objectID": "docs/workspaces/programming/rstudio.html#tips",
-    "href": "docs/workspaces/programming/rstudio.html#tips",
-    "title": "RStudio",
+    "objectID": "docs/workspaces/programming/stata.html#tips",
+    "href": "docs/workspaces/programming/stata.html#tips",
+    "title": "Stata",
     "section": "Tips",
     "text": "Tips"
   },
   {
-    "objectID": "docs/first-steps.html",
-    "href": "docs/first-steps.html",
-    "title": "First steps",
+    "objectID": "docs/glossary.html",
+    "href": "docs/glossary.html",
+    "title": "Glossary",
     "section": "",
-    "text": "This page describes all general steps that a user needs to perform to be able to start working with SURF Research cloud:\nContents:"
-  },
-  {
-    "objectID": "docs/first-steps.html#research-cloud-portal",
-    "href": "docs/first-steps.html#research-cloud-portal",
-    "title": "First steps",
-    "section": "Research Cloud portal",
-    "text": "Research Cloud portal\nWhen you have completed an onboarding procedure, you can login using the following link:\nResearch Cloud portal"
-  },
-  {
-    "objectID": "docs/first-steps.html#create-storage-volume",
-    "href": "docs/first-steps.html#create-storage-volume",
-    "title": "First steps",
-    "section": "Create storage volume",
-    "text": "Create storage volume\n\nWhy a storage volume?\nIn most cases you need to create a storage volume before you create a workspace. A workspace has limited storage and is temporary; all data stored on the workspace itself are deleted when a workspace is deleted. You can see a storage volume as a USB stick that you can attach to a workspace. A storage volume is persistent, so when you remove a workspace, all data on the storage volume will remain there. Storage volumes have good performance and are suitable for I/O-intensive computing tasks.\n\n\nHow to create a storage volume?\nIn the Research Cloud portal:\n\nClick ‘Create new storage’\nThe Wizard will guide you through the steps, some tips:\nChoose Storage HPC\nChoose the Collaborative Organization of the project for which you want to create the storage volume\nChoose the wallet with which you ‘pay’ for the Storage Unit\nChoose the size. It is not possible to resize it later on, so don’t choose too small, but also don’t choose too large because it will cost more credits.\nGive your storage volume a descriptive name so you can recognize it later on (recommended: use one or two words separated with and underscore)\n\n\n\nWhere can I find the storage volume?\nWhen you created a workspace and chose to attach a storage volume to the workspace (see below), the storage volume can be found under the directory path: /data Typically you want to create a project folder on the storage volume (e.g. /data/my_storage/my_project)."
-  },
-  {
-    "objectID": "docs/first-steps.html#create-a-workspace",
-    "href": "docs/first-steps.html#create-a-workspace",
-    "title": "First steps",
-    "section": "Create a workspace",
-    "text": "Create a workspace\nA workspace can also be called a ‘Virtual Machine’ or a ‘Server’. It is a temporary ‘remote’ machine that you can login to and that has you can use to perform analyses or model runs. You ‘pay’ for the machine with the credits from your wallet. The more compute power you select the more credits it costs and the sooner your wallet will be empty.\nSee here for detailed information on how to create a workspace."
-  },
-  {
-    "objectID": "docs/first-steps.html#pausing-resuming-deleting-a-workspace",
-    "href": "docs/first-steps.html#pausing-resuming-deleting-a-workspace",
-    "title": "First steps",
-    "section": "Pausing, Resuming, Deleting a workspace",
-    "text": "Pausing, Resuming, Deleting a workspace\nYou always need a wallet to create a workspace, by default a workspace can only be paused, resumed and deleted by the one that has created it. You can use SRAM to give persons permission to PAUSE, RESUME and DELETE a workspace that is created by someone else. It is also possible to share a wallet with a member of your CO in SRAM. See Add collaborators to existing project."
-  },
-  {
-    "objectID": "docs/first-steps.html#getting-access-to-your-workspace",
-    "href": "docs/first-steps.html#getting-access-to-your-workspace",
-    "title": "First steps",
-    "section": "Getting access to your workspace",
-    "text": "Getting access to your workspace\nThere are several ways to login to your workspace.\n\nBrowser access to a desktop environment\n\nWhen?\nFor workspaces that provide a graphical interface to a desktop environment. For instance: Ubuntu Desktop, Python Workbench, Matlab. See the workspace catalog for an overview of Catalog Items that provide this kind of access.\nFor these workspace types, this is what you will see when you click the yellow “Access” button:\n\n\n\nHow?\nFor these workspaces, you will need to setup a Time Based Password for your Research Cloud account.\nSteps:\n\nClick the yellow “Access button” for your workspace.\n\nYou will be taken to your workspace’s address, e.g. (https://workspacename.src.surf-hosted.nl).\n\nYou will see a prompt asking you to login to the Linux workpace.\nAs a username, enter your Research Cloud username (not your Solis ID).\n\nYou can lookup your username in the Research Cloud portal under the “Profile” tab.\n\nAs a password, enter your time-based (TOTP) password for Research Cloud (not for your Solis ID).\n\nOnce you are logged in, you will be presented with a desktop environment in your browser. The environment used on ResearchCloud is a lightweight desktop called Xfce. See here for help with it.\n\n\n\nBrowser access to a webapplication\n\nWhen?\nMany catalog items provide you with a webapplication that can be accessed from your browser. For instance: Jupyter Notebooks, RStudio. See the workspace catalog for an overview of Catalog Items that provide this kind of access.\n\n\nHow?\nThere are two different forms of browser-based access to webapplications on Research Cloud:\n\nWebapplications that support Single Sign-on.\nThese will present you with the normal login flow (including two-factor authentication) for your institutional login. That means Solis ID for UU students and staff, but collaborators from other institutions will use their own.\nSince you are often already recently signed in to your institutional login to enter the Research Cloud, you will often not even need to authenticate again! Simply click the yellow “Access” button for your workspace.\n\n\nWebapplications that require a time-based password\nFor these workspaces, you will need to setup a Time Based Password for your Research Cloud account.\nSteps:\n\nClick the yellow “Access button” for your workspace.\n\nYou will be taken to your workspace’s address.\n\nYou will see a prompt asking you to login to the Linux workpace.\nAs a username, enter your Research Cloud username (not your Solis ID).\n\nYou can lookup your username in the Research Cloud portal under the “Profile” tab.\n\nAs a password, enter your time-based (TOTP) password for Research Cloud (not for your Solis ID).\n\n\n\n\n\nRemote Desktop Protocol\n\nWhen?\nThis method can be used for most Windows Server workspaces, and any other workspaces that have an URL starting with RDP:// when you click on the workspace in the research cloud portal.\n\n\nHow?\nTo be able to login via RDP you need to setup a Time Based Password for your Research Cloud account.\nYou need an Remote Desktop client to be able to connect via RDP. On a Windows and MacOS PC you can use an application called ‘Remote Desktop’, on Linux we recommend ‘Remmina’.\nThe username that you need to type when you want to access the workspace can be found under the ‘Profile’ tab in the Research Cloud portal. The password to fill in is the Time based password (aka TOTP password) from the authenticator app on your mobile phone.\n\n\n\nSSH\n\nWhen?\nFor some workspaces this is the only option to login to your workspace. These are typically command line only workspaces (e.g. Ubuntu 20.04 command line).\nSince connection via SSH also works for most other workspace types, it could also be a useful option in some other scenarios, e.g. when you want to copy a file from your laptop to the workspace.\n\n\nHow?\nThe research cloud documentation provides instructions on how to set up SSH for research cloud.\nTo connect to the workspace from a Windows computer you need specific software to use a ‘shell’ (also known as ‘terminal’), examples include Git Bash, PuTTY and MobaXterm. If you need to install something new, we would recommend MobaXterm.\nOn MacOS and Linux machines you can use the standard ‘Terminal’."
-  },
-  {
-    "objectID": "docs/first-steps.html#getting-data-inside-your-workspace",
-    "href": "docs/first-steps.html#getting-data-inside-your-workspace",
-    "title": "First steps",
-    "section": "Getting data inside your workspace",
-    "text": "Getting data inside your workspace\n\nMounting online storage\nIf you have a Research Drive account, you can mount it in your workspace. This method is most easy, and works well for working with small datasets (e.g. &lt;1 GB).\n\n\nTransferring data\nIn many cases it is more reliable to get a copy of your data on the Storage unit that is attached to your workspace.\nSee the data transfer manuals for the most common ways of transferring data to your workspace.\nAdditionally, on some workspaces, the following methods may also be available:\n\nUpload from your laptop (Jupyter Notebook and Rstudio Workspaces).\nDownload using the internet browser (on Ubuntu Desktop and Windows workspaces, for data stored on e.g. SURFdrive, OnedDive, etc.)."
-  },
-  {
-    "objectID": "docs/manuals.html",
-    "href": "docs/manuals.html",
-    "title": "User Manuals",
-    "section": "",
-    "text": "On this page we share manuals for a variety of use cases and tasks.\n\nData Transfer\n\nData Transfer to and from Yoda using iBridges\nData Transfer to and from Yoda using iCommands\nData Transfer from your computer using scp and rsync\nData Transfer between Research Cloud and SURFdrive\n\n\n\nSecurity\n\nEnabling automatic security updates on Ubuntu Linux\n\n\n\nOther\n\nRunning long jobs"
-  },
-  {
-    "objectID": "docs/terms-of-use.html",
-    "href": "docs/terms-of-use.html",
-    "title": "Terms of Use",
-    "section": "",
-    "text": "The Virtual Research Environment (VRE) service of Utrecht University is based on SURF services. The following policies and conditions of use of the UU are applicable for use of this service:\n\nOverview of Research Data Management Policies, codes of conduct and laws\nGeneral university’s user regulations for ICT platforms\n\nIn addition to the UU terms of use, the following Acceptable Use policies at SURF are applicable:\n\nSURF Research Cloud Acceptable Use Policy\nSURF SRAM Acceptable Use Policy\n\nThe VRE Privacy Policy is also applicable.\nBy accepting this invitation, users agree to adhere to the terms and conditions in the documents listed above.\nFor more information about the responsible use of the VRE service, see practical tips for responsible use.\nDuring the intake meeting an end date for your VRE’s project account (called a Collaboration or “CO”) will be agreed, after which you will loose access to it. You will be notified 10 days prior to the agreed end date, and you can always request that the lifetime of the CO be extended by contacting us.\nLast update: May 29, 2024."
+    "text": "Catalog Item\nA catalog item is a workspace configuration that you can select from the catalog when you create a new workspace. A workspace can be configured with a certain Operating system and other applications or software that will installed on the workspace.\n\n\nCollaboration\nA Collaboration (also known as Collaborative Organisation, or CO) is an ad-hoc group of people who are allowed to work together by sharing resources. As a scientist you can easily make a CO. That way, you can invite other researchers to join your efforts in Research Cloud, and you can easily assign different roles to collaborators (such as the ‘admin’ role for administering the CO). More information.\n\n\nDPA\nData Processing Agreement A legally binding document to be agreed upon between the data controller and the data processor in writing or in electronic form. It regulates the particularities of data processing – such as its scope and purpose – as well as the relationship between the controller and the processor.\n\n\nSmall Compute application\nA relatively simple request procedure for obtaining a maximum of 50.000 CPU hours and/or 5.000 GPU hours for your project. More info\n\n\nSRAM\nSRAM (SURF Research Access Management) is a service to manage access to research resources, intended for Dutch led research collaborations. More information.\n\n\nStorage volumes\nAn ‘External’ Storage volume can be created from the main dashboard in the research cloud portal. This storage is persistent which means that any data that you put here will still be there when a workspace is deleted. You need to create a storage volume first and attach it when you create a new workspace. The storage volume can than typically be found in the workspace under the following directory path: ~/data/volume_2. More info\n\n\nVRE\nVirtual Research Environment is the CO including the entire linked research services, linked other systems, applied software and used data.\n\n\nVRE support\nThe support at UU level for this service is done by Research Data Management Services. The team consists of service administrators for arranging access and accounts and research engineers who can advice on usage and can help develop proof of concepts.\n\n\nWallet\nA wallet holds the budget for your use of the Research Cloud. See the getting started page for the options to obtain a wallet for Research cloud. When you create a workspace you need to select a wallet that can be charged for the use of the resources.\n\n\nWorkspace\nA workspace is a running Virtual Machine (or aka server) that you can use as a Virtual Research Environment. You can create a workspace in the Research Cloud portal. The workspace will be created somewhere in ‘the cloud’, and when it is up and running you can login to it, transfer data to it and start working. The workspace typically will have some software installed on it (e.g. RStudio or Jupyter Notebook)."
   },
   {
     "objectID": "docs/responsible-use.html",
@@ -644,403 +567,494 @@
     "text": "Relevant policies\n\nTerms of use\nPrivacy policies"
   },
   {
-    "objectID": "docs/glossary.html",
-    "href": "docs/glossary.html",
-    "title": "Glossary",
+    "objectID": "docs/terms-of-use.html",
+    "href": "docs/terms-of-use.html",
+    "title": "Terms of Use",
     "section": "",
-    "text": "Catalog Item\nA catalog item is a workspace configuration that you can select from the catalog when you create a new workspace. A workspace can be configured with a certain Operating system and other applications or software that will installed on the workspace.\n\n\nCollaboration\nA Collaboration (also known as Collaborative Organisation, or CO) is an ad-hoc group of people who are allowed to work together by sharing resources. As a scientist you can easily make a CO. That way, you can invite other researchers to join your efforts in Research Cloud, and you can easily assign different roles to collaborators (such as the ‘admin’ role for administering the CO). More information.\n\n\nDPA\nData Processing Agreement A legally binding document to be agreed upon between the data controller and the data processor in writing or in electronic form. It regulates the particularities of data processing – such as its scope and purpose – as well as the relationship between the controller and the processor.\n\n\nSmall Compute application\nA relatively simple request procedure for obtaining a maximum of 50.000 CPU hours and/or 5.000 GPU hours for your project. More info\n\n\nSRAM\nSRAM (SURF Research Access Management) is a service to manage access to research resources, intended for Dutch led research collaborations. More information.\n\n\nStorage volumes\nAn ‘External’ Storage volume can be created from the main dashboard in the research cloud portal. This storage is persistent which means that any data that you put here will still be there when a workspace is deleted. You need to create a storage volume first and attach it when you create a new workspace. The storage volume can than typically be found in the workspace under the following directory path: ~/data/volume_2. More info\n\n\nVRE\nVirtual Research Environment is the CO including the entire linked research services, linked other systems, applied software and used data.\n\n\nVRE support\nThe support at UU level for this service is done by Research Data Management Services. The team consists of service administrators for arranging access and accounts and research engineers who can advice on usage and can help develop proof of concepts.\n\n\nWallet\nA wallet holds the budget for your use of the Research Cloud. See the getting started page for the options to obtain a wallet for Research cloud. When you create a workspace you need to select a wallet that can be charged for the use of the resources.\n\n\nWorkspace\nA workspace is a running Virtual Machine (or aka server) that you can use as a Virtual Research Environment. You can create a workspace in the Research Cloud portal. The workspace will be created somewhere in ‘the cloud’, and when it is up and running you can login to it, transfer data to it and start working. The workspace typically will have some software installed on it (e.g. RStudio or Jupyter Notebook)."
+    "text": "The Virtual Research Environment (VRE) service of Utrecht University is based on SURF services. The following policies and conditions of use of the UU are applicable for use of this service:\n\nOverview of Research Data Management Policies, codes of conduct and laws\nGeneral university’s user regulations for ICT platforms\n\nIn addition to the UU terms of use, the following Acceptable Use policies at SURF are applicable:\n\nSURF Research Cloud Acceptable Use Policy\nSURF SRAM Acceptable Use Policy\n\nThe VRE Privacy Policy is also applicable.\nBy accepting this invitation, users agree to adhere to the terms and conditions in the documents listed above.\nFor more information about the responsible use of the VRE service, see practical tips for responsible use.\nDuring the intake meeting an end date for your VRE’s project account (called a Collaboration or “CO”) will be agreed, after which you will loose access to it. You will be notified 10 days prior to the agreed end date, and you can always request that the lifetime of the CO be extended by contacting us.\nLast update: May 29, 2024."
   },
   {
-    "objectID": "docs/workspaces/programming/stata.html#creation",
-    "href": "docs/workspaces/programming/stata.html#creation",
-    "title": "Stata",
-    "section": "Creation",
-    "text": "Creation\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
-  },
-  {
-    "objectID": "docs/workspaces/programming/stata.html#access",
-    "href": "docs/workspaces/programming/stata.html#access",
-    "title": "Stata",
-    "section": "Access",
-    "text": "Access\n\nData transfer options\nSee our data transfer manuals.\nThe recommended iBridges client for Yoda and iRODS is preinstalled."
-  },
-  {
-    "objectID": "docs/workspaces/programming/stata.html#usage",
-    "href": "docs/workspaces/programming/stata.html#usage",
-    "title": "Stata",
-    "section": "Usage",
-    "text": "Usage"
-  },
-  {
-    "objectID": "docs/workspaces/programming/stata.html#tips",
-    "href": "docs/workspaces/programming/stata.html#tips",
-    "title": "Stata",
-    "section": "Tips",
-    "text": "Tips"
-  },
-  {
-    "objectID": "docs/workspaces/programming/jupyter.html",
-    "href": "docs/workspaces/programming/jupyter.html",
-    "title": "Jupyter Notebooks",
+    "objectID": "docs/manuals.html",
+    "href": "docs/manuals.html",
+    "title": "User Manuals",
     "section": "",
-    "text": "This catalog item starts a JupyterLab environment in which you can work with Jupyter notebooks.\nJupyter is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations and narrative text. Uses include: data cleaning and transformation, numerical simulation, statistical modeling, data visualization, machine learning, and much more.\nAll users in your Collaborative Organisation can login to the workspace and will then be presented with their own notebook environment.\nIf needed, we can help you to automatically install certain packages when the workspace is created, so that these are available from inside the Jupyter environment immediately. Please contact us for this. However, you can of course also install your own dependencies from with the Notebook."
+    "text": "On this page we share manuals for a variety of use cases and tasks.\n\nData Transfer\n\nData Transfer to and from Yoda using iBridges\nData Transfer to and from Yoda using iCommands\nData Transfer from your computer using scp and rsync\nData Transfer between Research Cloud and SURFdrive\n\n\n\nSecurity\n\nEnabling automatic security updates on Ubuntu Linux\n\n\n\nCatalog Items\n\nRequesting access to catalog items\n\n\n\nOther\n\nRunning long jobs"
   },
   {
-    "objectID": "docs/workspaces/programming/jupyter.html#description",
-    "href": "docs/workspaces/programming/jupyter.html#description",
-    "title": "Jupyter Notebooks",
+    "objectID": "docs/first-steps.html",
+    "href": "docs/first-steps.html",
+    "title": "First steps",
     "section": "",
-    "text": "This catalog item starts a JupyterLab environment in which you can work with Jupyter notebooks.\nJupyter is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations and narrative text. Uses include: data cleaning and transformation, numerical simulation, statistical modeling, data visualization, machine learning, and much more.\nAll users in your Collaborative Organisation can login to the workspace and will then be presented with their own notebook environment.\nIf needed, we can help you to automatically install certain packages when the workspace is created, so that these are available from inside the Jupyter environment immediately. Please contact us for this. However, you can of course also install your own dependencies from with the Notebook."
+    "text": "This page describes all general steps that a user needs to perform to be able to start working with SURF Research cloud:\nContents:"
   },
   {
-    "objectID": "docs/workspaces/programming/jupyter.html#creation",
-    "href": "docs/workspaces/programming/jupyter.html#creation",
-    "title": "Jupyter Notebooks",
+    "objectID": "docs/first-steps.html#research-cloud-portal",
+    "href": "docs/first-steps.html#research-cloud-portal",
+    "title": "First steps",
+    "section": "Research Cloud portal",
+    "text": "Research Cloud portal\nWhen you have completed an onboarding procedure, you can login using the following link:\nResearch Cloud portal"
+  },
+  {
+    "objectID": "docs/first-steps.html#create-storage-volume",
+    "href": "docs/first-steps.html#create-storage-volume",
+    "title": "First steps",
+    "section": "Create storage volume",
+    "text": "Create storage volume\n\nWhy a storage volume?\nIn most cases you need to create a storage volume before you create a workspace. A workspace has limited storage and is temporary; all data stored on the workspace itself are deleted when a workspace is deleted. You can see a storage volume as a USB stick that you can attach to a workspace. A storage volume is persistent, so when you remove a workspace, all data on the storage volume will remain there. Storage volumes have good performance and are suitable for I/O-intensive computing tasks.\n\n\nHow to create a storage volume?\nIn the Research Cloud portal:\n\nClick ‘Create new storage’\nThe Wizard will guide you through the steps, some tips:\nChoose Storage HPC\nChoose the Collaborative Organization of the project for which you want to create the storage volume\nChoose the wallet with which you ‘pay’ for the Storage Unit\nChoose the size. It is not possible to resize it later on, so don’t choose too small, but also don’t choose too large because it will cost more credits.\nGive your storage volume a descriptive name so you can recognize it later on (recommended: use one or two words separated with and underscore)\n\n\n\nWhere can I find the storage volume?\nWhen you created a workspace and chose to attach a storage volume to the workspace (see below), the storage volume can be found under the directory path: /data Typically you want to create a project folder on the storage volume (e.g. /data/my_storage/my_project)."
+  },
+  {
+    "objectID": "docs/first-steps.html#create-a-workspace",
+    "href": "docs/first-steps.html#create-a-workspace",
+    "title": "First steps",
+    "section": "Create a workspace",
+    "text": "Create a workspace\nA workspace can also be called a ‘Virtual Machine’ or a ‘Server’. It is a temporary ‘remote’ machine that you can login to and that has you can use to perform analyses or model runs. You ‘pay’ for the machine with the credits from your wallet. The more compute power you select the more credits it costs and the sooner your wallet will be empty.\nSee here for detailed information on how to create a workspace."
+  },
+  {
+    "objectID": "docs/first-steps.html#pausing-resuming-deleting-a-workspace",
+    "href": "docs/first-steps.html#pausing-resuming-deleting-a-workspace",
+    "title": "First steps",
+    "section": "Pausing, Resuming, Deleting a workspace",
+    "text": "Pausing, Resuming, Deleting a workspace\nYou always need a wallet to create a workspace, by default a workspace can only be paused, resumed and deleted by the one that has created it. You can use SRAM to give persons permission to PAUSE, RESUME and DELETE a workspace that is created by someone else. It is also possible to share a wallet with a member of your CO in SRAM. See Add collaborators to existing project."
+  },
+  {
+    "objectID": "docs/first-steps.html#getting-access-to-your-workspace",
+    "href": "docs/first-steps.html#getting-access-to-your-workspace",
+    "title": "First steps",
+    "section": "Getting access to your workspace",
+    "text": "Getting access to your workspace\nThere are several ways to login to your workspace.\n\nBrowser access to a desktop environment\n\nWhen?\nFor workspaces that provide a graphical interface to a desktop environment. For instance: Ubuntu Desktop, Python Workbench, Matlab. See the workspace catalog for an overview of Catalog Items that provide this kind of access.\nFor these workspace types, this is what you will see when you click the yellow “Access” button:\n\n\n\nHow?\nFor these workspaces, you will need to setup a Time Based Password for your Research Cloud account.\nSteps:\n\nClick the yellow “Access button” for your workspace.\n\nYou will be taken to your workspace’s address, e.g. (https://workspacename.src.surf-hosted.nl).\n\nYou will see a prompt asking you to login to the Linux workpace.\nAs a username, enter your Research Cloud username (not your Solis ID).\n\nYou can lookup your username in the Research Cloud portal under the “Profile” tab.\n\nAs a password, enter your time-based (TOTP) password for Research Cloud (not for your Solis ID).\n\nOnce you are logged in, you will be presented with a desktop environment in your browser. The environment used on ResearchCloud is a lightweight desktop called Xfce. See here for help with it.\n\n\n\nBrowser access to a webapplication\n\nWhen?\nMany catalog items provide you with a webapplication that can be accessed from your browser. For instance: Jupyter Notebooks, RStudio. See the workspace catalog for an overview of Catalog Items that provide this kind of access.\n\n\nHow?\nThere are two different forms of browser-based access to webapplications on Research Cloud:\n\nWebapplications that support Single Sign-on.\nThese will present you with the normal login flow (including two-factor authentication) for your institutional login. That means Solis ID for UU students and staff, but collaborators from other institutions will use their own.\nSince you are often already recently signed in to your institutional login to enter the Research Cloud, you will often not even need to authenticate again! Simply click the yellow “Access” button for your workspace.\n\n\nWebapplications that require a time-based password\nFor these workspaces, you will need to setup a Time Based Password for your Research Cloud account.\nSteps:\n\nClick the yellow “Access button” for your workspace.\n\nYou will be taken to your workspace’s address.\n\nYou will see a prompt asking you to login to the Linux workpace.\nAs a username, enter your Research Cloud username (not your Solis ID).\n\nYou can lookup your username in the Research Cloud portal under the “Profile” tab.\n\nAs a password, enter your time-based (TOTP) password for Research Cloud (not for your Solis ID).\n\n\n\n\n\nRemote Desktop Protocol\n\nWhen?\nThis method can be used for most Windows Server workspaces, and any other workspaces that have an URL starting with RDP:// when you click on the workspace in the research cloud portal.\n\n\nHow?\nTo be able to login via RDP you need to setup a Time Based Password for your Research Cloud account.\nYou need an Remote Desktop client to be able to connect via RDP. On a Windows and MacOS PC you can use an application called ‘Remote Desktop’, on Linux we recommend ‘Remmina’.\nThe username that you need to type when you want to access the workspace can be found under the ‘Profile’ tab in the Research Cloud portal. The password to fill in is the Time based password (aka TOTP password) from the authenticator app on your mobile phone.\n\n\n\nSSH\n\nWhen?\nFor some workspaces this is the only option to login to your workspace. These are typically command line only workspaces (e.g. Ubuntu 20.04 command line).\nSince connection via SSH also works for most other workspace types, it could also be a useful option in some other scenarios, e.g. when you want to copy a file from your laptop to the workspace.\n\n\nHow?\nThe research cloud documentation provides instructions on how to set up SSH for research cloud.\nTo connect to the workspace from a Windows computer you need specific software to use a ‘shell’ (also known as ‘terminal’), examples include Git Bash, PuTTY and MobaXterm. If you need to install something new, we would recommend MobaXterm.\nOn MacOS and Linux machines you can use the standard ‘Terminal’."
+  },
+  {
+    "objectID": "docs/first-steps.html#getting-data-inside-your-workspace",
+    "href": "docs/first-steps.html#getting-data-inside-your-workspace",
+    "title": "First steps",
+    "section": "Getting data inside your workspace",
+    "text": "Getting data inside your workspace\n\nMounting online storage\nIf you have a Research Drive account, you can mount it in your workspace. This method is most easy, and works well for working with small datasets (e.g. &lt;1 GB).\n\n\nTransferring data\nIn many cases it is more reliable to get a copy of your data on the Storage unit that is attached to your workspace.\nSee the data transfer manuals for the most common ways of transferring data to your workspace.\nAdditionally, on some workspaces, the following methods may also be available:\n\nUpload from your laptop (Jupyter Notebook and Rstudio Workspaces).\nDownload using the internet browser (on Ubuntu Desktop and Windows workspaces, for data stored on e.g. SURFdrive, OnedDive, etc.)."
+  },
+  {
+    "objectID": "docs/workspaces/programming/rstudio.html",
+    "href": "docs/workspaces/programming/rstudio.html",
+    "title": "RStudio",
+    "section": "",
+    "text": "This workspace can be used to work with R and RStudio. RStudio can be accessed conveniently from the browser.\nThe workspace also comes with a (linux) terminal (aka command line) to install additional tools when relevant.\nThere are various flavours of this catalog item:\n\nR-Studio (comes with R v.3)\nR-Studio - R4 (comes with R v.4)\n\nUpon request we can help you to automate the installation of R packages or automate other installations (e.g. tools for data transfer). Automating these steps will make it easier to work following our best practices."
+  },
+  {
+    "objectID": "docs/workspaces/programming/rstudio.html#description",
+    "href": "docs/workspaces/programming/rstudio.html#description",
+    "title": "RStudio",
+    "section": "",
+    "text": "This workspace can be used to work with R and RStudio. RStudio can be accessed conveniently from the browser.\nThe workspace also comes with a (linux) terminal (aka command line) to install additional tools when relevant.\nThere are various flavours of this catalog item:\n\nR-Studio (comes with R v.3)\nR-Studio - R4 (comes with R v.4)\n\nUpon request we can help you to automate the installation of R packages or automate other installations (e.g. tools for data transfer). Automating these steps will make it easier to work following our best practices."
+  },
+  {
+    "objectID": "docs/workspaces/programming/rstudio.html#creation",
+    "href": "docs/workspaces/programming/rstudio.html#creation",
+    "title": "RStudio",
     "section": "Creation",
     "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
   },
   {
-    "objectID": "docs/workspaces/programming/jupyter.html#access",
-    "href": "docs/workspaces/programming/jupyter.html#access",
-    "title": "Jupyter Notebooks",
+    "objectID": "docs/workspaces/programming/rstudio.html#access",
+    "href": "docs/workspaces/programming/rstudio.html#access",
+    "title": "RStudio",
     "section": "Access",
-    "text": "Access\nYou can login to the workspace in your browser, via your ResearchCloud time-based password."
+    "text": "Access\nThis workspace can be accessed via the yellow ‘Access’ button. You need a TOTP to login to your workspace, see Workspace access with TOTP.\n\nData transfer options\nSee our data transfer manuals."
   },
   {
-    "objectID": "docs/workspaces/programming/jupyter.html#usage",
-    "href": "docs/workspaces/programming/jupyter.html#usage",
-    "title": "Jupyter Notebooks",
+    "objectID": "docs/workspaces/programming/rstudio.html#usage",
+    "href": "docs/workspaces/programming/rstudio.html#usage",
+    "title": "RStudio",
     "section": "Usage",
-    "text": "Usage\nWhen logged in you are immediately presented with a JupyterLab environment in which you can work with different notebooks.\n\nData transfer options\nSee our data transfer manuals.\nYou will have to run the relevant commands for the data transfer method of your choice from within the JupyterLab terminal.\n\n\nInstalling additional software\nThe user has admin rights to install additional software on the system from the Jupyter terminal (use sudo &lt;command&gt;)."
+    "text": "Usage"
   },
   {
-    "objectID": "docs/workspaces/programming/jupyter.html#tips",
-    "href": "docs/workspaces/programming/jupyter.html#tips",
-    "title": "Jupyter Notebooks",
+    "objectID": "docs/workspaces/programming/rstudio.html#tips",
+    "href": "docs/workspaces/programming/rstudio.html#tips",
+    "title": "RStudio",
+    "section": "Tips",
+    "text": "Tips"
+  },
+  {
+    "objectID": "docs/workspaces/programming/jupyter-cuda.html",
+    "href": "docs/workspaces/programming/jupyter-cuda.html",
+    "title": "Jupyter Notebooks CUDA",
+    "section": "",
+    "text": "This workspace type is identical to the Juputer Notebook Catalog Item, but additionally comes with the nvidia CUDA GPU drivers preinstalled."
+  },
+  {
+    "objectID": "docs/workspaces/programming/r-workbench.html",
+    "href": "docs/workspaces/programming/r-workbench.html",
+    "title": "R Workbench",
+    "section": "",
+    "text": "This workspace types comes with R (the latest version of the 4.x range) preinstalled, as well as conda, which can be used to manage R environments. The ‘desktop’ flavour of this workspace (see below) also comes with the RStudio GUI application.\nThis workspace is suitable for users who want to run R scripts on the commandline. For most users, the RStudio catalog item, which provides in-browser access to the popular R development environment,might be more suitable.\nThere are various flavours of this Catalog Item:\n\nR Workbench CLI (login via command line)\nR Workbench Desktop (login via desktop)\n\nSimply choose the one that is most convenient to you.\nIf needed, we can help you to automatically install certain packages when the workspace is created, so that these are available inside the workspace immediately. Please contact us for this."
+  },
+  {
+    "objectID": "docs/workspaces/programming/r-workbench.html#description",
+    "href": "docs/workspaces/programming/r-workbench.html#description",
+    "title": "R Workbench",
+    "section": "",
+    "text": "This workspace types comes with R (the latest version of the 4.x range) preinstalled, as well as conda, which can be used to manage R environments. The ‘desktop’ flavour of this workspace (see below) also comes with the RStudio GUI application.\nThis workspace is suitable for users who want to run R scripts on the commandline. For most users, the RStudio catalog item, which provides in-browser access to the popular R development environment,might be more suitable.\nThere are various flavours of this Catalog Item:\n\nR Workbench CLI (login via command line)\nR Workbench Desktop (login via desktop)\n\nSimply choose the one that is most convenient to you.\nIf needed, we can help you to automatically install certain packages when the workspace is created, so that these are available inside the workspace immediately. Please contact us for this."
+  },
+  {
+    "objectID": "docs/workspaces/programming/r-workbench.html#creation",
+    "href": "docs/workspaces/programming/r-workbench.html#creation",
+    "title": "R Workbench",
+    "section": "Creation",
+    "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
+  },
+  {
+    "objectID": "docs/workspaces/programming/r-workbench.html#access",
+    "href": "docs/workspaces/programming/r-workbench.html#access",
+    "title": "R Workbench",
+    "section": "Access",
+    "text": "Access\n\nR Workbench CLI\nFor the R Workbench CLI (command line) flavour of this Catalog Item, you can login using SSH.\n\n\nR Workbench Desktop\nFor the R Workbench Desktop flavour of this Catalog Item, you can login using your browser. It is also possible to login via SSH, as described above."
+  },
+  {
+    "objectID": "docs/workspaces/programming/r-workbench.html#usage",
+    "href": "docs/workspaces/programming/r-workbench.html#usage",
+    "title": "R Workbench",
+    "section": "Usage",
+    "text": "Usage\nThe first time (but only the first time) you login to a workspace of this type, miniconda will be setup for your user. You will see output like this:\n--- Running install scripts at first login: executing /home/username/runonce.d/runonce_conda.sh\nOnce this is complete, you will have access to the conda, R and littler commands, among others.\nTo start using conda, run the command conda init from a terminal.\n\nData transfer options\nSee our data transfer manuals.\nThe recommended iBridges client for Yoda and iRODS is preinstalled.\n\n\nRStudio\nOn the Desktop flavour of this workspace type RStudio will also be installed. You can find it in the main menu, under ‘Development’.\n\n\nInstalling additional software\nThe user has admin rights to install additional software on the system from the terminal."
+  },
+  {
+    "objectID": "docs/workspaces/programming/r-workbench.html#tips",
+    "href": "docs/workspaces/programming/r-workbench.html#tips",
+    "title": "R Workbench",
     "section": "Tips",
     "text": "Tips\n\nWorkspace security\nPlease take a moment to read the security recommendations for VREs."
   },
   {
-    "objectID": "docs/workspaces/programming/python-workbench.html",
-    "href": "docs/workspaces/programming/python-workbench.html",
-    "title": "Python Workbench",
+    "objectID": "docs/workspaces/programming/sas.html",
+    "href": "docs/workspaces/programming/sas.html",
+    "title": "SAS",
     "section": "",
-    "text": "This workspace types comes with various Python development tools already installed:\n\npyenv for managing different python versions\nminiconda for managing dependency environments\npoetry for an alternative way of running projects with specified dependencies\n\nThere are various flavours of this Catalog Item:\n\nPython Workbench CLI (login via command line)\nPython Workbench Desktop (login via desktop)\n\nSimply choose the one that is most convenient to you.\n\n\nNote that the above tools are installed separately for each user in your CO that has access to the machine. This means each user can have their own clean pyenv and miniconda environments.\nIf you prefer all users on the machine to have a single shared miniconda environment, please see the Miniconda Catalog Item."
+    "text": "This workspace is Windows workspace with SAS 9.4 installed.\n\n\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
   },
   {
-    "objectID": "docs/workspaces/programming/python-workbench.html#description",
-    "href": "docs/workspaces/programming/python-workbench.html#description",
-    "title": "Python Workbench",
+    "objectID": "docs/workspaces/programming/sas.html#description",
+    "href": "docs/workspaces/programming/sas.html#description",
+    "title": "SAS",
     "section": "",
-    "text": "This workspace types comes with various Python development tools already installed:\n\npyenv for managing different python versions\nminiconda for managing dependency environments\npoetry for an alternative way of running projects with specified dependencies\n\nThere are various flavours of this Catalog Item:\n\nPython Workbench CLI (login via command line)\nPython Workbench Desktop (login via desktop)\n\nSimply choose the one that is most convenient to you.\n\n\nNote that the above tools are installed separately for each user in your CO that has access to the machine. This means each user can have their own clean pyenv and miniconda environments.\nIf you prefer all users on the machine to have a single shared miniconda environment, please see the Miniconda Catalog Item."
+    "text": "This workspace is Windows workspace with SAS 9.4 installed.\n\n\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
   },
   {
-    "objectID": "docs/workspaces/programming/python-workbench.html#creation",
-    "href": "docs/workspaces/programming/python-workbench.html#creation",
-    "title": "Python Workbench",
-    "section": "Creation",
-    "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
-  },
-  {
-    "objectID": "docs/workspaces/programming/python-workbench.html#access",
-    "href": "docs/workspaces/programming/python-workbench.html#access",
-    "title": "Python Workbench",
+    "objectID": "docs/workspaces/programming/sas.html#access",
+    "href": "docs/workspaces/programming/sas.html#access",
+    "title": "SAS",
     "section": "Access",
-    "text": "Access\n\nPython Workbench CLI\nFor the Python Workbench CLI (command line) flavour of this Catalog Item, you can login using SSH.\n\n\nPython Workbench Desktop\nFor the Python Workbench Desktop flavour of this Catalog Item, you can login using your browser. It is also possible to login via SSH, as described above."
+    "text": "Access\nThis workspace can be accessed via the Remote Desktop protocol. You need a TOTP to login to your workspace, see Workspace access with TOTP.\n\nData transfer options\nSee our data transfer manuals.\nThe recommended iBridges client for Yoda and iRODS is preinstalled."
   },
   {
-    "objectID": "docs/workspaces/programming/python-workbench.html#usage",
-    "href": "docs/workspaces/programming/python-workbench.html#usage",
-    "title": "Python Workbench",
+    "objectID": "docs/workspaces/programming/sas.html#usage",
+    "href": "docs/workspaces/programming/sas.html#usage",
+    "title": "SAS",
     "section": "Usage",
-    "text": "Usage\nThe first time (but only the first time) you login to a workspace of this type, the Python tools (pyenv, miniconda and poetry) are installed for your user. This means that at first login you may experience a small delay (~1 minute maximum). During this time, if you are logging in on the command line, you will see that the applications are being installed for you:\n--- Running install scripts at first login: executing /home/username/runonce.d/01_pyenv-install.sh\n--- Running install scripts at first login: executing /home/username/runonce.d/10-poetry.sh\n--- Running install scripts at first login: executing /home/username/runonce.d/runonce_conda.sh\nWhen you are logged in you can start developing or running code. On the command line, you will have pyenv, miniconda, and poetry available.\nBy default, pyenv will be configured to use the most recent version of Python shipped with the operating system:\n$ pyenv versions\n  system\n* system-latest (set by /home/testuser/.pyenv/version)\nYou can use pyenv to install and select a different (newer) Python version: e.g. pyenv install 3.12, pyenv global 3.12. See the pyenv docs.\nTo start using miniconda environments, activate conda with the command conda init. See the miniconda docs.\nAlso see the poetry docs.\n\nData transfer options\nSee our data transfer manuals.\nThe recommended iBridges client for Yoda and iRODS is preinstalled.\n\n\nInstalling additional software\nThe user has admin rights to install additional software on the system from the terminal."
+    "text": "Usage\n\nPreliminaries\nAll researchers from UU have access to SAS (you do not need to provide your own license).\nBy default, this workspace comes with a minimal installation of SAS (SAS BASE and STAT). If you need access to other products from the SAS suite, please contact us.\nPlease note that SAS installation takes a while (~20 minutes), so workspace creation can take about 40 minutes (as the operating system must also be configured).\n\n\nOpen SAS\nWhen logged in to the workspace:\n\nOpen the ‘Start’ menu\nYou will find SAS under the SAS9.4 subfolder in the ‘Start’ menu.\n\n\n\nOpen iBridges\niBridges, the application recommended for data management for Yoda and iRODS servers, is accessible via a shortcut on the desktop."
   },
   {
-    "objectID": "docs/workspaces/programming/python-workbench.html#tips",
-    "href": "docs/workspaces/programming/python-workbench.html#tips",
-    "title": "Python Workbench",
-    "section": "Tips",
-    "text": "Tips\n\nWorkspace security\nPlease take a moment to read the security recommendations for VREs."
-  },
-  {
-    "objectID": "docs/workspaces/programming/miniconda.html",
-    "href": "docs/workspaces/programming/miniconda.html",
-    "title": "Miniconda (shared)",
+    "objectID": "docs/workspaces/programming/python-workbench-cuda.html",
+    "href": "docs/workspaces/programming/python-workbench-cuda.html",
+    "title": "Python Workbench CUDA",
     "section": "",
-    "text": "This workspace types comes with the miniconda package manger preinstalled. All users on the system will share the same conda environment. Warning: although this can be convenient for some usecases, this can lead to unwanted conflicts/interference. In most cases, it is recommended to use separate conda environments for each user. You can use the Python Workbench Catalog Item for this.\nThere are various flavours of this Catalog Item:\n\nMiniconda CLI (shared) (login via command line)\nMiniconda Desktop (shared)(login via desktop)\n\nSimply choose the one that is most convenient to you.\nIf needed, we can help you to automatically install certain packages when the workspace is created. Please contact us for this."
+    "text": "This workspace type is identical to the Python Workbench Catalog Item, but additionally comes with the nvidia CUDA GPU drivers preinstalled.\nAs with the Python Workbench Catalog Items, there are two flavours:\n\nPython Workbench CUDA CLI (login via command line)\nPython Workbench CUDA Desktop (login via desktop)\n\nSimply choose the one that is most convenient to you, and see the documentation for Python Workbench."
   },
   {
-    "objectID": "docs/workspaces/programming/miniconda.html#description",
-    "href": "docs/workspaces/programming/miniconda.html#description",
-    "title": "Miniconda (shared)",
+    "objectID": "docs/workspaces/programming/matlab.html",
+    "href": "docs/workspaces/programming/matlab.html",
+    "title": "Matlab",
     "section": "",
-    "text": "This workspace types comes with the miniconda package manger preinstalled. All users on the system will share the same conda environment. Warning: although this can be convenient for some usecases, this can lead to unwanted conflicts/interference. In most cases, it is recommended to use separate conda environments for each user. You can use the Python Workbench Catalog Item for this.\nThere are various flavours of this Catalog Item:\n\nMiniconda CLI (shared) (login via command line)\nMiniconda Desktop (shared)(login via desktop)\n\nSimply choose the one that is most convenient to you.\nIf needed, we can help you to automatically install certain packages when the workspace is created. Please contact us for this."
+    "text": "This workspace is an Ubuntu Desktop workspace with MATLAB installed. Ubuntu Desktop is a linux operating system but has a Graphical User interface so operating it is similar to using a Windows operating system.\n\n\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
   },
   {
-    "objectID": "docs/workspaces/programming/miniconda.html#creation",
-    "href": "docs/workspaces/programming/miniconda.html#creation",
-    "title": "Miniconda (shared)",
-    "section": "Creation",
-    "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
-  },
-  {
-    "objectID": "docs/workspaces/programming/miniconda.html#usage",
-    "href": "docs/workspaces/programming/miniconda.html#usage",
-    "title": "Miniconda (shared)",
-    "section": "Usage",
-    "text": "Usage\nWhen you login, miniconda will be ready for use. See the miniconda docs.\nminiconda will be installed to /opt/miniconda.\n\nData transfer options\nSee our data transfer manuals.\nThe recommended iBridges client for Yoda and iRODS is preinstalled.\n\n\nInstalling additional software\nThe user has admin rights to install additional software on the system (on a terminal, use sudo &lt;yourcommand&gt;)."
-  },
-  {
-    "objectID": "docs/workspaces/programming/miniconda.html#tips",
-    "href": "docs/workspaces/programming/miniconda.html#tips",
-    "title": "Miniconda (shared)",
-    "section": "Tips",
-    "text": "Tips\n\nWorkspace security\nPlease take a moment to read the security recommendations for VREs."
-  },
-  {
-    "objectID": "docs/workspaces/programming/miniconda-cuda.html",
-    "href": "docs/workspaces/programming/miniconda-cuda.html",
-    "title": "Miniconda (shared) CUDA",
+    "objectID": "docs/workspaces/programming/matlab.html#description",
+    "href": "docs/workspaces/programming/matlab.html#description",
+    "title": "Matlab",
     "section": "",
-    "text": "This workspace type is identical to the Miniconda (shared) Catalog Item, but additionally comes with the nvidia CUDA GPU drivers preinstalled."
+    "text": "This workspace is an Ubuntu Desktop workspace with MATLAB installed. Ubuntu Desktop is a linux operating system but has a Graphical User interface so operating it is similar to using a Windows operating system.\n\n\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
   },
   {
-    "objectID": "docs/workspaces/plain/windows-cuda.html#creation",
-    "href": "docs/workspaces/plain/windows-cuda.html#creation",
-    "title": "Windows with CUDA",
-    "section": "Creation",
-    "text": "Creation\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
-  },
-  {
-    "objectID": "docs/workspaces/plain/windows-cuda.html#access",
-    "href": "docs/workspaces/plain/windows-cuda.html#access",
-    "title": "Windows with CUDA",
+    "objectID": "docs/workspaces/programming/matlab.html#access",
+    "href": "docs/workspaces/programming/matlab.html#access",
+    "title": "Matlab",
     "section": "Access",
-    "text": "Access"
+    "text": "Access\nThis workspace can be accessed via the yellow ‘Access’ button. You need a TOTP to login to your workspace, see Workspace access with TOTP.\n\nData transfer options\nSee our data transfer manuals.\nThe recommended iBridges client for Yoda and iRODS is preinstalled."
   },
   {
-    "objectID": "docs/workspaces/plain/windows-cuda.html#data-transfer-options",
-    "href": "docs/workspaces/plain/windows-cuda.html#data-transfer-options",
-    "title": "Windows with CUDA",
-    "section": "Data transfer options",
-    "text": "Data transfer options"
-  },
-  {
-    "objectID": "docs/workspaces/plain/windows-cuda.html#usage",
-    "href": "docs/workspaces/plain/windows-cuda.html#usage",
-    "title": "Windows with CUDA",
+    "objectID": "docs/workspaces/programming/matlab.html#usage",
+    "href": "docs/workspaces/programming/matlab.html#usage",
+    "title": "Matlab",
     "section": "Usage",
-    "text": "Usage"
+    "text": "Usage\n\nPrerequisites:\nYou will need a Mathworks account and add you UU licence to this account to be able to use MATLAB. Find instructions on how to do this here\n\n\nActivate MATLAB\nWhen logged in to the workspace:\n\nClick ‘Applications’ in the top left corner\nClick ‘Development’\nClick ‘Matlab Activate’, a wizard will open.\nClick ‘Next’ to activate Matlab using the internet\nLogin to your Mathworks account. For the password, it will ask you to get a 6 digit password from: https://nl.mathworks.com/mwa/otp\nContinue the wizard and choose the default options until you are finished.\n\n\n\nOpen MATLAB\n\nClick ‘Applications’ in the top left corner\nClick ‘Development’\nClick ‘Matlab’"
   },
   {
-    "objectID": "docs/workspaces/plain/windows-cuda.html#tips",
-    "href": "docs/workspaces/plain/windows-cuda.html#tips",
-    "title": "Windows with CUDA",
+    "objectID": "docs/workspaces/programming/matlab.html#tips",
+    "href": "docs/workspaces/programming/matlab.html#tips",
+    "title": "Matlab",
     "section": "Tips",
     "text": "Tips"
   },
   {
-    "objectID": "docs/workspaces/plain/ubuntu-cuda.html#creation",
-    "href": "docs/workspaces/plain/ubuntu-cuda.html#creation",
-    "title": "Ubuntu CUDA",
+    "objectID": "docs/workspaces/plain/windows.html#creation",
+    "href": "docs/workspaces/plain/windows.html#creation",
+    "title": "Windows",
     "section": "Creation",
     "text": "Creation\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
   },
   {
-    "objectID": "docs/workspaces/plain/ubuntu-cuda.html#access",
-    "href": "docs/workspaces/plain/ubuntu-cuda.html#access",
-    "title": "Ubuntu CUDA",
+    "objectID": "docs/workspaces/plain/windows.html#access",
+    "href": "docs/workspaces/plain/windows.html#access",
+    "title": "Windows",
     "section": "Access",
     "text": "Access"
   },
   {
-    "objectID": "docs/workspaces/plain/ubuntu-cuda.html#data-transfer-options",
-    "href": "docs/workspaces/plain/ubuntu-cuda.html#data-transfer-options",
-    "title": "Ubuntu CUDA",
+    "objectID": "docs/workspaces/plain/windows.html#data-transfer-options",
+    "href": "docs/workspaces/plain/windows.html#data-transfer-options",
+    "title": "Windows",
     "section": "Data transfer options",
     "text": "Data transfer options"
   },
   {
-    "objectID": "docs/workspaces/plain/ubuntu-cuda.html#usage",
-    "href": "docs/workspaces/plain/ubuntu-cuda.html#usage",
-    "title": "Ubuntu CUDA",
+    "objectID": "docs/workspaces/plain/windows.html#usage",
+    "href": "docs/workspaces/plain/windows.html#usage",
+    "title": "Windows",
     "section": "Usage",
     "text": "Usage"
   },
   {
-    "objectID": "docs/workspaces/plain/ubuntu-cuda.html#tips",
-    "href": "docs/workspaces/plain/ubuntu-cuda.html#tips",
-    "title": "Ubuntu CUDA",
+    "objectID": "docs/workspaces/plain/windows.html#tips",
+    "href": "docs/workspaces/plain/windows.html#tips",
+    "title": "Windows",
     "section": "Tips",
     "text": "Tips"
   },
   {
-    "objectID": "docs/workspaces/experimental/asreview-app.html#creation",
-    "href": "docs/workspaces/experimental/asreview-app.html#creation",
-    "title": "ASReview Webapp",
+    "objectID": "docs/workspaces/plain/ubuntu.html#creation",
+    "href": "docs/workspaces/plain/ubuntu.html#creation",
+    "title": "Ubuntu",
     "section": "Creation",
     "text": "Creation\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
   },
   {
-    "objectID": "docs/workspaces/experimental/asreview-app.html#access",
-    "href": "docs/workspaces/experimental/asreview-app.html#access",
-    "title": "ASReview Webapp",
+    "objectID": "docs/workspaces/plain/ubuntu.html#access",
+    "href": "docs/workspaces/plain/ubuntu.html#access",
+    "title": "Ubuntu",
     "section": "Access",
     "text": "Access"
   },
   {
-    "objectID": "docs/workspaces/experimental/asreview-app.html#data-transfer-options",
-    "href": "docs/workspaces/experimental/asreview-app.html#data-transfer-options",
-    "title": "ASReview Webapp",
+    "objectID": "docs/workspaces/plain/ubuntu.html#data-transfer-options",
+    "href": "docs/workspaces/plain/ubuntu.html#data-transfer-options",
+    "title": "Ubuntu",
     "section": "Data transfer options",
     "text": "Data transfer options"
   },
   {
-    "objectID": "docs/workspaces/experimental/asreview-app.html#usage",
-    "href": "docs/workspaces/experimental/asreview-app.html#usage",
-    "title": "ASReview Webapp",
+    "objectID": "docs/workspaces/plain/ubuntu.html#usage",
+    "href": "docs/workspaces/plain/ubuntu.html#usage",
+    "title": "Ubuntu",
     "section": "Usage",
     "text": "Usage"
   },
   {
-    "objectID": "docs/workspaces/experimental/asreview-app.html#tips",
-    "href": "docs/workspaces/experimental/asreview-app.html#tips",
-    "title": "ASReview Webapp",
+    "objectID": "docs/workspaces/plain/ubuntu.html#tips",
+    "href": "docs/workspaces/plain/ubuntu.html#tips",
+    "title": "Ubuntu",
     "section": "Tips",
     "text": "Tips"
   },
   {
-    "objectID": "docs/workspaces/utility/grobid.html",
-    "href": "docs/workspaces/utility/grobid.html",
-    "title": "Grobid",
+    "objectID": "docs/workspaces/utility/asreview_cli.html",
+    "href": "docs/workspaces/utility/asreview_cli.html",
+    "title": "ASReview CLI",
     "section": "",
-    "text": "GROBID means GeneRation Of BIbliographic Data. GROBID is a machine learning library for extracting, parsing and re-structuring raw documents such as PDF into structured XML/TEI encoded documents with a particular focus on technical and scientific publications. Grobid can help you perform bibliographic analyses on scientific papers.\nGrobid can be used via a webapplication in which you can upload and parse documents in the browser, and also provides an API for scripting purposes.\nLaunching this Catalog Item will provide you with a workspace on which the Grobid webapplication and API are running.\n\n\nThere are some variations of this Catalog Item that come with different Grobid extensions in place:\n\nGrobid Standalone: provides only the main Grobid application without extensions\nGrobid Datastet: provides the datastet extension for detecting datasets mentions\nGrobid Softcite: provides the softcite extension for detecting software mentions\nGrobid All-in-One: provides all of the above.\n\nFor 1-3, the application is simply hosted at https://yourworkspaceurl.nl/. For 4., the various applications are accessible at the following locations:\n\nGrobid (main app): https://yourworkspaceurl.nl/grobid/\nDatastet: https://yourworkspaceurl.nl/datastet/\nSoftcite: https://yourworkspaceurl.nl/softcite/"
+    "text": "This workspace can be used to work with ASReview (e.g. for simulations) via the command line interface (CLI).\nCurrently the workspace is only available upon request."
   },
   {
-    "objectID": "docs/workspaces/utility/grobid.html#description",
-    "href": "docs/workspaces/utility/grobid.html#description",
-    "title": "Grobid",
+    "objectID": "docs/workspaces/utility/asreview_cli.html#description",
+    "href": "docs/workspaces/utility/asreview_cli.html#description",
+    "title": "ASReview CLI",
     "section": "",
-    "text": "GROBID means GeneRation Of BIbliographic Data. GROBID is a machine learning library for extracting, parsing and re-structuring raw documents such as PDF into structured XML/TEI encoded documents with a particular focus on technical and scientific publications. Grobid can help you perform bibliographic analyses on scientific papers.\nGrobid can be used via a webapplication in which you can upload and parse documents in the browser, and also provides an API for scripting purposes.\nLaunching this Catalog Item will provide you with a workspace on which the Grobid webapplication and API are running.\n\n\nThere are some variations of this Catalog Item that come with different Grobid extensions in place:\n\nGrobid Standalone: provides only the main Grobid application without extensions\nGrobid Datastet: provides the datastet extension for detecting datasets mentions\nGrobid Softcite: provides the softcite extension for detecting software mentions\nGrobid All-in-One: provides all of the above.\n\nFor 1-3, the application is simply hosted at https://yourworkspaceurl.nl/. For 4., the various applications are accessible at the following locations:\n\nGrobid (main app): https://yourworkspaceurl.nl/grobid/\nDatastet: https://yourworkspaceurl.nl/datastet/\nSoftcite: https://yourworkspaceurl.nl/softcite/"
+    "text": "This workspace can be used to work with ASReview (e.g. for simulations) via the command line interface (CLI).\nCurrently the workspace is only available upon request."
   },
   {
-    "objectID": "docs/workspaces/utility/grobid.html#creation",
-    "href": "docs/workspaces/utility/grobid.html#creation",
-    "title": "Grobid",
+    "objectID": "docs/workspaces/utility/asreview_cli.html#creation",
+    "href": "docs/workspaces/utility/asreview_cli.html#creation",
+    "title": "ASReview CLI",
     "section": "Creation",
-    "text": "Creation\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance.\n\n\nInteractive parameters\nIf you want to override the default password used to access the API, you can do so in the final page before you press Submit to create your workspace. Just fill in your desired password in the provided Interactive Parameter field:"
+    "text": "Creation\n\nCreate a storage volume\nFirst create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\n\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance.\nChoosing the number of CPU cores: A workspace with more CPU cores and RAM memory will cost more credits. If you want to use a large workspace for a long period of time (many days or weeks), first try to test on small machines (e.g. a 2 core and a 4 core machine) whether a bigger machine actually does help you to get your results faster."
   },
   {
-    "objectID": "docs/workspaces/utility/grobid.html#access",
-    "href": "docs/workspaces/utility/grobid.html#access",
-    "title": "Grobid",
-    "section": "Access",
-    "text": "Access\n\nWebapplication\nMembers of the workspace’s Collaborative Organisation can simply point their browser to the workspace’s URL and login using their organisation’s Single Sign-On mechanism (e.g. Solis login with two factor authentication for UU employees and students). You can use the yellow ‘Access’ button in the Workspace overview in the portal to be linked to the right URL.\n\n\nAPI\nThe API for each application is accessible at sublocations of your workspace’s URL:\n\nFor Grobid, use the /api sublocation, for instance https://yourworkspaceurl.nl/api/.\nFor Datastet and Softcite use the /service sublocation, e.g. https://yourworkspaceurl.nl/datastet/service/.\n\nSince Single-Sign On is difficult to implement when scripting, authentication for the API uses a simple username/password scheme. The default username and password are grobid. You can set the password as an interactive parameter.\nFrom a command line, you can test the Grobid API e.g. in the following way:\ncurl -ugrobid:grobid -L https://grobiddatastet.itsdatalandscap.src.surf-hosted.nl/api/version\nAlso see the API documentation.\n\n\nSSH\nYou can also access the workspace via the command line (SSH). If you do so, the Grobid service(s) will be availabe on http://localhost:&lt;port&gt;/api. The port number is different for Grobid, Datastet, and Softcite. You can read off the relevant port numbers by running the following command:\n$ sudo docker container list\nCONTAINER ID   IMAGE                   COMMAND                  CREATED              STATUS          PORTS                                       NAMES\nd64db08a37ea   grobid/datastet:0.8.0   \"sh -c 'java --add-o…\"   About a minute ago   Up 57 seconds   0.0.0.0:8060-&gt;8060/tcp, :::8060-&gt;8060/tcp   b636ea56-cceb-42e9-bef9-b8850047be04_datastet_1\nIn this example you can see that Datastet is running on localhost:8060."
+    "objectID": "docs/workspaces/utility/asreview_cli.html#access-options",
+    "href": "docs/workspaces/utility/asreview_cli.html#access-options",
+    "title": "ASReview CLI",
+    "section": "Access options",
+    "text": "Access options\nThis workspace can be accessed using SSH (secure shell protocol). The research cloud documentation provides instructions on how to set up SSH for research cloud.\nTo connect to the workspace from a Windows computer you need specific software to use a ‘shell’ (also known as ‘terminal’), examples include Git Bash, PuTTY and MobaXterm. If you need to install something new, we would recommend MobaXterm\nOn MacOS and Linux machines you can use the standard ‘Terminal’."
   },
   {
-    "objectID": "docs/workspaces/utility/grobid.html#usage",
-    "href": "docs/workspaces/utility/grobid.html#usage",
-    "title": "Grobid",
+    "objectID": "docs/workspaces/utility/asreview_cli.html#data-transfer-options",
+    "href": "docs/workspaces/utility/asreview_cli.html#data-transfer-options",
+    "title": "ASReview CLI",
+    "section": "Data transfer options",
+    "text": "Data transfer options\nWhen the workspace is up and running the first thing you probably need to do is transfer your dataset to the storage volume that is attached to your workspace. The storage volume can be found on the following directory path: ~/data/volume_2/. Create a folder there where you want to store your data. There are several methods to transfer data to the workspace, the recommended method depends on where the data is currently stored:\n\nData is stored on your PC\nWhen the dataset is stored on the computer you are working on now, you can use the scp command to tranfer files or folders, or the rsync command to ‘synchronize’ folders. If you have rsync installed, we would recommend this over scp, but scp is also fine.\nInstructions\n\n\nData is stored on Surfdrive (or Researchdrive, Onedrive, Dropbox, etc.)\nWhen data is stored on Surfdrive (or Researchdrive, Onedrive, Dropbox, etc.), data transfer can be done using Rclone.\nInstructions\n\n\nData is stored on Yoda\nWhen your data is stored on Yoda, data transfer can be done using iRODS icommands.\nInstructions"
+  },
+  {
+    "objectID": "docs/workspaces/utility/asreview_cli.html#usage",
+    "href": "docs/workspaces/utility/asreview_cli.html#usage",
+    "title": "ASReview CLI",
     "section": "Usage",
-    "text": "Usage\nSee the Grobid documentation, or the docs for the extensions you are using, for help with using the application."
+    "text": "Usage\nASReview and all of its extensions are preinstalled in a ‘conda’ environment. To be able to use asreview, the user should run the following commands:\n/etc/miniconda/bin/conda init\nNow logout and re-login to apply the changes.\nconda activate asreview\nNow to test if ASReview is installed:\nasreview -h"
   },
   {
-    "objectID": "docs/workspaces/utility/whisper.html",
-    "href": "docs/workspaces/utility/whisper.html",
-    "title": "Whisper OpenAI CUDA 11",
+    "objectID": "docs/workspaces/utility/asreview_cli.html#tips",
+    "href": "docs/workspaces/utility/asreview_cli.html#tips",
+    "title": "ASReview CLI",
+    "section": "Tips",
+    "text": "Tips\nTo practice with navigation, finding files and folders, and running programs via a Linux command line interface check this Software Carpentries course"
+  },
+  {
+    "objectID": "docs/workspaces/utility/asreview_lab.html",
+    "href": "docs/workspaces/utility/asreview_lab.html",
+    "title": "ASReview Lab",
     "section": "",
-    "text": "This workspace can be used to work with the Whisper model from OpenAI (e.g. for transcribing audio files). On this workspace a Python environment is created using the environment manager ‘conda’. The ‘conda’ environment contains Whisper, WhisperX and other required packages. The environment is configured to be able to use a GPU when available.\nThe workspace is a JupyterHub workspace, and comes with a template notebook to transcribe, translate and diarize audio files. The workspace is mainly aimed for users that have at least some very basic Python experience using Jupyter notebooks. However the workspace also provides a terminal (command line application) to run Whisper using the command line.\nCurrently the workspace is only available upon request."
+    "text": "This workspace can be used to work with ASReview Lab. On this workspace ASReview Lab is installed with all dependencies. Extensions (such as asreview-makita) are not installed on this workspace.\nCurrently the workspace is for all Research Cloud users."
   },
   {
-    "objectID": "docs/workspaces/utility/whisper.html#description",
-    "href": "docs/workspaces/utility/whisper.html#description",
-    "title": "Whisper OpenAI CUDA 11",
+    "objectID": "docs/workspaces/utility/asreview_lab.html#description",
+    "href": "docs/workspaces/utility/asreview_lab.html#description",
+    "title": "ASReview Lab",
     "section": "",
-    "text": "This workspace can be used to work with the Whisper model from OpenAI (e.g. for transcribing audio files). On this workspace a Python environment is created using the environment manager ‘conda’. The ‘conda’ environment contains Whisper, WhisperX and other required packages. The environment is configured to be able to use a GPU when available.\nThe workspace is a JupyterHub workspace, and comes with a template notebook to transcribe, translate and diarize audio files. The workspace is mainly aimed for users that have at least some very basic Python experience using Jupyter notebooks. However the workspace also provides a terminal (command line application) to run Whisper using the command line.\nCurrently the workspace is only available upon request."
+    "text": "This workspace can be used to work with ASReview Lab. On this workspace ASReview Lab is installed with all dependencies. Extensions (such as asreview-makita) are not installed on this workspace.\nCurrently the workspace is for all Research Cloud users."
   },
   {
-    "objectID": "docs/workspaces/utility/whisper.html#creation",
-    "href": "docs/workspaces/utility/whisper.html#creation",
-    "title": "Whisper OpenAI CUDA 11",
+    "objectID": "docs/workspaces/utility/asreview_lab.html#creation",
+    "href": "docs/workspaces/utility/asreview_lab.html#creation",
+    "title": "ASReview Lab",
     "section": "Creation",
-    "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
+    "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance.\nChoosing the number of CPU cores: A workspace with more CPU cores and RAM memory will cost more credits. If you want to use a large workspace for a long period of time (many days or weeks), first try to test on small machines (e.g. a 2 core and a 4 core machine) whether a bigger machine actually does help you to get your results faster."
   },
   {
-    "objectID": "docs/workspaces/utility/whisper.html#access",
-    "href": "docs/workspaces/utility/whisper.html#access",
-    "title": "Whisper OpenAI CUDA 11",
+    "objectID": "docs/workspaces/utility/asreview_lab.html#access",
+    "href": "docs/workspaces/utility/asreview_lab.html#access",
+    "title": "ASReview Lab",
     "section": "Access",
     "text": "Access\nThis workspace can be accessed via the yellow ‘Access’ button. You need a TOTP to login to your workspace, see Workspace access with TOTP."
   },
   {
-    "objectID": "docs/workspaces/utility/whisper.html#data-transfer-options",
-    "href": "docs/workspaces/utility/whisper.html#data-transfer-options",
-    "title": "Whisper OpenAI CUDA 11",
+    "objectID": "docs/workspaces/utility/asreview_lab.html#data-transfer-options",
+    "href": "docs/workspaces/utility/asreview_lab.html#data-transfer-options",
+    "title": "ASReview Lab",
     "section": "Data transfer options",
-    "text": "Data transfer options\nFirst create a working directory on the Storage Volume\nThe JupyterHub dashboard has an Upload button to directly upload data from your computer."
+    "text": "Data transfer options\n\nInternet Browser\nThe most intuitive way to get your dataset to the workspace is by using a cloud storage platform (e.g. Surfdrive, Yoda, etc.). Within the workspace you can click ‘applications’ (topleft corner) and then open an internet browser. Use the internet browser and go to the web portal of the storage platform you use to download the data to the workspace.\n\n\nCommand line\nAlternatively it is possible to transfer data using command scp. For this you need to work with a command line application (or aka terminal) on your PC and you need get the IP address of the Workspace from the Research Cloud portal. Find complete instructions here"
   },
   {
-    "objectID": "docs/workspaces/utility/whisper.html#usage",
-    "href": "docs/workspaces/utility/whisper.html#usage",
-    "title": "Whisper OpenAI CUDA 11",
+    "objectID": "docs/workspaces/utility/asreview_lab.html#usage",
+    "href": "docs/workspaces/utility/asreview_lab.html#usage",
+    "title": "ASReview Lab",
     "section": "Usage",
-    "text": "Usage\nNavigate to your home directory and start the template Jupyter notebook whisper_template.ipynb using the Whisper kernel. If you double click to start the notebook, make sure in the top right you see whisper (ipykernel) instead of Python 3 (ipykernel). If you see Python 3 (ipykernel), just click on it to change it to the Whisper kernel."
+    "text": "Usage\nWhen you log in to this workspace, the ASReview lab web app will open automatically."
   },
   {
-    "objectID": "docs/workspaces/utility/whisper.html#tips",
-    "href": "docs/workspaces/utility/whisper.html#tips",
-    "title": "Whisper OpenAI CUDA 11",
+    "objectID": "docs/workspaces/utility/asreview_lab.html#tips",
+    "href": "docs/workspaces/utility/asreview_lab.html#tips",
+    "title": "ASReview Lab",
     "section": "Tips",
-    "text": "Tips"
+    "text": "Tips\nBefore you log out and/or delete a workspace, don’t forget to store the results either on the storage unit (located under /data/&lt;name of your storage unit&gt;), or upload it to an online storage platform using an internet browser within the workspace."
   },
   {
-    "objectID": "docs/privacy.html",
-    "href": "docs/privacy.html",
-    "title": "Privacy Policy",
+    "objectID": "docs/workspaces/templates/template.html#creation",
+    "href": "docs/workspaces/templates/template.html#creation",
+    "title": "workspace name",
+    "section": "Creation",
+    "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
+  },
+  {
+    "objectID": "docs/workspaces/templates/template.html#access",
+    "href": "docs/workspaces/templates/template.html#access",
+    "title": "workspace name",
+    "section": "Access",
+    "text": "Access\nLink to access methods in the first steps page here."
+  },
+  {
+    "objectID": "docs/workspaces/templates/template.html#usage",
+    "href": "docs/workspaces/templates/template.html#usage",
+    "title": "workspace name",
+    "section": "Usage",
+    "text": "Usage\n\nData transfer options\nSee our data transfer manuals.\nThe recommended iBridges client for Yoda and iRODS is preinstalled.\n\n\nInstalling additional software\nThe user has admin rights to install additional software on the system (on a terminal, use sudo &lt;yourcommand&gt;)."
+  },
+  {
+    "objectID": "docs/workspaces/templates/template.html#tips",
+    "href": "docs/workspaces/templates/template.html#tips",
+    "title": "workspace name",
+    "section": "Tips",
+    "text": "Tips\n\nWorkspace security\nPlease take a moment to read the security recommendations for VREs."
+  },
+  {
+    "objectID": "docs/manuals/ubuntu-security-updates.html",
+    "href": "docs/manuals/ubuntu-security-updates.html",
+    "title": "How to activate security updates on Ubuntu",
     "section": "",
-    "text": "The Utrecht University Privacy Statement is applicable:\n\nPrivacy Statement Utrecht University\n\nIn addition to the UU Privacy Statement, the following privacy policies at SURF are applicable:\n\nSURF Research Cloud Privacy Policy\nSURF SRAM Privacy Policy\n\nBy accepting this invitation, users agree to adhere to the terms and conditions in the documents listed above.\nLast update: September 19, 2023"
+    "text": "Please take a moment to read the security recommendations for VREs. If you wish to keep using the same VRE for longer than 3 weeks, automatic security updates for the VRE’s OS must be turned on. This manual describes how to enable these for any VREs running Ubuntu Linux. At the moment security updates for Ubuntu are turned on by default on ResearchCloud, so no action should be necessary. This manual exists in case this default setting changes in the future.\nContact us if you run into any problems with the instructions below."
   },
   {
-    "objectID": "docs/manuals/ssh-data-transfer-methods.html",
-    "href": "docs/manuals/ssh-data-transfer-methods.html",
-    "title": "Transferring data from your PC to your workspace using SCP and RSYNC",
+    "objectID": "docs/manuals/ubuntu-security-updates.html#understanding-automatic-security-updates-for-ubuntu",
+    "href": "docs/manuals/ubuntu-security-updates.html#understanding-automatic-security-updates-for-ubuntu",
+    "title": "How to activate security updates on Ubuntu",
+    "section": "Understanding automatic security updates for Ubuntu",
+    "text": "Understanding automatic security updates for Ubuntu\nThe Ubuntu OS has a feature called “unattended upgrades” that will automatically install security updates for installed packages as they become available. These are currently enabled on ResearchCloud by default. However, you can easily activate the feature yourself, as long as you have admin rights on the workspace.\nFor longer-living workspaces, it is also heavily recommended to install a vulnerability scanning tool that actively monitors your workspace for weaknesses. Please contact us for help with this.\nPlease note:\n\nThese updates are only for system packages installed using Ubuntu’s package management system, apt. Any other software on the workspace (for instance, software installed directly from Github) will not be updated by this mechanism. If this is security sensitive (for instance, if it is a web application), you will need to find other ways of keeping it secure and updated.\nOnly security patches will be installed, so the ‘major’ version of the packages you use will remain the same.\n\nAdvanced notes:\n\nFor almost all updates, the new version will become active immediately. This means that in very rare cases, an update may interfere with a running process. There is thus a tradeoff between security and stability, but such interference is rare and enabling unattended upgrades is considered best practice for Ubuntu servers.\nThere is one exception to the rule that updated versions will become automatically active: if the Linux kernel itself is updated, this will require a pause/resume of the workspace to become active. This happens rarely, but you can monitor for this by installing the aforementioned scanning tool (contact us)."
+  },
+  {
+    "objectID": "docs/manuals/ubuntu-security-updates.html#manually-enabling-automatic-security-updates",
+    "href": "docs/manuals/ubuntu-security-updates.html#manually-enabling-automatic-security-updates",
+    "title": "How to activate security updates on Ubuntu",
+    "section": "Manually enabling automatic security updates",
+    "text": "Manually enabling automatic security updates\n\nPrerequisites\n\nA Catalog Item using Ubuntu Linux\nAdmin rights on the workspace\n\n\n\nWorkspaces with a desktop environment\nSee here for how to login on the workspace.\nSteps:\n\nIn the Applications menu (top left), go to Settings &gt; Software & Updates.\nGo to the Updates tab.\nFrom the dropdown When there are security updates, select Download and install automatically.\n\nAlternatively, you can open a terminal and follow the instructions below for enabling security updates from the command line.\n\n\nWorkspaces with command line access\nSee here for how to login on the workspace with SSH.\nIn you terminal, execute the following commands:\nsudo systemctl enable apt-daily.timer\nsudo systemctl enable apt-daily-upgrade.timer\nsudo systemctl start apt-daily.timer\nsudo systemctl start apt-daily-upgrade.timer"
+  },
+  {
+    "objectID": "docs/manuals/sram-secrets.html",
+    "href": "docs/manuals/sram-secrets.html",
+    "title": "",
     "section": "",
-    "text": "The instructions on this page assume you have already setup SSH for Research cloud. If this is not the case, check the Research Cloud documentation site."
+    "text": "In the Research Cloud Dashboard go to the “Profile” tab. You will see a list of the Collaborative Organisations that you are a member of. Now:\n\nChoose a CO, expand the display, and select the “Secrets” tab.\nClick on the “+” icon to add a secret.\nIn the name field, type the name that will refer to the secret.\nIn the value field type or paste the secret value itself.\n\nThe value will show only now and never again.\nFrom now on, any component parameter with the source-type “Co-Secret” can refer to this secret value if the workspace is started for this CO."
   },
   {
-    "objectID": "docs/manuals/ssh-data-transfer-methods.html#scp",
-    "href": "docs/manuals/ssh-data-transfer-methods.html#scp",
-    "title": "Transferring data from your PC to your workspace using SCP and RSYNC",
-    "section": "scp",
-    "text": "scp\nWhen you work on a Windows machine and you use MobaXterm for SSH connection, you can use the file browser in MobaXterm to intuitively transfer data.\nIn all other cases: Open a terminal (or shell session) that you use for login in to your workspace via the ssh command.\nscp sourcefile &lt;username&gt;@&lt;ip-address&gt;:destinationdir\nYou can find both the username and the ip-address in the research cloud portal. Find your username under the ‘Profile’ tab.\nFind the IP address of your workspace in the main Dashboard by clicking the drop down arrow of the running Workspace.\nscp testfile.txt &lt;username&gt;@&lt;ip-address&gt;:data/volume_2/input_data\nIf you first need to create a destination folder where you want to transfer the data to:\nssh &lt;username&gt;@&lt;ip-address&gt;\nmkdir ~/data/volume_2/input_data\nlogout\nscp testfile.txt &lt;username&gt;@&lt;ip-address&gt;:data/volume_2/input_data\nTo transfer a directory add the -r option:\nscp -r sourcedir &lt;username&gt;@&lt;ip-address&gt;:data/volume_2/input_data"
-  },
-  {
-    "objectID": "docs/manuals/ssh-data-transfer-methods.html#rsync",
-    "href": "docs/manuals/ssh-data-transfer-methods.html#rsync",
-    "title": "Transferring data from your PC to your workspace using SCP and RSYNC",
-    "section": "rsync",
-    "text": "rsync\nRsync is a tool for synchronizing two folders. This method can also be used to transfer the contents of a folder to a remote folder. You typically run this tool on your own PC in the terminal (so e.g.before login in using the ssh command, or in a separate terminal (or shell session)).\nType rsync --help on to see if it is installed on your system. To install:\n\nInstall\nOn Debian based linux (e.g. Ubuntu):\nsudo apt-get install rsync\nOn mac:\nbrew install rsync\n\n\nUsage\nrsync -azP ./my_local_folder &lt;username&gt;@&lt;ip-address&gt;:~/data/volume_2/input_data\nWhere -azP are options. Type rsync --help to see a list of the options."
-  },
-  {
-    "objectID": "docs/manuals/rclone-researchcloud.html",
-    "href": "docs/manuals/rclone-researchcloud.html",
-    "title": "Rclone for data transfer between cloud storage and Surf Research Cloud",
+    "objectID": "docs/manuals/long-jobs.html",
+    "href": "docs/manuals/long-jobs.html",
+    "title": "Running long jobs on your Research Cloud workspace",
     "section": "",
-    "text": "Rclone is a convenient tool for fast data transfer between computers (PC, HPC, cloud) and cloud based storage platforms such as Surfdrive, Researchdrive, onedrive, dropbox.\nIt is a command line tool, so the user would need some experience with using the command line in order to user Rclone.\nThe following steps show how you can use rclone on Research cloud for data transfer to e.g. a Jupyterhub or Rstudio workspace application.\n\nStep 1: Install rclone\n\n\nStep 2: Configure rclone\n\n\nStep 3: Data transfer using rclone"
+    "text": "Often it is advisable to run long jobs (e.g. long scripts or analyses that take hours or days to complete) as background processes. By running long jobs as background process, you make sure the jobs will not be interrupted when you (by accident) close the window with which you access your workspace or when your internet connection is interrupted. This can happen in the following cases:\n\nWhen you access your workspace via your web browser (Jupyter Notebooks, RStudio, Ubuntu Desktop, etc.)\nWhen you access your workspace via SSH\n\nWhen you access your workspace via RDP (Remote Desktop), jobs will normally not be interupted by disconnecting. More info on access methods\n\n\n\n\n\n\nYou will need some basic linux command line skills to be able to run scripts as background processes. If you don’t have these skills, take some time to practice using sections 1, 2, 3 and 7 of this short online course before proceeding. You can practice in the terminal (see step 1).\nYour script should be ‘standalone’; which means that you should be able to run your entire script in one go without providing additional input. For scripts, all figures and output data should be stored in files (e.g. .png images and/or .csv tables), for Jupyter notebooks this might be not necessary if the figures should be embedded in the notebook.\n\n\n\n\n\nIn Jupyterhub (Jupyter Workspace in Research cloud): To open a new terminal, click the + button in the file browser and select the terminal in the new Launcher tab (find a short video here).\nIn Rstudio (Rstudio workspace in Research cloud): In the bottom left panel, click the ‘terminal’ tab.\nIn an Ubuntu Desktop workspace, click ‘Applications’ in the top left corner and then ‘Terminal’\n\n\n\n\nFor example:\ncd data\ncd &lt;your storage volume name&gt;\n...\n\n\n\nMore info about the use of nohup can be found here. For this usecase we combine nohup with an ampersand “&” to run a background process the will continue even is the terminal window is closed. The process will only stop:\n\nIf it has finished\nIf an error occurs\nIf the workspaces is paused or deleted\n\nIf your script normally prints output to the terminal or console, this will now be written into a file nohup.out which will be created automatically when you run the script in the folder from where you run the script.\nFor R scripts:\nnohup Rscript your-rscript.R &\nFor Jupyter notebooks:\nnohup jupyter nbconvert --execute --to notebook --inplace your-notebook.ipynb &\nAfter submitting this command you will see the following:\n\nYou need to press Enter one more time to return to the command prompt. The number between square brackets is the job ID and the second number is the process ID.\n\n\n\nUse the process ID to terminate the job, e.g.:\nkill 152233\nIf you don’t know the process ID you can look it up by using a monitoring tool like top (more info).\n\n\n\nThere are several ways to find out if your job has ended:\nWhen things go as planned, you can check if the expected output data has been generated. You can also use the jobs command to check the status of your background job. If the job is running, the output will look like this:\n[1]+  Running                 nohup Rscript test.R &\nIf the job has ended, there will be no output.\n\n\n\nBy adding print statements to your script, you allow monitoring of the progress of your script (it might be that some of the functions that you use already print output to the console/terminal by default). All output that you create with print statements will be written to the nohup.out file (see step 3). Use for example a print statement in a for loop to print the iteration number. Follow these links for more info:\n\nPrint statements in R\nPrint statements in Python"
   },
   {
-    "objectID": "docs/manuals/rclone-transferringdata.html",
-    "href": "docs/manuals/rclone-transferringdata.html",
-    "title": "Using Rclone",
+    "objectID": "docs/manuals/long-jobs.html#when-is-this-relevant",
+    "href": "docs/manuals/long-jobs.html#when-is-this-relevant",
+    "title": "Running long jobs on your Research Cloud workspace",
     "section": "",
-    "text": "For all Rclone commands see: https://rclone.org/commands/ Below are the most useful commands: - lsd (listing directories) - ls (listing files) - copy (copying individual files) - sync (copying entire folders)\n\nrclone lsd\nThe lsd commands is used to list all directories in the current directory. e.g. to list all directories in your surfdrive type:\nrclone lsd surfdrive:\ne.g. to list all directories in a specific subfolder of a folder on surfdrive type:\nrclone lsd surfdrive:myfolder/mysubfolder\n\n\nrclone ls\nThe ls commands is used to list all files in the current directory. e.g. to list all files in a specific folder in your surfdrive type:\nrclone ls surfdrive:myfolder\n\n\nrclone copy\nTo copy a file from SURFdrive to a certain folder:\nrclone copy surfdrive:file.txt ./my_destination_folder\nIn most cases, you would want to transfer the data to the (persistent) storage volume on Research cloud. If you don’t have a destination folder yet, create it as follows:\nmkdir ~/data/volume_2/destination_folder_with_any_name\nrclone copy surfdrive:file.txt ~/data/volume_2/destination_folder_with_any_name\n\n\nrclone sync\nTo synchronize an entire folder from surfdrive use rclone sync:\n\nWarning! Synchronization with Rclone makes the destination folder equal to the source folder and deletes files and folders in the destination folder that are not present in the source folder. Therefore it is wise to use the –dry-run flag to see what will be copied and deleted before actually running the command. rclone sync &lt;source&gt; &lt;destination&gt; --dry-run\n\nrclone sync surfdrive:my_source_folder ~/data/volume_2/destination_folder_with_any_name --dry-run\nrclone sync surfdrive:my_source_folder ~/data/volume_2/destination_folder_with_any_name -cPv\n-cPv means the following flags (options) are used:\n-c skip files that are already present (compared using checksums)\n-P report progress of transfer\n-v verbose; increase the amount of information in the logs\n\n\nTransfer in opposite direction\nCopying in the opposite direction is easy, use the same commands as described above and start with the research cloud folder and end with the surfdrive folder:\nrclone copy ~/data/volume_2/destination_folder_with_any_name/file.txt surfdrive:my_destination_folder \nrclone sync ~/data/volume_2/destination_folder_with_any_name surfdrive:my_destination_folder  -cPv\nFurther reading: - For all Rclone commands see: https://rclone.org/commands/"
+    "text": "Often it is advisable to run long jobs (e.g. long scripts or analyses that take hours or days to complete) as background processes. By running long jobs as background process, you make sure the jobs will not be interrupted when you (by accident) close the window with which you access your workspace or when your internet connection is interrupted. This can happen in the following cases:\n\nWhen you access your workspace via your web browser (Jupyter Notebooks, RStudio, Ubuntu Desktop, etc.)\nWhen you access your workspace via SSH\n\nWhen you access your workspace via RDP (Remote Desktop), jobs will normally not be interupted by disconnecting. More info on access methods"
   },
   {
-    "objectID": "docs/manuals/icommands.html",
-    "href": "docs/manuals/icommands.html",
-    "title": "Installing and using iCommands on Surf Research Cloud",
+    "objectID": "docs/manuals/long-jobs.html#how-to-run-jobs-as-background-processes",
+    "href": "docs/manuals/long-jobs.html#how-to-run-jobs-as-background-processes",
+    "title": "Running long jobs on your Research Cloud workspace",
     "section": "",
-    "text": "The instructions below describe the process of data transfer between Surf Research Cloud and Yoda using iCommands. This manual is developed for workspaces based on a Linux operating system (including the Jupyter Notebook and RStudio workspaces). Transfer is also possible via the Webdav protocol using Rclone. For large files iCommands is faster due to parallel transfer options.\n\nPrerequisites\nYou will need some basic linux skills to be able to use the iCommands successfully. If you don’t have these skills, take some time to practice using sections 1, 2, 3 and 7 of this short online course before proceeding. You can practice in the terminal (see step 1).\n\n\nStep 1: Make sure you are in a terminal\n\nIn Jupyterhub (Jupyter Workspace in Research cloud): To open a new terminal, click the + button in the file browser and select the terminal in the new Launcher tab (find a short video here).\nIn Rstudio (Rstudio workspace in Research cloud): In the bottom left panel, click the ‘terminal’ tab.\n\n\n\nStep 2: Install iRODS iCommands\nSome workspaces have iRODS iCommands preconfigured. This should be visible in step 1 when creating a workspace.\nCopy and paste (or type) the following commands in the terminal, or view the most up to date installation instructions for iRODS iCommands on the yoda website in the section “Installing iCommands on Ubuntu”.\nsudo apt-get update\nsudo apt-get install -y lsb-release\nwget -qO - https://packages.irods.org/irods-signing-key.asc | sudo apt-key add - \nsudo echo \"deb [arch=amd64] https://packages.irods.org/apt/ $(lsb_release -sc) main\" | sudo tee /etc/apt/sources.list.d/renci-irods.list\nsudo apt-get update\nsudo apt-get install -y irods-icommands\n\n\nStep 3: Create a config file\nIn order to know with what server iBridges should connect, a so-called iRODS environment file must be present in your home directory.\nYou may need help from your datamanager or contact Yoda support to obtain the information needed for the config file.\nGo to your home directory and create a hidden directory called ‘.irods’:\ncd ~\nmkdir .irods\ncd .irods\nIn this directory, create a file named irods_environment.json.\ntouch irods_environment.json\nEdit the file using a text editor such as nano or vim:\nnano irods_environment.json\nFor information about Yoda servers hosted by Utrecht university go to the yoda website, scroll to Step 2. Configuring iCommands and copy and paste the text belonging to your institution in the file (similar to the file below) and change the email address next to irods_user_nameto your yoda user name (typically your uu email address).\n{   \n\"irods_host\": \"science.data.uu.nl\",   \n\"irods_port\": 1247,    \"irods_home\": \"/nluu6p/home\",   \n\"irods_user_name\": \"exampleuser@uu.nl\",   \n\"irods_zone_name\": \"nluu6p\",   \n\"irods_authentication_scheme\": \"pam\",   \n\"irods_encryption_algorithm\": \"AES-256-CBC\",   \n\"irods_encryption_key_size\": 32,   \n\"irods_encryption_num_hash_rounds\": 16,   \n\"irods_encryption_salt_size\": 8,   \n\"irods_client_server_negotiation\": \"request_server_negotiation\"\n}\nThe list of Yoda servers hosted in the Netherlands by SURF can be found here. For all other iRODS or Yoda servers please contact your service provider.\n\n\nStep 4: Initialize connection to iRODS\nInitialize the connection to the Yoda system as follows:\niinit\nType your Yoda password when requested.\nType ils to see whether the connection has been established. The output of the ils command will list the current Yoda folder and the folders that are located within the current folder.\niinit and ils are commands which can only be used when icommands is active. Some of these commands are very similar to standard unix commands. When icommands is active you can still operate the HPC system using normal unix commands. A complete list of all ‘icommands’ can be found here.\n\n\nStep 5: Transferring data\nStandard transfer of a single file can be done using iget and iput\nThe irsync command can be used to synchronize entire directories between Yoda and Cartesius. The command is used as follows.\nirsync &lt;source&gt; &lt;destination&gt;\nIn contrary to the iput and iget commands, in irsync it is necessary to put ‘i:’ before the Yoda path. The Yoda path (directly after ‘i:’) to the folder that should be synchronized should be relative to the current Yoda folder (check with ils).\nE.g.\nirsync -rKV i:myfolder /my_researchcloud_folder\n-rKV means the following flags (options) are used:\n\n-r recursive - store the whole folder including subdirectories\n-K Calculate and verify the checksum on the data\n-V Very verbose\n\nTypically you will want to store data on the (persistent) storage volume that is attached to your workspace. Transfer it directly there as follows:\nirsync -rKV i:myfolder ~/data/volume_2/my_destination_folder\nTo synchronize in the opposite direction\nirsync -rKV /my_researchcloud_folder/ i:myfolder\n\nnote the ‘/’ at the end of /my_researchcloud_folder/ that is not used in the command above.\n\n\n\nParallel transfer\nWith icommands it is possible to transfer individual files in parallel using multiple threads, which results in higher transfer speeds. The flag -N can be used to control the number of parallel threads (only recommended in very specific situations). When not specified the server decides a default number of threads. For large files this number can be e.g. 16 threads.\nirsync -rKV -N 0 i:myfolder /my_researchcloud_folder"
+    "text": "You will need some basic linux command line skills to be able to run scripts as background processes. If you don’t have these skills, take some time to practice using sections 1, 2, 3 and 7 of this short online course before proceeding. You can practice in the terminal (see step 1).\nYour script should be ‘standalone’; which means that you should be able to run your entire script in one go without providing additional input. For scripts, all figures and output data should be stored in files (e.g. .png images and/or .csv tables), for Jupyter notebooks this might be not necessary if the figures should be embedded in the notebook.\n\n\n\n\n\nIn Jupyterhub (Jupyter Workspace in Research cloud): To open a new terminal, click the + button in the file browser and select the terminal in the new Launcher tab (find a short video here).\nIn Rstudio (Rstudio workspace in Research cloud): In the bottom left panel, click the ‘terminal’ tab.\nIn an Ubuntu Desktop workspace, click ‘Applications’ in the top left corner and then ‘Terminal’\n\n\n\n\nFor example:\ncd data\ncd &lt;your storage volume name&gt;\n...\n\n\n\nMore info about the use of nohup can be found here. For this usecase we combine nohup with an ampersand “&” to run a background process the will continue even is the terminal window is closed. The process will only stop:\n\nIf it has finished\nIf an error occurs\nIf the workspaces is paused or deleted\n\nIf your script normally prints output to the terminal or console, this will now be written into a file nohup.out which will be created automatically when you run the script in the folder from where you run the script.\nFor R scripts:\nnohup Rscript your-rscript.R &\nFor Jupyter notebooks:\nnohup jupyter nbconvert --execute --to notebook --inplace your-notebook.ipynb &\nAfter submitting this command you will see the following:\n\nYou need to press Enter one more time to return to the command prompt. The number between square brackets is the job ID and the second number is the process ID.\n\n\n\nUse the process ID to terminate the job, e.g.:\nkill 152233\nIf you don’t know the process ID you can look it up by using a monitoring tool like top (more info).\n\n\n\nThere are several ways to find out if your job has ended:\nWhen things go as planned, you can check if the expected output data has been generated. You can also use the jobs command to check the status of your background job. If the job is running, the output will look like this:\n[1]+  Running                 nohup Rscript test.R &\nIf the job has ended, there will be no output.\n\n\n\nBy adding print statements to your script, you allow monitoring of the progress of your script (it might be that some of the functions that you use already print output to the console/terminal by default). All output that you create with print statements will be written to the nohup.out file (see step 3). Use for example a print statement in a for loop to print the iteration number. Follow these links for more info:\n\nPrint statements in R\nPrint statements in Python"
+  },
+  {
+    "objectID": "docs/manuals/rclone-config.html",
+    "href": "docs/manuals/rclone-config.html",
+    "title": "Configuring Rclone for surfdrive",
+    "section": "",
+    "text": "Rclone has an interactive menu to generate a config file for you. You need to complete this menu once for each storage platform that you want to connect to. You can use Rclone for many different types of storage platforms: check the homepage for a list. SURFdrive and Research drive are based on ownCloud software. Platforms built on standard protocols such as WebDAV (including Yoda, Data Archive or the U: network drive of UU student and employees) are also supported but require slightly different configuration steps.\nTo check whether Rclone is available on your system:\nrclone version\nYou should see a version number displayed in the terminal.\nTo start the interactive menu:\nrclone config\nNow walk through the questions. For SURFdrive you need the following information (Rclone version 1.55.1)\n\nType n for New remote\nFor ‘name’ choose e.g. surfdrive (or SD)\nChoose option 40for WebDAV (!depending on your Rclone version this number may be different!);\nFill in the URL. You can look this up via the web portal of SURFdrive. In the top right corner click your account name. Go to settings. In the left panel, click security. At the very bottom of the page there will be a section WebDAV passwords. There is also an URL, something like: https://surfdrive.surf.nl/files/remote.php/nonshib-webdav Use this URL.\nBefore you continue with the Rclone menu, first perform the following step via the web portal of SURFdrive. Fill in an app name (e.g. lisa) on the security settings page (same page as previous step) and click “create new app password”. The page will show a username and a password. You will need these in the following steps of the Rclone menu.\nSelect the type of WebDAV storage system. Type: 2 for ownCloud.\nType in your user name from SURFdrive (this is the username found in the web portal (step 5))\nSelect: y) Yes type in my own password\nType in your password from the web portal and type it in again for confirmation.\nSkip the Bearer token option by pressing enter.\nChoose n to skip the advanced config\nConfirm your settings by typing y.\nChoose q to quit the menu.\n\nTest whether everything is setup correctly by typing the following command in the terminal, if necessary change surfdrive: to any other name chosen in step 2.:\nrclone lsd surfdrive:\nIf everything is setup correctly, you should see a list of files and folders that are present on your SURFdrive.\n\nNext: Using rclone for data transfer"
+  },
+  {
+    "objectID": "docs/manuals/catalog-item-access.html",
+    "href": "docs/manuals/catalog-item-access.html",
+    "title": "How to get access to Catalog Items",
+    "section": "",
+    "text": "There are many Catalog Items (workspace types) available on ResearchCloud that each come with different software installed and different access methods configured. Which Catalog Items you can use depends on which ones are made available to the Collaborative Organisation that you want to start the workspace in.\nMany institutions, and SURF, maintain their own Catalog Items. SURF’s own Catalog Items are available in all Collaborative Organisations by default. Additionally, you can request access to other Catalog Items marked as publically visible in the ResearchCloud catalog.\nFor an overview of Catalog Items maintained by UU, see the workspace overview. Note that some Catalog Items listed there are not marked as publically visible (for example, those that contained licensed software). To get access to these, please contact us."
+  },
+  {
+    "objectID": "docs/manuals/catalog-item-access.html#requesting-access",
+    "href": "docs/manuals/catalog-item-access.html#requesting-access",
+    "title": "How to get access to Catalog Items",
+    "section": "Requesting access",
+    "text": "Requesting access\n\nPrerequisites\nIn order to be able to request access to Catalog Items, you must be marked as having the ‘Developer’ role in your Collaboration in SRAM. This is the case by default if the CO was created for you. However, if you were invited later, it may be necessary to add yourself (or ask your CO-admin to add you) to the src_co_developer group.\n\n\nSteps\n\nIn the ResearchCloud portal, choose ‘Catalog &gt; Catalog’ from the menubar (or follow this link).\nBrowse through the Catalog or search for a catalog item you want to use. Catalog Items for which you require access are marked with a lock icon.\nFollow the link to the Catalog Item you are interested in.\nThere will be a ‘Request Access’ button at the top of the page. Clicking this will allow you to specify for which of your Collaborative Organisations you want to request access.\nAfter requesting access, the developer that maintains the Catalog Item will have to review your request and grant or deny it."
   },
   {
     "objectID": "docs/manuals/ibridges.html",
