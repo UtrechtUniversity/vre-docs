@@ -606,14 +606,14 @@
     "href": "docs/first-steps.html#create-a-workspace",
     "title": "First steps",
     "section": "Create a workspace",
-    "text": "Create a workspace\nA workspace can also be called a ‘Virtual Machine’ or a ‘Server’. It is a temporary ‘remote’ machine that you can login to and that has you can use to perform analyses or model runs. You ‘pay’ for the machine with the credits from your wallet. The more compute power you select the more credits it costs and the sooner your wallet will be empty.\nSee here for detailed information on how to create a workspace."
+    "text": "Create a workspace\nA workspace can also be called a ‘Virtual Machine’ or a ‘Server’. It is a temporary ‘remote’ machine that you can login to and that has you can use to perform analyses or model runs. You ‘pay’ for the machine with the credits from your wallet until the workspace is being ‘paused’ or ‘deleted’. The more compute power you select the more credits it costs and the sooner your wallet will be empty.\nSee here for detailed information on how to create a workspace."
   },
   {
     "objectID": "docs/first-steps.html#pausing-resuming-deleting-a-workspace",
     "href": "docs/first-steps.html#pausing-resuming-deleting-a-workspace",
     "title": "First steps",
     "section": "Pausing, Resuming, Deleting a workspace",
-    "text": "Pausing, Resuming, Deleting a workspace\nYou always need a wallet to create a workspace, by default a workspace can only be paused, resumed and deleted by the one that has created it. You can use SRAM to give persons permission to PAUSE, RESUME and DELETE a workspace that is created by someone else. It is also possible to share a wallet with a member of your CO in SRAM. See Add collaborators to existing project."
+    "text": "Pausing, Resuming, Deleting a workspace\nImportant: your workspace consumes credits from your wallet until you pause or delete it in the dashboard of the Research Cloud Portal. By default a workspace can only be paused, resumed and deleted by the one that has created it. You can use SRAM to give persons permission to PAUSE, RESUME and DELETE a workspace that is created by someone else. It is also possible to share a wallet with a member of your CO in SRAM. See Add collaborators to existing project."
   },
   {
     "objectID": "docs/first-steps.html#getting-access-to-your-workspace",
