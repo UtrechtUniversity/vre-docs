@@ -150,8 +150,11 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#how-to-create-a-storage-volume" id="toc-how-to-create-a-storage-volume" class="nav-link" data-scroll-target="#how-to-create-a-storage-volume">How to create a storage volume?</a></li>
   <li><a href="#where-can-i-find-the-storage-volume" id="toc-where-can-i-find-the-storage-volume" class="nav-link" data-scroll-target="#where-can-i-find-the-storage-volume">Where can I find the storage volume?</a></li>
   </ul></li>
-  <li><a href="#create-a-workspace" id="toc-create-a-workspace" class="nav-link" data-scroll-target="#create-a-workspace">Create a workspace</a></li>
+  <li><a href="#create-a-workspace" id="toc-create-a-workspace" class="nav-link" data-scroll-target="#create-a-workspace">Create a workspace</a>
+  <ul class="collapse">
+  <li><a href="#workspace-state" id="toc-workspace-state" class="nav-link" data-scroll-target="#workspace-state">Workspace State</a></li>
   <li><a href="#pausing-resuming-deleting-a-workspace" id="toc-pausing-resuming-deleting-a-workspace" class="nav-link" data-scroll-target="#pausing-resuming-deleting-a-workspace">Pausing, Resuming, Deleting a workspace</a></li>
+  </ul></li>
   <li><a href="#getting-access-to-your-workspace" id="toc-getting-access-to-your-workspace" class="nav-link" data-scroll-target="#getting-access-to-your-workspace">Getting access to your workspace</a>
   <ul class="collapse">
   <li><a href="#browser-access-to-a-desktop-environment" id="toc-browser-access-to-a-desktop-environment" class="nav-link" data-scroll-target="#browser-access-to-a-desktop-environment">Browser access to a desktop environment</a></li>
@@ -231,13 +234,28 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="create-a-workspace">Create a workspace</h2>
 <p>A workspace can also be called a ‘Virtual Machine’ or a ‘Server’. It is a temporary ‘remote’ machine that you can login to and that has you can use to perform analyses or model runs. You ‘pay’ for the machine with the credits from your wallet until the workspace is being ‘paused’ or ‘deleted’. The more compute power you select the more credits it costs and the sooner your wallet will be empty.</p>
 <p>See <a href="../docs/manuals/creating.html">here</a> for detailed information on how to create a workspace.</p>
+<section id="workspace-state" class="level3">
+<h3 class="anchored" data-anchor-id="workspace-state">Workspace State</h3>
+<p>After creating a workspace following the steps above, you will be automatically sent back to the main page (aka Dashboard). Under ‘Workspaces’, you will find your newly created workspace in ‘State: Creating’. Depending on the Workspace that you selected, this can take between 10 and 30 minutes. When the State changes to ‘State: running’, the workspace is ready and you can login to your worspace. <strong>Important: your workspace consumes credits from your wallet when the State is running. It will stop consuming credits when: </strong></p>
+<ul>
+<li>you change the State to Paused using the pause button</li>
+<li>you delete the workspace using the delete button</li>
+<li>your workspace is automatically deleted when the expiry date passes</li>
+<li>your workspace is automatically paused when your wallet is empty</li>
+</ul>
+<p><strong>Important: Logging out from your Workspace, or closing the browser window will not change the state of the Workspace. You can only do this in the Research Cloud Portal.</strong></p>
 </section>
-<section id="pausing-resuming-deleting-a-workspace" class="level2">
-<h2 class="anchored" data-anchor-id="pausing-resuming-deleting-a-workspace">Pausing, Resuming, Deleting a workspace</h2>
-<p><strong>Important: your workspace consumes credits from your wallet until you pause or delete it in the dashboard of the Research Cloud Portal.</strong> By default a workspace can only be paused, resumed and deleted by the one that has created it. You can use SRAM to give persons permission to PAUSE, RESUME and DELETE a workspace that is created by someone else. It is also possible to share a wallet with a member of your CO in SRAM. See <a href="https://servicedesk.surf.nl/wiki/display/IAM/Invite+admins+and+members+to+a+collaboration">Add collaborators to existing project</a>.</p>
+<section id="pausing-resuming-deleting-a-workspace" class="level3">
+<h3 class="anchored" data-anchor-id="pausing-resuming-deleting-a-workspace">Pausing, Resuming, Deleting a workspace</h3>
+<p><strong>Pause</strong> a workspace when you (and your colleagues) are not working on it and when there are no analyses going on or scripts running. To pause a workspace, find your workspace in the Research Cloud portal and click the Pause button.</p>
+<p><strong>Resume</strong> simply resume a paused workspace when you want to continue working with it. To do this, find the workspace in the Research Cloud portal and click ‘Resume’.</p>
+<p><strong>Delete</strong> a workspace if you will not be using the workspace for more than a couple of weeks (as paused workspaces do consume a small number of credits for storage). Make sure any work in progress (scripts and data) are at least stored on a Storage Volume, but preferably also backed up elsewhere (Yoda, OneDrive, Surfdrive, GitHub, etc.), as Research cloud storage is not backed up.</p>
+<p>By default, only the person that created a workspace can Pause, Resume and Delete the workspace. You (or your colleague that initially got access to Research Cloud) can use SRAM to give persons permission to PAUSE, RESUME and DELETE a workspace that is created by someone else. It is also possible to share a wallet with a member of your CO in SRAM. See <a href="https://servicedesk.surf.nl/wiki/display/IAM/Invite+admins+and+members+to+a+collaboration">Add collaborators to existing project</a>.</p>
+</section>
 </section>
 <section id="getting-access-to-your-workspace" class="level2">
 <h2 class="anchored" data-anchor-id="getting-access-to-your-workspace">Getting access to your workspace</h2>
+<p>Prerequisites: your workspace has to be in ‘State: running’.</p>
 <p>There are several ways to login to your workspace.</p>
 <section id="browser-access-to-a-desktop-environment" class="level3">
 <h3 class="anchored" data-anchor-id="browser-access-to-a-desktop-environment">Browser access to a desktop environment</h3>
