@@ -29,20 +29,22 @@ The UU provides a small starting budget of 10K credits for pilots or small proje
 
 ## Cost calculator
 
-Use the calculator below to estimate the costs for the workspaces and storage volumes that you create. The costs of a workspace are determined by the number of CPU cores or GPU devices **plus** a small amount for workspace storage. Remember that a workspace will consume credits whenever it is in "State: Running". It will only stop consuming credits when you Pause or Delete a workspace in the [Research Cloud portal](https://portal.live.surfresearchcloud.nl/). Use the expiry date to schedule deletion of your workspace as an extra safeguard. [Storage volumes](https://utrechtuniversity.github.io/vre-docs/docs/first-steps.html#why-a-storage-volume) consume credits until you delete them in the [Research Cloud portal](https://portal.live.surfresearchcloud.nl/).
+Use the calculator below to estimate the costs for the workspaces and storage volumes that you create. The costs of a workspace are determined by the number of CPU cores or GPU devices **plus** a small amount for workspace storage (SSD). Remember that a workspace will consume credits whenever it is in "State: Running". It will only stop consuming credits when you Pause or Delete a workspace in the [Research Cloud portal](https://portal.live.surfresearchcloud.nl/). Use the expiry date to schedule deletion of your workspace as an extra safeguard. [Storage volumes](https://utrechtuniversity.github.io/vre-docs/docs/first-steps.html#why-a-storage-volume) consume credits until you delete them in the [Research Cloud portal](https://portal.live.surfresearchcloud.nl/).
 
 Note: this describes costs for the standard use case, in which workspaces run on SURF's HPC Cloud environment. Although ResearchCloud also allows you to [run workspaces in different environment](manuals/creating.qmd#select-cloud-provider) (such as Microsoft's Azure cloud environment), the costs for this will be significantly higher.
 
 ```{shinylive-python}
 #| standalone: true
-#| viewerHeight: 1000
+#| viewerHeight: 600
 
 from shiny import App, render, ui
 import numpy as np
 import matplotlib.pyplot as plt
 import faicons
+import shinyswatch
 
 app_ui = ui.page_fluid(
+    shinyswatch.theme.sandstone(), 
     ui.layout_sidebar(
         ui.sidebar(
             ui.input_radio_buttons(
@@ -52,13 +54,12 @@ app_ui = ui.page_fluid(
 
         ),
         ui.value_box(
-            title="Estimated total costs",
+            title="Estimated costs workspace*",
             showcase=faicons.icon_svg("circle-dollar-to-slot",width="50px"),
             value=ui.output_ui("estimate"),
             theme="bg-gradient-blue-purple",
         ),
         ui.output_plot("plot_compute"),
-        ui.output_plot("plot_storage"),
     ),
 )
 
@@ -74,7 +75,6 @@ def server(input, output, session):
                 ui.input_radio_buttons(
                     "time_unit", "Time Unit", ["hours", "days"]
                     ),
-                ui.input_slider("storage", "Storage volume size in GB", 5, 1500, 250, step=5),
                 )
         else:
             return ui.TagList(
@@ -83,7 +83,6 @@ def server(input, output, session):
                 ui.input_radio_buttons(
                     "time_unit", "Time Unit", ["hours", "days"]
                     ),
-                ui.input_slider("storage", "Storage volume size in GB", 5, 1500, 250, step=5),
              )
 
     @render.plot(alt="Cost estimator")
@@ -124,21 +123,6 @@ def server(input, output, session):
         ax.set(xlabel='Time in # of ' + input.time_unit(), ylabel='Credits',
                title='Cost of running a workspace')
 
-    @render.plot(alt="Cost estimator")
-    def plot_storage():
-        x_max = 50.0
-        t = np.arange(0.0, x_max, 1.0)
-        cost = t * input.storage() * 0.681 / 30
-        fig, ax = plt.subplots()
-        ax.set_ylim([0, 1000])
-        ax.set_xlim([0, int(x_max)])
-        ax.plot(t, cost, label="Credits")
-        ax.grid()
-        ax.vlines(input.time(), 0, cost[input.time()], colors='r', linestyles='dashed', label='Estimated time')
-        ax.hlines(y=cost[input.time()], xmin=0, xmax=input.time(), color='r', linestyle='dashed')
-        ax.set(xlabel='Time in # of days', ylabel='Credits',
-               title='Cost of persistent storage')
-
     @render.text  
     def estimate():
         ssd_hourly_cost = 1.525 * 100 / (30 * 24)  # assumed on average 100GB SSD
@@ -153,6 +137,85 @@ def server(input, output, session):
                 cost = input.time() * 24 * (input.gpus() * 18 + ssd_hourly_cost)
             else:
                 cost = input.time() * (input.gpus() * 18 + ssd_hourly_cost)
+        return f"{round(cost, 1)} credits"  
+
+app = App(app_ui, server)
+
+```
+
+> *Costs including workspaces storage (SSD)
+```{shinylive-python}
+#| standalone: true
+#| viewerHeight: 600
+
+from shiny import App, render, ui
+import numpy as np
+import matplotlib.pyplot as plt
+import faicons
+import shinyswatch
+
+app_ui = ui.page_fluid(
+    ui.layout_sidebar(
+        ui.sidebar(
+            ui.output_ui("device_controls"),
+        ),
+        ui.value_box(
+            title="Costs persistent storage (HDD)",
+            showcase=faicons.icon_svg("circle-dollar-to-slot",width="50px"),
+            value=ui.output_ui("estimate"),
+            theme="bg-gradient-blue-purple",
+        ),
+        ui.output_plot("plot_storage"),
+    ),
+    theme=shinyswatch.theme.sandstone,
+)
+
+
+def server(input, output, session):
+    @output
+    @render.ui
+    def device_controls():
+        return ui.TagList(
+            ui.input_slider("time", "Estimated time", 1, 50, 12, step=1),
+            ui.input_radio_buttons(
+                "time_unit", "Time Unit", ["days", "months"]
+                ),
+            ui.input_slider("storage", "Storage volume size in GB", 5, 1500, 250, step=5),
+            )
+
+    @render.plot(alt="Cost estimator")
+    def plot_storage():
+        x_max = 50.0
+        t = np.arange(0.0, x_max, 1.0)
+        if input.time_unit() == "days": 
+            cost = t * input.storage() * 0.681 / 30
+        else:
+            cost = t * input.storage() * 0.681
+
+        fig, ax = plt.subplots()
+
+        if input.time_unit() == "days":
+            ax.set_ylim([0, 1000])
+        else:
+            ax.set_ylim([0, 1000 * 30])
+
+        ax.set_xlim([0, int(x_max)])
+        ax.plot(t, cost, label="Credits")
+        ax.grid()
+        ax.vlines(input.time(), 0, cost[input.time()], colors='r', linestyles='dashed', label='Estimated time')
+        ax.hlines(y=cost[input.time()], xmin=0, xmax=input.time(), color='r', linestyle='dashed')
+        if input.time_unit() == "days":
+            ax.set(xlabel='Time in # of days', ylabel='Credits',
+                title='Cost of persistent storage')
+        else:
+            ax.set(xlabel='Time in # of months', ylabel='Credits',
+                title='Cost of persistent storage')
+    @render.text  
+    def estimate():
+        if input.time_unit() == "days":
+            cost = input.time() * input.storage() * 0.681 / 30
+        else:
+            cost = input.time() * input.storage() * 0.681
         return f"{round(cost, 1)} credits"  
 
 app = App(app_ui, server)

@@ -33,9 +33,10 @@ website:
 
 format:
   html:
-    theme: cosmo
+    theme: flatly
     css: _styles/styles.css
     toc: true
     code-copy: true
     monobackgroundcolor: "#f8f9fa"
+    linkcolor : "#007ba7"
     code-block-background: true
