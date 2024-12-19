@@ -23,17 +23,16 @@ This is a flowchart describing the Onboarding procedure for new projects, find d
 
 ```{mermaid}
 flowchart TD
-  A[1. Intake meeting] --> B{Onboarding}
-  B -- budget --> C{3. Request credits}
-  C --> F[UU credits via Intake meeting]
-  C --> G[Small Compute application]
-  C --> H[Project budget]
-  B -- account --> D[2. Create collaboration in SRAM]
-  D ----> E[4. Log in on Research Cloud]
-  F --> E[4. Log in on Research Cloud]
-  G --> E[4. Log in on Research Cloud]
-  H --> E[4. Log in on Research Cloud]
+  A[1 Intake meeting] --> B{Onboarding}
+  B -- account --> C[2 Create collaboration<br> in SRAM]
+  B -- training --> D[<a href='https://www.uu.nl/en/research/research-data-management/workshops/getting-started-with-virtual-research-environments-vres'>Getting Started with VRE</a>]
+  B -- budget --> F["3 Apply for credits<br>#bull; UU credits via intake<br>#bull; Small compute application<br>#bull; Project budget"]
+  C --> E
+  D ----> E[4 Log in on Research Cloud]
+  F --> E
   E --> J[Create your first workspace!]
+
+  style F text-align:left
 
 ```
 
