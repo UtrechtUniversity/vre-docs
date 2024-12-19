@@ -39,15 +39,34 @@ When you created a workspace and chose to attach a storage volume to the workspa
 Typically you want to create a project folder on the storage volume (e.g. `/data/my_storage/my_project`).
 
 ## Create a workspace
-A workspace can also be called a 'Virtual Machine' or a 'Server'. It is a temporary 'remote' machine that you can login to and that has you can use to perform analyses or model runs. You 'pay' for the machine with the credits from your wallet. The more compute power you select the more credits it costs and the sooner your wallet will be empty.
+A workspace can also be called a 'Virtual Machine' or a 'Server'. It is a temporary 'remote' machine that you can login to and that has you can use to perform analyses or model runs. You 'pay' for the machine with the credits from your wallet until the workspace is being 'paused' or 'deleted'. The more compute power you select the more credits it costs and the sooner your wallet will be empty.
 
 See [here](manuals/creating.qmd) for detailed information on how to create a workspace.
 
-## Pausing, Resuming, Deleting a workspace
-You always need a wallet to create a workspace, by default a workspace can only be paused, resumed and deleted by the one that has created it. You can use SRAM to give persons permission to PAUSE, RESUME and DELETE a workspace that is created by someone else. It is also possible to share a wallet with a member of your CO in SRAM. See [Add collaborators to existing project](https://servicedesk.surf.nl/wiki/display/IAM/Invite+admins+and+members+to+a+collaboration).
+### Workspace State
 
+After creating a workspace following the steps above, you will be automatically sent back to the main page (aka Dashboard). Under 'Workspaces', you will find your newly created workspace in 'State: Creating'. Depending on the Workspace that you selected, this can take between 10 and 30 minutes. When the State changes to 'State: running', the workspace is ready and you can login to your worspace. **Important: your workspace consumes credits from your wallet when the State is running. It will stop consuming credits when: ** 
+
+- you change the State to Paused using the pause button
+- you delete the workspace using the delete button
+- your workspace is automatically deleted when the expiry date passes
+- your workspace is automatically paused when your wallet is empty
+
+**Important: Logging out from your Workspace, or closing the browser window will not change the state of the Workspace. You can only do this in the Research Cloud Portal.**
+
+### Pausing, Resuming, Deleting a workspace
+
+**Pause** a workspace when you (and your colleagues) are not working on it and when there are no analyses going on or scripts running. To pause a workspace, find your workspace in the Research Cloud portal and click the Pause button.
+
+**Resume** simply resume a paused workspace when you want to continue working with it. To do this, find the workspace in the Research Cloud portal and click 'Resume'.
+
+**Delete** a workspace if you will not be using the workspace for more than a couple of weeks (as paused workspaces do consume a small number of credits for storage). Make sure any work in progress (scripts and data) are at least stored on a Storage Volume, but preferably also backed up elsewhere (Yoda, OneDrive, Surfdrive, GitHub, etc.), as Research cloud storage is not backed up.
+
+By default, only the person that created a workspace can Pause, Resume and Delete the workspace. You (or your colleague that initially got access to Research Cloud) can use SRAM to give persons permission to PAUSE, RESUME and DELETE a workspace that is created by someone else. It is also possible to share a wallet with a member of your CO in SRAM. See [Add collaborators to existing project](https://servicedesk.surf.nl/wiki/display/IAM/Invite+admins+and+members+to+a+collaboration).
 
 ## Getting access to your workspace
+
+Prerequisites: your workspace has to be in 'State: running'.
 
 There are several ways to login to your workspace.
 

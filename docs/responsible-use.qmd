@@ -88,10 +88,11 @@ def server(input, output, session):
 
     @render.plot(alt="Cost estimator")
     def plot_compute():
+        ssd_hourly_cost = 1.525 * 100 / (30 * 24)  # assumed on average 100GB SSD
+
         if input.device() == "CPU":
             x_max = 50.0
             t = np.arange(0.0, x_max, 1.0)
-            ssd_hourly_cost = 1.525 * 100 / (30 * 24)  # assumed on average 100GB SSD
 
             if input.time_unit() == "days":
                 cost = t * 24 * (input.cores() + ssd_hourly_cost)
