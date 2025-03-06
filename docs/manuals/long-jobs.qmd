@@ -11,6 +11,10 @@ By running long jobs as background process, you make sure the jobs will not be i
 When you access your workspace via RDP (Remote Desktop), jobs will normally not be interupted by disconnecting.
 [More info on access methods](https://utrechtuniversity.github.io/vre-docs/docs/first-steps.html#getting-access-to-your-workspace)
 
+## Saving credits and resources when running long jobs
+
+A problem you may run into when running long jobs on your workspace is that the workspace will keep running even after the job is complete. Because you might not know exactly how long your job will take, you may be unable to [pause the workspace](../responsible-use.qmd#pausing-or-deleting-workspaces) manually immediately after the job is finished. This can potentially cost a lot of credits, and waste resources on the platform. [UU-maintained Catalog Items](../workspace-catalogue.qmd) come with a custom `run_and_pause` script that will pause your workspace when your long-running process is finished. Read more about it [below](#method-1-using-run_and_pause).
+
 ## How to run jobs as background processes
 
 ### Prerequisites
@@ -34,7 +38,65 @@ cd <your storage volume name>
 ...
 ```
 
-### Step 3: Run your script as background process using `nohup`
+### Step 3: Run your script as background process
+
+We outline two ways of running your long job as a background process:
+
+1. [Using the UU-provided `run_and_pause` script.](#method-1-using-run_and_pause)
+    * the main advantage of this method is that it will automatically [pause your workspace](../responsible-use.qmd#pausing-or-deleting-workspaces) when the job is finished, thereby saving credits and resources.
+    * the downsides are that the script is only available on [UU-maintained Catalog Items](../workspace-catalogue.qmd), and that it requires a ResearchCloud API token.
+2. [Using the generic method `nohup`.](#method-2-using-nohup)
+
+#### Method 1: using `run_and_pause`
+
+*Additional prerequisites*:
+
+- a personal ResearchCloud API token. See [here](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/117178402/SRC+API) for how to acquire one.
+  * **NOTE: an API token is sensitive information. Treat it safely, just as you would treat a password!**
+- a workspace that contains the `run_and_pause` script. You can check whether it is installed by just typing `run_and_pause` in your terminal. All [UU-maintained catalog items](../workspace-catalogue.qmd) should have the script installed.
+
+To run your long job and automatically pause the workspace when it is finished, simply perform the following steps:
+
+1. Run `run_and_pause "mycommand myarg1 myarg2"` in your terminal.
+    * optionally, you can add the `-s` flag to run `run_and_pause` in [silent mode](#running-run_and_pause-in-silent-mode).
+1. The script will prompt you for your ResearchCloud API token. Enter it.
+1. The script will create a log file to which all output of your script will be logged, and tell you where to find it.
+1. Press any key to start running your command. The `run_and_pause` script will now exit, but your command wil keep running in the background.
+1. When the job is finished, the workspace will be automatically paused!
+
+##### **Inspecting output**
+
+After the `run_and_pause` script exits (step 4), you can check your script's output by inspecting the logfile. Logfiles will always be written to your home directory, and the script will tell you the exact location. For instance, `run_and_pause` might tell you the following:
+
+```
+The command's output will be saved to /home/youruser/run_and_pause.abcd123.log`
+```
+
+You can then use any text editor to inspect this logfile. To track live output while your command is running, you could use the following command: `tail -f /home/youruser/run_and_pause.abcd123.log`
+
+*Note: the logfile will only contain output that is written to the default 'standard output' and 'standard error'. If your script instead writes output to certain set locations, of course your results will be saved there!*
+
+##### **Running `run_and_pause` in silent mode**
+
+By default, `run_and_pause` will write some helpful messages to the logfile. For instance, after completion, the file `/home/youruser/run_and_pause.abcd123.log` might look as follows:
+
+```
+Will run the following command, and pause the workspace when it exits:
+echo "HELLO WORLD"
+All output from the command will be captured below.
+To interrupt this process, run:
+kill 2605 && pkill -P 2605
+Command output starts below.
+------
+HELLO WORLD
+------
+Command exited with exit code: 0
+Now pausing the workspace...
+```
+
+If you want the logfile to only contain your command's output, you can run `run_and_pause` in silent mode by adding the `-s` flag. So for instance: `run_and_pause -s mycommand myarg1 myarg2`. The info messages from `run_and_pause` will now be omitted from the log.
+
+#### Method 2: using `nohup`
 
 More info about the use of `nohup` can be found [here](https://www.howtogeek.com/804823/nohup-command-linux/#the-nohup-command).
 For this usecase we combine `nohup` with an ampersand "&" to run a background process the will continue even is the terminal window is closed. The process will only stop:
@@ -64,12 +126,37 @@ The number between square brackets is the job ID and the second number is the pr
 
 ### Terminating the process
 
+#### Terminating a command run via `nohup`
+
 Use the process ID to terminate the job, e.g.:
 
 ```
 kill 152233
 ```
 If you don't know the process ID you can look it up by using a monitoring tool like `top` ([more info](https://www.howtogeek.com/668986/how-to-use-the-linux-top-command-and-understand-its-output/)).
+
+#### Terminating a command run with `run_and_pause`
+
+When you are using `run_and_pause` (see [above](#method-1-using-run_and_pause)), you need to terminate two processes:
+
+1. The process used by `run_and_pause` to pause the workspace after `yourcommand` exits
+1. The process that is actually running `yourcommand`
+
+If you only terminate the second process, the workspace will still be paused!
+
+Fortunately, `run_and_pause` tells you exactly how to terminate both processes. It will tell you, for instance:
+
+```
+Now running your command, and will pause the workspace afterwards!
+To stop this process, and stop the workspace from pausing, run:
+kill 1234 && pkill -P 1234
+```
+
+So to interrupt your command and stop the workspace from being paused, just run `kill 1234 && pkill -P 1234`.
+
+*Explanation*: in the above example, `1234` is the so-called 'process number' of the command used to pause the workspace. `kill 1234` interrupts that process (ensuring the workspace is not paused), while `pkill -P 1234` interrupts all direct sub-processes of that command, ensuring that `yourcommand` is also stopped.
+
+*Note*: if `yourcommand` also spawns sub-processes, you may need to kill them by hand. Of course, you could also pause and resume the workspace to achieve the same result!
 
 ### How do I know my job has ended?
 
