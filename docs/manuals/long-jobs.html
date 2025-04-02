@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.39">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -35,10 +35,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-173bdb5938ceb6c1ca37b968df4512de.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-6f2f4b6b2a2593f65ee6d37445b0e6c1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -146,12 +146,13 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#running-long-jobs-on-your-research-cloud-workspace" id="toc-running-long-jobs-on-your-research-cloud-workspace" class="nav-link active" data-scroll-target="#running-long-jobs-on-your-research-cloud-workspace">Running long jobs on your Research Cloud workspace</a>
   <ul class="collapse">
   <li><a href="#when-is-this-relevant" id="toc-when-is-this-relevant" class="nav-link" data-scroll-target="#when-is-this-relevant">When is this relevant?</a></li>
+  <li><a href="#saving-credits-and-resources-when-running-long-jobs" id="toc-saving-credits-and-resources-when-running-long-jobs" class="nav-link" data-scroll-target="#saving-credits-and-resources-when-running-long-jobs">Saving credits and resources when running long jobs</a></li>
   <li><a href="#how-to-run-jobs-as-background-processes" id="toc-how-to-run-jobs-as-background-processes" class="nav-link" data-scroll-target="#how-to-run-jobs-as-background-processes">How to run jobs as background processes</a>
   <ul class="collapse">
   <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
   <li><a href="#step-1-make-sure-you-are-in-a-terminal" id="toc-step-1-make-sure-you-are-in-a-terminal" class="nav-link" data-scroll-target="#step-1-make-sure-you-are-in-a-terminal">Step 1: Make sure you are in a terminal</a></li>
   <li><a href="#step-2-navigate-to-the-directory-where-your-script-is-located" id="toc-step-2-navigate-to-the-directory-where-your-script-is-located" class="nav-link" data-scroll-target="#step-2-navigate-to-the-directory-where-your-script-is-located">Step 2: Navigate to the directory where your script is located</a></li>
-  <li><a href="#step-3-run-your-script-as-background-process-using-nohup" id="toc-step-3-run-your-script-as-background-process-using-nohup" class="nav-link" data-scroll-target="#step-3-run-your-script-as-background-process-using-nohup">Step 3: Run your script as background process using <code>nohup</code></a></li>
+  <li><a href="#step-3-run-your-script-as-background-process" id="toc-step-3-run-your-script-as-background-process" class="nav-link" data-scroll-target="#step-3-run-your-script-as-background-process">Step 3: Run your script as background process</a></li>
   <li><a href="#terminating-the-process" id="toc-terminating-the-process" class="nav-link" data-scroll-target="#terminating-the-process">Terminating the process</a></li>
   <li><a href="#how-do-i-know-my-job-has-ended" id="toc-how-do-i-know-my-job-has-ended" class="nav-link" data-scroll-target="#how-do-i-know-my-job-has-ended">How do I know my job has ended?</a></li>
   <li><a href="#monitoring-progress" id="toc-monitoring-progress" class="nav-link" data-scroll-target="#monitoring-progress">Monitoring progress</a></li>
@@ -177,6 +178,10 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>When you access your workspace via RDP (Remote Desktop), jobs will normally not be interupted by disconnecting. <a href="https://utrechtuniversity.github.io/vre-docs/docs/first-steps.html#getting-access-to-your-workspace">More info on access methods</a></p>
 </section>
+<section id="saving-credits-and-resources-when-running-long-jobs" class="level2">
+<h2 class="anchored" data-anchor-id="saving-credits-and-resources-when-running-long-jobs">Saving credits and resources when running long jobs</h2>
+<p>A problem you may run into when running long jobs on your workspace is that the workspace will keep running even after the job is complete. Because you might not know exactly how long your job will take, you may be unable to <a href="../../docs/responsible-use.html#pausing-or-deleting-workspaces">pause the workspace</a> manually immediately after the job is finished. This can potentially cost a lot of credits, and waste resources on the platform. <a href="../../docs/workspace-catalogue.html">UU-maintained Catalog Items</a> come with a custom <code>run_and_pause</code> script that will pause your workspace when your long-running process is finished. Read more about it <a href="#method-1-using-run_and_pause">below</a>.</p>
+</section>
 <section id="how-to-run-jobs-as-background-processes" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-run-jobs-as-background-processes">How to run jobs as background processes</h2>
 <section id="prerequisites" class="level3">
@@ -201,8 +206,64 @@ ul.task-list li input[type="checkbox"] {
 cd &lt;your storage volume name&gt;
 ...</code></pre>
 </section>
-<section id="step-3-run-your-script-as-background-process-using-nohup" class="level3">
-<h3 class="anchored" data-anchor-id="step-3-run-your-script-as-background-process-using-nohup">Step 3: Run your script as background process using <code>nohup</code></h3>
+<section id="step-3-run-your-script-as-background-process" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-run-your-script-as-background-process">Step 3: Run your script as background process</h3>
+<p>We outline two ways of running your long job as a background process:</p>
+<ol type="1">
+<li><a href="#method-1-using-run_and_pause">Using the UU-provided <code>run_and_pause</code> script.</a>
+<ul>
+<li>the main advantage of this method is that it will automatically <a href="../../docs/responsible-use.html#pausing-or-deleting-workspaces">pause your workspace</a> when the job is finished, thereby saving credits and resources.</li>
+<li>the downsides are that the script is only available on <a href="../../docs/workspace-catalogue.html">UU-maintained Catalog Items</a>, and that it requires a ResearchCloud API token.</li>
+</ul></li>
+<li><a href="#method-2-using-nohup">Using the generic method <code>nohup</code>.</a></li>
+</ol>
+<section id="method-1-using-run_and_pause" class="level4">
+<h4 class="anchored" data-anchor-id="method-1-using-run_and_pause">Method 1: using <code>run_and_pause</code></h4>
+<p><em>Additional prerequisites</em>:</p>
+<ul>
+<li>a personal ResearchCloud API token. See <a href="https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/117178402/SRC+API">here</a> for how to acquire one.
+<ul>
+<li><strong>NOTE: an API token is sensitive information. Treat it safely, just as you would treat a password!</strong></li>
+</ul></li>
+<li>a workspace that contains the <code>run_and_pause</code> script. You can check whether it is installed by just typing <code>run_and_pause</code> in your terminal. All <a href="../../docs/workspace-catalogue.html">UU-maintained catalog items</a> should have the script installed.</li>
+</ul>
+<p>To run your long job and automatically pause the workspace when it is finished, simply perform the following steps:</p>
+<ol type="1">
+<li>Run <code>run_and_pause "mycommand myarg1 myarg2"</code> in your terminal.
+<ul>
+<li>optionally, you can add the <code>-s</code> flag to run <code>run_and_pause</code> in <a href="#running-run_and_pause-in-silent-mode">silent mode</a>.</li>
+</ul></li>
+<li>The script will prompt you for your ResearchCloud API token. Enter it.</li>
+<li>The script will create a log file to which all output of your script will be logged, and tell you where to find it.</li>
+<li>Press any key to start running your command. The <code>run_and_pause</code> script will now exit, but your command wil keep running in the background.</li>
+<li>When the job is finished, the workspace will be automatically paused!</li>
+</ol>
+<section id="inspecting-output" class="level5">
+<h5 class="anchored" data-anchor-id="inspecting-output"><strong>Inspecting output</strong></h5>
+<p>After the <code>run_and_pause</code> script exits (step 4), you can check your script’s output by inspecting the logfile. Logfiles will always be written to your home directory, and the script will tell you the exact location. For instance, <code>run_and_pause</code> might tell you the following:</p>
+<pre><code>The command's output will be saved to /home/youruser/run_and_pause.abcd123.log`</code></pre>
+<p>You can then use any text editor to inspect this logfile. To track live output while your command is running, you could use the following command: <code>tail -f /home/youruser/run_and_pause.abcd123.log</code></p>
+<p><em>Note: the logfile will only contain output that is written to the default ‘standard output’ and ‘standard error’. If your script instead writes output to certain set locations, of course your results will be saved there!</em></p>
+</section>
+<section id="running-run_and_pause-in-silent-mode" class="level5">
+<h5 class="anchored" data-anchor-id="running-run_and_pause-in-silent-mode"><strong>Running <code>run_and_pause</code> in silent mode</strong></h5>
+<p>By default, <code>run_and_pause</code> will write some helpful messages to the logfile. For instance, after completion, the file <code>/home/youruser/run_and_pause.abcd123.log</code> might look as follows:</p>
+<pre><code>Will run the following command, and pause the workspace when it exits:
+echo "HELLO WORLD"
+All output from the command will be captured below.
+To interrupt this process, run:
+kill 2605 &amp;&amp; pkill -P 2605
+Command output starts below.
+------
+HELLO WORLD
+------
+Command exited with exit code: 0
+Now pausing the workspace...</code></pre>
+<p>If you want the logfile to only contain your command’s output, you can run <code>run_and_pause</code> in silent mode by adding the <code>-s</code> flag. So for instance: <code>run_and_pause -s mycommand myarg1 myarg2</code>. The info messages from <code>run_and_pause</code> will now be omitted from the log.</p>
+</section>
+</section>
+<section id="method-2-using-nohup" class="level4">
+<h4 class="anchored" data-anchor-id="method-2-using-nohup">Method 2: using <code>nohup</code></h4>
 <p>More info about the use of <code>nohup</code> can be found <a href="https://www.howtogeek.com/804823/nohup-command-linux/#the-nohup-command">here</a>. For this usecase we combine <code>nohup</code> with an ampersand “&amp;” to run a background process the will continue even is the terminal window is closed. The process will only stop:</p>
 <ul>
 <li>If it has finished</li>
@@ -218,11 +279,31 @@ cd &lt;your storage volume name&gt;
 <p><img src="../imgs/background.png" class="img-fluid"></p>
 <p>You need to press Enter one more time to return to the command prompt. The number between square brackets is the job ID and the second number is the process ID.</p>
 </section>
+</section>
 <section id="terminating-the-process" class="level3">
 <h3 class="anchored" data-anchor-id="terminating-the-process">Terminating the process</h3>
+<section id="terminating-a-command-run-via-nohup" class="level4">
+<h4 class="anchored" data-anchor-id="terminating-a-command-run-via-nohup">Terminating a command run via <code>nohup</code></h4>
 <p>Use the process ID to terminate the job, e.g.:</p>
 <pre><code>kill 152233</code></pre>
 <p>If you don’t know the process ID you can look it up by using a monitoring tool like <code>top</code> (<a href="https://www.howtogeek.com/668986/how-to-use-the-linux-top-command-and-understand-its-output/">more info</a>).</p>
+</section>
+<section id="terminating-a-command-run-with-run_and_pause" class="level4">
+<h4 class="anchored" data-anchor-id="terminating-a-command-run-with-run_and_pause">Terminating a command run with <code>run_and_pause</code></h4>
+<p>When you are using <code>run_and_pause</code> (see <a href="#method-1-using-run_and_pause">above</a>), you need to terminate two processes:</p>
+<ol type="1">
+<li>The process used by <code>run_and_pause</code> to pause the workspace after <code>yourcommand</code> exits</li>
+<li>The process that is actually running <code>yourcommand</code></li>
+</ol>
+<p>If you only terminate the second process, the workspace will still be paused!</p>
+<p>Fortunately, <code>run_and_pause</code> tells you exactly how to terminate both processes. It will tell you, for instance:</p>
+<pre><code>Now running your command, and will pause the workspace afterwards!
+To stop this process, and stop the workspace from pausing, run:
+kill 1234 &amp;&amp; pkill -P 1234</code></pre>
+<p>So to interrupt your command and stop the workspace from being paused, just run <code>kill 1234 &amp;&amp; pkill -P 1234</code>.</p>
+<p><em>Explanation</em>: in the above example, <code>1234</code> is the so-called ‘process number’ of the command used to pause the workspace. <code>kill 1234</code> interrupts that process (ensuring the workspace is not paused), while <code>pkill -P 1234</code> interrupts all direct sub-processes of that command, ensuring that <code>yourcommand</code> is also stopped.</p>
+<p><em>Note</em>: if <code>yourcommand</code> also spawns sub-processes, you may need to kill them by hand. Of course, you could also pause and resume the workspace to achieve the same result!</p>
+</section>
 </section>
 <section id="how-do-i-know-my-job-has-ended" class="level3">
 <h3 class="anchored" data-anchor-id="how-do-i-know-my-job-has-ended">How do I know my job has ended?</h3>
