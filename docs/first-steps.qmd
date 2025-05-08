@@ -68,7 +68,16 @@ By default, only the person that created a workspace can Pause, Resume and Delet
 
 Prerequisites: your workspace has to be in 'State: running'.
 
-There are several ways to login to your workspace.
+There are several ways to login to your workspace, depending on its type:
+
+- [Browser access to a desktop environment](#browser-access-to-a-desktop-environment)
+- Browser access to a webapplication
+  - [Webapplications that support Single Sign-on](#webapplications-that-support-single-sign-on.)
+  - [Webapplications that require a time-based password](#webapplications-that-require-a-time-based-password)
+- [Remote Desktop Protocol](#remote-desktop-protocol)
+- [SSH](#ssh) (command line)
+
+See the [workspace catalog](workspace-catalogue.qmd) for an overview of which workspace types allow which kind of login.
 
 ### Browser access to a desktop environment
 
@@ -76,15 +85,34 @@ There are several ways to login to your workspace.
 
 For workspaces that provide a graphical interface to a desktop environment. For instance: Ubuntu Desktop, Python Workbench, Matlab. See the [workspace catalog](workspace-catalogue.qmd) for an overview of Catalog Items that provide this kind of access.
 
-For these workspace types, this is what you will see when you click the yellow "Access" button:
+These workspace types will present you with a Linux desktop environment in a browser window.
 
-<img src="imgs/guacamole_login.png" width="30%" />
+Authorization is handled using Single Sign-On, which for UU users means you can use your Solis-ID.
+
+**Note**: if your workspace uses an older operating system (e.g. Ubuntu < 22), Single Sign-On is not yet available. In that case, you will have to [authenticate using TOTP](#legacy-desktop-workspaces-with-time-based-password).
+
+<img src="imgs/ubuntu_desktop.png" width="30%" />
 
 #### How?
 
-For these workspaces, you will need to [setup a Time Based Password for your Research Cloud account](https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace#Logintoyourworkspace-WorkspaceAccesswithTOTP).
-
 Steps:
+
+1. Click the yellow "Access" button. You will be taken to a new page.
+1. Since authorization is handled using Single Sign On, and you are already logged in to the ResearchCloud portal, it may be that you don't need to re-authenticate at all!
+1. If you *do* need to re-autenticate, you will be presented with a login prompt by [SRAM](./glossary.qmd#sram). (*see screenshot below*)
+    * Select your institution (Utrecht University)
+    * Follow the steps to login using your institution's login mechanism (Solis-ID).
+1. After logging in, you will see a Linux desktop in your browser!
+
+<img src="imgs/sram_auth.png" width="30%" />
+
+### Legacy: desktop workspaces with Time Based Password
+
+If your workspace still uses an older operating system (e.g. Ubuntu < 22), Single Sign-On is not yet available. In that case, you will have to  [setup a Time Based Password for your Research Cloud account](https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace#Logintoyourworkspace-WorkspaceAccesswithTOTP).
+
+For these workspace types, this is what you will see when you click the yellow "Access" button:
+
+<img src="imgs/guacamole_login.png" width="30%" />
 
 1. Click the yellow "Access button" for your workspace.
     * You will be taken to your workspace's address, e.g. (`https://workspacename.src.surf-hosted.nl`).
