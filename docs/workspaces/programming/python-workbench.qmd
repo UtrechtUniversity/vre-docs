@@ -27,6 +27,7 @@ support: UU
 
 This workspace types comes with various Python development tools already installed:
 
+- `uv` for installing different python versions and dependencies lightning fast
 - `pyenv` for managing different python versions
 - `miniconda` for managing dependency environments
 - `poetry` for an alternative way of running projects with specified dependencies
