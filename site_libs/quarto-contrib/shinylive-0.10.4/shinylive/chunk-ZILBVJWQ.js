@@ -1,9 +1,9 @@
-// Shinylive 0.10.3
+// Shinylive 0.10.4
 // Copyright 2025 Posit, PBC
 import {
   __commonJS,
   __toESM
-} from "./chunk-TMICTO3Y.js";
+} from "./chunk-JCWZLJM2.js";
 
 // node_modules/lz-string/libs/lz-string.js
 var require_lz_string = __commonJS({

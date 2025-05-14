@@ -1,4 +1,4 @@
-// Shinylive 0.10.3
+// Shinylive 0.10.4
 // Copyright 2025 Posit, PBC
 import {
   FCJSONtoFC,
@@ -16,14 +16,14 @@ import {
   sleep,
   stringToUint8Array,
   uint8ArrayToString
-} from "./chunk-S5NYWCQV.js";
+} from "./chunk-ZILBVJWQ.js";
 import {
   __commonJS,
   __privateAdd,
   __privateMethod,
   __require,
   __toESM
-} from "./chunk-TMICTO3Y.js";
+} from "./chunk-JCWZLJM2.js";
 
 // node_modules/scheduler/cjs/scheduler.development.js
 var require_scheduler_development = __commonJS({
@@ -31979,7 +31979,7 @@ var H;
 var L2;
 async function T2() {
   if (!g2 || (z = (await import("node:url")).default, H = await import("node:fs"), L2 = await import("node:fs/promises"), V2 = (await import("node:vm")).default, D = await import("node:path"), U2 = D.sep, typeof I2 < "u")) return;
-  let e = H, t = await import("node:crypto"), o = await import("./browser-RU5N5KTL.js"), r = await import("node:child_process"), a2 = { fs: e, crypto: t, ws: o, child_process: r };
+  let e = H, t = await import("node:crypto"), o = await import("./browser-2QUEL7LE.js"), r = await import("node:child_process"), a2 = { fs: e, crypto: t, ws: o, child_process: r };
   globalThis.require = function(n) {
     return a2[n];
   };
