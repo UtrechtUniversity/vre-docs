@@ -39,7 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-3a55fbe61288492883fc5288ac6d8bd5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-6020956a11f5c8c1e4b5ffdbaa316057.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -159,6 +159,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#getting-access-to-your-workspace" id="toc-getting-access-to-your-workspace" class="nav-link" data-scroll-target="#getting-access-to-your-workspace">Getting access to your workspace</a>
   <ul class="collapse">
   <li><a href="#browser-access-to-a-desktop-environment" id="toc-browser-access-to-a-desktop-environment" class="nav-link" data-scroll-target="#browser-access-to-a-desktop-environment">Browser access to a desktop environment</a></li>
+  <li><a href="#legacy-desktop-workspaces-with-time-based-password" id="toc-legacy-desktop-workspaces-with-time-based-password" class="nav-link" data-scroll-target="#legacy-desktop-workspaces-with-time-based-password">Legacy: desktop workspaces with Time Based Password</a></li>
   <li><a href="#browser-access-to-a-webapplication" id="toc-browser-access-to-a-webapplication" class="nav-link" data-scroll-target="#browser-access-to-a-webapplication">Browser access to a webapplication</a></li>
   <li><a href="#remote-desktop-protocol" id="toc-remote-desktop-protocol" class="nav-link" data-scroll-target="#remote-desktop-protocol">Remote Desktop Protocol</a></li>
   <li><a href="#ssh" id="toc-ssh" class="nav-link" data-scroll-target="#ssh">SSH</a></li>
@@ -257,19 +258,49 @@ ul.task-list li input[type="checkbox"] {
 <section id="getting-access-to-your-workspace" class="level2">
 <h2 class="anchored" data-anchor-id="getting-access-to-your-workspace">Getting access to your workspace</h2>
 <p>Prerequisites: your workspace has to be in ‘State: running’.</p>
-<p>There are several ways to login to your workspace.</p>
+<p>There are several ways to login to your workspace, depending on its type:</p>
+<ul>
+<li><a href="#browser-access-to-a-desktop-environment">Browser access to a desktop environment</a></li>
+<li>Browser access to a webapplication
+<ul>
+<li><a href="#webapplications-that-support-single-sign-on.">Webapplications that support Single Sign-on</a></li>
+<li><a href="#webapplications-that-require-a-time-based-password">Webapplications that require a time-based password</a></li>
+</ul></li>
+<li><a href="#remote-desktop-protocol">Remote Desktop Protocol</a></li>
+<li><a href="#ssh">SSH</a> (command line)</li>
+</ul>
+<p>See the <a href="../docs/workspace-catalogue.html">workspace catalog</a> for an overview of which workspace types allow which kind of login.</p>
 <section id="browser-access-to-a-desktop-environment" class="level3">
 <h3 class="anchored" data-anchor-id="browser-access-to-a-desktop-environment">Browser access to a desktop environment</h3>
 <section id="when" class="level4">
 <h4 class="anchored" data-anchor-id="when">When?</h4>
 <p>For workspaces that provide a graphical interface to a desktop environment. For instance: Ubuntu Desktop, Python Workbench, Matlab. See the <a href="../docs/workspace-catalogue.html">workspace catalog</a> for an overview of Catalog Items that provide this kind of access.</p>
-<p>For these workspace types, this is what you will see when you click the yellow “Access” button:</p>
-<p><img src="imgs/guacamole_login.png" width="30%"></p>
+<p>These workspace types will present you with a Linux desktop environment in a browser window.</p>
+<p>Authorization is handled using Single Sign-On, which for UU users means you can use your Solis-ID.</p>
+<p><strong>Note</strong>: if your workspace uses an older operating system (e.g.&nbsp;Ubuntu &lt; 22), Single Sign-On is not yet available. In that case, you will have to <a href="#legacy-desktop-workspaces-with-time-based-password">authenticate using TOTP</a>.</p>
+<p><img src="imgs/ubuntu_desktop.png" width="30%"></p>
 </section>
 <section id="how" class="level4">
 <h4 class="anchored" data-anchor-id="how">How?</h4>
-<p>For these workspaces, you will need to <a href="https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace#Logintoyourworkspace-WorkspaceAccesswithTOTP">setup a Time Based Password for your Research Cloud account</a>.</p>
 <p>Steps:</p>
+<ol type="1">
+<li>Click the yellow “Access” button. You will be taken to a new page.</li>
+<li>Since authorization is handled using Single Sign On, and you are already logged in to the ResearchCloud portal, it may be that you don’t need to re-authenticate at all!</li>
+<li>If you <em>do</em> need to re-autenticate, you will be presented with a login prompt by <a href="../docs/glossary.html#sram">SRAM</a>. (<em>see screenshot below</em>)
+<ul>
+<li>Select your institution (Utrecht University)</li>
+<li>Follow the steps to login using your institution’s login mechanism (Solis-ID).</li>
+</ul></li>
+<li>After logging in, you will see a Linux desktop in your browser!</li>
+</ol>
+<p><img src="imgs/sram_auth.png" width="30%"></p>
+</section>
+</section>
+<section id="legacy-desktop-workspaces-with-time-based-password" class="level3">
+<h3 class="anchored" data-anchor-id="legacy-desktop-workspaces-with-time-based-password">Legacy: desktop workspaces with Time Based Password</h3>
+<p>If your workspace still uses an older operating system (e.g.&nbsp;Ubuntu &lt; 22), Single Sign-On is not yet available. In that case, you will have to <a href="https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace#Logintoyourworkspace-WorkspaceAccesswithTOTP">setup a Time Based Password for your Research Cloud account</a>.</p>
+<p>For these workspace types, this is what you will see when you click the yellow “Access” button:</p>
+<p><img src="imgs/guacamole_login.png" width="30%"></p>
 <ol type="1">
 <li>Click the yellow “Access button” for your workspace.
 <ul>
@@ -283,7 +314,6 @@ ul.task-list li input[type="checkbox"] {
 <li>As a password, enter your time-based (TOTP) password for Research Cloud (<strong>not</strong> for your Solis ID).</li>
 </ol>
 <p>Once you are logged in, you will be presented with a desktop environment in your browser. The environment used on ResearchCloud is a lightweight desktop called Xfce. See <a href="https://docs.xfce.org/">here</a> for help with it.</p>
-</section>
 </section>
 <section id="browser-access-to-a-webapplication" class="level3">
 <h3 class="anchored" data-anchor-id="browser-access-to-a-webapplication">Browser access to a webapplication</h3>
