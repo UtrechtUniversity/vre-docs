@@ -121,7 +121,7 @@ def display_category(name, headers=table_headers):
 ```
 
 
-# Programming & Analysis Environments
+# Programming Environments
 ```{python}
 display_category('programming')
 ```
@@ -132,7 +132,7 @@ display_category('programming')
 display_category('plain')
 ```
 
-# Utilities & Data Processing
+# Analysis Tools, Workflows & Utilities
 ```{python}
 display_category('utility')
 ```
