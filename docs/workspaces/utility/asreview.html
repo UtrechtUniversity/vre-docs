@@ -195,7 +195,7 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="create-a-storage-volume">Create a storage volume</h3>
 <p>If desired, first create a storage volume before creating the workspace.</p>
 <p>See the <a href="../../../docs/first-steps.html#create-storage-volume">Getting started</a> page for more info about how and why to create a storage volume.</p>
-<p><strong>If you select a storage unit when creating an ASReview workspace, all ASReview will automatically be stored on it.</strong> Since ASReview can potentially generate a lot of data, using a storage unit may be advised (the default, non-permanent storage on the workspace amounts to 150GB).</p>
+<p><strong>If you select a storage unit when creating an ASReview workspace, all ASReview data will automatically be stored on it.</strong> Since ASReview can potentially generate a lot of data, using a storage unit may be advised (the default, non-permanent storage on the workspace amounts to 150GB).</p>
 </section>
 <section id="create-a-workspace" class="level3">
 <h3 class="anchored" data-anchor-id="create-a-workspace">Create a workspace</h3>
@@ -211,7 +211,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="command-line" class="level3">
 <h3 class="anchored" data-anchor-id="command-line">Command line</h3>
 <p>Alternatively, <em>only those users who are admins in the Collaborative Organisation</em> (in the <code>src_co_admin</code> group) can <a href="../../../docs/first-steps.html#ssh">login to the workspace via the commandline</a>, using <code>ssh</code>. This may be useful for running ASReview in <a href="https://asreview.nl/simulate/">simulation mode</a>, or e.g.&nbsp;for making backups.</p>
-<p>After logging in, the <code>asreview</code> command will be on your path. The <code>ASREVIEW_LAB_PROJECT</code> environment variable will be set to reflect the location of ASReview’s data, so you should be able to interact with it straight away.</p>
+<p>After logging in, the <code>asreview</code> command will be on your path. The <code>ASREVIEW_PATH</code> environment variable will be set to reflect the location of ASReview’s data (default: <code>/var/www/asreview/asreview_data</code> if you do <strong>not</strong> create the workspace with a storage unit, <code>/data/yourstoragename/asreview_data</code> if you <strong>did</strong>), so you should be able to interact with it straight away.</p>
 <p>Admin users will also be able to use <code>sudo</code> (after entering their time-based passwords).</p>
 </section>
 </section>
