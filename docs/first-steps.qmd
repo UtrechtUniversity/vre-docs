@@ -72,7 +72,7 @@ There are several ways to login to your workspace, depending on its type:
 
 - [Browser access to a desktop environment](#browser-access-to-a-desktop-environment)
 - Browser access to a webapplication
-  - [Webapplications that support Single Sign-on](#webapplications-that-support-single-sign-on.)
+  - [Webapplications that support Single Sign-on](#webapplications-that-support-single-sign-on)
   - [Webapplications that require a time-based password](#webapplications-that-require-a-time-based-password)
 - [Remote Desktop Protocol](#remote-desktop-protocol)
 - [SSH](#ssh) (command line)
