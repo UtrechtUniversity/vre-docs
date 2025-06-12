@@ -9,13 +9,13 @@ This page elaborates on the procedure described on Virtual Research Environments
 There are several situations that may apply to you:  
 
 1. My project team is currently not using Research cloud and I want to start on Research cloud  
-[Start here](#steps-for-setting-up-a-new-research-cloud-project)  
+[Start here](#onboarding-procedure)  
 
 2. Someone in my project team is already using Research cloud and I need access  
 [Start here](#add-collaborators-to-existing-project)  
 
 3. I think Research Cloud is interesting for my current project but I am not sure  
-[Start here](#steps-for-setting-up-a-new-research-cloud-project)  
+[Start here](#onboarding-procedure)  
 
 ## Onboarding procedure
 
