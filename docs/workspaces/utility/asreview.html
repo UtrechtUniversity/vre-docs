@@ -39,7 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-6020956a11f5c8c1e4b5ffdbaa316057.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-29035996b5573f1db369a1f5db5ff366.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -187,7 +187,7 @@ ul.task-list li input[type="checkbox"] {
 <p>This workspace type will start ASReview as a webapplication.</p>
 <p>Anyone who has access to your <a href="../../../docs/glossary.html#collaboration">Collaboration</a> will be able to easily login to ASReview <a href="../../../docs/first-steps.html#webapplications-that-support-single-sign-on.">using Single-Sign on</a>. Since ASReview 2.0 supports multiple users, this workspace is ideal for crowd-based screening. Simply add the members of your screening group to your <a href="../../../docs/glossary.html#collaboration">Collaboration in SRAM</a>!</p>
 <p>Extensions (such as <code>asreview-dory</code>) are not installed on this workspace.</p>
-<p><strong>Note</strong>: this workspace type is currently in pilot phase. Please read the <a href="#tips">tips</a> below.</p>
+<p>Please also read the <a href="#tips">tips</a> below.</p>
 </section>
 <section id="creation" class="level2">
 <h2 class="anchored" data-anchor-id="creation">Creation</h2>
@@ -201,7 +201,7 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="create-a-workspace">Create a workspace</h3>
 <p>In the <a href="https://portal.live.surfresearchcloud.nl/">Research Cloud portal</a> click the ‘Create a new workspace’ button and follow the steps in the wizzard.</p>
 <p>See the <a href="../../../docs/manuals/creating.html">workspace creation manual</a> page for more guidance.</p>
-<p><strong>Choosing the right hardware</strong>: ASReview uses an AI model that runs in parallel to the ASReview webapplication. It is therefore recommended to choose a workspace with at least two CPU cores. The more users that will be using the workspace to do screening in parallel, the more hardware will be required.</p>
+<p><strong>Choosing the right hardware</strong>: ASReview uses an AI model that runs in parallel to the ASReview webapplication. <strong>It is therefore recommended to choose a workspace with at least two CPU cores. Four CPUs is probably enough for most cases.</strong> The more users that will be using the workspace to do screening in parallel, the more hardware will be required.</p>
 <p>Please also see the <a href="../../../docs/responsible-use.html">tips for responsible use</a>.</p>
 </section>
 </section>
@@ -222,8 +222,8 @@ ul.task-list li input[type="checkbox"] {
 <section id="tips" class="level2">
 <h2 class="anchored" data-anchor-id="tips">Tips</h2>
 <ul>
-<li>Remember that you are responsible for making backups of any data yourself! This also applies when using a storage unit: data on a storage unit will not be deleted when you delete the workspace, but it can still become corrupt. If it is important to your work, make sure to make periodical (e.g.&nbsp;daily or weekly backups of your projects). You can make a backup by <a href="#command-line">logging in to the workspace using the commandline</a>, or by downloading datasets from the webapplication.</li>
-<li>Remember that ASReview may potentially generate a lot of data, so think about how much storage you may need. If you’re unsure, <a href="../../../docs/contact.html">just ask for advise</a>!</li>
+<li>Remember that you are responsible for making backups of any data yourself! This also applies when using a storage unit. Although data on a storage unit will not be deleted when you delete the workspace, it can still become corrupt. So if it is important to your work, make sure to make periodical (e.g.&nbsp;daily or weekly) backups of your projects. You can make a backup by <a href="#command-line">logging in to the workspace using the commandline</a>, or by downloading your project from the webapplication.</li>
+<li>Remember that ASReview may potentially generate a lot of data, so think about how much storage you may need. For most cases, the standard amount of storage should be enough. But if you’re unsure, <a href="../../../docs/contact.html">just ask for advise</a>!</li>
 <li>Similarly, think about how many resources (CPUs) your workspace will need. Again, if you’re unsure, <a href="../../../docs/contact.html">just ask for advise</a>!</li>
 </ul>
 
