@@ -116,7 +116,10 @@ for category_path in categories:
 
 def display_category(name, headers=table_headers):
     workspaces = sorted(categories_with_workspaces[name], key=lambda d: d.get('title', ''))
-    result = tabulize(workspaces, headers=headers)
+    if len(workspaces) > 0:
+        result = tabulize(workspaces, headers=headers)
+    else:
+        result = "There are currently no workspaces in this category."
     return Markdown(result)
 ```
 
