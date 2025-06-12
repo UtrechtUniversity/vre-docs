@@ -60,7 +60,7 @@ The API for each application is accessible at sublocations of your workspace's U
 * For Grobid, use the `/api` sublocation, for instance `https://yourworkspaceurl.nl/api/`.
 * For Datastet and Softcite use the `/service` sublocation, e.g. `https://yourworkspaceurl.nl/datastet/service/`.
 
-Since Single-Sign On is difficult to implement when scripting, authentication for the API uses a simple username/password scheme. The default username and password are `grobid`. You can set the password as [an interactive parameter](#Interactive-parameters).
+Since Single-Sign On is difficult to implement when scripting, authentication for the API uses a simple username/password scheme. The default username and password are `grobid`. You can set the password as [an interactive parameter](#interactive-parameters).
 
 From a command line, you can test the Grobid API e.g. in the following way:
 
