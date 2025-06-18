@@ -1,0 +1,37 @@
+--- 
+title: "Nextflow"
+software:
+- '[Nextflow](https://nextflow.io)'
+login:
+- cli
+os_flavor: linux
+os:
+- Ubuntu 22.04
+packages: []
+gpu: true
+admin: false
+support: UU
+---
+
+## Description
+
+Nextflow is a scientific workflow system predominantly used for bioinformatic data analysis. It establishes standards for programmatically creating a series of dependent computational steps and facilitates their execution on various local and cloud resources.
+
+This workspace type comes with Nextflow preinstalled. It is meant to use Nextflow from the commandline. The workspace further includes:
+
+- Miniconda for managing dependencies (Nextflow supports [conda](https://www.nextflow.io/docs/latest/conda.html)).
+- Tools for data transfer from and to Yoda or iRODS servers.
+
+## Creation
+
+{{< include ../partials/_storage.qmd >}}
+
+{{< include ../partials/_creation.qmd >}}
+
+## Access
+
+This workspace can be accessed via the [the commandline](../../first-steps.qmd#ssh), using `ssh`.
+
+## Usage
+
+After logging in the `nextflow` command will be immediately available.
