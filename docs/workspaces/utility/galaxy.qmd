@@ -1,0 +1,107 @@
+--- 
+title: "Galaxy"
+software:
+- '[Galaxy](https://galaxyproject.org/)'
+login:
+- webapp-sso
+os_flavor: linux
+os:
+- Ubuntu 22.04
+packages: []
+gpu: true
+admin: false
+support: UU, SURF
+---
+
+## Description
+
+Galaxy is a free, open-source system for analyzing data, authoring workflows, publishing tools, and more. It is especially popular in the bioinformatics community, but is suitably for many other kinds of analysis workflows.
+
+Galaxy allows you to define workflows that take certain datasets as input, and generate new datasets as output, in a user-friendly way. Workflows consists of *tools*: re-usable scripts that are published by the Galaxy community, or that you can develop yourself.
+
+Using this workspace type, your entire research group can launch Galaxy instances on demand. You can use it, for example, to run workflows when new data periodically becomes availalbe. There is no need to maintain a permanent Galaxy server, with all associated costs and complexity: simply start Galaxy on demand, and remove the workspace when you no longer need it!
+
+See [here](https://www.uu.nl/en/background/lieke-vree-a-star-in-bioinformatics-at-vetgalaxy-project) for an example of how Galaxy is being used to process bioinformatics data at UU!
+
+Feel free to [contact us](../../contact.qmd) if you are curious about how Galaxy on ResearchCloud can help your research group.
+
+### Flavours
+
+There are two very similar workspace types that you can use:
+
+* Galaxy (supported by SURF, co-developed by UU and SURF, publically available in the catalog)
+* Galaxy UU (supported by UU, [request access](../../workspace-catalogue.qmd#getting-access) from the catalog)
+
+In most cases, you can simply use the *Galaxy* catalog item supported by SURF. The *Galaxy UU* catalog item has a few [additional features](#galaxy-uu) that may come in handy.
+
+## Creation
+
+{{< include ../partials/_storage.qmd >}}
+
+To use a storage unit, you currently need to use the [Galaxy UU](#use-a-storage-unit) flavour. When working with large datasets, using a storage unit is advised.
+
+Remember that you are responsible for making backups of any data yourself! Although data on a storage unit will not be deleted when you delete the workspace, it can still become corrupt. So if it is important to your work, make sure to make periodical (e.g. daily or weekly) backups of your projects.
+
+{{< include ../partials/_creation.qmd >}}
+
+**Choosing the right hardware**: depending on the workflows you want to run, Galaxy may require significant computational resources. Although you should not simply select the most hardware available (see [responsible use](../../responsible-use.qmd)), make sure your workspace has enough CPUs. At least two CPUs are advisable for simple workflows, but more may be necessary. If you are unsure, please [contact us](../../contact.qmd).
+
+Alternatively, you can start a Galaxy workspace with only two CPUs, and offload the computational load to a *Pulsar* workspace that has more resources. This means you can have a relatively light-weight Galaxy workspace running, pause your Pulsar workspace (thereby avoid incurring unnecessary costs), and activate Pulsar only when you need to scale up your computational power. See the [Pulsar on ResearchCloud documentation](https://training.galaxyproject.org/training-material/topics/admin/tutorials/surf-research-cloud-pulsar/tutorial.html), or [contact us](../../contact.qmd) for advise!
+
+## Usage
+
+When you log in to this workspace, the Galaxy web app will open automatically.
+
+For usage instructions, see the various [official Galaxy training manuals](https://training.galaxyproject.org/training-material/topics/introduction/).
+
+## Access
+
+This workspace can be accessed via the yellow 'Access' button, or by opening the URL listed in the dashboard in your browser. Any member of the collaboration can login to the workspace [using Single-Sign On](../../first-steps.qmd#webapplications-that-support-single-sign-on.).
+
+### Command line access
+
+You can also [login to the workspace via the commandline](../../first-steps.qmd#ssh), using `ssh`. This may be useful to debug Galaxy or create backups.
+
+Admin users will also be able to use `sudo` (after entering their time-based password).
+
+## Galaxy UU
+
+The *Galaxy UU* workspace type is based on the standard *Galaxy* catalog item, but has some extra features:
+
+- [Use a storage unit](#use-a-storage-unit).
+- [Tools for transferring data from Yoda](#tools-for-transferring-data-from-yoda).
+- [Automatically import tools and workflows defined in a git repository when the workspace is created](#automatically-import-tools-and-workflows).
+- Support for [Galaxy interactive tools](https://training.galaxyproject.org/training-material/topics/admin/tutorials/interactive-tools/tutorial.html) is enabled by default.
+
+To use *Galaxy UU*, simply [request access](../../workspace-catalogue.qmd#getting-access).
+
+### Tools for transferring data from Yoda
+
+The *Galaxy UU* comes with Galaxy tools that you can use to import and export files to Yoda (or other iRODS servers) in your workflows. The tools are available under the 'iBridges' section. See the [tool documentation](https://github.com/UtrechtUniversity/galaxy-tools-ibridges?tab=readme-ov-file#irods-environment-file) for how to use it.
+
+**Note: when not using Galaxy using the *Galaxy UU* workspace type, you can also install the `ibridges` tool from the Galaxy toolshed.**
+
+### Automatically import tools and workflows
+
+When creating a *Galaxy UU* workspace, in the final step you will be asked if you want to import custom tools (under "Interactive Parameters"). This also allows you to import custom workflows. These tools and workflows will be available when your workspace after your workspace is created.
+
+This feature allows you to storage workflows and define required tools in a separate git repository, so that when you create a new workspace after having deleted a previous one, you can easily restore all your workflows.
+
+Using this feature requires having a public git repository. In this repository, you should:
+
+- put tool files in the `tools` subdirectory (this should contain `.yml` files that refer to Galaxy tools)
+- put workflow files in the `workflows subdirectory` (this should contain `.ga` files that you can save by exporting a workflow from Galaxy).
+
+See [this sample repository](https://github.com/utrechtUniversity/galaxy-custom-tools-test).
+
+In the "Interactive Parameters" section, you can fill in the URL to your git repo and the *branch* that should be used (`main` by default):
+
+![](../imgs/galaxy_bootstrap.png)
+
+### Use a storage unit
+
+When creating a *Galaxy UU* workspace, in the final step you will be asked where Galaxy's data should be stored on the workspace (under "Interactive Parameters").
+
+If you want to use your external storage, set this to `/data/name_of_your_storage/galaxy`:
+
+![](../imgs/galaxy_storage.png)
