@@ -125,17 +125,24 @@ def display_category(name, headers=table_headers):
 
 
 # Programming Environments
+
+Workspaces that come with various programming environments and data transfer utilities installed.
+
 ```{python}
 display_category('programming')
 ```
 
 
 # Plain Workspaces
+
+Workspaces that have only the operating system and essential ResearchCloud features installed.
+
 ```{python}
 display_category('plain')
 ```
 
 # Analysis Tools, Workflows & Utilities
+
 ```{python}
 display_category('utility')
 ```
