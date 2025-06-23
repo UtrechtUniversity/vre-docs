@@ -11,13 +11,17 @@ Surf Research cloud is a flexible system that gives the user a lot of autonomy. 
 On some workspaces the user gets admin privileges. This gives you the possibility to install additional software applications and libraries. Be aware that this can cause vulnerabilities and/or data leaks. To minimize this risk, make sure you are aware of the origin of the software that you would like to install and check other quality measures (known issues, number of users/downloads, citations, GitHub Stars, etc.). You are responsible for the software you install on the workspaces.
 
 ## Pausing or Deleting workspaces
-It is always recommended to [pause](https://servicedesk.surf.nl/wiki/display/WIKI/Pause+a+workspace) or delete a workspace when you are not working on it and when it is not busy with a task. This is to minimize the use of resources (credits, energy, capacity). Although pausing a workspace is often an attractive option, it is only recommended for a period of a couple of days maximum. By deleting workspaces and creating a new workspace, you make sure you always have a machine with the most recent (security) updates. This can be done efficiently by:
+It is always recommended to [pause](https://servicedesk.surf.nl/wiki/display/WIKI/Pause+a+workspace) or delete a workspace when you are not working on it and when it is not busy with a task. This is to minimize the use of resources (credits, energy, capacity). Although pausing a workspace is often an attractive option, it is only recommended for a relatively short period (see [VRE lifetime](#vre-lifetime-and-security-updates)). By deleting workspaces and creating a new workspace, you make sure you always have a machine with the most recent (security) updates. This can be done efficiently by:
 
 -   documenting or automating installation steps
 -   regularly saving data and scripts to a Persistent storage volume, e.g. Yoda or, Research Drive
 -   managing code on GitHub
 
-The VRE support team is happy to help you with this. 
+The VRE support team is happy to help you with this.
+
+### Pausing after running a long command
+
+If your code takes a long time to run, and you do know exactly when it will finish, it may be hard to know when you can pause your workspace. See [here](./manuals/long-jobs.qmd) for tips on how to easily pause a workspace automatically after your code has run!
 
 ## Wallets and credits
 Remember that you pay for workspaces and storage volumes with the wallet you receive from the UU or through a [grant](funding.qmd). To spend them wisely:
