@@ -151,7 +151,10 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#use-of-the-vre" id="toc-use-of-the-vre" class="nav-link active" data-scroll-target="#use-of-the-vre">Use of the VRE</a></li>
   <li><a href="#installation-of-software" id="toc-installation-of-software" class="nav-link" data-scroll-target="#installation-of-software">Installation of software</a></li>
-  <li><a href="#pausing-or-deleting-workspaces" id="toc-pausing-or-deleting-workspaces" class="nav-link" data-scroll-target="#pausing-or-deleting-workspaces">Pausing or Deleting workspaces</a></li>
+  <li><a href="#pausing-or-deleting-workspaces" id="toc-pausing-or-deleting-workspaces" class="nav-link" data-scroll-target="#pausing-or-deleting-workspaces">Pausing or Deleting workspaces</a>
+  <ul class="collapse">
+  <li><a href="#pausing-after-running-a-long-command" id="toc-pausing-after-running-a-long-command" class="nav-link" data-scroll-target="#pausing-after-running-a-long-command">Pausing after running a long command</a></li>
+  </ul></li>
   <li><a href="#wallets-and-credits" id="toc-wallets-and-credits" class="nav-link" data-scroll-target="#wallets-and-credits">Wallets and credits</a></li>
   <li><a href="#cost-calculator" id="toc-cost-calculator" class="nav-link" data-scroll-target="#cost-calculator">Cost calculator</a></li>
   <li><a href="#vre-lifetime-and-security-updates" id="toc-vre-lifetime-and-security-updates" class="nav-link" data-scroll-target="#vre-lifetime-and-security-updates">VRE lifetime and security updates</a></li>
@@ -197,13 +200,17 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="pausing-or-deleting-workspaces" class="level2">
 <h2 class="anchored" data-anchor-id="pausing-or-deleting-workspaces">Pausing or Deleting workspaces</h2>
-<p>It is always recommended to <a href="https://servicedesk.surf.nl/wiki/display/WIKI/Pause+a+workspace">pause</a> or delete a workspace when you are not working on it and when it is not busy with a task. This is to minimize the use of resources (credits, energy, capacity). Although pausing a workspace is often an attractive option, it is only recommended for a period of a couple of days maximum. By deleting workspaces and creating a new workspace, you make sure you always have a machine with the most recent (security) updates. This can be done efficiently by:</p>
+<p>It is always recommended to <a href="https://servicedesk.surf.nl/wiki/display/WIKI/Pause+a+workspace">pause</a> or delete a workspace when you are not working on it and when it is not busy with a task. This is to minimize the use of resources (credits, energy, capacity). Although pausing a workspace is often an attractive option, it is only recommended for a relatively short period (see <a href="#vre-lifetime-and-security-updates">VRE lifetime</a>). By deleting workspaces and creating a new workspace, you make sure you always have a machine with the most recent (security) updates. This can be done efficiently by:</p>
 <ul>
 <li>documenting or automating installation steps</li>
 <li>regularly saving data and scripts to a Persistent storage volume, e.g.&nbsp;Yoda or, Research Drive</li>
 <li>managing code on GitHub</li>
 </ul>
 <p>The VRE support team is happy to help you with this.</p>
+<section id="pausing-after-running-a-long-command" class="level3">
+<h3 class="anchored" data-anchor-id="pausing-after-running-a-long-command">Pausing after running a long command</h3>
+<p>If your code takes a long time to run, and you do know exactly when it will finish, it may be hard to know when you can pause your workspace. See <a href="../docs/manuals/long-jobs.html">here</a> for tips on how to easily pause a workspace automatically after your code has run!</p>
+</section>
 </section>
 <section id="wallets-and-credits" class="level2">
 <h2 class="anchored" data-anchor-id="wallets-and-credits">Wallets and credits</h2>

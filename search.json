@@ -168,6 +168,636 @@
     "text": "Tips\n\nWorkspace security\nPlease take a moment to read the security recommendations for VREs."
   },
   {
+    "objectID": "docs/workspaces/utility/alphafold.html",
+    "href": "docs/workspaces/utility/alphafold.html",
+    "title": "AlphaFold3",
+    "section": "",
+    "text": "AlphaFold is an artificial intelligence (AI) program developed by DeepMind, a subsidiary of Alphabet, which performs predictions of protein structure.\nThe software provided on this workspace is an inference pipeline for the AlphaFold3 model. To utilize the model, you will also need to request access to the model parameters.\nThe recommended iBridges client for Yoda and iRODS is also preinstalled, to transfer data to or from the workspace."
+  },
+  {
+    "objectID": "docs/workspaces/utility/alphafold.html#description",
+    "href": "docs/workspaces/utility/alphafold.html#description",
+    "title": "AlphaFold3",
+    "section": "",
+    "text": "AlphaFold is an artificial intelligence (AI) program developed by DeepMind, a subsidiary of Alphabet, which performs predictions of protein structure.\nThe software provided on this workspace is an inference pipeline for the AlphaFold3 model. To utilize the model, you will also need to request access to the model parameters.\nThe recommended iBridges client for Yoda and iRODS is also preinstalled, to transfer data to or from the workspace."
+  },
+  {
+    "objectID": "docs/workspaces/utility/alphafold.html#creating-an-alphafold-instance-in-vre",
+    "href": "docs/workspaces/utility/alphafold.html#creating-an-alphafold-instance-in-vre",
+    "title": "AlphaFold3",
+    "section": "Creating an alphafold instance in VRE",
+    "text": "Creating an alphafold instance in VRE\n\nPreparation\nData parameters\nThe data parameters need to be requested by your own group by filling in this form. According to the alphafold documentation, you will get a response within 2-3 business days.\nDownload the model parameter to your local computer."
+  },
+  {
+    "objectID": "docs/workspaces/utility/alphafold.html#creating-a-workspace-and-storage",
+    "href": "docs/workspaces/utility/alphafold.html#creating-a-workspace-and-storage",
+    "title": "AlphaFold3",
+    "section": "Creating a workspace and storage",
+    "text": "Creating a workspace and storage\n\nStorage\nThe AlphaFold catalog item requires a storage unit. If no storage is attached to the workspace, creation will fail. See the Getting started page for more info about how and why to create a storage volume.\n\nMake sure to choose the capacity of 1.5 TB for the storage.\nOn the workspace, the shell variable $ALPHAFOLD_STORAGE will be set to /data/&lt;your_storage_name&gt;/alphafold3. You can use this variable to specify parameters when running AlphaFold.\n\n\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance.\n\nWhen selecting the hardware for you workspace, choose at least an A10 1 GPU.\nMake sure to select the storage unit you have created in the ‘Storage’ step.\n\nIt will take 15-30 minutes for the new workspace to be configured."
+  },
+  {
+    "objectID": "docs/workspaces/utility/alphafold.html#usage",
+    "href": "docs/workspaces/utility/alphafold.html#usage",
+    "title": "AlphaFold3",
+    "section": "Usage",
+    "text": "Usage\nAfter creation is finished, there will be a new workspace that you can access on the commandline, via ssh.\nAfter logging in, follow these steps:\n\nVerify configuration (optional)\nUpload model parameters\nCreate input files\nRun AlphaFold\nResults\n\n\nVerify configuration (optional)\nInside the workspace, there should be two components:\n\nDocker and alphafold docker image. To verify, use this command:\n$ docker images\nYou should see an image called alphafold.\nPublic (genetic) databases. To check that these are available, use this command:\n$ ls /data/&lt;permanent_storage_name&gt;/alphafold3/\nThere should be a folder named “public_databases” with genetic database files (*.fasta) within the folder.\n\n\n\nUpload model parameters\nNote: the model parameters need to be uploaded only a single time, after which all users can utilize it. To check if they have already been uploaded, use: ls $ALPHAFOLD_STORAGE/model_parameters/. You should see a .bin file.\n\nUpload the model parameters (acquired earlier) from your local computer to the workspace.\n\nYou can use scp or other tools to transfer the file (probably called af3.bin.zst) to the workspace. See our data transfer manual.\n\nThe uploaded file is a compressed archive containing a directory with model parameters. You now need to decompress it:\n\nunzstd af3.bin.zst\n\nPlace the decompressed model parameters in a directory on your permanent storage so all users on the machine can utilize it:\n\nmv af3.bin $ALPHAFOLD_STORAGE/model_parameters/\n\n\n\n\nCreate input files\nYou need to create one or more input files for the AlphaFold model to work on. Input files are in the JSON format and describe the proteins that you want to predict. See an example input file, and the detailed documentation for input files.\nOf course, you can also upload pre-existing input files with scp, or download them to the workspace (e.g. with git clone if they are in a public git repository, or with curl if they are on the web).\n\n\nRun AlphaFold\n\nRun using convenience script\nIf you placed your model parameters in $ALPHAFOLD_STORAGE/model_parameters, and your input files in $ALPHAFOLD_STORAGE/af_input/, you can simply use the following command to run alphafold:\nrun_alphafold\nThis convenience script will automatically detect the output directory and genetic databases directory on your storage, and pass them on to alphafold.\n(Optional) You can also override the following locations by setting environment variables:\n\nALPHAFOLD_MODEL: path to the directory containing the model parameters\nALPHAFOLD_INPUT: path to the input directory, or a specific .json input file\nALPHAFOLD_OUTPUT: path to the output directory\nALPHAFOLD_DBS: path to the public genetic databases directory\n\nFor instance:\n$ ALPHAFOLD_MODEL=/path/to/model/parameters/dir ALPHAFOLD_INPUT=~/input.json run_alphafold\n\n\n\n\n\n\nWarning messages from AlphaFold\n\n\n\n\n\nDon’t worry if you see warning messages of the following sort:\nUnable to initialize backend 'rocm': module 'jaxlib.xla_extension' has no attribute 'GpuAllocatorConfig'\nUnable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory\nThese are informational warnings, but if inference continues succesfully, you can ignore these.\n\n\n\n\n\nRun manually\nYou can also invoke the alphafold3 command directly, using Docker. This allows you to customize the locatino of your input files, output files, model parameters, and genetic databases live.\nFor this example, we will assume that all of these are located on your permanent storage volume. You can use the shell variable $ALPHAFOLD_STORAGE as a base directory. Hence, you can use this command:\n$ docker run -it \\\n    --volume $ALPHAFOLD_STORAGE/af_input:/root/af_input \\\n    --volume $ALPHAFOLD_STORAGE/af_output:/root/af_output \\\n    --volume $ALPHAFOLD_STORAGE/model_parameters:/root/models \\\n    --volume $ALPHAFOLD_STORAGE/gendb:/root/public_databases \\\n    --gpus all \\\n    alphafold3 \\\n    python run_alphafold.py \\\n    --input_dir=/root/af_input/ \\\n    --model_dir=/root/models \\\n    --output_dir=/root/af_output\n\n\n\nResults\nAfter running this command, your output files will appear in the following directory:\n/data/af_output/&lt;job_name&gt;\n…where  is the name specified in your input file. There will be multiple output directories if you specified used multiple input files."
+  },
+  {
+    "objectID": "docs/workspaces/utility/alphafold.html#source",
+    "href": "docs/workspaces/utility/alphafold.html#source",
+    "title": "AlphaFold3",
+    "section": "Source",
+    "text": "Source\n[1] “AlphaFold”. Deepmind. Archived from the original on 19 January 2021. Retrieved 30 November 2020.\n[2] https://en.wikipedia.org/wiki/AlphaFold"
+  },
+  {
+    "objectID": "docs/workspaces/utility/nextflow.html",
+    "href": "docs/workspaces/utility/nextflow.html",
+    "title": "Nextflow",
+    "section": "",
+    "text": "Nextflow is a scientific workflow system predominantly used for bioinformatic data analysis. It establishes standards for programmatically creating a series of dependent computational steps and facilitates their execution on various local and cloud resources.\nThis workspace type comes with Nextflow preinstalled. It is meant to use Nextflow from the commandline. The workspace further includes:\n\nMiniconda for managing dependencies (Nextflow supports conda).\nTools for data transfer from and to Yoda or iRODS servers."
+  },
+  {
+    "objectID": "docs/workspaces/utility/nextflow.html#description",
+    "href": "docs/workspaces/utility/nextflow.html#description",
+    "title": "Nextflow",
+    "section": "",
+    "text": "Nextflow is a scientific workflow system predominantly used for bioinformatic data analysis. It establishes standards for programmatically creating a series of dependent computational steps and facilitates their execution on various local and cloud resources.\nThis workspace type comes with Nextflow preinstalled. It is meant to use Nextflow from the commandline. The workspace further includes:\n\nMiniconda for managing dependencies (Nextflow supports conda).\nTools for data transfer from and to Yoda or iRODS servers."
+  },
+  {
+    "objectID": "docs/workspaces/utility/nextflow.html#creation",
+    "href": "docs/workspaces/utility/nextflow.html#creation",
+    "title": "Nextflow",
+    "section": "Creation",
+    "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
+  },
+  {
+    "objectID": "docs/workspaces/utility/nextflow.html#access",
+    "href": "docs/workspaces/utility/nextflow.html#access",
+    "title": "Nextflow",
+    "section": "Access",
+    "text": "Access\nThis workspace can be accessed via the the commandline, using ssh."
+  },
+  {
+    "objectID": "docs/workspaces/utility/nextflow.html#usage",
+    "href": "docs/workspaces/utility/nextflow.html#usage",
+    "title": "Nextflow",
+    "section": "Usage",
+    "text": "Usage\nAfter logging in the nextflow command will be immediately available."
+  },
+  {
+    "objectID": "docs/workspaces/utility/asreview.html",
+    "href": "docs/workspaces/utility/asreview.html",
+    "title": "ASReview",
+    "section": "",
+    "text": "ASReview LAB is an open-source machine learning tool designed to streamline the systematic screening and labeling of large textual datasets. It is widely used for tasks such as title and abstract screening in systematic reviews or meta-analyses, but its applications extend to any scenario requiring systematic text screening.\nThis workspace type will start ASReview as a webapplication.\nAnyone who has access to your Collaboration will be able to easily login to ASReview using Single-Sign on. Since ASReview 2.0 supports multiple users, this workspace is ideal for crowd-based screening. You can even use it for a screenathon! Simply add the members of your screening group to your Collaboration in SRAM and start screening together.\nExtensions (such as asreview-dory) are not installed on this workspace.\nPlease also read the tips below."
+  },
+  {
+    "objectID": "docs/workspaces/utility/asreview.html#description",
+    "href": "docs/workspaces/utility/asreview.html#description",
+    "title": "ASReview",
+    "section": "",
+    "text": "ASReview LAB is an open-source machine learning tool designed to streamline the systematic screening and labeling of large textual datasets. It is widely used for tasks such as title and abstract screening in systematic reviews or meta-analyses, but its applications extend to any scenario requiring systematic text screening.\nThis workspace type will start ASReview as a webapplication.\nAnyone who has access to your Collaboration will be able to easily login to ASReview using Single-Sign on. Since ASReview 2.0 supports multiple users, this workspace is ideal for crowd-based screening. You can even use it for a screenathon! Simply add the members of your screening group to your Collaboration in SRAM and start screening together.\nExtensions (such as asreview-dory) are not installed on this workspace.\nPlease also read the tips below."
+  },
+  {
+    "objectID": "docs/workspaces/utility/asreview.html#creation",
+    "href": "docs/workspaces/utility/asreview.html#creation",
+    "title": "ASReview",
+    "section": "Creation",
+    "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\nIf you select a storage unit when creating an ASReview workspace, all ASReview data will automatically be stored on it. Since ASReview can potentially generate a lot of data, using a storage unit may be advised (the default, non-permanent storage on the workspace amounts to 150GB).\n\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance.\nChoosing the right hardware: ASReview uses an AI model that runs in parallel to the ASReview webapplication. It is therefore recommended to choose a workspace with at least two CPU cores. Four CPUs is probably enough for most cases. The more users that will be using the workspace to do screening in parallel, the more hardware will be required.\nPlease also see the tips for responsible use."
+  },
+  {
+    "objectID": "docs/workspaces/utility/asreview.html#access",
+    "href": "docs/workspaces/utility/asreview.html#access",
+    "title": "ASReview",
+    "section": "Access",
+    "text": "Access\nThis workspace can be accessed via the yellow ‘Access’ button, or by opening the URL listed in the dashboard in your browser. Any member of the collaboration can login to the workspace using Single-Sign On.\n\nCommand line\nAlternatively, only those users who are admins in the Collaborative Organisation (in the src_co_admin group) can login to the workspace via the commandline, using ssh. This may be useful for running ASReview in simulation mode, or e.g. for making backups.\nAfter logging in, the asreview command will be on your path. The ASREVIEW_PATH environment variable will be set to reflect the location of ASReview’s data (default: /var/www/asreview/asreview_data if you do not create the workspace with a storage unit, /data/yourstoragename/asreview_data if you did), so you should be able to interact with it straight away.\nAdmin users will also be able to use sudo (after entering their time-based passwords)."
+  },
+  {
+    "objectID": "docs/workspaces/utility/asreview.html#usage",
+    "href": "docs/workspaces/utility/asreview.html#usage",
+    "title": "ASReview",
+    "section": "Usage",
+    "text": "Usage\nWhen you log in to this workspace, the ASReview web app will open automatically."
+  },
+  {
+    "objectID": "docs/workspaces/utility/asreview.html#tips",
+    "href": "docs/workspaces/utility/asreview.html#tips",
+    "title": "ASReview",
+    "section": "Tips",
+    "text": "Tips\n\nRemember that you are responsible for making backups of any data yourself! This also applies when using a storage unit. Although data on a storage unit will not be deleted when you delete the workspace, it can still become corrupt. So if it is important to your work, make sure to make periodical (e.g. daily or weekly) backups of your projects. You can make a backup by logging in to the workspace using the commandline, or by downloading your project from the webapplication.\nRemember that ASReview may potentially generate a lot of data, so think about how much storage you may need. For most cases, the standard amount of storage should be enough. But if you’re unsure, just ask for advise!\nSimilarly, think about how many resources (CPUs) your workspace will need. Again, if you’re unsure, just ask for advise!"
+  },
+  {
+    "objectID": "docs/workspaces/programming/python-workbench-cuda.html",
+    "href": "docs/workspaces/programming/python-workbench-cuda.html",
+    "title": "Python Workbench CUDA",
+    "section": "",
+    "text": "This workspace type is identical to the Python Workbench Catalog Item, but additionally comes with the nvidia CUDA GPU drivers preinstalled.\nAs with the Python Workbench Catalog Items, there are two flavours:\n\nPython Workbench CUDA CLI (login via command line)\nPython Workbench CUDA Desktop (login via desktop)\n\nSimply choose the one that is most convenient to you, and see the documentation for Python Workbench."
+  },
+  {
+    "objectID": "docs/workspaces/programming/jupyter.html",
+    "href": "docs/workspaces/programming/jupyter.html",
+    "title": "Jupyter Notebooks",
+    "section": "",
+    "text": "This catalog item starts a JupyterLab environment in which you can work with Jupyter notebooks.\nJupyter is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations and narrative text. Uses include: data cleaning and transformation, numerical simulation, statistical modeling, data visualization, machine learning, and much more.\nAll users in your Collaborative Organisation can login to the workspace and will then be presented with their own notebook environment.\nIf needed, we can help you to automatically install certain packages when the workspace is created, so that these are available from inside the Jupyter environment immediately. Please contact us for this. However, you can of course also install your own dependencies from with the Notebook."
+  },
+  {
+    "objectID": "docs/workspaces/programming/jupyter.html#description",
+    "href": "docs/workspaces/programming/jupyter.html#description",
+    "title": "Jupyter Notebooks",
+    "section": "",
+    "text": "This catalog item starts a JupyterLab environment in which you can work with Jupyter notebooks.\nJupyter is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations and narrative text. Uses include: data cleaning and transformation, numerical simulation, statistical modeling, data visualization, machine learning, and much more.\nAll users in your Collaborative Organisation can login to the workspace and will then be presented with their own notebook environment.\nIf needed, we can help you to automatically install certain packages when the workspace is created, so that these are available from inside the Jupyter environment immediately. Please contact us for this. However, you can of course also install your own dependencies from with the Notebook."
+  },
+  {
+    "objectID": "docs/workspaces/programming/jupyter.html#creation",
+    "href": "docs/workspaces/programming/jupyter.html#creation",
+    "title": "Jupyter Notebooks",
+    "section": "Creation",
+    "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
+  },
+  {
+    "objectID": "docs/workspaces/programming/jupyter.html#access",
+    "href": "docs/workspaces/programming/jupyter.html#access",
+    "title": "Jupyter Notebooks",
+    "section": "Access",
+    "text": "Access\nYou can login to the workspace in your browser, via your ResearchCloud time-based password."
+  },
+  {
+    "objectID": "docs/workspaces/programming/jupyter.html#usage",
+    "href": "docs/workspaces/programming/jupyter.html#usage",
+    "title": "Jupyter Notebooks",
+    "section": "Usage",
+    "text": "Usage\nWhen logged in you are immediately presented with a JupyterLab environment in which you can work with different notebooks.\n\nData transfer options\nSee our data transfer manuals.\nYou will have to run the relevant commands for the data transfer method of your choice from within the JupyterLab terminal.\n\n\nInstalling additional software\nThe user has admin rights to install additional software on the system from the Jupyter terminal (use sudo &lt;command&gt;)."
+  },
+  {
+    "objectID": "docs/workspaces/programming/jupyter.html#tips",
+    "href": "docs/workspaces/programming/jupyter.html#tips",
+    "title": "Jupyter Notebooks",
+    "section": "Tips",
+    "text": "Tips\n\nWorkspace security\nPlease take a moment to read the security recommendations for VREs."
+  },
+  {
+    "objectID": "docs/workspaces/programming/jupyter-cuda.html",
+    "href": "docs/workspaces/programming/jupyter-cuda.html",
+    "title": "Jupyter Notebooks CUDA",
+    "section": "",
+    "text": "This workspace type is identical to the Juputer Notebook Catalog Item, but additionally comes with the nvidia CUDA GPU drivers preinstalled."
+  },
+  {
+    "objectID": "docs/workspaces/programming/miniconda.html",
+    "href": "docs/workspaces/programming/miniconda.html",
+    "title": "Miniconda (shared)",
+    "section": "",
+    "text": "This workspace types comes with the miniconda package manger preinstalled. All users on the system will share the same conda environment. Warning: although this can be convenient for some usecases, this can lead to unwanted conflicts/interference. In most cases, it is recommended to use separate conda environments for each user. You can use the Python Workbench Catalog Item for this.\nThere are various flavours of this Catalog Item:\n\nMiniconda CLI (shared) (login via command line)\nMiniconda Desktop (shared)(login via desktop)\n\nSimply choose the one that is most convenient to you.\nIf needed, we can help you to automatically install certain packages when the workspace is created. Please contact us for this."
+  },
+  {
+    "objectID": "docs/workspaces/programming/miniconda.html#description",
+    "href": "docs/workspaces/programming/miniconda.html#description",
+    "title": "Miniconda (shared)",
+    "section": "",
+    "text": "This workspace types comes with the miniconda package manger preinstalled. All users on the system will share the same conda environment. Warning: although this can be convenient for some usecases, this can lead to unwanted conflicts/interference. In most cases, it is recommended to use separate conda environments for each user. You can use the Python Workbench Catalog Item for this.\nThere are various flavours of this Catalog Item:\n\nMiniconda CLI (shared) (login via command line)\nMiniconda Desktop (shared)(login via desktop)\n\nSimply choose the one that is most convenient to you.\nIf needed, we can help you to automatically install certain packages when the workspace is created. Please contact us for this."
+  },
+  {
+    "objectID": "docs/workspaces/programming/miniconda.html#creation",
+    "href": "docs/workspaces/programming/miniconda.html#creation",
+    "title": "Miniconda (shared)",
+    "section": "Creation",
+    "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
+  },
+  {
+    "objectID": "docs/workspaces/programming/miniconda.html#usage",
+    "href": "docs/workspaces/programming/miniconda.html#usage",
+    "title": "Miniconda (shared)",
+    "section": "Usage",
+    "text": "Usage\nWhen you login, miniconda will be ready for use. See the miniconda docs.\nminiconda will be installed to /opt/miniconda.\n\nData transfer options\nSee our data transfer manuals.\nThe recommended iBridges client for Yoda and iRODS is preinstalled.\n\n\nInstalling additional software\nThe user has admin rights to install additional software on the system (on a terminal, use sudo &lt;yourcommand&gt;)."
+  },
+  {
+    "objectID": "docs/workspaces/programming/miniconda.html#tips",
+    "href": "docs/workspaces/programming/miniconda.html#tips",
+    "title": "Miniconda (shared)",
+    "section": "Tips",
+    "text": "Tips\n\nWorkspace security\nPlease take a moment to read the security recommendations for VREs."
+  },
+  {
+    "objectID": "docs/workspaces/programming/matlab.html",
+    "href": "docs/workspaces/programming/matlab.html",
+    "title": "Matlab",
+    "section": "",
+    "text": "This workspace is an Ubuntu Desktop workspace with MATLAB installed. Ubuntu Desktop is a linux operating system but has a Graphical User interface so operating it is similar to using a Windows operating system.\n\n\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
+  },
+  {
+    "objectID": "docs/workspaces/programming/matlab.html#description",
+    "href": "docs/workspaces/programming/matlab.html#description",
+    "title": "Matlab",
+    "section": "",
+    "text": "This workspace is an Ubuntu Desktop workspace with MATLAB installed. Ubuntu Desktop is a linux operating system but has a Graphical User interface so operating it is similar to using a Windows operating system.\n\n\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
+  },
+  {
+    "objectID": "docs/workspaces/programming/matlab.html#access",
+    "href": "docs/workspaces/programming/matlab.html#access",
+    "title": "Matlab",
+    "section": "Access",
+    "text": "Access\nThis workspace can be accessed via the yellow ‘Access’ button. You need a TOTP to login to your workspace, see Workspace access with TOTP.\n\nData transfer options\nSee our data transfer manuals.\nThe recommended iBridges client for Yoda and iRODS is preinstalled."
+  },
+  {
+    "objectID": "docs/workspaces/programming/matlab.html#usage",
+    "href": "docs/workspaces/programming/matlab.html#usage",
+    "title": "Matlab",
+    "section": "Usage",
+    "text": "Usage\n\nPrerequisites:\nYou will need a Mathworks account and add you UU licence to this account to be able to use MATLAB. Find instructions on how to do this here\n\n\nActivate MATLAB\nWhen logged in to the workspace:\n\nClick ‘Applications’ in the top left corner\nClick ‘Development’\nClick ‘Matlab Activate’, a wizard will open.\nClick ‘Next’ to activate Matlab using the internet\nLogin to your Mathworks account. For the password, it will ask you to get a 6 digit password from: https://nl.mathworks.com/mwa/otp\nContinue the wizard and choose the default options until you are finished.\n\n\n\nOpen MATLAB\n\nClick ‘Applications’ in the top left corner\nClick ‘Development’\nClick ‘Matlab’"
+  },
+  {
+    "objectID": "docs/workspaces/programming/matlab.html#tips",
+    "href": "docs/workspaces/programming/matlab.html#tips",
+    "title": "Matlab",
+    "section": "Tips",
+    "text": "Tips"
+  },
+  {
+    "objectID": "docs/workspaces/plain/windows.html#creation",
+    "href": "docs/workspaces/plain/windows.html#creation",
+    "title": "Windows",
+    "section": "Creation",
+    "text": "Creation\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
+  },
+  {
+    "objectID": "docs/workspaces/plain/windows.html#access",
+    "href": "docs/workspaces/plain/windows.html#access",
+    "title": "Windows",
+    "section": "Access",
+    "text": "Access"
+  },
+  {
+    "objectID": "docs/workspaces/plain/windows.html#data-transfer-options",
+    "href": "docs/workspaces/plain/windows.html#data-transfer-options",
+    "title": "Windows",
+    "section": "Data transfer options",
+    "text": "Data transfer options"
+  },
+  {
+    "objectID": "docs/workspaces/plain/windows.html#usage",
+    "href": "docs/workspaces/plain/windows.html#usage",
+    "title": "Windows",
+    "section": "Usage",
+    "text": "Usage"
+  },
+  {
+    "objectID": "docs/workspaces/plain/windows.html#tips",
+    "href": "docs/workspaces/plain/windows.html#tips",
+    "title": "Windows",
+    "section": "Tips",
+    "text": "Tips"
+  },
+  {
+    "objectID": "docs/workspaces/plain/ubuntu-cuda.html#creation",
+    "href": "docs/workspaces/plain/ubuntu-cuda.html#creation",
+    "title": "Ubuntu CUDA",
+    "section": "Creation",
+    "text": "Creation\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
+  },
+  {
+    "objectID": "docs/workspaces/plain/ubuntu-cuda.html#access",
+    "href": "docs/workspaces/plain/ubuntu-cuda.html#access",
+    "title": "Ubuntu CUDA",
+    "section": "Access",
+    "text": "Access"
+  },
+  {
+    "objectID": "docs/workspaces/plain/ubuntu-cuda.html#data-transfer-options",
+    "href": "docs/workspaces/plain/ubuntu-cuda.html#data-transfer-options",
+    "title": "Ubuntu CUDA",
+    "section": "Data transfer options",
+    "text": "Data transfer options"
+  },
+  {
+    "objectID": "docs/workspaces/plain/ubuntu-cuda.html#usage",
+    "href": "docs/workspaces/plain/ubuntu-cuda.html#usage",
+    "title": "Ubuntu CUDA",
+    "section": "Usage",
+    "text": "Usage"
+  },
+  {
+    "objectID": "docs/workspaces/plain/ubuntu-cuda.html#tips",
+    "href": "docs/workspaces/plain/ubuntu-cuda.html#tips",
+    "title": "Ubuntu CUDA",
+    "section": "Tips",
+    "text": "Tips"
+  },
+  {
+    "objectID": "docs/glossary.html",
+    "href": "docs/glossary.html",
+    "title": "Glossary",
+    "section": "",
+    "text": "Catalog Item\nA catalog item is a workspace configuration that you can select from the catalog when you create a new workspace. A workspace can be configured with a certain Operating system and other applications or software that will installed on the workspace.\n\n\nCollaboration\nA Collaboration (also known as Collaborative Organisation, or CO) is an ad-hoc group of people who are allowed to work together by sharing resources. As a scientist you can easily make a CO. That way, you can invite other researchers to join your efforts in Research Cloud, and you can easily assign different roles to collaborators (such as the ‘admin’ role for administering the CO). More information.\n\n\nDPA\nData Processing Agreement A legally binding document to be agreed upon between the data controller and the data processor in writing or in electronic form. It regulates the particularities of data processing – such as its scope and purpose – as well as the relationship between the controller and the processor.\n\n\nSmall Compute application\nA relatively simple request procedure for obtaining a maximum of 50.000 CPU hours and/or 5.000 GPU hours for your project. More info\n\n\nSRAM\nSRAM (SURF Research Access Management) is a service to manage access to research resources, intended for Dutch led research collaborations. More information.\n\n\nStorage volumes\nAn ‘External’ Storage volume can be created from the main dashboard in the research cloud portal. This storage is persistent which means that any data that you put here will still be there when a workspace is deleted. You need to create a storage volume first and attach it when you create a new workspace. The storage volume can than typically be found in the workspace under the following directory path: ~/data/volume_2. More info\n\n\nVRE\nVirtual Research Environment is the CO including the entire linked research services, linked other systems, applied software and used data.\n\n\nVRE support\nThe support at UU level for this service is done by Research Data Management Services. The team consists of service administrators for arranging access and accounts and research engineers who can advice on usage and can help develop proof of concepts.\n\n\nWallet\nA wallet holds the budget for your use of the Research Cloud. See the getting started page for the options to obtain a wallet for Research cloud. When you create a workspace you need to select a wallet that can be charged for the use of the resources.\n\n\nWorkspace\nA workspace is a running Virtual Machine (or aka server) that you can use as a Virtual Research Environment. You can create a workspace in the Research Cloud portal. The workspace will be created somewhere in ‘the cloud’, and when it is up and running you can login to it, transfer data to it and start working. The workspace typically will have some software installed on it (e.g. RStudio or Jupyter Notebook)."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "VRE Documentation for UU researchers",
+    "section": "",
+    "text": "Welcome\nA Virtual Research Environment (VRE) is a temporary compute environment that enables researchers to work interactively and remotely on research. A VRE contains tools and data that scientists need for their research.\nUtrecht University provides VREs based on SURF Research Cloud, which is a good alternative for commercial cloud providers like Amazon Web Services and Microsoft Azure.\nSee here for a list of available workspace types and their documentation.\n\n\nOverview documentation\nThis page provides user documentation for Surf Research Cloud for researchers at Utrecht University. Get started using the links below!\n\nWhat is Research Cloud?\nHow to get started?\nFirst steps\nUsing a workspace\nUser manuals\nPractical tips for responsible use\nTerms of use\nPrivacy\nGlossary\nContact"
+  },
+  {
+    "objectID": "docs/workspaces/plain/windows-cuda.html#creation",
+    "href": "docs/workspaces/plain/windows-cuda.html#creation",
+    "title": "Windows with CUDA",
+    "section": "Creation",
+    "text": "Creation\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
+  },
+  {
+    "objectID": "docs/workspaces/plain/windows-cuda.html#access",
+    "href": "docs/workspaces/plain/windows-cuda.html#access",
+    "title": "Windows with CUDA",
+    "section": "Access",
+    "text": "Access"
+  },
+  {
+    "objectID": "docs/workspaces/plain/windows-cuda.html#data-transfer-options",
+    "href": "docs/workspaces/plain/windows-cuda.html#data-transfer-options",
+    "title": "Windows with CUDA",
+    "section": "Data transfer options",
+    "text": "Data transfer options"
+  },
+  {
+    "objectID": "docs/workspaces/plain/windows-cuda.html#usage",
+    "href": "docs/workspaces/plain/windows-cuda.html#usage",
+    "title": "Windows with CUDA",
+    "section": "Usage",
+    "text": "Usage"
+  },
+  {
+    "objectID": "docs/workspaces/plain/windows-cuda.html#tips",
+    "href": "docs/workspaces/plain/windows-cuda.html#tips",
+    "title": "Windows with CUDA",
+    "section": "Tips",
+    "text": "Tips"
+  },
+  {
+    "objectID": "docs/workspaces/plain/ubuntu.html#creation",
+    "href": "docs/workspaces/plain/ubuntu.html#creation",
+    "title": "Ubuntu",
+    "section": "Creation",
+    "text": "Creation\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
+  },
+  {
+    "objectID": "docs/workspaces/plain/ubuntu.html#access",
+    "href": "docs/workspaces/plain/ubuntu.html#access",
+    "title": "Ubuntu",
+    "section": "Access",
+    "text": "Access"
+  },
+  {
+    "objectID": "docs/workspaces/plain/ubuntu.html#data-transfer-options",
+    "href": "docs/workspaces/plain/ubuntu.html#data-transfer-options",
+    "title": "Ubuntu",
+    "section": "Data transfer options",
+    "text": "Data transfer options"
+  },
+  {
+    "objectID": "docs/workspaces/plain/ubuntu.html#usage",
+    "href": "docs/workspaces/plain/ubuntu.html#usage",
+    "title": "Ubuntu",
+    "section": "Usage",
+    "text": "Usage"
+  },
+  {
+    "objectID": "docs/workspaces/plain/ubuntu.html#tips",
+    "href": "docs/workspaces/plain/ubuntu.html#tips",
+    "title": "Ubuntu",
+    "section": "Tips",
+    "text": "Tips"
+  },
+  {
+    "objectID": "docs/workspaces/programming/stata.html#creation",
+    "href": "docs/workspaces/programming/stata.html#creation",
+    "title": "Stata",
+    "section": "Creation",
+    "text": "Creation\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
+  },
+  {
+    "objectID": "docs/workspaces/programming/stata.html#access",
+    "href": "docs/workspaces/programming/stata.html#access",
+    "title": "Stata",
+    "section": "Access",
+    "text": "Access\n\nData transfer options\nSee our data transfer manuals.\nThe recommended iBridges client for Yoda and iRODS is preinstalled."
+  },
+  {
+    "objectID": "docs/workspaces/programming/stata.html#usage",
+    "href": "docs/workspaces/programming/stata.html#usage",
+    "title": "Stata",
+    "section": "Usage",
+    "text": "Usage"
+  },
+  {
+    "objectID": "docs/workspaces/programming/stata.html#tips",
+    "href": "docs/workspaces/programming/stata.html#tips",
+    "title": "Stata",
+    "section": "Tips",
+    "text": "Tips"
+  },
+  {
+    "objectID": "docs/workspaces/programming/python-workbench.html",
+    "href": "docs/workspaces/programming/python-workbench.html",
+    "title": "Python Workbench",
+    "section": "",
+    "text": "This workspace types comes with various Python development tools already installed:\n\nuv for installing different python versions and dependencies lightning fast\npyenv for managing different python versions\nminiconda for managing dependency environments\npoetry for an alternative way of running projects with specified dependencies\n\nThere are various flavours of this Catalog Item:\n\nPython Workbench CLI (login via command line)\nPython Workbench Desktop (login via desktop)\n\nSimply choose the one that is most convenient to you.\n\n\nNote that the above tools are installed separately for each user in your CO that has access to the machine. This means each user can have their own clean pyenv and miniconda environments.\nIf you prefer all users on the machine to have a single shared miniconda environment, please see the Miniconda Catalog Item."
+  },
+  {
+    "objectID": "docs/workspaces/programming/python-workbench.html#description",
+    "href": "docs/workspaces/programming/python-workbench.html#description",
+    "title": "Python Workbench",
+    "section": "",
+    "text": "This workspace types comes with various Python development tools already installed:\n\nuv for installing different python versions and dependencies lightning fast\npyenv for managing different python versions\nminiconda for managing dependency environments\npoetry for an alternative way of running projects with specified dependencies\n\nThere are various flavours of this Catalog Item:\n\nPython Workbench CLI (login via command line)\nPython Workbench Desktop (login via desktop)\n\nSimply choose the one that is most convenient to you.\n\n\nNote that the above tools are installed separately for each user in your CO that has access to the machine. This means each user can have their own clean pyenv and miniconda environments.\nIf you prefer all users on the machine to have a single shared miniconda environment, please see the Miniconda Catalog Item."
+  },
+  {
+    "objectID": "docs/workspaces/programming/python-workbench.html#creation",
+    "href": "docs/workspaces/programming/python-workbench.html#creation",
+    "title": "Python Workbench",
+    "section": "Creation",
+    "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
+  },
+  {
+    "objectID": "docs/workspaces/programming/python-workbench.html#access",
+    "href": "docs/workspaces/programming/python-workbench.html#access",
+    "title": "Python Workbench",
+    "section": "Access",
+    "text": "Access\n\nPython Workbench CLI\nFor the Python Workbench CLI (command line) flavour of this Catalog Item, you can login using SSH.\n\n\nPython Workbench Desktop\nFor the Python Workbench Desktop flavour of this Catalog Item, you can login using your browser. It is also possible to login via SSH, as described above."
+  },
+  {
+    "objectID": "docs/workspaces/programming/python-workbench.html#usage",
+    "href": "docs/workspaces/programming/python-workbench.html#usage",
+    "title": "Python Workbench",
+    "section": "Usage",
+    "text": "Usage\nThe first time (but only the first time) you login to a workspace of this type, the Python tools (pyenv, miniconda and poetry) are installed for your user. This means that at first login you may experience a small delay (~1 minute maximum). During this time, if you are logging in on the command line, you will see that the applications are being installed for you:\n--- Running install scripts at first login: executing /home/username/runonce.d/01_pyenv-install.sh\n--- Running install scripts at first login: executing /home/username/runonce.d/10-poetry.sh\n--- Running install scripts at first login: executing /home/username/runonce.d/runonce_conda.sh\nWhen you are logged in you can start developing or running code. On the command line, you will have pyenv, miniconda, and poetry available.\nBy default, pyenv will be configured to use the most recent version of Python shipped with the operating system:\n$ pyenv versions\n  system\n* system-latest (set by /home/testuser/.pyenv/version)\nYou can use pyenv to install and select a different (newer) Python version: e.g. pyenv install 3.12, pyenv global 3.12. See the pyenv docs.\nTo start using miniconda environments, activate conda with the command conda init. See the miniconda docs.\nAlso see the poetry docs.\n\nData transfer options\nSee our data transfer manuals.\nThe recommended iBridges client for Yoda and iRODS is preinstalled.\n\n\nInstalling additional software\nThe user has admin rights to install additional software on the system from the terminal."
+  },
+  {
+    "objectID": "docs/workspaces/programming/python-workbench.html#tips",
+    "href": "docs/workspaces/programming/python-workbench.html#tips",
+    "title": "Python Workbench",
+    "section": "Tips",
+    "text": "Tips\n\nWorkspace security\nPlease take a moment to read the security recommendations for VREs."
+  },
+  {
+    "objectID": "docs/workspaces/programming/r-workbench.html",
+    "href": "docs/workspaces/programming/r-workbench.html",
+    "title": "R Workbench",
+    "section": "",
+    "text": "This workspace types comes with R (the latest version of the 4.x range) preinstalled, as well as conda, which can be used to manage R environments. The ‘desktop’ flavour of this workspace (see below) also comes with the RStudio GUI application.\nThis workspace is suitable for users who want to run R scripts on the commandline. For most users, the RStudio catalog item, which provides in-browser access to the popular R development environment,might be more suitable.\nThere are various flavours of this Catalog Item:\n\nR Workbench CLI (login via command line)\nR Workbench Desktop (login via desktop)\n\nSimply choose the one that is most convenient to you.\nIf needed, we can help you to automatically install certain packages when the workspace is created, so that these are available inside the workspace immediately. Please contact us for this."
+  },
+  {
+    "objectID": "docs/workspaces/programming/r-workbench.html#description",
+    "href": "docs/workspaces/programming/r-workbench.html#description",
+    "title": "R Workbench",
+    "section": "",
+    "text": "This workspace types comes with R (the latest version of the 4.x range) preinstalled, as well as conda, which can be used to manage R environments. The ‘desktop’ flavour of this workspace (see below) also comes with the RStudio GUI application.\nThis workspace is suitable for users who want to run R scripts on the commandline. For most users, the RStudio catalog item, which provides in-browser access to the popular R development environment,might be more suitable.\nThere are various flavours of this Catalog Item:\n\nR Workbench CLI (login via command line)\nR Workbench Desktop (login via desktop)\n\nSimply choose the one that is most convenient to you.\nIf needed, we can help you to automatically install certain packages when the workspace is created, so that these are available inside the workspace immediately. Please contact us for this."
+  },
+  {
+    "objectID": "docs/workspaces/programming/r-workbench.html#creation",
+    "href": "docs/workspaces/programming/r-workbench.html#creation",
+    "title": "R Workbench",
+    "section": "Creation",
+    "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
+  },
+  {
+    "objectID": "docs/workspaces/programming/r-workbench.html#access",
+    "href": "docs/workspaces/programming/r-workbench.html#access",
+    "title": "R Workbench",
+    "section": "Access",
+    "text": "Access\n\nR Workbench CLI\nFor the R Workbench CLI (command line) flavour of this Catalog Item, you can login using SSH.\n\n\nR Workbench Desktop\nFor the R Workbench Desktop flavour of this Catalog Item, you can login using your browser. It is also possible to login via SSH, as described above."
+  },
+  {
+    "objectID": "docs/workspaces/programming/r-workbench.html#usage",
+    "href": "docs/workspaces/programming/r-workbench.html#usage",
+    "title": "R Workbench",
+    "section": "Usage",
+    "text": "Usage\nThe first time (but only the first time) you login to a workspace of this type, miniconda will be setup for your user. You will see output like this:\n--- Running install scripts at first login: executing /home/username/runonce.d/runonce_conda.sh\nOnce this is complete, you will have access to the conda, R and littler commands, among others.\nTo start using conda, run the command conda init from a terminal.\n\nData transfer options\nSee our data transfer manuals.\nThe recommended iBridges client for Yoda and iRODS is preinstalled.\n\n\nRStudio\nOn the Desktop flavour of this workspace type RStudio will also be installed. You can find it in the main menu, under ‘Development’.\n\n\nInstalling additional software\nThe user has admin rights to install additional software on the system from the terminal."
+  },
+  {
+    "objectID": "docs/workspaces/programming/r-workbench.html#tips",
+    "href": "docs/workspaces/programming/r-workbench.html#tips",
+    "title": "R Workbench",
+    "section": "Tips",
+    "text": "Tips\n\nWorkspace security\nPlease take a moment to read the security recommendations for VREs."
+  },
+  {
+    "objectID": "docs/workspaces/programming/rstudio.html",
+    "href": "docs/workspaces/programming/rstudio.html",
+    "title": "RStudio",
+    "section": "",
+    "text": "This workspace can be used to work with R and RStudio. RStudio can be accessed conveniently from the browser.\nThe workspace also comes with a (linux) terminal (aka command line) to install additional tools when relevant.\nThere are various flavours of this catalog item:\n\nR-Studio (comes with R v.3)\nR-Studio - R4 (comes with R v.4)\n\nUpon request we can help you to automate the installation of R packages or automate other installations (e.g. tools for data transfer). Automating these steps will make it easier to work following our best practices."
+  },
+  {
+    "objectID": "docs/workspaces/programming/rstudio.html#description",
+    "href": "docs/workspaces/programming/rstudio.html#description",
+    "title": "RStudio",
+    "section": "",
+    "text": "This workspace can be used to work with R and RStudio. RStudio can be accessed conveniently from the browser.\nThe workspace also comes with a (linux) terminal (aka command line) to install additional tools when relevant.\nThere are various flavours of this catalog item:\n\nR-Studio (comes with R v.3)\nR-Studio - R4 (comes with R v.4)\n\nUpon request we can help you to automate the installation of R packages or automate other installations (e.g. tools for data transfer). Automating these steps will make it easier to work following our best practices."
+  },
+  {
+    "objectID": "docs/workspaces/programming/rstudio.html#creation",
+    "href": "docs/workspaces/programming/rstudio.html#creation",
+    "title": "RStudio",
+    "section": "Creation",
+    "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
+  },
+  {
+    "objectID": "docs/workspaces/programming/rstudio.html#access",
+    "href": "docs/workspaces/programming/rstudio.html#access",
+    "title": "RStudio",
+    "section": "Access",
+    "text": "Access\nThis workspace can be accessed via the yellow ‘Access’ button. You need a TOTP to login to your workspace, see Workspace access with TOTP.\n\nData transfer options\nSee our data transfer manuals."
+  },
+  {
+    "objectID": "docs/workspaces/programming/rstudio.html#usage",
+    "href": "docs/workspaces/programming/rstudio.html#usage",
+    "title": "RStudio",
+    "section": "Usage",
+    "text": "Usage"
+  },
+  {
+    "objectID": "docs/workspaces/programming/rstudio.html#tips",
+    "href": "docs/workspaces/programming/rstudio.html#tips",
+    "title": "RStudio",
+    "section": "Tips",
+    "text": "Tips"
+  },
+  {
+    "objectID": "docs/workspaces/programming/sas.html",
+    "href": "docs/workspaces/programming/sas.html",
+    "title": "SAS",
+    "section": "",
+    "text": "This workspace is Windows workspace with SAS 9.4 installed.\n\n\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
+  },
+  {
+    "objectID": "docs/workspaces/programming/sas.html#description",
+    "href": "docs/workspaces/programming/sas.html#description",
+    "title": "SAS",
+    "section": "",
+    "text": "This workspace is Windows workspace with SAS 9.4 installed.\n\n\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
+  },
+  {
+    "objectID": "docs/workspaces/programming/sas.html#access",
+    "href": "docs/workspaces/programming/sas.html#access",
+    "title": "SAS",
+    "section": "Access",
+    "text": "Access\nThis workspace can be accessed via the Remote Desktop protocol. You need a TOTP to login to your workspace, see Workspace access with TOTP.\n\nData transfer options\nSee our data transfer manuals.\nThe recommended iBridges client for Yoda and iRODS is preinstalled."
+  },
+  {
+    "objectID": "docs/workspaces/programming/sas.html#usage",
+    "href": "docs/workspaces/programming/sas.html#usage",
+    "title": "SAS",
+    "section": "Usage",
+    "text": "Usage\n\nPreliminaries\nAll researchers from UU have access to SAS (you do not need to provide your own license).\nBy default, this workspace comes with a minimal installation of SAS (SAS BASE and STAT). If you need access to other products from the SAS suite, please contact us.\nPlease note that SAS installation takes a while (~20 minutes), so workspace creation can take about 40 minutes (as the operating system must also be configured).\n\n\nOpen SAS\nWhen logged in to the workspace:\n\nOpen the ‘Start’ menu\nYou will find SAS under the SAS9.4 subfolder in the ‘Start’ menu.\n\n\n\nOpen iBridges\niBridges, the application recommended for data management for Yoda and iRODS servers, is accessible via a shortcut on the desktop."
+  },
+  {
+    "objectID": "docs/workspaces/programming/miniconda-cuda.html",
+    "href": "docs/workspaces/programming/miniconda-cuda.html",
+    "title": "Miniconda (shared) CUDA",
+    "section": "",
+    "text": "This workspace type is identical to the Miniconda (shared) Catalog Item, but additionally comes with the nvidia CUDA GPU drivers preinstalled."
+  },
+  {
+    "objectID": "docs/workspaces/utility/galaxy.html",
+    "href": "docs/workspaces/utility/galaxy.html",
+    "title": "Galaxy",
+    "section": "",
+    "text": "Galaxy is a free, open-source system for analyzing data, authoring workflows, publishing tools, and more. It is especially popular in the bioinformatics community, but is suitably for many other kinds of analysis workflows.\nGalaxy allows you to define workflows that take certain datasets as input, and generate new datasets as output, in a user-friendly way. Workflows consists of tools: re-usable scripts that are published by the Galaxy community, or that you can develop yourself.\nUsing this workspace type, your entire research group can launch Galaxy instances on demand. You can use it, for example, to run workflows when new data periodically becomes availalbe. There is no need to maintain a permanent Galaxy server, with all associated costs and complexity: simply start Galaxy on demand, and remove the workspace when you no longer need it!\nSee here for an example of how Galaxy is being used to process bioinformatics data at UU!\nFeel free to contact us if you are curious about how Galaxy on ResearchCloud can help your research group.\n\n\nThere are two very similar workspace types that you can use:\n\nGalaxy (supported by SURF, co-developed by UU and SURF, publically available in the catalog)\nGalaxy UU (supported by UU, request access from the catalog)\n\nIn most cases, you can simply use the Galaxy catalog item supported by SURF. The Galaxy UU catalog item has a few additional features that may come in handy."
+  },
+  {
+    "objectID": "docs/workspaces/utility/galaxy.html#description",
+    "href": "docs/workspaces/utility/galaxy.html#description",
+    "title": "Galaxy",
+    "section": "",
+    "text": "Galaxy is a free, open-source system for analyzing data, authoring workflows, publishing tools, and more. It is especially popular in the bioinformatics community, but is suitably for many other kinds of analysis workflows.\nGalaxy allows you to define workflows that take certain datasets as input, and generate new datasets as output, in a user-friendly way. Workflows consists of tools: re-usable scripts that are published by the Galaxy community, or that you can develop yourself.\nUsing this workspace type, your entire research group can launch Galaxy instances on demand. You can use it, for example, to run workflows when new data periodically becomes availalbe. There is no need to maintain a permanent Galaxy server, with all associated costs and complexity: simply start Galaxy on demand, and remove the workspace when you no longer need it!\nSee here for an example of how Galaxy is being used to process bioinformatics data at UU!\nFeel free to contact us if you are curious about how Galaxy on ResearchCloud can help your research group.\n\n\nThere are two very similar workspace types that you can use:\n\nGalaxy (supported by SURF, co-developed by UU and SURF, publically available in the catalog)\nGalaxy UU (supported by UU, request access from the catalog)\n\nIn most cases, you can simply use the Galaxy catalog item supported by SURF. The Galaxy UU catalog item has a few additional features that may come in handy."
+  },
+  {
+    "objectID": "docs/workspaces/utility/galaxy.html#creation",
+    "href": "docs/workspaces/utility/galaxy.html#creation",
+    "title": "Galaxy",
+    "section": "Creation",
+    "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\nTo use a storage unit, you currently need to use the Galaxy UU flavour. When working with large datasets, using a storage unit is advised.\nRemember that you are responsible for making backups of any data yourself! Although data on a storage unit will not be deleted when you delete the workspace, it can still become corrupt. So if it is important to your work, make sure to make periodical (e.g. daily or weekly) backups of your projects.\n\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance.\nChoosing the right hardware: depending on the workflows you want to run, Galaxy may require significant computational resources. Although you should not simply select the most hardware available (see responsible use), make sure your workspace has enough CPUs. At least two CPUs are advisable for simple workflows, but more may be necessary. If you are unsure, please contact us.\nAlternatively, you can start a Galaxy workspace with only two CPUs, and offload the computational load to a Pulsar workspace that has more resources. This means you can have a relatively light-weight Galaxy workspace running, pause your Pulsar workspace (thereby avoid incurring unnecessary costs), and activate Pulsar only when you need to scale up your computational power. See the Pulsar on ResearchCloud documentation, or contact us for advise!"
+  },
+  {
+    "objectID": "docs/workspaces/utility/galaxy.html#usage",
+    "href": "docs/workspaces/utility/galaxy.html#usage",
+    "title": "Galaxy",
+    "section": "Usage",
+    "text": "Usage\nWhen you log in to this workspace, the Galaxy web app will open automatically.\nFor usage instructions, see the various official Galaxy training manuals."
+  },
+  {
+    "objectID": "docs/workspaces/utility/galaxy.html#access",
+    "href": "docs/workspaces/utility/galaxy.html#access",
+    "title": "Galaxy",
+    "section": "Access",
+    "text": "Access\nThis workspace can be accessed via the yellow ‘Access’ button, or by opening the URL listed in the dashboard in your browser. Any member of the collaboration can login to the workspace using Single-Sign On.\n\nCommand line access\nYou can also login to the workspace via the commandline, using ssh. This may be useful to debug Galaxy or create backups.\nAdmin users will also be able to use sudo (after entering their time-based password)."
+  },
+  {
+    "objectID": "docs/workspaces/utility/galaxy.html#galaxy-uu",
+    "href": "docs/workspaces/utility/galaxy.html#galaxy-uu",
+    "title": "Galaxy",
+    "section": "Galaxy UU",
+    "text": "Galaxy UU\nThe Galaxy UU workspace type is based on the standard Galaxy catalog item, but has some extra features:\n\nUse a storage unit.\nTools for transferring data from Yoda.\nAutomatically import tools and workflows defined in a git repository when the workspace is created.\nSupport for Galaxy interactive tools is enabled by default.\n\nTo use Galaxy UU, simply request access.\n\nTools for transferring data from Yoda\nThe Galaxy UU comes with Galaxy tools that you can use to import and export files to Yoda (or other iRODS servers) in your workflows. The tools are available under the ‘iBridges’ section. See the tool documentation for how to use it.\nNote: when not using Galaxy using the Galaxy UU workspace type, you can also install the ibridges tool from the Galaxy toolshed.\n\n\nAutomatically import tools and workflows\nWhen creating a Galaxy UU workspace, in the final step you will be asked if you want to import custom tools (under “Interactive Parameters”). This also allows you to import custom workflows. These tools and workflows will be available when your workspace after your workspace is created.\nThis feature allows you to storage workflows and define required tools in a separate git repository, so that when you create a new workspace after having deleted a previous one, you can easily restore all your workflows.\nUsing this feature requires having a public git repository. In this repository, you should:\n\nput tool files in the tools subdirectory (this should contain .yml files that refer to Galaxy tools)\nput workflow files in the workflows subdirectory (this should contain .ga files that you can save by exporting a workflow from Galaxy).\n\nSee this sample repository.\nIn the “Interactive Parameters” section, you can fill in the URL to your git repo and the branch that should be used (main by default):\n\n\n\nUse a storage unit\nWhen creating a Galaxy UU workspace, in the final step you will be asked where Galaxy’s data should be stored on the workspace (under “Interactive Parameters”).\nIf you want to use your external storage, set this to /data/name_of_your_storage/galaxy:"
+  },
+  {
     "objectID": "docs/workspaces/utility/whisper.html",
     "href": "docs/workspaces/utility/whisper.html",
     "title": "Whisper OpenAI CUDA 11",
@@ -215,594 +845,6 @@
     "title": "Whisper OpenAI CUDA 11",
     "section": "Tips",
     "text": "Tips"
-  },
-  {
-    "objectID": "docs/workspaces/utility/galaxy.html",
-    "href": "docs/workspaces/utility/galaxy.html",
-    "title": "Galaxy",
-    "section": "",
-    "text": "Galaxy is a free, open-source system for analyzing data, authoring workflows, publishing tools, and more. It is especially popular in the bioinformatics community, but is suitably for many other kinds of analysis workflows.\nGalaxy allows you to define workflows that take certain datasets as input, and generate new datasets as output, in a user-friendly way. Workflows consists of tools: re-usable scripts that are published by the Galaxy community, or that you can develop yourself.\nUsing this workspace type, your entire research group can launch Galaxy instances on demand. You can use it, for example, to run workflows when new data periodically becomes availalbe. There is no need to maintain a permanent Galaxy server, with all associated costs and complexity: simply start Galaxy on demand, and remove the workspace when you no longer need it!\nSee here for an example of how Galaxy is being used to process bioinformatics data at UU!\nFeel free to contact us if you are curious about how Galaxy on ResearchCloud can help your research group.\n\n\nThere are two very similar workspace types that you can use:\n\nGalaxy (supported by SURF, co-developed by UU and SURF, publically available in the catalog)\nGalaxy UU (supported by UU, request access from the catalog)\n\nIn most cases, you can simply use the Galaxy catalog item supported by SURF. The Galaxy UU catalog item has a few additional features that may come in handy."
-  },
-  {
-    "objectID": "docs/workspaces/utility/galaxy.html#description",
-    "href": "docs/workspaces/utility/galaxy.html#description",
-    "title": "Galaxy",
-    "section": "",
-    "text": "Galaxy is a free, open-source system for analyzing data, authoring workflows, publishing tools, and more. It is especially popular in the bioinformatics community, but is suitably for many other kinds of analysis workflows.\nGalaxy allows you to define workflows that take certain datasets as input, and generate new datasets as output, in a user-friendly way. Workflows consists of tools: re-usable scripts that are published by the Galaxy community, or that you can develop yourself.\nUsing this workspace type, your entire research group can launch Galaxy instances on demand. You can use it, for example, to run workflows when new data periodically becomes availalbe. There is no need to maintain a permanent Galaxy server, with all associated costs and complexity: simply start Galaxy on demand, and remove the workspace when you no longer need it!\nSee here for an example of how Galaxy is being used to process bioinformatics data at UU!\nFeel free to contact us if you are curious about how Galaxy on ResearchCloud can help your research group.\n\n\nThere are two very similar workspace types that you can use:\n\nGalaxy (supported by SURF, co-developed by UU and SURF, publically available in the catalog)\nGalaxy UU (supported by UU, request access from the catalog)\n\nIn most cases, you can simply use the Galaxy catalog item supported by SURF. The Galaxy UU catalog item has a few additional features that may come in handy."
-  },
-  {
-    "objectID": "docs/workspaces/utility/galaxy.html#creation",
-    "href": "docs/workspaces/utility/galaxy.html#creation",
-    "title": "Galaxy",
-    "section": "Creation",
-    "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\nTo use a storage unit, you currently need to use the Galaxy UU flavour. When working with large datasets, using a storage unit is advised.\nRemember that you are responsible for making backups of any data yourself! Although data on a storage unit will not be deleted when you delete the workspace, it can still become corrupt. So if it is important to your work, make sure to make periodical (e.g. daily or weekly) backups of your projects.\n\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance.\nChoosing the right hardware: depending on the workflows you want to run, Galaxy may require significant computational resources. Although you should not simply select the most hardware available (see responsible use), make sure your workspace has enough CPUs. At least two CPUs are advisable for simple workflows, but more may be necessary. If you are unsure, please contact us.\nAlternatively, you can start a Galaxy workspace with only two CPUs, and offload the computational load to a Pulsar workspace that has more resources. This means you can have a relatively light-weight Galaxy workspace running, pause your Pulsar workspace (thereby avoid incurring unnecessary costs), and activate Pulsar only when you need to scale up your computational power. See the Pulsar on ResearchCloud documentation, or contact us for advise!"
-  },
-  {
-    "objectID": "docs/workspaces/utility/galaxy.html#usage",
-    "href": "docs/workspaces/utility/galaxy.html#usage",
-    "title": "Galaxy",
-    "section": "Usage",
-    "text": "Usage\nWhen you log in to this workspace, the Galaxy web app will open automatically.\nFor usage instructions, see the various official Galaxy training manuals."
-  },
-  {
-    "objectID": "docs/workspaces/utility/galaxy.html#access",
-    "href": "docs/workspaces/utility/galaxy.html#access",
-    "title": "Galaxy",
-    "section": "Access",
-    "text": "Access\nThis workspace can be accessed via the yellow ‘Access’ button, or by opening the URL listed in the dashboard in your browser. Any member of the collaboration can login to the workspace using Single-Sign On.\n\nCommand line access\nYou can also login to the workspace via the commandline, using ssh. This may be useful to debug Galaxy or create backups.\nAdmin users will also be able to use sudo (after entering their time-based password)."
-  },
-  {
-    "objectID": "docs/workspaces/utility/galaxy.html#galaxy-uu",
-    "href": "docs/workspaces/utility/galaxy.html#galaxy-uu",
-    "title": "Galaxy",
-    "section": "Galaxy UU",
-    "text": "Galaxy UU\nThe Galaxy UU workspace type is based on the standard Galaxy catalog item, but has some extra features:\n\nUse a storage unit.\nTools for transferring data from Yoda.\nAutomatically import tools and workflows defined in a git repository when the workspace is created.\nSupport for Galaxy interactive tools is enabled by default.\n\nTo use Galaxy UU, simply request access.\n\nTools for transferring data from Yoda\nThe Galaxy UU comes with Galaxy tools that you can use to import and export files to Yoda (or other iRODS servers) in your workflows. The tools are available under the ‘iBridges’ section. See the tool documentation for how to use it.\nNote: when not using Galaxy using the Galaxy UU workspace type, you can also install the ibridges tool from the Galaxy toolshed.\n\n\nAutomatically import tools and workflows\nWhen creating a Galaxy UU workspace, in the final step you will be asked if you want to import custom tools (under “Interactive Parameters”). This also allows you to import custom workflows. These tools and workflows will be available when your workspace after your workspace is created.\nThis feature allows you to storage workflows and define required tools in a separate git repository, so that when you create a new workspace after having deleted a previous one, you can easily restore all your workflows.\nUsing this feature requires having a public git repository. In this repository, you should:\n\nput tool files in the tools subdirectory (this should contain .yml files that refer to Galaxy tools)\nput workflow files in the workflows subdirectory (this should contain .ga files that you can save by exporting a workflow from Galaxy).\n\nSee this sample repository.\nIn the “Interactive Parameters” section, you can fill in the URL to your git repo and the branch that should be used (main by default):\n\n\n\nUse a storage unit\nWhen creating a Galaxy UU workspace, in the final step you will be asked where Galaxy’s data should be stored on the workspace (under “Interactive Parameters”).\nIf you want to use your external storage, set this to /data/name_of_your_storage/galaxy:"
-  },
-  {
-    "objectID": "docs/workspaces/programming/miniconda-cuda.html",
-    "href": "docs/workspaces/programming/miniconda-cuda.html",
-    "title": "Miniconda (shared) CUDA",
-    "section": "",
-    "text": "This workspace type is identical to the Miniconda (shared) Catalog Item, but additionally comes with the nvidia CUDA GPU drivers preinstalled."
-  },
-  {
-    "objectID": "docs/workspaces/programming/sas.html",
-    "href": "docs/workspaces/programming/sas.html",
-    "title": "SAS",
-    "section": "",
-    "text": "This workspace is Windows workspace with SAS 9.4 installed.\n\n\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
-  },
-  {
-    "objectID": "docs/workspaces/programming/sas.html#description",
-    "href": "docs/workspaces/programming/sas.html#description",
-    "title": "SAS",
-    "section": "",
-    "text": "This workspace is Windows workspace with SAS 9.4 installed.\n\n\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
-  },
-  {
-    "objectID": "docs/workspaces/programming/sas.html#access",
-    "href": "docs/workspaces/programming/sas.html#access",
-    "title": "SAS",
-    "section": "Access",
-    "text": "Access\nThis workspace can be accessed via the Remote Desktop protocol. You need a TOTP to login to your workspace, see Workspace access with TOTP.\n\nData transfer options\nSee our data transfer manuals.\nThe recommended iBridges client for Yoda and iRODS is preinstalled."
-  },
-  {
-    "objectID": "docs/workspaces/programming/sas.html#usage",
-    "href": "docs/workspaces/programming/sas.html#usage",
-    "title": "SAS",
-    "section": "Usage",
-    "text": "Usage\n\nPreliminaries\nAll researchers from UU have access to SAS (you do not need to provide your own license).\nBy default, this workspace comes with a minimal installation of SAS (SAS BASE and STAT). If you need access to other products from the SAS suite, please contact us.\nPlease note that SAS installation takes a while (~20 minutes), so workspace creation can take about 40 minutes (as the operating system must also be configured).\n\n\nOpen SAS\nWhen logged in to the workspace:\n\nOpen the ‘Start’ menu\nYou will find SAS under the SAS9.4 subfolder in the ‘Start’ menu.\n\n\n\nOpen iBridges\niBridges, the application recommended for data management for Yoda and iRODS servers, is accessible via a shortcut on the desktop."
-  },
-  {
-    "objectID": "docs/workspaces/programming/rstudio.html",
-    "href": "docs/workspaces/programming/rstudio.html",
-    "title": "RStudio",
-    "section": "",
-    "text": "This workspace can be used to work with R and RStudio. RStudio can be accessed conveniently from the browser.\nThe workspace also comes with a (linux) terminal (aka command line) to install additional tools when relevant.\nThere are various flavours of this catalog item:\n\nR-Studio (comes with R v.3)\nR-Studio - R4 (comes with R v.4)\n\nUpon request we can help you to automate the installation of R packages or automate other installations (e.g. tools for data transfer). Automating these steps will make it easier to work following our best practices."
-  },
-  {
-    "objectID": "docs/workspaces/programming/rstudio.html#description",
-    "href": "docs/workspaces/programming/rstudio.html#description",
-    "title": "RStudio",
-    "section": "",
-    "text": "This workspace can be used to work with R and RStudio. RStudio can be accessed conveniently from the browser.\nThe workspace also comes with a (linux) terminal (aka command line) to install additional tools when relevant.\nThere are various flavours of this catalog item:\n\nR-Studio (comes with R v.3)\nR-Studio - R4 (comes with R v.4)\n\nUpon request we can help you to automate the installation of R packages or automate other installations (e.g. tools for data transfer). Automating these steps will make it easier to work following our best practices."
-  },
-  {
-    "objectID": "docs/workspaces/programming/rstudio.html#creation",
-    "href": "docs/workspaces/programming/rstudio.html#creation",
-    "title": "RStudio",
-    "section": "Creation",
-    "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
-  },
-  {
-    "objectID": "docs/workspaces/programming/rstudio.html#access",
-    "href": "docs/workspaces/programming/rstudio.html#access",
-    "title": "RStudio",
-    "section": "Access",
-    "text": "Access\nThis workspace can be accessed via the yellow ‘Access’ button. You need a TOTP to login to your workspace, see Workspace access with TOTP.\n\nData transfer options\nSee our data transfer manuals."
-  },
-  {
-    "objectID": "docs/workspaces/programming/rstudio.html#usage",
-    "href": "docs/workspaces/programming/rstudio.html#usage",
-    "title": "RStudio",
-    "section": "Usage",
-    "text": "Usage"
-  },
-  {
-    "objectID": "docs/workspaces/programming/rstudio.html#tips",
-    "href": "docs/workspaces/programming/rstudio.html#tips",
-    "title": "RStudio",
-    "section": "Tips",
-    "text": "Tips"
-  },
-  {
-    "objectID": "docs/workspaces/programming/r-workbench.html",
-    "href": "docs/workspaces/programming/r-workbench.html",
-    "title": "R Workbench",
-    "section": "",
-    "text": "This workspace types comes with R (the latest version of the 4.x range) preinstalled, as well as conda, which can be used to manage R environments. The ‘desktop’ flavour of this workspace (see below) also comes with the RStudio GUI application.\nThis workspace is suitable for users who want to run R scripts on the commandline. For most users, the RStudio catalog item, which provides in-browser access to the popular R development environment,might be more suitable.\nThere are various flavours of this Catalog Item:\n\nR Workbench CLI (login via command line)\nR Workbench Desktop (login via desktop)\n\nSimply choose the one that is most convenient to you.\nIf needed, we can help you to automatically install certain packages when the workspace is created, so that these are available inside the workspace immediately. Please contact us for this."
-  },
-  {
-    "objectID": "docs/workspaces/programming/r-workbench.html#description",
-    "href": "docs/workspaces/programming/r-workbench.html#description",
-    "title": "R Workbench",
-    "section": "",
-    "text": "This workspace types comes with R (the latest version of the 4.x range) preinstalled, as well as conda, which can be used to manage R environments. The ‘desktop’ flavour of this workspace (see below) also comes with the RStudio GUI application.\nThis workspace is suitable for users who want to run R scripts on the commandline. For most users, the RStudio catalog item, which provides in-browser access to the popular R development environment,might be more suitable.\nThere are various flavours of this Catalog Item:\n\nR Workbench CLI (login via command line)\nR Workbench Desktop (login via desktop)\n\nSimply choose the one that is most convenient to you.\nIf needed, we can help you to automatically install certain packages when the workspace is created, so that these are available inside the workspace immediately. Please contact us for this."
-  },
-  {
-    "objectID": "docs/workspaces/programming/r-workbench.html#creation",
-    "href": "docs/workspaces/programming/r-workbench.html#creation",
-    "title": "R Workbench",
-    "section": "Creation",
-    "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
-  },
-  {
-    "objectID": "docs/workspaces/programming/r-workbench.html#access",
-    "href": "docs/workspaces/programming/r-workbench.html#access",
-    "title": "R Workbench",
-    "section": "Access",
-    "text": "Access\n\nR Workbench CLI\nFor the R Workbench CLI (command line) flavour of this Catalog Item, you can login using SSH.\n\n\nR Workbench Desktop\nFor the R Workbench Desktop flavour of this Catalog Item, you can login using your browser. It is also possible to login via SSH, as described above."
-  },
-  {
-    "objectID": "docs/workspaces/programming/r-workbench.html#usage",
-    "href": "docs/workspaces/programming/r-workbench.html#usage",
-    "title": "R Workbench",
-    "section": "Usage",
-    "text": "Usage\nThe first time (but only the first time) you login to a workspace of this type, miniconda will be setup for your user. You will see output like this:\n--- Running install scripts at first login: executing /home/username/runonce.d/runonce_conda.sh\nOnce this is complete, you will have access to the conda, R and littler commands, among others.\nTo start using conda, run the command conda init from a terminal.\n\nData transfer options\nSee our data transfer manuals.\nThe recommended iBridges client for Yoda and iRODS is preinstalled.\n\n\nRStudio\nOn the Desktop flavour of this workspace type RStudio will also be installed. You can find it in the main menu, under ‘Development’.\n\n\nInstalling additional software\nThe user has admin rights to install additional software on the system from the terminal."
-  },
-  {
-    "objectID": "docs/workspaces/programming/r-workbench.html#tips",
-    "href": "docs/workspaces/programming/r-workbench.html#tips",
-    "title": "R Workbench",
-    "section": "Tips",
-    "text": "Tips\n\nWorkspace security\nPlease take a moment to read the security recommendations for VREs."
-  },
-  {
-    "objectID": "docs/workspaces/programming/python-workbench.html",
-    "href": "docs/workspaces/programming/python-workbench.html",
-    "title": "Python Workbench",
-    "section": "",
-    "text": "This workspace types comes with various Python development tools already installed:\n\nuv for installing different python versions and dependencies lightning fast\npyenv for managing different python versions\nminiconda for managing dependency environments\npoetry for an alternative way of running projects with specified dependencies\n\nThere are various flavours of this Catalog Item:\n\nPython Workbench CLI (login via command line)\nPython Workbench Desktop (login via desktop)\n\nSimply choose the one that is most convenient to you.\n\n\nNote that the above tools are installed separately for each user in your CO that has access to the machine. This means each user can have their own clean pyenv and miniconda environments.\nIf you prefer all users on the machine to have a single shared miniconda environment, please see the Miniconda Catalog Item."
-  },
-  {
-    "objectID": "docs/workspaces/programming/python-workbench.html#description",
-    "href": "docs/workspaces/programming/python-workbench.html#description",
-    "title": "Python Workbench",
-    "section": "",
-    "text": "This workspace types comes with various Python development tools already installed:\n\nuv for installing different python versions and dependencies lightning fast\npyenv for managing different python versions\nminiconda for managing dependency environments\npoetry for an alternative way of running projects with specified dependencies\n\nThere are various flavours of this Catalog Item:\n\nPython Workbench CLI (login via command line)\nPython Workbench Desktop (login via desktop)\n\nSimply choose the one that is most convenient to you.\n\n\nNote that the above tools are installed separately for each user in your CO that has access to the machine. This means each user can have their own clean pyenv and miniconda environments.\nIf you prefer all users on the machine to have a single shared miniconda environment, please see the Miniconda Catalog Item."
-  },
-  {
-    "objectID": "docs/workspaces/programming/python-workbench.html#creation",
-    "href": "docs/workspaces/programming/python-workbench.html#creation",
-    "title": "Python Workbench",
-    "section": "Creation",
-    "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
-  },
-  {
-    "objectID": "docs/workspaces/programming/python-workbench.html#access",
-    "href": "docs/workspaces/programming/python-workbench.html#access",
-    "title": "Python Workbench",
-    "section": "Access",
-    "text": "Access\n\nPython Workbench CLI\nFor the Python Workbench CLI (command line) flavour of this Catalog Item, you can login using SSH.\n\n\nPython Workbench Desktop\nFor the Python Workbench Desktop flavour of this Catalog Item, you can login using your browser. It is also possible to login via SSH, as described above."
-  },
-  {
-    "objectID": "docs/workspaces/programming/python-workbench.html#usage",
-    "href": "docs/workspaces/programming/python-workbench.html#usage",
-    "title": "Python Workbench",
-    "section": "Usage",
-    "text": "Usage\nThe first time (but only the first time) you login to a workspace of this type, the Python tools (pyenv, miniconda and poetry) are installed for your user. This means that at first login you may experience a small delay (~1 minute maximum). During this time, if you are logging in on the command line, you will see that the applications are being installed for you:\n--- Running install scripts at first login: executing /home/username/runonce.d/01_pyenv-install.sh\n--- Running install scripts at first login: executing /home/username/runonce.d/10-poetry.sh\n--- Running install scripts at first login: executing /home/username/runonce.d/runonce_conda.sh\nWhen you are logged in you can start developing or running code. On the command line, you will have pyenv, miniconda, and poetry available.\nBy default, pyenv will be configured to use the most recent version of Python shipped with the operating system:\n$ pyenv versions\n  system\n* system-latest (set by /home/testuser/.pyenv/version)\nYou can use pyenv to install and select a different (newer) Python version: e.g. pyenv install 3.12, pyenv global 3.12. See the pyenv docs.\nTo start using miniconda environments, activate conda with the command conda init. See the miniconda docs.\nAlso see the poetry docs.\n\nData transfer options\nSee our data transfer manuals.\nThe recommended iBridges client for Yoda and iRODS is preinstalled.\n\n\nInstalling additional software\nThe user has admin rights to install additional software on the system from the terminal."
-  },
-  {
-    "objectID": "docs/workspaces/programming/python-workbench.html#tips",
-    "href": "docs/workspaces/programming/python-workbench.html#tips",
-    "title": "Python Workbench",
-    "section": "Tips",
-    "text": "Tips\n\nWorkspace security\nPlease take a moment to read the security recommendations for VREs."
-  },
-  {
-    "objectID": "docs/workspaces/programming/stata.html#creation",
-    "href": "docs/workspaces/programming/stata.html#creation",
-    "title": "Stata",
-    "section": "Creation",
-    "text": "Creation\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
-  },
-  {
-    "objectID": "docs/workspaces/programming/stata.html#access",
-    "href": "docs/workspaces/programming/stata.html#access",
-    "title": "Stata",
-    "section": "Access",
-    "text": "Access\n\nData transfer options\nSee our data transfer manuals.\nThe recommended iBridges client for Yoda and iRODS is preinstalled."
-  },
-  {
-    "objectID": "docs/workspaces/programming/stata.html#usage",
-    "href": "docs/workspaces/programming/stata.html#usage",
-    "title": "Stata",
-    "section": "Usage",
-    "text": "Usage"
-  },
-  {
-    "objectID": "docs/workspaces/programming/stata.html#tips",
-    "href": "docs/workspaces/programming/stata.html#tips",
-    "title": "Stata",
-    "section": "Tips",
-    "text": "Tips"
-  },
-  {
-    "objectID": "docs/workspaces/plain/ubuntu.html#creation",
-    "href": "docs/workspaces/plain/ubuntu.html#creation",
-    "title": "Ubuntu",
-    "section": "Creation",
-    "text": "Creation\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
-  },
-  {
-    "objectID": "docs/workspaces/plain/ubuntu.html#access",
-    "href": "docs/workspaces/plain/ubuntu.html#access",
-    "title": "Ubuntu",
-    "section": "Access",
-    "text": "Access"
-  },
-  {
-    "objectID": "docs/workspaces/plain/ubuntu.html#data-transfer-options",
-    "href": "docs/workspaces/plain/ubuntu.html#data-transfer-options",
-    "title": "Ubuntu",
-    "section": "Data transfer options",
-    "text": "Data transfer options"
-  },
-  {
-    "objectID": "docs/workspaces/plain/ubuntu.html#usage",
-    "href": "docs/workspaces/plain/ubuntu.html#usage",
-    "title": "Ubuntu",
-    "section": "Usage",
-    "text": "Usage"
-  },
-  {
-    "objectID": "docs/workspaces/plain/ubuntu.html#tips",
-    "href": "docs/workspaces/plain/ubuntu.html#tips",
-    "title": "Ubuntu",
-    "section": "Tips",
-    "text": "Tips"
-  },
-  {
-    "objectID": "docs/workspaces/plain/windows-cuda.html#creation",
-    "href": "docs/workspaces/plain/windows-cuda.html#creation",
-    "title": "Windows with CUDA",
-    "section": "Creation",
-    "text": "Creation\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
-  },
-  {
-    "objectID": "docs/workspaces/plain/windows-cuda.html#access",
-    "href": "docs/workspaces/plain/windows-cuda.html#access",
-    "title": "Windows with CUDA",
-    "section": "Access",
-    "text": "Access"
-  },
-  {
-    "objectID": "docs/workspaces/plain/windows-cuda.html#data-transfer-options",
-    "href": "docs/workspaces/plain/windows-cuda.html#data-transfer-options",
-    "title": "Windows with CUDA",
-    "section": "Data transfer options",
-    "text": "Data transfer options"
-  },
-  {
-    "objectID": "docs/workspaces/plain/windows-cuda.html#usage",
-    "href": "docs/workspaces/plain/windows-cuda.html#usage",
-    "title": "Windows with CUDA",
-    "section": "Usage",
-    "text": "Usage"
-  },
-  {
-    "objectID": "docs/workspaces/plain/windows-cuda.html#tips",
-    "href": "docs/workspaces/plain/windows-cuda.html#tips",
-    "title": "Windows with CUDA",
-    "section": "Tips",
-    "text": "Tips"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "VRE Documentation for UU researchers",
-    "section": "",
-    "text": "Welcome\nA Virtual Research Environment (VRE) is a temporary compute environment that enables researchers to work interactively and remotely on research. A VRE contains tools and data that scientists need for their research.\nUtrecht University provides VREs based on SURF Research Cloud, which is a good alternative for commercial cloud providers like Amazon Web Services and Microsoft Azure.\nSee here for a list of available workspace types and their documentation.\n\n\nOverview documentation\nThis page provides user documentation for Surf Research Cloud for researchers at Utrecht University. Get started using the links below!\n\nWhat is Research Cloud?\nHow to get started?\nFirst steps\nUsing a workspace\nUser manuals\nPractical tips for responsible use\nTerms of use\nPrivacy\nGlossary\nContact"
-  },
-  {
-    "objectID": "docs/glossary.html",
-    "href": "docs/glossary.html",
-    "title": "Glossary",
-    "section": "",
-    "text": "Catalog Item\nA catalog item is a workspace configuration that you can select from the catalog when you create a new workspace. A workspace can be configured with a certain Operating system and other applications or software that will installed on the workspace.\n\n\nCollaboration\nA Collaboration (also known as Collaborative Organisation, or CO) is an ad-hoc group of people who are allowed to work together by sharing resources. As a scientist you can easily make a CO. That way, you can invite other researchers to join your efforts in Research Cloud, and you can easily assign different roles to collaborators (such as the ‘admin’ role for administering the CO). More information.\n\n\nDPA\nData Processing Agreement A legally binding document to be agreed upon between the data controller and the data processor in writing or in electronic form. It regulates the particularities of data processing – such as its scope and purpose – as well as the relationship between the controller and the processor.\n\n\nSmall Compute application\nA relatively simple request procedure for obtaining a maximum of 50.000 CPU hours and/or 5.000 GPU hours for your project. More info\n\n\nSRAM\nSRAM (SURF Research Access Management) is a service to manage access to research resources, intended for Dutch led research collaborations. More information.\n\n\nStorage volumes\nAn ‘External’ Storage volume can be created from the main dashboard in the research cloud portal. This storage is persistent which means that any data that you put here will still be there when a workspace is deleted. You need to create a storage volume first and attach it when you create a new workspace. The storage volume can than typically be found in the workspace under the following directory path: ~/data/volume_2. More info\n\n\nVRE\nVirtual Research Environment is the CO including the entire linked research services, linked other systems, applied software and used data.\n\n\nVRE support\nThe support at UU level for this service is done by Research Data Management Services. The team consists of service administrators for arranging access and accounts and research engineers who can advice on usage and can help develop proof of concepts.\n\n\nWallet\nA wallet holds the budget for your use of the Research Cloud. See the getting started page for the options to obtain a wallet for Research cloud. When you create a workspace you need to select a wallet that can be charged for the use of the resources.\n\n\nWorkspace\nA workspace is a running Virtual Machine (or aka server) that you can use as a Virtual Research Environment. You can create a workspace in the Research Cloud portal. The workspace will be created somewhere in ‘the cloud’, and when it is up and running you can login to it, transfer data to it and start working. The workspace typically will have some software installed on it (e.g. RStudio or Jupyter Notebook)."
-  },
-  {
-    "objectID": "docs/workspaces/plain/ubuntu-cuda.html#creation",
-    "href": "docs/workspaces/plain/ubuntu-cuda.html#creation",
-    "title": "Ubuntu CUDA",
-    "section": "Creation",
-    "text": "Creation\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
-  },
-  {
-    "objectID": "docs/workspaces/plain/ubuntu-cuda.html#access",
-    "href": "docs/workspaces/plain/ubuntu-cuda.html#access",
-    "title": "Ubuntu CUDA",
-    "section": "Access",
-    "text": "Access"
-  },
-  {
-    "objectID": "docs/workspaces/plain/ubuntu-cuda.html#data-transfer-options",
-    "href": "docs/workspaces/plain/ubuntu-cuda.html#data-transfer-options",
-    "title": "Ubuntu CUDA",
-    "section": "Data transfer options",
-    "text": "Data transfer options"
-  },
-  {
-    "objectID": "docs/workspaces/plain/ubuntu-cuda.html#usage",
-    "href": "docs/workspaces/plain/ubuntu-cuda.html#usage",
-    "title": "Ubuntu CUDA",
-    "section": "Usage",
-    "text": "Usage"
-  },
-  {
-    "objectID": "docs/workspaces/plain/ubuntu-cuda.html#tips",
-    "href": "docs/workspaces/plain/ubuntu-cuda.html#tips",
-    "title": "Ubuntu CUDA",
-    "section": "Tips",
-    "text": "Tips"
-  },
-  {
-    "objectID": "docs/workspaces/plain/windows.html#creation",
-    "href": "docs/workspaces/plain/windows.html#creation",
-    "title": "Windows",
-    "section": "Creation",
-    "text": "Creation\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
-  },
-  {
-    "objectID": "docs/workspaces/plain/windows.html#access",
-    "href": "docs/workspaces/plain/windows.html#access",
-    "title": "Windows",
-    "section": "Access",
-    "text": "Access"
-  },
-  {
-    "objectID": "docs/workspaces/plain/windows.html#data-transfer-options",
-    "href": "docs/workspaces/plain/windows.html#data-transfer-options",
-    "title": "Windows",
-    "section": "Data transfer options",
-    "text": "Data transfer options"
-  },
-  {
-    "objectID": "docs/workspaces/plain/windows.html#usage",
-    "href": "docs/workspaces/plain/windows.html#usage",
-    "title": "Windows",
-    "section": "Usage",
-    "text": "Usage"
-  },
-  {
-    "objectID": "docs/workspaces/plain/windows.html#tips",
-    "href": "docs/workspaces/plain/windows.html#tips",
-    "title": "Windows",
-    "section": "Tips",
-    "text": "Tips"
-  },
-  {
-    "objectID": "docs/workspaces/programming/matlab.html",
-    "href": "docs/workspaces/programming/matlab.html",
-    "title": "Matlab",
-    "section": "",
-    "text": "This workspace is an Ubuntu Desktop workspace with MATLAB installed. Ubuntu Desktop is a linux operating system but has a Graphical User interface so operating it is similar to using a Windows operating system.\n\n\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
-  },
-  {
-    "objectID": "docs/workspaces/programming/matlab.html#description",
-    "href": "docs/workspaces/programming/matlab.html#description",
-    "title": "Matlab",
-    "section": "",
-    "text": "This workspace is an Ubuntu Desktop workspace with MATLAB installed. Ubuntu Desktop is a linux operating system but has a Graphical User interface so operating it is similar to using a Windows operating system.\n\n\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
-  },
-  {
-    "objectID": "docs/workspaces/programming/matlab.html#access",
-    "href": "docs/workspaces/programming/matlab.html#access",
-    "title": "Matlab",
-    "section": "Access",
-    "text": "Access\nThis workspace can be accessed via the yellow ‘Access’ button. You need a TOTP to login to your workspace, see Workspace access with TOTP.\n\nData transfer options\nSee our data transfer manuals.\nThe recommended iBridges client for Yoda and iRODS is preinstalled."
-  },
-  {
-    "objectID": "docs/workspaces/programming/matlab.html#usage",
-    "href": "docs/workspaces/programming/matlab.html#usage",
-    "title": "Matlab",
-    "section": "Usage",
-    "text": "Usage\n\nPrerequisites:\nYou will need a Mathworks account and add you UU licence to this account to be able to use MATLAB. Find instructions on how to do this here\n\n\nActivate MATLAB\nWhen logged in to the workspace:\n\nClick ‘Applications’ in the top left corner\nClick ‘Development’\nClick ‘Matlab Activate’, a wizard will open.\nClick ‘Next’ to activate Matlab using the internet\nLogin to your Mathworks account. For the password, it will ask you to get a 6 digit password from: https://nl.mathworks.com/mwa/otp\nContinue the wizard and choose the default options until you are finished.\n\n\n\nOpen MATLAB\n\nClick ‘Applications’ in the top left corner\nClick ‘Development’\nClick ‘Matlab’"
-  },
-  {
-    "objectID": "docs/workspaces/programming/matlab.html#tips",
-    "href": "docs/workspaces/programming/matlab.html#tips",
-    "title": "Matlab",
-    "section": "Tips",
-    "text": "Tips"
-  },
-  {
-    "objectID": "docs/workspaces/programming/miniconda.html",
-    "href": "docs/workspaces/programming/miniconda.html",
-    "title": "Miniconda (shared)",
-    "section": "",
-    "text": "This workspace types comes with the miniconda package manger preinstalled. All users on the system will share the same conda environment. Warning: although this can be convenient for some usecases, this can lead to unwanted conflicts/interference. In most cases, it is recommended to use separate conda environments for each user. You can use the Python Workbench Catalog Item for this.\nThere are various flavours of this Catalog Item:\n\nMiniconda CLI (shared) (login via command line)\nMiniconda Desktop (shared)(login via desktop)\n\nSimply choose the one that is most convenient to you.\nIf needed, we can help you to automatically install certain packages when the workspace is created. Please contact us for this."
-  },
-  {
-    "objectID": "docs/workspaces/programming/miniconda.html#description",
-    "href": "docs/workspaces/programming/miniconda.html#description",
-    "title": "Miniconda (shared)",
-    "section": "",
-    "text": "This workspace types comes with the miniconda package manger preinstalled. All users on the system will share the same conda environment. Warning: although this can be convenient for some usecases, this can lead to unwanted conflicts/interference. In most cases, it is recommended to use separate conda environments for each user. You can use the Python Workbench Catalog Item for this.\nThere are various flavours of this Catalog Item:\n\nMiniconda CLI (shared) (login via command line)\nMiniconda Desktop (shared)(login via desktop)\n\nSimply choose the one that is most convenient to you.\nIf needed, we can help you to automatically install certain packages when the workspace is created. Please contact us for this."
-  },
-  {
-    "objectID": "docs/workspaces/programming/miniconda.html#creation",
-    "href": "docs/workspaces/programming/miniconda.html#creation",
-    "title": "Miniconda (shared)",
-    "section": "Creation",
-    "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
-  },
-  {
-    "objectID": "docs/workspaces/programming/miniconda.html#usage",
-    "href": "docs/workspaces/programming/miniconda.html#usage",
-    "title": "Miniconda (shared)",
-    "section": "Usage",
-    "text": "Usage\nWhen you login, miniconda will be ready for use. See the miniconda docs.\nminiconda will be installed to /opt/miniconda.\n\nData transfer options\nSee our data transfer manuals.\nThe recommended iBridges client for Yoda and iRODS is preinstalled.\n\n\nInstalling additional software\nThe user has admin rights to install additional software on the system (on a terminal, use sudo &lt;yourcommand&gt;)."
-  },
-  {
-    "objectID": "docs/workspaces/programming/miniconda.html#tips",
-    "href": "docs/workspaces/programming/miniconda.html#tips",
-    "title": "Miniconda (shared)",
-    "section": "Tips",
-    "text": "Tips\n\nWorkspace security\nPlease take a moment to read the security recommendations for VREs."
-  },
-  {
-    "objectID": "docs/workspaces/programming/jupyter-cuda.html",
-    "href": "docs/workspaces/programming/jupyter-cuda.html",
-    "title": "Jupyter Notebooks CUDA",
-    "section": "",
-    "text": "This workspace type is identical to the Juputer Notebook Catalog Item, but additionally comes with the nvidia CUDA GPU drivers preinstalled."
-  },
-  {
-    "objectID": "docs/workspaces/programming/jupyter.html",
-    "href": "docs/workspaces/programming/jupyter.html",
-    "title": "Jupyter Notebooks",
-    "section": "",
-    "text": "This catalog item starts a JupyterLab environment in which you can work with Jupyter notebooks.\nJupyter is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations and narrative text. Uses include: data cleaning and transformation, numerical simulation, statistical modeling, data visualization, machine learning, and much more.\nAll users in your Collaborative Organisation can login to the workspace and will then be presented with their own notebook environment.\nIf needed, we can help you to automatically install certain packages when the workspace is created, so that these are available from inside the Jupyter environment immediately. Please contact us for this. However, you can of course also install your own dependencies from with the Notebook."
-  },
-  {
-    "objectID": "docs/workspaces/programming/jupyter.html#description",
-    "href": "docs/workspaces/programming/jupyter.html#description",
-    "title": "Jupyter Notebooks",
-    "section": "",
-    "text": "This catalog item starts a JupyterLab environment in which you can work with Jupyter notebooks.\nJupyter is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations and narrative text. Uses include: data cleaning and transformation, numerical simulation, statistical modeling, data visualization, machine learning, and much more.\nAll users in your Collaborative Organisation can login to the workspace and will then be presented with their own notebook environment.\nIf needed, we can help you to automatically install certain packages when the workspace is created, so that these are available from inside the Jupyter environment immediately. Please contact us for this. However, you can of course also install your own dependencies from with the Notebook."
-  },
-  {
-    "objectID": "docs/workspaces/programming/jupyter.html#creation",
-    "href": "docs/workspaces/programming/jupyter.html#creation",
-    "title": "Jupyter Notebooks",
-    "section": "Creation",
-    "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
-  },
-  {
-    "objectID": "docs/workspaces/programming/jupyter.html#access",
-    "href": "docs/workspaces/programming/jupyter.html#access",
-    "title": "Jupyter Notebooks",
-    "section": "Access",
-    "text": "Access\nYou can login to the workspace in your browser, via your ResearchCloud time-based password."
-  },
-  {
-    "objectID": "docs/workspaces/programming/jupyter.html#usage",
-    "href": "docs/workspaces/programming/jupyter.html#usage",
-    "title": "Jupyter Notebooks",
-    "section": "Usage",
-    "text": "Usage\nWhen logged in you are immediately presented with a JupyterLab environment in which you can work with different notebooks.\n\nData transfer options\nSee our data transfer manuals.\nYou will have to run the relevant commands for the data transfer method of your choice from within the JupyterLab terminal.\n\n\nInstalling additional software\nThe user has admin rights to install additional software on the system from the Jupyter terminal (use sudo &lt;command&gt;)."
-  },
-  {
-    "objectID": "docs/workspaces/programming/jupyter.html#tips",
-    "href": "docs/workspaces/programming/jupyter.html#tips",
-    "title": "Jupyter Notebooks",
-    "section": "Tips",
-    "text": "Tips\n\nWorkspace security\nPlease take a moment to read the security recommendations for VREs."
-  },
-  {
-    "objectID": "docs/workspaces/programming/python-workbench-cuda.html",
-    "href": "docs/workspaces/programming/python-workbench-cuda.html",
-    "title": "Python Workbench CUDA",
-    "section": "",
-    "text": "This workspace type is identical to the Python Workbench Catalog Item, but additionally comes with the nvidia CUDA GPU drivers preinstalled.\nAs with the Python Workbench Catalog Items, there are two flavours:\n\nPython Workbench CUDA CLI (login via command line)\nPython Workbench CUDA Desktop (login via desktop)\n\nSimply choose the one that is most convenient to you, and see the documentation for Python Workbench."
-  },
-  {
-    "objectID": "docs/workspaces/utility/asreview.html",
-    "href": "docs/workspaces/utility/asreview.html",
-    "title": "ASReview",
-    "section": "",
-    "text": "ASReview LAB is an open-source machine learning tool designed to streamline the systematic screening and labeling of large textual datasets. It is widely used for tasks such as title and abstract screening in systematic reviews or meta-analyses, but its applications extend to any scenario requiring systematic text screening.\nThis workspace type will start ASReview as a webapplication.\nAnyone who has access to your Collaboration will be able to easily login to ASReview using Single-Sign on. Since ASReview 2.0 supports multiple users, this workspace is ideal for crowd-based screening. You can even use it for a screenathon! Simply add the members of your screening group to your Collaboration in SRAM and start screening together.\nExtensions (such as asreview-dory) are not installed on this workspace.\nPlease also read the tips below."
-  },
-  {
-    "objectID": "docs/workspaces/utility/asreview.html#description",
-    "href": "docs/workspaces/utility/asreview.html#description",
-    "title": "ASReview",
-    "section": "",
-    "text": "ASReview LAB is an open-source machine learning tool designed to streamline the systematic screening and labeling of large textual datasets. It is widely used for tasks such as title and abstract screening in systematic reviews or meta-analyses, but its applications extend to any scenario requiring systematic text screening.\nThis workspace type will start ASReview as a webapplication.\nAnyone who has access to your Collaboration will be able to easily login to ASReview using Single-Sign on. Since ASReview 2.0 supports multiple users, this workspace is ideal for crowd-based screening. You can even use it for a screenathon! Simply add the members of your screening group to your Collaboration in SRAM and start screening together.\nExtensions (such as asreview-dory) are not installed on this workspace.\nPlease also read the tips below."
-  },
-  {
-    "objectID": "docs/workspaces/utility/asreview.html#creation",
-    "href": "docs/workspaces/utility/asreview.html#creation",
-    "title": "ASReview",
-    "section": "Creation",
-    "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\nIf you select a storage unit when creating an ASReview workspace, all ASReview data will automatically be stored on it. Since ASReview can potentially generate a lot of data, using a storage unit may be advised (the default, non-permanent storage on the workspace amounts to 150GB).\n\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance.\nChoosing the right hardware: ASReview uses an AI model that runs in parallel to the ASReview webapplication. It is therefore recommended to choose a workspace with at least two CPU cores. Four CPUs is probably enough for most cases. The more users that will be using the workspace to do screening in parallel, the more hardware will be required.\nPlease also see the tips for responsible use."
-  },
-  {
-    "objectID": "docs/workspaces/utility/asreview.html#access",
-    "href": "docs/workspaces/utility/asreview.html#access",
-    "title": "ASReview",
-    "section": "Access",
-    "text": "Access\nThis workspace can be accessed via the yellow ‘Access’ button, or by opening the URL listed in the dashboard in your browser. Any member of the collaboration can login to the workspace using Single-Sign On.\n\nCommand line\nAlternatively, only those users who are admins in the Collaborative Organisation (in the src_co_admin group) can login to the workspace via the commandline, using ssh. This may be useful for running ASReview in simulation mode, or e.g. for making backups.\nAfter logging in, the asreview command will be on your path. The ASREVIEW_PATH environment variable will be set to reflect the location of ASReview’s data (default: /var/www/asreview/asreview_data if you do not create the workspace with a storage unit, /data/yourstoragename/asreview_data if you did), so you should be able to interact with it straight away.\nAdmin users will also be able to use sudo (after entering their time-based passwords)."
-  },
-  {
-    "objectID": "docs/workspaces/utility/asreview.html#usage",
-    "href": "docs/workspaces/utility/asreview.html#usage",
-    "title": "ASReview",
-    "section": "Usage",
-    "text": "Usage\nWhen you log in to this workspace, the ASReview web app will open automatically."
-  },
-  {
-    "objectID": "docs/workspaces/utility/asreview.html#tips",
-    "href": "docs/workspaces/utility/asreview.html#tips",
-    "title": "ASReview",
-    "section": "Tips",
-    "text": "Tips\n\nRemember that you are responsible for making backups of any data yourself! This also applies when using a storage unit. Although data on a storage unit will not be deleted when you delete the workspace, it can still become corrupt. So if it is important to your work, make sure to make periodical (e.g. daily or weekly) backups of your projects. You can make a backup by logging in to the workspace using the commandline, or by downloading your project from the webapplication.\nRemember that ASReview may potentially generate a lot of data, so think about how much storage you may need. For most cases, the standard amount of storage should be enough. But if you’re unsure, just ask for advise!\nSimilarly, think about how many resources (CPUs) your workspace will need. Again, if you’re unsure, just ask for advise!"
-  },
-  {
-    "objectID": "docs/workspaces/utility/nextflow.html",
-    "href": "docs/workspaces/utility/nextflow.html",
-    "title": "Nextflow",
-    "section": "",
-    "text": "Nextflow is a scientific workflow system predominantly used for bioinformatic data analysis. It establishes standards for programmatically creating a series of dependent computational steps and facilitates their execution on various local and cloud resources.\nThis workspace type comes with Nextflow preinstalled. It is meant to use Nextflow from the commandline. The workspace further includes:\n\nMiniconda for managing dependencies (Nextflow supports conda).\nTools for data transfer from and to Yoda or iRODS servers."
-  },
-  {
-    "objectID": "docs/workspaces/utility/nextflow.html#description",
-    "href": "docs/workspaces/utility/nextflow.html#description",
-    "title": "Nextflow",
-    "section": "",
-    "text": "Nextflow is a scientific workflow system predominantly used for bioinformatic data analysis. It establishes standards for programmatically creating a series of dependent computational steps and facilitates their execution on various local and cloud resources.\nThis workspace type comes with Nextflow preinstalled. It is meant to use Nextflow from the commandline. The workspace further includes:\n\nMiniconda for managing dependencies (Nextflow supports conda).\nTools for data transfer from and to Yoda or iRODS servers."
-  },
-  {
-    "objectID": "docs/workspaces/utility/nextflow.html#creation",
-    "href": "docs/workspaces/utility/nextflow.html#creation",
-    "title": "Nextflow",
-    "section": "Creation",
-    "text": "Creation\n\nCreate a storage volume\nIf desired, first create a storage volume before creating the workspace.\nSee the Getting started page for more info about how and why to create a storage volume.\n\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
-  },
-  {
-    "objectID": "docs/workspaces/utility/nextflow.html#access",
-    "href": "docs/workspaces/utility/nextflow.html#access",
-    "title": "Nextflow",
-    "section": "Access",
-    "text": "Access\nThis workspace can be accessed via the the commandline, using ssh."
-  },
-  {
-    "objectID": "docs/workspaces/utility/nextflow.html#usage",
-    "href": "docs/workspaces/utility/nextflow.html#usage",
-    "title": "Nextflow",
-    "section": "Usage",
-    "text": "Usage\nAfter logging in the nextflow command will be immediately available."
   },
   {
     "objectID": "docs/workspaces/utility/grobid.html",
@@ -900,7 +942,7 @@
     "href": "docs/responsible-use.html#pausing-or-deleting-workspaces",
     "title": "VRE practical tips for responsible use",
     "section": "Pausing or Deleting workspaces",
-    "text": "Pausing or Deleting workspaces\nIt is always recommended to pause or delete a workspace when you are not working on it and when it is not busy with a task. This is to minimize the use of resources (credits, energy, capacity). Although pausing a workspace is often an attractive option, it is only recommended for a period of a couple of days maximum. By deleting workspaces and creating a new workspace, you make sure you always have a machine with the most recent (security) updates. This can be done efficiently by:\n\ndocumenting or automating installation steps\nregularly saving data and scripts to a Persistent storage volume, e.g. Yoda or, Research Drive\nmanaging code on GitHub\n\nThe VRE support team is happy to help you with this."
+    "text": "Pausing or Deleting workspaces\nIt is always recommended to pause or delete a workspace when you are not working on it and when it is not busy with a task. This is to minimize the use of resources (credits, energy, capacity). Although pausing a workspace is often an attractive option, it is only recommended for a relatively short period (see VRE lifetime). By deleting workspaces and creating a new workspace, you make sure you always have a machine with the most recent (security) updates. This can be done efficiently by:\n\ndocumenting or automating installation steps\nregularly saving data and scripts to a Persistent storage volume, e.g. Yoda or, Research Drive\nmanaging code on GitHub\n\nThe VRE support team is happy to help you with this.\n\nPausing after running a long command\nIf your code takes a long time to run, and you do know exactly when it will finish, it may be hard to know when you can pause your workspace. See here for tips on how to easily pause a workspace automatically after your code has run!"
   },
   {
     "objectID": "docs/responsible-use.html#wallets-and-credits",
@@ -956,7 +998,7 @@
     "href": "docs/workspace-catalogue.html",
     "title": "Workspace Catalogue",
     "section": "",
-    "text": "This page provides an overview of workspace types (called “Catalog Items” on Research Cloud) supported by Utrecht University. This overview includes primarily Catalog Items developed by UU, but also some commonly used Catalog Items developed by SURF.\nPlease note this is not a full list of available workspace types on ResearchCloud: there are many more developed by other institutions.\nIf there is a specific environment application, or software package you think you might need, please contact us for help. If what you require is not yet available on ResearchCloud, we can also help you to create custom Catalog Items.\n\nGetting access\nTo use UU items listed on this page, you can simply find them in the ResearchCloud portal under the ‘Catalog’ tab and request access. Most catalog items maintained by SURF will already be automatically visible for every Collaborative Organisation.\nNote that some items listed below (for example, those that require a license) are not visible in the catalog in the portal. If you need access to them, please contact us.\n\n\nLegend\n\n Access the workspace via the command line\n Access the workspace as a remote desktop.\n Access application via the browser.\n\n\n\nProgramming Environments\nWorkspaces that come with various programming environments and data transfer utilities installed.\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nJupyter Notebooks\nJupyter Lab\n\n\n\n\nSURF\n\n\nJupyter Notebooks CUDA\nJupyter LabCUDA\n\n\n\n\nSURF\n\n\nMatlab\nMatlab\n\n\n\nLicense needed\nUU\n\n\nMiniconda (shared)\nminiconda\n\n\n\n\nUU\n\n\nMiniconda (shared) CUDA\nJupyter LabCUDA\n\n\n\n\nUU\n\n\nPython Workbench\nPythonpoetryminiconda\n\n\n\n\nUU\n\n\nPython Workbench CUDA\nCUDAPythonpoetryminiconda\n\n\n\n\nUU\n\n\nR Workbench\nRminiconda\n\n\n\n\nUU\n\n\nRStudio\nRStudio\n\n\n\n\nSURF\n\n\nSAS\nSAS\n\n\n\n\nUU\n\n\nStata\nStata\n\n\n\nLicense needed\nUU\n\n\n\n\n\n\n\nPlain Workspaces\nWorkspaces that have only the operating system and essential ResearchCloud features installed.\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nUbuntu\n\n\n\n\n\nSURF\n\n\nUbuntu CUDA\nCUDA\n\n\n\n\nSURF\n\n\nWindows\n\n\n\n\n\nSURF\n\n\nWindows with CUDA\n\n\n\n\n\nSURF\n\n\n\n\n\n\n\nAnalysis Tools, Workflows & Utilities\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nASReview\nASReview\n\n\n\n\nUU\n\n\nGalaxy\nGalaxy\n\n\n\n\nUU, SURF\n\n\nGrobid\nGrobid\n\n\n\n\nUU\n\n\nNextflow\nNextflow\n\n\n\n\nUU\n\n\nWhisper OpenAI CUDA 11\nWhisperX\n\n\n\n\nUU\n\n\n\n\n\n\n\nExperimental\n\n\nThere are currently no workspaces in this category."
+    "text": "This page provides an overview of workspace types (called “Catalog Items” on Research Cloud) supported by Utrecht University. This overview includes primarily Catalog Items developed by UU, but also some commonly used Catalog Items developed by SURF.\nPlease note this is not a full list of available workspace types on ResearchCloud: there are many more developed by other institutions.\nIf there is a specific environment application, or software package you think you might need, please contact us for help. If what you require is not yet available on ResearchCloud, we can also help you to create custom Catalog Items.\n\nGetting access\nTo use UU items listed on this page, you can simply find them in the ResearchCloud portal under the ‘Catalog’ tab and request access. Most catalog items maintained by SURF will already be automatically visible for every Collaborative Organisation.\nNote that some items listed below (for example, those that require a license) are not visible in the catalog in the portal. If you need access to them, please contact us.\n\n\nLegend\n\n Access the workspace via the command line\n Access the workspace as a remote desktop.\n Access application via the browser.\n\n\n\nProgramming Environments\nWorkspaces that come with various programming environments and data transfer utilities installed.\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nJupyter Notebooks\nJupyter Lab\n\n\n\n\nSURF\n\n\nJupyter Notebooks CUDA\nJupyter LabCUDA\n\n\n\n\nSURF\n\n\nMatlab\nMatlab\n\n\n\nLicense needed\nUU\n\n\nMiniconda (shared)\nminiconda\n\n\n\n\nUU\n\n\nMiniconda (shared) CUDA\nJupyter LabCUDA\n\n\n\n\nUU\n\n\nPython Workbench\nPythonpoetryminiconda\n\n\n\n\nUU\n\n\nPython Workbench CUDA\nCUDAPythonpoetryminiconda\n\n\n\n\nUU\n\n\nR Workbench\nRminiconda\n\n\n\n\nUU\n\n\nRStudio\nRStudio\n\n\n\n\nSURF\n\n\nSAS\nSAS\n\n\n\n\nUU\n\n\nStata\nStata\n\n\n\nLicense needed\nUU\n\n\n\n\n\n\n\nPlain Workspaces\nWorkspaces that have only the operating system and essential ResearchCloud features installed.\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nUbuntu\n\n\n\n\n\nSURF\n\n\nUbuntu CUDA\nCUDA\n\n\n\n\nSURF\n\n\nWindows\n\n\n\n\n\nSURF\n\n\nWindows with CUDA\n\n\n\n\n\nSURF\n\n\n\n\n\n\n\nAnalysis Tools, Workflows & Utilities\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nASReview\nASReview\n\n\n\n\nUU\n\n\nAlphaFold3\nAlphaFold\n\n\n\n\nUU\n\n\nGalaxy\nGalaxy\n\n\n\n\nUU, SURF\n\n\nGrobid\nGrobid\n\n\n\n\nUU\n\n\nNextflow\nNextflow\n\n\n\n\nUU\n\n\nWhisper OpenAI CUDA 11\nWhisperX\n\n\n\n\nUU\n\n\n\n\n\n\n\nExperimental\n\n\nThere are currently no workspaces in this category."
   },
   {
     "objectID": "docs/manuals/ibridges.html",
