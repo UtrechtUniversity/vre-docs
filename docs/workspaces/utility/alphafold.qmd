@@ -1,0 +1,166 @@
+--- 
+title: "AlphaFold3"
+software:
+- '[AlphaFold](https://deepmind.google/technologies/alphafold/)'
+login:
+- cli
+os_flavor: linux
+os:
+- Ubuntu 22.04
+data: []
+packages: []
+gpu: true
+admin: false
+support: UU
+---
+
+## Description
+
+[AlphaFold](https://deepmind.google/technologies/alphafold/) is an artificial intelligence (AI) program developed by DeepMind, a subsidiary of Alphabet, which performs predictions of protein structure.
+
+The software provided on this workspace is [an inference pipeline for the AlphaFold3 model](https://github.com/google-deepmind/alphafold3/). To utilize the model, you will also need to request [access to the model parameters](#preparation).
+
+The recommended [iBridges client for Yoda and iRODS](../../manuals/ibridges.qmd) is also preinstalled, to transfer data to or from the workspace.
+
+## Creating an alphafold instance in VRE
+
+### Preparation
+
+Data parameters
+
+The data parameters need to be requested by your own group by filling in this <a href='https://forms.gle/svvpY4u2jsHEwWYS6'>form</a>. According to the <a href='https://github.com/google-deepmind/alphafold3/blob/main/docs/installation.md'>alphafold documentation</a>, you will get a response within 2-3 business days. 
+
+Download the model parameter to your local computer.
+
+## Creating a workspace and storage
+
+### Storage
+
+**The AlphaFold catalog item requires a storage unit. If no storage is attached to the workspace, creation will fail.** See the [Getting started](../../first-steps.qmd#create-storage-volume) page for more info about how and why to create a storage volume.
+
+- **Make sure to choose the capacity of 1.5 TB for the storage.**
+- On the workspace, the shell variable `$ALPHAFOLD_STORAGE` will be set to `/data/<your_storage_name>/alphafold3`. You can use this variable to specify parameters when [running](#run-alphafold) AlphaFold.
+
+{{< include ../partials/_creation.qmd >}}
+
+- **When selecting the hardware for you workspace, choose at least an A10 1 GPU.**
+- **Make sure to select the storage unit you have created in the 'Storage' step.**
+
+It will take 15-30 minutes for the new workspace to be configured.
+
+## Usage
+
+After creation is finished, there will be a new workspace that you can access [on the commandline, via `ssh`](../../first-steps.qmd#ssh).
+
+After logging in, follow these steps:
+
+1. [Verify configuration (optional)](#verify-configuration-optional)
+1. [Upload model parameters](#upload-model-parameters)
+1. [Create input files](#create-input-files)
+1. [Run AlphaFold](#run-alphafold)
+1. [Results](#results)
+
+### Verify configuration (optional)
+
+Inside the workspace, there should be two components:
+
+- Docker and `alphafold` docker image. To verify, use this command:
+
+    ```
+    $ docker images
+    ```
+    You should see an image called `alphafold`.
+
+
+- Public (genetic) databases. To check that these are available, use this command:
+
+    ```
+    $ ls /data/<permanent_storage_name>/alphafold3/
+    ```
+    There should be a folder named "public_databases" with genetic database files (*.fasta) within the folder.
+
+
+### Upload model parameters
+
+**Note: the model parameters need to be uploaded only a single time, after which all users can utilize it.** To check if they have already been uploaded, use: `ls $ALPHAFOLD_STORAGE/model_parameters/`. You should see a `.bin` file.
+
+1. Upload the model parameters ([acquired earlier](#preparation)) from your local computer to the workspace.
+    - You can use `scp` or other tools to transfer the file (probably called `af3.bin.zst`) to the workspace. See our [data transfer manual](../../manuals/ssh-data-transfer-methods.qmd).
+1. The uploaded file is a compressed archive containing a directory with model parameters. You now need to decompress it:
+    * `unzstd af3.bin.zst`
+1. Place the decompressed model parameters in a directory on your permanent storage so all users on the machine can utilize it:
+    * `mv af3.bin $ALPHAFOLD_STORAGE/model_parameters/`
+
+### Create input files
+
+You need to create one or more input files for the AlphaFold model to work on. Input files are in the `JSON` format and describe the proteins that you want to predict. See an [example input file](https://github.com/google-deepmind/alphafold3?tab=readme-ov-file#installation-and-running-your-first-prediction), and the [detailed documentation for input files](https://github.com/google-deepmind/alphafold3/blob/main/docs/input.md).
+
+Of course, you can also [upload](../../manuals/ssh-data-transfer-methods.qmd) pre-existing input files with `scp`, or download them to the workspace (e.g. with `git clone` if they are in a public git repository, or with `curl` if they are on the web).
+
+### Run AlphaFold
+
+#### Run using convenience script
+
+If you placed your model parameters in `$ALPHAFOLD_STORAGE/model_parameters`, and your input files in `$ALPHAFOLD_STORAGE/af_input/`, you can simply use the following command to run alphafold:
+
+`run_alphafold`
+
+This convenience script will automatically detect the output directory and genetic databases directory on your storage, and pass them on to alphafold.
+
+*(Optional)* You can also override the following locations by setting environment variables:
+
+- `ALPHAFOLD_MODEL`: path to the directory containing the [model parameters](#preparation)
+- `ALPHAFOLD_INPUT`: path to the input directory, or a specific `.json` input file
+- `ALPHAFOLD_OUTPUT`: path to the output directory
+- `ALPHAFOLD_DBS`: path to the public genetic databases directory
+
+For instance:
+
+    $ ALPHAFOLD_MODEL=/path/to/model/parameters/dir ALPHAFOLD_INPUT=~/input.json run_alphafold
+
+::: {.callout-note collapse="true"}
+## Warning messages from AlphaFold
+
+Don't worry if you see warning messages of the following sort:
+
+```
+Unable to initialize backend 'rocm': module 'jaxlib.xla_extension' has no attribute 'GpuAllocatorConfig'
+Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+```
+
+These are informational warnings, but [if inference continues succesfully, you can ignore these](https://github.com/google-deepmind/alphafold3/issues/172).
+
+:::
+
+#### Run manually
+
+You can also invoke the `alphafold3` command directly, using Docker. This allows you to customize the locatino of your input files, output files, model parameters, and genetic databases live.
+
+For this example, we will assume that *all* of these are located on your permanent storage volume. You can use the shell variable `$ALPHAFOLD_STORAGE` as a base directory. Hence, you can use this command:
+
+    $ docker run -it \
+        --volume $ALPHAFOLD_STORAGE/af_input:/root/af_input \
+        --volume $ALPHAFOLD_STORAGE/af_output:/root/af_output \
+        --volume $ALPHAFOLD_STORAGE/model_parameters:/root/models \
+        --volume $ALPHAFOLD_STORAGE/gendb:/root/public_databases \
+        --gpus all \
+        alphafold3 \
+        python run_alphafold.py \
+        --input_dir=/root/af_input/ \
+        --model_dir=/root/models \
+        --output_dir=/root/af_output
+
+### Results
+
+After running this command, your [output files](https://github.com/google-deepmind/alphafold3/blob/main/docs/output.md) will appear in the following directory:
+
+
+`/data/af_output/<job_name>`
+
+...where <job_name> is the `name` specified in your input file. There will be multiple output directories if you specified used multiple input files.
+
+## Source
+
+[1] "AlphaFold". Deepmind. Archived from the original on 19 January 2021. Retrieved 30 November 2020.
+
+[2] https://en.wikipedia.org/wiki/AlphaFold
