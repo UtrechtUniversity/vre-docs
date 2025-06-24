@@ -23,13 +23,15 @@ This workspace is Windows workspace with [SAS](https://sas.com) 9.4 installed.
 {{< include ../partials/_creation.qmd >}}
 
 ## Access
-This workspace can be accessed via the [Remote Desktop protocol](../../first-steps.qmd#remote-desktop-protocol). You need a TOTP to login to your workspace, see [Workspace access with TOTP](https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace#Logintoyourworkspace-WorkspaceAccesswithTOTP).
+
+You can [access Windows workspaces as a remote desktop in your browser](../../first-steps.qmd#browser-access-to-a-desktop-environment), authenticating via SRAM.
 
 {{< include ../partials/_data_transfer.qmd >}}
 
 The recommended [iBridges client for Yoda and iRODS](../../manuals/ibridges.qmd) is preinstalled.
 
 ## Usage
+
 ### Preliminaries
 
 All researchers from UU have access to SAS (you do not need to provide your own license).
