@@ -242,7 +242,7 @@
     "href": "docs/workspaces/utility/nextflow.html#usage",
     "title": "Nextflow",
     "section": "Usage",
-    "text": "Usage\nAfter logging in the nextflow command will be immediately available."
+    "text": "Usage\nAfter logging in the nextflow command will be immediately available.\n\nData transfer options\nSee our data transfer manuals.\nThe recommended iBridges client for Yoda and iRODS is preinstalled."
   },
   {
     "objectID": "docs/workspaces/utility/asreview.html",
@@ -413,6 +413,27 @@
     "text": "Tips"
   },
   {
+    "objectID": "docs/workspaces/plain/windows.html",
+    "href": "docs/workspaces/plain/windows.html",
+    "title": "Windows",
+    "section": "",
+    "text": "ResearchCloud allows you to start Windows workspaces that use the Windows Server 2019 Operating System. There are various flavours:\n\nWindows Server 2019 (maintained by SURF)\nWindows Server 2019 with CUDA (with GPU support, maintained by SURF)\nWindows with iBridges (comes with iBridges for data transfer, maintained by UU)\n\nSimply choose one of these catalog items in the workspace creation wizard."
+  },
+  {
+    "objectID": "docs/workspaces/plain/windows.html#description",
+    "href": "docs/workspaces/plain/windows.html#description",
+    "title": "Windows",
+    "section": "",
+    "text": "ResearchCloud allows you to start Windows workspaces that use the Windows Server 2019 Operating System. There are various flavours:\n\nWindows Server 2019 (maintained by SURF)\nWindows Server 2019 with CUDA (with GPU support, maintained by SURF)\nWindows with iBridges (comes with iBridges for data transfer, maintained by UU)\n\nSimply choose one of these catalog items in the workspace creation wizard."
+  },
+  {
+    "objectID": "docs/workspaces/plain/windows.html#access",
+    "href": "docs/workspaces/plain/windows.html#access",
+    "title": "Windows",
+    "section": "Access",
+    "text": "Access\nYou can access Windows workspaces as a remote desktop in your browser, authenticating via SRAM."
+  },
+  {
     "objectID": "docs/workspaces/plain/windows.html#creation",
     "href": "docs/workspaces/plain/windows.html#creation",
     "title": "Windows",
@@ -420,25 +441,11 @@
     "text": "Creation\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
   },
   {
-    "objectID": "docs/workspaces/plain/windows.html#access",
-    "href": "docs/workspaces/plain/windows.html#access",
-    "title": "Windows",
-    "section": "Access",
-    "text": "Access"
-  },
-  {
-    "objectID": "docs/workspaces/plain/windows.html#data-transfer-options",
-    "href": "docs/workspaces/plain/windows.html#data-transfer-options",
-    "title": "Windows",
-    "section": "Data transfer options",
-    "text": "Data transfer options"
-  },
-  {
     "objectID": "docs/workspaces/plain/windows.html#usage",
     "href": "docs/workspaces/plain/windows.html#usage",
     "title": "Windows",
     "section": "Usage",
-    "text": "Usage"
+    "text": "Usage\n\nData transfer options\nSee our data transfer manuals.\nWhen using the Windows with iBridges flavour, the recommended iBridges client for Yoda and iRODS is preinstalled."
   },
   {
     "objectID": "docs/workspaces/plain/windows.html#tips",
@@ -497,6 +504,27 @@
     "text": "Welcome\nA Virtual Research Environment (VRE) is a temporary compute environment that enables researchers to work interactively and remotely on research. A VRE contains tools and data that scientists need for their research.\nUtrecht University provides VREs based on SURF Research Cloud, which is a good alternative for commercial cloud providers like Amazon Web Services and Microsoft Azure.\nSee here for a list of available workspace types and their documentation.\n\n\nOverview documentation\nThis page provides user documentation for Surf Research Cloud for researchers at Utrecht University. Get started using the links below!\n\nWhat is Research Cloud?\nHow to get started?\nFirst steps\nUsing a workspace\nUser manuals\nPractical tips for responsible use\nTerms of use\nPrivacy\nGlossary\nContact"
   },
   {
+    "objectID": "docs/workspaces/plain/windows-cuda.html",
+    "href": "docs/workspaces/plain/windows-cuda.html",
+    "title": "Windows with CUDA",
+    "section": "",
+    "text": "ResearchCloud allows you to start Windows workspaces that use the Windows Server 2019 Operating System. There are various flavours:\n\nWindows Server 2019 (maintained by SURF)\nWindows Server 2019 with CUDA (with GPU support, maintained by SURF)\nWindows with iBridges (comes with iBridges for data transfer, maintained by UU)\n\nSimply choose one of these catalog items in the workspace creation wizard."
+  },
+  {
+    "objectID": "docs/workspaces/plain/windows-cuda.html#description",
+    "href": "docs/workspaces/plain/windows-cuda.html#description",
+    "title": "Windows with CUDA",
+    "section": "",
+    "text": "ResearchCloud allows you to start Windows workspaces that use the Windows Server 2019 Operating System. There are various flavours:\n\nWindows Server 2019 (maintained by SURF)\nWindows Server 2019 with CUDA (with GPU support, maintained by SURF)\nWindows with iBridges (comes with iBridges for data transfer, maintained by UU)\n\nSimply choose one of these catalog items in the workspace creation wizard."
+  },
+  {
+    "objectID": "docs/workspaces/plain/windows-cuda.html#access",
+    "href": "docs/workspaces/plain/windows-cuda.html#access",
+    "title": "Windows with CUDA",
+    "section": "Access",
+    "text": "Access\nYou can access Windows workspaces as a remote desktop in your browser, authenticating via SRAM."
+  },
+  {
     "objectID": "docs/workspaces/plain/windows-cuda.html#creation",
     "href": "docs/workspaces/plain/windows-cuda.html#creation",
     "title": "Windows with CUDA",
@@ -504,25 +532,11 @@
     "text": "Creation\n\nCreate a workspace\nIn the Research Cloud portal click the ‘Create a new workspace’ button and follow the steps in the wizzard.\nSee the workspace creation manual page for more guidance."
   },
   {
-    "objectID": "docs/workspaces/plain/windows-cuda.html#access",
-    "href": "docs/workspaces/plain/windows-cuda.html#access",
-    "title": "Windows with CUDA",
-    "section": "Access",
-    "text": "Access"
-  },
-  {
-    "objectID": "docs/workspaces/plain/windows-cuda.html#data-transfer-options",
-    "href": "docs/workspaces/plain/windows-cuda.html#data-transfer-options",
-    "title": "Windows with CUDA",
-    "section": "Data transfer options",
-    "text": "Data transfer options"
-  },
-  {
     "objectID": "docs/workspaces/plain/windows-cuda.html#usage",
     "href": "docs/workspaces/plain/windows-cuda.html#usage",
     "title": "Windows with CUDA",
     "section": "Usage",
-    "text": "Usage"
+    "text": "Usage\n\nData transfer options\nSee our data transfer manuals.\nWhen using the Windows with iBridges flavour, the recommended iBridges client for Yoda and iRODS is preinstalled."
   },
   {
     "objectID": "docs/workspaces/plain/windows-cuda.html#tips",
@@ -739,7 +753,7 @@
     "href": "docs/workspaces/programming/sas.html#access",
     "title": "SAS",
     "section": "Access",
-    "text": "Access\nThis workspace can be accessed via the Remote Desktop protocol. You need a TOTP to login to your workspace, see Workspace access with TOTP.\n\nData transfer options\nSee our data transfer manuals.\nThe recommended iBridges client for Yoda and iRODS is preinstalled."
+    "text": "Access\nYou can access Windows workspaces as a remote desktop in your browser, authenticating via SRAM.\n\nData transfer options\nSee our data transfer manuals.\nThe recommended iBridges client for Yoda and iRODS is preinstalled."
   },
   {
     "objectID": "docs/workspaces/programming/sas.html#usage",
@@ -998,7 +1012,7 @@
     "href": "docs/workspace-catalogue.html",
     "title": "Workspace Catalogue",
     "section": "",
-    "text": "This page provides an overview of workspace types (called “Catalog Items” on Research Cloud) supported by Utrecht University. This overview includes primarily Catalog Items developed by UU, but also some commonly used Catalog Items developed by SURF.\nPlease note this is not a full list of available workspace types on ResearchCloud: there are many more developed by other institutions.\nIf there is a specific environment application, or software package you think you might need, please contact us for help. If what you require is not yet available on ResearchCloud, we can also help you to create custom Catalog Items.\n\nGetting access\nTo use UU items listed on this page, you can simply find them in the ResearchCloud portal under the ‘Catalog’ tab and request access. Most catalog items maintained by SURF will already be automatically visible for every Collaborative Organisation.\nNote that some items listed below (for example, those that require a license) are not visible in the catalog in the portal. If you need access to them, please contact us.\n\n\nLegend\n\n Access the workspace via the command line\n Access the workspace as a remote desktop.\n Access application via the browser.\n\n\n\nProgramming Environments\nWorkspaces that come with various programming environments and data transfer utilities installed.\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nJupyter Notebooks\nJupyter Lab\n\n\n\n\nSURF\n\n\nJupyter Notebooks CUDA\nJupyter LabCUDA\n\n\n\n\nSURF\n\n\nMatlab\nMatlab\n\n\n\nLicense needed\nUU\n\n\nMiniconda (shared)\nminiconda\n\n\n\n\nUU\n\n\nMiniconda (shared) CUDA\nJupyter LabCUDA\n\n\n\n\nUU\n\n\nPython Workbench\nPythonpoetryminiconda\n\n\n\n\nUU\n\n\nPython Workbench CUDA\nCUDAPythonpoetryminiconda\n\n\n\n\nUU\n\n\nR Workbench\nRminiconda\n\n\n\n\nUU\n\n\nRStudio\nRStudio\n\n\n\n\nSURF\n\n\nSAS\nSAS\n\n\n\n\nUU\n\n\nStata\nStata\n\n\n\nLicense needed\nUU\n\n\n\n\n\n\n\nPlain Workspaces\nWorkspaces that have only the operating system and essential ResearchCloud features installed.\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nUbuntu\n\n\n\n\n\nSURF\n\n\nUbuntu CUDA\nCUDA\n\n\n\n\nSURF\n\n\nWindows\n\n\n\n\n\nSURF\n\n\nWindows with CUDA\n\n\n\n\n\nSURF\n\n\n\n\n\n\n\nAnalysis Tools, Workflows & Utilities\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nASReview\nASReview\n\n\n\n\nUU\n\n\nAlphaFold3\nAlphaFold\n\n\n\n\nUU\n\n\nGalaxy\nGalaxy\n\n\n\n\nUU, SURF\n\n\nGrobid\nGrobid\n\n\n\n\nUU\n\n\nNextflow\nNextflow\n\n\n\n\nUU\n\n\nWhisper OpenAI CUDA 11\nWhisperX\n\n\n\n\nUU\n\n\n\n\n\n\n\nExperimental\n\n\nThere are currently no workspaces in this category."
+    "text": "This page provides an overview of workspace types (called “Catalog Items” on Research Cloud) supported by Utrecht University. This overview includes primarily Catalog Items developed by UU, but also some commonly used Catalog Items developed by SURF.\nPlease note this is not a full list of available workspace types on ResearchCloud: there are many more developed by other institutions.\nIf there is a specific environment application, or software package you think you might need, please contact us for help. If what you require is not yet available on ResearchCloud, we can also help you to create custom Catalog Items.\n\nGetting access\nTo use UU items listed on this page, you can simply find them in the ResearchCloud portal under the ‘Catalog’ tab and request access. Most catalog items maintained by SURF will already be automatically visible for every Collaborative Organisation.\nNote that some items listed below (for example, those that require a license) are not visible in the catalog in the portal. If you need access to them, please contact us.\n\n\nLegend\n\n Access the workspace via the command line\n Access the workspace as a remote desktop.\n Access application via the browser.\n\n\n\nProgramming Environments\nWorkspaces that come with various programming environments and data transfer utilities installed.\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nJupyter Notebooks\nJupyter Lab\n\n\n\n\nSURF\n\n\nJupyter Notebooks CUDA\nJupyter LabCUDA\n\n\n\n\nSURF\n\n\nMatlab\nMatlab\n\n\n\nLicense needed\nUU\n\n\nMiniconda (shared)\nminiconda\n\n\n\n\nUU\n\n\nMiniconda (shared) CUDA\nJupyter LabCUDA\n\n\n\n\nUU\n\n\nPython Workbench\nPythonpoetryminiconda\n\n\n\n\nUU\n\n\nPython Workbench CUDA\nCUDAPythonpoetryminiconda\n\n\n\n\nUU\n\n\nR Workbench\nRminiconda\n\n\n\n\nUU\n\n\nRStudio\nRStudio\n\n\n\n\nSURF\n\n\nSAS\nSAS\n\n\n\n\nUU\n\n\nStata\nStata\n\n\n\nLicense needed\nUU\n\n\n\n\n\n\n\nPlain Workspaces\nWorkspaces that have only the operating system and essential ResearchCloud features installed.\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nUbuntu\n\n\n\n\n\nSURF\n\n\nUbuntu CUDA\nCUDA\n\n\n\n\nSURF\n\n\nWindows\n\n\n\n\n\nSURF, UU\n\n\nWindows with CUDA\n\n\n\n\n\nSURF, UU\n\n\n\n\n\n\n\nAnalysis Tools, Workflows & Utilities\n\n\n\n\n\nName\nSoftware preinstalled\nAccess methods\nOS\nGPU\nMisc\nOwner\n\n\n\n\nASReview\nASReview\n\n\n\n\nUU\n\n\nAlphaFold3\nAlphaFold\n\n\n\n\nUU\n\n\nGalaxy\nGalaxy\n\n\n\n\nUU, SURF\n\n\nGrobid\nGrobid\n\n\n\n\nUU\n\n\nNextflow\nNextflow\n\n\n\n\nUU\n\n\nWhisper OpenAI CUDA 11\nWhisperX\n\n\n\n\nUU\n\n\n\n\n\n\n\nExperimental\n\n\nThere are currently no workspaces in this category."
   },
   {
     "objectID": "docs/manuals/ibridges.html",

@@ -145,13 +145,15 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#description" id="toc-description" class="nav-link active" data-scroll-target="#description">Description</a></li>
+  <li><a href="#access" id="toc-access" class="nav-link" data-scroll-target="#access">Access</a></li>
   <li><a href="#creation" id="toc-creation" class="nav-link" data-scroll-target="#creation">Creation</a>
   <ul class="collapse">
   <li><a href="#create-a-workspace" id="toc-create-a-workspace" class="nav-link" data-scroll-target="#create-a-workspace">Create a workspace</a></li>
   </ul></li>
-  <li><a href="#access" id="toc-access" class="nav-link" data-scroll-target="#access">Access</a></li>
+  <li><a href="#usage" id="toc-usage" class="nav-link" data-scroll-target="#usage">Usage</a>
+  <ul class="collapse">
   <li><a href="#data-transfer-options" id="toc-data-transfer-options" class="nav-link" data-scroll-target="#data-transfer-options">Data transfer options</a></li>
-  <li><a href="#usage" id="toc-usage" class="nav-link" data-scroll-target="#usage">Usage</a></li>
+  </ul></li>
   <li><a href="#tips" id="toc-tips" class="nav-link" data-scroll-target="#tips">Tips</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/UtrechtUniversity/vre-docs/edit/main/docs/workspaces/plain/windows.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/UtrechtUniversity/vre-docs/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/UtrechtUniversity/vre-docs/blob/main/docs/workspaces/plain/windows.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
@@ -180,6 +182,17 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="description" class="level2">
 <h2 class="anchored" data-anchor-id="description">Description</h2>
+<p>ResearchCloud allows you to start Windows workspaces that use the Windows Server 2019 Operating System. There are various flavours:</p>
+<ul>
+<li>Windows Server 2019 (maintained by SURF)</li>
+<li>Windows Server 2019 with CUDA (with GPU support, maintained by SURF)</li>
+<li>Windows with iBridges (comes with <a href="../../../manuals/ibridges.qmd">iBridges for data transfer</a>, maintained by UU)</li>
+</ul>
+<p>Simply choose one of these <a href="../../../glossary.qmd#catalog-item">catalog items</a> in the workspace creation wizard.</p>
+</section>
+<section id="access" class="level2">
+<h2 class="anchored" data-anchor-id="access">Access</h2>
+<p>You can <a href="../../../first-steps.qmd#browser-access-to-a-desktop-environment">access Windows workspaces as a remote desktop in your browser</a>, authenticating via SRAM.</p>
 </section>
 <section id="creation" class="level2">
 <h2 class="anchored" data-anchor-id="creation">Creation</h2>
@@ -189,14 +202,13 @@ ul.task-list li input[type="checkbox"] {
 <p>See the <a href="../../../docs/manuals/creating.html">workspace creation manual</a> page for more guidance.</p>
 </section>
 </section>
-<section id="access" class="level2">
-<h2 class="anchored" data-anchor-id="access">Access</h2>
-</section>
-<section id="data-transfer-options" class="level2">
-<h2 class="anchored" data-anchor-id="data-transfer-options">Data transfer options</h2>
-</section>
 <section id="usage" class="level2">
 <h2 class="anchored" data-anchor-id="usage">Usage</h2>
+<section id="data-transfer-options" class="level3">
+<h3 class="anchored" data-anchor-id="data-transfer-options">Data transfer options</h3>
+<p>See our <a href="../../../docs/manuals.html#data-transfer">data transfer manuals</a>.</p>
+<p>When using the <em>Windows with iBridges</em> flavour, the recommended <a href="../../../manuals/ibridges.qmd">iBridges client for Yoda and iRODS</a> is preinstalled.</p>
+</section>
 </section>
 <section id="tips" class="level2">
 <h2 class="anchored" data-anchor-id="tips">Tips</h2>
