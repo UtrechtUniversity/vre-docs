@@ -13,7 +13,7 @@ packages:
 - Custom Packages
 gpu: true
 admin: true
-support: SURF
+support: SURF, UU
 ---
 
 {{< include partials/_windows.qmd >}}

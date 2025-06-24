@@ -35,3 +35,7 @@ This workspace can be accessed via the [the commandline](../../first-steps.qmd#s
 ## Usage
 
 After logging in the `nextflow` command will be immediately available.
+
+{{< include ../partials/_data_transfer.qmd >}}
+
+The recommended [iBridges client for Yoda and iRODS](../../manuals/ibridges.qmd) is preinstalled.
