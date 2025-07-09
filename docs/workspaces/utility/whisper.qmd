@@ -1,26 +1,27 @@
 --- 
-title: "Whisper OpenAI CUDA 11"
+title: "Whisper OpenAI CUDA 12"
 software:
+- 'Jupyter Lab'
 - '[WhisperX](https://github.com/m-bain/whisperX)'
+- '[Whisper](https://github.com/openai/whisper)'
 login:
-- desktop
-- cli
+- webapp-sso
 os_flavor: linux
 os:
-- Ubuntu 20.04 ???
-data: ['???']
-packages: ['???']
+- Ubuntu 22.04
+data:
+- ResearchDrive
+- iBridges (python)
+packages: []
 gpu: true
-admin: false
+admin: true
 support: UU
 ---
 
 ## Description
-This workspace can be used to work with the Whisper model from OpenAI (e.g. for transcribing audio files). On this workspace a Python environment is created using the environment manager 'conda'. The 'conda' environment contains [Whisper](https://github.com/openai/whisper), [WhisperX](https://github.com/m-bain/whisperX) and other required packages. The environment is configured to be able to use a GPU when available.
+This workspace can be used to work with the Whisper and WhisperX toolkits for transcribing, translation and diarization of human speech. On this workspace a Python environment is created using the environment manager 'conda'. The 'conda' environment contains [Whisper](https://github.com/openai/whisper), [WhisperX](https://github.com/m-bain/whisperX) and other required packages. The environment is configured to be able to use a GPU when available.
 
 The workspace is a JupyterHub workspace, and comes with a template notebook to transcribe, translate and diarize audio files. The workspace is mainly aimed for users that have at least some very basic Python experience using Jupyter notebooks. However the workspace also provides a terminal (command line application) to run Whisper using the command line.
-
-Currently the workspace is only available [upon request](../../contact.qmd).
 
 ## Creation
 
@@ -29,7 +30,7 @@ Currently the workspace is only available [upon request](../../contact.qmd).
 {{< include ../partials/_creation.qmd >}}
 
 ## Access
-This workspace can be accessed via the yellow 'Access' button. You need a TOTP to login to your workspace, see [Workspace access with TOTP](https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace#Logintoyourworkspace-WorkspaceAccesswithTOTP).
+This workspace can be accessed via the yellow 'Access' button. 
 
 ## Data transfer options
 First create a working directory on the [Storage Volume](../../first-steps.qmd#where-can-i-find-the-storage-volume)
