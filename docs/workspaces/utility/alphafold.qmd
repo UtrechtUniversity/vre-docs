@@ -43,7 +43,7 @@ Download the model parameter to your local computer.
 
 {{< include ../partials/_creation.qmd >}}
 
-- **When selecting the hardware for you workspace, choose at least an A10 1 GPU.**
+- **When selecting the hardware for your workspace, choose at least an A10 1 GPU.**
 - **Make sure to select the storage unit you have created in the 'Storage' step.**
 
 It will take 15-30 minutes for the new workspace to be configured.
@@ -128,13 +128,13 @@ Unable to initialize backend 'rocm': module 'jaxlib.xla_extension' has no attrib
 Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
 ```
 
-These are informational warnings, but [if inference continues succesfully, you can ignore these](https://github.com/google-deepmind/alphafold3/issues/172).
+These are informational warnings, but [if inference continues successfully, you can ignore these](https://github.com/google-deepmind/alphafold3/issues/172).
 
 :::
 
 #### Run manually
 
-You can also invoke the `alphafold3` command directly, using Docker. This allows you to customize the locatino of your input files, output files, model parameters, and genetic databases live.
+You can also invoke the `alphafold3` command directly, using Docker. This allows you to customize the location of your input files, output files, model parameters, and genetic databases live.
 
 For this example, we will assume that *all* of these are located on your permanent storage volume. You can use the shell variable `$ALPHAFOLD_STORAGE` as a base directory. Hence, you can use this command:
 
