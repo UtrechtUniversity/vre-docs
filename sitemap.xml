@@ -2,194 +2,194 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://UtrechtUniversity.github.io/vre-docs/CONTRIBUTING.html</loc>
-    <lastmod>2025-06-24T13:27:08.819Z</lastmod>
-  </url>
-  <url>
-    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/manuals.html</loc>
-    <lastmod>2025-06-24T13:27:08.836Z</lastmod>
+    <lastmod>2025-07-21T11:30:48.709Z</lastmod>
   </url>
   <url>
     <loc>https://UtrechtUniversity.github.io/vre-docs/docs/funding.html</loc>
-    <lastmod>2025-06-24T13:27:08.820Z</lastmod>
-  </url>
-  <url>
-    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/manuals/long-jobs.html</loc>
-    <lastmod>2025-06-24T13:27:08.836Z</lastmod>
-  </url>
-  <url>
-    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/manuals/rclone-config.html</loc>
-    <lastmod>2025-06-24T13:27:08.836Z</lastmod>
-  </url>
-  <url>
-    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/manuals/rclone-transferringdata.html</loc>
-    <lastmod>2025-06-24T13:27:08.836Z</lastmod>
-  </url>
-  <url>
-    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/manuals/install-rclone.html</loc>
-    <lastmod>2025-06-24T13:27:08.836Z</lastmod>
-  </url>
-  <url>
-    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/manuals/icommands.html</loc>
-    <lastmod>2025-06-24T13:27:08.836Z</lastmod>
-  </url>
-  <url>
-    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/manuals/rclone-researchcloud.html</loc>
-    <lastmod>2025-06-24T13:27:08.836Z</lastmod>
-  </url>
-  <url>
-    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/manuals/sram-secrets.html</loc>
-    <lastmod>2025-06-24T13:27:08.836Z</lastmod>
-  </url>
-  <url>
-    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/contact.html</loc>
-    <lastmod>2025-06-24T13:27:08.820Z</lastmod>
-  </url>
-  <url>
-    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/terms-of-use.html</loc>
-    <lastmod>2025-06-24T13:27:08.837Z</lastmod>
-  </url>
-  <url>
-    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspaces/templates/template.html</loc>
-    <lastmod>2025-06-24T13:27:08.838Z</lastmod>
-  </url>
-  <url>
-    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspaces/utility/alphafold.html</loc>
-    <lastmod>2025-06-24T13:27:08.838Z</lastmod>
-  </url>
-  <url>
-    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspaces/utility/nextflow.html</loc>
-    <lastmod>2025-06-24T13:27:08.838Z</lastmod>
-  </url>
-  <url>
-    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspaces/utility/asreview.html</loc>
-    <lastmod>2025-06-24T13:27:08.838Z</lastmod>
-  </url>
-  <url>
-    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspaces/programming/python-workbench-cuda.html</loc>
-    <lastmod>2025-06-24T13:27:08.838Z</lastmod>
-  </url>
-  <url>
-    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspaces/programming/jupyter.html</loc>
-    <lastmod>2025-06-24T13:27:08.838Z</lastmod>
-  </url>
-  <url>
-    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspaces/programming/jupyter-cuda.html</loc>
-    <lastmod>2025-06-24T13:27:08.838Z</lastmod>
-  </url>
-  <url>
-    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspaces/programming/miniconda.html</loc>
-    <lastmod>2025-06-24T13:27:08.838Z</lastmod>
-  </url>
-  <url>
-    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspaces/programming/matlab.html</loc>
-    <lastmod>2025-06-24T13:27:08.838Z</lastmod>
-  </url>
-  <url>
-    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspaces/plain/windows.html</loc>
-    <lastmod>2025-06-24T13:27:08.838Z</lastmod>
-  </url>
-  <url>
-    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspaces/plain/ubuntu-cuda.html</loc>
-    <lastmod>2025-06-24T13:27:08.838Z</lastmod>
-  </url>
-  <url>
-    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/glossary.html</loc>
-    <lastmod>2025-06-24T13:27:08.820Z</lastmod>
-  </url>
-  <url>
-    <loc>https://UtrechtUniversity.github.io/vre-docs/index.html</loc>
-    <lastmod>2025-06-24T13:27:08.839Z</lastmod>
-  </url>
-  <url>
-    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspaces/plain/windows-cuda.html</loc>
-    <lastmod>2025-06-24T13:27:08.838Z</lastmod>
-  </url>
-  <url>
-    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspaces/plain/ubuntu.html</loc>
-    <lastmod>2025-06-24T13:27:08.838Z</lastmod>
-  </url>
-  <url>
-    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspaces/programming/stata.html</loc>
-    <lastmod>2025-06-24T13:27:08.838Z</lastmod>
-  </url>
-  <url>
-    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspaces/programming/python-workbench.html</loc>
-    <lastmod>2025-06-24T13:27:08.838Z</lastmod>
-  </url>
-  <url>
-    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspaces/programming/r-workbench.html</loc>
-    <lastmod>2025-06-24T13:27:08.838Z</lastmod>
-  </url>
-  <url>
-    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspaces/programming/rstudio.html</loc>
-    <lastmod>2025-06-24T13:27:08.838Z</lastmod>
-  </url>
-  <url>
-    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspaces/programming/sas.html</loc>
-    <lastmod>2025-06-24T13:27:08.838Z</lastmod>
-  </url>
-  <url>
-    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspaces/programming/miniconda-cuda.html</loc>
-    <lastmod>2025-06-24T13:27:08.838Z</lastmod>
+    <lastmod>2025-07-21T11:30:48.710Z</lastmod>
   </url>
   <url>
     <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspaces/utility/galaxy.html</loc>
-    <lastmod>2025-06-24T13:27:08.838Z</lastmod>
+    <lastmod>2025-07-21T11:30:48.729Z</lastmod>
   </url>
   <url>
     <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspaces/utility/whisper.html</loc>
-    <lastmod>2025-06-24T13:27:08.839Z</lastmod>
+    <lastmod>2025-07-21T11:30:48.729Z</lastmod>
   </url>
   <url>
-    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspaces/utility/grobid.html</loc>
-    <lastmod>2025-06-24T13:27:08.838Z</lastmod>
+    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspaces/utility/alphafold.html</loc>
+    <lastmod>2025-07-21T11:30:48.729Z</lastmod>
   </url>
   <url>
-    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/research-cloud-intro.html</loc>
-    <lastmod>2025-06-24T13:27:08.837Z</lastmod>
+    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspaces/templates/template.html</loc>
+    <lastmod>2025-07-21T11:30:48.729Z</lastmod>
   </url>
   <url>
-    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/responsible-use.html</loc>
-    <lastmod>2025-06-24T13:27:08.837Z</lastmod>
+    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspaces/programming/miniconda-cuda.html</loc>
+    <lastmod>2025-07-21T11:30:48.728Z</lastmod>
   </url>
   <url>
-    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspace-catalogue.html</loc>
-    <lastmod>2025-06-24T13:27:08.837Z</lastmod>
+    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspaces/programming/miniconda.html</loc>
+    <lastmod>2025-07-21T11:30:48.729Z</lastmod>
   </url>
   <url>
-    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/manuals/ibridges.html</loc>
-    <lastmod>2025-06-24T13:27:08.836Z</lastmod>
+    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspaces/programming/python-workbench.html</loc>
+    <lastmod>2025-07-21T11:30:48.729Z</lastmod>
   </url>
   <url>
-    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/manuals/catalog-item-access.html</loc>
-    <lastmod>2025-06-24T13:27:08.836Z</lastmod>
+    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspaces/programming/jupyter.html</loc>
+    <lastmod>2025-07-21T11:30:48.728Z</lastmod>
   </url>
   <url>
-    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/manuals/ubuntu-security-updates.html</loc>
-    <lastmod>2025-06-24T13:27:08.836Z</lastmod>
+    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspaces/programming/matlab.html</loc>
+    <lastmod>2025-07-21T11:30:48.728Z</lastmod>
   </url>
   <url>
-    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/manuals/creating.html</loc>
-    <lastmod>2025-06-24T13:27:08.836Z</lastmod>
+    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspaces/plain/ubuntu.html</loc>
+    <lastmod>2025-07-21T11:30:48.728Z</lastmod>
   </url>
   <url>
-    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/manuals/terminal.html</loc>
-    <lastmod>2025-06-24T13:27:08.836Z</lastmod>
+    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspaces/plain/windows-cuda.html</loc>
+    <lastmod>2025-07-21T11:30:48.728Z</lastmod>
   </url>
   <url>
-    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/manuals/ssh-data-transfer-methods.html</loc>
-    <lastmod>2025-06-24T13:27:08.836Z</lastmod>
-  </url>
-  <url>
-    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/first-steps.html</loc>
-    <lastmod>2025-06-24T13:27:08.820Z</lastmod>
+    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/terms-of-use.html</loc>
+    <lastmod>2025-07-21T11:30:48.727Z</lastmod>
   </url>
   <url>
     <loc>https://UtrechtUniversity.github.io/vre-docs/docs/onboarding.html</loc>
-    <lastmod>2025-06-24T13:27:08.837Z</lastmod>
+    <lastmod>2025-07-21T11:30:48.727Z</lastmod>
+  </url>
+  <url>
+    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/manuals/install-rclone.html</loc>
+    <lastmod>2025-07-21T11:30:48.727Z</lastmod>
+  </url>
+  <url>
+    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/manuals/creating.html</loc>
+    <lastmod>2025-07-21T11:30:48.727Z</lastmod>
+  </url>
+  <url>
+    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/manuals/sram-secrets.html</loc>
+    <lastmod>2025-07-21T11:30:48.727Z</lastmod>
+  </url>
+  <url>
+    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/manuals/ubuntu-security-updates.html</loc>
+    <lastmod>2025-07-21T11:30:48.727Z</lastmod>
+  </url>
+  <url>
+    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/manuals/icommands.html</loc>
+    <lastmod>2025-07-21T11:30:48.727Z</lastmod>
+  </url>
+  <url>
+    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/manuals/rclone-config.html</loc>
+    <lastmod>2025-07-21T11:30:48.727Z</lastmod>
+  </url>
+  <url>
+    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/manuals/ibridges.html</loc>
+    <lastmod>2025-07-21T11:30:48.727Z</lastmod>
+  </url>
+  <url>
+    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspace-catalogue.html</loc>
+    <lastmod>2025-07-21T11:30:48.727Z</lastmod>
+  </url>
+  <url>
+    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/research-cloud-intro.html</loc>
+    <lastmod>2025-07-21T11:30:48.727Z</lastmod>
+  </url>
+  <url>
+    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/glossary.html</loc>
+    <lastmod>2025-07-21T11:30:48.710Z</lastmod>
+  </url>
+  <url>
+    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/manuals.html</loc>
+    <lastmod>2025-07-21T11:30:48.726Z</lastmod>
+  </url>
+  <url>
+    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/contact.html</loc>
+    <lastmod>2025-07-21T11:30:48.710Z</lastmod>
+  </url>
+  <url>
+    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/manuals/long-jobs.html</loc>
+    <lastmod>2025-07-21T11:30:48.727Z</lastmod>
+  </url>
+  <url>
+    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/manuals/catalog-item-access.html</loc>
+    <lastmod>2025-07-21T11:30:48.727Z</lastmod>
+  </url>
+  <url>
+    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/manuals/terminal.html</loc>
+    <lastmod>2025-07-21T11:30:48.727Z</lastmod>
+  </url>
+  <url>
+    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/manuals/rclone-researchcloud.html</loc>
+    <lastmod>2025-07-21T11:30:48.727Z</lastmod>
+  </url>
+  <url>
+    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/manuals/rclone-transferringdata.html</loc>
+    <lastmod>2025-07-21T11:30:48.727Z</lastmod>
+  </url>
+  <url>
+    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/manuals/ssh-data-transfer-methods.html</loc>
+    <lastmod>2025-07-21T11:30:48.727Z</lastmod>
   </url>
   <url>
     <loc>https://UtrechtUniversity.github.io/vre-docs/docs/privacy.html</loc>
-    <lastmod>2025-06-24T13:27:08.837Z</lastmod>
+    <lastmod>2025-07-21T11:30:48.727Z</lastmod>
+  </url>
+  <url>
+    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/responsible-use.html</loc>
+    <lastmod>2025-07-21T11:30:48.727Z</lastmod>
+  </url>
+  <url>
+    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspaces/plain/ubuntu-cuda.html</loc>
+    <lastmod>2025-07-21T11:30:48.728Z</lastmod>
+  </url>
+  <url>
+    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspaces/plain/windows.html</loc>
+    <lastmod>2025-07-21T11:30:48.728Z</lastmod>
+  </url>
+  <url>
+    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspaces/programming/sas.html</loc>
+    <lastmod>2025-07-21T11:30:48.729Z</lastmod>
+  </url>
+  <url>
+    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspaces/programming/rstudio.html</loc>
+    <lastmod>2025-07-21T11:30:48.729Z</lastmod>
+  </url>
+  <url>
+    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspaces/programming/r-workbench.html</loc>
+    <lastmod>2025-07-21T11:30:48.729Z</lastmod>
+  </url>
+  <url>
+    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspaces/programming/python-workbench-cuda.html</loc>
+    <lastmod>2025-07-21T11:30:48.729Z</lastmod>
+  </url>
+  <url>
+    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspaces/programming/stata.html</loc>
+    <lastmod>2025-07-21T11:30:48.729Z</lastmod>
+  </url>
+  <url>
+    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspaces/programming/jupyter-cuda.html</loc>
+    <lastmod>2025-07-21T11:30:48.728Z</lastmod>
+  </url>
+  <url>
+    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspaces/utility/grobid.html</loc>
+    <lastmod>2025-07-21T11:30:48.729Z</lastmod>
+  </url>
+  <url>
+    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspaces/utility/asreview.html</loc>
+    <lastmod>2025-07-21T11:30:48.729Z</lastmod>
+  </url>
+  <url>
+    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/workspaces/utility/nextflow.html</loc>
+    <lastmod>2025-07-21T11:30:48.729Z</lastmod>
+  </url>
+  <url>
+    <loc>https://UtrechtUniversity.github.io/vre-docs/docs/first-steps.html</loc>
+    <lastmod>2025-07-21T11:30:48.710Z</lastmod>
+  </url>
+  <url>
+    <loc>https://UtrechtUniversity.github.io/vre-docs/index.html</loc>
+    <lastmod>2025-07-21T11:30:48.729Z</lastmod>
   </url>
 </urlset>

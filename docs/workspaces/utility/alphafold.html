@@ -39,7 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-29035996b5573f1db369a1f5db5ff366.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-1a55dfba4835a85bc03ca878698fbb3b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -218,7 +218,7 @@ ul.task-list li input[type="checkbox"] {
 <p>In the <a href="https://portal.live.surfresearchcloud.nl/">Research Cloud portal</a> click the ‘Create a new workspace’ button and follow the steps in the wizzard.</p>
 <p>See the <a href="../../../docs/manuals/creating.html">workspace creation manual</a> page for more guidance.</p>
 <ul>
-<li><strong>When selecting the hardware for you workspace, choose at least an A10 1 GPU.</strong></li>
+<li><strong>When selecting the hardware for your workspace, choose at least an A10 1 GPU.</strong></li>
 <li><strong>Make sure to select the storage unit you have created in the ‘Storage’ step.</strong></li>
 </ul>
 <p>It will take 15-30 minutes for the new workspace to be configured.</p>
@@ -301,14 +301,14 @@ Warning messages from AlphaFold
 <p>Don’t worry if you see warning messages of the following sort:</p>
 <pre><code>Unable to initialize backend 'rocm': module 'jaxlib.xla_extension' has no attribute 'GpuAllocatorConfig'
 Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory</code></pre>
-<p>These are informational warnings, but <a href="https://github.com/google-deepmind/alphafold3/issues/172">if inference continues succesfully, you can ignore these</a>.</p>
+<p>These are informational warnings, but <a href="https://github.com/google-deepmind/alphafold3/issues/172">if inference continues successfully, you can ignore these</a>.</p>
 </div>
 </div>
 </div>
 </section>
 <section id="run-manually" class="level4">
 <h4 class="anchored" data-anchor-id="run-manually">Run manually</h4>
-<p>You can also invoke the <code>alphafold3</code> command directly, using Docker. This allows you to customize the locatino of your input files, output files, model parameters, and genetic databases live.</p>
+<p>You can also invoke the <code>alphafold3</code> command directly, using Docker. This allows you to customize the location of your input files, output files, model parameters, and genetic databases live.</p>
 <p>For this example, we will assume that <em>all</em> of these are located on your permanent storage volume. You can use the shell variable <code>$ALPHAFOLD_STORAGE</code> as a base directory. Hence, you can use this command:</p>
 <pre><code>$ docker run -it \
     --volume $ALPHAFOLD_STORAGE/af_input:/root/af_input \
