@@ -149,10 +149,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#description" id="toc-description" class="nav-link active" data-scroll-target="#description">Description</a>
-  <ul class="collapse">
-  <li><a href="#tools-are-installed-in-userspace" id="toc-tools-are-installed-in-userspace" class="nav-link" data-scroll-target="#tools-are-installed-in-userspace">Tools are installed in userspace</a></li>
-  </ul></li>
+  <li><a href="#description" id="toc-description" class="nav-link active" data-scroll-target="#description">Description</a></li>
   <li><a href="#creation" id="toc-creation" class="nav-link" data-scroll-target="#creation">Creation</a>
   <ul class="collapse">
   <li><a href="#create-a-storage-volume" id="toc-create-a-storage-volume" class="nav-link" data-scroll-target="#create-a-storage-volume">Create a storage volume</a></li>
@@ -213,11 +210,6 @@ ul.task-list li input[type="checkbox"] {
 <li>Python Workbench Desktop (<a href="../../../docs/first-steps.html#browser-access-to-a-desktop-environment">login via desktop</a>)</li>
 </ul>
 <p>Simply choose the one that is most convenient to you.</p>
-<section id="tools-are-installed-in-userspace" class="level3">
-<h3 class="anchored" data-anchor-id="tools-are-installed-in-userspace">Tools are installed in userspace</h3>
-<p>Note that the above tools are installed <em>separately</em> for each user in your <a href="../../../docs/glossary.html#collaboration">CO</a> that has access to the machine. This means each user can have their own clean <code>pyenv</code> and <code>miniconda</code> environments.</p>
-<p>If you prefer all users on the machine to have a single shared <code>miniconda</code> environment, please see the <a href="../../../docs/workspaces/programming/miniconda.html">Miniconda Catalog Item</a>.</p>
-</section>
 </section>
 <section id="creation" class="level2">
 <h2 class="anchored" data-anchor-id="creation">Creation</h2>
@@ -250,10 +242,6 @@ ul.task-list li input[type="checkbox"] {
 --- Running install scripts at first login: executing /home/username/runonce.d/10-poetry.sh
 --- Running install scripts at first login: executing /home/username/runonce.d/runonce_conda.sh</code></pre>
 <p>When you are logged in you can start developing or running code. On the command line, you will have <code>uv</code>, <code>pyenv</code>, <code>miniconda</code>, and <code>poetry</code> available.</p>
-<p>By default, <code>pyenv</code> will be configured to use the most recent version of Python shipped with the operating system:</p>
-<pre><code>$ pyenv versions
-  system
-* system-latest (set by /home/testuser/.pyenv/version)</code></pre>
 <section id="python-environments" class="level3">
 <h3 class="anchored" data-anchor-id="python-environments">Python environments</h3>
 <p>You can use <code>uv</code>(recommended) or <code>pyenv</code> to install and select a different (newer) Python version, and create virtual environments.</p>
@@ -270,12 +258,38 @@ ul.task-list li input[type="checkbox"] {
 <h4 class="anchored" data-anchor-id="others">Others</h4>
 <p>To start using <code>miniconda</code> environments, activate <code>conda</code> with the command <code>conda init</code>. See the <a href="https://docs.anaconda.com/free/miniconda/">miniconda docs</a>.</p>
 <p>Also see the <a href="https://python-poetry.org/docs/">poetry docs</a>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Note that the python environments are created <em>separately</em> for each user in your <a href="../../../docs/glossary.html#collaboration">Collaboration</a>. This means each user can have their own clean python environments. If you prefer all users on the workspace to have a single shared <code>miniconda</code> environment, please see the <a href="../../../docs/workspaces/programming/miniconda.html">Miniconda Catalog Item</a>.</p>
+</div>
+</div>
 </section>
 </section>
 <section id="data-transfer-options" class="level3">
 <h3 class="anchored" data-anchor-id="data-transfer-options">Data transfer options</h3>
 <p>See our <a href="../../../docs/manuals.html#data-transfer">data transfer manuals</a>.</p>
 <p>The recommended <a href="../../../docs/manuals/ibridges.html">iBridges client for Yoda and iRODS</a> is preinstalled.</p>
+<section id="vscodium-code-editor-desktop-only" class="level4">
+<h4 class="anchored" data-anchor-id="vscodium-code-editor-desktop-only">VSCodium code editor (Desktop only)</h4>
+<p>Under ‘Applications’ (topleft corner) you can find the code editor <a href="https://vscodium.com/">‘VSCodium’</a> (an open source alternative to VS Code) under ‘Development’. VSCodium can be used for writing python scripts, Jupyter Notebooks, etc.</p>
+</section>
+<section id="jupyter-lab-interface-desktop-only" class="level4">
+<h4 class="anchored" data-anchor-id="jupyter-lab-interface-desktop-only">Jupyter lab interface (Desktop only)</h4>
+<p>Note that VSCodium has a Jupyter extension to work with notebooks. If you however prefer a Juypter Lab interface, open a terminal and use the following commands to install Jupyter:</p>
+<pre><code>cd &lt;your project folder&gt;
+uv venv --python 3.12
+source .venv/bin/activate
+uv pip install jupyter</code></pre>
+<p>And <code>jupyter lab</code> to launch it.</p>
+</section>
 </section>
 <section id="installing-additional-software" class="level3">
 <h3 class="anchored" data-anchor-id="installing-additional-software">Installing additional software</h3>
