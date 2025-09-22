@@ -42,7 +42,7 @@ Simply choose the one that is most convenient to you.
 
 ### Tools are installed in userspace
 
-Note that the above tools are installed *separately* for each user in your [CO](../../glossary.qmd#collaboration) that has access to the machine. This means each user can have their own clean `pyenv` and `miniconda` environments.
+Note that the above tools are installed *separately* for each user in your [CO](../../glossary.qmd#collaboration) that has access to the machine. This means each user can have their own clean python environments.
 
 If you prefer all users on the machine to have a single shared `miniconda` environment, please see the [Miniconda Catalog Item](./miniconda.qmd).
 
@@ -74,14 +74,6 @@ The first time (but only the first time) you login to a workspace of this type, 
 
 When you are logged in you can start developing or running code. On the command line, you will have `uv`, `pyenv`, `miniconda`, and `poetry` available.
 
-By default, `pyenv` will be configured to use the most recent version of Python shipped with the operating system:
-
-```
-$ pyenv versions
-  system
-* system-latest (set by /home/testuser/.pyenv/version)
-```
-
 ### Python environments
 You can use `uv`(recommended) or `pyenv` to install and select a different (newer) Python version, and create virtual environments.
 
@@ -101,10 +93,24 @@ To start using `miniconda` environments, activate `conda` with the command `cond
 
 Also see the [poetry docs](https://python-poetry.org/docs/).
 
-
 {{< include ../partials/_data_transfer.qmd >}}
 
 The recommended [iBridges client for Yoda and iRODS](../../manuals/ibridges.qmd) is preinstalled.
+
+#### VSCodium code editor (Desktop only)
+
+Under 'Applications' (topleft corner) you can find the code editor ['VSCodium'](https://vscodium.com/) (an open source alternative to VS Code) under 'Development'. VSCodium can be used for writing python scripts, Jupyter notebooks, etc.
+
+#### Jupyter lab interface (Desktop only)
+
+If you prefer a juypter notebook interface over VSCodium for editing notebooks, open a terminal and use the following commands to install Jupyter:
+
+```
+cd <your project folder>
+uv venv --python 3.12
+source .venv/bin/activate
+uv pip install jupyter
+```
 
 ### Installing additional software
 
