@@ -98,11 +98,11 @@ The recommended [iBridges client for Yoda and iRODS](../../manuals/ibridges.qmd)
 
 #### VSCodium code editor (Desktop only)
 
-Under 'Applications' (topleft corner) you can find the code editor ['VSCodium'](https://vscodium.com/) (an open source alternative to VS Code) under 'Development'. VSCodium can be used for writing python scripts, Jupyter notebooks, etc.
+Under 'Applications' (topleft corner) you can find the code editor ['VSCodium'](https://vscodium.com/) (an open source alternative to VS Code) under 'Development'. VSCodium can be used for writing python scripts, Jupyter Notebooks, etc.
 
 #### Jupyter lab interface (Desktop only)
 
-If you prefer a juypter notebook interface over VSCodium for editing notebooks, open a terminal and use the following commands to install Jupyter:
+Note that VSCodium has a Jupyter extension to work with notebooks. If you however prefer a Juypter Lab interface, open a terminal and use the following commands to install Jupyter:
 
 ```
 cd <your project folder>
@@ -110,6 +110,7 @@ uv venv --python 3.12
 source .venv/bin/activate
 uv pip install jupyter
 ```
+And `jupyter lab` to launch it.
 
 ### Installing additional software
 
