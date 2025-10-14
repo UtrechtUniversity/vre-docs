@@ -66,7 +66,7 @@ You will see output like this:
 
 Once this is complete, you will have access to the `conda`, `R` and `littler` commands, among others.
 
-To start using `conda`, run the command `conda init` from a terminal.
+{{< include ../partials/_conda.qmd >}}
 
 {{< include ../partials/_data_transfer.qmd >}}
 

@@ -1,0 +1,16 @@
+### `conda`
+
+To start using `miniconda` environments, use the `conda` command. You will be able to create two different kinds of environments:
+
+- shared environments, available for all users. These can exist in two locations:
+  - `/opt/miniconda/envs`
+  - `/usr/local/uu/env/conda`
+- personal environments, stored in your home directory and accessible only to you (and workspace admin users, if any).
+
+To see all available environments, including shared environments, run `conda env list`.
+
+To create a **shared** environment, run `conda create -p /opt/miniconda/envs/myenvname` (add other arguments to the command as you want).
+
+To create a **personal** conda environment in your home directory, run `conda create -n myenvname`.
+
+See the [miniconda docs](https://docs.anaconda.com/miniconda/) for futher explanation of usage.
