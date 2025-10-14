@@ -82,10 +82,11 @@ In your project folder, create a virtual environment with a specific Python vers
 
 See the [pyenv docs](https://github.com/pyenv/pyenv#usage).
 
-#### Others
-To start using `miniconda` environments, activate `conda` with the command `conda init`. See the [miniconda docs](https://docs.anaconda.com/free/miniconda/).
+{{< include ../partials/_conda.qmd >}}
 
-Also see the [poetry docs](https://python-poetry.org/docs/).
+### `poetry`
+
+See the [poetry docs](https://python-poetry.org/docs/).
 
 ::: {.callout-note}
 Note that when you create a python environment using any of the tools above, you create a python environment for yourself only and not for others in your [Collaboration](../../glossary.qmd#collaboration). If you collaborate, you colleague should creaate their own python environment. We recommend collaborating using GitHub and `uv` (using a `uv.lock` file) to make sure your environments are the same.
