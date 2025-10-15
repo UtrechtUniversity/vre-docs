@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -37,10 +37,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-4f54ed80103b0e791b46e3bfa6cbaeda.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-c53d0a8c928626fa10bd5976174f941e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -163,6 +163,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#usage" id="toc-usage" class="nav-link" data-scroll-target="#usage">Usage</a>
   <ul class="collapse">
   <li><a href="#python-environments" id="toc-python-environments" class="nav-link" data-scroll-target="#python-environments">Python environments</a></li>
+  <li><a href="#conda" id="toc-conda" class="nav-link" data-scroll-target="#conda"><code>conda</code></a></li>
+  <li><a href="#poetry" id="toc-poetry" class="nav-link" data-scroll-target="#poetry"><code>poetry</code></a></li>
   <li><a href="#data-transfer-options" id="toc-data-transfer-options" class="nav-link" data-scroll-target="#data-transfer-options">Data transfer options</a></li>
   <li><a href="#installing-additional-software" id="toc-installing-additional-software" class="nav-link" data-scroll-target="#installing-additional-software">Installing additional software</a></li>
   </ul></li>
@@ -254,10 +256,26 @@ ul.task-list li input[type="checkbox"] {
 <p>In your project folder, create a virtual environment with a specific Python version (e.g.&nbsp;3.12): <code>pyenv virtualenv 3.12 myprojectenv</code></p>
 <p>See the <a href="https://github.com/pyenv/pyenv#usage">pyenv docs</a>.</p>
 </section>
-<section id="others" class="level4">
-<h4 class="anchored" data-anchor-id="others">Others</h4>
-<p>To start using <code>miniconda</code> environments, activate <code>conda</code> with the command <code>conda init</code>. See the <a href="https://docs.anaconda.com/free/miniconda/">miniconda docs</a>.</p>
-<p>Also see the <a href="https://python-poetry.org/docs/">poetry docs</a>.</p>
+</section>
+<section id="conda" class="level3">
+<h3 class="anchored" data-anchor-id="conda"><code>conda</code></h3>
+<p>To start using <code>miniconda</code> environments, use the <code>conda</code> command. You will be able to create two different kinds of environments:</p>
+<ul>
+<li>shared environments, available for all users. These can exist in two locations:
+<ul>
+<li><code>/opt/miniconda/envs</code></li>
+<li><code>/usr/local/uu/env/conda</code></li>
+</ul></li>
+<li>personal environments, stored in your home directory and accessible only to you (and workspace admin users, if any).</li>
+</ul>
+<p>To see all available environments, including shared environments, run <code>conda env list</code>.</p>
+<p>To create a <strong>shared</strong> environment, run <code>conda create -p /opt/miniconda/envs/myenvname</code> (add other arguments to the command as you want).</p>
+<p>To create a <strong>personal</strong> conda environment in your home directory, run <code>conda create -n myenvname</code>.</p>
+<p>See the <a href="https://docs.anaconda.com/miniconda/">miniconda docs</a> for futher explanation of usage.</p>
+</section>
+<section id="poetry" class="level3">
+<h3 class="anchored" data-anchor-id="poetry"><code>poetry</code></h3>
+<p>See the <a href="https://python-poetry.org/docs/">poetry docs</a>.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -271,7 +289,6 @@ Note
 <p>Note that when you create a python environment using any of the tools above, you create a python environment for yourself only and not for others in your <a href="../../../docs/glossary.html#collaboration">Collaboration</a>. If you collaborate, you colleague should creaate their own python environment. We recommend collaborating using GitHub and <code>uv</code> (using a <code>uv.lock</code> file) to make sure your environments are the same. If you prefer all users on the workspace to have a single shared <code>miniconda</code> environment, please see the <a href="../../../docs/workspaces/programming/miniconda.html">Miniconda Catalog Item</a>.</p>
 </div>
 </div>
-</section>
 </section>
 <section id="data-transfer-options" class="level3">
 <h3 class="anchored" data-anchor-id="data-transfer-options">Data transfer options</h3>
