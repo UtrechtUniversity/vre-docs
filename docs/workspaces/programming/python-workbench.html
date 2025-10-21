@@ -271,6 +271,7 @@ ul.task-list li input[type="checkbox"] {
 <p>To see all available environments, including shared environments, run <code>conda env list</code>.</p>
 <p>To create a <strong>shared</strong> environment, run <code>conda create -p /opt/miniconda/envs/myenvname</code> (add other arguments to the command as you want).</p>
 <p>To create a <strong>personal</strong> conda environment in your home directory, run <code>conda create -n myenvname</code>.</p>
+<p><strong>Note on licensing</strong>: <code>conda</code> packages exist in different ‘channels’. As of 2024, the default <code>conda</code> channels are no longer free for use by large organizations (although certain educational exceptions exist). For this reason, UU workspaces have disabled the default channels by default. Instead, we set the fully open-source <code>conda-forge</code> channel as default. <em>If you want (and believe you are allowed) to use the default conda channels, you can override the used channels by explicitly adding <code>defaults</code> to your <code>environment.yml</code> under the <code>channels:</code> key.</em></p>
 <p>See the <a href="https://docs.anaconda.com/miniconda/">miniconda docs</a> for futher explanation of usage.</p>
 </section>
 <section id="poetry" class="level3">
