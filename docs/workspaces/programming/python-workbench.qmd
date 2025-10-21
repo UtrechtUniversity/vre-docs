@@ -89,8 +89,7 @@ See the [pyenv docs](https://github.com/pyenv/pyenv#usage).
 See the [poetry docs](https://python-poetry.org/docs/).
 
 ::: {.callout-note}
-Note that when you create a python environment using any of the tools above, you create a python environment for yourself only and not for others in your [Collaboration](../../glossary.qmd#collaboration). If you collaborate, you colleague should creaate their own python environment. We recommend collaborating using GitHub and `uv` (using a `uv.lock` file) to make sure your environments are the same.
-If you prefer all users on the workspace to have a single shared `miniconda` environment, please see the [Miniconda Catalog Item](./miniconda.qmd).
+Note that when you create a python environment using any of the tools above, you create a python environment for yourself only and not for others in your [Collaboration](../../glossary.qmd#collaboration). If you collaborate, you colleague should creaate their own python environment. We recommend collaborating using GitHub and `uv` (using a `uv.lock` file) to make sure your environments are the same. If this is not desired, create the environments in a shared location, like `/local-share`.
 :::
 
 {{< include ../partials/_data_transfer.qmd >}}
