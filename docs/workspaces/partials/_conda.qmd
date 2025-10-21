@@ -13,4 +13,6 @@ To create a **shared** environment, run `conda create -p /opt/miniconda/envs/mye
 
 To create a **personal** conda environment in your home directory, run `conda create -n myenvname`.
 
+**Note on licensing**: `conda` packages exist in different 'channels'. As of 2024, the default `conda` channels are no longer free for use by large organizations (although certain educational exceptions exist). For this reason, UU workspaces have disabled the default channels by default. Instead, we set the fully open-source `conda-forge` channel as default. *If you want (and believe you are allowed) to use the default conda channels, you can override the used channels by explicitly adding `defaults` to your `environment.yml` under the `channels:` key.*
+
 See the [miniconda docs](https://docs.anaconda.com/miniconda/) for futher explanation of usage.
