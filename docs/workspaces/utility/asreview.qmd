@@ -19,9 +19,12 @@ ASReview LAB is an open-source machine learning tool designed to streamline the 
 
 This workspace type will start ASReview as a webapplication.
 
-Anyone who has access to your [Collaboration](../../glossary.qmd#collaboration) will be able to easily login to ASReview [using Single-Sign on](../../first-steps.qmd#webapplications-that-support-single-sign-on.). Since ASReview 2.0 supports multiple users, this workspace is ideal for crowd-based screening. You can even use it for a [screenathon](https://www.uu.nl/en/news/research-meets-sightseeing-reviewing-thousands-of-papers-in-utrechts-historical-gems)! Simply add the members of your screening group to your [Collaboration in SRAM](../../glossary.qmd#collaboration) and start screening together.
+Anyone who has access to your [Collaboration](../../glossary.qmd#collaboration) will be able to easily login to ASReview in their browser [using Single-Sign on](../../first-steps.qmd#webapplications-that-support-single-sign-on.). Since ASReview 2.0 supports multiple users, this workspace is ideal for crowd-based screening. You can even use it for a [screenathon](https://www.uu.nl/en/news/research-meets-sightseeing-reviewing-thousands-of-papers-in-utrechts-historical-gems)! Simply add the members of your screening group to your [Collaboration in SRAM](../../glossary.qmd#collaboration) and start screening together.
 
-Extensions (such as `asreview-dory`) are not installed on this workspace. 
+On ResearchCloud you will find two flavours of ASReview:
+
+- ASReview (recommended for all normal screening purposes)
+- ASReview Dory (only recommended for special use cases with extra large or multi-lingual datasets, installs specialized heavy machine learning models)
 
 Please also read the [tips](#tips) below.
 
