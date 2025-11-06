@@ -24,7 +24,7 @@ Anyone who has access to your [Collaboration](../../glossary.qmd#collaboration) 
 On ResearchCloud you will find two flavours of ASReview:
 
 - ASReview (recommended for all normal screening purposes)
-- ASReview Dory (only recommended for special use cases with extra large or multi-lingual datasets, installs specialized heavy machine learning models)
+- ASReview [Dory](https://asreview.readthedocs.io/en/latest/lab/dory.html) (only recommended for special use cases with extra large or multi-lingual datasets, installs specialized heavy machine learning models which require GPUs)
 
 Please also read the [tips](#tips) below.
 
@@ -37,6 +37,8 @@ Please also read the [tips](#tips) below.
 {{< include ../partials/_creation.qmd >}}
 
 **Choosing the right hardware**: ASReview uses an AI model that runs in parallel to the ASReview webapplication. **It is therefore recommended to choose a workspace with at least two CPU cores. Four CPUs is probably enough for most cases.** The more users that will be using the workspace to do screening in parallel, the more hardware will be required.
+
+To use the ASReview [Dory](https://asreview.readthedocs.io/en/latest/lab/dory.html) [Catalog Item](../../glossary#catalog-item) you will need to create a machine with GPUs, which are more expensive than CPUs. For this reason we recommend against using Dory for anything but advanced use cases (e.g. with multilingual datasets).
 
 Please also see the [tips for responsible use](../../responsible-use.qmd).
 
@@ -60,6 +62,6 @@ When you log in to this workspace, the ASReview  web app will open automatically
 
 ## Tips
 
-- Remember that you are responsible for making backups of any data yourself! This also applies when using a storage unit. Although data on a storage unit will not be deleted when you delete the workspace, it can still become corrupt. So if it is important to your work, make sure to make periodical (e.g. daily or weekly) backups of your projects. You can make a backup by [logging in to the workspace using the commandline](#command-line), or by downloading your project from the webapplication.
+- Remember that you are responsible for making backups of any data yourself! This also applies when using an separate [storage unit](#creation). Although data on a storage unit will not be deleted when you delete the workspace, it can still become corrupt. So if it is important to your work, make sure to make periodical (e.g. daily or weekly) backups of your projects. You can make a backup by [logging in to the workspace using the commandline](#command-line), or by downloading your project from the webapplication.
 - Remember that ASReview may potentially generate a lot of data, so think about how much storage you may need. For most cases, the standard amount of storage should be enough. But if you're unsure, [just ask for advise](../../contact.qmd)!
 - Similarly, think about how many resources (CPUs) your workspace will need. Again, if you're unsure, [just ask for advise](../../contact.qmd)!
