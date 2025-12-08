@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -37,7 +37,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../../site_libs/bootstrap/bootstrap-c53d0a8c928626fa10bd5976174f941e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -79,10 +79,6 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
-    </a>
-  </div>
             <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
@@ -194,7 +190,7 @@ ul.task-list li input[type="checkbox"] {
 <p>On ResearchCloud you will find two flavours of ASReview:</p>
 <ul>
 <li>ASReview (recommended for all normal screening purposes)</li>
-<li>ASReview Dory (only recommended for special use cases with extra large or multi-lingual datasets, installs specialized heavy machine learning models)</li>
+<li>ASReview <a href="https://asreview.readthedocs.io/en/latest/lab/dory.html">Dory</a> (only recommended for special use cases with extra large or multi-lingual datasets, installs specialized heavy machine learning models which require GPUs)</li>
 </ul>
 <p>Please also read the <a href="#tips">tips</a> below.</p>
 </section>
@@ -211,6 +207,7 @@ ul.task-list li input[type="checkbox"] {
 <p>In the <a href="https://portal.live.surfresearchcloud.nl/">Research Cloud portal</a> click the ‘Create a new workspace’ button and follow the steps in the wizzard.</p>
 <p>See the <a href="../../../docs/manuals/creating.html">workspace creation manual</a> page for more guidance.</p>
 <p><strong>Choosing the right hardware</strong>: ASReview uses an AI model that runs in parallel to the ASReview webapplication. <strong>It is therefore recommended to choose a workspace with at least two CPU cores. Four CPUs is probably enough for most cases.</strong> The more users that will be using the workspace to do screening in parallel, the more hardware will be required.</p>
+<p>To use the ASReview <a href="https://asreview.readthedocs.io/en/latest/lab/dory.html">Dory</a> <a href="../../../docs/glossary.html#catalog-item">Catalog Item</a> you will need to create a machine with GPUs, which are more expensive than CPUs. For this reason we recommend against using Dory for anything but advanced use cases (e.g.&nbsp;with multilingual datasets).</p>
 <p>Please also see the <a href="../../../docs/responsible-use.html">tips for responsible use</a>.</p>
 </section>
 </section>
@@ -232,7 +229,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="tips" class="level2">
 <h2 class="anchored" data-anchor-id="tips">Tips</h2>
 <ul>
-<li>Remember that you are responsible for making backups of any data yourself! This also applies when using a storage unit. Although data on a storage unit will not be deleted when you delete the workspace, it can still become corrupt. So if it is important to your work, make sure to make periodical (e.g.&nbsp;daily or weekly) backups of your projects. You can make a backup by <a href="#command-line">logging in to the workspace using the commandline</a>, or by downloading your project from the webapplication.</li>
+<li>Remember that you are responsible for making backups of any data yourself! This also applies when using an separate <a href="#creation">storage unit</a>. Although data on a storage unit will not be deleted when you delete the workspace, it can still become corrupt. So if it is important to your work, make sure to make periodical (e.g.&nbsp;daily or weekly) backups of your projects. You can make a backup by <a href="#command-line">logging in to the workspace using the commandline</a>, or by downloading your project from the webapplication.</li>
 <li>Remember that ASReview may potentially generate a lot of data, so think about how much storage you may need. For most cases, the standard amount of storage should be enough. But if you’re unsure, <a href="../../../docs/contact.html">just ask for advise</a>!</li>
 <li>Similarly, think about how many resources (CPUs) your workspace will need. Again, if you’re unsure, <a href="../../../docs/contact.html">just ask for advise</a>!</li>
 </ul>
