@@ -16,7 +16,7 @@ This tutorial also assumes you have a storage volume attached to your workspace.
   To open a new terminal, click the + button in the file browser and select the terminal in the new Launcher tab  
 - Python Workbench, click applications in the topright, and click terminal
 
-#### (first time only) Create a project folder
+#### Create a project folder
 
 ```
 cd data/<the name of your storage volume>
@@ -29,7 +29,7 @@ cd project
 curl -fsSL https://ollama.com/install.sh | sh
 ```
 
-#### (first time only) Create a virtual environment
+#### Create a virtual environment
 
 ```
 uv venv --python 3.12
@@ -55,7 +55,7 @@ python -m ipykernel install --user --name ollama --display-name "Ollama"
 ```
 
 
-#### Create a new notebook and use
+### Create a new notebook and use
 
 - In UU VRE:
   Click the + button and select the notebook with "Ollama" kernel in the new Launcher tab.
