@@ -21,4 +21,5 @@ On this page we share manuals for a variety of use cases and tasks.
 
 ### Other
 
+- [Setup Ollama on VRE Lab](manuals/ollama.qmd)
 - [Running long jobs](manuals/long-jobs.qmd)

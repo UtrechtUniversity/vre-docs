@@ -1,0 +1,85 @@
+## Setting up Ollama on Python workbench and UU VRE workspaces
+
+### Dependencies
+This tutorial assumes you have an installation of `uv` on your workspace. Python Workbench workspaces come with this preinstalled. The UU VRE workspaces has it as optional software, you need to either select Python tools when creating the workspace or install it yourself with:
+
+```
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+This tutorial also assumes you have a storage volume attached to your workspace.
+
+### Create a virtual environment
+
+#### Open a terminal
+
+- In the UU VRE workspace
+  To open a new terminal, click the + button in the file browser and select the terminal in the new Launcher tab  
+- Python Workbench, click applications in the topright, and click terminal
+
+#### (first time only) Create a project folder
+
+```
+cd data/<the name of your storage volume>
+mkdir project
+cd project
+```
+#### Install Ollama
+
+```
+curl -fsSL https://ollama.com/install.sh | sh
+```
+
+#### (first time only) Create a virtual environment
+
+```
+uv venv --python 3.12
+source .venv/bin/activate
+uv pip install ipykernel
+uv pip install ollama
+```
+
+#### Pull a model
+
+Find models here: https://ollama.com/search 
+
+e.g.:
+
+```
+ollama pull gpt-oss
+```
+
+#### Create a jupyter kernel
+
+```
+python -m ipykernel install --user --name ollama --display-name "Ollama"
+```
+
+
+#### Create a new notebook and use
+
+- In UU VRE:
+  Click the + button and select the notebook with "Ollama" kernel in the new Launcher tab.
+
+
+- In Python Workbench Desktop:
+  ```
+  uv pip install jupyter
+  jupyter lab
+  ```
+
+Copy this example code, if needed change the model name to the model that you have downloaded and run the cell:
+
+```
+from ollama import chat
+from ollama import ChatResponse
+
+response: ChatResponse = chat(model='gpt-oss', messages=[
+  {
+    'role': 'user',
+    'content': 'Why is the sky blue?',
+  },
+])
+print(response['message']['content'])
+# or access fields directly from the response object
+print(response.message.content)
+```
