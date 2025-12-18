@@ -149,6 +149,7 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#dependencies" id="toc-dependencies" class="nav-link" data-scroll-target="#dependencies">Dependencies</a></li>
   <li><a href="#create-a-virtual-environment" id="toc-create-a-virtual-environment" class="nav-link" data-scroll-target="#create-a-virtual-environment">Create a virtual environment</a></li>
+  <li><a href="#create-a-new-notebook-and-use" id="toc-create-a-new-notebook-and-use" class="nav-link" data-scroll-target="#create-a-new-notebook-and-use">Create a new notebook and use</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/UtrechtUniversity/vre-docs/edit/main/docs/manuals/ollama.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/UtrechtUniversity/vre-docs/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/UtrechtUniversity/vre-docs/blob/main/docs/manuals/ollama.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
@@ -177,8 +178,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Python Workbench, click applications in the topright, and click terminal</li>
 </ul>
 </section>
-<section id="first-time-only-create-a-project-folder" class="level4">
-<h4 class="anchored" data-anchor-id="first-time-only-create-a-project-folder">(first time only) Create a project folder</h4>
+<section id="create-a-project-folder" class="level4">
+<h4 class="anchored" data-anchor-id="create-a-project-folder">Create a project folder</h4>
 <pre><code>cd data/&lt;the name of your storage volume&gt;
 mkdir project
 cd project</code></pre>
@@ -187,8 +188,8 @@ cd project</code></pre>
 <h4 class="anchored" data-anchor-id="install-ollama">Install Ollama</h4>
 <pre><code>curl -fsSL https://ollama.com/install.sh | sh</code></pre>
 </section>
-<section id="first-time-only-create-a-virtual-environment" class="level4">
-<h4 class="anchored" data-anchor-id="first-time-only-create-a-virtual-environment">(first time only) Create a virtual environment</h4>
+<section id="create-a-virtual-environment-1" class="level4">
+<h4 class="anchored" data-anchor-id="create-a-virtual-environment-1">Create a virtual environment</h4>
 <pre><code>uv venv --python 3.12
 source .venv/bin/activate
 uv pip install ipykernel
@@ -204,8 +205,9 @@ uv pip install ollama</code></pre>
 <h4 class="anchored" data-anchor-id="create-a-jupyter-kernel">Create a jupyter kernel</h4>
 <pre><code>python -m ipykernel install --user --name ollama --display-name "Ollama"</code></pre>
 </section>
-<section id="create-a-new-notebook-and-use" class="level4">
-<h4 class="anchored" data-anchor-id="create-a-new-notebook-and-use">Create a new notebook and use</h4>
+</section>
+<section id="create-a-new-notebook-and-use" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-new-notebook-and-use">Create a new notebook and use</h3>
 <ul>
 <li><p>In UU VRE: Click the + button and select the notebook with “Ollama” kernel in the new Launcher tab.</p></li>
 <li><p>In Python Workbench Desktop:</p>
@@ -227,7 +229,6 @@ print(response['message']['content'])
 print(response.message.content)</code></pre>
 
 
-</section>
 </section>
 </section>
 
