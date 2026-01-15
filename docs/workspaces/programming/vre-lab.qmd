@@ -1,0 +1,48 @@
+--- 
+title: "VRE Lab"
+execute:
+  echo: false
+software:
+- Python
+- uv
+login:
+- webapp-totp
+os_flavor: linux
+os:
+- Ubuntu 22.04
+data:
+- ResearchDrive
+- irods-icommands
+packages: []
+gpu: false
+admin: true
+support: UU
+
+---
+
+## Description
+
+## Creation
+
+{{< include ../partials/_storage.qmd >}}
+
+{{< include ../partials/_creation.qmd >}}
+
+## Access
+
+Link to access methods in the first steps page here.
+
+## Usage
+
+{{< include ../partials/_data_transfer.qmd >}}
+
+The recommended [iBridges client for Yoda and iRODS](../../manuals/ibridges.qmd) is preinstalled.
+
+
+### Installing additional software
+
+The user has [admin rights](../../responsible-use.qmd#installation-of-software) to install additional software on the system (on a terminal, use `sudo <yourcommand>`).
+
+## Tips
+
+{{< include ../partials/_security.qmd >}}
