@@ -34,7 +34,7 @@ Once you are done with using your workspace, just delete it in the SRC web porta
 
 **Example workspaces**
 
-See [here](workspace-catalogue.qmd)) for a selection of available workspace types.
+See [here](workspace-catalogue.qmd) for a selection of available workspace types.
 
 
 **Resources available for a single workspace**  
