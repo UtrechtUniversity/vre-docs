@@ -1,0 +1,40 @@
+---
+title: "R Environments"
+---
+# Overview
+
+This manual describes the best practices for working with R environments in your SURF Research Cloud via [RStudio workspaces](https://utrechtuniversity.github.io/vre-docs/docs/workspaces/programming/rstudio.html).
+Using a project-specific R environment ensures that your work is:
+
+- reproducible
+- portable across workspaces
+- independent of system-wide package changes
+
+# Why use R environments?
+
+R projects often depend on specific package versions. Without environment management, projects may:
+
+- break after R or package updates
+- behave differently across machines or workspaces
+- be difficult to reproduce or share
+
+If you would like to learn more about reproducible research workflows, the following workshops by Utrecht University may be useful:
+
+- [Introduction to R and Data](https://www.uu.nl/en/research/research-data-management/training-workshops/introduction-to-r-data)
+- [Writing Reproducible Manuscripts in R](https://www.uu.nl/en/research/research-data-management/workshops/writing-reproducible-manuscripts-in-r-and-python)
+- [Best Practices in Writing Reproducible Code](https://www.uu.nl/en/research/research-data-management/training-workshops/best-practices-for-writing-reproducible-code)
+
+
+# R Environment Manager on SURF Research Cloud
+## Recommended environment manager: `renv`
+
+[`renv`](https://rstudio.github.io/renv/) is the recommended tool for reproducible R environments in projects.
+
+When using `renv` in a project:
+
+- it creates a lock file with a list of packages and version numbers of those packages that are used.
+- this makes it possible to install exactly those packages on a new computer 
+
+[This example](https://github.com/UtrechtUniversity/hpc-school-vre-intro/blob/main/r-environment.md) contains a reproducible example project for demonstrating how to work with the R package `renv` on SURF Research Cloud.
+
+To follow the example, make sure you have created an [RStudio](https://utrechtuniversity.github.io/vre-docs/docs/workspaces/programming/rstudio.html) workspace. Information on how to create a workspace can be found [here.](https://utrechtuniversity.github.io/vre-docs/docs/first-steps.html#create-a-workspace)
