@@ -19,6 +19,10 @@ On this page we share manuals for a variety of use cases and tasks.
 
 - [Requesting access to catalog items](manuals/catalog-item-access.qmd)
 
+### Best Practices
+- [Python Environments](manuals/python-environment.qmd)
+- [R Environments](manuals/r-environment.qmd)
+
 ### Other
 
 - [Setup Ollama on VRE Lab](manuals/ollama.qmd)
