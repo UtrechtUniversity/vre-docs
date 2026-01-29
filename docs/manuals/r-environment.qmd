@@ -3,7 +3,7 @@ title: "R Environments"
 ---
 # Overview
 
-This manual describes the best practices for working with R environments in your SURF Research Cloud via [RStudio workspaces](https://utrechtuniversity.github.io/vre-docs/docs/workspaces/programming/rstudio.html).
+This manual describes the best practices for working with R environments in your SURF Research Cloud workspace via [RStudio workspaces](https://utrechtuniversity.github.io/vre-docs/docs/workspaces/programming/rstudio.html).
 Using a project-specific R environment ensures that your work is:
 
 - reproducible
@@ -12,29 +12,81 @@ Using a project-specific R environment ensures that your work is:
 
 # Why use R environments?
 
-R projects often depend on specific package versions. Without environment management, projects may:
+R projects often depend on specific package versions. R environments allow you to install exactly the same packages and versions that were used to develop a project, even on a new system such as a SURF Research Cloud workspace with minimal effort.
+
+ Without environment management, projects may:
 
 - break after R or package updates
 - behave differently across machines or workspaces
 - be difficult to reproduce or share
 
-If you would like to learn more about reproducible research workflows, the following workshops by Utrecht University may be useful:
+If you would like to learn more about reproducible research workflows, the following workshop by Research Data Management at Utrecht University may be useful:
 
-- [Introduction to R and Data](https://www.uu.nl/en/research/research-data-management/training-workshops/introduction-to-r-data)
-- [Writing Reproducible Manuscripts in R](https://www.uu.nl/en/research/research-data-management/workshops/writing-reproducible-manuscripts-in-r-and-python)
 - [Best Practices in Writing Reproducible Code](https://www.uu.nl/en/research/research-data-management/training-workshops/best-practices-for-writing-reproducible-code)
+- Or read the [chapter on dependency management](https://utrechtuniversity.github.io/workshop-computational-reproducibility/chapters/dependency-management.html)
 
 
 # R Environment Manager on SURF Research Cloud
-## Recommended environment manager: `renv`
 
-[`renv`](https://rstudio.github.io/renv/) is the recommended tool for reproducible R environments in projects.
+[This repository](https://github.com/UtrechtUniversity/hpc-school-vre-intro/blob/main/r-environment.md) contains an example project for demonstrating how to work with the R package `renv` on SURF Research Cloud.
 
-When using `renv` in a project:
+The example provides information on working with the following workspaces:
 
-- it creates a lock file with a list of packages and version numbers of those packages that are used.
-- this makes it possible to install exactly those packages on a new computer 
+ - [R Workbench](../workspaces/programming/r-workbench.qmd)
+ - [RStudio](../workspaces/programming/rstudio.qmd)
 
-[This example](https://github.com/UtrechtUniversity/hpc-school-vre-intro/blob/main/r-environment.md) contains a reproducible example project for demonstrating how to work with the R package `renv` on SURF Research Cloud.
+[`renv`](https://rstudio.github.io/renv/) is the recommended tool for reproducible R environments.
 
-To follow the example, make sure you have created an [RStudio](https://utrechtuniversity.github.io/vre-docs/docs/workspaces/programming/rstudio.html) workspace. Information on how to create a workspace can be found [here.](https://utrechtuniversity.github.io/vre-docs/docs/first-steps.html#create-a-workspace)
+Information on how to create a workspace can be found [here.](../first-steps.qmd#create-a-workspace)
+
+# Getting Started
+
+## New to R Environments?
+
+### Step 1: Identify Your Dependencies
+
+Check if your project has an `renv.lock` file. If you do, move to **Step 2**.
+
+If not, start by listing the packages you use in your R scripts. Look for `library()` or `require()` calls (e.g., `library(dplyr)`, `library(ggplot2)`, `library(tidyr)`).
+
+### Step 2: Set Up with `renv` (Recommended)
+
+Open your project in RStudio on SURF Research Cloud.
+
+Initialize `renv` in your project:
+```r
+install.packages("renv")  # Install renv if not already installed
+renv::init()              # Initialize renv in your project
+```
+
+This creates an `renv.lock` file and a project-specific library.
+
+Install your dependencies (if not already installed):
+```r
+install.packages(c("dplyr", "ggplot2", "tidyr"))  # Install packages as needed
+```
+
+Save the current state of your environment:
+```r
+renv::snapshot() 
+```
+
+Start working on your project:
+```r
+# Your R code here
+```
+
+When you need to recreate the environment elsewhere, you can do so with the lock file. This records the specific versions of all packages that were installed when the project was last configured:
+```r
+renv::restore()  # Restore environment from renv.lock
+```
+
+Use `renv::restore()` when setting up the project on a new machine or workspace.
+
+## Already Using R Projects or Package Management?
+
+**From an existing R project without renv:** Open the project in RStudio, run `renv::init()`, then `renv::snapshot()` to capture your current package versions.
+
+**From packrat (older tool):** Consider migrating to `renv`. Initialize `renv` in your existing project—it will detect your packages and create a new lock file.
+
+**From another machine with renv.lock:** Copy the `renv.lock` file to your new workspace and run `renv::restore()` to install the exact same package versions.
