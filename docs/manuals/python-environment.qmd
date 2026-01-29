@@ -10,7 +10,7 @@ Using a dedicated Python environment ensures that your work is:
 -  independent of system-wide Python installation
 
 # Why Use Python Environments?
-Python environment managers allow you to install exactly the same packages and versions that were used to develop a project, even on a new system on a SURF Research Cloud workspace.
+Python environment managers allow you to install exactly the same packages and versions that were used to develop a project, even on a new system such as a SURF Research Cloud workspace with minimal effort.
 
 Without environment management, projects may:
 
@@ -18,21 +18,20 @@ Without environment management, projects may:
 - behave differently across machines
 - be difficult to reproduce or share
 
-If you would like to learn more about reproducible research workflows, the following workshops by Utrecht University may be useful:
+If you would like to learn more about reproducible research workflows, the following workshop by Research Data Management at Utrecht University may be useful:
 
-- [Introduction to Python](https://www.uu.nl/en/research/research-data-management/workshops/introduction-to-python)
-- [Writing Reproducible Manuscripts in Python](https://www.uu.nl/en/research/research-data-management/workshops/writing-reproducible-manuscripts-in-r-and-python)
 - [Best Practices in Writing Reproducible Code](https://www.uu.nl/en/research/research-data-management/training-workshops/best-practices-for-writing-reproducible-code)
+- Or read the [chapter on depencency management](https://utrechtuniversity.github.io/workshop-computational-reproducibility/chapters/dependency-management.html)
 
 
 # Python Environment Managers on SURF Research Cloud
- [This repository](https://github.com/UtrechtUniversity/src-python-example) contains a reproducible example project for demonstrating how to work with different Python environment managing tools on SURF Research Cloud.
+ 
+[This repository](https://github.com/UtrechtUniversity/src-python-example) contains an example project for demonstrating how to work with different Python environment managing tools on SURF Research Cloud.
 
- The repository provides information on working with the following workspaces:
+The repository provides information on working with the following workspaces:
 
- - [Python Workbench Desktop](https://utrechtuniversity.github.io/vre-docs/docs/workspaces/programming/python-workbench.html)
- - [Jupyter Notebook](https://utrechtuniversity.github.io/vre-docs/docs/workspaces/programming/jupyter.html)
-
+ - [Python Workbench Desktop](../workspaces/programming/python-workbench.qmd)
+ - [Jupyter Notebook](../workspaces/programming/jupyter.qmd)
 
 The environment managers used are:
 
@@ -40,4 +39,5 @@ The environment managers used are:
 - [`pyenv`](https://github.com/pyenv/pyenv)
 - [`conda`](https://docs.conda.io/en/latest/)
 
-Information on how to create a workspace can be found [here.](https://utrechtuniversity.github.io/vre-docs/docs/first-steps.html#create-a-workspace)
+Information on how to create a workspace can be found [here.](../first-steps.qmd#create-a-workspace)
+
