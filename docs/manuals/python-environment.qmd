@@ -21,7 +21,7 @@ Without environment management, projects may:
 If you would like to learn more about reproducible research workflows, the following workshop by Research Data Management at Utrecht University may be useful:
 
 - [Best Practices in Writing Reproducible Code](https://www.uu.nl/en/research/research-data-management/training-workshops/best-practices-for-writing-reproducible-code)
-- Or read the [chapter on depencency management](https://utrechtuniversity.github.io/workshop-computational-reproducibility/chapters/dependency-management.html)
+- Or read the [chapter on dependency management](https://utrechtuniversity.github.io/workshop-computational-reproducibility/chapters/dependency-management.html)
 
 
 # Python Environment Managers on SURF Research Cloud
@@ -41,3 +41,63 @@ The environment managers used are:
 
 Information on how to create a workspace can be found [here.](../first-steps.qmd#create-a-workspace)
 
+# Getting Started
+
+## New to Python Environments?
+
+### Step 1: Identify Your Dependencies
+
+Check if your project has one of these dependency files:
+
+-  `requirements.txt`
+-  `pyproject.toml`
+-  `environment.yml` 
+
+If you do, move to **Step 2.**
+
+If not, start by listing the packages you import in your code (e.g., `pandas`, `numpy`, `matplotlib`) and create a simple `requirements.txt` file with one package per line.
+
+Alternatively, if you're already working in an environment and want to capture what's installed:
+```bash
+pip freeze > requirements.txt
+```
+
+Note: This captures *everything* in your current environment, so you may want to clean it up to include only what your project actually needs.
+
+### Step 2: Set Up with `uv` (Recommended)
+
+Navigate to your project folder and initialize:
+```bash
+cd /data/<your-storage-volume>/<your-project>
+uv init 
+uv venv --python 3.11  # create virtual environment with Python 3.11
+source .venv/bin/activate
+```
+
+Install your dependencies:
+```bash
+uv add -r requirements.txt  # if you have a requirements file
+# OR
+uv add pandas numpy matplotlib  # add packages individually
+```
+
+Start working:
+```bash
+python your_script.py
+```
+
+When you need to recreate the environment elsewhere, you can do so with lock files. This records the specific versions of all dependencies that were installed when the project was last configured:
+```bash
+uv lock      # Generate uv.lock
+uv sync      # Recreate environment from lock file
+```
+
+Use `uv sync` when setting up the project on a new machine or workspace.
+
+## Already Using Environment Managers?
+
+**From conda:** Export your environment with `conda env export > environment.yml`, then convert to requirements format or manually add packages with `uv add`.
+
+**From venv/virtualenv:** If you have `requirements.txt`, use `uv init`, then `uv add -r requirements.txt` to migrate to uv's project structure.
+
+**From Poetry:** Poetry's `pyproject.toml` may be compatible with uv. Try running `uv sync` in your project directory. If it doesn't work, export with `poetry export -f requirements.txt` and use `uv add -r requirements.txt`.
