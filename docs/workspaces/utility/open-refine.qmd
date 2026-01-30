@@ -1,0 +1,52 @@
+--- 
+title: "OpenRefine"
+software:
+- '[OpenRefine](https://openrefine.org/)'
+login:
+- webapp-sso
+os_flavor: linux
+os:
+- Ubuntu 22.04
+packages: []
+gpu: false
+admin: true
+support: UU
+---
+
+## Description
+
+OpenRefine is a powerful free, open source tool for working with messy data: cleaning it, transforming it from one format into another, and extending it with web services and external data.
+
+Each logged-in user on this workspace gets their own instance of OpenRefine.
+
+Login is done via [SRAM](https://servicedesk.surf.nl/wiki/spaces/IAM/pages/74226073/SURF+Research+Access+Management).
+
+## Creation
+
+{{< include ../partials/_storage.qmd >}}
+
+{{< include ../partials/_creation.qmd >}}
+
+## Access
+This catalog item uses SURF Research Access Management [(SRAM)](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/195854422/Workspace+access+with+SRAM) authentication. 
+
+In order to be able to request access to Catalog Items, you must be marked as having the **'Developer'** role in your [Collaboration](https://utrechtuniversity.github.io/vre-docs/docs/glossary.html#collaboration) in SRAM. *This is the case by default if the CO was created for you.* However, if you were invited later, it may be necessary to add yourself (or ask your CO-admin to add you) to the `src_co_developer` group.
+
+Follow the steps mentioned here to [request access](../../manuals/catalog-item-access.qmd).
+
+{{< include ../partials/_data_transfer.qmd >}}
+
+## Usage
+
+After logging in, OpenRefine will be accessible through your web browser. 
+
+### Getting Started
+
+1. Click `Create Project` to upload your data file (supports CSV, Excel, JSON, XML, and more)
+2. Preview and configure import options
+3. Start cleaning and transforming your data
+
+For detailed guides on using OpenRefine's features, see the [OpenRefine documentation](https://openrefine.org/docs).
+
+## Tips
+{{< include ../partials/sudo-rights.qmd >}}

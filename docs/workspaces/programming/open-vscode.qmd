@@ -1,0 +1,59 @@
+---
+title: "Open VSCode"
+software:
+- OpenVSCode 
+- conda
+- poetry
+- uv
+login:
+- webapp-sso
+os_flavor: linux
+os:
+- Ubuntu 22.04
+data:
+- ResearchDrive
+- irods-icommands
+packages: []
+gpu: false
+admin: true
+support: UU
+---
+
+## Description
+
+A fully functional VSCode integrated development environment (IDE) in the browser, based on the fully open-source version of [VSCode](https://code.visualstudio.com/).
+
+Login is done via [SRAM](https://servicedesk.surf.nl/wiki/spaces/IAM/pages/74226073/SURF+Research+Access+Management).
+The workspace also installs additional development tools:
+
+ -  [`conda`](https://www.anaconda.com/docs/getting-started/miniconda/main)
+ -  [`poetry`](https://python-poetry.org/docs/)
+ -  [`uv`](https://docs.astral.sh/uv/concepts/python-versions/)
+
+Upon request we can help you to automate the installation of packages or automate other installations (e.g. tools for data transfer). Automating these steps will make it easier to work following our [tips for responsible use](../../responsible-use.qmd).
+
+## Creation
+
+{{< include ../partials/_storage.qmd >}}
+
+{{< include ../partials/_creation.qmd >}}
+
+## Access
+This catalog item uses SURF Research Access Management [(SRAM)](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/195854422/Workspace+access+with+SRAM) authentication. 
+
+In order to be able to request access to Catalog Items, you must be marked as having the **'Developer'** role in your [Collaboration](https://utrechtuniversity.github.io/vre-docs/docs/glossary.html#collaboration) in SRAM. *This is the case by default if the CO was created for you.* However, if you were invited later, it may be necessary to add yourself (or ask your CO-admin to add you) to the `src_co_developer` group.
+
+Follow the steps mentioned here to [request access](../../manuals/catalog-item-access.qmd).
+
+{{< include ../partials/_data_transfer.qmd >}}
+
+## Usage
+
+### Working with Python Environments
+This workspace includes `uv`, `conda`, and `poetry` for Python environment management. See the [Python environment manual](../../manuals/python-environment.qmd) for best practices and getting started.
+
+### Terminal and Commands
+Access the integrated terminal with `` Ctrl+` `` or via the Terminal menu. With sudo rights, you can install additional system packages using `sudo apt install`.
+
+## Tips
+{{< include ../partials/sudo-rights.qmd >}}
