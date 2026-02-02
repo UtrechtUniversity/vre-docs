@@ -1,4 +1,4 @@
 ### Sudo rights
-Sudo rights can be obtained by adding [collaboration members](../../onboarding.qmd#add-collaborators-to-existing-project) to the `src_co_admin` group in SRAM.
+Sudo rights can be obtained by adding [collaboration members](../../onboarding.qmd#add-collaborators-to-existing-project) to the `src_co_admin` group in [SRAM](https://sram.surf.nl).
 
 Members with sudo rights can install system-level packages and perform administrative tasks on the workspace.
