@@ -49,8 +49,8 @@ Information on how to create a workspace can be found [here.](../first-steps.qmd
 
 Check if your project has one of these dependency files:
 
--  `requirements.txt`
 -  `pyproject.toml`
+-  `requirements.txt`
 -  `environment.yml` 
 
 If you do, move to **Step 2.**
@@ -59,7 +59,11 @@ If not, start by listing the packages you import in your code (e.g., `pandas`, `
 
 Alternatively, if you're already working in an environment and want to capture what's installed:
 ```bash
-uv lock                                           # if you are working with uv
+uv lock    # if you are working with uv
+```
+OR
+```bash
+pip freeze > requirements.txt  
 ```
 
 Note: This captures *everything* in your current environment, so you may want to clean it up to include only what your project actually needs.
@@ -97,8 +101,12 @@ Use `uv sync` when setting up the project on a new machine or workspace.
 
 ## Already Using Environment Managers?
 
-**From conda:** Export your environment with `conda env export > environment.yml`, then convert to requirements format or manually add packages with `uv add`.
+`conda`, `poetry`, and `pyenv` are pre-installed, so you can continue using your existing workflow:
 
-**From venv/virtualenv:** If you have `requirements.txt`, use `uv init`, then `uv add -r requirements.txt` to migrate to uv's project structure.
+**conda:** Use your `environment.yml` file with `conda env create -f environment.yml` and activate with `conda activate your-env-name`.
 
-**From Poetry:** Poetry's `pyproject.toml` may be compatible with uv. Try running `uv sync` in your project directory. If it doesn't work, export with `poetry export -f requirements.txt` and use `uv add -r requirements.txt`.
+**venv/virtualenv:** Create environments with `python -m venv .venv` and activate with `source .venv/bin/activate`. Install packages using `pip install -r requirements.txt`.
+
+**poetry:** Continue using `poetry install` to set up your environment and `poetry shell` to activate it.
+
+**pyenv:** Use `pyenv` to manage and switch between different python versions. Combine it with `venv`, `conda`, or `poetry` for package management.

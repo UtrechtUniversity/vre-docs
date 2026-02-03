@@ -3,7 +3,7 @@ title: "R Environments"
 ---
 # Overview
 
-This manual describes the best practices for working with R environments in your SURF Research Cloud workspace (e.g. [RStudio workspaces](https://utrechtuniversity.github.io/vre-docs/docs/workspaces/programming/rstudio.html)).
+This manual describes the best practices for working with R environments in your SURF Research Cloud workspace (e.g. [RStudio workspaces](../workspaces/programming/rstudio.qmd)).
 Using a project-specific R environment ensures that your work is:
 
 - reproducible
@@ -43,50 +43,46 @@ Information on how to create a workspace can be found [here.](../first-steps.qmd
 
 ## New to R Environments?
 
-### Step 1: Identify Your Dependencies
+### Step 1: Create a Lock File (On Your Local Machine)
 
 Check if your project has an `renv.lock` file. If you do, move to **Step 2**.
 
-If not, start by listing the packages you use in your R scripts. Look for `library()` or `require()` calls (e.g., `library(dplyr)`, `library(ggplot2)`, `library(tidyr)`).
-
-### Step 2: Set Up with `renv` (Recommended)
-
-Open your project in RStudio on SURF Research Cloud.
-
-Initialize `renv` in your project:
+If not, open your R project in RStudio on your local machine:
 ```r
 install.packages("renv")  # Install renv if not already installed
 renv::init()              # Initialize renv in your project
+renv::snapshot()          # Create renv.lock file
 ```
 
-This creates an `renv.lock` file and a project-specific library.
+This creates an `renv.lock` file that captures all your project's package versions.
 
-Install your dependencies (if not already installed):
+### Step 2: Set Up on Your SURF Research Cloud Workspace
+
+Open a project and upload the `renv.lock` file to your SURF Research Cloud workspace.
+
+Then restore the environment:
 ```r
-install.packages(c("dplyr", "ggplot2", "tidyr"))  # Install packages as needed
+install.packages("renv")  # Install renv on the workspace
+renv::restore()           # Restore packages from renv.lock
 ```
 
-Save the current state of your environment:
-```r
-renv::snapshot() 
-```
+This installs the exact same package versions from your local environment.
 
 Start working on your project:
 ```r
 # Your R code here
 ```
 
-When you need to recreate the environment elsewhere, you can do so with the lock file. This records the specific versions of all packages that were installed when the project was last configured:
+When you make changes to your dependencies, update the lock file:
 ```r
-renv::restore()  # Restore environment from renv.lock
+renv::snapshot()  # Update renv.lock with new packages
 ```
 
-Use `renv::restore()` when setting up the project on a new machine or workspace.
 
 ## Already Using R Projects or Package Management?
 
 **From an existing R project without renv:** Open the project in RStudio, run `renv::init()`, then `renv::snapshot()` to capture your current package versions.
 
-**From packrat (older tool):** Consider migrating to `renv`. Initialize `renv` in your existing project—it will detect your packages and create a new lock file.
+**From packrat (older tool):** Consider migrating to `renv`. Initialize `renv` in your existing project, it will detect your packages and create a new lock file.
 
 **From another machine with renv.lock:** Copy the `renv.lock` file to your new workspace and run `renv::restore()` to install the exact same package versions.
