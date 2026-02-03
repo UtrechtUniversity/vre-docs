@@ -2,7 +2,7 @@
 title: "Python Environments"
 ---
 # Overview
-This manual describes the best practices for working with [Python environments](https://utrechtuniversity.github.io/vre-docs/docs/workspaces/programming/python-workbench.html#python-environments) in your SURF Research Cloud workspace.
+This manual describes the best practices for working with [Python environments](../workspaces/programming/python-workbench.qmd#python-environments) in your SURF Research Cloud workspace.
 Using a dedicated Python environment ensures that your work is:
 
 -  reproducible
@@ -59,7 +59,7 @@ If not, start by listing the packages you import in your code (e.g., `pandas`, `
 
 Alternatively, if you're already working in an environment and want to capture what's installed:
 ```bash
-pip freeze > requirements.txt
+uv lock                                           # if you are working with uv
 ```
 
 Note: This captures *everything* in your current environment, so you may want to clean it up to include only what your project actually needs.
@@ -76,7 +76,8 @@ source .venv/bin/activate
 
 Install your dependencies:
 ```bash
-uv add -r requirements.txt  # if you have a requirements file
+uv pip install -r pyproject.toml  # if you have a pyproject file
+uv pip install -r requirements.txt  # if you have a requirements file
 # OR
 uv add pandas numpy matplotlib  # add packages individually
 ```

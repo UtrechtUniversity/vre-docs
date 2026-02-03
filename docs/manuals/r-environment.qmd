@@ -3,7 +3,7 @@ title: "R Environments"
 ---
 # Overview
 
-This manual describes the best practices for working with R environments in your SURF Research Cloud workspace via [RStudio workspaces](https://utrechtuniversity.github.io/vre-docs/docs/workspaces/programming/rstudio.html).
+This manual describes the best practices for working with R environments in your SURF Research Cloud workspace (e.g. [RStudio workspaces](https://utrechtuniversity.github.io/vre-docs/docs/workspaces/programming/rstudio.html)).
 Using a project-specific R environment ensures that your work is:
 
 - reproducible
