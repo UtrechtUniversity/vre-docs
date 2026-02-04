@@ -22,6 +22,14 @@ support: UU
 
 ## Description
 
+This VRE Lab workspace hosts a [JupyterLab](https://jupyterlab.readthedocs.io/en/latest/) environment that provides [Jupyter notebooks](https://jupyter.org/) alongside a number of useful applications accessible through the browser. This catalog item can easily be extended with additional applications to suit your research needs.
+
+Login is done via [SRAM](https://servicedesk.surf.nl/wiki/spaces/IAM/pages/74226073/SURF+Research+Access+Management).
+
+The workspace includes Python environment management with [`uv`](https://docs.astral.sh/uv/).
+
+Upon request we can help you to automate the installation of packages or automate other installations (e.g. tools for data transfer). Automating these steps will make it easier to work following our [tips for responsible use](../../responsible-use.qmd).
+
 ## Creation
 
 {{< include ../partials/_storage.qmd >}}
@@ -30,19 +38,30 @@ support: UU
 
 ## Access
 
-Link to access methods in the first steps page here.
+This catalog item uses SURF Research Access Management [(SRAM)](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/195854422/Workspace+access+with+SRAM) authentication. 
+
+In order to be able to request access to Catalog Items, you must be marked as having the **'Developer'** role in your [Collaboration](../../glossary.qmd#collaboration) in SRAM. *This is the case by default if the CO was created for you.* However, if you were invited later, it may be necessary to add yourself (or ask your CO-admin to add you) to the `src_co_developer` group.
+
+Follow the steps mentioned here to [request access](../../manuals/catalog-item-access.qmd).
 
 ## Usage
 
 {{< include ../partials/_data_transfer.qmd >}}
 
-The recommended [iBridges client for Yoda and iRODS](../../manuals/ibridges.qmd) is preinstalled.
+After logging in, you'll have access to the [JupyterLab](https://jupyterlab.readthedocs.io/en/latest/) interface which includes: 
 
+ - [Jupyter notebooks](https://jupyter.org/) for interactive coding
+ - Additional browser-based applications
+ - Integrated [terminal](https://jupyterlab.readthedocs.io/en/latest/user/terminal.html#terminals) access
+
+The recommended [iBridges client for Yoda and iRODS](../../manuals/ibridges.qmd) is preinstalled.
 
 ### Installing additional software
 
 The user has [admin rights](../../responsible-use.qmd#installation-of-software) to install additional software on the system (on a terminal, use `sudo <yourcommand>`).
 
 ## Tips
+
+<!-- This workspace includes `uv` for Python environment management. See the [Python environment manual](../../manuals/python-environment.qmd) for best practices and getting started. -->
 
 {{< include ../partials/_security.qmd >}}
