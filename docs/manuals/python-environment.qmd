@@ -37,6 +37,7 @@ The environment managers used are:
 
 - [`uv`](https://docs.astral.sh/uv/) (recommended)
 - [`pyenv`](https://github.com/pyenv/pyenv)
+- [`poetry`](https://python-poetry.org/)
 - [`conda`](https://docs.conda.io/en/latest/)
 
 Information on how to create a workspace can be found [here.](../first-steps.qmd#create-a-workspace)
@@ -55,9 +56,27 @@ Check if your project has one of these dependency files:
 
 If you do, move to **Step 2.**
 
-If not, start by listing the packages you import in your code (e.g., `pandas`, `numpy`, `matplotlib`) and create a simple `requirements.txt` file with one package per line.
+### Step 1b: Getting started with `uv`
 
-Alternatively, if you're already working in an environment and want to capture what's installed:
+If you are not working with an environment manager, we recommend using [`uv`](https://docs.astral.sh/uv/). Start by listing the packages you import in your code (e.g., `pandas`, `numpy`, `matplotlib`) and create a `requirements.txt` file with one package per line.
+
+[Installing `uv`](https://docs.astral.sh/uv/getting-started/installation/) is straightforward and fast.
+
+Then initialize your environment in your project directory:
+```bash
+uv init 
+uv venv --python 3.12  # or other version
+```
+Now activate it and install your dependencies:
+
+```bash
+source .venv/bin/activate
+uv add -r requirements.txt
+```
+
+### Step 1c: Capturing Dependencies
+Alternatively, if you're already working with an environment manager (uv, poetry, pyenv, conda) but don't have a dependency file, you can use a command to capture your dependencies:
+
 ```bash
 uv lock    # if you are working with uv
 ```
@@ -66,22 +85,30 @@ OR
 pip freeze > requirements.txt  
 ```
 
+OR
+```bash
+conda export --file environment.yaml
+```
+
 Note: This captures *everything* in your current environment, so you may want to clean it up to include only what your project actually needs.
 
-### Step 2: Set Up with `uv` (Recommended)
+### Step 2: Set up your environment on Surf Research Cloud
 
-Navigate to your project folder and initialize:
+First make sure to move your files with your dependencies to your workspace. Good practice is [manage your project using git](https://www.uu.nl/en/research/research-data-management/workshops/introduction-to-github), in that case you will need to push your files from your PC to github and clone your git project to your workspace. Otherwise, it is OK to transfer the files to your workspace using any of the [data transfer methods](../manuals.qmd#data-transfer). 
+
+On SURF Research Cloud, navigate to your project folder and create your environment:
+
 ```bash
-cd /data/<your-storage-volume>/<your-project>
-uv init 
-uv venv --python 3.11  # create virtual environment with Python 3.11
+uv sync  # if you have a pyproject.toml and uv.lock file
 source .venv/bin/activate
 ```
 
-Install your dependencies:
+If you have a `requirements.txt` file instead:
+
 ```bash
-uv pip install -r pyproject.toml  # if you have a pyproject file
-uv pip install -r requirements.txt  # if you have a requirements file
+uv venv --python 3.12      # or other python version
+source .venv/bin/activate
+uv add -r requirements.txt  # install from requirements file
 # OR
 uv add pandas numpy matplotlib  # add packages individually
 ```
@@ -91,15 +118,7 @@ Start working:
 python your_script.py
 ```
 
-When you need to recreate the environment elsewhere, you can do so with lock files. This records the specific versions of all dependencies that were installed when the project was last configured:
-```bash
-uv lock      # Generate uv.lock
-uv sync      # Recreate environment from lock file
-```
-
-Use `uv sync` when setting up the project on a new machine or workspace.
-
-## Already Using Environment Managers?
+## Using other Environment Managers?
 
 `conda`, `poetry`, and `pyenv` are pre-installed, so you can continue using your existing workflow:
 
@@ -107,6 +126,6 @@ Use `uv sync` when setting up the project on a new machine or workspace.
 
 **venv/virtualenv:** Create environments with `python -m venv .venv` and activate with `source .venv/bin/activate`. Install packages using `pip install -r requirements.txt`.
 
-**poetry:** Continue using `poetry install` to set up your environment and `poetry shell` to activate it.
+**poetry:** Continue using `poetry install` to set up your environment from `pyproject.toml` and `poetry shell` to activate it.
 
-**pyenv:** Use `pyenv` to manage and switch between different python versions. Combine it with `venv`, `conda`, or `poetry` for package management.
+
