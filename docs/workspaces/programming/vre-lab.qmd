@@ -6,7 +6,7 @@ software:
 - Python
 - uv
 login:
-- webapp-totp
+- webapp-sso
 os_flavor: linux
 os:
 - Ubuntu 22.04
@@ -24,7 +24,7 @@ support: UU
 
 This VRE Lab workspace hosts a [JupyterLab](https://jupyterlab.readthedocs.io/en/latest/) environment that provides [Jupyter notebooks](https://jupyter.org/) alongside a number of useful applications accessible through the browser. This catalog item can easily be extended with additional applications to suit your research needs.
 
-Login is done via [SRAM](https://servicedesk.surf.nl/wiki/spaces/IAM/pages/74226073/SURF+Research+Access+Management).
+Login is done via [SRAM](https://servicedesk.surf.nl/wiki/spaces/IAM/pages/74226073/SURF+Research+Access+Management) via your institutional credentials.
 
 The workspace includes Python environment management with [`uv`](https://docs.astral.sh/uv/).
 
@@ -36,13 +36,48 @@ Upon request we can help you to automate the installation of packages or automat
 
 {{< include ../partials/_creation.qmd >}}
 
+### Optional Components
+
+VRE Lab allows you to customise your workspace by selecting additional optional components during workspace creation. This lets you pre-install tools for your research needs.
+
+During workspace creation, you'll see an `Optional components` section where you can check the components you want to install.
+
+![Select optional components](../imgs/vre-lab_components.png)
+
+
+**Available components:**
+
+- **Open VSCode Server**: Web-based integrated development environment (IDE) for coding directly in your browser.
+- **OpenRefine UU**: Data cleaning and transformation tool accessible from JupyterLab.
+- **Python tools**: Additional tools for managing Python environments (includes `uv`, `poetry`, and `conda`).
+- **Custom Packages UU**: Automatically install dependencies for Python, R, Julia, or Conda projects from Git repositories, Zenodo, Dataverse, or DOI links.
+
+::: {.callout-tip}
+## Custom Packages UU
+If you select "Custom Packages UU", you can provide a comma-separated list of project identifiers (e.g., GitHub URLs, Zenodo links, or DOIs) in the workspace parameters. These projects will be saved to `/local-share` with their dependencies installed in separate environments.
+:::
+
+Simply check the boxes for the components you need, then continue with workspace creation. You can always install additional software later using sudo rights from the terminal.
+
+
 ## Access
 
-This catalog item uses SURF Research Access Management [(SRAM)](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/195854422/Workspace+access+with+SRAM) authentication. 
+### Accessing the Workspace
 
-In order to be able to request access to Catalog Items, you must be marked as having the **'Developer'** role in your [Collaboration](../../glossary.qmd#collaboration) in SRAM. *This is the case by default if the CO was created for you.* However, if you were invited later, it may be necessary to add yourself (or ask your CO-admin to add you) to the `src_co_developer` group.
+1. Open your [SURF Research Cloud portal.](https://portal.live.surfresearchcloud.nl/)
+2. When choosing your catalog item, simply search for **VRE Lab** and click the yellow **"Access"** button.
+3. Log in with your institutional credentials (Solis ID for UU users).
 
-Follow the steps mentioned here to [request access](../../manuals/catalog-item-access.qmd).
+Since you're already signed in to access SURF Research Cloud, you may not need to authenticate again.
+
+### Requesting Access to the Catalog Item Collection
+
+Most Utrecht University users already have access to this catalog item. If you cannot find VRE Lab when creating a workspace:
+
+1. You need to request access to the **Utrecht University Catalog Item Collection.**
+2. Follow these steps to [request access](../../manuals/catalog-item-access.qmd#requesting-access).
+3. Once approved, you'll be able to create VRE Lab workspaces.
+
 
 ## Usage
 
@@ -62,6 +97,6 @@ The user has [admin rights](../../responsible-use.qmd#installation-of-software) 
 
 ## Tips
 
-<!-- This workspace includes `uv` for Python environment management. See the [Python environment manual](../../manuals/python-environment.qmd) for best practices and getting started. -->
+This workspace includes `uv` for Python environment management. See the [Python environment manual](../../manuals/python-environment.qmd) for best practices and getting started.
 
 {{< include ../partials/_security.qmd >}}
