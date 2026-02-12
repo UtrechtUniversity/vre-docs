@@ -7,6 +7,7 @@ The Virtual Research Environment (VRE) service of Utrecht University is based on
 
 - [Overview of Research Data Management Policies, codes of conduct and laws](https://www.uu.nl/en/research/research-data-management/guides/policies-codes-of-conduct-and-laws)
 - [General university's user regulations for ICT platforms](https://intranet.uu.nl/en/security/information-security-policy-and-regulations)
+- [SRAM privacy statement](https://tools.uu.nl/privacy_statement/surf-research-access-management/)
 
 In addition to the UU terms of use, the following Acceptable Use policies at SURF are applicable:
 
@@ -21,4 +22,5 @@ For more information about the responsible use of the VRE service, see [practica
 
 {{< include ./_end_date.qmd >}}
 
-Last update: May 29, 2024.
+
+Last update: February 12, 2026.
