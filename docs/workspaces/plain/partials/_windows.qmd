@@ -4,13 +4,13 @@ ResearchCloud allows you to start Windows workspaces that use the Windows Server
 
 - Windows Server 2019 (maintained by SURF)
 - Windows Server 2019 with CUDA (with GPU support, maintained by SURF)
-- Windows with iBridges (comes with [iBridges for data transfer](../../../manuals/ibridges.qmd), maintained by UU)
+- Windows with iBridges (comes with [iBridges for data transfer](../../manuals/ibridges.qmd), maintained by UU)
 
-Simply choose one of these [catalog items](../../../glossary.qmd#catalog-item) in the workspace creation wizard.
+Simply choose one of these [catalog items](../../glossary.qmd#catalog-item) in the workspace creation wizard.
 
 ## Access
 
-You can [access Windows workspaces as a remote desktop in your browser](../../../first-steps.qmd#browser-access-to-a-desktop-environment), authenticating via SRAM.
+You can [access Windows workspaces as a remote desktop in your browser](../../first-steps.qmd#browser-access-to-a-desktop-environment), authenticating via SRAM.
 
 ## Creation
 
@@ -20,6 +20,6 @@ You can [access Windows workspaces as a remote desktop in your browser](../../..
 
 {{< include ../partials/_data_transfer.qmd >}}
 
-When using the *Windows with iBridges* flavour, the recommended [iBridges client for Yoda and iRODS](../../../manuals/ibridges.qmd) is preinstalled.
+When using the *Windows with iBridges* flavour, the recommended [iBridges client for Yoda and iRODS](../../manuals/ibridges.qmd) is preinstalled.
 
 ## Tips
