@@ -28,7 +28,10 @@ Login is done via [SRAM](https://servicedesk.surf.nl/wiki/spaces/IAM/pages/74226
 
 The workspace includes Python environment management with [`uv`](https://docs.astral.sh/uv/).
 
-Upon request we can help you to automate the installation of packages or automate other installations (e.g. tools for data transfer). Automating these steps will make it easier to work following our [tips for responsible use](../../responsible-use.qmd).
+You can automatically install environments and dependencies for Python, R, Julia, and Conda using the Custom Packages [Optional Component](#optional-components) provided in this workspace.
+
+If you wish to customise this workspace further by installing system packages or need additional help, you can [contact us](../../contact.qmd)
+
 
 ## Creation
 
@@ -47,8 +50,8 @@ During workspace creation, you'll see an `Optional components` section where you
 
 **Available components:**
 
-- **Open VSCode Server**: Web-based integrated development environment (IDE) for coding directly in your browser.
-- **OpenRefine UU**: Data cleaning and transformation tool accessible from JupyterLab.
+- **[Open VSCode Server](https://code.visualstudio.com/docs/getstarted/getting-started)**: Web-based integrated development environment (IDE) for coding directly in your browser.
+- **[OpenRefine](https://openrefine.org/docs) UU**: Data cleaning and transformation tool accessible from JupyterLab.
 - **Python tools**: Additional tools for managing Python environments (includes `uv`, `poetry`, and `conda`).
 - **Custom Packages UU**: Automatically install dependencies for Python, R, Julia, or Conda projects from Git repositories, Zenodo, Dataverse, or DOI links.
 
@@ -81,15 +84,19 @@ Most Utrecht University users already have access to this catalog item. If you c
 
 ## Usage
 
-{{< include ../partials/_data_transfer.qmd >}}
-
 After logging in, you'll have access to the [JupyterLab](https://jupyterlab.readthedocs.io/en/latest/) interface which includes: 
 
  - [Jupyter notebooks](https://jupyter.org/) for interactive coding
  - Additional browser-based applications
  - Integrated [terminal](https://jupyterlab.readthedocs.io/en/latest/user/terminal.html#terminals) access
 
-The recommended [iBridges client for Yoda and iRODS](../../manuals/ibridges.qmd) is preinstalled.
+{{< include ../partials/_data_transfer.qmd >}}
+You can also upload data directly to the workspace using the `Upload Files` button in the JupyterLab interface.
+
+![Upload Files](../imgs/jupyter-upload-button.png){width=300px}
+
+
+For larger data transfers, the recommended [iBridges client for Yoda and iRODS](../../manuals/ibridges.qmd) is preinstalled.
 
 ### Installing additional software
 
