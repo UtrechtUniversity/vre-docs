@@ -1,0 +1,109 @@
+--- 
+title: "VRE Lab"
+execute:
+  echo: false
+software:
+- Python
+- uv
+login:
+- webapp-sso
+os_flavor: linux
+os:
+- Ubuntu 22.04
+data:
+- ResearchDrive
+- irods-icommands
+packages: []
+gpu: false
+admin: true
+support: UU
+
+---
+
+## Description
+
+This VRE Lab workspace hosts a [JupyterLab](https://jupyterlab.readthedocs.io/en/latest/) environment that provides [Jupyter notebooks](https://jupyter.org/) alongside a number of useful applications accessible through the browser. This catalog item can easily be extended with additional applications to suit your research needs.
+
+Login is done via [SRAM](https://servicedesk.surf.nl/wiki/spaces/IAM/pages/74226073/SURF+Research+Access+Management) via your institutional credentials.
+
+The workspace includes Python environment management with [`uv`](https://docs.astral.sh/uv/).
+
+You can automatically install environments and dependencies for Python, R, Julia, and Conda using the Custom Packages [Optional Component](#optional-components) provided in this workspace.
+
+If you wish to customise this workspace further by installing system packages or need additional help, you can [contact us](../../contact.qmd)
+
+
+## Creation
+
+{{< include ../partials/_storage.qmd >}}
+
+{{< include ../partials/_creation.qmd >}}
+
+### Optional Components
+
+VRE Lab allows you to customise your workspace by selecting additional optional components during workspace creation. This lets you pre-install tools for your research needs.
+
+During workspace creation, you'll see an `Optional components` section where you can check the components you want to install.
+
+![Select optional components](../imgs/vre-lab_components.png)
+
+
+**Available components:**
+
+- **[Open VSCode Server](https://code.visualstudio.com/docs/getstarted/getting-started)**: Web-based integrated development environment (IDE) for coding directly in your browser.
+- **[OpenRefine](https://openrefine.org/docs) UU**: Data cleaning and transformation tool accessible from JupyterLab.
+- **Python tools**: Additional tools for managing Python environments (includes `uv`, `poetry`, and `conda`).
+- **Custom Packages UU**: Automatically install dependencies for Python, R, Julia, or Conda projects from Git repositories, Zenodo, Dataverse, or DOI links.
+
+::: {.callout-tip}
+## Custom Packages UU
+If you select "Custom Packages UU", you can provide a comma-separated list of project identifiers (e.g., GitHub URLs, Zenodo links, or DOIs) in the workspace parameters. These projects will be saved to `/local-share` with their dependencies installed in separate environments.
+:::
+
+Simply check the boxes for the components you need, then continue with workspace creation. You can always install additional software later using sudo rights from the terminal.
+
+
+## Access
+
+### Accessing the Workspace
+
+1. Open your [SURF Research Cloud portal.](https://portal.live.surfresearchcloud.nl/)
+2. When choosing your catalog item, simply search for **VRE Lab** and click the yellow **"Access"** button.
+3. Log in with your institutional credentials (Solis ID for UU users).
+
+Since you're already signed in to access SURF Research Cloud, you may not need to authenticate again.
+
+### Requesting Access to the Catalog Item Collection
+
+Most Utrecht University users already have access to this catalog item. If you cannot find VRE Lab when creating a workspace:
+
+1. You need to request access to the **Utrecht University Catalog Item Collection.**
+2. Follow these steps to [request access](../../manuals/catalog-item-access.qmd#requesting-access).
+3. Once approved, you'll be able to create VRE Lab workspaces.
+
+
+## Usage
+
+After logging in, you'll have access to the [JupyterLab](https://jupyterlab.readthedocs.io/en/latest/) interface which includes: 
+
+ - [Jupyter notebooks](https://jupyter.org/) for interactive coding
+ - Additional browser-based applications
+ - Integrated [terminal](https://jupyterlab.readthedocs.io/en/latest/user/terminal.html#terminals) access
+
+{{< include ../partials/_data_transfer.qmd >}}
+You can also upload data directly to the workspace using the `Upload Files` button in the JupyterLab interface.
+
+![Upload Files](../imgs/jupyter-upload-button.png){width=300px}
+
+
+For larger data transfers, the recommended [iBridges client for Yoda and iRODS](../../manuals/ibridges.qmd) is preinstalled.
+
+### Installing additional software
+
+The user has [admin rights](../../responsible-use.qmd#installation-of-software) to install additional software on the system (on a terminal, use `sudo <yourcommand>`).
+
+## Tips
+
+This workspace includes `uv` for Python environment management. See the [Python environment manual](../../manuals/python-environment.qmd) for best practices and getting started.
+
+{{< include ../partials/_security.qmd >}}
