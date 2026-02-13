@@ -71,8 +71,8 @@ Prerequisites: your workspace has to be in 'State: running'.
 There are several ways to login to your workspace, depending on its type:
 
 - [Browser access to a desktop environment](#browser-access-to-a-desktop-environment)
-- Browser access to a webapplication
-  - [Webapplications that support Single Sign-on](#webapplications-that-support-single-sign-on)
+- [Browser access to a webapplication](#browser-access-to-a-webapplication)
+  - [Webapplications that support Single Sign-on](#webapplications-that-support-single-sign-on.)
   - [Webapplications that require a time-based password](#webapplications-that-require-a-time-based-password)
 - [Remote Desktop Protocol](#remote-desktop-protocol)
 - [SSH](#ssh) (command line)
@@ -133,13 +133,13 @@ Many catalog items provide you with a webapplication that can be accessed from y
 
 There are two different forms of browser-based access to webapplications on Research Cloud:
 
-###### Webapplications that support Single Sign-on.
+##### **Webapplications that support Single Sign-on.**
 
 These will present you with the normal login flow (including two-factor authentication) for your institutional login. That means Solis ID for UU students and staff, but collaborators from other institutions will use their own.
 
 Since you are often already recently signed in to your institutional login to enter the Research Cloud, you will often not even need to authenticate again! Simply click the yellow "Access" button for your workspace.
 
-###### Webapplications that require a time-based password
+##### **Webapplications that require a time-based password**
 
 For these workspaces, you will need to [setup a Time Based Password for your Research Cloud account](https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace#Logintoyourworkspace-WorkspaceAccesswithTOTP).
 
