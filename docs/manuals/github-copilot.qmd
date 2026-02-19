@@ -1,0 +1,204 @@
+---
+title: "Using GitHub Copilot with Local VSCode on SURF Research Cloud"
+---
+
+# Overview
+
+This guide explains how to use GitHub Copilot via your local VSCode while working on SURF Research Cloud. [GitHub Copilot](https://github.com/features/copilot) is an AI-powered code completion tool that helps you write code faster.
+
+Since GitHub Copilot is not available in ['VSCodium'](https://vscodium.com/) (an open source alternative to VS Code in the [Python Workbench Desktop workspace](../workspaces/programming/python-workbench.qmd)), this guide shows you how to use VSCode on your local computer to connect to your workspace via SSH and use Copilot remotely.
+
+
+# Prerequisites
+
+To follow this guide, you need:
+
+1. Access to a running [Python Workbench Desktop workspace](../workspaces/programming/python-workbench.qmd) with VSCodium. You can find VSCodium under 'Applications' (topleft corner) in your workspace.
+
+2.  Access to [GitHub Copilot.](https://github.com/features/copilot)
+
+3. [VS Code](https://code.visualstudio.com/) installed on your local computer.
+
+#  One-Time Setup
+
+## Step 1: Configure SSH Access
+
+Follow the [SSH setup instructions](../first-steps.qmd#ssh) to:
+
+1.  Create an SSH key pair on your local computer via the Terminal (MacOS and Linux) or preferred Windows shell (recommended: [MobaXterm](https://mobaxterm.mobatek.net/)).
+
+2.  Add your public key (`.pub` file) to your SRAM profile.
+
+
+## Step 2: Get Workspace Connection Details
+
+1. Go to the [SURF Research Cloud dashboard.](https://portal.live.surfresearchcloud.nl/)
+
+2. Find your Python Workbench Desktop workspace and expand the tile to view additional details (**Make sure your workspace is running.**)
+
+3. Note the **IP address** (e.g., `145.38.x.x`)
+
+4. Note your SRAM **username**. This can be found in the **Profile** tab of the portal or by running the command `whoami` in the VSCodium terminal of your workspace.
+
+
+## Step 3: Test SSH Connection
+
+Before configuring your ssh settings, verify that your ssh key is working. On your local computer, open a terminal and run:
+```bash
+ssh -i ~/.ssh/id_ed25519 YOUR_USERNAME@YOUR_PUBLIC_IP
+```
+
+Replace `YOUR_USERNAME` with your SRAM username and `YOUR_PUBLIC_IP` with the IP address of your workspace. 
+If you have an `id_rsa` key instead of `id_ed25519`, adjust the path accordingly.
+
+If you are connecting for the first time, you will see: `Are you sure you want to continue connecting (yes/no)?`. Type `yes` and press Enter to continue. 
+You may also be prompted to enter the passphrase for your SSH key if you set one up. You can press `enter` if you did not set up a passphrase.
+
+
+If the connection is successful, you should see a welcome message from the server. You can exit the session by typing `exit`.
+
+
+## Step 4: Configure SSH for Easier Access
+
+Create an SSH configuration file to make connecting easier.
+
+On your local computer, open a terminal and run:
+```bash
+nano ~/.ssh/config
+```
+
+Add the following configuration (**replace with your details**):
+```
+Host myworkspace
+  HostName YOUR_WORKSPACE_IP_ADDRESS
+  User YOUR_SRAM_USERNAME
+  IdentityFile ~/.ssh/id_ed25519
+```
+
+You can replace `myworkspace` with any name you like. This will allow you to connect using `ssh myworkspace` instead of typing the full command each time.
+
+Save the Configuration file:
+
+- Press `Ctrl+O` (save)
+- Press `Enter` (confirm filename)
+- Press `Ctrl+X` (exit nano)
+
+## Step 5: Test SSH Configuration
+
+Test the connection from your terminal:
+```bash
+ssh myworkspace
+```
+
+This allows you to connect to your workspace without needing to type your IP address or key each time. Type `exit` to disconnect.
+
+## Step 6: Install VS Code Extensions
+
+1. Open **VS Code** on your local computer. You can install extensions either by clicking the Extensions icon (left sidebar) or pressing `Cmd+Shift+X` (Mac) / `Ctrl+Shift+X` (Windows).
+
+2. Install the `Remote-SSH` extension by Microsoft.
+
+3. Install the `GitHub Copilot` extension. Sign into GitHub when prompted and authorize Copilot.
+
+
+# Using GitHub Copilot in Your Workspace
+
+## Step 7: Connecting to Your Workspace
+
+1. Open VS Code on your local computer
+
+2. Press `Cmd+Shift+P` (Mac) / `Ctrl+Shift+P` (Windows) to open the Command Palette 
+
+3. Type `Remote-SSH: Connect to Host` and select it
+
+4. Choose `myworkspace` from the list (or whatever name you used in your SSH config file)
+
+5. A new VS Code window will open and connect to your workspace
+
+6. Wait 30-60 seconds for the connection to establish (first time may take longer)
+
+7. When connected, you'll see `SSH: myworkspace` in the bottom left corner
+
+
+## Step 8: Verifying the Connection
+
+1. Open a terminal in your VS Code window (the one connected to your workspace)
+
+2. Run `whoami` - it should show your workspace username, not your local username
+
+3. You're now working on the workspace filesystem through your local VS Code
+
+
+## Step 9: Writing Code with Copilot
+
+1. Open or create a folder: **File** → **Open Folder**
+
+2. Create a new file with your programming language extension (e.g., `.py`)
+
+3. Start typing code. Copilot will show gray suggestion texts as you type.
+    - Press **Tab** to accept suggestions
+    - Press **Esc** to dismiss suggestions
+
+4. For further information on using GitHub Copilot in VSCode, click [here](https://code.visualstudio.com/docs/copilot/overview)
+
+5. Your files are saved to your SRAM workspace, and you can see them in the VSCodium file explorer to run them on the workspace as well.
+
+
+### Selecting Python Environments
+
+1. Press `Cmd+Shift+P` / `Ctrl+Shift+P` in VS Code to open the Command Palette
+
+2. Type `Python: Select Interpreter`
+
+3. Choose from the available Python environments on your workspace
+
+
+# Reconnecting:
+
+Once configured, simply open VS Code and select `Remote-SSH: Connect to Host` → `myworkspace` each time you want to work on your workspace with GitHub Copilot. 
+
+
+## Troubleshooting
+
+**"Permission denied (publickey)" Error**
+
+- Your SSH key may not be propagated to the workspace yet. Wait 5-10 minutes after adding it to SRAM.
+- Verify your public key in SRAM matches your local key: `cat ~/.ssh/id_ed25519.pub`
+- Try specifying the key explicitly: `ssh -i ~/.ssh/id_ed25519 username@ip`
+
+**"Network is unreachable" Error**
+
+- You may be using the VSCodium's internal IP address instead of the workspace's IP address.
+- Check the workspace details in the SRC dashboard for the correct public IP address.
+- The public IP typically starts with `145.38.x.x`
+
+**Connection Works in Terminal but Not in VS Code**
+
+- Verify your SSH config file syntax: `cat ~/.ssh/config`
+- Make sure the `Host`, `HostName`, `User`, and `IdentityFile` lines are correct
+- Try connecting via terminal first: `ssh myworkspace`
+
+**Copilot Not Showing Suggestions**
+
+- Check that you're signed in to GitHub Copilot: Look for the Copilot icon in the bottom status bar
+- Verify your Copilot subscription is active
+- Try reloading the VS Code window: `Cmd+Shift+P` / `Ctrl+Shift+P` → "Developer: Reload Window"
+
+**Workspace IP Address Changed**
+
+Workspace IP addresses may change when a workspace is restarted. If you can't connect:
+
+1. Check the current IP in the SRC portal
+2. Update your SSH config file with the new IP
+3. Or connect directly: `ssh username@new-ip-address`
+
+
+## Tips
+
+- **Working directory**: When you connect, you start in your home directory. Use "Open Folder" to navigate to your project
+- **Security**: **Never share your private SSH key. Only the public key (`.pub` file) should be uploaded to SRAM.**
+
+
+If you have any issues or questions, you can [contact us here.](https://www.uu.nl/en/research/research-data-management/contact)
+
+
