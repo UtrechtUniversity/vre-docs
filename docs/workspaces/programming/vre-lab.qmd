@@ -98,9 +98,8 @@ You can also upload data directly to the workspace using the `Upload Files` butt
 
 For larger data transfers, the recommended [iBridges client for Yoda and iRODS](../../manuals/ibridges.qmd) is preinstalled.
 
-### Installing additional software
+{{< include ../partials/sudo-rights.qmd >}}
 
-The user has [admin rights](../../responsible-use.qmd#installation-of-software) to install additional software on the system (on a terminal, use `sudo <yourcommand>`).
 
 ## Tips
 
