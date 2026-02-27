@@ -18,3 +18,25 @@ support: SURF, UU
 
 {{< include partials/_windows.qmd >}}
 
+
+Use this table to find the appropriate data transfer method for your situation:
+
+| Data Source | Recommended Tool | Best For | Skill Level |
+|------------|------------------|----------|-------------|
+| Yoda/iRODS | [iBridges](../../manuals/ibridges.qmd) (Pre-installed on "Windows with iBridges" flavor) | All file sizes, GUI interface | Beginner to Intermediate |
+| Yoda/iRODS | [iCommands](../../manuals/icommands.qmd) | Large datasets, transfer automation, CLI | Intermediate (CLI) |
+| SURFdrive, ResearchDrive, OneDrive | [rclone](../../manuals/rclone-researchcloud.qmd) | Cloud storage sync, scheduled transfers | Intermediate (CLI) |
+| Your PC/laptop  | [scp](../../manuals/ssh-data-transfer-methods.qmd) | Direct one-time transfers | Intermediate (CLI) |
+| Your PC/laptop  | [rsync](../../manuals/ssh-data-transfer-methods.qmd) | Sync or repeated transfers | Intermediate (CLI) |
+| Your PC/laptop (Windows only) | [MobaXterm](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/92668162/Transfer+files+between+to+and+from+the+system#Transferfilesbetweentoandfromthesystem-SFTPforMobaXtermusers) | Graphical SSH/SFTP | Intermediate |
+| Your PC/laptop | [Cyberduck](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/112592488/Upload+data+to+a+workspace+with+Cyberduck) | Graphical SFTP client | Intermediate |
+| GitHub/GitLab | [git clone](../../manuals/git-clone.qmd) | Code repositories, version control | Intermediate (CLI) |
+
+:::{.callout-note}
+# Transferring Single Files via the Desktop Interface
+You can also transfer files directly from your PC to the workspace and vice-versa. **However, this works only for small and individual files**. 
+
+- Open your windows workspace.
+- In the top left, click on the three dots. Then select `Files` from the options that appear.
+- Here you can choose individual files to upload from your local PC to the workspace, or download files from the workspace to your local PC.
+:::
