@@ -1,0 +1,166 @@
+---
+title: Using Git for Data Transfer on SURF Research Cloud
+---
+
+[Git](https://git-scm.com/) is a free-open source, version control system commonly used for managing code and data repositories. This guide shows you how to transfer data from GitHub or GitLab repositories to your SURF Research Cloud workspace.
+
+Utrecht University's RDM team offers [workshops](https://www.uu.nl/en/research/research-data-management/workshops/introduction-to-github) if you want to learn more about Git and version control. 
+
+### When to Use Git
+
+Git is ideal for:
+
+- **Code repositories**: Scripts, notebooks, and source code
+- **Version-controlled data**: Files that change over time and need history tracking
+- **Collaborative projects**: Sharing and syncing work with team members
+
+### Prerequisites
+
+- A [GitHub](https://github.com/) or [GitLab](https://about.gitlab.com/) account with access to the desired repository
+
+## Quick Start: Clone a Repository
+
+All workspaces come with git pre-installed, so you can start cloning repositories right away. You can check the version of git installed by running:
+```bash
+git --version
+```
+
+### Step 1: Get the Repository URL
+
+**From GitHub:**
+
+1. Go to your repository on GitHub
+2. Click the green `Code` button
+3. Copy the HTTPS URL (e.g., `https://github.com/username/repository.git`)
+
+**From GitLab:**
+
+1. Go to your repository on GitLab
+2. Click the `Clone` button
+3. Copy the HTTPS URL
+
+### Step 2: Open a Terminal
+
+- **Python Workbench/CLI workspaces**: Open a terminal
+- **Jupyter Notebook/VRE Lab**: Click `+` in file browser → Select `Terminal`
+- **Windows**: Use PowerShell or Command Prompt
+- **Desktop workspaces**: Open the Terminal application
+
+### Step 3: Clone the Repository
+
+In the terminal, navigate to where you want the repository and run:
+```bash
+git clone https://github.com/username/repository.git 
+#Replace the URL with your actual repository URL.
+```
+
+This creates a folder with all your repository files.
+
+
+## Updating Your Data
+
+If the repository is updated on GitHub/GitLab, pull the latest changes:
+```bash
+cd repository-name  #Replace with your actual repository folder name
+git pull
+```
+
+## Uploading Changes Back (Requires Personal Access Token)
+
+If you've made changes and want to push them back:
+```bash
+git add .
+git commit -m "Description of changes"
+git push
+```
+
+::: {.callout-important}
+## Authentication for Pushing
+
+If you have two-factor authentication (2FA) enabled on GitHub/GitLab, you'll need to use a **Personal Access Token** instead of your password when pushing.
+
+- **GitHub**: [Create a Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
+- **GitLab**: [Create a Personal Access Token](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html)
+
+When prompted for a password, enter your token instead.
+:::
+
+::: {.callout-important}
+**Don't share your Personal Access Token. Treat it like your password**
+:::
+
+## Common Git Commands
+
+| Command | Purpose |
+|---------|---------|
+| `git clone <url>` | Download a repository |
+| `git pull` | Get latest changes from remote |
+| `git status` | Check what files have changed |
+| `git add <file>` | Stage specific file for commit |
+| `git add .` | Stage all changes for commit |
+| `git commit -m "message"` | Save staged changes with a message |
+| `git push` | Upload commits to remote repository |
+| `git log` | View commit history |
+| `git branch` | List branches |
+
+## Using Git in JupyterLab Interface (GUI Alternative)
+
+Workspaces that support JupyterLab ([Jupyter Notebook](../workspaces/programming/jupyter.qmd), [VRE Lab](../workspaces/programming/vre-lab.qmd)) include a built-in Git extension that provides a graphical interface for Git operations, making it easier for users who prefer not to use the command line.
+
+
+### Accessing the Git UI
+
+1. In JupyterLab, look for the [Git icon](https://git-scm.com/community/logos) in the left sidebar
+2. Click it to open the Git panel.
+
+If you don't see it, you can install the extension with `pip install jupyterlab-git`.
+
+### Available Features
+
+The Git UI allows you to:
+
+- **View changes**: See modified, added, and deleted files
+- **Stage/unstage files**: Click the **+** or **-** icons next to files
+- **Commit changes**: Enter a commit message and click "Commit"
+- **Push/pull**: Use the cloud icons to sync with remote repository
+- **View history**: See commit history and branches
+- **Switch branches**: Create and switch between branches
+
+This provides a user-friendly alternative to command-line Git operations, especially useful for beginners.
+
+::: {.callout-note}
+**Authentication:** The same Personal Access Token requirements apply when pushing through the JupyterLab Git UI.
+:::
+
+## Troubleshooting
+
+`git: command not found`
+
+- Git is not installed. 
+- Try installing it with: `sudo apt install git`
+
+**Authentication failed**
+
+- Check if your [Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) or [SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh) are correct
+- Ensure you have access to the repository
+- If you have 2FA enabled, use a [Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) instead of your password
+
+
+**Repository not found**
+
+- Verify the URL is correct
+- If the repository is private, ensure you have permission to access it
+
+**Large files cause errors**
+
+- Consider using [Git LFS](https://git-lfs.com/)
+
+
+## Tips
+
+GitHub user documentation can be found here: [GitHub Docs](https://docs.github.com/en/get-started)
+
+Git documentation can be found here: [Git Documentation](https://git-scm.com/)
+
+
+
