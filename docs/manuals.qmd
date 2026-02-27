@@ -9,7 +9,8 @@ On this page we share manuals for a variety of use cases and tasks.
 - [Data Transfer to and from Yoda using iBridges](manuals/ibridges.qmd)
 - [Data Transfer to and from Yoda using iCommands](manuals/icommands.qmd)
 - [Data Transfer from your computer using scp and rsync](manuals/ssh-data-transfer-methods.qmd)
-- [Data Transfer between Research Cloud and SURFdrive](manuals/rclone-researchcloud.qmd)
+- [Data Transfer between Research Cloud and Online Storage (Surfdrive, Onedrive) using Rclone](manuals/rclone-researchcloud.qmd)
+- [Data Transfer from GitHub/GitLab using Git](manuals/git-clone.qmd)
 
 ### Security
 
