@@ -14,6 +14,8 @@ Git is ideal for:
 - **Version-controlled data**: Files that change over time and need history tracking
 - **Collaborative projects**: Sharing and syncing work with team members
 
+Git is not recommended for research data, although there is nothing wrong with tracking small, non-sensitive data files with Git. 
+
 ### Prerequisites
 
 - A [GitHub](https://github.com/) or [GitLab](https://about.gitlab.com/) account with access to the desired repository
@@ -152,7 +154,7 @@ This provides a user-friendly alternative to command-line Git operations, especi
 
 **Repository not found**
 
-- Verify the URL is correct
+- Verify the URL is correct (e.g. `https` and **not** `ssh`)
 - If the repository is private, ensure you have permission to access it
 
 **Large files cause errors**
