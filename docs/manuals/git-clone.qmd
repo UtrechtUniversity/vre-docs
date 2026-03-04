@@ -4,7 +4,7 @@ title: Using Git for Data Transfer on SURF Research Cloud
 
 [Git](https://git-scm.com/) is a free-open source, version control system commonly used for managing code and data repositories. This guide shows you how to transfer data from GitHub or GitLab repositories to your SURF Research Cloud workspace.
 
-Utrecht University's RDM team offers [workshops](https://www.uu.nl/en/research/research-data-management/workshops/introduction-to-github) if you want to learn more about Git and version control. 
+Utrecht University's RDM support team offers [workshops](https://www.uu.nl/en/research/research-data-management/workshops/introduction-to-github) if you want to learn more about Git and version control. 
 
 ### When to Use Git
 
@@ -48,7 +48,7 @@ git --version
 
 ### Step 3: Clone the Repository
 
-In the terminal, navigate to where you want the repository and run:
+In the terminal, first navigate to the folder where you want to put the repository (e.g. inside your [storage volume](../first-steps.qmd#create-storage-volume) and run:
 ```bash
 git clone https://github.com/username/repository.git 
 #Replace the URL with your actual repository URL.
@@ -59,7 +59,7 @@ This creates a folder with all your repository files.
 
 ## Updating Your Data
 
-If the repository is updated on GitHub/GitLab, pull the latest changes:
+If the repository is updated on GitHub/GitLab, you can pull your changes with the `git pull` command. First make sure you are located in your repository folder:
 ```bash
 cd repository-name  #Replace with your actual repository folder name
 git pull
@@ -84,7 +84,11 @@ If you have two-factor authentication (2FA) enabled on GitHub/GitLab, you'll nee
 
 When prompted for a password, enter your token instead.
 :::
+::: {.callout-important}
+## GitHub repositories within UU GitHub organization
 
+If your repository is part of the [UU GitHub organization](https://github.com/utrechtuniversity), you have to [authorize your personal access token](https://docs.github.com/en/enterprise-cloud@latest/authentication/authenticating-with-single-sign-on/authorizing-a-personal-access-token-for-use-with-single-sign-on).
+:::
 ::: {.callout-important}
 **Don't share your Personal Access Token. Treat it like your password**
 :::
@@ -141,10 +145,10 @@ This provides a user-friendly alternative to command-line Git operations, especi
 
 **Authentication failed**
 
-- Check if your [Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) or [SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh) are correct
+- Check if your [Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
 - Ensure you have access to the repository
 - If you have 2FA enabled, use a [Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) instead of your password
-
+- Ensure your Personal access token is [authorized](https://docs.github.com/en/enterprise-cloud@latest/authentication/authenticating-with-single-sign-on/authorizing-a-personal-access-token-for-use-with-single-sign-on) for Single-Sign on, if your repository is under the UU GitHub organization.
 
 **Repository not found**
 
@@ -153,7 +157,7 @@ This provides a user-friendly alternative to command-line Git operations, especi
 
 **Large files cause errors**
 
-- Consider using [Git LFS](https://git-lfs.com/)
+- [Remove large files from your commits](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github#removing-a-file-added-in-the-most-recent-unpushed-commit)
 
 
 ## Tips
