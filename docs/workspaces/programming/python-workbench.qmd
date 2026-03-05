@@ -92,9 +92,24 @@ See the [poetry docs](https://python-poetry.org/docs/).
 Note that when you create a python environment using any of the tools above, you create a python environment for yourself only and not for others in your [Collaboration](../../glossary.qmd#collaboration). If you collaborate, you colleague should creaate their own python environment. We recommend collaborating using GitHub and `uv` (using a `uv.lock` file) to make sure your environments are the same. If this is not desired, create the environments in a shared location, like `/local-share`.
 :::
 
-{{< include ../partials/_data_transfer.qmd >}}
+### Data Transfer Options
 
-The recommended [iBridges client for Yoda and iRODS](../../manuals/ibridges.qmd) is preinstalled.
+Use this table to find the appropriate data transfer method for your situation:
+
+| Data Source | Recommended Tool | Best For | Skill Level |
+|------------|------------------|----------|-------------|
+| Yoda/iRODS | [iBridges](../../manuals/ibridges.qmd) (Recommended, pre-installed) | All file sizes, GUI and CLI access | Beginner to Intermediate |
+| Yoda/iRODS | [iCommands](../../manuals/icommands.qmd) | Large datasets, transfer automation, CLI | Intermediate (CLI) |
+| SURFdrive, ResearchDrive, OneDrive | [rclone](../../manuals/rclone-researchcloud.qmd) | Cloud storage sync, scheduled transfers | Intermediate (CLI) |
+| Your PC/laptop | Browser upload (Desktop only) | Small files, quick uploads | Beginner (GUI) |
+| Your PC/laptop | [scp](../../manuals/ssh-data-transfer-methods.qmd) | Direct one-time transfers | Intermediate (CLI) |
+| Your PC/laptop | [rsync](../../manuals/ssh-data-transfer-methods.qmd) | Sync or repeated transfers | Intermediate (CLI) |
+| Your PC/laptop (Windows only) | [MobaXterm](https://mobaxterm.mobatek.net/) | Graphical SSH/SFTP client | Intermediate |
+| Your PC/laptop | [Cyberduck](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/112592488/Upload+data+to+a+workspace+with+Cyberduck)| Graphical SFTP client | Intermediate |
+| GitHub/GitLab | [git clone](../../manuals/git-clone.qmd) | Code repositories, version control | Intermediate (CLI) |
+
+See our [data transfer manuals](../../manuals.qmd#data-transfer) for detailed step-by-step guides.
+
 
 #### VSCodium code editor (Desktop only)
 

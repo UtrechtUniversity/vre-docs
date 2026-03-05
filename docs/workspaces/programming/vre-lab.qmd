@@ -91,7 +91,23 @@ After logging in, you'll have access to the [JupyterLab](https://jupyterlab.read
  - Integrated [terminal](https://jupyterlab.readthedocs.io/en/latest/user/terminal.html#terminals) access
 
 {{< include ../partials/_data_transfer.qmd >}}
-You can also upload data directly to the workspace using the `Upload Files` button in the JupyterLab interface.
+
+Use this table to find the appropriate data transfer method for your situation:
+
+| Data Source | Recommended Tool | Best For | Skill Level |
+|------------|------------------|----------|-------------|
+| Your PC/laptop | JupyterLab Upload button | Small files, quick uploads | Beginner (GUI) |
+| Yoda/iRODS | [iBridges](../../manuals/ibridges.qmd) | All file sizes, CLI access | Beginner to Intermediate |
+| Yoda/iRODS | [iCommands](../../manuals/icommands.qmd) | Large datasets, transfer automation, CLI | Intermediate (CLI) |
+| SURFdrive, ResearchDrive, OneDrive | [rclone](../../manuals/rclone-researchcloud.qmd) | Cloud storage sync, scheduled transfers | Intermediate (CLI) |
+| Your PC/laptop | [scp](../../manuals/ssh-data-transfer-methods.qmd) | Direct one-time transfers | Intermediate (CLI) |
+| Your PC/laptop | [rsync](../../manuals/ssh-data-transfer-methods.qmd) | Sync or repeated transfers | Intermediate (CLI) |
+| Your PC/laptop (Windows only) | [MobaXterm](https://mobaxterm.mobatek.net/) | Graphical SSH/SFTP client | Intermediate |
+| Your PC/laptop | [Cyberduck](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/112592488/Upload+data+to+a+workspace+with+Cyberduck)| Graphical SFTP client | Intermediate |
+| GitHub/GitLab | [git clone](../../manuals/git-clone.qmd) | Code repositories, version control | Intermediate (CLI) |
+
+
+You can upload data directly to the workspace using the `Upload Files` button in the JupyterLab interface.
 
 ![Upload Files](../imgs/jupyter-upload-button.png){width=300px}
 
