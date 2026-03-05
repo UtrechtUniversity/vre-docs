@@ -42,9 +42,37 @@ You can login to the workspace in your browser, via [your ResearchCloud time-bas
 
 When logged in you are immediately presented with a JupyterLab environment in which you can work with different notebooks.
 
-{{< include ../partials/_data_transfer.qmd >}}
+### Data Transfer Jupyter Notebook
 
-You will have to run the relevant commands for the data transfer method of your choice from within [the JupyterLab terminal](https://jupyterlab.readthedocs.io/en/latest/user/terminal.html#terminals).
+Use this table to find the appropriate data transfer method for your situation:
+
+| Data Source | Recommended Tool | Best For | Skill Level |
+|------------|------------------|----------|-------------|
+| Your PC/laptop | [JupyterLab Upload button](#using-the-upload-button) | Small files, quick uploads | Beginner (GUI) |
+| Yoda/iRODS | [iBridges](../../manuals/ibridges.qmd) | All file sizes, CLI access | Beginner to Intermediate |
+| Yoda/iRODS | [iCommands](../../manuals/icommands.qmd) | Large datasets, transfer automation, CLI | Intermediate (CLI) |
+| SURFdrive, ResearchDrive, OneDrive | [rclone](../../manuals/rclone-researchcloud.qmd) | Cloud storage sync, scheduled transfers | Intermediate (CLI) |
+| Your PC/laptop | [scp](../../manuals/ssh-data-transfer-methods.qmd) | Direct one-time transfers | Intermediate (CLI) |
+| Your PC/laptop | [rsync](../../manuals/ssh-data-transfer-methods.qmd) | Sync or repeated transfers | Intermediate (CLI) |
+| Your PC/laptop (Windows only) | [MobaXterm](https://mobaxterm.mobatek.net/) | Graphical SSH/SFTP client | Intermediate |
+| Your PC/laptop | [Cyberduck](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/112592488/Upload+data+to+a+workspace+with+Cyberduck)| Graphical SFTP client | Intermediate |
+| GitHub/GitLab | [git clone](../../manuals/git-clone.qmd) | Code repositories, version control | Intermediate (CLI) |
+
+::: {.callout-tip #using-the-upload-button}
+### Using the Upload Button
+
+For small files, use the Upload button in the JupyterLab file browser (left sidebar):
+
+1. Click the **Upload Files** icon (↑) in the file browser toolbar
+2. Select files from your local computer
+3. Files will be uploaded to your current directory
+:::
+
+::: {.callout-note}
+All command-line tools (iBridges CLI, iCommands, rclone, scp/rsync, Git) must be run from the [JupyterLab terminal](https://jupyterlab.readthedocs.io/en/stable/user/terminal.html).
+:::
+
+See our [data transfer manuals](../../manuals.qmd#data-transfer) for detailed step-by-step guides.
 
 
 ### Installing additional software
