@@ -18,6 +18,16 @@ Git is not recommended for research data, although there is nothing wrong with t
 ### Prerequisites
 
 - A [GitHub](https://github.com/) or [GitLab](https://about.gitlab.com/) account with access to the desired repository
+- Experience with Command Line Interface (CLI) is helpful. If you're new to using command line, check out this introductory workshop by Utrecht University's Digital Competence Center: [Introduction to Bash](https://utrechtuniversity.github.io/workshop-introduction-to-bash/).
+
+Commands with git are run with the command line. Follow the instructions below to open a terminal in your workspace.
+
+### Open a Terminal
+
+- **Python Workbench/CLI workspaces**: Open a terminal
+- **Jupyter Notebook/VRE Lab**: Click `+` in file browser → Select `Terminal`
+- **Windows workspaces**: Use PowerShell or Command Prompt
+- **Desktop workspaces**: Open the Terminal application
 
 ## Quick Start: Clone a Repository
 
@@ -40,14 +50,7 @@ git --version
 2. Click the `Clone` button
 3. Copy the HTTPS URL
 
-### Step 2: Open a Terminal
-
-- **Python Workbench/CLI workspaces**: Open a terminal
-- **Jupyter Notebook/VRE Lab**: Click `+` in file browser → Select `Terminal`
-- **Windows**: Use PowerShell or Command Prompt
-- **Desktop workspaces**: Open the Terminal application
-
-### Step 3: Clone the Repository
+### Step 2: Clone the Repository
 
 In the terminal, first navigate to the folder where you want to put the repository (e.g. inside your [storage volume](../first-steps.qmd#create-storage-volume) and run:
 ```bash
