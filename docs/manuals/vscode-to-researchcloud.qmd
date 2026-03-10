@@ -1,0 +1,204 @@
+---
+title: "Connecting to Research Cloud from VS Code"
+---
+
+## Overview
+
+This guide shows you how to connect your local VS Code editor to a SURF Research Cloud workspace using SSH. This allows you to:
+
+- **Edit code locally** with your familiar VS Code setup and extensions.
+- **Execute code remotely** on the workspace with its computing resources and installed software.
+- **Access workspace files** directly from your local editor.
+- **Use workspace Python environments** (`uv`, `conda`, `pyenv`, etc.) seamlessly
+
+::: {.callout-note}
+This method works with **any workspace that has SSH access.**
+:::
+
+## Prerequisites
+
+1. **[A running workspace](../first-steps.qmd#workspace-state)** on SURF Research Cloud
+2. **[VS Code](https://code.visualstudio.com/)** installed on your local computer 
+3. **SSH access configured** Follow the [SSH setup guide](../first-steps.qmd#ssh) to:
+   - Create an SSH key pair on your local computer
+   - Add your public key to SRAM
+   - Test the SSH connection using the workspace IP address and your SRAM username
+
+::: {.callout-tip}
+**Recommended workspaces:** Python Workbench or VRE Lab come with Python environment managers (uv, conda, pyenv) pre-installed, making it easier to manage dependencies for your projects.
+:::
+
+## Setup Instructions
+
+### Step 1: Setup SSH Connection
+
+Make sure you have SSH access set up and tested as described in the prerequisites. This is essential for connecting VS Code to your workspace.
+
+You can find your workspace's IP address (e.g., `145.38.x.x`) by expanding the workspace tile in the SRC portal. Your SRAM username can be found from your profile.
+
+Before configuring your ssh settings, verify that your ssh key is working. On your local computer, open a terminal and run:
+```bash
+ssh -i ~/.ssh/id_ed25519 YOUR_USERNAME@YOUR_PUBLIC_IP
+```
+
+Replace `YOUR_USERNAME` with your SRAM username and `YOUR_PUBLIC_IP` with the IP address of your workspace. 
+If you have an `id_rsa` key instead of `id_ed25519`, adjust the path accordingly.
+
+If you are connecting for the first time, you will see: `Are you sure you want to continue connecting (yes/no)?`. Type `yes` and press Enter to continue. 
+You may also be prompted to enter the passphrase for your SSH key if you set one up. You can press `enter` if you did not set up a passphrase.
+
+If the connection is successful, you should see a welcome message from the server. You can exit the session by typing `exit`.
+
+
+### Step 2: Configure SSH Connection
+
+Create an SSH configuration file to make connecting easier.
+
+On your **local computer**, open a terminal and run:
+```bash
+nano ~/.ssh/config
+```
+
+Add the following configuration (replace with your details):
+```
+Host myworkspace
+  HostName YOUR_WORKSPACE_IP
+  User YOUR_USERNAME
+  IdentityFile ~/.ssh/id_ed25519
+```
+
+- `myworkspace`: Choose a name of your choice for this connection (e.g., `researchcloud`)
+- `YOUR_WORKSPACE_IP`: The public IP address from your workspace tile in the SRC portal
+- `YOUR_USERNAME`: Your SRAM username 
+- Adjust `IdentityFile` if you use `id_rsa` instead of `id_ed25519`
+
+Save the Configuration file:
+
+- Press `Ctrl+O` (save)
+- Press `Enter` (confirm filename)
+- Press `Ctrl+X` (exit nano)
+
+**Test the connection from your local terminal:**
+
+```bash
+ssh myworkspace
+```
+This allows you to connect to your workspace without needing to type your IP address or key each time. Type `exit` to disconnect.
+
+
+### Step 3: Install Remote-SSH Extension in VS Code
+
+1. Open VS Code on your local computer
+2. Click the **Extensions** icon in the left sidebar (or press `Cmd+Shift+X` on Mac / `Ctrl+Shift+X` on Windows)
+3. Search for **"Remote - SSH"** and install the extension by Microsoft.
+
+### Step 4: Connect to Your Workspace
+
+1. In VS Code, press `Cmd+Shift+P` (Mac) / `Ctrl+Shift+P` (Windows) to open the Command Palette
+2. Type **"Remote-SSH: Connect to Host"** and select it
+3. Choose **myworkspace** from the list (or whatever name you used in your SSH config)
+4. A new VS Code window will open
+5. Wait 30-60 seconds while VS Code installs its server components on the workspace (the first time may take longer)
+6. When connected, you'll see **"SSH: myworkspace"** in the bottom left corner
+
+### Step 5: Verify the Connection
+
+1. In VS Code, open a terminal
+2. Run `whoami` - it should show your workspace username (not your local username)
+3. Run `pwd` - it should show your workspace home directory
+
+You're now working on the workspace!
+
+## Using Your Remote Connection
+
+### Opening Files and Folders
+
+- **File** → **Open Folder** to navigate to your workspace directories
+- All files are on the workspace, not your local computer
+- Changes are saved directly to the workspace
+
+### Running Code
+
+- Code executes on the workspace using its Python/R/Julia installations
+- Terminal commands run on the workspace
+- You can use workspace environment managers (uv, conda, pyenv)
+
+### Selecting Python Environments
+
+1. Press **`Cmd+Shift+P`** / **`Ctrl+Shift+P`**
+2. Type **"Python: Select Interpreter"**
+3. Choose from the workspace's available Python environments
+
+### Installing Extensions
+
+If you try to use an extension that is not installed on the workspace, VS Code will prompt you to install it remotely. Click **"Install in SSH: myworkspace"** when prompted.
+
+## Reconnecting
+
+Once configured, reconnecting is simple:
+
+1. Open VS Code
+2. Press **`Cmd+Shift+P`** / **`Ctrl+Shift+P`**
+3. Type **"Remote-SSH: Connect to Host"**
+4. Select `myworkspace`
+
+## Troubleshooting
+
+**"Permission denied (publickey)" error**
+
+- Your SSH key may not be propagated yet. Wait 5-10 minutes after adding it to SRAM
+- Verify your key: `cat ~/.ssh/id_ed25519.pub` matches what's in SRAM
+- Check the [SSH setup guide](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/195854434/Workspace+access+with+SSH)
+
+**"Network is unreachable" error**
+
+- Make sure you're using the **public IP** address (starts with `145.38.x.x`), not the internal IP
+- Check the workspace is running in the SRC portal
+
+**Connection works in terminal but not in VS Code**
+
+- Verify your SSH config file: `cat ~/.ssh/config`
+- Make sure `Host`, `HostName`, `User`, and `IdentityFile` are correct
+- Try `ssh myworkspace` in terminal first
+
+**Workspace IP Address Changed**
+
+Workspace IP addresses may change when a workspace is restarted. If you can't connect:
+
+- Check the current IP address in the SRC portal
+- Update your SSH config file with the new IP addres
+- Or connect directly: `ssh username@new-ip-address`
+
+## Tips
+
+- **Working directory:** When you connect, you start in your home directory. Use "Open Folder" to navigate to your project
+
+:::callout-important
+**Security:** Never share your private SSH key. Only the public key (`.pub` file) goes in SRAM. Keep your private key secure on your local computer.
+:::
+
+---
+
+## FAQ
+
+**Can I use an AI coding assistant on Research Cloud?**
+
+Yes. Once connected via Remote-SSH, you can install AI coding assistant extensions in VS Code (like GitHub Copilot).
+
+::: {.callout-warning}
+**Disclaimer:** We do not endorse using any AI coding assistants. Users are responsible for:
+
+- Ensuring compliance with institutional policies on AI tools
+- Understanding privacy implications of code sent to AI services
+- Reviewing and validating all AI-generated code
+
+Review [Utrecht University policies and guidelines](https://www.uu.nl/en/organisation/ai-policy) on AI use before using AI coding assistants.
+:::
+
+**Note:** AI coding assistants work with any workspace, though workspaces with Python environment managers (Python Workbench, VRE Lab) may be more convenient for development projects.
+
+For detailed instructions on setting up GitHub Copilot, see [Using GitHub Copilot with VS Code.](../manuals/github-copilot.qmd)
+
+---
+
+If you have any issues or questions, you can [contact us here.](https://www.uu.nl/en/research/research-data-management/contact)
