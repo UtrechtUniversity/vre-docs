@@ -1,0 +1,22 @@
+---
+Title: "Install Rclone on Windows Workspaces"
+---
+
+The steps to install Rclone on Windows workspaces are slightly different. Follows the steps below to install Rclone on Windows workspaces.
+
+1. Go to the [Rclone installation page](https://rclone.org/install/) via a web browser in your windows workspace and download the version of Rclone for Windows. The link will be something like `INTEL/AMD - 64 Bit`.
+
+2. Unzip the downloaded file in the File Explorer and move the `rclone.exe` file to a location of your choice. For example, you can create a folder called **rclone.**
+
+3. Open a powershell or command prompt terminal and navigate to the folder where you have placed the `rclone.exe` file. You can do this by using the `cd` command followed by the path to the folder (eg. `cd C:\Users\your-username\path-to-rclone-folder`).
+
+4. To check if Rclone is installed correctly, type the following command in the terminal:
+``` bash
+rclone version
+```
+You should see a version number displayed in the terminal, which means that Rclone is installed correctly. (If you get an error message, make sure you are in the correct folder where rclone.exe is located. Or try running `rclone.exe version`.)
+
+5. Now you can proceed to configure Rclone. Run `rclone.exe config`. 
+
+After this, the steps to work with Rclone in Windows workspaces are the same as described in the [Rclone configuration manual](../manuals/rclone-config.qmd) and the [Rclone data transfer manual](../manuals/rclone-transferringdata.qmd). 
+
