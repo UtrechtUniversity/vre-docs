@@ -99,7 +99,7 @@ Use this table to find the appropriate data transfer method for your situation:
 | Your PC/laptop | JupyterLab Upload button | Small files, quick uploads | Beginner (GUI) |
 | Yoda/iRODS | [iBridges](../../manuals/ibridges.qmd) | All file sizes, CLI access | Beginner to Intermediate |
 | Yoda/iRODS | [iCommands](../../manuals/icommands.qmd) | Large datasets, transfer automation, CLI | Intermediate (CLI) |
-| SURFdrive, ResearchDrive, OneDrive | [rclone](../../manuals/rclone-researchcloud.qmd) | Cloud storage sync, scheduled transfers | Intermediate (CLI) |
+| SURFdrive, ResearchDrive| [rclone](../../manuals/rclone-researchcloud.qmd) | Cloud storage sync, scheduled transfers | Intermediate (CLI) |
 | Your PC/laptop | [scp](../../manuals/ssh-data-transfer-methods.qmd) | Direct one-time transfers | Intermediate (CLI) |
 | Your PC/laptop | [rsync](../../manuals/ssh-data-transfer-methods.qmd) | Sync or repeated transfers | Intermediate (CLI) |
 | Your PC/laptop (Windows only) | [MobaXterm](https://mobaxterm.mobatek.net/) | Graphical SSH/SFTP client | Intermediate |
@@ -111,6 +111,13 @@ You can upload data directly to the workspace using the `Upload Files` button in
 
 ![Upload Files](../imgs/jupyter-upload-button.png){width=300px}
 
+::: {.callout-tip}
+## Transferring from OneDrive
+OneDrive is currently not directly supported with rclone for UU accounts. To transfer files from OneDrive:
+
+1. Download (preferably compress/zip) files from OneDrive to your local PC
+2. Transfer from your PC to the workspace using one of the methods above
+:::
 
 For larger data transfers, the recommended [iBridges client for Yoda and iRODS](../../manuals/ibridges.qmd) is preinstalled.
 
