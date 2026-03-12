@@ -24,7 +24,7 @@ Use this table to find the appropriate data transfer method for your situation:
 | Data Source | Recommended Tool | Best For | Skill Level |
 |------------|------------------|----------|-------------|
 | Yoda/iRODS | [iBridges](../../manuals/ibridges.qmd) (Pre-installed on "Windows with iBridges" flavor) | All file sizes, GUI interface | Beginner to Intermediate |
-| SURFdrive, ResearchDrive, OneDrive | [rclone](../../manuals/rclone-researchcloud.qmd) | Cloud storage sync, scheduled transfers | Intermediate (CLI) |
+| SURFdrive, ResearchDrive| [rclone](../../manuals/rclone-researchcloud.qmd) | Cloud storage sync, scheduled transfers | Intermediate (CLI) |
 | Your PC/laptop  | [scp](../../manuals/ssh-data-transfer-methods.qmd) | Direct one-time transfers | Intermediate (CLI) |
 | Your PC/laptop  | [rsync](../../manuals/ssh-data-transfer-methods.qmd) | Sync or repeated transfers | Intermediate (CLI) |
 | Your PC/laptop (Windows only) | [MobaXterm](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/92668162/Transfer+files+between+to+and+from+the+system#Transferfilesbetweentoandfromthesystem-SFTPforMobaXtermusers) | Graphical SSH/SFTP | Intermediate |
@@ -38,4 +38,12 @@ You can also transfer files directly from your PC to the workspace and vice-vers
 - Open your windows workspace.
 - In the top left, click on the three dots. Then select `Files` from the options that appear.
 - Here you can choose individual files to upload from your local PC to the workspace, or download files from the workspace to your local PC.
+:::
+
+::: {.callout-tip}
+## Transferring from OneDrive
+OneDrive is currently not directly supported with rclone for UU accounts. To transfer files from OneDrive:
+
+1. Download (preferably compress/zip) files from OneDrive to your local PC
+2. Transfer from your PC to the workspace using one of the methods above
 :::
