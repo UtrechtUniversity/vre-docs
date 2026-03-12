@@ -1,10 +1,11 @@
 ---
-title: "Rclone for data transfer between cloud storage and Surf Research Cloud"
+title: "Rclone for data transfer between Surfdrive/Researchdrive and Surf Research Cloud"
 ---
 
-[Rclone](https://rclone.org/) is a convenient tool for fast data transfer between computers (PC, HPC, cloud) and cloud based storage platforms such as Surfdrive, Researchdrive, onedrive, dropbox. 
+[Rclone](https://rclone.org/) is a convenient tool for fast data transfer between computers (PC, HPC, cloud) and cloud based storage platforms such as Surfdrive and Researchdrive.
 
 It is a command line tool, so the user would need some experience with using the command line in order to user Rclone.
+If you're new to using command line, check out this introductory workshop by Utrecht University's Digital Competence Center: [Introduction to Bash](https://utrechtuniversity.github.io/workshop-introduction-to-bash/).
 
 The following steps show how you can use rclone on Research cloud for data transfer to e.g. a Jupyterhub or Rstudio workspace application.
 

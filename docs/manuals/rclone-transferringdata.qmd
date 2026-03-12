@@ -4,10 +4,11 @@ title: "Using Rclone"
 
 For all Rclone commands see: [https://rclone.org/commands/](https://rclone.org/commands/)
 Below are the most useful commands:
-- lsd (listing directories)
-- ls (listing files)
-- copy (copying individual files)
-- sync (copying entire folders)
+
+- `lsd` (listing directories)
+- `ls` (listing files)
+- `copy` (copying individual files)
+- `sync` (copying entire folders)
 
 ### rclone lsd
 
@@ -34,7 +35,7 @@ rclone ls surfdrive:myfolder
 
 ### rclone copy
 
-To copy a file from SURFdrive to a certain folder:
+To copy a file from SURFdrive to a certain folder in your research cloud storage volume, use the `rclone copy` command:
 
 ```
 rclone copy surfdrive:file.txt ./my_destination_folder
