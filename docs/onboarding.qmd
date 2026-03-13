@@ -112,6 +112,11 @@ Perform step 1 and 2 below
 Perform step 1, 2(optional), and 3
 :::
 
+::: {.callout-tip}
+## Security Best Practice
+
+Only grant collaborators the permissions they need. Set an expiration date for memberships when inviting people to your collaboration. See our [tips for secure collaboration](responsible-use.qmd#collaboration-and-access-management) for more guidance.
+:::
 
 ### 1. Invite a new collaborator
 SRAM is used for access management for SURF Research Cloud. It is possible to [invite collaborators to your collaboration (project)](https://servicedesk.surf.nl/wiki/display/IAM/Invite+admins+and+members+to+a+collaboration)
