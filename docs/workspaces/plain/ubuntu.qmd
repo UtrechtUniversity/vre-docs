@@ -1,6 +1,7 @@
 --- 
 title: "Ubuntu"
-software: []
+software: 
+- CUDA (optional)
 login:
 - desktop
 - cli
@@ -12,9 +13,10 @@ data:
 - ResearchDrive
 - irods-icommands
 - Yoda Webdav
+- iBridges (python)
 packages:
 - Custom Packages
-gpu: false
+gpu: true
 admin: true
 support: SURF
 ---

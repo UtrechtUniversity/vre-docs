@@ -1,5 +1,17 @@
 ## Description
 
+::: {.callout-note collapse="true"}
+## CUDA GPU Available
+
+This workspace can be created with or without nvidia CUDA GPU drivers pre-installed.
+
+To create with GPU pre-installed select **Ubuntu Desktop 2204 CUDA** when creating the workspace, 
+
+GPU workspaces consume more credits. See the [cost calculator](../../responsible-use.qmd#cost-calculator) for an estimate.
+
+**Usage is identical** whether you choose CPU or GPU. Only choose GPU workspaces if you need intense computational power. 
+:::
+
 ## Creation
 
 {{< include ../partials/_creation.qmd >}}

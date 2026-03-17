@@ -6,6 +6,18 @@ ResearchCloud allows you to start Windows workspaces that use the Windows Server
 - Windows Server 2019 with CUDA (with GPU support, maintained by SURF)
 - Windows with iBridges (comes with [iBridges for data transfer](../../manuals/ibridges.qmd), maintained by UU)
 
+::: {.callout-note collapse="true"}
+## CUDA GPU Available
+
+This workspace can be created with or without nvidia CUDA GPU drivers pre-installed.
+
+To create with GPU pre-installed select **Windows Server 2019 with CUDA** when creating the workspace, 
+
+GPU workspaces consume more credits. See the [cost calculator](../../responsible-use.qmd#cost-calculator) for an estimate.
+
+**Usage is identical** whether you choose CPU or GPU. Only choose GPU workspaces if you need intense computational power. 
+:::
+
 Simply choose one of these [catalog items](../../glossary.qmd#catalog-item) in the workspace creation wizard.
 
 ## Access

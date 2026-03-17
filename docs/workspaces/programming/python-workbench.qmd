@@ -5,6 +5,7 @@ software:
 - poetry
 - miniconda
 - uv
+- CUDA (optional)
 login:
 - desktop
 - cli
@@ -19,7 +20,7 @@ data:
 - iBridges (python)
 packages:
 - Custom Packages
-gpu: false
+gpu: true
 admin: true
 support: UU
 ---
@@ -39,6 +40,18 @@ There are various flavours of this Catalog Item:
 - Python Workbench Desktop ([login via desktop](../../first-steps.qmd#browser-access-to-a-desktop-environment))
 
 Simply choose the one that is most convenient to you.
+
+::: {.callout-note collapse="true"}
+## CUDA GPU Available
+
+This workspace can be created with or without nvidia CUDA GPU drivers pre-installed.
+
+To create with GPU pre-installed select **Python Workbench CUDA** when creating the workspace, 
+
+GPU workspaces consume more credits. See the [cost calculator](../../responsible-use.qmd#cost-calculator) for an estimate.
+
+**Usage is identical** whether you choose CPU or GPU. Only choose GPU workspaces if you need intense computational power. 
+:::
 
 ## Creation
 
