@@ -2,6 +2,7 @@
 title: "Jupyter Notebooks"
 software:
 - Jupyter Lab
+- CUDA (optional)
 login:
 - webapp-sso
 os_flavor: linux
@@ -13,7 +14,7 @@ data:
 - iBridges (python)
 packages:
 - Custom Packages
-gpu: false
+gpu: true
 admin: true
 support: SURF
 ---
@@ -27,6 +28,18 @@ Jupyter is an open-source web application that allows you to create and share do
 All users in your Collaborative Organisation can login to the workspace and will then be presented with their own notebook environment.
 
 If needed, we can help you to automatically install certain packages when the workspace is created, so that these are available from inside the Jupyter environment immediately. Please [contact us](../../contact.qmd) for this. However, you can of course also install your own dependencies from with the Notebook.
+
+::: {.callout-note collapse="true"}
+## CUDA GPU Available
+
+This workspace can be created with or without nvidia CUDA GPU drivers pre-installed.
+
+To create with GPU pre-installed select **Jupyter Notebook with CUDA** when creating the workspace, 
+
+GPU workspaces consume more credits. See the [cost calculator](../../responsible-use.qmd#cost-calculator) for an estimate.
+
+**Usage is identical** whether you choose CPU or GPU. Only choose GPU workspaces if you need intense computational power. 
+:::
 
 ## Creation
 

@@ -1,6 +1,7 @@
 --- 
 title: "Windows"
-software: []
+software: 
+- CUDA (optional)
 login:
 - desktop
 os_flavor: windows
@@ -11,7 +12,7 @@ data:
 - Yoda Webdav
 packages:
 - Custom Packages
-gpu: false
+gpu: true
 admin: true
 support: SURF, UU
 ---
