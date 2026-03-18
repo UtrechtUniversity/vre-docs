@@ -49,4 +49,4 @@ After logging in, OpenRefine will be accessible through your web browser.
 For detailed guides on using OpenRefine's features, see the [OpenRefine documentation](https://openrefine.org/docs).
 
 ## Tips
-{{< include ../partials/sudo-rights.qmd >}}
+{{< include ../partials/_sudo-rights.qmd >}}

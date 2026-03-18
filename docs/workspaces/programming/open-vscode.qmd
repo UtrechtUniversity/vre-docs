@@ -56,4 +56,4 @@ This workspace includes `uv`, `conda`, and `poetry` for Python environment manag
 Access the integrated terminal with `` Ctrl+` `` or via the Terminal menu. With sudo rights, you can install additional system packages using `sudo apt install`.
 
 ## Tips
-{{< include ../partials/sudo-rights.qmd >}}
+{{< include ../partials/_sudo-rights.qmd >}}

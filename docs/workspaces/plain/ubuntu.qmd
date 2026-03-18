@@ -19,7 +19,23 @@ packages:
 gpu: true
 admin: true
 support: SURF
+workspace_cuda: Ubuntu 2204 with CUDA
 ---
 
-{{< include partials/_ubuntu.qmd >}}
+## Description
+
+{{< include ../partials/_cuda.qmd >}}
+
+
+## Creation
+
+{{< include ../partials/_creation.qmd >}}
+
+## Access
+
+## Data transfer options
+
+## Usage
+
+## Tips
 
