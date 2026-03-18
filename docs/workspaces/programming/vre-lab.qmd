@@ -14,7 +14,7 @@ data:
 - ResearchDrive
 - irods-icommands
 packages: []
-gpu: false
+gpu: true
 admin: true
 support: UU
 workspace_cuda: VRE lab GPU
