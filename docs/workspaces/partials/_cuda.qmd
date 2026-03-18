@@ -1,0 +1,12 @@
+::: {.callout-note collapse="true"}
+## CUDA GPU Available
+
+This workspace can be created with or without nvidia CUDA GPU drivers pre-installed.
+
+To create with GPU pre-installed select **{{< meta workspace_cuda >}}** when creating the workspace, 
+
+GPU workspaces consume more credits. See the [cost calculator](../../responsible-use.qmd#cost-calculator) for an estimate.
+
+A GPU may speed up your code if the (python) libraries that you use are designed to take advantage of GPU acceleration (e.g. Pytorch, Tensorflow, LLMs). Only choose GPU workspaces if you know that this is the case. If you are not sure, [contact us](https://www.uu.nl/en/research/research-data-management/tools/software-and-computing/virtual-research-environments).
+
+:::

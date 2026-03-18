@@ -17,6 +17,8 @@ packages: []
 gpu: false
 admin: true
 support: UU
+workspace_cuda: VRE lab GPU
+
 
 ---
 
@@ -32,6 +34,7 @@ You can automatically install environments and dependencies for Python, R, Julia
 
 If you wish to customise this workspace further by installing system packages or need additional help, you can [contact us](../../contact.qmd)
 
+{{< include ../partials/_cuda.qmd >}}
 
 ## Creation
 
@@ -121,7 +124,7 @@ OneDrive is currently not directly supported with rclone for UU accounts. To tra
 
 For larger data transfers, the recommended [iBridges client for Yoda and iRODS](../../manuals/ibridges.qmd) is preinstalled.
 
-{{< include ../partials/sudo-rights.qmd >}}
+{{< include ../partials/_sudo-rights.qmd >}}
 
 
 ## Tips
