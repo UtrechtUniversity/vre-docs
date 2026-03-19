@@ -1,0 +1,384 @@
+---
+title: "Data Transfer Guide"
+---
+
+## Choosing the Right Data Transfer Method
+
+This guide helps you select the best method to transfer data to your SURF Research Cloud workspace.
+
+
+**Recommended for Most Users**
+
+- For Yoda/iRODS users: [iBridges](ibridges.qmd) is pre-installed on most workspaces and works for all file sizes. Desktop workspaces can use the GUI (Applications → Development → iBridges), while CLI workspaces use the command-line interface.
+
+- For JupyterLab users: Use the Upload button in the JupyterLab file browser for small files for a quick and easy upload.
+
+- For data stored on OneDrive: The easiest method is to download your files (compressed) to your local pc/laptop and then upload to your workspace from there.
+
+
+## Interactive Tool
+```{ojs}
+//| echo: false
+
+// formatting for label/input layout
+html`
+<style>
+  .observablehq label {
+    min-width: 350px !important;
+    display: inline-block !important;
+    vertical-align: top !important;
+    margin-right: 10px !important;
+  }
+  .observablehq select {
+    vertical-align: top !important;
+  }
+  .observablehq input[type="radio"] {
+    vertical-align: top !important;
+  }
+  .observablehq form {
+    margin-bottom: 15px !important;
+  }
+</style>
+`
+
+// Input: Workspace type
+viewof workspaceType = Inputs.select(
+  ["Python Workbench (Desktop)", "Python Workbench (CLI)", "Jupyter Notebook", "VRE Lab", "Windows"],
+  {label: "What workspace are you using?", value: "Python Workbench (Desktop)", width: "auto"}
+)
+
+// Input: Data source
+viewof dataSource = Inputs.select(
+  ["Yoda/iRODS", "SURFdrive/ResearchDrive", "My PC/laptop", "GitHub/GitLab"],
+  {label: "Where is your data stored?", value: "Yoda/iRODS", width: "auto"}
+)
+
+// Input: File characteristics
+viewof fileChar = Inputs.radio(
+  ["Small/medium files", "Large or many (>100) files"],
+  {label: "What are you transferring?", value: "Small/medium files"}
+)
+
+// Input: Skill level
+viewof skillLevel = Inputs.radio(
+  ["Prefer GUI (Graphical Interface)", "Prefer CLI (Command Line)"],
+  {label: "What's your preferred interface?", value: "Prefer GUI (Graphical Interface)"}
+)
+
+// Helper to check workspace type
+isDesktop = workspaceType === "Python Workbench (Desktop)" || workspaceType === "Windows"
+isPythonDesktop = workspaceType === "Python Workbench (Desktop)"
+isPythonCLI = workspaceType === "Python Workbench (CLI)"
+isJupyter = workspaceType === "Jupyter Notebook"
+isVRELab = workspaceType === "VRE Lab"
+isWindows = workspaceType === "Windows"
+
+// Get all applicable tools based on selections
+allOptions = {
+  const options = [];
+  
+  // Yoda/iRODS options
+  if (dataSource === "Yoda/iRODS") {
+    // iBridges GUI (only for desktop workspaces)
+    if (isDesktop) {
+      let ibridgesNote = isWindows ? 
+        'Pre-installed on "Windows with iBridges" flavor' : 
+        'Pre-installed';
+      
+      options.push({
+        tool: "iBridges GUI",
+        link: "ibridges.html",
+        skillLevel: "Beginner ",
+        pros: [ibridgesNote, "User-friendly graphical interface", "Works for all file sizes"],
+        cons: isWindows ? ["Only on Windows with iBridges flavor"] : ["Desktop workspaces only"],
+        bestFor: ["Beginners", "All file sizes", "Visual interface"]
+      });
+    }
+    
+    // iBridges CLI
+    options.push({
+      tool: "iBridges CLI",
+      link: "ibridges.html",
+      skillLevel: "Intermediate (CLI)",
+      pros: ["Pre-installed", "Works on all workspaces", "Supports all file sizes"],
+      cons: ["Requires command line knowledge"],
+      bestFor: ["Users with CLI experience", "All file sizes"]
+    });
+    
+    // iCommands 
+    // iCommand not available on Windows
+    if (!isWindows) {
+      options.push({
+        tool: "iCommands",
+        link: "icommands.html",
+        skillLevel: "Intermediate (CLI)",
+        pros: ["Large datasets", "Transfer automation"],
+        cons: ["Requires command line knowledge", "Not pre-installed on all workspaces"], 
+        bestFor: ["Large datasets", "Automation", "CLI users"]
+      });
+    }
+  }
+  
+  // Cloud storage
+  if (dataSource === "SURFdrive/ResearchDrive") {
+    options.push({
+      tool: "rclone",
+      link: "rclone-researchcloud.html",
+      skillLevel: "Intermediate (CLI)",
+      pros: ["Cloud storage sync", "Scheduled transfers", "Easy to move folders"],
+      cons: ["CLI only"],
+      bestFor: ["Regular syncing", "Cloud storage"]
+    });
+  }
+  
+  // PC/laptop options
+  if (dataSource === "My PC/laptop") {
+    // JupyterLab Upload (Jupyter/VRE Lab only)
+    if (isJupyter || isVRELab) {
+      options.push({
+        tool: "JupyterLab Upload Button",
+        link: null,
+        skillLevel: "Beginner (GUI)",
+        pros: ["Very easy", "Built-in", "No setup"],
+        cons: ["Small-medium files only"],
+        bestFor: ["Quick uploads"]
+      });
+    }
+    
+    // Browser Upload (Python Desktop only)
+    if (isPythonDesktop) {
+      options.push({
+        tool: "Browser Upload",
+        link: null,
+        skillLevel: "Beginner (GUI)",
+        pros: ["Very easy", "No setup"],
+        cons: ["Small-medium files only", "Desktop only"],
+        bestFor: ["Small-medium files", "Quick uploads"]
+      });
+    }
+    
+    // Windows Desktop File Transfer
+    if (isWindows) {
+      options.push({
+        tool: "Windows Desktop File Transfer",
+        link: null,
+        skillLevel: "Beginner (GUI)",
+        pros: ["Very easy", "No setup"],
+        cons: ["Small individual files only", "Does not support folders or large datasets"],
+        bestFor: ["Small individual files"]
+      });
+    }
+    
+    // MobaXterm (only Windows users)
+    options.push({
+      tool: "MobaXterm",
+      link: "https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/9798424/MobaXterm+for+Research+Cloud",
+      skillLevel: "Intermediate",
+      pros: ["Graphical SSH/SFTP "],
+      cons: ["Windows only", "Needs to be installed"],
+      bestFor: ["Windows users", "GUI preference"]
+    });
+    
+    // Cyberduck (for all workspaces)
+    options.push({
+      tool: "Cyberduck",
+      link: "https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/112592488",
+      skillLevel: "Intermediate",
+      pros: ["Graphical SFTP", "All platforms/users", "Ease of use"],
+      cons: ["Need to be setup"],
+      bestFor: ["Frequent transfers", "GUI preference"]
+    });
+    
+    // scp
+    options.push({
+      tool: "scp",
+      link: "ssh-data-transfer-methods.html",
+      skillLevel: "Intermediate (CLI)",
+      pros: ["Direct one-time transfers"],
+      cons: ["CLI only"],
+      bestFor: ["One-time transfers"]
+    });
+    
+    // rsync
+    options.push({
+      tool: "rsync",
+      link: "ssh-data-transfer-methods.html",
+      skillLevel: "Intermediate (CLI)",
+      pros: ["Sync or repeated transfers"],
+      cons: ["CLI only"],
+      bestFor: ["Multiple files", "Repeated transfers"]
+    });
+  }
+  
+  // Git
+  if (dataSource === "GitHub/GitLab") {
+    options.push({
+      tool: "git clone",
+      link: "git-clone.html",
+      skillLevel: "Intermediate (CLI)",
+      pros: ["Code repositories", "Version control"],
+      cons: ["Not for large files", "CLI only"],
+      bestFor: ["GitHub/GitLab repositories"]
+    });
+  }
+  
+  return options;
+}
+
+// Determine recommended option
+recommended = {
+  const opts = allOptions;
+  if (opts.length === 0) return null;
+  
+  const preferGUI = skillLevel === "Prefer GUI (Graphical Interface)";
+  const isLargeMany = fileChar === "Large or many (>100) files";
+  
+  // Yoda/iRODS logic
+  if (dataSource === "Yoda/iRODS") {
+    // GUI preference + Desktop workspace = iBridges GUI
+    if (preferGUI && isDesktop) {
+      return opts.find(o => o.tool === "iBridges GUI");
+    }
+    
+    // Large/many files + CLI preference + not Windows = iCommands
+    if (isLargeMany && !preferGUI && !isWindows) {
+      return opts.find(o => o.tool === "iCommands");
+    }
+    
+    // Default: iBridges CLI
+    return opts.find(o => o.tool === "iBridges CLI");
+  }
+  
+  // Cloud storage = always rclone (CLI only)
+  if (dataSource === "SURFdrive/ResearchDrive") {
+    return opts.find(o => o.tool === "rclone");
+  }
+  
+  // PC/laptop logic
+  if (dataSource === "My PC/laptop") {
+    // Small/medium + GUI preference
+    if (!isLargeMany && preferGUI) {
+      // Jupyter/VRE Lab = Upload button
+      if (isJupyter || isVRELab) {
+        return opts.find(o => o.tool === "JupyterLab Upload Button");
+      }
+      // Python Desktop = Browser upload
+      if (isPythonDesktop) {
+        return opts.find(o => o.tool === "Browser Upload");
+      }
+      // Windows = Desktop transfer
+      if (isWindows) {
+        return opts.find(o => o.tool === "Windows Desktop File Transfer");
+      }
+      // Fallback for GUI = Cyberduck
+      return opts.find(o => o.tool === "Cyberduck");
+    }
+    
+    // Large/many files OR CLI preference
+    if (isLargeMany || !preferGUI) {
+      // Prefer rsync for large/many files or syncing
+      return opts.find(o => o.tool === "rsync");
+    }
+    
+    // Default: scp
+    return opts.find(o => o.tool === "scp");
+  }
+  
+  // Git = always git clone
+  if (dataSource === "GitHub/GitLab") {
+    return opts.find(o => o.tool === "git clone");
+  }
+  
+  return opts[0];
+}
+
+// Get alternative options (all options except recommended)
+alternatives = allOptions.filter(o => o.tool !== recommended?.tool)
+
+// Display
+html`
+<div style="margin: 20px 0;">
+  ${recommended ? html`
+    <div style="background-color: #e8f4f8; border-left: 4px solid #0066cc; padding: 20px; margin-bottom: 20px; border-radius: 4px;">
+      <h3 style="margin-top: 0; color: #0066cc;">✅ Recommended Method</h3>
+      <p style="font-size: 20px; font-weight: bold; margin: 10px 0; color: #0066cc;">
+        ${recommended.tool}
+      </p>
+      <p style="margin: 10px 0;">
+        <strong>Skill Level:</strong> ${recommended.skillLevel}
+      </p>
+      <div style="margin: 10px 0;">
+        <strong>Pros:</strong>
+        <ul style="margin: 5px 0; padding-left: 20px;">
+          ${recommended.pros.map(pro => html`<li>${pro}</li>`)}
+        </ul>
+      </div>
+      ${recommended.cons.length > 0 ? html`
+        <div style="margin: 10px 0;">
+          <strong>Limitations:</strong>
+          <ul style="margin: 5px 0; padding-left: 20px;">
+            ${recommended.cons.map(con => html`<li>${con}</li>`)}
+          </ul>
+        </div>
+      ` : ''}
+      <div style="margin: 10px 0;">
+        <strong>Best For:</strong> ${recommended.bestFor.join(", ")}
+      </div>
+      ${recommended.link ? html`
+        <p style="margin: 15px 0 0 0;">
+          <a href="${recommended.link}" style="color: #0066cc; text-decoration: none; font-weight: bold; font-size: 16px;">
+            → View detailed instructions
+          </a>
+        </p>
+      ` : html`
+        <p style="margin: 15px 0 0 0; color: #7e7575; font-style: italic;">
+          See workspace documentation for instructions 
+        </p>
+      `}
+    </div>
+  ` : ''}
+  
+  ${alternatives.length > 0 ? html`
+    <div style="border-top: 2px solid #ddd; padding-top: 20px;">
+      <h3 style="color: #666; margin-top: 0;">Alternative Options</h3>
+      ${alternatives.map(opt => html`
+        <div style="background-color: #f9f9f9; border-left: 3px solid #999; padding: 15px; margin-bottom: 15px; border-radius: 4px;">
+          <p style="font-size: 16px; font-weight: bold; margin: 0 0 8px 0; color: #333;">
+            ${opt.tool}
+          </p>
+          <p style="margin: 5px 0; font-size: 14px; color: #666;">
+            <strong>Skill Level:</strong> ${opt.skillLevel}
+          </p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 10px 0; font-size: 14px;">
+            <div>
+              <strong style="color: #1fba43;">Pros:</strong>
+              <ul style="margin: 5px 0; padding-left: 20px;">
+                ${opt.pros.map(pro => html`<li>${pro}</li>`)}
+              </ul>
+            </div>
+            ${opt.cons.length > 0 ? html`
+              <div>
+                <strong style="color: #dc3545;">Limitations:</strong>
+                <ul style="margin: 5px 0; padding-left: 20px;">
+                  ${opt.cons.map(con => html`<li>${con}</li>`)}
+                </ul>
+              </div>
+            ` : ''}
+          </div>
+          ${opt.link ? html`
+            <a href="${opt.link}" style="color: #0066cc; text-decoration: none; font-size: 14px;">
+              → View instructions
+            </a>
+          ` : ''}
+        </div>
+      `)}
+    </div>
+  ` : ''}
+</div>
+`
+```
+
+
+## All Data Transfer Methods
+
+For detailed step-by-step instructions, see all the manuals in the [Data Transfer section](../manuals.qmd#data-transfer)

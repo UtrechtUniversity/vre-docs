@@ -6,6 +6,8 @@ On this page we share manuals for a variety of use cases and tasks.
 
 ### Data Transfer
 
+To find the best data transfer method for your situation, check out this [**Interactive Data Transfer Guide.**](manuals/data-transfer-options.qmd)
+
 - [Data Transfer to and from Yoda using iBridges](manuals/ibridges.qmd)
 - [Data Transfer to and from Yoda using iCommands](manuals/icommands.qmd)
 - [Data Transfer from your computer using scp and rsync](manuals/ssh-data-transfer-methods.qmd)
