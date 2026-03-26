@@ -49,7 +49,7 @@ viewof workspaceType = Inputs.select(
 
 // Input: Data source
 viewof dataSource = Inputs.select(
-  ["Yoda/iRODS", "SURFdrive/ResearchDrive", "My PC/laptop", "GitHub/GitLab", "OneDrive"],
+  ["Yoda/iRODS", "SURFdrive/ResearchDrive", "OneDrive", "My PC/laptop", "GitHub/GitLab"],
   {label: "Where is your data stored?", value: "Yoda/iRODS", width: "auto"}
 )
 
@@ -88,7 +88,7 @@ allOptions = {
       options.push({
         tool: "iBridges GUI",
         link: "ibridges.html",
-        skillLevel: "Beginner ",
+        skillLevel: "Beginner",
         pros: [ibridgesNote, "User-friendly graphical interface", "Works for all file sizes"],
         cons: isWindows ? ["Only on Windows with iBridges flavor"] : ["Desktop workspaces only"],
         bestFor: ["Beginners", "All file sizes", "Visual interface"]
@@ -105,29 +105,157 @@ allOptions = {
       bestFor: ["Users with CLI experience", "All file sizes"]
     });
     
-    // iCommands 
-    // iCommand not available on Windows
+    // iCommands (NOT for Windows)
     if (!isWindows) {
       options.push({
         tool: "iCommands",
         link: "icommands.html",
         skillLevel: "Intermediate (CLI)",
         pros: ["Large datasets", "Transfer automation"],
-        cons: ["Requires command line knowledge", "Not pre-installed on all workspaces"], 
+        cons: ["Requires command line knowledge", "Not pre-installed on all workspaces"],
         bestFor: ["Large datasets", "Automation", "CLI users"]
       });
     }
   }
-  
-  // Cloud storage
+
+  // SURFdrive/ResearchDrive
   if (dataSource === "SURFdrive/ResearchDrive") {
+    // rclone (recommended tool)
     options.push({
       tool: "rclone",
       link: "rclone-researchcloud.html",
       skillLevel: "Intermediate (CLI)",
       pros: ["Cloud storage sync", "Scheduled transfers", "Easy to move folders"],
       cons: ["CLI only"],
-      bestFor: ["Regular syncing", "Cloud storage"]
+      bestFor: ["Regular syncing", "Cloud storage", "Large datasets"]
+    });
+    
+    // Desktop Browser option (for desktop workspaces)
+    if (isDesktop) {
+      options.push({
+        tool: "Desktop Browser",
+        link: null,
+        skillLevel: "Beginner (GUI)",
+        pros: ["Very easy", "Direct access", "No setup", "Can download and upload files directly"],
+        cons: ["Desktop workspaces only"],
+        bestFor: ["Desktop workspaces", "Small-medium files"],
+        steps: ["Open a web browser in your workspace", "Go to https://surfdrive.surf.nl or https://uu.data.surf.nl and login", "Download or upload files directly from there."]
+      });
+    }
+    
+    // Upload options (if syncing cloud locally)
+    if (isJupyter || isVRELab) {
+      options.push({
+        tool: "JupyterLab Upload Button (if cloud storage synced locally)",
+        link: null,
+        skillLevel: "Beginner (GUI)",
+        pros: ["Very easy", "Straightforward"],
+        cons: ["Only if you sync SURFdrive/Researchdrive to your PC", "Small-medium files only"],
+        bestFor: ["If you sync SURFdrive locally"],
+        steps: ["Upload via upload button in jupyterlab interface and choose files from your locally synced cloud folder"]
+      });
+    }
+    
+    if (isPythonDesktop) {
+      options.push({
+        tool: "Browser Upload (if cloud storage synced locally)",
+        link: null,
+        skillLevel: "Beginner (GUI)",
+        pros: ["Easy", "Built-in"],
+        cons: ["Only if you sync SURFdrive to your PC", "Small-medium files only"],
+        bestFor: ["If you sync SURFdrive locally"],
+        steps: ["Upload via browser upload and choose files from your locally synced cloud folder"]
+      });
+    }
+  }
+    
+  // OneDrive - show PC/laptop methods as alternatives
+  if (dataSource === "OneDrive") {
+    // Desktop Browser for desktop workspaces
+    if (isDesktop) {
+      options.push({
+        tool: "Desktop Browser",
+        link: null,
+        skillLevel: "Beginner (GUI)",
+        pros: ["Very easy", "Direct access", "No setup", "Can download and upload files directly"],
+        cons: ["Desktop workspaces only"],
+        bestFor: ["Desktop workspaces", "Small-medium files"],
+        steps: ["Open a web browser in your workspace", "Go to https://onedrive.live.com/login and login", "Download or upload files directly from there"]
+      });
+    }
+    
+    // Add all PC/laptop upload options as alternatives
+    if (isJupyter || isVRELab) {
+      options.push({
+        tool: "JupyterLab Upload Button",
+        link: null,
+        skillLevel: "Beginner (GUI)",
+        pros: ["Very easy", "Built-in"],
+        cons: ["Requires downloading to PC first", "Small-medium files only"],
+        bestFor: ["After downloading from OneDrive to PC"],
+        steps: ["Download files from OneDrive to your PC", "Upload via JupyterLab upload button"]
+      });
+    }
+    
+    if (isPythonDesktop) {
+      options.push({
+        tool: "Browser Upload",
+        link: null,
+        skillLevel: "Beginner (GUI)",
+        pros: ["Easy", "Built-in"],
+        cons: ["Requires downloading to PC first", "Small-medium files only"],
+        bestFor: ["After downloading from OneDrive to PC"],
+        steps: ["Download files from OneDrive to your PC", "Upload via browser upload"]
+      });
+    }
+    
+    if (isWindows) {
+      options.push({
+        tool: "Windows Desktop File Transfer",
+        link: null,
+        skillLevel: "Beginner (GUI)",
+        pros: ["Easy", "Built-in"],
+        cons: ["Requires downloading to PC first", "Small individual files only"],
+        bestFor: ["After downloading from OneDrive to PC"],
+        steps: ["Download files from OneDrive to your PC", "Use desktop file transfer"]
+      });
+    }
+    
+    // Add SSH/SFTP tools
+    options.push({
+      tool: "Cyberduck",
+      link: "https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/112592488",
+      skillLevel: "Intermediate",
+      pros: ["Graphical SFTP", "All platforms"],
+      cons: ["Requires downloading to PC first", "Need to be setup"],
+      bestFor: ["After downloading from OneDrive to PC"]
+    });
+    
+    options.push({
+      tool: "MobaXterm",
+      link: "https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/9798424/MobaXterm+for+Research+Cloud",
+      skillLevel: "Intermediate",
+      pros: ["Graphical SSH/SFTP"],
+      cons: ["Windows only", "Requires downloading to PC first"],
+      bestFor: ["Windows users", "After downloading from OneDrive"]
+    });
+    
+    options.push({
+      tool: "scp",
+      link: "ssh-data-transfer-methods.html",
+      skillLevel: "Intermediate (CLI)",
+      pros: ["Direct transfers"],
+      cons: ["CLI only", "Requires downloading to PC first"],
+      bestFor: ["After downloading from OneDrive to PC"]
+    });
+    
+    options.push({
+      tool: "rsync",
+      link: "ssh-data-transfer-methods.html",
+      skillLevel: "Intermediate (CLI)",
+      pros: ["Efficient for multiple files"],
+      cons: ["CLI only", "Requires downloading to PC first"],
+      bestFor: ["After downloading from OneDrive to PC"]
     });
   }
   
@@ -169,17 +297,17 @@ allOptions = {
       });
     }
     
-    // MobaXterm (only Windows users)
+    // MobaXterm (Windows users)
     options.push({
       tool: "MobaXterm",
       link: "https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/9798424/MobaXterm+for+Research+Cloud",
       skillLevel: "Intermediate",
-      pros: ["Graphical SSH/SFTP "],
+      pros: ["Graphical SSH/SFTP"],
       cons: ["Windows only", "Needs to be installed"],
       bestFor: ["Windows users", "GUI preference"]
     });
     
-    // Cyberduck (for all workspaces)
+    // Cyberduck (all platforms)
     options.push({
       tool: "Cyberduck",
       link: "https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/112592488",
@@ -235,56 +363,73 @@ recommended = {
   
   // Yoda/iRODS logic
   if (dataSource === "Yoda/iRODS") {
-    // GUI preference + Desktop workspace = iBridges GUI
     if (preferGUI && isDesktop) {
       return opts.find(o => o.tool === "iBridges GUI");
     }
-    
-    // Large/many files + CLI preference + not Windows = iCommands
     if (isLargeMany && !preferGUI && !isWindows) {
       return opts.find(o => o.tool === "iCommands");
     }
-    
-    // Default: iBridges CLI
     return opts.find(o => o.tool === "iBridges CLI");
   }
   
-  // Cloud storage = always rclone (CLI only)
+  // SURFdrive/ResearchDrive = always rclone
   if (dataSource === "SURFdrive/ResearchDrive") {
     return opts.find(o => o.tool === "rclone");
   }
   
+  // OneDrive - special message based on workspace type
+  if (dataSource === "OneDrive") {
+    if (isDesktop) {
+      return {
+        tool: "Open browser in workspace, login to OneDrive",
+        link: null,
+        skillLevel: "N/A",
+        pros: ["OneDrive has no direct transfer tool for Research Cloud"],
+        cons: [],
+        bestFor: [
+          "Open a browser in your workspace",
+          "Go to https://onedrive.live.com/login and login",
+          "Download or upload files directly in the workspace"
+        ]
+      };
+    } else {
+      return {
+        tool: "Download to PC first, then transfer",
+        link: null,
+        skillLevel: "N/A",
+        pros: ["OneDrive has no direct transfer tool for Research Cloud"],
+        cons: [],
+        bestFor: [
+          "Download files from OneDrive to your PC/laptop first",
+          "Then use any PC/laptop upload method listed below"
+        ]
+      };
+    }
+  }
+  
   // PC/laptop logic
   if (dataSource === "My PC/laptop") {
-    // Small/medium + GUI preference
     if (!isLargeMany && preferGUI) {
-      // Jupyter/VRE Lab = Upload button
       if (isJupyter || isVRELab) {
         return opts.find(o => o.tool === "JupyterLab Upload Button");
       }
-      // Python Desktop = Browser upload
       if (isPythonDesktop) {
         return opts.find(o => o.tool === "Browser Upload");
       }
-      // Windows = Desktop transfer
       if (isWindows) {
         return opts.find(o => o.tool === "Windows Desktop File Transfer");
       }
-      // Fallback for GUI = Cyberduck
       return opts.find(o => o.tool === "Cyberduck");
     }
     
-    // Large/many files OR CLI preference
     if (isLargeMany || !preferGUI) {
-      // Prefer rsync for large/many files or syncing
       return opts.find(o => o.tool === "rsync");
     }
     
-    // Default: scp
     return opts.find(o => o.tool === "scp");
   }
   
-  // Git = always git clone
+  // Git
   if (dataSource === "GitHub/GitLab") {
     return opts.find(o => o.tool === "git clone");
   }
@@ -304,14 +449,18 @@ html`
       <p style="font-size: 20px; font-weight: bold; margin: 10px 0; color: #0066cc;">
         ${recommended.tool}
       </p>
-      <p style="margin: 10px 0;">
-        <strong>Skill Level:</strong> ${recommended.skillLevel}
-      </p>
+      ${recommended.skillLevel !== "N/A" ? html`
+        <p style="margin: 10px 0;">
+          <strong>Skill Level:</strong> ${recommended.skillLevel}
+        </p>
+      ` : ''}
       <div style="margin: 10px 0;">
-        <strong>Pros:</strong>
-        <ul style="margin: 5px 0; padding-left: 20px;">
-          ${recommended.pros.map(pro => html`<li>${pro}</li>`)}
-        </ul>
+        ${recommended.pros.length > 0 ? html`
+          <strong>${recommended.skillLevel === "N/A" ? "Note:" : "Pros:"}</strong>
+          <ul style="margin: 5px 0; padding-left: 20px;">
+            ${recommended.pros.map(pro => html`<li>${pro}</li>`)}
+          </ul>
+        ` : ''}
       </div>
       ${recommended.cons.length > 0 ? html`
         <div style="margin: 10px 0;">
@@ -322,7 +471,10 @@ html`
         </div>
       ` : ''}
       <div style="margin: 10px 0;">
-        <strong>Best For:</strong> ${recommended.bestFor.join(", ")}
+        <strong>${recommended.skillLevel === "N/A" ? "Steps:" : "Best For:"}</strong>
+        <ul style="margin: 5px 0; padding-left: 20px;">
+          ${recommended.bestFor.map(item => html`<li>${item}</li>`)}
+        </ul>
       </div>
       ${recommended.link ? html`
         <p style="margin: 15px 0 0 0;">
@@ -332,7 +484,9 @@ html`
         </p>
       ` : html`
         <p style="margin: 15px 0 0 0; color: #7e7575; font-style: italic;">
-          See workspace documentation for instructions 
+          ${recommended.skillLevel === "N/A" ? 
+            "See the alternative options below for specific transfer methods" : 
+            "See workspace documentation for instructions"}
         </p>
       `}
     </div>
@@ -349,6 +503,16 @@ html`
           <p style="margin: 5px 0; font-size: 14px; color: #666;">
             <strong>Skill Level:</strong> ${opt.skillLevel}
           </p>
+          
+          ${opt.steps ? html`
+            <div style="margin: 10px 0; font-size: 14px;">
+              <strong>Steps:</strong>
+              <ol style="margin: 5px 0; padding-left: 20px;">
+                ${opt.steps.map(step => html`<li>${step}</li>`)}
+              </ol>
+            </div>
+          ` : ''}
+          
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 10px 0; font-size: 14px;">
             <div>
               <strong style="color: #1fba43;">Pros:</strong>
