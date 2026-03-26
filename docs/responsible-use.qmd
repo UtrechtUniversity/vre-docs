@@ -257,6 +257,17 @@ For cases where data is so sensitive that only a data manager or an external dat
 
 There is also a variant of SANE in which the researcher is required to interact with the data 'blindly'.
 
+## Collaboration and Access Management
+
+When working with collaborators on Research Cloud, follow the principle of least privilege to maintain security:
+
+- **Grant minimal permissions**: Only give collaborators the specific permissions they need for their role (see [Adding Collaborators](onboarding.qmd#add-collaborators-to-existing-project) for permission levels)
+- **Set expiration dates**: Add an end date to memberships in SRAM when inviting collaborators. This ensures access automatically expires when people leave the project
+- **Review access regularly**: Periodically review who has access to your collaboration in SRAM and remove members who no longer need access
+- **Use groups wisely**: Use [SRAM groups](https://servicedesk.surf.nl/wiki/display/IAM/Manage+groups+of+collaboration+members) to organize permissions - don't give everyone full admin rights unless required.
+
+Following these practices minimizes the risk of unauthorized access to your data and helps maintain compliance with data protection requirements.
+
 ## Security incidents
 If you believe there has been (suspected) misuse or unauthorized use of login details and / or VRE, please report this to [CERT](https://www.uu.nl/en/organisation/information-and-technology-services-its/computer-emergency-response-team-cert-uu) or send an email to its.ris@uu.nl and "pause" your VRE using the SURF Research Cloud portal.
 

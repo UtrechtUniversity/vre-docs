@@ -112,9 +112,18 @@ Perform step 1 and 2 below
 Perform step 1, 2(optional), and 3
 :::
 
+::: {.callout-tip}
+## Security Best Practice
+
+Only grant collaborators the permissions they need. Set an expiration date for memberships when inviting people to your collaboration. See our [tips for secure collaboration](responsible-use.qmd#collaboration-and-access-management) for more guidance.
+:::
 
 ### 1. Invite a new collaborator
-SRAM is used for access management for SURF Research Cloud. It is possible to [invite collaborators to your collaboration (project)](https://servicedesk.surf.nl/wiki/display/IAM/Invite+admins+and+members+to+a+collaboration)
+SURF Research Cloud uses SRAM to control who can access your project's workspaces and resources. 
+
+Before someone can use workspaces in your collaboration, they must first be invited and accept the membership. Once they accept, they can log in to running workspaces but by default they cannot create, pause, or delete workspaces until you grant additional permissions. Inviting collaborators through SRAM ensures secure, traceable access management and lets you control exactly what each team member can do.
+
+See this guide to [invite collaborators to your collaboration (project).](https://servicedesk.surf.nl/wiki/display/IAM/Invite+admins+and+members+to+a+collaboration)
 
 ::: {.callout-note collapse="true"}
 ## Who can I invite?
@@ -122,11 +131,21 @@ SRAM is used for access management for SURF Research Cloud. It is possible to [i
 It is possible to invite anyone who has an email address to join your project. Students and employees from most Universities (and Universities of Applied Sciences) will be able to login to SRAM using their institution credentials. Collaborators from abroad or e.g. private sector can create an [eduID](https://eduid.nl/) first and then use that to login to SRAM and accept the invitation.
 :::
 
-### 2. Workspace admins
-In SRAM there are [groups](https://servicedesk.surf.nl/wiki/display/IAM/Manage+groups+of+collaboration+members) that can be used to grant members of your collaboration to the right to [pause, resume and delete workspaces](https://servicedesk.surf.nl/wiki/display/WIKI/Sharing+control%3A+workspace+admin)
+### 2. Grant Workspace Admins Rights
+By default, only the person who creates a workspace can pause, resume, or delete it. This can be limiting when working in teams.
 
-### 3. Share your wallet
-In SRAM there are [groups](https://servicedesk.surf.nl/wiki/display/IAM/Manage+groups+of+collaboration+members) that can be used to grant members of your collaboration to the right to [create new workspaces using the wallet of your project](https://servicedesk.surf.nl/wiki/display/WIKI/Access+to+project+wallet)
+SRAM groups solve this by allowing you to share workspace management rights with other team members. By adding collaborators to the `src_ws_admin` group, you give them control over the workspaces in your collaboration without giving them access to the project budget. This is useful when multiple team members need to manage workspaces but shouldn't be able to create new resources or spend credits.
+
+Follow the guides on how to [create and manage groups](https://servicedesk.surf.nl/wiki/display/IAM/Manage+groups+of+collaboration+members) and how to grant members of your collaboration the right to [pause, resume and delete workspaces](https://servicedesk.surf.nl/wiki/display/WIKI/Sharing+control%3A+workspace+admin)
+
+### 3. Grant Wallet Access
+By default, only collaboration admins can create new workspaces. This can slow down research when team members need to provision their own resources.
+
+SRAM groups enable you to delegate workspace creation rights. By adding collaborators to the `src_co_wallet` group, you give them permission to create workspaces and storage volumes using the project's shared budget.
+
+This is beneficial for collaborative research where multiple team members need autonomy to start their own workspaces, but should only be granted to trusted members since they'll be able to spend project credits.
+
+Follow the guides on how to [create and manage groups](https://servicedesk.surf.nl/wiki/display/IAM/Manage+groups+of+collaboration+members) and how to grant members of your collaboration the right to [create new workspaces using the wallet of your project](https://servicedesk.surf.nl/wiki/display/WIKI/Access+to+project+wallet)
 
 ## Next
 When your collaboration and wallet is ready, see this page for [first steps](first-steps.qmd).
