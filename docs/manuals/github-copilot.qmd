@@ -1,0 +1,97 @@
+---
+title: "Using GitHub Copilot with Local VSCode on SURF Research Cloud"
+---
+
+# Overview
+
+This guide explains how to use [GitHub Copilot](https://github.com/features/copilot) via your local VSCode while working on SURF Research Cloud. 
+
+::: {.callout-warning}
+## Disclaimer
+
+Utrecht University does not endorse using AI coding assistants. Users are solely responsible for:
+
+- **Compliance:** Ensuring use complies with institutional policies on AI tools
+- **Privacy:** Understanding that code may be sent to external AI services
+- **Validation:** Reviewing and validating all AI-generated code
+- **Licensing:** Checking terms of service and licensing requirements
+
+Review [Utrecht University's AI policy and guidelines](https://www.uu.nl/en/organisation/ai-policy) before using AI coding assistants.
+:::
+
+## How It Works
+
+When you connect your local VS Code to a Research Cloud workspace via SSH:
+
+- **Your local VS Code** acts as the interface with AI assistant extensions installed locally
+- **Code executes on the workspace** using the workspace's Python environments, libraries, and resources
+- **AI assistants run locally** but can suggest code that runs remotely on the workspace
+
+## Prerequisites
+
+1. [VS Code](https://code.visualstudio.com/) connected to your workspace via SSH. Follow our [Connecting to Research Cloud from VS Code](../manuals/vscode-to-researchcloud.qmd) guide first.
+2. Subscription to [GitHub Copilot.](https://github.com/features/copilot)
+
+::: {.callout-tip}
+**Recommended workspaces:** While AI assistants work with any workspace, those with Python environment managers pre-installed (Python Workbench, VRE Lab) make it easier to manage project dependencies.
+:::
+
+
+## Setup Instructions
+
+### Step 1: Connect to Your Workspace
+
+1. Open VS Code on your local computer
+2. Connect to your workspace via [Remote-SSH](../manuals/vscode-to-researchcloud.qmd)
+3. Verify you're connected by checking for **"SSH: myworkspace"** in the bottom left corner
+
+### Step 2: Install GitHub Copilot Assistant Extension
+
+1. In VS Code, click the **Extensions** icon (left sidebar) or press `Cmd+Shift+X` (Mac) / `Ctrl+Shift+X` (Windows)
+2. Search for **"GitHub Copilot"**
+3. Click **Install**
+4. When prompted, **sign in to GitHub**
+5. **Authorize GitHub Copilot** when prompted
+6. Verify your Copilot subscription is active
+7. You can now use GitHub Copilot in your VS Code connected to the your workspace
+
+
+### Working with Workspace Environments
+
+Since your code runs on the workspace:
+
+1. **Select the correct Python interpreter:**
+   - Press `Cmd+Shift+P` / `Ctrl+Shift+P`
+   - Type "Python: Select Interpreter"
+   - Choose from workspace environments (uv, conda, pyenv)
+
+2. **Import workspace libraries:**
+   - AI assistants can suggest code using libraries installed on the workspace
+   - Make sure the environment has the necessary packages installed
+
+3. **Run code on the workspace:**
+   - Terminal commands execute on the workspace
+   - File paths reference workspace directories
+
+### Best Practices
+
+- **Review all AI-generated code** before using it
+- **Test thoroughly** - AI suggestions aren't always correct
+- **Be aware of data sensitivity** - avoid sending confidential code/data to AI services
+- **Check licensing** - ensure AI-generated code doesn't violate licenses
+- **Use AI as a tool, not a replacement** for understanding your code
+
+## Privacy and Security Considerations
+
+::: {.callout-important}
+## Important Privacy Notes
+
+- **Code is sent to external servers:** AI assistants send your code to their servers for processing
+- **Avoid sensitive data:** Don't include passwords, API keys, or confidential information in code when using AI assistants
+- **Check institutional policies:** Ensure your use complies with your institution's data protection requirements
+- **Review terms of service:** Understand how your code and data are used by the AI service
+:::
+
+If you have any issues or questions, you can [contact us here.](https://www.uu.nl/en/research/research-data-management/contact)
+
+
