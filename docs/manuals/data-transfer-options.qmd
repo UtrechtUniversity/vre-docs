@@ -49,7 +49,7 @@ viewof workspaceType = Inputs.select(
 
 // Input: Data source
 viewof dataSource = Inputs.select(
-  ["Yoda/iRODS", "SURFdrive/ResearchDrive", "My PC/laptop", "GitHub/GitLab"],
+  ["Yoda/iRODS", "SURFdrive/ResearchDrive", "My PC/laptop", "GitHub/GitLab", "OneDrive"],
   {label: "Where is your data stored?", value: "Yoda/iRODS", width: "auto"}
 )
 
