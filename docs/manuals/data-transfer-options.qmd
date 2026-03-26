@@ -13,7 +13,7 @@ This guide helps you select the best method to transfer data to your SURF Resear
 
 - For JupyterLab users: Use the Upload button in the JupyterLab file browser for small files for a quick and easy upload.
 
-- For data stored on OneDrive: The easiest method is to download your files (compressed) to your local pc/laptop and then upload to your workspace from there.
+- In the context of Research Cloud, SURFdrive and Research Drive are recommended over OneDrive, as there is no good data transfer tool available for OneDrive at this moment. 
 
 
 ## Interactive Tool
