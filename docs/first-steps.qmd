@@ -38,6 +38,9 @@ In the Research Cloud portal:
 When you created a workspace and chose to attach a storage volume to the workspace (see below), the storage volume can be found under the directory path: `/data`
 Typically you want to create a project folder on the storage volume (e.g. `/data/my_storage/my_project`).
 
+### Attaching storage to a paused workspace
+You can also attach a storage volume to a pause workspace by expanding the workspace tile, selecting 'Storage' from the options, and then attaching the relevant storage volume. This is useful if you forgot to attach a storage volume when creating a workspace, or if you want to attach a different storage volume.
+
 ## Create a workspace
 A workspace can also be called a 'Virtual Machine' or a 'Server'. It is a temporary 'remote' machine that you can login to and that has you can use to perform analyses or model runs. You 'pay' for the machine with the credits from your wallet until the workspace is being 'paused' or 'deleted'. The more compute power you select the more credits it costs and the sooner your wallet will be empty.
 
