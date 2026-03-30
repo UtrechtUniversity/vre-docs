@@ -16,7 +16,7 @@ This guide helps you select the best method to transfer data to your SURF Resear
 - In the context of Research Cloud, SURFdrive and Research Drive are recommended over OneDrive, as there is no good data transfer tool available for OneDrive at this moment. 
 
 
-## Interactive Tool
+## Select your data transfer tool
 ```{ojs}
 //| echo: false
 
