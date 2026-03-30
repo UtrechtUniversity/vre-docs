@@ -239,7 +239,8 @@ Ubuntu Linux workspaces on ResearchCloud currently have automatic operating syst
 For longer-living workspaces, UU also requires use of scanning tools to scan active VRE's for security vulnerabilities. If the scan gives cause, the UU will contact you with the request to update software on VRE, and/or to take additional measures. If you intend to run longer-running workspaces, please [contact us](contact.qmd) and we can help to install the necessary scanning software.
 
 ## Data storage and – backup
-A VRE is not backed up. The user is responsible for backing up the (processed) data and/or configuration of the VRE. Make sure to regularly synchronize data and scripts with approved platform like Yoda, Research Drive and GitHub.
+Workspaces and storage volumes are not backed up and are not suitable for storing important files. The user is responsible for backing up the (processed) data and/or configuration of the VRE. Make sure to regularly synchronize data, scripts and output with approved platform like Yoda, Research Drive and GitHub. 
+By synchronizing your project folder to online storage, you also ensure that you can safely delete workspaces and storage volumes when you not plan to use Research cloud in the near future and save credits.
 
 ## Sensitive data
 
