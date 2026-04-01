@@ -40,7 +40,7 @@ Before creating your workspace, consider:
 See the [Getting started](../../first-steps.qmd#create-storage-volume) page for more info about how and why to create a storage volume.
 :::
 
-Remember that you are responsible for making backups of any data yourself! Although data on a storage unit will not be deleted when you delete the workspace, it can still become corrupt. So if it is important to your work, make sure to make periodical (e.g. daily or weekly) backups of your projects.
+Remember that you are responsible for making backups of any data yourself! Although data on a storage unit will not be deleted when you delete the workspace, storage volumes are not backed up. Make sure to regularly backup your files, especially files or edits to code that are not easy to recreate when lost.
 
 ### Recommended Models and Resources
 
@@ -62,10 +62,11 @@ When creating your workspace, you'll need to select a processor configuration:
 
 **Since Ollama is resource-intensive, we recommend:**
 
-- **For small models (1B-8B):** 2-8 CPU cores or higher
-- **For large models (13B+):** GPU workspaces 
+- **For small models (1B-8B):** 2-16 CPU cores, depending on size
+- **For large models (10B+):** GPU workspaces 
 
-Although larger models and GPUs are avaiable, you should not simply select the most hardware available (see [responsible use](../../responsible-use.qmd)).
+These are rough estimations, it may help to check the requirements of the model you would like to use online.
+Additionally, to spend energy and credits wisely, it is useful to experiment a bit with different (small to large) workspace configurations to find the appropriate configuration where your pipeline runs satisfactory (see [responsible use](../../responsible-use.qmd)).
 If you are unsure, please [contact us](../../contact.qmd).
 
 ::: {.callout-warning}
@@ -95,7 +96,7 @@ Pulling a model may take some time depending on the size of the model. Once fini
 ::: {.callout-note}
 Model downloads are stored on your workspace. If you attached a storage volume, they'll be preserved even if you delete and recreate the workspace.
 
-**NOTE: Cloud-only models CANNOT be pulled**.
+**NOTE: Cloud-only models CANNOT be pulled, and are not recommended when data cannot be send to online services**.
 :::
 
 ### Getting Started
