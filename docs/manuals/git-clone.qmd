@@ -120,20 +120,21 @@ Workspaces that support JupyterLab ([Jupyter Notebook](../workspaces/programming
 1. In JupyterLab, look for the [Git icon](https://git-scm.com/community/logos) in the left sidebar
 2. Click it to open the Git panel.
 
-If you don't see it, you can install the extension with `pip install jupyterlab-git`.
+![Git in JupyterLab sidebar](../imgs/jupyterlab-git-icon.png){width=50%}
 
-### Available Features
+3. From here, you can clone repositories, view changes, commit, and push/pull through a visual interface. This provides a user-friendly alternative to command-line Git operations, especially useful for beginners.
 
-The Git UI allows you to:
+If you don't see the Git icon, you can install the extension by running `pip install jupyterlab-git` in a terminal or by downloading the `jupyterlab-git` extension from the JupyterLab Extension Manager.
 
-- **View changes**: See modified, added, and deleted files
-- **Stage/unstage files**: Click the **+** or **-** icons next to files
-- **Commit changes**: Enter a commit message and click "Commit"
-- **Push/pull**: Use the cloud icons to sync with remote repository
-- **View history**: See commit history and branches
-- **Switch branches**: Create and switch between branches
+:::::: {.callout-tip}
+# Tutorial for Using GitUI
+To see how you can use the Git extension in JupyterLab, check out this tutorial: [Using Git in JupyterLab](https://blog.reviewnb.com/jupyterlab-git-extension/).
 
-This provides a user-friendly alternative to command-line Git operations, especially useful for beginners.
+You can also create pull requests directly from the JupyterLab Git UI as well. This allows you to contribute to repositories without leaving your JupyterLab environment. To do so, you need the [JupyterLab-Gitplus plugin](https://github.com/ReviewNB/jupyterlab-gitplus). 
+Check out this tutorial to learn how to [Create Pull Requests in JupyterLab](https://blog.reviewnb.com/gitplus-jupyterlab-github-extension/). 
+
+You can find the official documentation here: [JupyterLab Git Extension](https://github.com/jupyterlab/jupyterlab-git#jupyterlab-git).
+:::
 
 ::: {.callout-note}
 **Authentication:** The same Personal Access Token requirements apply when pushing through the JupyterLab Git UI.
