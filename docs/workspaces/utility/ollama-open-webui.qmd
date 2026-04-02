@@ -46,13 +46,17 @@ Remember that you are responsible for making backups of any data yourself! Altho
 
 Here are some popular Ollama models with their resource requirements:
 
-| Model | Size | CPU/GPU | Best For |
-|-------|------|---------|----------|
-| `llama3.2:1b` | ~1 GB |  CPU | Testing, simple tasks, very fast responses |
-| `llama3.2` | ~2 GB |  CPU | General chat, quick responses |
-| `mistral` | ~4 GB | CPU/ GPU | Balanced speed and quality |
-| `llama3.1:8b` | ~5 GB | GPU recommended | High-quality responses, coding |
-| `llama3.1:70b` | ~40 GB |  GPU required | Best quality, complex reasoning |
+| Model | Size | Parameters | CPU/GPU | Best For |
+|-------|-----|-----|------|----------|
+| `qwen2.5:0.5b` | ~0.4 GB | 0.5B | CPU | Very fast responses, testing, simple coding |
+| `llama3.2:1b` | ~1 GB | 1B | CPU | Multilingual knowledge retrieval, simple tasks|
+| `gemma2:2b` | ~1.6 GB | 2B | CPU | Text generation, natural language processing research|
+| `qwen2.5:3b` | ~2 GB | 3B | CPU | Coding and mathematics, data analysis |
+| `llama3.2:3b` | ~2 GB | 3B | CPU | Summarisation, prompt rewriting, tool use |
+| `mistral:7b` | ~4 GB | 7B | CPU/GPU | Reasoning, text generation, comprehension|
+| `llama3.1:8b` | ~5 GB | 8B | GPU recommended | Coding, complex tasks |
+| `qwen2.5:14b` | ~9 GB | 14B | GPU recommended | Advanced reasoning and coding |
+| `gpt-oss:20b` | ~12 GB | 20B | GPU (A10) | Powerful reasoning, agentic tasks, fine-tunable|
 
 Find all available Ollama models here: [List of Ollama models](https://ollama.com/library)
 
@@ -104,6 +108,51 @@ Model downloads are stored on your workspace. If you attached a storage volume, 
 Once you have pulled a model, you can begin using the features available such as **Chatting with models** or **Uploading documents** to analyze files.
 
 For detailed guides on using Open WebUI's features, see the [Open WebUI documentation](https://docs.openwebui.com/) and [Ollama documentation](https://github.com/ollama/ollama/tree/main/docs).
+
+A good way to get started is to test the model's capabilities by asking it questions or giving it tasks related to your research. You can also experiment with uploading documents and asking the model to analyze them. 
+
+Here you can find some [practical usage tips for managing and interacting with language models](https://open-webui.com/how-to-use-open-webui/). 
+This notebook provides a detailed example of how to [parse scientific references, extract quotes from news articles and work with a larger dataset](https://bit.ly/extractive-ai). 
+
+### Using Tools
+
+Open WebUI supports **Tools** that extend model capabilities beyond chatting. Tools allow models to perform actions like web searches, calculations, code execution, and interact with external APIs.
+
+**Common uses:**
+
+- Enable web search for current information beyond training data
+- Run Python code for data analysis or visualizations
+- Create custom tools to integrate with your APIs or databases
+- Generate images or perform specialized tasks
+
+**Learn more:**
+
+- [Open WebUI Tools Documentation](https://docs.openwebui.com/features/extensibility/plugin/tools/): Learn how to create and use tools
+- [Available Tools](https://openwebui.com/tools/): Browse community-created tools
+
+### Using Functions
+
+Open WebUI supports **Functions** that allow you to customize and extend how models behave and process information. Unlike tools (which perform external actions), functions modify the model's input/output pipeline.
+
+**Common uses:**
+
+- Pre-process user messages before sending to the model
+- Post-process model responses for custom formatting
+- Add custom logic for specific workflows
+- Filter or transform content automatically
+
+**Learn more:**
+
+- [Open WebUI Functions Documentation](https://docs.openwebui.com/features/extensibility/plugin/functions/): Learn how to create and use functions
+- [Available Functions](https://openwebui.com/functions/): Browse community-created functions
+
+#### Python Integration
+
+For advanced automation and batch processing, you can also use the **Ollama Python library** to integrate models into your workflows programmatically.
+See [Ollama Python Library](https://github.com/ollama/ollama-python) for installation instructions and [Python Examples](https://github.com/ollama/ollama-python/tree/main/examples) for usage examples.
+
+To use the Python library with your Open WebUI workspace, the API must be enabled. See [Open WebUI API Keys](https://docs.openwebui.com/reference/monitoring/) for instructions on enabling API access.
+
 
 
 ::: {.callout-tip}
