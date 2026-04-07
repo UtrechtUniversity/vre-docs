@@ -4,15 +4,31 @@ title: "Connecting to Research Cloud from VS Code"
 
 ## Overview
 
-This guide shows you how to connect your local VS Code editor to a SURF Research Cloud workspace using SSH. This allows you to:
+This guide shows you how to connect your local VS Code to a SURF Research Cloud workspace using SSH. 
 
-- **Edit code locally** with your familiar VS Code setup and extensions.
-- **Execute code remotely** on the workspace with its computing resources and installed software.
-- **Access workspace files** directly from your local editor.
-- **Use workspace Python environments** (`uv`, `conda`, `pyenv`, etc.) seamlessly
+### How It Works
 
-::: {.callout-note}
-This method works with **any workspace that has SSH access.**
+- **Local VS Code** provides the editing interface and your preferred extensions
+- **Surf Research Cloud workspace** provides the computing power, pre-installed software, and file storage
+- **Files live on the workspace**, not on your local computer
+- **Code executes on the workspace** using its resources and libraries
+
+### Why Use This Setup?
+
+- Work with your familiar VS Code setup and your choice of extensions
+- Use the computing resources of your workspace
+- Access pre-installed Python environments (`uv`, `conda`, `pyenv`, etc.) seamlessly
+- Edit files directly on the workspace without constant file transfers
+
+::: {.callout-warning}
+## Important Considerations for Workspace Management
+
+- Pause your workspace when not actively using it to save credits (closing your local VSCode ssh session does not pause the workspace)
+- Workspaces have expiration dates so keep track of when your workspace will expire
+- Backup your data and important files regularly 
+- Files are on the workspace and are deleted when the workspace is deleted
+
+See our guide on [responsible use](../responsible-use.qmd) for managing costs and resources.
 :::
 
 ## Prerequisites
@@ -25,6 +41,8 @@ This method works with **any workspace that has SSH access.**
    - Test the SSH connection using the workspace IP address and your SRAM username
 
 ::: {.callout-tip}
+This method works with any workspace that has SSH access.
+
 **Recommended workspaces:** Python Workbench or VRE Lab come with Python environment managers (uv, conda, pyenv) pre-installed, making it easier to manage dependencies for your projects.
 :::
 
@@ -131,7 +149,12 @@ You're now working on the workspace!
 
 ### Installing Extensions
 
-If you try to use an extension that is not installed on the workspace, VS Code will prompt you to install it remotely. Click **"Install in SSH: myworkspace"** when prompted.
+When you connect to a workspace, VS Code distinguishes between:
+
+- Local extensions: Work on your local editor
+- Workspace extensions: Must be installed on the workspace
+
+If you try to use an extension that is not installed on the workspace, VS Code will prompt you to install it remotely. Click **"Install in SSH: myworkspace"** when prompted. Any new extensions installed in such a manner will be installed on the workspace and not your local VSCode.
 
 ## Reconnecting
 
@@ -141,6 +164,28 @@ Once configured, reconnecting is simple:
 2. Press **`Cmd+Shift+P`** / **`Ctrl+Shift+P`**
 3. Type **"Remote-SSH: Connect to Host"**
 4. Select `myworkspace`
+5. Make sure your workpace is running before reconnecting
+
+# Example Workflow
+
+Once connected to your workspace via SSH, here's an example of working with Python environment managers (`uv`, `conda`, `pyenv`):
+
+1. Navigate to your storage volume on the workspace using the VS Code file explorer (e.g., `/home/username/storage-volume/`)
+2. Clone this example repository to your workspace:
+```bash
+   git clone https://github.com/UtrechtUniversity/src-python-example.git
+   cd src-python-example
+```
+3. After navigating to the `src-python-example` folder, you can create a Python environment using either `uv`, `conda`, or `pyenv` by following the instructions in:  
+   - [Python Environments Manual](../manuals/python-environment.qmd), or
+   - [src-python-example](https://github.com/UtrechtUniversity/src-python-example)
+
+4. Select your environment in VS Code:
+    - Press `Cmd+Shift+P` / `Ctrl+Shift+P`  
+    - Type "Python: Select Interpreter"
+    - Choose the environment you created
+
+5. Open `vectors.ipynb` from the Notebook folder and run the cells. The code executes on the workspace using the environment you set up.
 
 ## Troubleshooting
 
@@ -171,34 +216,12 @@ Workspace IP addresses may change when a workspace is restarted. If you can't co
 
 ## Tips
 
-- **Working directory:** When you connect, you start in your home directory. Use "Open Folder" to navigate to your project
+- **Working directory:** When you connect, you start in your home directory of your workspace. Use `Open Folder` from the File menu to navigate to your project
+- **Workspace costs:** Remember to pause your workspace when not using it to save credits
+- **File management:** All files are on the workspace. Back up important files periodically to avoid data loss if the workspace is deleted
 
 :::callout-important
 **Security:** Never share your private SSH key. Only the public key (`.pub` file) goes in SRAM. Keep your private key secure on your local computer.
 :::
-
----
-
-## FAQ
-
-**Can I use an AI coding assistant on Research Cloud?**
-
-Yes. Once connected via Remote-SSH, you can install AI coding assistant extensions in VS Code (like GitHub Copilot).
-
-::: {.callout-warning}
-**Disclaimer:** We do not endorse using any AI coding assistants. Users are responsible for:
-
-- Ensuring compliance with institutional policies on AI tools
-- Understanding privacy implications of code sent to AI services
-- Reviewing and validating all AI-generated code
-
-Review [Utrecht University policies and guidelines](https://www.uu.nl/en/organisation/ai-policy) on AI use before using AI coding assistants.
-:::
-
-**Note:** AI coding assistants work with any workspace, though workspaces with Python environment managers (Python Workbench, VRE Lab) may be more convenient for development projects.
-
-For detailed instructions on setting up GitHub Copilot, see [Using GitHub Copilot with VS Code.](../manuals/github-copilot.qmd)
-
----
 
 If you have any issues or questions, you can [contact us here.](https://www.uu.nl/en/research/research-data-management/contact)
