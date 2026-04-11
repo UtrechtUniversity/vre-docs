@@ -112,7 +112,6 @@ For detailed guides on using Open WebUI's features, see the [Open WebUI document
 A good way to get started is to test the model's capabilities by asking it questions or giving it tasks related to your research. You can also experiment with uploading documents and asking the model to analyze them. 
 
 Here you can find some [practical usage tips for managing and interacting with language models](https://open-webui.com/how-to-use-open-webui/). 
-This notebook provides a detailed example of how to [parse scientific references, extract quotes from news articles and work with a larger dataset](https://bit.ly/extractive-ai). 
 
 ### Using Tools
 
@@ -146,16 +145,16 @@ Open WebUI supports **Functions** that allow you to customize and extend how mod
 - [Open WebUI Functions Documentation](https://docs.openwebui.com/features/extensibility/plugin/functions/): Learn how to create and use functions
 - [Available Functions](https://openwebui.com/functions/): Browse community-created functions
 
-#### Python Integration
+::: {.callout-tip}
+## Using Ollama Models from Python
 
-For advanced automation and batch processing, you can also use the **Ollama Python library** to integrate models into your workflows programmatically.
-See [Ollama Python Library](https://github.com/ollama/ollama-python) for installation instructions and [Python Examples](https://github.com/ollama/ollama-python/tree/main/examples) for usage examples.
-
-To use the Python library with your Open WebUI workspace, the API must be enabled. See [Open WebUI API Keys](https://docs.openwebui.com/reference/monitoring/) for instructions on enabling API access.
+Do you want to use Ollama models from within Python code? Check out the [Ollama from Python manual](../../manuals/ollama.qmd) for instructions on setting up Ollama in Python workbench and UU VRE workspaces.
+:::
 
 
 
 ::: {.callout-tip}
+# General Tips for Responsible Use
 If you have pulled several models but are not using them anymore, then remove them. Go to Settings → Admin Settings in the bottom → Models, and then disable the models you no longer use.
 
 Keep your storage volume in mind as large models and tasks can take up a lot of space. 
