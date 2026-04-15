@@ -1,0 +1,327 @@
+---
+title: "Using Custom Packages"
+---
+
+## Overview
+
+**Custom Packages** is an optional component available on certain SURF Research Cloud workspaces that automatically installs project dependencies during workspace creation.
+
+Instead of manually cloning repositories and setting up environments after your workspace is ready, Custom Packages UU does this work for you during the build process. This saves time and ensures your research environment is ready to use immediately.
+
+**Key features:**
+
+- Automatically clones projects from GitHub, GitLab, Zenodo, Dataverse, or DOI links
+- Installs dependencies (`environment.yml`, `requirements.txt`, `pyproject.toml`) in separate environments (one per project)
+- Supports Python, R, Julia, and Conda projects
+- Auto-registers Jupyter kernels when installation succeeds
+
+## How It Works
+## 1. Enabling During Workspace Creation
+
+**Step 1: Select Custom Packages UU**
+
+During workspace creation, select the **"Custom Packages UU"** option under the Optional Components section.
+
+::: {.callout-note}
+The 'Python tools' optional component is not explicitly required for Custom Packages to work. The system uses the base conda installation and includes uv for Python environments. However, you may want to enable Python tools if you want additional environment managers like `uv` or `poetry` available for creating new environments or installing packages faster after workspace creation.
+:::
+
+**Step 2: Provide Project Identifiers**
+
+In the "Projects to pre-install" field, enter a comma-separated list of project identifiers.
+
+Accepted formats: GitHub URLs, GitLab URLs, Zenodo URLs, Dataverse URLs, DOIs (must point to a repository)
+
+You can test with setting up python environments using the [`src-python-example repository`](https://github.com/UtrechtUniversity/src-python-example.git). Copy this URL (<https://github.com/UtrechtUniversity/src-python-example.git>) into the "Projects to pre-install" field and proceed to create your workspace. 
+
+**Step 3: Continue Workspace Creation**
+
+Continue with workspace creation as normal. The build process may take longer as it installs dependencies, but your environment will be ready when the workspace starts.
+
+## 2. After Workspace Creation
+
+**First Terminal Login**
+
+When you open a terminal for the first time after workspace creation, you may see messages like:
+```
+Running install scripts at first login: executing /home/username/..._conda.sh
+```
+
+This is normal. The workspace is running first-time setup scripts, including initializing conda (***if applicable***). Wait for these scripts to complete before running commands. Subsequent terminal sessions will not run these scripts again and start immediately.
+
+**Finding Your Projects**
+
+Projects are located in:
+```bash
+~/local-share/projects/
+```
+
+Each project is in its own directory:
+```bash
+~/local-share/projects/{project-name}/
+```
+
+### Finding Your Environments
+
+**Conda environments:**
+```bash
+/usr/local/uu/env/conda/{project-name}
+```
+
+**Python/uv environments:**
+```bash
+/usr/local/uu/env/python/{project-name}
+```
+
+**To see what's available:**
+```bash
+# List conda environments
+conda env list
+
+# List Python/uv environments
+ls /usr/local/uu/env/python/
+```
+
+## 3. Using Your Environments
+
+### Activating an Environment
+
+The activation command differs based on the environment type:
+
+**For Conda environments:**
+```bash
+conda activate /usr/local/uu/env/conda/{project-name}
+```
+
+**For Python/uv environments:**
+```bash
+source /usr/local/uu/env/python/{project-name}/bin/activate
+```
+
+**Examples:**
+```bash
+# Conda environment (has environment.yml)
+conda activate /usr/local/uu/env/conda/src-python-example
+
+# Python/uv environment (has pyproject.toml or requirements.txt)
+source /usr/local/uu/env/python/{project-name}/bin/activate
+```
+
+Once activated, you can:
+
+-  Run Python scripts using the environment's packages
+-  Install additional packages
+-  Work with the project files
+
+**To deactivate:**
+```bash
+# For conda
+conda deactivate
+
+# For Python/uv
+deactivate
+```
+
+## 4. Using Environments in Jupyter Notebooks
+
+
+If the Jupyter kernel was registered automatically, you can select it from the kernel dropdown in JupyterLab:
+
+1. Open a Jupyter notebook
+2. Click the kernel name in the top right
+3. Select your environment 
+
+**Manual Kernel Registration**
+
+If the kernel wasn't registered automatically (due to dependency installation issues), you can register it manually:
+
+**For Conda environments:**
+```bash
+# Activate your environment
+conda activate /usr/local/uu/env/conda/{project-name}
+
+# Register as Jupyter kernel
+python -m ipykernel install --user --name {project-name} --display-name "Python ({project-name})"
+
+# Verify registration
+jupyter kernelspec list
+```
+
+**For Python/uv environments:**
+```bash
+# Activate your environment
+source /usr/local/uu/env/python/{project-name}/bin/activate
+
+# Register as Jupyter kernel
+python -m ipykernel install --user --name {project-name} --display-name "Python ({project-name})"
+
+# Verify registration
+jupyter kernelspec list
+```
+
+After this, refresh your JupyterLab page and the kernel should appear in the kernel selector.
+
+## 5. Installing Additional Packages
+
+You can install more packages into your environment after creation.
+
+**For Conda Environments**
+
+```bash
+# Activate environment
+conda activate /usr/local/uu/env/conda/{project-name}
+
+# Install packages
+conda install package-name
+
+# Install multiple packages
+conda install numpy pandas matplotlib
+
+# Or use pip
+pip install package-name
+```
+
+::: {.callout-tip}
+When using both conda and pip in a conda environment, install conda packages first, then pip packages. This helps avoid dependency conflicts.
+:::
+
+**For Python/uv Environments**
+
+```bash
+# Activate environment
+source /usr/local/uu/env/python/{project-name}/bin/activate
+
+# Install packages with pip
+pip install package-name
+
+# Install multiple packages
+pip install numpy pandas matplotlib
+```
+
+## 6. How Dependencies Are Resolved
+
+Custom Packages automatically detects dependency files in your project and chooses the appropriate environment manager:
+
+**Python Projects**
+
+**Priority order:**
+
+1. `environment.yml`: Creates conda environment at `/usr/local/uu/env/conda/{name}`
+2. `pyproject.toml` or `requirements.txt`: Creates Python/uv environment at `/usr/local/uu/env/python/{name}`
+3. `uv.lock`: Uses uv with lockfile
+
+**R Projects**
+Recognized files:
+
+- `renv.lock`:  R environment lock file
+- `DESCRIPTION`: R package description file
+
+**Julia Projects**
+Recognized files:
+
+- `Project.toml`: Julia project file
+
+**Conda Projects**
+Recognized files:
+
+- `environment.yml`: Conda environment specification
+
+::: {.callout-note}
+If a project has `environment.yml`, it will use conda regardless of other files present. If no `environment.yml` but has `pyproject.toml` or `requirements.txt`, it will use Python/uv.
+:::
+
+## 7. Checking Installation Logs
+
+If something went wrong during installation, you can check the logs:
+
+```bash
+cd ~/local-share/projects/{project-name}/
+cat repo2kernel.log
+```
+
+This log file shows:
+
+- Which dependency files were detected
+- What commands were run
+- Whether conda or uv was used
+- Any errors that occurred
+
+## Troubleshooting
+
+1. **Environment Created But Kernel Not Available**
+
+Environment exists but doesn't appear in Jupyter kernel list. Then you can register the kernel manually see [Manual Kernel Registration](#using-environments-in-jupyter-notebooks) above.
+
+---
+
+2. **Dependency Installation Failed**
+
+Log shows errors during package installation. Then you can: 
+
+-  Check `repo2kernel.log` for specific errors
+- Activate the environment manually
+- Try installing failed packages individually:
+
+For conda environments:
+```bash
+conda activate /usr/local/uu/env/conda/{project-name}
+conda install failed-package-name
+```
+   
+For Python/uv environments:
+```bash
+source /usr/local/uu/env/python/{project-name}/bin/activate
+pip install failed-package-name
+```
+---
+
+3. **Project Not Found After Creation**
+
+If you Can't find project in `~/local-share/projects/` or environment not created, then:
+
+- Check if the workspace build completed successfully
+- Verify the project identifier was entered correctly during creation
+- Check workspace logs for errors
+
+---
+
+4. **Cannot Activate Conda Environment**
+
+`conda activate` command doesn't work. Then you can:
+
+Initialize conda in your shell:
+```bash
+conda init bash
+# Then close and reopen your terminal
+```
+
+Try the full path:
+```bash
+conda activate /usr/local/uu/env/conda/{project-name}
+```
+---
+
+5. **Don't Know Which Environment Type Was Created**
+
+Not sure if your project created a conda or Python/uv environment, then: 
+
+Check both locations:
+```bash
+# Check conda
+conda env list
+
+# Check Python/uv
+ls /usr/local/uu/env/python/
+
+# Check the log
+cat ~/local-share/projects/{project-name}/repo2kernel.log
+```
+
+The log shows which commands were run (conda or uv).
+
+## Tips
+
+- Use reproducible projects: Projects with well-defined dependency files work best
+- Avoid outdated dependencies: Very old projects (e.g., requiring Python 3.5) may fail to install
+- Start with small projects: Test with a simple repository to ensure everything works before using larger projects
+- Check the logs: If installation fails, `repo2kernel.log` shows exactly what went wrong
