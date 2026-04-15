@@ -30,3 +30,5 @@ To find the best data transfer method for your situation, check out this [**Inte
 
 - [Setup Ollama on VRE Lab](manuals/ollama.qmd)
 - [Running long jobs](manuals/long-jobs.qmd)
+- [Connecting to Research Cloud from VS Code via SSH](manuals/vscode-to-researchcloud.qmd)
+- [Using AI powered coding assistants on Surf Research Cloud via SSH](manuals/github-copilot.qmd)
