@@ -1,0 +1,46 @@
+---
+title: "Using AI assistants on SURF Research Cloud"
+---
+
+# Overview
+
+This guide explains how to use AI assistants while working on SURF Research Cloud.
+
+::: {.callout-warning}
+## Disclaimer
+
+With this guide we do not endorse AI coding assistants. Users are responsible for:
+
+- **Compliance:** Ensuring use complies with institutional policies on AI tools
+- **Privacy:** Understanding that data may be sent to external AI services
+- **Validation:** Reviewing and validating all AI-generated code
+- **Licensing:** Checking terms of service and licensing requirements
+
+Review [Utrecht University's AI policy and guidelines](https://www.uu.nl/en/organisation/ai-policy) before using AI coding assistants.
+:::
+
+## How It Works
+
+The easiest method is to connect the IDE (Integrated Development Environment; e.g. VSCode, VSCodium, etc.) on your PC to a workspace using Remote-SSH. In this way, you can use any extensions that you install in the IDE on your PC for your work on Research Cloud.
+
+## Prerequisites
+
+1. IDE that supports connecting to your workspace via SSH such as VSCode, VSCodium, Pycharm or Positron (R). 
+2. IDE extension of the AI coding assistant of your choice. You will typically need an **Active subscription or account** for your chosen AI assistant.
+3. **API key or authentication** if required by the assistant.
+4. A workspace on SURF Research Cloud.
+
+::: {.callout-tip}
+**Recommended workspaces:** While this setup works with any workspace, those with Python environment managers pre-installed (Python Workbench, VRE Lab) make it easier to manage project dependencies.
+:::
+
+
+## Setup Instructions
+
+Follow our [Connecting to Research Cloud from VS Code](../manuals/vscode-to-researchcloud.qmd) to set up Remote-SSH and connect your IDE to your workspace. Once connected, you can use the AI coding assistant extensions as you normally would on your PC. The AI assistant will have access to the files and environment in your Research Cloud workspace, allowing it to assist you with coding tasks.
+
+## Contact
+
+If you have any issues or questions, you can [contact us here.](https://www.uu.nl/en/research/research-data-management/contact)
+
+
