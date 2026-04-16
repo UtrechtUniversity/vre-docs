@@ -21,7 +21,7 @@ When you have completed an [onboarding procedure](onboarding.qmd), you can login
 ## Create storage volume
 
 ### Why a storage volume?
-In most cases you need to create a storage volume before you create a workspace. A workspace has limited storage and is temporary; all data stored on the workspace itself are deleted when a workspace is deleted. You can see a storage volume as a USB stick that you can attach to a workspace. A storage volume is persistent, so when you remove a workspace, all data on the storage volume will remain there. Storage volumes have good performance and are suitable for I/O-intensive computing tasks.
+In most cases you need to create a storage volume before you create a workspace. A workspace has limited storage and is temporary; all data stored on the workspace itself are deleted when a workspace is deleted. You can see a storage volume as a USB stick that you can attach to a workspace. A storage volume is persistent, so when you remove a workspace, all data on the storage volume will remain there. Storage volumes have good performance and are suitable for I/O-intensive computing tasks. Storage volumes are not backed up, so do create back-ups regularly ([read more](responsible-use.qmd#data-storage-and-–-backup)).
 
 ### How to create a storage volume?
 In the Research Cloud portal:
@@ -37,6 +37,9 @@ In the Research Cloud portal:
 ### Where can I find the storage volume?
 When you created a workspace and chose to attach a storage volume to the workspace (see below), the storage volume can be found under the directory path: `/data`
 Typically you want to create a project folder on the storage volume (e.g. `/data/my_storage/my_project`).
+
+### Attaching and detaching storage volumes
+You can attach/detach storage volumes to a workspace when a workspace is in paused state ([instructions](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/19825226/External+storage+volumes#Externalstoragevolumes-Attach%2FDetachStorage)). It is possible to attach multiple storage volumes to a workspaces at the same time.
 
 ## Create a workspace
 A workspace can also be called a 'Virtual Machine' or a 'Server'. It is a temporary 'remote' machine that you can login to and that has you can use to perform analyses or model runs. You 'pay' for the machine with the credits from your wallet until the workspace is being 'paused' or 'deleted'. The more compute power you select the more credits it costs and the sooner your wallet will be empty.
