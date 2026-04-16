@@ -1,0 +1,165 @@
+--- 
+title: "Ollama Open WebUI"
+software:
+- '[Open WebUI](https://docs.openwebui.com/)'
+- '[Ollama](https://ollama.com/)'
+login:
+- webapp-sso
+os_flavor: linux
+os:
+- Ubuntu 22.04
+- Ubuntu 24.04
+packages:
+- CUDA (optional)
+gpu: true
+admin: false
+support: UU
+---
+
+## Description
+
+[Open WebUI](https://docs.openwebui.com/) is a user-friendly and privacy-friendly AI platform that allows you to interact with AI models locally on your workspace. This workspace is configured to use [Ollama](https://ollama.com/) models that are downloaded directly to the workspace. You can also use models from [HuggingFace](https://huggingface.co/models). 
+
+Ollama Open WebUI gives you **complete privacy** as all processing happens on your workspace, no information is sent to external AI services.
+
+For security reasons, the Open WebUI API is disabled by default.
+
+## Creation
+
+::: {.callout-important}
+## Planning Your Workspace
+
+Before creating your workspace, consider:
+
+1. **Which model do you want to use?** (See recommendations below)
+2. **How much storage do you need?** Models can be very large (1GB - 40GB+)
+3. **Do you need GPU acceleration?** Required for large models (>8B parameters)
+
+**If you plan to download large models, create and attach a storage volume first.** 
+
+See the [Getting started](../../first-steps.qmd#create-storage-volume) page for more info about how and why to create a storage volume.
+:::
+
+Remember that you are responsible for making backups of any data yourself! Although data on a storage unit will not be deleted when you delete the workspace, storage volumes are not backed up. Make sure to regularly backup your files, especially files or edits to code that are not easy to recreate when lost.
+
+### Recommended Models and Resources
+
+Here are some popular Ollama models with their resource requirements:
+
+| Model | Size | Parameters | CPU/GPU | Best For |
+|-------|-----|-----|------|----------|
+| `qwen2.5:0.5b` | ~0.4 GB | 0.5B | CPU | Very fast responses, testing, simple coding |
+| `llama3.2:1b` | ~1 GB | 1B | CPU | Multilingual knowledge retrieval, simple tasks|
+| `gemma2:2b` | ~1.6 GB | 2B | CPU | Text generation, natural language processing research|
+| `qwen2.5:3b` | ~2 GB | 3B | CPU | Coding and mathematics, data analysis |
+| `llama3.2:3b` | ~2 GB | 3B | CPU | Summarisation, prompt rewriting, tool use |
+| `mistral:7b` | ~4 GB | 7B | CPU/GPU | Reasoning, text generation, comprehension|
+| `llama3.1:8b` | ~5 GB | 8B | GPU recommended | Coding, complex tasks |
+| `qwen2.5:14b` | ~9 GB | 14B | GPU recommended | Advanced reasoning and coding |
+| `gpt-oss:20b` | ~12 GB | 20B | GPU (A10) | Powerful reasoning, agentic tasks, fine-tunable|
+
+Find all available Ollama models here: [List of Ollama models](https://ollama.com/library)
+
+### Workspace Size Selection
+
+When creating your workspace, you'll need to select a processor configuration:
+
+**Since Ollama is resource-intensive, we recommend:**
+
+- **For small models (1B-8B):** 2-16 CPU cores, depending on size
+- **For large models (10B+):** GPU workspaces 
+
+These are rough estimations, it may help to check the requirements of the model you would like to use online.
+Additionally, to spend energy and credits wisely, it is useful to experiment a bit with different (small to large) workspace configurations to find the appropriate configuration where your pipeline runs satisfactory (see [responsible use](../../responsible-use.qmd)).
+If you are unsure, please [contact us](../../contact.qmd).
+
+::: {.callout-warning}
+## Important: CUDA Component for GPU
+
+If you select a workspace with a GPU, select the **CUDA box** under Optional Components in the next step during workspace creation. Without CUDA, the GPU will not be available to the workspace.
+:::
+
+{{< include ../partials/_creation.qmd >}}
+
+## Access
+
+This workspace can be accessed via the yellow 'Access' button, or by opening the URL listed in the dashboard in your browser. Any member of the collaboration can login to the workspace [using Single-Sign On](../../first-steps.qmd#webapplications-that-support-single-sign-on.).
+
+## Usage
+
+### Pulling Models from Ollama
+
+When you access the workspace for the first time, a default model `smollm:135m` is already loaded. However, you may want to download and use other models. 
+See [Ollama models](https://ollama.com/library) for a complete list of models. 
+
+To use a different model, simply copy the name of the desired model and select the model dropdown in the top left. From there, you can search for the required model and pull it. 
+Pulling a model may take some time depending on the size of the model. Once finished, you can use the pulled model on your workspace. 
+
+![](../imgs/ollama_pull-model.png)
+
+::: {.callout-note}
+Model downloads are stored on your workspace. If you attached a storage volume, they'll be preserved even if you delete and recreate the workspace.
+
+**NOTE: Cloud-only models CANNOT be pulled, and are not recommended when data cannot be send to online services**.
+:::
+
+### Getting Started
+
+Once you have pulled a model, you can begin using the features available such as **Chatting with models** or **Uploading documents** to analyze files.
+
+For detailed guides on using Open WebUI's features, see the [Open WebUI documentation](https://docs.openwebui.com/) and [Ollama documentation](https://github.com/ollama/ollama/tree/main/docs).
+
+A good way to get started is to test the model's capabilities by asking it questions or giving it tasks related to your research. You can also experiment with uploading documents and asking the model to analyze them. 
+
+Here you can find some [practical usage tips for managing and interacting with language models](https://open-webui.com/how-to-use-open-webui/). 
+
+### Using Tools
+
+Open WebUI supports **Tools** that extend model capabilities beyond chatting. Tools allow models to perform actions like web searches, calculations, code execution, and interact with external APIs.
+
+**Common uses:**
+
+- Enable web search for current information beyond training data
+- Run Python code for data analysis or visualizations
+- Create custom tools to integrate with your APIs or databases
+- Generate images or perform specialized tasks
+
+**Learn more:**
+
+- [Open WebUI Tools Documentation](https://docs.openwebui.com/features/extensibility/plugin/tools/): Learn how to create and use tools
+- [Available Tools](https://openwebui.com/tools/): Browse community-created tools
+
+### Using Functions
+
+Open WebUI supports **Functions** that allow you to customize and extend how models behave and process information. Unlike tools (which perform external actions), functions modify the model's input/output pipeline.
+
+**Common uses:**
+
+- Pre-process user messages before sending to the model
+- Post-process model responses for custom formatting
+- Add custom logic for specific workflows
+- Filter or transform content automatically
+
+**Learn more:**
+
+- [Open WebUI Functions Documentation](https://docs.openwebui.com/features/extensibility/plugin/functions/): Learn how to create and use functions
+- [Available Functions](https://openwebui.com/functions/): Browse community-created functions
+
+::: {.callout-tip}
+## Using Ollama Models from Python
+
+Do you want to use Ollama models from within Python code? Check out the [Ollama from Python manual](../../manuals/ollama.qmd) for instructions on setting up Ollama in Python workbench and UU VRE workspaces.
+:::
+
+
+
+::: {.callout-tip}
+# General Tips for Responsible Use
+If you have pulled several models but are not using them anymore, then remove them. Go to Settings → Admin Settings in the bottom → Models, and then disable the models you no longer use.
+
+Keep your storage volume in mind as large models and tasks can take up a lot of space. 
+
+Keep the costs of running the workspace in mind as well, and pause the workspace when not using it. Refer to the [cost calculator](../../responsible-use.qmd#cost-calculator) for an estimate of the costs.
+:::
+
+Review [Utrecht University's AI policy and guidelines here](https://www.uu.nl/en/organisation/ai-policy).
