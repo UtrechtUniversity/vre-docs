@@ -151,6 +151,47 @@ Open WebUI supports **Functions** that allow you to customize and extend how mod
 Do you want to use Ollama models from within Python code? Check out the [Ollama from Python manual](../../manuals/ollama.qmd) for instructions on setting up Ollama in Python workbench and UU VRE workspaces.
 :::
 
+## Using API Keys
+
+If you want to interact with your Ollama models programmatically from scripts or applications instead of only using the web interface, you can enable API access.
+
+You can use the [Open WebUI API keys](https://docs.openwebui.com/features/authentication-access/api-keys) to:
+
+- Automate model interactions from scripts
+- Integrate Ollama into data processing pipelines
+- Batch process multiple documents
+- Build custom applications using your models
+
+### Enabling API Access
+
+Open WebUI API is disabled by default. This is to be as secure as possible by default, as using the API means that SRAM authentication must be disabled for the API route.
+
+However, you can enable the API during the last step of creating your workspace.
+
+Under Workspace Parameters, you can enable API access by entering **`yes`** in the **"Expose OpenWebUI API (yes/no)"** parameter
+
+::: {.callout-tip}
+Only enable the API if you need programmatic access. Exposing Open WebUI API bypasses SRAM authentication and uses API keys for security instead.
+:::
+
+### Setting Up and Using API Keys
+
+To see how to create and set up an API Key, follow this manual: [Open WebUI API Keys Manual](https://docs.openwebui.com/features/authentication-access/api-keys#getting-started)
+
+**API Endpoint:** The API is accessible at `https://your-workspace-url/ext/api` (Note: uses `/ext/api`, not `/api`)
+
+Additional documentation on Open WebUI API access can be found here: [Open WebUI API Documentation](https://github.com/UtrechtUniversity/src-component-openwebui?tab=readme-ov-file#api)
+
+::: {.callout-note collapse="true"}
+## For Advanced Users: Additional HTTP Basic Authentication
+For an extra layer of security, you can add HTTP Basic Authentication to the API endpoint in addition to API keys.
+
+To see how to set up HTTP Basic Authentication refer to the [Additional API Security documentation](https://github.com/UtrechtUniversity/src-component-openwebui?tab=readme-ov-file#additional-api-security)
+:::
+
+::: {.callout-important}
+Do not share your API keys with anyone, and do not expose them in public code repositories. Treat them like passwords to prevent unauthorized access to your models and data.
+:::
 
 
 ::: {.callout-tip}
