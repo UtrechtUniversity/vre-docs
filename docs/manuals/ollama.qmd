@@ -1,7 +1,7 @@
 ## Setting up Ollama on Python workbench and UU VRE workspaces
 
 ### Dependencies
-This tutorial assumes you have an installation of `uv` on your workspace. Python Workbench workspaces come with this preinstalled. The UU VRE workspaces has it as optional software, you need to either select Python tools when creating the workspace or install it yourself with:
+This tutorial assumes you have an installation of `uv` on your workspace. Most SURF Research Cloud workspaces now come with `uv` preinstalled. If (in the rare case) you are using a workspace without any components, then you can install `uv ` yourself with:
 
 ```
 curl -LsSf https://astral.sh/uv/install.sh | sh
