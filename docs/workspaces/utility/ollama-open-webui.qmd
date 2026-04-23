@@ -164,7 +164,9 @@ You can use the [Open WebUI API keys](https://docs.openwebui.com/features/authen
 
 ### Enabling API Access
 
-Open WebUI API is disabled by default, however you can enable it during the last step of creating your workspace. 
+Open WebUI API is disabled by default. This is to be as secure as possible by default, as using the API means that SRAM authentication must be disabled for the API route.
+
+However, you can enable the API during the last step of creating your workspace.
 
 Under Workspace Parameters, you can enable API access by entering **`yes`** in the **"Expose OpenWebUI API (yes/no)"** parameter
 
