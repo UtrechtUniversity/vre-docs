@@ -182,6 +182,13 @@ To see how to create and set up an API Key, follow this manual: [Open WebUI API 
 
 Additional documentation on Open WebUI API access can be found here: [Open WebUI API Documentation](https://github.com/UtrechtUniversity/src-component-openwebui?tab=readme-ov-file#api)
 
+::: {.callout-note collapse="true"}
+## For Advanced Users: Additional HTTP Basic Authentication
+For an extra layer of security, you can add HTTP Basic Authentication to the API endpoint in addition to API keys.
+
+To see how to set up HTTP Basic Authentication refer to the [Additional API Security documentation](https://github.com/UtrechtUniversity/src-component-openwebui?tab=readme-ov-file#additional-api-security)
+:::
+
 ::: {.callout-important}
 Do not share your API keys with anyone, and do not expose them in public code repositories. Treat them like passwords to prevent unauthorized access to your models and data.
 :::
