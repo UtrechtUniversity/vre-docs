@@ -1,38 +1,37 @@
 ### Pre-installing Environments with Custom Packages UU
 
-The **Custom Packages UU** optional component automatically installs project dependencies during workspace creation, saving you setup time. Instead of manually cloning repositories and setting up environments after your workspace is ready, Custom Packages does this work for you during the build process—ensuring your research environment is ready to use immediately when you log in. This is especially useful when you want to ensure a consistent environment across multiple workspaces and get started with your research right away.
-
-
-**How it works:**
-
-When you enable Custom Packages during workspace creation:
-
-1. You provide project identifiers as URLs or DOIs pointing to repositories
-2. Projects are cloned to `~/local-share/projects/` during workspace build
-3. Dependencies are resolved from files like `environment.yml`, `requirements.txt`, or `pyproject.toml`.
-4. Environments are created based on the dependency file type:
-   - Conda environments (when `environment.yml` found): `/usr/local/uu/env/conda/{project-name}`
-   - Python/uv environments (when `pyproject.toml` or `requirements.txt` found): `/usr/local/uu/env/python/{project-name}`
-5. Jupyter kernels may be registered automatically (if dependency installation succeeds)
+The **Custom Packages UU** optional component automatically installs project dependencies during workspace creation. Instead of manually cloning repositories and setting up environments after your workspace is ready, Custom Packages does this work for you during the build process ensuring your research environment is ready to use immediately when you log in. 
 
 **How to use during creation:**
 
 1. Check **"Custom Packages UU"** in Optional Components when creating your workspace
-2. In the "Projects to pre-install" field, enter your project identifiers separated by commas
+2. In the "Projects to pre-install" field, enter your project identifiers as URLs or DOIs (pointing to repositories) separated by commas
 3. Wait for workspace to build (may take longer with many dependencies)
+
+**How it works:**
+
+- Projects are cloned to `~/local-share/projects/` 
+- Dependencies are resolved and environments are created based on the presence of dependency files:
+   - For `environment.yml`, conda environment created at `/usr/local/uu/env/conda/{project-name}`
+   - For `pyproject.toml` or `requirements.txt`, python/uv environment created at `/usr/local/uu/env/python/{project-name}`
+- Jupyter kernels auto-registered when installation succeeds
 
 ::: {.callout-important}
 The project you wish to install must contain valid dependency files (`environment.yml`, `requirements.txt`, `pyproject.toml`, etc.) for automatic installation to work.
-
-**Note:** The "Python tools" optional component is not explicitly required for Custom Packages to work, but can be useful if you want additional environment managers like `uv` or `poetry` available.
 :::
 
 **After creation:**
 
-- Find your projects in `~/local-share/projects/`
-- Activate conda environments: `conda activate /usr/local/uu/env/conda/{project-name}`
-- Activate Python/uv environments: `source /usr/local/uu/env/python/{project-name}/bin/activate`
-- Use in Jupyter by selecting the appropriate kernel
+Find your projects in `~/local-share/projects/`
+
+Activate environments:
+```bash
+# Conda
+conda activate /usr/local/uu/env/conda/{project-name}
+
+# Python/uv
+source /usr/local/uu/env/python/{project-name}/bin/activate
+```
 
 For detailed instructions on using and modifying these environments, see the detailed [Custom Packages Manual](../../manuals/custom-packages-manual.qmd).
 
