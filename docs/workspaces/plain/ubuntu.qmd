@@ -7,8 +7,8 @@ login:
 - cli
 os_flavor: linux
 os:
-- Ubuntu 20.04
 - Ubuntu 22.04
+- Ubuntu 24.04
 data:
 - ResearchDrive
 - irods-icommands
@@ -19,10 +19,26 @@ packages:
 gpu: true
 admin: true
 support: SURF
-workspace_cuda: Ubuntu 2204 with CUDA
+workspace_cuda: Ubuntu 22.04 with CUDA/Ubuntu Desktop 22.04 CUDA
 ---
 
 ## Description
+
+Surf Research Cloud allows you to use Ubuntu workspaces with various configurations:
+
+**Command-line interface:**
+
+- Ubuntu 22.04 - SUDO enabled
+- Ubuntu 24.04 - SUDO enabled  
+- Ubuntu 22.04 with CUDA (GPU support)
+
+**Desktop (Graphical interface):**
+
+- Ubuntu Desktop 22.04
+- Ubuntu Desktop 24.04
+- Ubuntu Desktop 22.04 CUDA (GPU support)
+
+Simply choose one of these [catalog items](../../glossary.qmd#catalog-item) in the workspace creation wizard.
 
 {{< include ../partials/_cuda.qmd >}}
 
@@ -33,9 +49,52 @@ workspace_cuda: Ubuntu 2204 with CUDA
 
 ## Access
 
+**Server workspaces:** Access via [SSH](../../first-steps.qmd#ssh). By clicking the yellow Access button for the workspace in the dashboard of SURF Research Cloud, you will be prompted to open a command line interface on your local pc/laptop to connect to your workspace via SSH. If you already have an edu key pair set up, type `yes` to trust the workspace and you will be connected to your SURF Ubuntu workspace.
+
+To set up an edu key pair for the first time, see the [setting up SSH access manual](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/195854434/Workspace+access+with+SSH).
+
+**Desktop workspaces:** You can [access Ubuntu Desktop workspaces as a remote desktop in your browser](../../first-steps.qmd#browser-access-to-a-desktop-environment), authenticating via Single-Sign On with your institutional login details. 
+
 ## Data transfer options
+
+Use this table to find the appropriate data transfer method for your situation:
+
+| Data Source | Recommended Tool | Best For | Skill Level |
+|------------|------------------|----------|-------------|
+| Yoda/iRODS | [iBridges](../../manuals/ibridges.qmd) | All file sizes, GUI (Desktop) and CLI access | Beginner to Intermediate |
+| Yoda/iRODS | [iCommands](../../manuals/icommands.qmd) | Large datasets, transfer automation, CLI | Intermediate (CLI) |
+| SURFdrive, ResearchDrive| [rclone](../../manuals/rclone-researchcloud.qmd) | Cloud storage sync, scheduled transfers | Intermediate (CLI) |
+| Your PC/laptop | [scp](../../manuals/ssh-data-transfer-methods.qmd) | Direct one-time transfers | Intermediate (CLI) |
+| Your PC/laptop | [rsync](../../manuals/ssh-data-transfer-methods.qmd) | Sync or repeated transfers | Intermediate (CLI) |
+| Your PC/laptop (Windows only) | [MobaXterm](https://mobaxterm.mobatek.net/) | Graphical SSH/SFTP client | Intermediate |
+| Your PC/laptop | [Cyberduck](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/112592488/Upload+data+to+a+workspace+with+Cyberduck)| Graphical SFTP client | Intermediate |
+| GitHub/GitLab | [git clone](../../manuals/git-clone.qmd) | Code repositories, version control | Intermediate (CLI) |
+
+
+::: {.callout-note collapse = "true"}
+## Transferring from OneDrive
+OneDrive is currently not directly supported with rclone for UU accounts. To transfer files from OneDrive:
+
+1. Download (preferably compress/zip) files from OneDrive to your local PC
+2. Transfer from your PC to the workspace using one of the methods above
+:::
+
+{{< include ../partials/_data_transfer.qmd >}}
 
 ## Usage
 
+**Installing software packages**
+
+You can install system packages by running the following command in the terminal:
+
+```bash
+# Update package lists
+sudo apt update
+
+# Install a package
+sudo apt install package-name
+```
+
 ## Tips
 
+[Contact us](../../contact.qmd) if you have any questions or need help with your workspace and with installing additional software packages.
