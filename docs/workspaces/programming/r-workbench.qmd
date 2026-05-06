@@ -78,7 +78,7 @@ On the Desktop flavour of this workspace type RStudio will also be installed. Yo
 
 ### Installing additional software
 
-The user has [admin rights](../../responsible-use.qmd#installation-of-software) to install additional software on the system from the terminal.
+{{< include ../partials/_sudo-rights.qmd >}}
 
 ## Tips
 

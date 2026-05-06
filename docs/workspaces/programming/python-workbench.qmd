@@ -141,7 +141,7 @@ And `jupyter lab` to launch it.
 
 ### Installing additional software
 
-The user has [admin rights](../../responsible-use.qmd#installation-of-software) to install additional software on the system from the terminal.
+{{< include ../partials/_sudo-rights.qmd >}}
 
 ## Tips
 
