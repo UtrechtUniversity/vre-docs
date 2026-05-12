@@ -24,11 +24,9 @@ Certain SURF Research Cloud workspaces allow you to automatically install projec
 
 **Step 1: Select Custom Packages UU**
 
-During workspace creation, select the **"Custom Packages UU"** option under the Optional Components section.
+During workspace creation, select the **"Custom Packages UU"** option under the Optional Components section. Also select Python tools when creating a worksapce with Custom Packages UU.
 
-::: {.callout-note}
-The 'Python tools' optional component is not explicitly required for Custom Packages to work. The system uses the base conda installation and includes uv for Python environments. However, you may want to enable Python tools if you want additional environment managers like `uv` or `poetry` available for creating new environments or installing packages faster after workspace creation.
-:::
+![Custom Packages UU](../imgs/custom-packages.png){width=400px}
 
 **Step 2: Provide Project Identifiers**
 
@@ -171,6 +169,8 @@ After this, refresh your JupyterLab page and the kernel should appear in the ker
 ## 5. Installing Additional Packages
 
 You can install more packages into your environment after creation.
+
+If you are installing new packages, update your Jupyter kernel so your notebooks can access them either by manually re-registering the kernel (see above) or refreshing the JupyterLab page.
 
 ::: {.panel-tabset}
 
