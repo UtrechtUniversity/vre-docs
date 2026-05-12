@@ -32,3 +32,4 @@ To find the best data transfer method for your situation, check out this [**Inte
 - [Running long jobs](manuals/long-jobs.qmd)
 - [Connecting to Research Cloud from VS Code via SSH](manuals/vscode-to-researchcloud.qmd)
 - [Using AI powered coding assistants on Surf Research Cloud via SSH](manuals/coding-assistants.qmd)
+- [Monitoring CPU, GPU, and Memory Usage on Research Cloud](manuals/monitor-usage.qmd)
