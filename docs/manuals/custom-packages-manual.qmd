@@ -1,21 +1,25 @@
 ---
-title: "Using Custom Packages"
+title: "Pre-installing Python, R and Julia packages on workspaces"
 ---
 
 ## Overview
 
-**Custom Packages** is an optional component available on certain SURF Research Cloud workspaces that automatically installs project dependencies during workspace creation.
-
-Instead of manually cloning repositories and setting up environments after your workspace is ready, Custom Packages UU does this work for you during the build process. This saves time and ensures your research environment is ready to use immediately.
+Certain SURF Research Cloud workspaces allow you to automatically install project dependencies by filling out the URL or DOI of your project during workspace creation.
 
 **Key features:**
 
 - Automatically clones projects from GitHub, GitLab, Zenodo, Dataverse, or DOI links
 - Installs dependencies in separate environments (one per project)
 - Supports Python, R, Julia, and Conda projects
-- Auto-registers Jupyter kernels when installation succeeds
+- Creates a Jupyter kernel when installation succeeds
+
+**Workspaces**
+
+- VRE lab
+- VRE lab GPU
 
 ## How It Works
+
 ## 1. Enabling During Workspace Creation
 
 **Step 1: Select Custom Packages UU**
@@ -51,9 +55,8 @@ This is normal. The workspace is running first-time setup scripts, including ini
 
 ### Finding Your Projects and Environments
 
-::: {.panel-tabset}
 
-## Projects Location
+#### Projects Location
 Projects are located in:
 ```bash
 ~/local-share/projects/
@@ -63,6 +66,12 @@ Each project is in its own directory:
 ```bash
 ~/local-share/projects/{project-name}/
 ```
+
+::: {.callout-warning}
+Please note that the `local-share` folder is not located on a persistent storage volume, which means data in this folder will be deleted when the workspace is deleted. Make sure to push changes to GitHub regularly, or move any files to a persistent storage volume if you want to keep them.
+:::
+
+::: {.panel-tabset}
 
 ## Conda Environments
 
@@ -74,7 +83,7 @@ To see what's available:
 conda env list
 ```
 
-## Python/uv Environments
+## uv/venv Environments
 
 Location: `/usr/local/uu/env/python/{project-name}`
 
@@ -98,21 +107,21 @@ The activation command differs based on the environment type:
 # Activate
 conda activate /usr/local/uu/env/conda/{project-name}
 
-# Example (for environment.yml)
+# Example (for environment.yml in [`src-python-example repository`](https://github.com/UtrechtUniversity/src-python-example.git))
 conda activate /usr/local/uu/env/conda/src-python-example
 
 # Deactivate
 conda deactivate
 ```
 
-## Python/uv environments:
+## uv/venv environments:
 
 ```bash
 # Activate
 source /usr/local/uu/env/python/{project-name}/bin/activate
 
-# Example (for pyproject.toml or requirements.txt)
-source /usr/local/uu/env/python/{project-name}/bin/activate
+# Example (for [`src-python-example repository`](https://github.com/UtrechtUniversity/src-python-example.git))
+source /usr/local/uu/env/python/src-python-example/bin/activate
 
 # Deactivate
 deactivate
@@ -124,11 +133,11 @@ Once activated, you can run Python scripts using the environment's packages, ins
 ## 4. Using Environments in Jupyter Notebooks
 
 
-If the kernel was registered automatically, select it from the kernel dropdown in the JupyterLab interface (top right).
+If the kernel was created automatically, select it from the kernel dropdown in the JupyterLab interface (top right).
 
-**Manual Kernel Registration**
+**Manual Kernel creation**
 
-If the kernel wasn't registered automatically (due to dependency installation issues), you can register it manually:
+If the kernel wasn't created automatically (due to dependency installation issues), you can create it manually using the terminal:
 
 ::: {.panel-tabset}
 
@@ -144,7 +153,7 @@ python -m ipykernel install --user --name {project-name} --display-name "Python 
 jupyter kernelspec list
 ```
 
-## For Python/uv environments:
+## For uv/venv environments:
 ```bash
 # Activate your environment
 source /usr/local/uu/env/python/{project-name}/bin/activate
@@ -182,7 +191,7 @@ pip install package-name
 When using both conda and pip in a conda environment, install conda packages first, then pip packages. This helps avoid dependency conflicts.
 :::
 
-## Python/uv Environments
+## uv/venv Environments
 
 ```bash
 # Activate environment
@@ -195,7 +204,7 @@ pip install package-name
 
 ## 6. How Dependencies Are Resolved
 
-Custom Packages automatically detects dependency files in your project and chooses the appropriate environment manager:
+Dependency files in your project repository are automatically detected and the appropriate environment manager will be selected:
 
 ::: {.panel-tabset}
 
@@ -265,7 +274,7 @@ conda activate /usr/local/uu/env/conda/{project-name}
 conda install failed-package-name
 ```
    
-## Python/uv environments:
+## uv/venv environments:
 ```bash
 source /usr/local/uu/env/python/{project-name}/bin/activate
 pip install failed-package-name
@@ -274,16 +283,7 @@ pip install failed-package-name
 :::
 
 ::: {.callout-note collapse="true"}
-## 3. Project Not Found After Creation
 
-If you Can't find project in `~/local-share/projects/` or environment not created, then:
-
-- Check if the workspace build completed successfully
-- Verify the project identifier was entered correctly during creation
-- Check workspace logs for errors
-:::
-
-::: {.callout-note collapse="true"}
 ## 4. Cannot Activate Conda Environment
 
 `conda activate` command doesn't work. Then you can:
@@ -322,6 +322,4 @@ The log shows which commands were run (conda or uv).
 
 ## Tips
 
-- Use reproducible projects: Projects with well-defined dependency files work best
-- Avoid outdated dependencies: Very old projects (e.g., requiring Python 3.5) may fail to install
-- Start with small projects: Test with a simple repository to ensure everything works before using larger projects
+To learn more about dependencies, virtual environments, git and GitHub, consider following the [Best Practices for Writing Reproducible code workshop](https://www.uu.nl/en/research/research-data-management/training-workshops/best-practices-for-writing-reproducible-code)

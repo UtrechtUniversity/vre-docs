@@ -1,6 +1,7 @@
 project:
   type: website
   output-dir: ./_html
+  title: "VRE documentation for UU research"
 
 website:
   navbar:
