@@ -1,8 +1,6 @@
-### Pre-installing Environments with Custom Packages UU
+### Pre-installing Python, R and Julia packages during workspace creation
 
-The **Custom Packages UU** optional component automatically installs project dependencies during workspace creation. Instead of manually cloning repositories and setting up environments after your workspace is ready, Custom Packages does this work for you during the build process ensuring your research environment is ready to use immediately when you log in. 
-
-**How to use during creation:**
+**How to do this:**
 
 1. Check **"Custom Packages UU"** in Optional Components when creating your workspace
 2. In the "Projects to pre-install" field, enter your project identifiers as URLs or DOIs (pointing to repositories) separated by commas
@@ -14,7 +12,7 @@ The **Custom Packages UU** optional component automatically installs project dep
 - Dependencies are resolved and environments are created based on the presence of dependency files:
    - For `environment.yml`, conda environment created at `/usr/local/uu/env/conda/{project-name}`
    - For `pyproject.toml` or `requirements.txt`, python/uv environment created at `/usr/local/uu/env/python/{project-name}`
-- Jupyter kernels auto-registered when installation succeeds
+- Jupyter kernels are created when installation succeeds
 
 ::: {.callout-important}
 The project you wish to install must contain valid dependency files (`environment.yml`, `requirements.txt`, `pyproject.toml`, etc.) for automatic installation to work.
@@ -24,7 +22,10 @@ The project you wish to install must contain valid dependency files (`environmen
 
 Find your projects in `~/local-share/projects/`
 
-Activate environments:
+Select the Jupyter kernel to execute notebooks.
+
+For other purposes, activate environments using these commands:
+
 ```bash
 # Conda
 conda activate /usr/local/uu/env/conda/{project-name}
