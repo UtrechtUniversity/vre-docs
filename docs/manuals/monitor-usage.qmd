@@ -1,0 +1,182 @@
+---
+title: "Monitoring CPU, RAM, GPU, and Disk Usage"
+---
+
+## Introduction
+
+Monitoring your workspace's CPU, RAM, GPU, and disk usage is essential for optimizing performance, controlling costs, and ensuring your computational resources are being used efficiently. Understanding resource utilization helps you:
+
+- Optimize performance: Identify memory intensive tasks and improve efficiency
+- Control costs: Ensure you're not paying for unused resources, especially on GPU workspaces
+- Debug issues: Diagnose why jobs are slow, failing, or running out of memory
+- Right-size workspaces: Choose appropriate workspace sizes based on actual usage patterns
+
+This guide covers command-line and GUI tools for tracking resource usage across different workspace types.
+
+### Quick Reference
+
+| Command | Shows | Available On |
+|---------|-------|--------------|
+| `gnome-system-monitor` | CPU, RAM, GPU processes (GUI) | Desktop workspaces only (*needs installation and admin rights*) |
+| `htop`, `top` | CPU, RAM, processes | All Linux workspaces |
+| `nvidia-smi` | GPU usage, memory | CUDA workspaces only |
+| `df -h` | Disk space | All Linux workspaces |
+| `free -h` | Memory details | All Linux workspaces |
+
+Follow the sections below for more details on how to use these tools and interpret their outputs.
+
+::: {.callout-note collapse = "true"}
+## System Monitor (GUI)
+
+**Available on:** Desktop workspaces: ([Ubuntu Desktop workspace](../workspaces/plain/ubuntu.qmd), [Python Workbench Desktop](../workspaces/programming/python-workbench.qmd), [VRE Lab Desktop](../workspaces/programming/vre-lab.qmd)).
+
+For users who prefer a graphical interface, GNOME System Monitor provides an easy-to-use GUI for monitoring resources. You may need to install it first and require sudo rights to do so. Sudo rights can be obtained by adding [collaboration members](../onboarding.qmd#add-collaborators-to-existing-project) to the `src_co_admin` group in [SRAM](https://sram.surf.nl).
+
+You can install it by running the following command in your workspace terminal:
+```bash
+sudo apt install gnome-system-monitor
+
+gnome-system-monitor    # To launch it
+```
+
+**What it shows:**
+
+- Processes tab: Running programs with CPU and memory usage
+- Resources tab: Real-time graphs of CPU, memory, and network usage
+- File Systems tab: Disk space usage
+
+This is the easiest option for beginners on desktop workspaces. For a detailed explanation of each section, see the [gnome-system-monitor documentation](https://help.gnome.org/gnome-system-monitor/).
+
+For non-desktop workspaces, use the tools below.
+:::
+
+::: {.callout-note collapse = "true"}
+## CPU & RAM Monitoring
+
+Tracking CPU and RAM usage helps optimize performance, identify bottlenecks, and ensure your code is running efficiently without wasting computational resources.
+
+To check CPU and RAM usage in real-time, you can use command-line tools. These work on all Linux workspace types.
+
+::: {.panel-tabset}
+
+## htop
+
+To monitor CPU and RAM usage, run the following command in your workspace terminal:
+
+```bash
+htop
+```
+You can see CPU usage per core, memory bar showing RAM usage, and which processes are consuming resources. Press `q` to exit.
+
+To see what the outputs mean, follow this [htop guide.](https://linuxize.com/post/htop-command-in-linux/#understanding-the-interface)
+
+## top
+
+An alternative to `htop` pre-installed on all Linux workspaces, run the following command in your workspace terminal:
+
+```bash
+top
+```
+
+The output is similar to `htop` and provides real-time information about system processes. Press `q` to exit.
+
+To learn more about what the output means, follow this [top guide.](https://phoenixnap.com/kb/top-command-in-linux)
+:::
+:::
+
+::: {.callout-note collapse = "true"}
+## Memory-specific check
+
+To see how much RAM memory is still available on your workspace and to check system memory usage, run the following command in your workspace terminal:
+
+```bash
+free -h
+```
+It displays the Total, Used, Free, and Available memory.
+
+For further details on using the `free` command, see [this guide.](https://linuxize.com/post/free-command-in-linux/)
+:::
+
+::: {.callout-note collapse = "true"}
+## GPU Monitoring
+
+GPU workspaces cost significantly more credits than CPU-only workspaces, so ensuring moderate-to-high GPU utilization is essential to justify the cost. Monitoring also helps verify your code is actually using the GPU rather than defaulting to CPU, which would waste the additional expense.
+
+**Available only on CUDA workspaces** (workspaces created with nvidia GPU installed).
+
+To simply check the GPU usage, run the following command in your workspace terminal:
+
+```bash
+nvidia-smi
+```
+
+This shows:
+
+- GPU utilization percentage
+- Memory used / total memory
+- Temperature
+- Running processes using the GPU
+
+If you want to monitor GPU usage continuously in real-time, then you can use the `watch` command to run `nvidia-smi`.
+
+```bash
+watch -n 1 nvidia-smi
+```
+This updates every second. To update at a different interval, change the value after `-n` for your desired frequency (in seconds). Press `Ctrl+C` to stop.
+
+For further details on using `nvidia-smi`, see the [nvidia-smi SURF documentation](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/92668154/nvidia-smi) and the [official NVIDIA documentation.](https://docs.nvidia.com/deploy/nvidia-smi/index.html)
+
+**Common issue: GPU showing 0% usage**
+
+If your GPU utilization is 0% or very low while running code:
+
+- Your code is likely running on CPU instead of GPU
+- Check your code's GPU configuration 
+- Verify GPU is available and properly configured in your code before running large jobs
+
+**What's normal:**
+
+- GPU utilization should be moderate to high during intensive tasks
+- Low utilization during computation means you may be wasting credits on GPU resources you're not using
+- GPU utilization will be 0% when idle (no jobs running): this is expected
+:::
+
+::: {.callout-note collapse = "true"}
+## Disk Usage
+
+Monitoring disk usage helps you avoid running out of storage space, which can cause jobs to fail. Regular checks help identify large files or folders that can be cleaned up to maintain workspace performance.
+
+To check overall disk space, run the following command in your workspace terminal:
+```bash
+df -h
+```
+
+To check folder sizes and to see which files or folders are taking up the most space, you can use the `du` command.
+
+```bash
+du -sh *
+```
+Or for a specific directory:
+
+```bash
+du -sh ~/<folder-name>/*
+```
+For more details regarding checking your disk usage, see this [guide on disk usage](https://phoenixnap.com/kb/linux-check-disk-space).
+:::
+
+
+## Tips
+
+- Before starting large jobs: Check available resources with `htop` and `df -h`
+- During long runs: Use `watch -n 1 nvidia-smi` or `htop` in a separate terminal to monitor progress
+- Right-sizing your workspace: If resources are consistently underutilized, consider a smaller workspace to save credits
+- If hitting limits: Either optimize your workspace usage, or scale up to a larger workspace
+- Cost awareness: GPU workspaces cost more credits so ensure your GPU utilization is high enough and being used to justify the cost, and consider switching to CPU workspaces if GPU is not needed.
+
+For workspace sizing and cost estimates, see the [cost calculator](../responsible-use.qmd#cost-calculator).
+
+[Contact us](../contact.qmd) if you need additional help with monitoring your workspace resources.
+
+
+
+
