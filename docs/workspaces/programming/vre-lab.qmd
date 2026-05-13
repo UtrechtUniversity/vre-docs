@@ -27,7 +27,7 @@ workspace_cuda: VRE lab GPU
 
 This VRE Lab workspace hosts a [JupyterLab](https://jupyterlab.readthedocs.io/en/latest/) environment that provides [Jupyter notebooks](https://jupyter.org/) alongside a number of useful applications accessible through the browser. This catalog item can easily be extended with additional applications to suit your research needs.
 
-VRE Lab workspace is also available with a **Desktop** interface. Select Ubuntu Desktop as the flavor when creating your workspace and you can access it from the JupyterLab environment. 
+VRE Lab workspace is also available with a **Desktop** interface. Select Ubuntu Desktop as the flavor when [creating your workspace](../../../manuals/creating.qmd) and you can access it from the JupyterLab environment. 
 
 The Desktop option is particularly useful for GUI applications, 3D visualization tasks, and when combined with GPU workspaces (**VRE Lab GPU** catalog item), provides GPU-accelerated rendering for 3D analysis and extensive data processing from the desktop environment.
 
