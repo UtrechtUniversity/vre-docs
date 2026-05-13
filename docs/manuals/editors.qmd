@@ -37,7 +37,7 @@ Desktop workspaces come with graphical text editors pre-installed such as:
 - **Notepad, WordPad** (Windows): Basic text editing
 - **LibreOffice** (Windows): For editing documents and spreadsheets (only on Windows with LibreOffice flavour) 
 
-### 3. VS Code Remote-SSH
+### 3. VSCode Remote-SSH
 
 **Available for:** All workspaces
 
@@ -57,7 +57,7 @@ See the [VS Code Remote-SSH manual](../manuals/vscode-to-researchcloud.qmd) for 
 
 **Available for:** All workspaces (requires SSH access)
 
-SFTP clients like [Cyberduck](https://cyberduck.io/) and [MobaXterm](https://mobaxterm.mobatek.net/) (Windows only) allow you to edit files locally on your computer while they remain on the workspace. Changes are automatically uploaded when you save.
+SFTP clients like [Cyberduck](https://cyberduck.io/) and [MobaXterm](https://mobaxterm.mobatek.net/) (Windows only) allow you to edit files locally on your computer while they remain on the workspace. Changes are automatically uploaded when you save. This means you can use any of editor of choice that is installed on your computer.
 :::
 
 ## Installing Additional Editors
