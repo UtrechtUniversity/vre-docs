@@ -27,7 +27,7 @@ workspace_cuda: VRE lab GPU
 
 This VRE Lab workspace hosts a [JupyterLab](https://jupyterlab.readthedocs.io/en/latest/) environment that provides [Jupyter notebooks](https://jupyter.org/) alongside a number of useful applications accessible through the browser. This catalog item can easily be extended with additional applications to suit your research needs.
 
-VRE Lab workspace is also available with a **Desktop** interface. Select Ubuntu Desktop as the flavor when [creating your workspace](../../../manuals/creating.qmd) and you can access it from the JupyterLab environment. 
+VRE Lab workspace is also available with a **Desktop** interface. Select Ubuntu Desktop as the flavor when [creating your workspace](../../manuals/creating.qmd) and you can access it from the JupyterLab environment. 
 
 The Desktop option is particularly useful for GUI applications, 3D visualization tasks, and when combined with GPU workspaces (**VRE Lab GPU** catalog item), provides GPU-accelerated rendering for 3D analysis and extensive data processing from the desktop environment.
 
@@ -63,9 +63,9 @@ During workspace creation, you'll see an `Optional components` section where you
 - **Python tools**: Additional tools for managing Python environments (includes `uv`, `poetry`, and `conda`).
 - **Custom Packages UU**: Automatically install dependencies for Python, R, Julia, or Conda projects from Git repositories, Zenodo, Dataverse, or DOI links.
 
-::: {.callout-tip}
-## Custom Packages UU
-If you select "Custom Packages UU", you can provide a comma-separated list of project identifiers (e.g., GitHub URLs, Zenodo links, or DOIs) in the workspace parameters. These projects will be saved to `/local-share` with their dependencies installed in separate environments.
+:::{.callout-tip collapse="true"}
+## How to Use Custom Packages UU 
+{{< include ../partials/_custom-packages.qmd >}}
 :::
 
 Simply check the boxes for the components you need, then continue with workspace creation. You can always install additional software later using sudo rights from the terminal.
