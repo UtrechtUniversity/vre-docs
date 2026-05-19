@@ -25,7 +25,7 @@ workspace_cuda: VRE lab GPU
 
 ## Description
 
-This VRE Lab workspace hosts a [JupyterLab](https://jupyterlab.readthedocs.io/en/latest/) environment that provides [Jupyter notebooks](https://jupyter.org/) alongside a number of useful applications accessible through the browser. This catalog item can easily be extended with additional applications to suit your research needs.
+This VRE Lab workspace hosts a [JupyterLab](https://jupyterlab.readthedocs.io/en/latest/) environment that provides [Jupyter notebooks](https://jupyter.org/) alongside a number of useful applications accessible through the browser. You can also access RStudio via the browser by selecting it when creating your workspace. This catalog item can easily be extended with additional applications to suit your research needs.
 
 VRE Lab workspace is also available with a **Desktop** interface. Select Ubuntu Desktop as the flavor when [creating your workspace](../../manuals/creating.qmd) and you can access it from the JupyterLab environment. 
 
@@ -62,6 +62,7 @@ During workspace creation, you'll see an `Optional components` section where you
 - **[OpenRefine](https://openrefine.org/docs) UU**: Data cleaning and transformation tool accessible from JupyterLab.
 - **Python tools**: Additional tools for managing Python environments (includes `uv`, `poetry`, and `conda`).
 - **Custom Packages UU**: Automatically install dependencies for Python, R, Julia, or Conda projects from Git repositories, Zenodo, Dataverse, or DOI links.
+- **RStudioUU**: Access an [RStudio](https://posit.co/products/open-source/rstudio) IDE with a R environment in the same workspace. 
 
 :::{.callout-tip collapse="true"}
 ## How to Use Custom Packages UU 
