@@ -30,8 +30,10 @@ If you would like to learn more about reproducible research workflows, the follo
 
 The repository provides information on working with the following workspaces:
 
+ - [VRE Lab](../workspaces/programming/vre-lab.qmd)
  - [Python Workbench Desktop](../workspaces/programming/python-workbench.qmd)
  - [Jupyter Notebook](../workspaces/programming/jupyter.qmd)
+ - [OpenVSCode](../workspaces/programming/open-vscode.qmd)
 
 The environment managers used are:
 
@@ -43,6 +45,15 @@ The environment managers used are:
 Information on how to create a workspace can be found [here.](../first-steps.qmd#create-a-workspace)
 
 # Getting Started
+
+To follow along with this manual, it is recommended to clone the repository mentioned above to your workspace. You can do this by running the following command in your workspace terminal:
+```bash
+cd <your-folder-name>  
+
+git clone https://github.com/UtrechtUniversity/src-python-example.git # clone the repository
+
+cd src-python-example # navigate to the project directory
+```
 
 ## New to Python Environments?
 
@@ -58,7 +69,7 @@ If you do, move to **Step 2.**
 
 ### Step 1b: Getting started with `uv`
 
-If you are not working with an environment manager, we recommend using [`uv`](https://docs.astral.sh/uv/). Start by listing the packages you import in your code (e.g., `pandas`, `numpy`, `matplotlib`) and create a `requirements.txt` file with one package per line.
+If you are not working with an environment manager, we recommend using [`uv`](https://docs.astral.sh/uv/). Start by listing the packages you import in your code (e.g., `pandas`, `numpy`, `matplotlib`) and create a new `requirements.txt` file with one package per line.
 
 [Installing `uv`](https://docs.astral.sh/uv/getting-started/installation/) is straightforward and fast.
 
@@ -115,8 +126,29 @@ uv add pandas numpy matplotlib  # add packages individually
 
 Start working:
 ```bash
-python your_script.py
+python your_script.py # run your script (python main.py for example)
 ```
+
+::: {.callout-note collapse="true"}
+## Using Kernels in JupyterLab (for `.ipynb` files)
+In a JupyterLab interface, you can register your environment as a Jupyter kernel so notebooks can use that environment to run code.
+```bash
+cd ~/src-python-example # Navigate to the project
+
+source .venv/bin/activate # Make sure your environment is activated
+
+# Register as Jupyter kernel (for src-python-example)
+python -m ipykernel install --user --name=geo-kernel --display-name "geo-kernel (ipykernel)"
+
+# For other projects
+python -m ipykernel install --user --name {project-name} --display-name "Python ({project-name})"
+
+# Verify the kernel is registered
+jupyter kernelspec list
+```
+
+Refresh or close your JupyterLab tab. After this, you should see the new kernel in the JupyterLab interface when you create a new notebook or change the kernel of an existing notebook. Select the kernel with the name you specified (e.g., "geo-kernel (ipykernel)") to run your jupter (`.ipynb`) notebook
+:::
 
 ## Using other Environment Managers?
 

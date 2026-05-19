@@ -32,6 +32,7 @@ If you would like to learn more about reproducible research workflows, the follo
 
 The example provides information on working with the following workspaces:
 
+ - [VRE Lab](../workspaces/programming/vre-lab.qmd)
  - [R Workbench](../workspaces/programming/r-workbench.qmd)
  - [RStudio](../workspaces/programming/rstudio.qmd)
 
@@ -41,13 +42,23 @@ Information on how to create a workspace can be found [here.](../first-steps.qmd
 
 # Getting Started
 
+
+To follow along with this manual, it is recommended to clone the repository mentioned above to your workspace. You can do this by running the following command in your **RStudio terminal**:
+```bash
+cd <your-folder-name>  
+
+git clone https://github.com/MindTheGap-ERC/StratPal_ms_supp.git # clone the repository
+
+cd StratPal_ms_supp # navigate to the project directory
+```
+
 ## New to R Environments?
 
 ### Step 1: Create a Lock File (On Your Local Machine)
 
 Check if your project has an `renv.lock` file. If you do, move to **Step 2**.
 
-If not, open your R project in RStudio on your local machine:
+If not, open your R project in RStudio on your local machine and run the following in the **RStudio console** tab:
 ```r
 install.packages("renv")  # Install renv if not already installed
 renv::init()              # Initialize renv in your project
@@ -58,9 +69,11 @@ This creates an `renv.lock` file that captures all your project's package versio
 
 ### Step 2: Set Up on Your SURF Research Cloud Workspace
 
-Open a project and upload the `renv.lock` file to your SURF Research Cloud workspace.
+Click on File from the options in the top left corner of RStudio, then click on Open Project and select the example project and the  `.Rproj` file in the project directory you just cloned. This will open the project in RStudio.
 
-Then restore the environment:
+For a different project, upload the `renv.lock` file to your SURF Research Cloud workspace.
+
+Then restore the environment by running the following in your **RStudio console**:
 ```r
 install.packages("renv")  # Install renv on the workspace
 renv::restore()           # Restore packages from renv.lock
@@ -77,6 +90,12 @@ When you make changes to your dependencies, update the lock file:
 ```r
 renv::snapshot()  # Update renv.lock with new packages
 ```
+
+If some packages cannot be installed with `renv::restore()` or you encounter issues, you can try installing the packages manually by running the following in your **RStudio console**:
+```r
+install.packages("package_name")  # Replace with the name of the package that failed to install
+```
+After installing the missing package(s), run `renv::snapshot()` to update the lock file
 
 
 ## Already Using R Projects or Package Management?
