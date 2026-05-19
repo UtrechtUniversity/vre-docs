@@ -2,7 +2,7 @@
 title: Using iBridges on SURF Research Cloud
 ---
 
-The instructions below describe the how to setup iBridges to transfer data between SURF Research Cloud and Yoda or any other iRODS instance. It is possible to use iBridges in three different ways:
+The instructions below describe how to setup iBridges to transfer data between SURF Research Cloud and Yoda or any other iRODS instance. It is possible to use iBridges in three different ways:
 
 - as a python package 
 - via the command line interface (CLI)
@@ -18,13 +18,41 @@ The python package and the command line interface are available (or can be made 
 
 ### Prerequisites
 
-Access to Yoda or another iRODS instance which hosts your data.
+Access to [Yoda](https://www.uu.nl/en/research/yoda) or another iRODS instance which hosts your data.
 
-iBridges needs to be installed on your workspace. Many SURF ResearchCloud workspaces developed by Utrecht University (such as Python and R workbenches) have iBridges preinstalled. 
+iBridges needs to be installed on your workspace. Most workspaces developed by Utrecht University (such as [Python](../workspaces/programming/python-workbench.qmd) and [R](../workspaces/programming/r-workbench.qmd) workbenches, [VRE Lab](../workspaces/programming/vre-lab.qmd)) have iBridges preinstalled. On workspaces developed by SURF, ibridges may need to be installed by the user. 
 
 - If you are working on a Desktop workspace, you can check by logging in to your workspace, clicking 'applications' in the top left corner, and clicking 'Development'. 
 - On non-desktop workspaces check if iBridges is installed by typing: `ibridges` in the terminal. If iBridges is installed, this should show you the program's help menu. On Jupyter or Rstudio workspaces, you need to open a terminal first: In Jupyter, click the + button in the file browser and select the terminal in the new Launcher tab ([find a short video here](https://jupyterlab.readthedocs.io/en/stable/user/terminal.html)).
 In Rstudio, In the bottom left panel, click the ‘terminal’ tab.
+
+
+#### What shall I do if iBridges is not on my workspace?
+
+If your workspace has python installed, you can install the packages using the command line (or aka terminal):
+
+::: {.panel-tabset}
+
+## GUI
+```bash
+pip install ibridgesgui
+```
+
+To start the GUI application you would then need to open a terminal and type in `ibridges gui` (Note: this will only work on Desktop workspaces).
+
+If you run into problems with running ibridgesgui, try running `sudo apt install libxcb-cursor0` in the terminal and then running `ibridges gui` again. Please contact us if you need help with installing iBridges or if you want to have iBridges preinstalled on your workspace.
+
+## CLI/API
+```bash
+uv tool install ibridges
+# OR
+pipx install ibridges
+```
+ibridges will then be installed. However it is possible that you may need to run `pipx ensurepath` to make it available on your path and restart your terminal before you can use the `ibridges` command. 
+
+Please contact us if you need help with installing iBridges or if you want to have iBridges preinstalled on your workspace.
+:::
+
 
 ### Configure iBridges
 
@@ -40,7 +68,7 @@ To connect to a Yoda or any other iRODS instance you will need a so-called `irod
 
 If there are no templates in the drop-down menu of the configuration window, you will need to install the plugin. To this end you will need python and git and execute in power shell, git bash or Anaconda terminal:
 
-```
+``` bash
 pip install ibridges-servers-uu
 ```
 
@@ -48,28 +76,16 @@ pip install ibridges-servers-uu
 
 If you want to connect to a server hosted by Utrecht University please check whether this information is already present for ibridges.
 
-```
+``` bash
 ibridges setup --list
 ```
 
 From that list simply choose the server you want to connect to with `ibridges setup uu-<server>` and follow the instructions.
 In case you get the message `No server information was found.` please install:
 
-```
+``` bash
 pip install bridges-servers-uu
 ```
-
-#### What shall I do if iBridges is not on my workspace?
-
-If your workspace has python installed, you can install the packages using the command line (or aka terminal):
-
-- GUI: `pip install ibridgesgui`
-- CLI/API: `pip install ibridges`
-
-To start the GUI application you would then need to open a terminal and type in `ibridges-gui`. (Note: this will only work on Desktop workspaces).
-
-Please contact us if you need help with installing iBridges or if you want to have iBridges preinstalled on your workspace.
-
 
 #### How to connect to a Yoda or iRODS instance not provided by Utrecht University?
 
@@ -97,7 +113,7 @@ More elaborate instructions can be found in the [iBridges GUI documentation](htt
 
 Simply try `ibridges --help` or `ibridges <command> --help` to get examples and help for the usage.
 
-For instructions on how to use the `ibridges` command please see the [iBridges documentation](https://ibridges.readthedocs.io/en/stable/cli.html).
+For instructions on how to use the `ibridges` command please see the [iBridges CLI documentation](https://ibridges.readthedocs.io/en/stable/cli.html).
 
 #### Using the python package
 

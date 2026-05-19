@@ -2,7 +2,9 @@
 title: "Transferring data from your PC to your workspace using SCP and RSYNC"
 ---
 
-The instructions on this page assume you have already setup SSH for Research cloud. If this is not the case, check the [Research Cloud documentation site](https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace#Logintoyourworkspace-AccessaworkspacewithSSH).
+The instructions on this page assume you have already setup SSH for Research cloud. If this is not the case, check the [Research Cloud documentation site](https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace#Logintoyourworkspace-AccessaworkspacewithSSH) and see how to access your workspace with SSH.
+
+The commands described in this manual are to be run on your local laptop/pc, not on the workspace. Use a terminal (or shell session) to transfer data from your local computer to your workspace.
 
 ## scp
 When you work on a Windows machine and you use MobaXterm for SSH connection, you can use the file browser in MobaXterm to intuitively transfer data. 
@@ -16,6 +18,8 @@ scp sourcefile <username>@<ip-address>:destinationdir
 You can find both the username and the ip-address in the [research cloud portal](https://portal.live.surfresearchcloud.nl/).
 Find your username under the 'Profile' tab.  
 Find the IP address of your workspace in the main Dashboard by clicking the drop down arrow of the running Workspace.
+
+The source file is the file on your local computer that you want to transfer. The destination directory is the directory on your workspace where you want to transfer the file to.
 
 ```
 scp testfile.txt <username>@<ip-address>:data/volume_2/input_data
@@ -37,7 +41,7 @@ scp -r sourcedir <username>@<ip-address>:data/volume_2/input_data
 
 ## rsync
 
-Rsync is a tool for synchronizing two folders. This method can also be used to transfer the contents of a folder to a remote folder. You typically run this tool on your own PC in the [terminal](../manuals/terminal.qmd) (so e.g.before login in using the `ssh` command, or in a separate terminal (or shell session)).
+Rsync is a tool for synchronizing two folders. This method can also be used to transfer the contents of a folder to a remote folder. You typically run this tool on your own PC in the terminal or command prompt (so e.g. before loging in using the `ssh` command, or in a separate terminal (or shell session)).
 
 Type `rsync --help` on to see if it is installed on your system. To install:
 
