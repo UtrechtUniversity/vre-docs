@@ -3,7 +3,9 @@ project:
   output-dir: ./_html
 
 website:
+  title: "VRE documentation for UU research"
   navbar:
+    title: false
     left:
       - href: index.qmd
         text: Home

@@ -32,7 +32,8 @@ If you would like to learn more about reproducible research workflows, the follo
 
 The example provides information on working with the following workspaces:
 
- - [VRE Lab](../workspaces/programming/vre-lab.qmd)
+ - [RStudioUU](../workspaces/programming/rstudioUU.qmd)
+ - [VRE Lab](../workspaces/programming/vre-lab.qmd) with RStudioUU selected under optional components
  - [R Workbench](../workspaces/programming/r-workbench.qmd)
  - [RStudio](../workspaces/programming/rstudio.qmd)
 

@@ -1,0 +1,69 @@
+---
+title: "Editing Files on SRC Workspaces"
+---
+
+## Overview
+
+There are several ways to edit text and code files in your SURF Research Cloud workspace. The best method depends on your workspace type, personal preference, and the complexity of your editing tasks.
+
+### Quick Comparison
+
+| Method | Workspace Type | Skill Level | Best For |
+|--------|---------------|-------------|----------|
+| JupyterLab Editor | Jupyter Notebook, VRE Lab, Python Workbench Desktop | Beginner | Quick edits, Python/Text/Markdown scripts |
+| Desktop Editors | Desktop workspaces | Beginner | Full IDE features, GUI preference |
+| VS Code Remote-SSH | All workspaces | Intermediate | Local IDE, familiar VS Code environment |
+| SFTP Clients (eg. Cyberduck) | All workspaces | Advanced | Edit locally with auto-sync |
+| Terminal Editors  | All workspaces | Advanced | SSH workflows, config files |
+
+
+## Editing Methods
+
+### 1. JupyterLab Editor
+
+**Available on:** [Jupyter Notebook](../workspaces/programming/jupyter.qmd), [VRE Lab](../workspaces/programming/vre-lab.qmd), [Python Workbench (Desktop)](../workspaces/programming/python-workbench.qmd)
+
+JupyterLab interface includes a built-in editor to edit files from within the environment offering a graphical interface.
+The editor supports Python, R, Markdown, JSON, YAML, and text file types without needing to install additional software. 
+
+### 2. Desktop Editors
+
+**Available on:** [Ubuntu Desktop](../workspaces/plain/ubuntu.qmd), [Windows Desktop](../workspaces/plain/windows.qmd), [Python Workbench (Desktop)](../workspaces/programming/python-workbench.qmd), [VRE Lab (Desktop)](../workspaces/programming/vre-lab.qmd)
+
+Desktop workspaces come with graphical text editors pre-installed such as:
+
+- **Text Editor**: Simple, lightweight editor for quick edits
+- **VSCodium** (Python Desktop): Full-featured IDE (open-source VS Code) 
+- **Notepad, WordPad** (Windows): Basic text editing
+- **LibreOffice** (Windows): For editing documents and spreadsheets (only on Windows with LibreOffice flavour) 
+
+### 3. VSCode Remote-SSH
+
+**Available for:** All workspaces
+
+Use VSCode on your local computer to edit files directly on the workspace via SSH. This allows you to use your local VS Code with extensions, debugging, and Git integration while files stay on the workspace.
+
+See the [VS Code Remote-SSH manual](../manuals/vscode-to-researchcloud.qmd) for setup instructions.
+
+::: {.callout-note collapse="true"}
+## 4. Terminal Editors (for advanced users)
+**Available on:** All workspaces that support terminal access 
+
+**nano** and **vim** are  terminal-based text editors that allow you to edit files directly from the command line. They are especially useful for quick edits or when working on remote servers without a graphical interface. However, they have a steeper learning curve compared to graphical editors.
+:::
+
+::: {.callout-note collapse="true"}
+## 5. SFTP Clients (for advanced users)
+
+**Available for:** All workspaces (requires SSH access)
+
+SFTP clients like [Cyberduck](https://cyberduck.io/) and [MobaXterm](https://mobaxterm.mobatek.net/) (Windows only) allow you to edit files locally on your computer while they remain on the workspace. Changes are automatically uploaded when you save. This means you can use any of editor of choice that is installed on your computer.
+:::
+
+## Installing Additional Editors
+
+You can install additional editors if you have [admin rights](../onboarding.qmd#grant-workspace-admins-rights) for your workspace. 
+With sudo rights, you can install additional editors using the terminal (`sudo apt install <editor>`) or from official websites for desktop workspaces. 
+
+If you don't have admin rights or are unsure which is the best option for your needs, then [contact us.](../contact.qmd) 
+
