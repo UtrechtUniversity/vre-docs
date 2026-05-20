@@ -65,15 +65,14 @@ Check if your project has one of these dependency files:
 -  `requirements.txt`
 -  `environment.yml` 
 
-If you do, move to **Step 2.**
+If you do, move to **Step 1c**
 
 ### Step 1b: Getting started with `uv`
 
-If you are not working with an environment manager, we recommend using [`uv`](https://docs.astral.sh/uv/). Start by listing the packages you import in your code (e.g., `pandas`, `numpy`, `matplotlib`) and create a new `requirements.txt` file with one package per line.
-
+If you are not working with an environment manager, we recommend using [`uv`](https://docs.astral.sh/uv/). It is a modern, fast and user-friendly environment manager that is pre-installed on SURF Research Cloud workspaces. 
 [Installing `uv`](https://docs.astral.sh/uv/getting-started/installation/) is straightforward and fast.
 
-Then initialize your environment in your project directory:
+First initialize your environment in your project directory with the python version you want to use:
 ```bash
 uv init 
 uv venv --python 3.12  # or other version
@@ -82,11 +81,12 @@ Now activate it and install your dependencies:
 
 ```bash
 source .venv/bin/activate
-uv add -r requirements.txt
+uv add pandas # add packages to your environment
+uv add 'pandas==2.0.3' 'numpy==2.0.0'  # if needed, you can specify package versions
 ```
 
 ### Step 1c: Capturing Dependencies
-Alternatively, if you're already working with an environment manager (uv, poetry, pyenv, conda) but don't have a dependency file, you can use a command to capture your dependencies:
+If you have an environment manager (uv, poetry, pyenv, conda) set up, you can capture your dependencies in a file that can be used to recreate the same environment on SURF Research Cloud. This is important for reproducibility and portability of your project.
 
 ```bash
 uv lock    # if you are working with uv
@@ -101,11 +101,17 @@ OR
 conda export --file environment.yaml
 ```
 
-Note: This captures *everything* in your current environment, so you may want to clean it up to include only what your project actually needs.
+Note: In the case of `pip freeze`, this captures *everything* in your current environment, so you may want to clean it up to include only what your project actually needs.
 
 ### Step 2: Set up your environment on Surf Research Cloud
 
-First make sure to move your files with your dependencies to your workspace. Good practice is [manage your project using git](https://www.uu.nl/en/research/research-data-management/workshops/introduction-to-github), in that case you will need to push your files from your PC to github and clone your git project to your workspace. Otherwise, it is OK to transfer the files to your workspace using any of the [data transfer methods](../manuals.qmd#data-transfer). 
+First make sure to move your files with your dependencies to your workspace. 
+
+::: {.callout-tip}
+Good practice is [manage your project using git](https://www.uu.nl/en/research/research-data-management/workshops/introduction-to-github), in that case you will need to push your dependency file from your PC to github and clone your git project to your workspace. 
+:::
+
+Transfer your scripts and dependency files to your workspace using any of the [data transfer methods](../manuals.qmd#data-transfer). 
 
 On SURF Research Cloud, navigate to your project folder and create your environment:
 
