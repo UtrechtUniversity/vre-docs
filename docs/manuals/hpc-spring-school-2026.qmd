@@ -6,15 +6,17 @@ title: "HPC Spring School June 2026: SURF Research Cloud Workshop"
 
 Welcome to the SURF Research Cloud workshop for the UU HPC Spring School 2026!
 
-During this hands-on workshop, you'll learn how to work effectively with SURF Research Cloud. There are several tutorials available for you to explore, covering key topics such as:
+During this hands-on workshop, you'll learn how to work effectively with SURF Research Cloud. There are several tutorials available for you to explore:
 
-- **Working with R/Python environments**: Set up and manage environments in your workspace for reproducible research
-- **Data transfer methods**: Move data to and from your workspace efficiently
-- **Working with Ollama**: Learn to use large language models (LLMs)
-- **Running long jobs**: Keep computational tasks running in the background 
-- **VS Code Remote-SSH**: Connect your local VS Code to Research Cloud workspaces to edit files and run code remotely
+| Topic | Section | Estimated time |
+| --- | --- | --- |
+| **Working with R/Python environments** | [Go to section](#working-with-r-python-environments) | 15-45 minutes |
+| **Data transfer methods** | [Go to section](#data-transfer-methods) | 15-45 minutes |
+| **Working with Ollama** | [Go to section](#working-with-ollama) | 20-40 minutes |
+| **Running long jobs** | [Go to section](#running-long-jobs-via-the-command-line) | 10-30 minutes |
+| **VS Code Remote-SSH** | [Go to section](#connecting-vs-code-to-research-cloud) | 30 minutes |
 
-Each tutorial includes step-by-step instructions. You can choose the one most relevant to your research needs or interests. While there are several workspaces available that you can use to follow the tutorials, we recommend using the [VRE Lab](../workspaces/programming/vre-lab.qmd) workspace for most of them, as it comes with many relevant tools pre-installed.
+Each tutorial includes step-by-step instructions. You can choose the ones most relevant to your research needs or interests. While there are several workspaces available that you can use to follow the tutorials, we recommend using the [VRE Lab](../workspaces/programming/vre-lab.qmd) workspace for most of them, as it comes with many relevant tools pre-installed.
 
 ## Prerequisites
 
@@ -27,50 +29,46 @@ Before starting the tutorials, you need:
 
 **Recommended**
 
-Familiarity with the command line (terminal), git, GitHub and basic knowledge of Python/R will be helpful for some tutorials, but not required.
+Familiarity with the command line (terminal), git, GitHub and basic knowledge of Python/R will be helpful for some tutorials.
 
 ## Workshop Tutorials
 
-### 1. Working with R/Python Environments
+### 1. Working with R/Python Environments {#working-with-r-python-environments}
 
-Learn how to create, manage, and use Python and R environments in your workspace. Working with environments is good practice for creating robust and reproducible projects, and makes it easier to install the exact same package versions that you are using on SURF Research Cloud.
+Learn how to create, manage, and use Python and R environments in your workspace. Working with environments is good practice for creating robust and reproducible projects, and makes it easier to install the exact same package versions that you are using currentlyon SURF Research Cloud.
 
 **What you'll learn:**
 
 - Creating virtual environments and managing packages
-- Installing packages
-- Best practices for reproducible research
+- Creating requirements files for Python and R
+- Installing packages on SURF Research Cloud using `uv`, `conda`, and `renv`
 
 **Tutorials:**
 
 - [Working with Python Environments and Best Practices](../manuals/python-environment.qmd)
-
-We recommend using the [VRE Lab](../workspaces/programming/vre-lab.qmd) workspace to follow this tutorial. 
-
 - [Working with R Environments and Best Practices](../manuals/r-environment.qmd) 
 
-We recommend using the [VRE Lab](../workspaces/programming/vre-lab.qmd) workspace to follow this tutorial. Select RStudioUU under optional components in the last step of creating your workspace.
+We recommend using the [VRE Lab](../workspaces/programming/vre-lab.qmd) workspace to follow these tutorial. Select `Python tools` (for working with Python Environments) and/or `RStudioUU` (for working with R Environments) under optional components in the last step of creating your workspace.
 
 **Estimated time:** 15-45 minutes (depending on any previous experience with environment management tools)
 
 ---
 
-### 2. Data Transfer Methods
+### 2. Data Transfer Methods {#data-transfer-methods}
 
-Transfer data between your local computer, cloud storage, Yoda, GitHub, and SURF Research Cloud workspaces. Learn which method works best for your data source and file sizes.
+Transfer data to your Research Cloud workspace from your local computer, cloud storage, Yoda and/or GitHub. Learn which method works best for your data source and file sizes.
 
 **What you'll learn:**
 
 - Transferring files from your PC/laptop
-- Using iBridges/iCommands for Yoda/iRODS data
-- Connecting to SURFdrive and ResearchDrive
+- Configuring connections to cloud storage such as Surfdrive, Researchdrive and/or Yoda
 - Choosing the right transfer method for your needs
 
 **Tutorials:**
 
 To find the best method to transfer your data, check out this [Interactive Data Transfer Tool.](../manuals/data-transfer-options.qmd) It will help you determine the best method based on your data source, workspace, and file sizes.
 
-You can also explore the following tutorials for specific transfer methods:
+You can explore the following tutorials for specific transfer methods:
 
 - [Data Transfer to and from Yoda using iBridges](../manuals/ibridges.qmd)
 - [Data Transfer to and from Yoda using iCommands](../manuals/icommands.qmd)
@@ -78,47 +76,50 @@ You can also explore the following tutorials for specific transfer methods:
 - [Data Transfer between Research Cloud and Online Storage (Surfdrive, Researchdrive) using Rclone](../manuals/rclone-researchcloud.qmd)
 - [Data Transfer from GitHub/GitLab using Git](../manuals/git-clone.qmd)
 
-**Estimated time:** 15-30 minutes (depending on tutorial selected)
+**Estimated time:** 15-45 minutes (depending on tutorial selected)
 
 ---
 
-### 3. Working with Ollama 
+### 3. Working with Ollama {#working-with-ollama}
 
-Set up and use [Ollama](https://ollama.com/) directly in your SURF Research Cloud workspace. Use it to run large language models (LLMs), automate several tasks, and chat with several models.
+Set up and use [Ollama](https://ollama.com/) directly in your Jupyter notebooks, e.g. for data extraction from documents or image analysis.
 
 **What you'll learn:**
 
 - Installing and configuring Ollama
-- Integrating Ollama with your workflow
+- Downloading models
+- Data extraction and Image description in Jupyter notebooks
 
-**Relevant Workspaces:** [VRE Lab](../workspaces/programming/vre-lab.qmd), [Python Workbench Desktop](../workspaces/programming/python-workbench.qmd)
+**Relevant Workspaces:** [VRE Lab](../workspaces/programming/vre-lab.qmd) with `Python tools` as optional component, [Python Workbench Desktop](../workspaces/programming/python-workbench.qmd)
 
 **Tutorial:** [Setting up and Using Ollama](../manuals/ollama.qmd) 
 
-**Estimated time:** 20-30 minutes
+**Estimated time:** 20-40 minutes
 
 ---
 
-### 4. Running Long Jobs via the Command Line
+### 4. Running Long Jobs via the Command Line {#running-long-jobs-via-the-command-line}
 
-Keep computational tasks running even after (accidentally) closing your terminal or SSH connection. Essential for long-running analyses and simulations.
+Keep computational tasks running even after (accidentally) closing your terminal or SSH connection. Essential for long-running analyses and simulations. It is also possible to automate pausing of the workspace to save costs.
 
 **What you'll learn:**
 
 - Running jobs in the background
 - Checking job status and output
-- Managing multiple long-running processes
+- Automating workspace pausing
 
 **Tutorial:**
 
 - [Running Long Jobs](../manuals/long-jobs.qmd)
 This tutorial is relevant if you have an analysis script or simulation that takes a long time to execute. 
 
+**Estimated time:** 10-30 minutes
+
 ---
 
-### 5. Connecting VS Code to Research Cloud
+### 5. Connecting VS Code to Research Cloud {#connecting-vs-code-to-research-cloud}
 
-Connect your local Visual Studio Code to your SURF Research Cloud workspace. Edit files, run code, use local extensions, and debug directly from your local VS Code while files stay on the workspace.
+Connect Visual Studio Code on your PC to your SURF Research Cloud workspace. This is useful e.g. if you want to use the VS Code extensions that you have installed.
 
 **What you'll learn:**
 

@@ -111,3 +111,6 @@ print(response['message']['content'])
 print(response.message.content)
 ```
 It may take a few seconds for the first response to come back, but once the model is loaded, you should see a response in your notebook!
+
+LLMs are often used to extract information from documents or images into structured output. As a final exercise we suggest to run the two examples in this blogpost on how to use Ollama for data extraction and image description: [Structured Outputs](https://ollama.com/blog/structured-outputs).
+
