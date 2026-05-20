@@ -27,13 +27,13 @@ Before starting the tutorials, you need:
 
 **Recommended**
 
-Familiarity with the command line (terminal) and basic knowledge of Python/R will be helpful for some tutorials, but not required.
+Familiarity with the command line (terminal), git, GitHub and basic knowledge of Python/R will be helpful for some tutorials, but not required.
 
 ## Workshop Tutorials
 
 ### 1. Working with R/Python Environments
 
-Learn how to create, manage, and use Python and R environments in your workspace. This is essential for installing packages and managing dependencies for your projects. 
+Learn how to create, manage, and use Python and R environments in your workspace. Working with environments is good practice for creating robust and reproducible projects, and makes it easier to install the exact same package versions that you are using on SURF Research Cloud.
 
 **What you'll learn:**
 
@@ -51,7 +51,7 @@ We recommend using the [VRE Lab](../workspaces/programming/vre-lab.qmd) workspac
 
 We recommend using the [VRE Lab](../workspaces/programming/vre-lab.qmd) workspace to follow this tutorial. Select RStudioUU under optional components in the last step of creating your workspace.
 
-**Estimated time:** 15-20 minutes
+**Estimated time:** 15-45 minutes (depending on any previous experience with environment management tools)
 
 ---
 
