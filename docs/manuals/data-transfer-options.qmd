@@ -43,7 +43,7 @@ html`
 
 // Input: Workspace type
 viewof workspaceType = Inputs.select(
-  ["Python Workbench (Desktop)", "Python Workbench (CLI)", "Jupyter Notebook", "VRE Lab", "Ubuntu (Desktop)", "Ubuntu (Server/CLI)", "Windows"],
+  ["Python Workbench (Desktop)", "Python Workbench (CLI)", "Jupyter Notebook", "VRE Lab", "Ubuntu (Desktop)", "Ubuntu (CLI)", "Windows"],
   {label: "What workspace are you using?", value: "Python Workbench (Desktop)", width: "auto"}
 )
 
