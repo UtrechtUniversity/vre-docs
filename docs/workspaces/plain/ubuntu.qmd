@@ -49,7 +49,7 @@ Simply choose one of these [catalog items](../../glossary.qmd#catalog-item) in t
 
 ## Access
 
-**Server workspaces:** Access via [SSH](../../first-steps.qmd#ssh). By clicking the yellow Access button for the workspace in the dashboard of SURF Research Cloud, you will be prompted to open a command line interface on your local pc/laptop to connect to your workspace via SSH. If you already have an edu key pair set up, type `yes` to trust the workspace and you will be connected to your SURF Ubuntu workspace.
+**Command Line only workspaces:** Access via [SSH](../../first-steps.qmd#ssh). By clicking the yellow Access button for the workspace in the dashboard of SURF Research Cloud, you will be prompted to open a command line interface on your local pc/laptop to connect to your workspace via SSH. If you already have an ssh key pair set up, type `yes` to trust the workspace and you will be connected to your SURF Ubuntu workspace.
 
 To set up an edu key pair for the first time, see the [setting up SSH access manual](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/195854434/Workspace+access+with+SSH).
 
