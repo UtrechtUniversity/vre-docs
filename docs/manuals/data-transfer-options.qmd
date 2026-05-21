@@ -43,7 +43,7 @@ html`
 
 // Input: Workspace type
 viewof workspaceType = Inputs.select(
-  ["Python Workbench (Desktop)", "Python Workbench (CLI)", "Jupyter Notebook", "VRE Lab", "Windows"],
+  ["Python Workbench (Desktop)", "Python Workbench (CLI)", "Jupyter Notebook", "VRE Lab", "Ubuntu (Desktop)", "Ubuntu (CLI)", "Windows"],
   {label: "What workspace are you using?", value: "Python Workbench (Desktop)", width: "auto"}
 )
 
@@ -66,12 +66,14 @@ viewof skillLevel = Inputs.radio(
 )
 
 // Helper to check workspace type
-isDesktop = workspaceType === "Python Workbench (Desktop)" || workspaceType === "Windows"
+isDesktop = workspaceType === "Python Workbench (Desktop)" || workspaceType === "Windows" || workspaceType === "Ubuntu (Desktop)"
 isPythonDesktop = workspaceType === "Python Workbench (Desktop)"
 isPythonCLI = workspaceType === "Python Workbench (CLI)"
 isJupyter = workspaceType === "Jupyter Notebook"
 isVRELab = workspaceType === "VRE Lab"
 isWindows = workspaceType === "Windows"
+isUbuntuDesktop = workspaceType === "Ubuntu (Desktop)"
+isUbuntuCLI = workspaceType === "Ubuntu (Server/CLI)"
 
 // Get all applicable tools based on selections
 allOptions = {
@@ -83,6 +85,8 @@ allOptions = {
     if (isDesktop) {
       let ibridgesNote = isWindows ? 
         'Pre-installed on "Windows with iBridges" flavor' : 
+        (isUbuntuDesktop || isUbuntuCLI) ?
+        'iBridges needs to be installed' :
         'Pre-installed';
       
       options.push({
@@ -100,7 +104,7 @@ allOptions = {
       tool: "iBridges CLI",
       link: "ibridges.html",
       skillLevel: "Intermediate (CLI)",
-      pros: ["Pre-installed", "Works on all workspaces", "Supports all file sizes"],
+      pros: ["Pre-installed on most workspaces", "Works on all workspaces", "Supports all file sizes"],
       cons: ["Requires command line knowledge"],
       bestFor: ["Users with CLI experience", "All file sizes"]
     });
