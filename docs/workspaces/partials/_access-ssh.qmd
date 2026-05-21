@@ -1,0 +1,9 @@
+### Accessing the Workspace 
+
+1. Open your [SURF Research Cloud portal.](https://portal.live.surfresearchcloud.nl/)
+2. When you login to your SURF Research Cloud portal, you will see your dashboard. Here, look for your workspace and ensure that it is running. You can access it by simply clicking the yellow **"Access"** button.
+3. You will be prompted to open a command line interface (CLI) on your local PC/laptop to connect to the workspace via SSH.
+4. If you already have an ssh key pair set up, type `yes` to trust the workspace and you will be connected to your workspace via SSH.
+
+If you do not have an ssh key pair set up, you will need to generate one and add the public key to your SURF Research Cloud account. Follow the instructions to [set up SSH access.](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/195854434/Workspace+access+with+SSH).
+
