@@ -49,11 +49,18 @@ Simply choose one of these [catalog items](../../glossary.qmd#catalog-item) in t
 
 ## Access
 
-**Command Line only workspaces:** Access via [SSH](../../first-steps.qmd#ssh). By clicking the yellow Access button for the workspace in the dashboard of SURF Research Cloud, you will be prompted to open a command line interface on your local pc/laptop to connect to your workspace via SSH. If you already have an ssh key pair set up, type `yes` to trust the workspace and you will be connected to your SURF Ubuntu workspace.
+::: {.panel-tabset}
 
-To set up an ssh key pair for the first time, see the [setting up SSH access manual](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/195854434/Workspace+access+with+SSH).
+## Command Line only workspaces:
 
-**Desktop workspaces:** You can [access Ubuntu Desktop workspaces as a remote desktop in your browser](../../first-steps.qmd#browser-access-to-a-desktop-environment), authenticating via Single-Sign On with your institutional login details. 
+{{< include ../partials/_access-ssh.qmd >}}
+
+## Desktop workspaces:
+
+{{< include ../partials/_access-sso.qmd >}}
+
+:::
+
 
 ## Data transfer options
 

@@ -44,7 +44,7 @@ Please also see the [tips for responsible use](../../responsible-use.qmd).
 
 ## Access
 
-This workspace can be accessed via the yellow 'Access' button, or by opening the URL listed in the dashboard in your browser. Any member of the collaboration can login to the workspace [using Single-Sign On](../../first-steps.qmd#webapplications-that-support-single-sign-on.).
+{{< include ../partials/_access-sso.qmd >}}
 
 When new members are added to the collaboration, you can select them in ASReview in the 'Projects' view, and invite them to a screening project. It may take up to 15 minutes after adding them to the CO for them to become visible.
 

@@ -56,13 +56,15 @@ For usage instructions, see the various [official Galaxy training manuals](https
 
 ## Access
 
-This workspace can be accessed via the yellow 'Access' button, or by opening the URL listed in the dashboard in your browser. Any member of the collaboration can login to the workspace [using Single-Sign On](../../first-steps.qmd#webapplications-that-support-single-sign-on.).
+{{< include ../partials/_access-sso.qmd >}}
 
 ### Command line access
 
-You can also [login to the workspace via the commandline](../../first-steps.qmd#ssh), using `ssh`. This may be useful to debug Galaxy or create backups.
+You can also login to the workspace via the commandline using `ssh`. This may be useful to debug Galaxy or create backups.
 
 Admin users will also be able to use `sudo` (after entering their time-based password).
+
+{{< include ../partials/_access-ssh.qmd >}}
 
 ## Galaxy UU
 
