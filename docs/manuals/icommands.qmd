@@ -2,18 +2,25 @@
 title: "Installing and using iCommands on Surf Research Cloud"
 ---
 
-The instructions below describe the process of data transfer between Surf Research Cloud and Yoda using iCommands. This manual is developed for workspaces based on a Linux operating system (including the Jupyter Notebook and RStudio workspaces). Transfer is also possible via the Webdav protocol using [Rclone](https://rclone.org). For large files iCommands is faster due to parallel transfer options.
+The instructions below describe the process of data transfer between Surf Research Cloud and [Yoda](https://www.uu.nl/en/research/yoda) using iCommands. This manual is developed for workspaces based on a Linux operating system (such as Ubuntu and Python Workspaces as well as Jupyter Notebook and RStudio workspaces). Transfer is also possible via the Webdav protocol using [Rclone](https://rclone.org). However, for large files iCommands is faster due to parallel transfer options.
 
 ### Prerequisites
 You will need some basic linux skills to be able to use the iCommands successfully. 
 If you don't have these skills, take some time to practice using sections 1, 2, 3 and 7 of this short [online course](https://swcarpentry.github.io/shell-novice) before proceeding. You can practice in the terminal (see step 1).
 
+You will also need access to [Yoda](https://www.uu.nl/en/research/yoda).
+
 ### Step 1: Make sure you are in a terminal
-- In Jupyterhub (Jupyter Workspace in Research cloud): 
+- In Jupyterhub ([Jupyter Notebook](../workspaces/programming/jupyter.qmd) or [VRE Lab](../workspaces/programming/vre-lab.qmd) in Research cloud): 
   To open a new terminal, click the + button in the file browser and select the terminal in the new Launcher tab
   ([find a short video here](https://jupyterlab.readthedocs.io/en/stable/user/terminal.html)).
-- In Rstudio (Rstudio workspace in Research cloud):
+- In Rstudio ([Rstudio workspace](../workspaces/programming/rstudio.qmd) in Research cloud):
   In the bottom left panel, click the 'terminal' tab.
+- In [Python](../workspaces/programming/python-workbench.qmd) and [Ubuntu](../workspaces/plain/ubuntu.qmd) Desktop workspaces:
+  Open a terminal. You can find it under Applications.
+- In [Python](../workspaces/programming/python-workbench.qmd) and [Ubuntu](../workspaces/plain/ubuntu.qmd) CLI workspaces:
+  You are already in a terminal after logging in to the workspace. 
+
 
 ### Step 2: Install iRODS iCommands
 Some workspaces have iRODS iCommands preconfigured. This should be visible in step 1 when creating a workspace.
@@ -35,13 +42,15 @@ sudo apt-get install -y irods-icommands
 
 ### Step 4: Initialize connection to iRODS
 
-Initialize the connection to the Yoda system as follows:
+Navigate out of the `.irods` folder and to a folder where you want to move files from Yoda. Run `cd ~` to navigate to your home directory and then run the following command to initialize the connection to iRODS:
 
 ```
 iinit
 ```
 
-Type your Yoda password when requested.
+If you see `command not found: iinit` after running the command, it means that iCommands is not properly installed. Run `sudo apt-get install -y irods-icommands` to install iCommands and try again.
+
+After running `iinit`, you will be prompted to enter your Yoda password. You can find this as a [data access password](https://www.uu.nl/en/research/yoda/using-data-access-passwords). This is not the same as your Research Cloud or solis-id password.
 
 Type `ils` to see whether the connection has been established. The output of the `ils` command will list the current Yoda folder and the folders that are located within the current folder.
 
@@ -49,7 +58,11 @@ Type `ils` to see whether the connection has been established. The output of the
 
 ### Step 5: Transferring data
 
-Standard transfer of a single file can be done using `iget` and `iput`
+Standard transfer of a single file can be done using `iget` (to retrieve from Yoda to your workspace) and `iput` (to upload to Yoda from your workspace).
+```
+iget /uu/home/<Yoda-folder-name>/<file-name>
+iput <workspace-file-name> /uu/home/<Yoda-folder-name>/
+```
 
 The `irsync` command can be used to synchronize entire directories between Yoda and Cartesius. The command is used as follows.
 

@@ -1,18 +1,30 @@
 ## Setting up Ollama on Python workbench and UU VRE workspaces
 
+[Ollama](https://ollama.com/) is a tool that allows large language models to run locally on a workspace. Setting it up in a [Python Desktop Workbench](../workspaces/programming/python-workbench.qmd) or [VRE Lab](../workspaces/programming/vre-lab.qmd) workspace makes it possible to use AI models directly from Python and Jupyter notebooks. You can use Ollama by pulling models to your workspace to automate several tasks, chat with several models (in parallel) without worrying about API keys. 
+
 ### Dependencies
 This tutorial assumes you have an installation of `uv` (Python package manager) on your workspace. Most SURF Research Cloud workspaces now come with `uv` preinstalled. If (in the rare case) you are using a workspace without any components, then you can install `uv ` yourself with:
 
 ```
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
-This tutorial also assumes you have a storage volume attached to your workspace.
+This tutorial also assumes you have a storage volume attached to your workspace. See the [Getting started](../first-steps.qmd#create-storage-volume) page for more info about how and why to create a storage volume.
+
+::: {.callout-note}
+### Planning Your Workspace
+
+Before creating your workspace, consider:
+
+1. Which Ollama model do you want to use? 
+2. How much storage do you need? Models can be very large (1GB - 40GB+)
+3. Do you need GPU acceleration? Required for large models (>8B parameters)
+:::
 
 ### Create a virtual environment
 
 #### Open a terminal
 
-- In the UU VRE workspace
+- In the UU VRE Lab workspace
   To open a new terminal, click the + button in the file browser and select the terminal in the new Launcher tab  
 - Python Workbench, click applications in the topright, and click terminal
 
@@ -40,12 +52,27 @@ uv pip install ollama
 
 #### Pull a model
 
-Find models here: https://ollama.com/search 
+::: {.callout-note collapse="true"}
+## Choosing a Model
+A few popular models with their resource requirements can be found below:
 
-e.g.:
+| Model | Size | Parameters | CPU/GPU | Best For |
+|-------|-----|-----|------|----------|
+| `qwen2.5:0.5b` | ~0.4 GB | 0.5B | CPU | Very fast responses, testing, simple coding |
+| `llama3.2:1b` | ~1 GB | 1B | CPU | Multilingual knowledge retrieval, simple tasks|
+| `gemma2:2b` | ~1.6 GB | 2B | CPU | Text generation, natural language processing research|
+| `qwen2.5:3b` | ~2 GB | 3B | CPU | Coding and mathematics, data analysis |
+| `llama3.2:3b` | ~2 GB | 3B | CPU | Summarisation, prompt rewriting, tool use |
+| `mistral:7b` | ~4 GB | 7B | CPU/GPU | Reasoning, text generation, comprehension|
+| `llama3.1:8b` | ~5 GB | 8B | GPU recommended | Coding, complex tasks |
+| `qwen2.5:14b` | ~9 GB | 14B | GPU recommended | Advanced reasoning and coding |
+| `gpt-oss:20b` | ~12 GB | 20B | GPU (A10) | Powerful reasoning, agentic tasks, fine-tunable|
+:::
+Find all available Ollama models here: [List of Ollama models](https://ollama.com/library)
 
+To pull a model, use the following command in the terminal, replacing the model name with the one you want to use. 
 ```
-ollama pull gpt-oss
+ollama pull qwen2.5:3b
 ```
 
 #### Create a jupyter kernel
@@ -57,23 +84,23 @@ python -m ipykernel install --user --name ollama --display-name "Ollama"
 
 ### Create a new notebook and use
 
-- In UU VRE:
+- In UU VRE Lab:
   Click the + button and select the notebook with "Ollama" kernel in the new Launcher tab.
 
 
-- In Python Workbench Desktop:
-  ```
+- In Python Workbench Desktop, run the following command in the terminal to start Jupyter Lab, and create a new notebook with the "Ollama" kernel:
+  ``` 
   uv pip install jupyter
   jupyter lab
   ```
 
-Copy this example code, if needed change the model name to the model that you have downloaded and run the cell:
+Copy this example code into your notebook, if needed change the model name to the model that you have downloaded and run the cell:
 
 ```
 from ollama import chat
 from ollama import ChatResponse
 
-response: ChatResponse = chat(model='gpt-oss', messages=[
+response: ChatResponse = chat(model='qwen2.5:3b', messages=[
   {
     'role': 'user',
     'content': 'Why is the sky blue?',
@@ -83,3 +110,7 @@ print(response['message']['content'])
 # or access fields directly from the response object
 print(response.message.content)
 ```
+It may take a few seconds for the first response to come back, but once the model is loaded, you should see a response in your notebook!
+
+LLMs are often used to extract information from documents or images into structured output. As a final exercise we suggest to run the two examples in this blogpost on how to use Ollama for data extraction and image description: [Structured Outputs](https://ollama.com/blog/structured-outputs).
+
