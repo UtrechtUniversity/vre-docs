@@ -5,7 +5,7 @@
 Often it is advisable to run long jobs (e.g. long scripts or analyses that take hours or days to complete) as background processes. 
 By running long jobs as background process, you make sure the jobs will not be interrupted when you (by accident) close the window with which you access your workspace or when your internet connection is interrupted. This can happen in the following cases:
 
-- When you access your workspace via your web browser (Jupyter Notebooks, RStudio, Ubuntu Desktop, etc.)
+- When you access your workspace via your web browser (VRE Lab, RStudioUU, Ubuntu Desktop, etc.)
 - When you access your workspace via SSH
 
 When you access your workspace via RDP (Remote Desktop), jobs will normally not be interupted by disconnecting.
@@ -22,10 +22,10 @@ A problem you may run into when running long jobs on your workspace is that the 
 - Your script should be 'standalone'; which means that you should be able to run your entire script in one go without providing additional input. For scripts, all figures and output data should be stored in files (e.g. `.png` images and/or `.csv` tables), for Jupyter notebooks this might be not necessary if the figures should be embedded in the notebook.
 
 ### Step 1: Make sure you are in a terminal
-- In Jupyterhub (Jupyter Workspace in Research cloud): 
+- In Jupyterhub interface (VRE Lab Workspace in Research cloud): 
   To open a new terminal, click the + button in the file browser and select the terminal in the new Launcher tab
   ([find a short video here](https://jupyterlab.readthedocs.io/en/stable/user/terminal.html)).
-- In Rstudio (Rstudio workspace in Research cloud):
+- In Rstudio (RstudioUU workspace in Research cloud):
   In the bottom left panel, click the 'terminal' tab.
 - In an Ubuntu Desktop workspace, click 'Applications' in the top left corner and then 'Terminal'
 
@@ -59,10 +59,12 @@ To run your long job and automatically pause the workspace when it is finished, 
 
 1. Run `run_and_pause "mycommand myarg1 myarg2"` in your terminal.
     * optionally, you can add the `-s` flag to run `run_and_pause` in [silent mode](#running-run_and_pause-in-silent-mode).
-1. The script will prompt you for your ResearchCloud API token. Enter it.
+1. The script will prompt you for your ResearchCloud API token. Enter it. You will not see the token as you paste it, this is normal. After you have pasted the token, press Enter.
 1. The script will create a log file to which all output of your script will be logged, and tell you where to find it.
 1. Press any key to start running your command. The `run_and_pause` script will now exit, but your command wil keep running in the background.
 1. When the job is finished, the workspace will be automatically paused!
+
+If for instance, your script contains errors, the workspace will still be paused as the script cannot continue. You can check the log file to find out what went wrong, and then resume the workspace to work on your files again. 
 
 ##### **Inspecting output**
 
@@ -96,10 +98,77 @@ Now pausing the workspace...
 
 If you want the logfile to only contain your command's output, you can run `run_and_pause` in silent mode by adding the `-s` flag. So for instance: `run_and_pause -s mycommand myarg1 myarg2`. The info messages from `run_and_pause` will now be omitted from the log.
 
+You can try the following example to test the use of `run_and_pause`.
+
+:::{.callout-note collapse=true #test-example}
+## Example Script to Test Running Long Jobs
+Create a Python script `test.py` with the following content:
+```python
+import time
+import random
+from datetime import datetime
+
+total_steps = 30
+seconds_per_step = 5   
+
+def log(message):
+    now = datetime.now().strftime("%H:%M:%S")
+    print(f"[{now}] {message}", flush=True)
+
+def progress_bar(current, total, width=40):
+    filled = int(width * current / total)
+    bar = "#" * filled + "-" * (width - filled)
+    percent = (current / total) * 100
+    return f"[{bar}] {percent:6.2f}%"
+
+def fake_work(step_number):
+    total = 0
+    for i in range(200_000):
+        total += (i % 7) * (i % 13)
+        
+    time.sleep(random.uniform(3.5, 5.5))
+
+    return total
+
+def main():
+    log("Starting long-running job...")
+    start_time = time.time()
+
+    for step in range(1, total_steps + 1):
+        log(f"Step {step}/{total_steps} started")
+        result = fake_work(step)
+        elapsed = time.time() - start_time
+        avg_time = elapsed / step
+        remaining = avg_time * (total_steps - step)
+        print(progress_bar(step, total_steps), flush=True)
+        log(
+            f"Step {step} complete | "
+            f"intermediate result={result} | "
+            f"elapsed={elapsed:.1f}s | "
+            f"ETA={remaining:.1f}s"
+        )
+        print("-" * 70, flush=True)
+    total_time = time.time() - start_time
+    log("Job finished successfully")
+    log(f"Total runtime: {total_time:.1f} seconds")
+
+if __name__ == "__main__":
+    main()
+```
+Then open a terminal and run the following command and follow the instructions:
+``` bash
+run_and_pause "python test.py"
+
+run_and_pause -s python main.py # to run in silent mode
+```
+The script will run for about 5 minutes, and will print progress updates. After the script is finished, the workspace will be paused automatically. You can check the log file to see the progress updates and final output of the script. To see the progress in real time, run the `tail -f /home/youruser/run_and_pause.abcd123.log` command as shown in the terminal.
+:::
+
+
 #### Method 2: using `nohup`
 
 More info about the use of `nohup` can be found [here](https://www.howtogeek.com/804823/nohup-command-linux/#the-nohup-command).
-For this usecase we combine `nohup` with an ampersand "&" to run a background process the will continue even is the terminal window is closed. The process will only stop:
+For this usecase we combine `nohup` with an ampersand "&" to run a background process. The script will continue even if the terminal window is closed. The process will only stop:
 
 - If it has finished
 - If an error occurs
@@ -117,12 +186,22 @@ For Jupyter notebooks:
 nohup jupyter nbconvert --execute --to notebook --inplace your-notebook.ipynb &
 ```
 
+For Python scripts:
+```
+nohup python your-script.py &
+```
+
 After submitting this command you will see the following:
 
 ![](../imgs/background.png)
 
 You need to press Enter one more time to return to the command prompt.
 The number between square brackets is the job ID and the second number is the process ID.
+
+To practice using `nohup`, you can use the [example script here](#test-example), and run it with the following command:
+``` bash
+nohup python test.py &
+``` 
 
 ### Terminating the process
 
