@@ -38,6 +38,10 @@ Please also read the [tips](#tips) below.
 
 **Choosing the right hardware**: ASReview uses an AI model that runs in parallel to the ASReview webapplication. **It is therefore recommended to choose a workspace with at least two CPU cores. Four CPUs is probably enough for most cases.** The more users that will be using the workspace to do screening in parallel, the more hardware will be required.
 
+If you are unsure about the right hardware for your needs, the best way to test it out is to start with a modest configuration. 
+- Attach a storage volume so your data is preserved while testing. 
+- Start testing by running your tasks, and monitor the workspace performance. If you find that the performance is slow or unresponsive, you can always stop the workspace and start a new workspace with more resources. If you have attached a storage volume, your data will be preserved and you can simply attach the same storage volume to the new workspace.
+
 To use the ASReview [Dory](https://asreview.readthedocs.io/en/latest/lab/dory.html) [Catalog Item](../../glossary.qmd#catalog-item) you will need to create a machine with GPUs, which are more expensive than CPUs. For this reason we recommend against using Dory for anything but advanced use cases (e.g. with multilingual datasets).
 
 Please also see the [tips for responsible use](../../responsible-use.qmd).
