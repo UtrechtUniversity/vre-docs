@@ -73,94 +73,29 @@ Prerequisites: your workspace has to be in 'State: running'.
 
 There are several ways to login to your workspace, depending on its type:
 
-- [Browser access to a desktop environment](#browser-access-to-a-desktop-environment)
-- [Browser access to a webapplication](#browser-access-to-a-webapplication)
-  - [Webapplications that support Single Sign-on](#webapplications-that-support-single-sign-on.)
-  - [Webapplications that require a time-based password](#webapplications-that-require-a-time-based-password)
-- [Remote Desktop Protocol](#remote-desktop-protocol)
-- [SSH](#ssh) (command line)
+- [Browser Access:](#browser-access) for workspaces that provide a desktop environment in the browser, or a webapplication that supports Single Sign-On. 
+- [Remote Desktop Protocol](#remote-desktop-protocol) for most Windows Server workspaces.
+- [SSH](#ssh) for command line (CLI) only workspaces or for CLI access to other workspace types. 
 
-See the [workspace catalog](workspace-catalogue.qmd) for an overview of which workspace types allow which kind of login.
+See the [workspace catalog](workspace-catalogue.qmd) for an overview of which workspace types allow which kind of login. For specific instructions on how to login to your workspace, see your workspace specific manual. 
 
-### Browser access to a desktop environment
+Most workspaces on SURF Research Cloud will support one of the options mentioned above. However, in the rare case that your workspace uses a different login method such as a Time-based One Time Password (TOTP), you can find instructions on how to login here: [Login with TOTP.](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/195854429/Workspace+access+with+TOTP)
 
-#### When?
+### Browser Access 
 
-For workspaces that provide a graphical interface to a desktop environment. For instance: Ubuntu Desktop, Python Workbench, Matlab. See the [workspace catalog](workspace-catalogue.qmd) for an overview of Catalog Items that provide this kind of access.
+For workspaces that provide browser-based access:
 
-These workspace types will present you with a Linux desktop environment in a browser window.
+- Desktop environments: Ubuntu Desktop, Python Workbench Desktop, Matlab
+- Web applications (that open in the browser): VRE Lab, RStudio UU
 
-Authorization is handled using Single Sign-On, which for UU users means you can use your Solis-ID.
-
-**Note**: if your workspace uses an older operating system (e.g. Ubuntu < 22), Single Sign-On is not yet available. In that case, you will have to [authenticate using TOTP](#legacy-desktop-workspaces-with-time-based-password).
-
-<img src="imgs/ubuntu_desktop.png" width="30%" />
-
-#### How?
-
-Steps:
-
-1. Click the yellow "Access" button. You will be taken to a new page.
-1. Since authorization is handled using Single Sign On, and you are already logged in to the ResearchCloud portal, it may be that you don't need to re-authenticate at all!
-1. If you *do* need to re-autenticate, you will be presented with a login prompt by [SRAM](./glossary.qmd#sram). (*see screenshot below*)
-    * Select your institution (Utrecht University)
-    * Follow the steps to login using your institution's login mechanism (Solis-ID).
-1. After logging in, you will see a Linux desktop in your browser!
+Authorization is handled using Single Sign-On, which for UU users means you can use your Solis-ID to login. See specific instructions on how to login for your specific workspace in the [workspace catalog.](workspace-catalogue.qmd)
 
 <img src="imgs/sram_auth.png" width="30%" />
 
-### Legacy: desktop workspaces with Time Based Password
-
-If your workspace still uses an older operating system (e.g. Ubuntu < 22), Single Sign-On is not yet available. In that case, you will have to  [setup a Time Based Password for your Research Cloud account](https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace#Logintoyourworkspace-WorkspaceAccesswithTOTP).
-
-For these workspace types, this is what you will see when you click the yellow "Access" button:
-
-<img src="imgs/guacamole_login.png" width="30%" />
-
-1. Click the yellow "Access button" for your workspace.
-    * You will be taken to your workspace's address, e.g. (`https://workspacename.src.surf-hosted.nl`).
-1. You will see a prompt asking you to login to the Linux workpace.
-1. As a username, enter your Research Cloud username (**not** your Solis ID).
-    * You can lookup your username in the Research Cloud portal under the "Profile" tab.
-1. As a password, enter your time-based (TOTP) password for Research Cloud (**not** for your Solis ID).
-
-Once you are logged in, you will be presented with a desktop environment in your browser. The environment used on ResearchCloud is a lightweight desktop called Xfce. See [here](https://docs.xfce.org/) for help with it.
-
-### Browser access to a webapplication
-
-#### When?
-
-Many catalog items provide you with a webapplication that can be accessed from your browser. For instance: Jupyter Notebooks, RStudio. See the [workspace catalog](workspace-catalogue.qmd) for an overview of Catalog Items that provide this kind of access. 
-
-#### How?
-
-There are two different forms of browser-based access to webapplications on Research Cloud:
-
-##### **Webapplications that support Single Sign-on.**
-
-These will present you with the normal login flow (including two-factor authentication) for your institutional login. That means Solis ID for UU students and staff, but collaborators from other institutions will use their own.
-
-Since you are often already recently signed in to your institutional login to enter the Research Cloud, you will often not even need to authenticate again! Simply click the yellow "Access" button for your workspace.
-
-##### **Webapplications that require a time-based password**
-
-For these workspaces, you will need to [setup a Time Based Password for your Research Cloud account](https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace#Logintoyourworkspace-WorkspaceAccesswithTOTP).
-
-Steps:
-
-1. Click the yellow "Access button" for your workspace.
-    * You will be taken to your workspace's address.
-1. You will see a prompt asking you to login to the Linux workpace.
-1. As a username, enter your Research Cloud username (**not** your Solis ID).
-    * You can lookup your username in the Research Cloud portal under the "Profile" tab.
-1. As a password, enter your time-based (TOTP) password for Research Cloud (**not** for your Solis ID).
-
 ### Remote Desktop Protocol
 
-#### When?
 This method can be used for most Windows Server workspaces, and any other workspaces that have an URL starting with `RDP://` when you click on the workspace in the research cloud portal.
 
-#### How?
 To be able to login via RDP you need to [setup a Time Based Password for your Research Cloud account](https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace#Logintoyourworkspace-WorkspaceAccesswithTOTP).
 
 You need an Remote Desktop client to be able to connect via RDP. On a Windows and MacOS PC you can use an application called 'Remote Desktop', on Linux we recommend 'Remmina'.
@@ -169,12 +104,10 @@ The username that you need to type when you want to access the workspace can be 
 
 ### SSH
 
-#### When?
-For some workspaces this is the only option to login to your workspace. These are typically command line only workspaces (e.g. Ubuntu 20.04 command line).
+For some workspaces this is the only option to login to your workspace. These are typically command line only workspaces (e.g. Ubuntu 22.04 command line or Python Workbench CLI). 
 
 Since connection via SSH also works for most other workspace types, it could also be a useful option in some other scenarios, e.g. when you want to [copy a file from your laptop to the workspace](manuals/ssh-data-transfer-methods.qmd).
 
-#### How?
 The research cloud documentation provides instructions on [how to set up SSH for research cloud](https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace#Logintoyourworkspace-AccessaworkspacewithSSH).
 
 To connect to the workspace from a Windows computer you need specific software to use a ‘shell’ (also known as ‘terminal’), examples include Git Bash, PuTTY and MobaXterm. If you need to install something new, we would recommend [MobaXterm](https://mobaxterm.mobatek.net/).
