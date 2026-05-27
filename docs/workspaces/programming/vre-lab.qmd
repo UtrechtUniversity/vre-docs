@@ -5,6 +5,10 @@ execute:
 software:
 - Python
 - uv
+- RStudio 
+- OpenVSCode
+- OpenRefine
+- CUDA (optional)
 login:
 - webapp-sso
 - desktop
