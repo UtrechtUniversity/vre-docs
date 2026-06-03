@@ -15,17 +15,21 @@ categories = (
 )
 ```
 
-This page provides an overview of workspace types (called "Catalog Items" on Research Cloud) supported by Utrecht University. This overview includes primarily Catalog Items developed by UU, but also some commonly used Catalog Items developed by SURF.
+This page provides an overview of workspace types (called "Catalog Items" on Research Cloud) supported by Utrecht University and some commonly used Catalog Items developed by SURF.
 
 Please note **this is not a full list of available workspace types on ResearchCloud**: there are many more developed by other institutions.
 
 If there is a specific environment application, or software package you think you might need, please [contact us for help](mailto:research.engineering@uu.nl). If what you require is not yet available on ResearchCloud, we can also help you to create custom Catalog Items.
 
+:::{.callout-note collapse="true"}
 ### Getting access
 
-To use UU items listed on this page, you can simply find them in the ResearchCloud portal under the 'Catalog' tab and [request access](manuals/catalog-item-access.qmd). Most catalog items maintained by SURF will already be automatically visible for every Collaborative Organisation.
+All UU users have access to UU items. To use UU items listed on this page, you can simply find them in the ResearchCloud portal under the 'Catalog' tab and [request access](manuals/catalog-item-access.qmd). Most catalog items maintained by SURF will already be automatically visible for every Collaborative Organisation.
+
+Look at the specific manual for your desired workspace to find out more about how to access it. 
 
 Note that some items listed below (for example, those that require a license) are not visible in the catalog in the portal. If you need access to them, please [contact us](mailto:research.engineering@uu.nl).
+:::
 
 
 ### Legend
@@ -33,6 +37,8 @@ Note that some items listed below (for example, those that require a license) ar
 * {{< iconify carbon terminal label='Access the workspace via the command line' title='Access the workspace via the command line' >}} Access the workspace via the command line
 * {{< iconify carbon gui label='Access the workspace using a desktop environment' title='Access the workspace using a desktop environment' >}} Access the workspace as a remote desktop.
 * {{< iconify carbon network-public label='Access the workspace using a desktop environment' title='Access the workspace using a desktop environment' >}} Access application via the browser.
+
+We recommend using [VRE Lab](workspaces/programming/vre-lab.qmd) for most use cases to develop and run your code as it comes with a wide range of software that you can easily preinstall. 
 
 ```{python}
 import yaml
@@ -116,6 +122,7 @@ for category_path in categories:
 
 def display_category(name, headers=table_headers):
     workspaces = sorted(categories_with_workspaces[name], key=lambda d: d.get('title', ''))
+    workspaces = sorted(workspaces, key=lambda d: d.get('title', '') != 'VRE Lab')
     if len(workspaces) > 0:
         result = tabulize(workspaces, headers=headers)
     else:
