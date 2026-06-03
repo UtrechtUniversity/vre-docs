@@ -3,7 +3,7 @@ title: "Stata"
 software:
 - Stata
 login:
-- desktop
+- webapp-sso
 - cli
 os_flavor: linux
 os:
