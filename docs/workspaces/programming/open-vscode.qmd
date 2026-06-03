@@ -7,6 +7,7 @@ software:
 - uv
 login:
 - webapp-sso
+- cli
 os_flavor: linux
 os:
 - Ubuntu 22.04
