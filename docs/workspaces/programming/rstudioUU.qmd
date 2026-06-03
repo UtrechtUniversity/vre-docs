@@ -4,6 +4,7 @@ software:
 - RStudio
 login:
 - webapp-sso
+- cli
 os_flavor: linux
 os:
 - Ubuntu 24.04

@@ -3,7 +3,7 @@ title: "Matlab"
 software:
 - Matlab
 login:
-- desktop
+- webapp-sso
 - cli
 os_flavor: linux
 os:
