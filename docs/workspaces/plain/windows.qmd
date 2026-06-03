@@ -35,7 +35,7 @@ Simply choose one of these [catalog items](../../glossary.qmd#catalog-item) in t
 
 ## Access
 
-You can [access Windows workspaces as a remote desktop in your browser](../../first-steps.qmd#browser-access-to-a-desktop-environment), authenticating via SRAM.
+{{< include ../partials/_access-sso.qmd >}}
 
 ## Creation
 

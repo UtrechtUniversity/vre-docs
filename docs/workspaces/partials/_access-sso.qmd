@@ -1,0 +1,7 @@
+### Accessing the Workspace using the yellow Access button
+
+1. Open your [SURF Research Cloud portal.](https://portal.live.surfresearchcloud.nl/)
+2. When you login to your SURF Research Cloud portal, you will see your dashboard. Here, look for your workspace and ensure that it is running. You can access it by simply clicking the yellow **"Access"** button which will redirect you to a new page. 
+3. You can then log in with your institutional credentials (Solis ID for Utrecht University users) to access the workspace.
+
+Since you're already signed in to access SURF Research Cloud, you may not need to authenticate again.

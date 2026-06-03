@@ -1,0 +1,10 @@
+::: {.callout-note}
+### Requesting Access to the Catalog Item 
+
+Most Utrecht University users will already have access to this catalog item. If you cannot find this catalog item when creating a workspace:
+
+1. You need to request access to the **Utrecht University Catalog Item Collection.**
+2. Follow these steps to [request access](../../manuals/catalog-item-access.qmd).
+3. Once approved, you'll be able to create the workspaces.
+
+:::

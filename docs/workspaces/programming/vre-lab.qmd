@@ -31,8 +31,6 @@ VRE Lab workspace is also available with a **Desktop** interface. Select Ubuntu 
 
 The Desktop option is particularly useful for GUI applications, 3D visualization tasks, and when combined with GPU workspaces (**VRE Lab GPU** catalog item), provides GPU-accelerated rendering for 3D analysis and extensive data processing from the desktop environment.
 
-Login is done via [SRAM](https://servicedesk.surf.nl/wiki/spaces/IAM/pages/74226073/SURF+Research+Access+Management) via your institutional credentials.
-
 The workspace includes Python environment management with [`uv`](https://docs.astral.sh/uv/).
 
 You can automatically install environments and dependencies for Python, R, Julia, and Conda using the Custom Packages [Optional Component](#optional-components) provided in this workspace.
@@ -46,6 +44,8 @@ If you wish to customise this workspace further by installing system packages or
 {{< include ../partials/_storage.qmd >}}
 
 {{< include ../partials/_creation.qmd >}}
+
+{{< include ../partials/_request-access.qmd >}}
 
 ### Optional Components
 
@@ -76,19 +76,9 @@ Simply check the boxes for the components you need, then continue with workspace
 
 ### Accessing the Workspace
 
-1. Open your [SURF Research Cloud portal.](https://portal.live.surfresearchcloud.nl/)
-2. When choosing your catalog item, simply search for **VRE Lab** and click the yellow **"Access"** button.
-3. Log in with your institutional credentials (Solis ID for UU users).
+{{< include ../partials/_access-sso.qmd >}}
 
-Since you're already signed in to access SURF Research Cloud, you may not need to authenticate again.
-
-### Requesting Access to the Catalog Item Collection
-
-Most Utrecht University users already have access to this catalog item. If you cannot find VRE Lab when creating a workspace:
-
-1. You need to request access to the **Utrecht University Catalog Item Collection.**
-2. Follow these steps to [request access](../../manuals/catalog-item-access.qmd#requesting-access).
-3. Once approved, you'll be able to create VRE Lab workspaces.
+{{< include ../partials/_access-ssh.qmd >}}
 
 
 ## Usage

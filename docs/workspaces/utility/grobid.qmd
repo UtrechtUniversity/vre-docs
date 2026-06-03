@@ -51,7 +51,7 @@ If you want to override the default password used to [access the API](#api), you
 
 ### Webapplication
 
-Members of the workspace's Collaborative Organisation can simply point their browser to the workspace's URL and login using their organisation's Single Sign-On mechanism (e.g. Solis login with two factor authentication for UU employees and students). You can use the yellow 'Access' button in the Workspace overview in the portal to be linked to the right URL.
+{{< include ../partials/_access-sso.qmd >}}
 
 ### API
 
