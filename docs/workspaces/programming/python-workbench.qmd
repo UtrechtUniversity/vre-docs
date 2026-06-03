@@ -7,7 +7,7 @@ software:
 - uv
 - CUDA (optional)
 login:
-- desktop
+- webapp-sso
 - cli
 os_flavor: linux
 os:
