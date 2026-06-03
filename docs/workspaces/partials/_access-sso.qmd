@@ -1,4 +1,4 @@
-### Accessing the Workspace 
+### Accessing the Workspace using the yellow Access button
 
 1. Open your [SURF Research Cloud portal.](https://portal.live.surfresearchcloud.nl/)
 2. When you login to your SURF Research Cloud portal, you will see your dashboard. Here, look for your workspace and ensure that it is running. You can access it by simply clicking the yellow **"Access"** button which will redirect you to a new page. 

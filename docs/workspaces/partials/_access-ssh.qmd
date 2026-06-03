@@ -1,9 +1,38 @@
-### Accessing the Workspace 
-
-1. Open your [SURF Research Cloud portal.](https://portal.live.surfresearchcloud.nl/)
-2. When you login to your SURF Research Cloud portal, you will see your dashboard. Here, look for your workspace and ensure that it is running. You can access it by simply clicking the yellow **"Access"** button.
-3. You will be prompted to open a command line interface (CLI) on your local PC/laptop to connect to the workspace via SSH.
-4. If you already have an ssh key pair set up, type `yes` to trust the workspace and you will be connected to your workspace via SSH.
+### Accessing the Workspace via the command line (SSH)
 
 If you do not have an ssh key pair set up, you will need to generate one and add the public key to your SURF Research Cloud account. Follow the instructions to [set up SSH access.](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/195854434/Workspace+access+with+SSH).
+
+
+::: {.panel-tabset}
+
+## MacOS/Linux
+
+1. Open the 'Terminal' application.
+2. In your terminal application type:
+    `ssh <ResearchCloud username>@<workspace ip address>`
+
+The **ResearchCloud username** is given on the "Profile"-Tab of the ResearchCloud portal page.
+The **ip-address of the workspace** is displayed on the (extendable) display tile of the workspace in the main ("Dashboard") tab.
+
+
+## Windows
+
+1. Make sure you have installed an application that allows you to login using SSH: [Git Bash](https://carpentries.github.io/workshop-template/install_instructions/#shell) (recommended), alternatively [MobaXTerm](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/9798424/MobaXterm+for+Research+Cloud)
+
+2. Open your 'Terminal' application (e.g. Git Bash).
+2. In your terminal application type:
+    `ssh <ResearchCloud username>@<workspace ip address>`
+
+The **ResearchCloud username** is given on the "Profile"-Tab of the ResearchCloud portal page.
+The **ip-address of the workspace** is displayed on the (extendable) display tile of the workspace in the main ("Dashboard") tab.
+
+:::
+
+::: {.callout-note}
+If you just submitted a new public key or when the workspace is new, you might have to wait for a few minutes for this to work.
+
+:::
+
+
+
 

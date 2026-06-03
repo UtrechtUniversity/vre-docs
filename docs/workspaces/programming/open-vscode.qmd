@@ -43,6 +43,9 @@ Upon request we can help you to automate the installation of packages or automat
 ## Access
 {{< include ../partials/_access-sso.qmd >}}
 
+{{< include ../partials/_access-ssh.qmd >}}
+
+
 {{< include ../partials/_data_transfer.qmd >}}
 
 ## Usage

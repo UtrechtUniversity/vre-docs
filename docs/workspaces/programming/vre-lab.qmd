@@ -31,8 +31,6 @@ VRE Lab workspace is also available with a **Desktop** interface. Select Ubuntu 
 
 The Desktop option is particularly useful for GUI applications, 3D visualization tasks, and when combined with GPU workspaces (**VRE Lab GPU** catalog item), provides GPU-accelerated rendering for 3D analysis and extensive data processing from the desktop environment.
 
-Login is done via [SRAM](https://servicedesk.surf.nl/wiki/spaces/IAM/pages/74226073/SURF+Research+Access+Management) via your institutional credentials.
-
 The workspace includes Python environment management with [`uv`](https://docs.astral.sh/uv/).
 
 You can automatically install environments and dependencies for Python, R, Julia, and Conda using the Custom Packages [Optional Component](#optional-components) provided in this workspace.
@@ -79,6 +77,8 @@ Simply check the boxes for the components you need, then continue with workspace
 ### Accessing the Workspace
 
 {{< include ../partials/_access-sso.qmd >}}
+
+{{< include ../partials/_access-ssh.qmd >}}
 
 
 ## Usage

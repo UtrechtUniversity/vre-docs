@@ -32,6 +32,9 @@ Login is done via [SRAM](https://servicedesk.surf.nl/wiki/spaces/IAM/pages/74226
 ## Access
 {{< include ../partials/_access-sso.qmd >}}
 
+{{< include ../partials/_access-ssh.qmd >}}
+
+
 {{< include ../partials/_data_transfer.qmd >}}
 
 ## Usage

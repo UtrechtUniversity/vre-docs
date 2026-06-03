@@ -59,6 +59,8 @@ Simply choose one of these [catalog items](../../glossary.qmd#catalog-item) in t
 
 {{< include ../partials/_access-sso.qmd >}}
 
+{{< include ../partials/_access-ssh.qmd >}}
+
 :::
 
 
