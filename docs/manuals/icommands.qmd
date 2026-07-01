@@ -11,10 +11,10 @@ If you don't have these skills, take some time to practice using sections 1, 2, 
 You will also need access to [Yoda](https://www.uu.nl/en/research/yoda).
 
 ### Step 1: Make sure you are in a terminal
-- In Jupyterhub ([Jupyter Notebook](../workspaces/programming/jupyter.qmd) or [VRE Lab](../workspaces/programming/vre-lab.qmd) in Research cloud): 
+- In a Jupyter based workspace such as [VRE Lab](../workspaces/programming/vre-lab.qmd) in Research cloud: 
   To open a new terminal, click the + button in the file browser and select the terminal in the new Launcher tab
   ([find a short video here](https://jupyterlab.readthedocs.io/en/stable/user/terminal.html)).
-- In Rstudio ([Rstudio workspace](../workspaces/programming/rstudio.qmd) in Research cloud):
+- In Rstudio ([Rstudio workspace](../workspaces/programming/rstudioUU.qmd) in Research cloud):
   In the bottom left panel, click the 'terminal' tab.
 - In [Python](../workspaces/programming/python-workbench.qmd) and [Ubuntu](../workspaces/plain/ubuntu.qmd) Desktop workspaces:
   Open a terminal. You can find it under Applications.

@@ -2,6 +2,9 @@ project:
   type: website
   output-dir: ./_html
 
+resources:
+  - _styles/shiny-sandstone.css
+
 website:
   title: "VRE documentation for UU research"
   navbar:

@@ -21,7 +21,7 @@ There are several ways to edit text and code files in your SURF Research Cloud w
 
 ### 1. JupyterLab Editor
 
-**Available on:** [Jupyter Notebook](../workspaces/programming/jupyter.qmd), [VRE Lab](../workspaces/programming/vre-lab.qmd), [Python Workbench (Desktop)](../workspaces/programming/python-workbench.qmd)
+**Available on:** [VRE Lab](../workspaces/programming/vre-lab.qmd), [Python Workbench (Desktop)](../workspaces/programming/python-workbench.qmd), Jupyter Notebook
 
 JupyterLab interface includes a built-in editor to edit files from within the environment offering a graphical interface.
 The editor supports Python, R, Markdown, JSON, YAML, and text file types without needing to install additional software. 

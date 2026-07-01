@@ -1,0 +1,86 @@
+.sandstone-shiny {
+  --sandstone-bg: #f8f5f0;
+  --sandstone-surface: #ffffff;
+  --sandstone-border: #e6dfd5;
+  --sandstone-text: #3e3f3a;
+  --sandstone-muted: #8e8c84;
+  --sandstone-accent: #325d88;
+  --sandstone-accent-soft: #e9eff5;
+
+  background: var(--sandstone-bg);
+  color: var(--sandstone-text);
+  padding-top: 1rem;
+}
+
+.sandstone-shiny .sidebar {
+  background: var(--sandstone-surface);
+  border: 1px solid var(--sandstone-border);
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.06);
+}
+
+.sandstone-shiny .form-control,
+.sandstone-shiny .form-select,
+.sandstone-shiny .irs--shiny .irs-bar,
+.sandstone-shiny .irs--shiny .irs-single,
+.sandstone-shiny .btn-default,
+.sandstone-shiny .btn-secondary {
+  border-color: var(--sandstone-border);
+}
+
+.sandstone-shiny .form-control:focus,
+.sandstone-shiny .form-select:focus {
+  border-color: #9cb4ce;
+  box-shadow: 0 0 0 0.2rem rgb(50 93 136 / 0.15);
+}
+
+.sandstone-shiny .form-check-input:checked,
+.sandstone-shiny .irs--shiny .irs-bar,
+.sandstone-shiny .irs--shiny .irs-handle > i:first-child {
+  background: var(--sandstone-accent);
+}
+
+.sandstone-shiny .irs--shiny .irs-single {
+  background: var(--sandstone-accent);
+  color: #fff;
+}
+
+.sandstone-shiny .irs--shiny .irs-single:before {
+  border-top-color: var(--sandstone-accent);
+}
+
+.sandstone-shiny .bslib-value-box,
+.sandstone-shiny .value-box {
+  background: linear-gradient(135deg, var(--sandstone-accent-soft), #dbe7f2) !important;
+  color: var(--sandstone-text) !important;
+  border: 1px solid #c9d8e8;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 14px rgb(50 93 136 / 0.12);
+}
+
+.sandstone-shiny .bslib-value-box .value-box-title,
+.sandstone-shiny .bslib-value-box .value-box-value,
+.sandstone-shiny .value-box .value-box-title,
+.sandstone-shiny .value-box .value-box-value {
+  color: var(--sandstone-text) !important;
+}
+
+.sandstone-shiny .shiny-plot-output {
+  background: var(--sandstone-surface);
+  border: 1px solid var(--sandstone-border);
+  border-radius: 0.5rem;
+  padding: 0.25rem;
+}
+
+.sandstone-shiny label,
+.sandstone-shiny .control-label,
+.sandstone-shiny .radio label,
+.sandstone-shiny .checkbox label,
+.sandstone-shiny .irs--shiny {
+  color: var(--sandstone-text);
+}
+
+.sandstone-shiny .text-muted,
+.sandstone-shiny .help-block {
+  color: var(--sandstone-muted) !important;
+}

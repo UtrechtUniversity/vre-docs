@@ -32,7 +32,6 @@ The repository provides information on working with the following workspaces:
 
  - [VRE Lab](../workspaces/programming/vre-lab.qmd)
  - [Python Workbench Desktop](../workspaces/programming/python-workbench.qmd)
- - [Jupyter Notebook](../workspaces/programming/jupyter.qmd)
  - [OpenVSCode](../workspaces/programming/open-vscode.qmd)
 
 The environment managers used are:

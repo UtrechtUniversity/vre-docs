@@ -112,7 +112,7 @@ If your repository is part of the [UU GitHub organization](https://github.com/ut
 
 ## Using Git in JupyterLab Interface (GUI Alternative)
 
-Workspaces that support JupyterLab ([Jupyter Notebook](../workspaces/programming/jupyter.qmd), [VRE Lab](../workspaces/programming/vre-lab.qmd)) include a built-in Git extension that provides a graphical interface for Git operations, making it easier for users who prefer not to use the command line.
+Workspaces that support JupyterLab ([VRE Lab](../workspaces/programming/vre-lab.qmd), Jupyter Notebook) include a built-in Git extension that provides a graphical interface for Git operations, making it easier for users who prefer not to use the command line.
 
 
 ### Accessing the Git UI

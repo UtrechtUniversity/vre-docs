@@ -3,7 +3,7 @@ title: "R Environments"
 ---
 # Overview
 
-This manual describes the best practices for working with R environments in your SURF Research Cloud workspace (e.g. [RStudio workspaces](../workspaces/programming/rstudio.qmd)).
+This manual describes the best practices for working with R environments in your SURF Research Cloud workspace (e.g. [RStudio workspaces](../workspaces/programming/rstudioUU.qmd)).
 Using a project-specific R environment ensures that your work is:
 
 - reproducible
@@ -35,7 +35,6 @@ The example provides information on working with the following workspaces:
  - [RStudioUU](../workspaces/programming/rstudioUU.qmd)
  - [VRE Lab](../workspaces/programming/vre-lab.qmd) with RStudioUU selected under optional components
  - [R Workbench](../workspaces/programming/r-workbench.qmd)
- - [RStudio](../workspaces/programming/rstudio.qmd)
 
 [`renv`](https://rstudio.github.io/renv/) is the recommended tool for reproducible R environments.
 
