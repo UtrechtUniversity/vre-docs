@@ -38,7 +38,7 @@ Please also read the [tips](#tips) below.
 
 **Choosing the right hardware**: 
 
-ASReview uses an AI model that runs in parallel to the ASReview webapplication. **It is therefore recommended to choose a workspace with at least two CPU cores. Four CPUs is probably enough for most cases.** The more users that will be using the workspace to do screening in parallel, the more hardware will be required.
+ASReview uses a machine learning or AI model that runs in parallel to the ASReview webapplication. **It is therefore recommended to choose a workspace with at least two CPU cores. Four CPUs is probably enough for most cases.** The more users that will be using the workspace to do screening in parallel, the more hardware will be required.
 
 If you are unsure about the right hardware for your needs, the best way to test it out is to start with a modest configuration. 
 
