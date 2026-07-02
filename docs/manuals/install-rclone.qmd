@@ -5,11 +5,11 @@ Title: "Install Rclone"
 The steps below are used to install Rclone on Research Cloud.
 
 ### Step 1: Make sure you are in a terminal
-- In Jupyterhub ([Jupyter Workspace](../workspaces/programming/jupyter.qmd) or [VRE Lab](../workspaces/programming/vre-lab.qmd) in Research cloud)
+- In Jupyterhub ([VRE Lab](../workspaces/programming/vre-lab.qmd) or Jupyter notebook workspaces in Research cloud)
   - To open a new terminal, click the + button in the file browser and select the terminal in the new Launcher tab
   ([find a short video here](https://jupyterlab.readthedocs.io/en/stable/user/terminal.html)).
 
-- In Rstudio ([Rstudio workspace](../workspaces/programming/rstudio.qmd) in Research cloud)
+- In Rstudio ([Rstudio workspace](../workspaces/programming/rstudioUU.qmd) in Research cloud)
   - In the bottom left panel, click the 'terminal' tab.
 
 - In [Python Desktop workspaces](../workspaces/programming/python-workbench.qmd) and [Ubuntu workspaces](../workspaces/plain/ubuntu.qmd), simply open the 'Terminal' application (found under Applications.)

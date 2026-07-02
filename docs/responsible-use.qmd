@@ -1,7 +1,5 @@
 ---
 title: "VRE practical tips for responsible use"
-filters:
-  - shinylive
 ---
 
 ## Use of the VRE
@@ -37,203 +35,346 @@ Use the calculator below to estimate the costs for the workspaces and storage vo
 
 Note: this describes costs for the standard use case, in which workspaces run on SURF's HPC Cloud environment. Although ResearchCloud also allows you to [run workspaces in different environment](manuals/creating.qmd#select-cloud-provider) (such as Microsoft's Azure cloud environment), the costs for this will be significantly higher.
 
-```{shinylive-python}
-#| standalone: true
-#| viewerHeight: 600
+```{=html}
+<style>
+    .cost-calculator {
+        margin: 1.5rem 0;
+        padding: 1.25rem;
+        border: 1px solid #b9d4de;
+        border-radius: 14px;
+        background: #f5fbfd;
+        box-shadow: 0 8px 24px rgba(26, 71, 102, 0.08);
+    }
 
-from shiny import App, render, ui
-import numpy as np
-import matplotlib.pyplot as plt
-import faicons
+    .cost-calculator h3 {
+        margin-top: 0;
+        margin-bottom: 0.35rem;
+    }
 
+    .cost-calculator p {
+        margin-bottom: 1rem;
+    }
 
-app_ui = ui.page_fluid(
-    ui.head_content(
-        ui.tags.link(rel="stylesheet", href="styles/shiny-sandstone.css")
-    ),
-    ui.div(
-        {"class": "sandstone-shiny"},
-        ui.layout_sidebar(
-            ui.sidebar(
-                ui.input_radio_buttons(
-                "device", "Processing Unit", ["CPU", "GPU"], selected="CPU"
-                ),
-                ui.output_ui("device_controls"),
+    .cost-calculator .observablehq form {
+        margin-bottom: 0.9rem;
+    }
 
-            ),
-            ui.value_box(
-                title="Estimated costs workspace*",
-                showcase=faicons.icon_svg("circle-dollar-to-slot",width="50px"),
-                value=ui.output_ui("estimate"),
-                theme="bg-gradient-blue-purple",
-            ),
-            ui.output_plot("plot_compute"),
-        ),
-    ),
-)
+    .cost-calculator .observablehq label {
+        display: inline-block;
+        min-width: 220px;
+        margin-right: 0.75rem;
+        font-weight: 600;
+        vertical-align: top;
+    }
 
+    .cost-calculator .observablehq input[type="range"],
+    .cost-calculator .observablehq select {
+        max-width: 100%;
+    }
 
-def server(input, output, session):
-    @output
-    @render.ui
-    def device_controls():
-        if input.device() == "CPU":
-            return ui.TagList(
-                ui.input_slider("cores", "Number of CPU cores", 1, 30, 4, step=1),
-                ui.input_slider("time", "Estimated time", 1, 50, 12, step=1),
-                ui.input_radio_buttons(
-                    "time_unit", "Time Unit", ["hours", "days"]
-                    ),
-                )
-        else:
-            return ui.TagList(
-                ui.input_slider("gpus", "Number of GPU devices", 1, 4, 1, step=1),
-                ui.input_slider("time", "Estimated time", 1, 50, 12, step=1),
-                ui.input_radio_buttons(
-                    "time_unit", "Time Unit", ["hours", "days"]
-                    ),
-             )
+    .calculator-estimate {
+        display: inline-block;
+        margin: 0.5rem 0 1rem;
+        padding: 0.75rem 1rem;
+        border-radius: 10px;
+        background: #e0f2f8;
+        border: 1px solid #9dc7d6;
+        font-size: 1.05rem;
+    }
 
-    @render.plot(alt="Cost estimator")
-    def plot_compute():
-        ssd_hourly_cost = 1.525 * 100 / (30 * 24)  # assumed on average 100GB SSD
-
-        if input.device() == "CPU":
-            x_max = 50.0
-            t = np.arange(0.0, x_max, 1.0)
-
-            if input.time_unit() == "days":
-                cost = t * 24 * (input.cores() + ssd_hourly_cost)
-            else:
-                cost = t * (input.cores() + ssd_hourly_cost)
-        else:
-            x_max = 20.0
-            t = np.arange(0.0, x_max, 1.0)
-            if input.time_unit() == "days":
-                cost = t * 24 * (input.gpus() * 21 + ssd_hourly_cost)
-            else:
-                cost = t * (input.gpus() * 21 + ssd_hourly_cost)
-
-        fig, ax = plt.subplots()
-        if input.time_unit() == "days":
-            ax.set_ylim([0, 1000 * 10])
-        else:
-            ax.set_ylim([0, 1000])
-        ax.set_xlim([0, int(x_max)])
-        ax.plot(t, cost, label="Credits")
-        ax.grid()
-        ax.vlines(input.time(), 0, cost[input.time()], colors='r', linestyles='dashed', label='Estimated time')
-        if input.device() == "CPU":
-            ax.hlines(y=cost[input.time()], xmin=0, xmax=input.time(), color='r', linestyle='dashed')
-        else:
-            ax.set_xticks(np.arange(0, int(x_max)+1, step=5))
-            ax.hlines(y=cost[input.time()], xmin=0, xmax=input.time(), color='r', linestyle='dashed')
-
-        ax.set(xlabel='Time in # of ' + input.time_unit(), ylabel='Credits',
-               title='Cost of running a workspace')
-
-    @render.text  
-    def estimate():
-        ssd_hourly_cost = 1.525 * 100 / (30 * 24)  # assumed on average 100GB SSD
-
-        if input.device() == "CPU":
-            if input.time_unit() == "days":
-                cost = input.time() * 24 * (input.cores() + ssd_hourly_cost)
-            else:
-                cost = input.time() * (input.cores() + ssd_hourly_cost)
-        else:
-            if input.time_unit() == "days":
-                cost = input.time() * 24 * (input.gpus() * 18 + ssd_hourly_cost)
-            else:
-                cost = input.time() * (input.gpus() * 18 + ssd_hourly_cost)
-        return f"{round(cost, 1)} credits"  
-
-app = App(app_ui, server)
-
+    .calculator-note {
+        margin-top: -0.25rem;
+        color: #35586a;
+        font-size: 0.95rem;
+    }
+</style>
 ```
 
-> *Costs including workspaces storage (SSD)
-```{shinylive-python}
-#| standalone: true
-#| viewerHeight: 600
+::: {.cost-calculator}
+### Workspace cost calculator
 
-from shiny import App, render, ui
-import numpy as np
-import matplotlib.pyplot as plt
-import faicons
+Estimate the cost of a running workspace based on compute capacity, runtime, and included SSD storage.
 
-app_ui = ui.page_fluid(
-    ui.head_content(
-        ui.tags.link(rel="stylesheet", href="styles/shiny-sandstone.css")
-    ),
-    ui.div(
-        {"class": "sandstone-shiny"},
-        ui.layout_sidebar(
-            ui.sidebar(
-                ui.output_ui("device_controls"),
-            ),
-            ui.value_box(
-                title="Costs persistent storage (HDD)",
-                showcase=faicons.icon_svg("circle-dollar-to-slot",width="50px"),
-                value=ui.output_ui("estimate"),
-                theme="bg-gradient-blue-purple",
-            ),
-            ui.output_plot("plot_storage"),
-        ),
-    ),
-)
+```{ojs}
+//| echo: false
 
+renderCostChart = ({
+    points,
+    selectedX,
+    selectedY,
+    xLabel,
+    yLabel = "Credits",
+    title,
+    xTickStep = 5
+}) => {
+    const width = 700;
+    const height = 360;
+    const margin = {top: 40, right: 24, bottom: 52, left: 72};
+    const innerWidth = width - margin.left - margin.right;
+    const innerHeight = height - margin.top - margin.bottom;
+    const xMax = Math.max(...points.map((point) => point.x), 1);
+    const yMax = Math.max(...points.map((point) => point.y), 1);
+    const xScale = (value) => margin.left + (value / xMax) * innerWidth;
+    const yScale = (value) => margin.top + innerHeight - (value / yMax) * innerHeight;
+    const svgNs = "http://www.w3.org/2000/svg";
+    const svg = document.createElementNS(svgNs, "svg");
 
-def server(input, output, session):
-    @output
-    @render.ui
-    def device_controls():
-        return ui.TagList(
-            ui.input_slider("time", "Estimated time", 1, 50, 12, step=1),
-            ui.input_radio_buttons(
-                "time_unit", "Time Unit", ["days", "months"]
-                ),
-            ui.input_slider("storage", "Storage volume size in GB", 5, 1500, 250, step=5),
-            )
+    svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+    svg.setAttribute("width", "100%");
+    svg.setAttribute("height", height);
+    svg.setAttribute("role", "img");
+    svg.setAttribute("aria-label", title);
 
-    @render.plot(alt="Cost estimator")
-    def plot_storage():
-        x_max = 50.0
-        t = np.arange(0.0, x_max, 1.0)
-        if input.time_unit() == "days": 
-            cost = t * input.storage() * 0.681 / 30
-        else:
-            cost = t * input.storage() * 0.681
+    const add = (name, attrs = {}, parent = svg) => {
+        const element = document.createElementNS(svgNs, name);
+        for (const [key, value] of Object.entries(attrs)) {
+            element.setAttribute(key, value);
+        }
+        parent.appendChild(element);
+        return element;
+    };
 
-        fig, ax = plt.subplots()
+    add("rect", {x: 0, y: 0, width, height, fill: "white"});
 
-        if input.time_unit() == "days":
-            ax.set_ylim([0, 1000])
-        else:
-            ax.set_ylim([0, 1000 * 30])
+    const yTicks = 5;
+    for (let index = 0; index <= yTicks; index += 1) {
+        const value = (yMax / yTicks) * index;
+        const y = yScale(value);
+        add("line", {
+            x1: margin.left,
+            y1: y,
+            x2: width - margin.right,
+            y2: y,
+            stroke: "#d0d0d0",
+            "stroke-width": 1
+        });
+        const label = add("text", {
+            x: margin.left - 10,
+            y: y + 4,
+            "text-anchor": "end",
+            "font-size": 12,
+            fill: "#333"
+        });
+        label.textContent = value.toFixed(0);
+    }
 
-        ax.set_xlim([0, int(x_max)])
-        ax.plot(t, cost, label="Credits")
-        ax.grid()
-        ax.vlines(input.time(), 0, cost[input.time()], colors='r', linestyles='dashed', label='Estimated time')
-        ax.hlines(y=cost[input.time()], xmin=0, xmax=input.time(), color='r', linestyle='dashed')
-        if input.time_unit() == "days":
-            ax.set(xlabel='Time in # of days', ylabel='Credits',
-                title='Cost of persistent storage')
-        else:
-            ax.set(xlabel='Time in # of months', ylabel='Credits',
-                title='Cost of persistent storage')
-    @render.text  
-    def estimate():
-        if input.time_unit() == "days":
-            cost = input.time() * input.storage() * 0.681 / 30
-        else:
-            cost = input.time() * input.storage() * 0.681
-        return f"{round(cost, 1)} credits"  
+    for (let value = 0; value <= xMax; value += xTickStep) {
+        const x = xScale(value);
+        add("line", {
+            x1: x,
+            y1: margin.top,
+            x2: x,
+            y2: height - margin.bottom,
+            stroke: "#ececec",
+            "stroke-width": 1
+        });
+        const label = add("text", {
+            x,
+            y: height - margin.bottom + 20,
+            "text-anchor": "middle",
+            "font-size": 12,
+            fill: "#333"
+        });
+        label.textContent = value.toString();
+    }
 
-app = App(app_ui, server)
+    add("line", {
+        x1: margin.left,
+        y1: height - margin.bottom,
+        x2: width - margin.right,
+        y2: height - margin.bottom,
+        stroke: "#333",
+        "stroke-width": 1.5
+    });
+    add("line", {
+        x1: margin.left,
+        y1: margin.top,
+        x2: margin.left,
+        y2: height - margin.bottom,
+        stroke: "#333",
+        "stroke-width": 1.5
+    });
 
+    const pathData = points
+        .map((point, index) => `${index === 0 ? "M" : "L"} ${xScale(point.x)} ${yScale(point.y)}`)
+        .join(" ");
+    add("path", {
+        d: pathData,
+        fill: "none",
+        stroke: "#1f77b4",
+        "stroke-width": 2.5
+    });
+
+    const selectedXPos = xScale(selectedX);
+    const selectedYPos = yScale(selectedY);
+    add("line", {
+        x1: selectedXPos,
+        y1: height - margin.bottom,
+        x2: selectedXPos,
+        y2: selectedYPos,
+        stroke: "#d62728",
+        "stroke-width": 1.5,
+        "stroke-dasharray": "6 4"
+    });
+    add("line", {
+        x1: margin.left,
+        y1: selectedYPos,
+        x2: selectedXPos,
+        y2: selectedYPos,
+        stroke: "#d62728",
+        "stroke-width": 1.5,
+        "stroke-dasharray": "6 4"
+    });
+    add("circle", {
+        cx: selectedXPos,
+        cy: selectedYPos,
+        r: 4,
+        fill: "#d62728"
+    });
+
+    const titleLabel = add("text", {
+        x: width / 2,
+        y: 24,
+        "text-anchor": "middle",
+        "font-size": 16,
+        fill: "#111"
+    });
+    titleLabel.textContent = title;
+
+    const xAxisLabel = add("text", {
+        x: width / 2,
+        y: height - 12,
+        "text-anchor": "middle",
+        "font-size": 13,
+        fill: "#111"
+    });
+    xAxisLabel.textContent = xLabel;
+
+    const yAxisLabel = add("text", {
+        x: 18,
+        y: height / 2,
+        transform: `rotate(-90 18 ${height / 2})`,
+        "text-anchor": "middle",
+        "font-size": 13,
+        fill: "#111"
+    });
+    yAxisLabel.textContent = yLabel;
+
+    return svg;
+}
+
+ssdHourlyCost = 1.525 * 100 / (30 * 24)
+gpuHourlyCost = 21
+axisMaxWithMargin = (value) => value <= 15 ? 20 : Math.min(50, value + 5)
 ```
+
+```{ojs}
+//| echo: false
+
+viewof computeDevice = Inputs.radio(["CPU", "GPU"], {
+    label: "Processing unit",
+    value: "CPU"
+})
+
+viewof computeCapacity = computeDevice === "CPU"
+    ? Inputs.range([1, 30], {label: "Number of CPU cores", value: 4, step: 1})
+    : Inputs.range([1, 4], {label: "Number of GPU devices", value: 1, step: 1})
+
+viewof computeTime = Inputs.range([1, 50], {
+    label: "Estimated time",
+    value: 12,
+    step: 1
+})
+
+viewof computeTimeUnit = Inputs.radio(["hours", "days"], {
+    label: "Time unit",
+    value: "hours"
+})
+
+computeMultiplier = computeTimeUnit === "days" ? 24 : 1
+computeRate = computeDevice === "CPU"
+    ? computeCapacity + ssdHourlyCost
+    : computeCapacity * gpuHourlyCost + ssdHourlyCost
+computeEstimate = computeTime * computeMultiplier * computeRate
+computeXMax = axisMaxWithMargin(computeTime)
+computePoints = Array.from({length: computeXMax + 1}, (_, value) => ({
+    x: value,
+    y: value * computeMultiplier * computeRate
+}))
+
+html`<div class="calculator-estimate"><strong>Estimated costs workspace*:</strong> ${computeEstimate.toFixed(1)} credits</div>`
+
+renderCostChart({
+    points: computePoints,
+    selectedX: computeTime,
+    selectedY: computeEstimate,
+    xLabel: `Time in number of ${computeTimeUnit}`,
+    title: "Cost of running a workspace",
+    xTickStep: computeXMax <= 20 ? 5 : 10
+})
+```
+
+
+
+::: {.calculator-note}
+*Costs including workspace storage (SSD).* 
+:::
+:::
+
+::: {.cost-calculator}
+### Persistent storage cost calculator
+
+Estimate the cost of a storage volume over time using the fixed storage size options.
+
+```{ojs}
+//| echo: false
+
+viewof storageTime = Inputs.range([1, 50], {
+    label: "Estimated time",
+    value: 12,
+    step: 1
+})
+
+viewof storageTimeUnit = Inputs.radio(["days", "months"], {
+    label: "Time unit",
+    value: "days"
+})
+
+storageSizeOptions = [5, 10, 50, 100, 250, 500, 1000, 1500]
+
+viewof storageSize = Inputs.select(storageSizeOptions, {
+    label: "Storage volume size",
+    value: 250,
+    format: (value) => {
+        if (value === 1000) return "1 TB"
+        if (value === 1500) return "1.5 TB"
+        return `${value} GB`
+    }
+})
+
+storageRate = storageTimeUnit === "days"
+    ? storageSize * 0.681 / 30
+    : storageSize * 0.681
+storageEstimate = storageTime * storageRate
+storageXMax = axisMaxWithMargin(storageTime)
+storageXTickStep = storageXMax <= 20 ? 5 : 10
+storagePoints = Array.from({length: storageXMax + 1}, (_, value) => ({
+    x: value,
+    y: value * storageRate
+}))
+
+html`<div class="calculator-estimate"><strong>Costs persistent storage (HDD):</strong> ${storageEstimate.toFixed(1)} credits</div>`
+
+renderCostChart({
+    points: storagePoints,
+    selectedX: storageTime,
+    selectedY: storageEstimate,
+    xLabel: `Time in number of ${storageTimeUnit}`,
+    title: "Cost of persistent storage",
+    xTickStep: storageXTickStep
+})
+```
+:::
 
 ## VRE lifetime and security updates
 
