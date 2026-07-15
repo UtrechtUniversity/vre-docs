@@ -66,7 +66,7 @@ viewof skillLevel = Inputs.radio(
 )
 
 // Helper to check workspace type
-isDesktop = workspaceType === "Python Workbench (Desktop)" || workspaceType === "Windows" || workspaceType === "Ubuntu (Desktop)"
+isDesktop = workspaceType === "Python Workbench (Desktop)" || workspaceType === "Windows" || workspaceType === "Ubuntu (Desktop)" || workspaceType === "VRE Lab"
 isPythonDesktop = workspaceType === "Python Workbench (Desktop)"
 isPythonCLI = workspaceType === "Python Workbench (CLI)"
 isJupyter = workspaceType === "Jupyter Notebook"
@@ -116,7 +116,7 @@ allOptions = {
         link: "icommands.html",
         skillLevel: "Intermediate (CLI)",
         pros: ["Large datasets", "Transfer automation"],
-        cons: ["Requires command line knowledge", "Not pre-installed on all workspaces"],
+        cons: ["Requires command line knowledge", "Not pre-installed on all workspaces", "Not available on Windows"],
         bestFor: ["Large datasets", "Automation", "CLI users"]
       });
     }
@@ -371,7 +371,7 @@ recommended = {
       return opts.find(o => o.tool === "iBridges GUI");
     }
     if (isLargeMany && !preferGUI && !isWindows) {
-      return opts.find(o => o.tool === "iCommands");
+      return opts.find(o => o.tool === "iBridges CLI");
     }
     return opts.find(o => o.tool === "iBridges CLI");
   }
