@@ -100,7 +100,7 @@ If you want the logfile to only contain your command's output, you can run `run_
 
 You can try the following example to test the use of `run_and_pause`.
 
-:::{.callout-note collapse=true #test-example}
+:::{#note-example .callout-note collapse=true}
 ## Example Script to Test Running Long Jobs
 Create a Python script `test.py` with the following content:
 ```python
@@ -198,7 +198,7 @@ After submitting this command you will see the following:
 You need to press Enter one more time to return to the command prompt.
 The number between square brackets is the job ID and the second number is the process ID.
 
-To practice using `nohup`, you can use the [example script here](#test-example), and run it with the following command:
+To practice using `nohup`, you can use the [example script here](#note-example), and run it with the following command:
 ``` bash
 nohup python test.py &
 ``` 

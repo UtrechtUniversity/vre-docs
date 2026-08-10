@@ -31,7 +31,9 @@ You will see a list of options and current remotes (if any). For SURFdrive you n
 
 4. You will be asked to fill in the URL. You can look this up via the web portal of [SURFdrive](https://surfdrive.surf.nl/).
    - In the top right corner click on your account name. Go to settings. 
-   - In the left panel, click security. Here, you can find your the url to access your files via WebDAv. It should be something like https://surfdrive.surf.nl/files/remote.php/nonshib-webdav.
+   - In the left panel, click security. Here, you can find your the url to access your files via WebDAv. It should be something like <!-- markdown-link-check-disable --> https://surfdrive.surf.nl/files/remote.php/nonshib-webdav.
+
+<!-- markdown-link-check-enable -->
 
 5. Before you continue with the Rclone config menu in your workspace terminal, first perform the following step via the [web portal](https://surfdrive.surf.nl) of SURFdrive.
    - Fill in an **app name** (e.g. lisa) on the security settings page (same page as previous step) and click `create new app password`. 

@@ -128,8 +128,7 @@ deactivate
 
 Once activated, you can run Python scripts using the environment's packages, install additional packages and work with the project files.
 
-## 4. Using Environments in Jupyter Notebooks
-
+## 4. Using Environments in Jupyter Notebooks {#sec-using-environments-in-jupyter-notebooks}
 
 If the kernel was created automatically, select it from the kernel dropdown in the JupyterLab interface (top right).
 
@@ -254,7 +253,7 @@ This log file shows:
 ::: {.callout-note collapse="true"}
 ## 1. Environment Created But Kernel Not Available
 
-Environment exists but doesn't appear in Jupyter kernel list. Then you can register the kernel manually see [Manual Kernel Registration](#using-environments-in-jupyter-notebooks) above.
+Environment exists but doesn't appear in Jupyter kernel list. Then you can register the kernel manually see @sec-using-environments-in-jupyter-notebooks above.
 :::
 
 ::: {.callout-note collapse="true"}
