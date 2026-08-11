@@ -1,0 +1,19 @@
+# lychee.toml
+timeout = 20
+max_redirects = 3
+
+# URLs to exclude (regex patterns)
+exclude = [
+    "^mailto:",
+    '^https://(www\.)?onedrive\.com',
+    '^https://(www\.)?surfdrive.surf\.nl',
+    'uu.data.surf.nl',
+    'yourworkspaceurl.nl',
+    'your-workspace-url',
+    'surf-hosted.nl',
+    '\.(pdf|zip|png|git)'
+]
+
+accept = ["200", "401", "403", "417", "429"]
+
+exclude_all_private = true
