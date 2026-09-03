@@ -142,11 +142,32 @@ cd ~/src-python-example # Navigate to the project
 
 source .venv/bin/activate # Make sure your environment is activated
 
+::: {.panel-tabset}
+
+## VRE Lab workspace
+
+```
 # Register as Jupyter kernel (for src-python-example)
-python -m ipykernel install --user --name=geo-kernel --display-name "geo-kernel (ipykernel)"
+uv run python -m ipykernel install --user --name=geo-kernel --display-name "geo-kernel (ipykernel)"
 
 # For other projects
-python -m ipykernel install --user --name {project-name} --display-name "Python ({project-name})"
+uv run python -m ipykernel install --name {project-name} --display-name "Python ({project-name})"
+
+# Verify the kernel is registered
+jupyter kernelspec list
+```
+
+## Jupyter Notebook workspace
+
+Prerequisite: You need sudo privileges to register a kernel in the correct place. See more information about how to get sudo privileges [here](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/50069595/Flag+a+collaboration-member+as+SRC+administrators).
+
+:::
+```
+# Register as Jupyter kernel (for src-python-example)
+sudo uv run python -m ipykernel install --name=geo-kernel --display-name "geo-kernel (ipykernel)"
+
+# For other projects
+sudo uv run python -m ipykernel install --name {project-name} --display-name "Python ({project-name})"
 
 # Verify the kernel is registered
 jupyter kernelspec list
