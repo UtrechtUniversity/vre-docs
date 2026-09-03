@@ -135,6 +135,7 @@ python your_script.py # run your script (python main.py for example)
 ```
 
 ::: {.callout-note collapse="true"}
+
 ## Using Kernels in JupyterLab (for `.ipynb` files)
 In a JupyterLab interface, you can register your environment as a Jupyter kernel so notebooks can use that environment to run code.
 ```bash
@@ -142,6 +143,7 @@ cd ~/src-python-example # Navigate to the project
 
 source .venv/bin/activate # Make sure your environment is activated
 
+```
 ::: {.panel-tabset}
 
 ## VRE Lab workspace
@@ -161,7 +163,7 @@ jupyter kernelspec list
 
 Prerequisite: You need sudo privileges to register a kernel in the correct place. See more information about how to get sudo privileges [here](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/50069595/Flag+a+collaboration-member+as+SRC+administrators).
 
-:::
+
 ```
 # Register as Jupyter kernel (for src-python-example)
 sudo uv run python -m ipykernel install --name=geo-kernel --display-name "geo-kernel (ipykernel)"
@@ -172,8 +174,10 @@ sudo uv run python -m ipykernel install --name {project-name} --display-name "Py
 # Verify the kernel is registered
 jupyter kernelspec list
 ```
+:::
 
 Refresh or close your JupyterLab tab. After this, you should see the new kernel in the JupyterLab interface when you create a new notebook or change the kernel of an existing notebook. Select the kernel with the name you specified (e.g., "geo-kernel (ipykernel)") to run your jupter (`.ipynb`) notebook
+
 :::
 
 ## Using other Environment Managers?
