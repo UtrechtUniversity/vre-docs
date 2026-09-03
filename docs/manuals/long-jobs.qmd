@@ -11,6 +11,12 @@ By running long jobs as background process, you make sure the jobs will not be i
 When you access your workspace via RDP (Remote Desktop), jobs will normally not be interupted by disconnecting.
 [More info on access methods](https://utrechtuniversity.github.io/vre-docs/docs/first-steps.html#getting-access-to-your-workspace)
 
+::: {.callout-warning}
+## Automatic upgrades
+There is a tiny risk that long jobs are interrupted by automatic upgrades to the system on most workspaces. These upgrades are typically scheduled between 6:00 and 7:00 AM, and often have no effect on running processes. However, sometimes an upgrade will restart services or require a reboot. If you are running jobs that take multiple days, and it is crucial that they will not be interrupted [contact us](../contact.qmd).
+:::
+
+
 ## Saving credits and resources when running long jobs
 
 A problem you may run into when running long jobs on your workspace is that the workspace will keep running even after the job is complete. Because you might not know exactly how long your job will take, you may be unable to [pause the workspace](../responsible-use.qmd#pausing-or-deleting-workspaces) manually immediately after the job is finished. This can potentially cost a lot of credits, and waste resources on the platform. [UU-maintained Catalog Items](../workspace-catalogue.qmd) come with a custom `run_and_pause` script that will pause your workspace when your long-running process is finished. Read more about it [below](#method-1-using-run_and_pause).
