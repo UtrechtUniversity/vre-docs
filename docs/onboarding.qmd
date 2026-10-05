@@ -147,5 +147,13 @@ This is beneficial for collaborative research where multiple team members need a
 
 Follow the guides on how to [create and manage groups](https://servicedesk.surf.nl/wiki/display/IAM/Manage+groups+of+collaboration+members) and how to grant members of your collaboration the right to [create new workspaces using the wallet of your project](https://servicedesk.surf.nl/wiki/display/WIKI/Access+to+project+wallet)
 
+### 4. Developer permissions
+Developer permissions can be used for 2 things:
+
+1. Requesting access to existing Catalog items (workspace types) for usage in your collaboration. Find more info about the workspace catalog and the request proces [here](workspace-catalogue.qmd).
+2. Developing your own catalog items
+
+Use this guide to [appoint a developer in your project](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/17826048/Appoint+a+collaboration-member+a+developer).
+
 ## Next
 When your collaboration and wallet is ready, see this page for [first steps](first-steps.qmd).
