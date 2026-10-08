@@ -52,6 +52,7 @@ We outline two ways of running your long job as a background process:
     * the main advantage of this method is that it will automatically [pause your workspace](../responsible-use.qmd#pausing-or-deleting-workspaces) when the job is finished, thereby saving credits and resources.
     * the downsides are that the script is only available on [UU-maintained Catalog Items](../workspace-catalogue.qmd), and that it requires a ResearchCloud API token.
 2. [Using the generic method `nohup`.](#method-2-using-nohup)
+3. [Using Jupyter Scheduler.](#method-3-using-jupyter-scheduler)
 
 #### Method 1: using `run_and_pause`
 
@@ -259,3 +260,17 @@ By adding print statements to your script, you allow monitoring of the progress 
 
 - [Print statements in R](https://www.r-bloggers.com/2021/09/r-print-output/)
 - [Print statements in Python](https://learnpython.com/blog/python-print/)
+
+
+#### Method 3: using `Jupyter Scheduler`
+
+Jupyter Scheduler is a simple GUI-based workflow for notebook based, long running jobs in the background. It is integrated with the Jupyter interface and makes it easier to manage tasks and monitor the progress.
+
+To run a long job using Jupyter Scheduler:
+
+- Right click the notebook file you want to run and select Create Job
+- Choose the notebook to execute
+- Fill in the job options such as input files, output format, Parameters, and whether to run now or on a schedule
+- Create the job
+
+Once the job has completed, you can download the output files.
