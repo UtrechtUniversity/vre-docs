@@ -1,0 +1,44 @@
+--- 
+title: "JupyterGIS"
+execute:
+  echo: false
+software:
+- Python
+- uv
+- JupyterGIS
+- RStudio 
+- OpenVSCode
+- OpenRefine
+- CUDA (optional)
+login:
+- webapp-sso
+- cli
+os_flavor: linux
+os:
+- Ubuntu 22.04
+data:
+- ResearchDrive
+- irods-icommands
+packages: []
+gpu: true
+admin: true
+support: UU
+workspace_cuda: VRE lab GPU
+
+---
+
+## Description
+
+This workspace includes JupyterGIS in JupyterLab. JupyterGIS is an in-browser geographic information system (GIS) for working with geospatial data and map projects. It can be used for exploring and visualizing spatial data alongside notebook-based research workflows.
+
+Features include:
+
+- Working with different data formats such as GeoJSON, GeoTIFF/COG, GeoParquet, GeoPackage, and Shapefile, as well as web map services (WMS/WMTS).
+- Collaborating on maps in real time.
+- Importing and exporting QGIS projects.
+
+See the [JupyterGIS documentation](https://jupytergis.readthedocs.io/) for the full feature list and usage instructions.
+
+### Based on VRE Lab
+
+This workspace is based on [VRE Lab](vre-lab.qmd), with JupyterGIS preinstalled. It provides the same general JupyterLab environment and workspace options as VRE Lab. Refer to VRE Lab documentation for details about creating and using the workspace.
