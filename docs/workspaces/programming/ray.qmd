@@ -1,0 +1,375 @@
+---
+title: "Ray"
+software:
+- '[Ray](https://www.ray.io/)'
+login:
+- cli
+os_flavor: linux
+os:
+- Ubuntu 24.04
+gpu: true
+support: UU
+---
+
+## Description
+
+[Ray](https://docs.ray.io/) is a *distributed computing* framework for running Python programs in parallel, either on one machine or across a cluster of machines. For example, you can use it to run independent analysis tasks, train or serve models, or perform a hyperparameter search using more CPUs or GPUs than are available on a single workspace. Your application must use Ray to distribute its work; simply starting a cluster does not make an existing Python program run in parallel.
+
+A Ray cluster consists of a **head node**, which coordinates the cluster and provides a dashboard, and **worker nodes**, which provide compute resources. Each node is a separate ResearchCloud workspace. In the configurations described here, the head normally reserves its CPUs for coordination, so jobs that need CPUs may wait until a worker is available.
+
+::: {.callout-warning}
+Ray on ResearchCloud is currently in beta. [Contact us](../../contact.qmd) to request access to the required catalog items and for help selecting resources. A cluster can create multiple workspaces and consume credits for each of them. Check your wallet, resource limits, and workspace expiry dates regularly.
+:::
+
+
+### Choose how to start a cluster
+
+There are different ways of starting Ray on ResearchCloud. Your workflow (including the use of [SSH keys](#ssh-keys-and-credentials)) will differ depending on which way you choose.
+
+| Method | When to use it |
+|---|---|
+| [`ray up` from your computer](#start-a-cluster-with-ray-up) | Ray creates the head and automatically adds and removes workers (autoscaling). You manage the cluster using a local configuration file and Ray commands. |
+| [Ray Head Node (autoscaling)](#start-an-autoscaling-head-in-the-portal) | You create the head in the portal; its autoscaler adds and removes workers. |
+| [Ray Head Node and Ray Worker](#start-head-and-worker-nodes-manually) | You create and remove both head and worker workspaces yourself; there is no automatic scaling. |
+
+With **autoscaling**, Ray requests workers when submitted tasks need resources that are not available, up to the configured worker limit. It removes idle workers after an idle timeout. Workers take time to start. A worker flavour must be available that has enough resources for the tasks you submit.
+
+## Before you start
+
+- You need access to a ResearchCloud Collaborative Organisation (CO), a wallet with sufficient credits, and the relevant Ray catalog items. See [getting started](../../onboarding.qmd) and [requesting catalog access](../../manuals/catalog-item-access.qmd).
+- All nodes must use the same [Private Network](../../manuals/creating.qmd#private-network). Select it when creating workspaces in the portal. The provider selects a private network for workspaces it creates; if the CO has multiple networks, set `provider.network_name_hint` in `cluster.yaml` to help select the correct one. For a portal-created autoscaling head, make sure its network matches the one used by the provider for workers; contact us if unsure.
+- You need an SSH client on your computer. See [SSH access to ResearchCloud](../../first-steps.qmd#ssh).
+
+### SSH keys and credentials
+
+::: {.callout-note}
+
+SSH login for Ray works differently depending on what [way of starting the cluster](#choose-how-to-start-a-cluster). Read this section to learn about this.
+
+:::
+
+An SSH key pair has a **public** key, usually a file ending in `.pub`, and a **private** key. Never paste a private key into the portal or a CO secret.
+
+- **Ray Head Node (autoscaling):** add your personal public key to SRAM and log in using your ResearchCloud username. See the [SSH setup instructions](../../first-steps.qmd#ssh). The head generates a separate key pair for its autoscaler to access workers.
+- **Ray Head Node and Ray Worker:** provide an SSH **public** key in the `public_key` [interactive parameter](../manuals/creating.qmd#interactive-parameters) when creating each workspace. Log in as `ray` using its matching private key.
+  - _Note_: keys added to SRAM will not automatically work with these catalog items.
+- **`ray up`:** use a dedicated cluster key pair, not your personal key. Ray copies the private key to the head for access to workers. The provider passes the public key to the catalog items. You can let the provider generate a pair or supply your own; see the [instructions below](#install-and-configure).
+
+### ResearchCloud token for autoscaling
+
+Both autoscaling methods require a [ResearchCloud API token](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/117178402/SRC+API). Create a CO secret named exactly `RAY_SRC_TOKEN` in the cluster's CO:
+
+1. In the ResearchCloud dashboard, open **Profile**, expand your CO and select **Secrets**.
+2. Click **+**, enter `RAY_SRC_TOKEN` as the name and paste the API token as the value. The value is only shown when you create it.
+
+See the [CO secrets manual](../../manuals/sram-secrets.qmd) for details. With `ray up`, the token must also be available in your local shell as described below.
+
+::: {.callout-warning}
+### Protect your API token
+
+The token grants the permissions of its owner. Treat it like a password: do not commit it to code, put it in `cluster.yaml`, or share it. Use the narrowest scope available (e.g., a token valid only for one CO and/or Wallet). People with access to the head may be able to access the token and the cluster's SSH key, so only use a CO and cluster whose members you trust.
+:::
+
+### Ray and Python versions
+
+When creating a Ray workspace in the portal, use the [interactive parameters](../../manuals/creating.qmd#interactive-parameters) to set `version` (Ray version, for example `2.40.0`) and `python_version` (for example `3.11`). Leave them empty to use the available Ray version and system Python. Use the same Ray and Python versions on the head, workers and client.
+
+For `ray up`, the provider passes the local Ray and Python versions to the created nodes. For a portal-created autoscaling head, check that the versions used by its automatically created workers match the head; contact us if you need help configuring them. Parameter labels and availability can differ between catalog items.
+
+### Ray packages
+
+The `packages` interactive parameter selects optional Ray components, called **extras**. Enter a comma-separated list such as `default,client,train,tune`. If left empty, the catalog installs `default,client,train,tune,serve,data`. To optimize worker provisioning time, you can choose only the packages that you want to use.
+
+Some common extras are:
+
+| Extra | Use |
+|---|---|
+| `default` | Dashboard and tools for launching and managing clusters. |
+| `client` | Connect an interactive Python session or notebook using Ray Client. |
+| `data` | Distributed data processing with Ray Data. |
+| `train` | Distributed model training with Ray Train. |
+| `tune` | Hyperparameter tuning with Ray Tune. |
+| `serve` | Serving applications and models with Ray Serve. |
+
+Ray packages for specific scientific usescases have also been developed---for example, [Chrono Ray](https://arxiv.org/abs/2605.13767) for physics. 
+
+::: {.callout-note}
+### Default packages
+
+When you select packages for your Ray head node with autoscaling, workers will by default automatically be created with the same packages. This requires some inference about installed ray packages on the head node. If this fails, or you want more control, you can also explicitly define packages for different worker types in a `cluster.yaml`. See [example](https://github.com/UtrechtUniversity/src-ray-provider/blob/main/examples/cluster.yaml). 
+
+:::
+
+For example, to install the same extras in the local Python environment or notebook kernel, replacing the version with the one used by the cluster:
+
+```bash
+python -m pip install 'ray[default,client,train,tune]==2.40.0'
+```
+
+For `ray up`, the provider currently installs `default,client,train,tune,serve` on the nodes; install the same extras locally. For a portal-created autoscaling head, verify the extras installed on its automatically created workers match the head and client; contact us for help if necessary. See [Installing Ray](https://docs.ray.io/en/latest/ray-overview/installation.html) for more about extras.
+
+## Start a cluster with `ray up`
+
+In this method, you run the Ray commands on your own computer. Ray creates the head workspace, and the head's autoscaler creates workers as needed.
+
+### Install and configure
+
+1. Make sure the CO has access to **Ray Head Node** and **Ray Worker**, and create the `RAY_SRC_TOKEN` CO secret described above.
+2. On your computer, install Git and Python 3.11 or newer. In a terminal, clone and install the [SURF ResearchCloud Ray provider](https://github.com/UtrechtUniversity/src-ray-provider) in a virtual environment:
+
+   ```bash
+   git clone https://github.com/UtrechtUniversity/src-ray-provider.git
+   cd src-ray-provider
+   python3 -m venv .venv
+   source .venv/bin/activate
+   python -m pip install . 'ray[default]'
+   ```
+
+   On Windows, activate the virtual environment using the command appropriate for your shell. Keep using this environment for the Ray commands below.
+3. Copy `examples/cluster.yaml` to `cluster.yaml` and edit it. Set a unique `cluster_name`, `provider.co_name` and `provider.wallet_name` to your own values. The default cloud is SURF HPC Cloud. Set `max_workers` to the maximum number of workers you want to pay for, and `idle_timeout_minutes` to the desired idle time before removal. Leave the other required empty configuration entries in the example intact.
+4. Choose how to provide the cluster's SSH keys:
+
+   **Let the provider generate keys (recommended for beginners and testing).** Leave the example's `auth` block commented out. The provider generates a cluster-specific key pair under `~/.cache/src_ray_provider/ssh_keys/` and reuses it for subsequent commands. Keep the keys secure and back them up if you need to reconnect: clearing the cache can prevent access to existing nodes.
+
+   **Create your own dedicated keys.** This gives you control over where the keys are stored and backed up. Create a key pair for this cluster in a secure, persistent location on your computer. For example:
+
+   ```bash
+   ssh-keygen -t ed25519 -f ~/.ssh/ray_cluster -N ""
+   ```
+
+   This example creates an unencrypted private key for unattended head-to-worker access. Restrict access to the key and back it up securely. Uncomment the `auth` block in `cluster.yaml` and set **both** paths to the matching files, using absolute paths and replacing `/home/YOUR_USER` with your actual home directory:
+
+   ```yaml
+   auth:
+     ssh_user: ray
+     ssh_private_key: /home/YOUR_USER/.ssh/ray_cluster
+     ssh_public_key: /home/YOUR_USER/.ssh/ray_cluster.pub
+   ```
+
+   In either case, Ray copies the cluster's private key to the head so it can connect to workers. Never use your personal SSH key pair for this.
+5. Make the API token available to the provider in your local shell. For example, in a Unix-like terminal:
+
+   ```bash
+   read -rs RESEARCH_CLOUD_TOKEN
+   export RESEARCH_CLOUD_TOKEN
+   ```
+
+   Paste the token and press Enter; input is not displayed. Use your shell's equivalent on Windows. The local environment variable is needed in addition to the CO secret. Do not share the token or put it in shell history.
+
+The provider discovers available head and worker sizes from the catalog. It selects a small CPU-only head by default. See the [provider configuration guide](https://github.com/UtrechtUniversity/src-ray-provider#cluster-config) for selecting worker types, GPUs and resource limits.
+
+From the provider directory, with your environment and token set:
+
+```bash
+ray up cluster.yaml
+```
+
+Wait for the head to be ready. A worker may not appear until a job requests resources. Use the same `cluster.yaml`, local account and key pair for subsequent commands. To follow autoscaler logs, run `ray monitor cluster.yaml`; press Ctrl+C to stop following them.
+
+Open an SSH session on the head with:
+
+```bash
+ray attach cluster.yaml
+```
+
+To access the dashboard and submit jobs from your computer, open a tunnel in a separate terminal, with the same environment activated:
+
+```bash
+ray dashboard cluster.yaml
+```
+
+Keep the tunnel open and visit [http://localhost:8265](http://localhost:8265) in your browser. See [Use the dashboard](#use-the-dashboard) and [Submit a job](#submit-a-job) below. For other Ray commands, see the [Ray cluster CLI documentation](https://docs.ray.io/en/latest/cluster/cli.html).
+
+When finished, stop the cluster from your computer:
+
+```bash
+ray down cluster.yaml
+```
+
+By default, this deletes discovered cluster workspaces, including the head and workers. Check the portal for any remaining workspaces. In particular, manually paused workspaces are not discovered by ordinary `ray down` and must be deleted separately if no longer needed. If you opt into [paused-workspace reuse](https://github.com/UtrechtUniversity/src-ray-provider#reusing-paused-workspaces), scale-down and `ray down` pause rather than delete nodes; paused workspaces retain data and may still incur costs.
+
+## Start an autoscaling head in the portal
+
+1. Make sure the CO has access to **Ray Head Node (autoscaling)** and **Ray Worker**. Create the `RAY_SRC_TOKEN` CO secret and check its catalog mapping as described in [ResearchCloud token for autoscaling](#researchcloud-token-for-autoscaling).
+2. In the [ResearchCloud portal](https://portal.live.surfresearchcloud.nl/), create a workspace using the **Ray Head Node (autoscaling)** Catalog Item. Follow the [workspace creation manual](../../manuals/creating.qmd), choosing the CO, wallet, cloud, size, storage, Private Network and expiry date.
+3. Review the [interactive parameters](#ray-and-python-versions), including Ray and Python versions and Ray extras. The autoscaler needs the ResearchCloud token; the default configuration obtains the head's workspace and CO information from the API and uses the head's generated SSH key to access new workers. If available, set `src_max_workers` to a suitable limit; the default is 6 workers. Catalog labels and available parameters may differ: contact us if you cannot find the token mapping or worker limit.
+4. Wait for the head to be running. It starts Ray and the autoscaler; you do not need to run `ray up`. Workers are created when jobs need them and removed when idle.
+
+Use the [SSH tunnel instructions](#connect-to-a-portal-created-head) to access the dashboard and submit jobs. Inspect the workspaces in the portal to monitor worker creation and credit usage. When finished, delete the head **and** check for and delete any remaining worker workspaces in the portal. Deleting the head alone does not guarantee that its workers are removed.
+
+::: {.callout-note}
+
+A *Ray Head Node (autoscaling)* workspace will pause or delete its own workers when it is itself deactivated.
+
+Note that this is not the case when using `ray up`, in which case you are yourself responsible for calling `ray down` when finished.
+:::
+
+## Start head and worker nodes manually
+
+Use this method if you want to choose and manage each worker yourself. No API token is needed for autoscaling because autoscaling is not used.
+
+Have an SSH key pair ready for logging in to the `ray` account. For example, generate a dedicated pair with `ssh-keygen -t ed25519 -f ~/.ssh/ray_manual` and display its public key with `cat ~/.ssh/ray_manual.pub`. Copy the complete public key into the portal, not the private key.
+
+1. Create a **Ray Head Node** workspace in the portal using the [workspace creation manual](../../manuals/creating.qmd). Select the Private Network and enter the contents of your SSH public key file (the `.pub` file) in the `public_key` interactive parameter. Review the [version and package parameters](#ray-and-python-versions), then wait until the workspace is running.
+2. Find the head's **private IP address** in its workspace details, or log in as `ray` with the matching private key and run `hostname -I`. If several addresses are shown, choose the private address reachable by the workers; contact us if unsure.
+3. Create a **Ray Worker** workspace in the same CO and Private Network. In the worker's interactive parameters, enter an SSH public key for access to its `ray` account and set `head_node_address` to the head's private IP address. If you use a non-default head port, include it as `IP:PORT` or set the corresponding port parameter. Set compatible versions and packages, then wait for the worker to become running.
+4. Repeat for each additional worker. Use matching Ray and Python versions and compatible software environments on all nodes. If you configure a Ray authentication token, use the same token for the head, workers and clients, and store it securely. This token is different from the ResearchCloud API token.
+
+The catalog items start Ray as a service. To check the cluster from the head, SSH in as `ray` using the private key matching the head's `public_key` parameter and run:
+
+```bash
+ray status
+```
+
+The output should show the worker resources. If it does not, check the worker address, Ray versions, authentication settings and network connectivity. For service errors, inspect `journalctl -u ray_head` on the head or `journalctl -u ray_worker` on a worker.
+
+Use the tunnel below to connect to the dashboard. When finished, delete the workers and head separately in the portal. Logging out does not stop or delete a workspace.
+
+## Connect to a portal-created head
+
+For a portal-created head, forward the dashboard port over SSH from your **local computer**. For **Ray Head Node (autoscaling)**, use your ResearchCloud username and the private key matching the public key registered in SRAM:
+
+```bash
+ssh -i ~/.ssh/id_ed25519 -L 8265:127.0.0.1:8265 YOUR_USERNAME@HEAD_PUBLIC_IP
+```
+
+For a manually created **Ray Head Node**, use `ray` as the username and the private key matching the `public_key` entered when creating the head:
+
+```bash
+ssh -i ~/.ssh/ray_manual -L 8265:127.0.0.1:8265 ray@HEAD_PUBLIC_IP
+```
+
+In either command, replace `HEAD_PUBLIC_IP` with the head's public IP and adjust the key path. For the autoscaling head, also replace `YOUR_USERNAME` with your ResearchCloud username.
+
+Leave the SSH session open and visit [http://localhost:8265](http://localhost:8265) on your computer. The default dashboard listens on the head's loopback interface; if your catalog configuration uses a different dashboard host or port, adjust the remote end of the tunnel accordingly. If local port `8265` is already in use, use e.g. `-L 18265:127.0.0.1:8265` and visit `http://localhost:18265`.
+
+## Use the dashboard
+
+The Ray dashboard is a web interface for inspecting the cluster, including its nodes, available resources, jobs, tasks and logs.
+
+1. Start the dashboard tunnel using [`ray dashboard`](#start-a-cluster-with-ray-up) for a `ray up` cluster, or [SSH port forwarding](#connect-to-a-portal-created-head) for a portal-created head.
+2. Leave the tunnel running and open [http://localhost:8265](http://localhost:8265) in a browser **on the computer running the tunnel**. Use the alternative local port if you changed it.
+3. Use the dashboard to inspect your cluster and jobs. An autoscaling cluster can initially have no workers; submit work that requests resources and allow time for workers to start.
+
+Closing the browser does not stop the tunnel or the cluster. Close the SSH session or stop `ray dashboard` with Ctrl+C when you no longer need the tunnel.
+
+::: {.callout-warning}
+The dashboard, job submission endpoint and Ray Client can allow users to run code on the cluster. Keep access behind an SSH tunnel, do not expose these services to the public internet, and only grant access to trusted users.
+:::
+
+## Working with data
+
+Instead of manually uploading your data to head node, Ray encourages a "cloud native" flow for your data: keep source data in durable storage such as SURF S3 or Yoda/iRODS, and connect to this storage from your Ray tasks. Ray workers will read the data they need, process it in parallel, and write results back to the storage. This avoids copying large datasets through the head node or bundling them into a job's `working_dir`, which Ray uploads when you submit a job.
+
+Make sure all nodes can reach the storage service. Do not rely on a worker's local disk for results that must persist; workers are removed when they are idle.
+
+Store credentials as a ResearchCloud CO secret named `RAY_ENV`. Its value uses `.env`-style `NAME=value` entries separated by commas rather than newlines, for example:
+
+```text
+IRODS_PASSWORD=replace-with-your-data-access-password,ANOTHER_TOKEN=replace-with-your-token
+```
+
+::: {.callout-note}
+In the near future, setting the RAY_ENV secret will no longer be necessary. Instead, configured storage credentials will be directly available as environment variables in Ray. [Contact us](../contact.qmd) for advise on current best practices.
+:::
+
+The secret's entries are available to the job as environment variables, so read them with `os.environ` in Python. Use placeholder values in examples, never print or log credentials, and do not put them in source files or the job's `working_dir`. Since commas separate entries, values should not contain commas.
+
+### Example: stream data from iRODS with iBridges
+
+Use the iBridges [streaming API](https://ibridges.readthedocs.io/en/latest/data_transfers.html#streaming-data-objects) to open an iRODS data object as a stream, then process it in chunks instead of downloading the whole object to the head node. For example, after creating an authenticated iBridges `session` as described in the [iBridges guide](../../manuals/ibridges.qmd):
+
+```python
+from hashlib import sha256
+
+path = "/ZONE/home/USER/path/to/data.bin"
+digest = sha256()
+
+with session.irods_session.data_objects.open(path, "r") as source:
+    while chunk := source.read(1024 * 1024):
+        digest.update(chunk)
+
+print(digest.hexdigest())
+```
+
+After processing, you can of course upload results back to iRODS.
+
+As written, this example streams one iRODS object in a single process; it does not distribute the work over nodes. To parallelize with Ray tasks, assign different object paths or partitions to different tasks, for instance with [Ray Data](#ray-data)---although you can also do this 'manually' in your code.
+
+### Ray Data
+
+[Ray Data](https://docs.ray.io/en/latest/data/data.html) is a higher-level API for building and processing distributed datasets.  It divides work into blocks that Ray can read and transform in parallel across workers, and can pipeline batches through successive transformations. This is more than streaming or chunking one file: Ray Data controls how a collection of records or files is divided and processed across the cluster. (By contrast, the example above will stream the same files on each worker that runs the code.)
+
+Install the `data` extra on the cluster nodes and client (see [Ray packages](#ray-packages)). See the Ray guides to [load data](https://docs.ray.io/en/latest/data/loading-data.html) and [transform datasets](https://docs.ray.io/en/latest/data/transforming-data.html) for supported readers and APIs.
+
+Using Ray Data is **not mutually exclusive** with streaming from iRODS, S3, or elsewhere. Ray Data has built-in readers for supported storage systems (including S3), so you do not need to write streaming code for those sources. iRODS is not a built-in Ray Data source, so a custom [Datasource](https://docs.ray.io/en/latest/data/api/doc/ray.data.Datasource.html) or dataset would have to be defined. [Contact us](../contact.qmd) for help!
+
+## Connect a notebook using Ray Client
+
+[Ray Client](https://docs.ray.io/en/latest/cluster/running-applications/job-submission/ray-client.html) lets an interactive Python session, such as a Jupyter notebook, submit Ray tasks to a remote cluster. It uses port `10001` by default, **separate from the dashboard port `8265`**. Open the tunnel on the machine where the notebook kernel runs: if your notebook runs on a ResearchCloud workspace rather than your laptop, `localhost` refers to that workspace and the tunnel must run there.
+
+For a cluster created with `ray up`, run this on the machine running the client, using the same account, configuration and cluster key as for `ray up`:
+
+```bash
+ray attach cluster.yaml -p 10001
+```
+
+For a portal-created head, use one of the SSH commands from [Connect to a portal-created head](#connect-to-a-portal-created-head) and add a second `-L` option for the Client port. For example, for a manual head:
+
+```bash
+ssh -i ~/.ssh/ray_manual -L 8265:127.0.0.1:8265 -L 10001:127.0.0.1:10001 ray@HEAD_PUBLIC_IP
+```
+
+For an autoscaling head, instead use your ResearchCloud username and personal private key as shown in the portal connection instructions. Replace the IP and key path. If a port is already in use locally, choose another local port, for example `-L 10002:127.0.0.1:10001`, and use that local port in the notebook. If the head uses a different Client port, change the remote port accordingly.
+
+Leave the tunnel open. In a notebook kernel on the same machine, install the matching Ray version and extras, including `client`, as described in [Ray packages](#ray-packages). Then run:
+
+```python
+import ray
+
+ray.init("ray://localhost:10001")
+
+@ray.remote
+def square(number):
+    return number * number
+
+print(ray.get([square.remote(number) for number in range(10)]))
+```
+
+Call `ray.shutdown()` when you finish the session. Ray Client needs a stable connection: if the connection is lost for more than 30 seconds, the workload terminates. For long-running work, or for machine-learning workloads where Ray Client has limitations, use [Ray Jobs](#submit-a-job) instead. If Ray token authentication is enabled, configure the same Ray authentication token for the client and nodes before starting the notebook kernel; see [Ray token authentication](https://docs.ray.io/en/latest/ray-security/token-auth.html). This token is separate from the ResearchCloud API token.
+
+## Submit a job
+
+With the dashboard tunnel open, you can submit a Python program from a separate local terminal. Install a compatible version of Ray with its default extras in that terminal's Python environment. For `ray up`, use the environment in which you installed the provider; for a portal-created head, match the head's Ray and Python versions. Make sure workers have compatible dependencies.
+
+For example, save this as `example.py` in a local directory:
+
+```python
+import ray
+
+ray.init(address="auto")
+
+@ray.remote
+def square(number):
+    return number * number
+
+results = ray.get([square.remote(number) for number in range(10)])
+print(results)
+```
+
+From that directory, submit it through the tunnel:
+
+```bash
+ray job submit --address http://localhost:8265 --runtime-env-json='{"working_dir": "."}' -- python example.py
+```
+
+Use the appropriate local port if you changed the tunnel. Ray uploads the working directory for this job, so keep it small and do not include secrets or unnecessary data. The command displays job output and its submission ID; use `ray job status`, `ray job logs`, or `ray job stop` with the same `--address` and ID to manage it. See [Ray Jobs](https://docs.ray.io/en/latest/cluster/running-applications/job-submission/index.html) for dependencies and more examples.
+
+## Troubleshooting
+
+- **SSH permission denied:** check the username and matching key pair. The autoscaling head uses your SRAM username and registered personal public key. The manual head and workers use `ray` and the public key entered as a parameter. `ray up` uses its cluster-specific key for `ray`; if specifying keys in `cluster.yaml`, set both paths.
+- **No workers start:** check the token and CO secret mapping, catalog access, wallet, worker limit and pending resource requirements. The cluster may have no workers while idle. Check the head's Ray logs and the ResearchCloud portal for errors.
+- **Workers do not join:** check the head's private address and ports, network connectivity, matching Ray/Python versions and any Ray authentication token.
+- **Dashboard unavailable:** verify that the head is running, the SSH tunnel is open, and the forwarded port and dashboard binding match. Do not open the dashboard directly to the internet.
+
+For further help, [contact us](../../contact.qmd). See also the [Ray documentation](https://docs.ray.io/) and the [provider documentation](https://github.com/UtrechtUniversity/src-ray-provider).
