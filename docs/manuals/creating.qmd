@@ -14,6 +14,7 @@ In the [Research Cloud portal](https://portal.live.surfresearchcloud.nl/), choos
      * Select the size of your workspace (number of CPUs, GPUs, and RAM). See [here](../responsible-use.qmd#cost-calculator) for understanding costs.
 6. Options:
     * Select persistent storage volume (see [here](../first-steps.qmd#create-storage-volume) for creating storage).
+    * (_Advanced_) If your workspaces need to communicate over a private network, select a [Private Network](#private-network).
 7. Name:
     * Set expiration date (default setting is 1 week). **Important:** on this date the machine and all data on it will be deleted without warning. Only data on the Storage volume will remain. The expiration date can be changed later on.
     * Give the workspace a descriptive title that you can recognize later on
@@ -33,6 +34,10 @@ You can inspect the available configurations for each Cloud Operator by expandin
 <img alt="Available Cloud Sizes Example" width="50%" src="../imgs/cloud_select.gif" />
 
  See [here](../responsible-use.qmd#cost-calculator) for a cost calculator. Note: the calculator only applies for the SURF HPC cloud!
+
+### Private Network
+
+A Private Network allows workspaces to communicate using private IP addresses. When creating a workspace, select a Private Network in the workspace creation options. For workspaces that need to communicate, select the same network for each workspace. The network must be available to the selected CO and cloud provider. If you need a network or cannot select the right one, [contact us](../contact.qmd).
 
 ### Interactive Parameters
 
